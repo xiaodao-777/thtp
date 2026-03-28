@@ -1,0 +1,65 @@
+leader_trait_type = destiny
+leader_trait_rarity = destiny
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = corrupt
+	RARITY = paragon
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_negative"
+	}
+	layer = {
+		icon = "GFX_trait_glow_libra_corrupt_destiny"
+		color = "trait_rarity_destiny"
+	}
+	layer = {
+		icon = "GFX_trait_frame_libra_corrupt_destiny"
+		color = "trait_rarity_destiny"
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+}
+sorting_priority = @trait_sorting_priority_paragon_$COUNCIL$_none
+
+
+self_modifier = {
+	leaders_upkeep_mult = 0.5
+	negative_traits_leader = 1
+}
+
+
+background_icon = "GFX_leader_background_libra_destiny_1"
+selectable_weight = {
+	weight = @subclass_trait_weight
+	modifier = {
+		factor = 3
+		has_leader_flag = libra_has_corrupt_leader_trait
+	}
+	modifier = {
+		factor = 3
+		num_leader_traits = {
+			value > 0
+			negative = yes
+		}
+	}
+}
+ai_weight = {
+	modifier = {
+		factor = 3
+		has_leader_flag = libra_has_corrupt_leader_trait
+	}
+	modifier = {
+		factor = 3
+		exists = owner
+		owner = { has_tradition = tr_libra_degeneracy_adopt }
+	}
+}

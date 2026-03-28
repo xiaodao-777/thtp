@@ -1,0 +1,555 @@
+@origin_libra_extreme_base_weight = 60
+@origin_libra_high_base_weight = 40
+@origin_libra_default_base_weight = 30
+@origin_libra_uncommon_base_weight = 20
+@origin_libra_rare_base_weight = 10
+
+origin_libra_praises_to_life = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_praises_to_life.dds"
+	picture = GFX_origin_libra_praises_to_life
+	max_once_global = yes
+
+	description = "origin_libra_praises_to_life_effects"
+	initializers = { libra_praises_to_life_start }
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_rare_base_weight
+	}
+}
+
+origin_libra_psalm_of_waves = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_psalm_of_waves.dds"
+	picture = GFX_origin_libra_psalm_of_waves
+	max_once_global = yes
+
+	playable = {
+		has_aquatics = yes
+	}
+	possible = {
+		species_class = { value = AQUATIC }
+	}
+
+	starting_colony = pc_ocean
+	habitability_preference = pc_ocean
+	description = "origin_libra_psalm_of_waves_effects"
+	initializers = { libra_psalm_of_waves_start }
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+	blocks_random_machine_empire_generation = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_ultimate_market = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_ultimate_market.dds"
+	picture = GFX_origin_libra_ultimate_market
+	max_once_global = yes
+
+	playable = {
+		has_machine_age_dlc = yes
+	}
+	possible = {
+		civics = { value = civic_augmentation_bazaars }
+		species_archetype = {
+			OR = {
+				value = BIOLOGICAL
+				value = LITHOID
+			}
+		}
+	}
+
+	description = "origin_libra_ultimate_market_effects"
+
+	modifier = {
+		cyborg_pop_bonus_workforce_mult = 0.05
+		empire_size_colonies_mult = -0.25
+	}
+	traits = {
+		trait = trait_libra_ultimate_market_cyborg
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+	blocks_random_machine_empire_generation = yes
+
+	random_weight = {
+		base = @origin_libra_extreme_base_weight
+	}
+}
+
+origin_libra_enlightenment_wisdom = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_enlightenment_wisdom.dds"
+	picture = GFX_origin_libra_enlightenment_wisdom
+	max_once_global = yes
+
+	playable = {
+		has_paragon_dlc = yes
+	}
+	possible = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+
+	description = "origin_libra_enlightenment_wisdom_effects"
+	negative_description = "origin_libra_enlightenment_wisdom_negative_effects"
+	initializers = { libra_enlightenment_wisdom_start libra_enlightenment_wisdom_sol_start }
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_rare_base_weight
+	}
+}
+
+origin_libra_crimson_nights = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_crimson_nights.dds"
+	picture = GFX_origin_libra_crimson_nights
+	max_once_global = yes
+
+	playable = {
+		has_humanoids = yes
+	}
+	possible = {
+		species_class = { value = HUM }
+	}
+
+	description = "origin_libra_crimson_nights_effects"
+	negative_description = "origin_libra_crimson_nights_negative_effects"
+
+	initializers = { libra_crimson_nights_sol_start libra_crimson_nights_start }
+	modifier = {
+		planet_stability_mult = -0.25
+		planet_amenities_mult = -0.25
+		species_leader_exp_gain = -0.25
+	}
+	traits = {
+		trait = trait_libra_crimson_nights_vampire
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+	blocks_random_machine_empire_generation = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_shadow_consciousness = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_shadow_consciousness.dds"
+	picture = GFX_origin_libra_shadow_consciousness
+	max_once_global = yes
+
+	playable = {
+		has_first_contact_dlc = yes
+		has_astral_planes_dlc = yes
+	}
+	possible = {
+		authority = { value = auth_hive_mind }
+	}
+
+	description = "origin_libra_shadow_consciousness_effects"
+	initializers = { libra_shadow_consciousness_start }
+
+	modifier = {
+		planet_maintenance_drones_sr_dark_matter_produces_add = 0.1
+		planet_maintenance_drones_energy_upkeep_add = 1
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_dragonborn = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_dragonborn.dds"
+	picture = GFX_origin_libra_dragonborn
+	max_once_global = yes
+
+	playable = {
+		has_leviathans = yes
+		has_machine_age_dlc = yes
+	}
+	possible = {
+		species_class = { value = REP }
+	}
+
+	starting_colony = pc_nuked
+	description = "origin_libra_dragonborn_effects"
+	negative_description = "origin_libra_dragonborn_negative_effects"
+
+	initializers = { libra_dragonborn_start }
+	traits = {
+		trait = trait_libra_dragonborn_0
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+	blocks_random_machine_empire_generation = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_paradox_loop = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_paradox_loop.dds"
+	picture = GFX_origin_libra_paradox_loop
+	max_once_global = yes
+
+	playable = {
+		has_synthetic_dawn = yes
+	}
+	possible = {
+		authority = { value = auth_machine_intelligence }
+	}
+
+	description = "origin_libra_paradox_loop_effects"
+
+	initializers = { libra_paradox_loop_start }
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+	traits = {
+		trait = trait_libra_paradox_loop
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_paradise_lose = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_paradise_lose.dds"
+	picture = GFX_origin_libra_paradise_lose
+	max_once_global = yes
+
+	playable = {
+		has_paragon_dlc = yes
+	}
+	possible = {
+		civics = { value = civic_dystopian_society }
+	}
+
+	description = "origin_libra_paradise_lose_effects"
+
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.25
+		pop_cat_ruler_political_power = 5
+		pop_category_rulers_trade_produces_add = 10
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_extreme_base_weight
+	}
+}
+
+origin_libra_interstellar_port = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_interstellar_port.dds"
+	picture = GFX_origin_libra_interstellar_port
+	max_once_global = yes
+
+	playable = {
+		has_megacorp = yes
+	}
+	possible = {
+		authority = { value = auth_corporate }
+	}
+
+	description = "origin_libra_interstellar_port_effects"
+
+	modifier = {
+		diplo_action_acceptance_add = 10
+		pop_demotion_time_mult = -0.15
+		pop_promotion_time_mult = -0.15
+		pop_cat_civilian_bonus_workforce_mult = -0.35
+		divided_patrongage_max_subjects = 5
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_antientropy_instruction = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_antientropy_instruction.dds"
+	picture = GFX_origin_libra_antientropy_instruction
+	max_once_global = yes
+
+	playable = {
+		has_necroids = yes
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = libra_tooltip_xenophobe_or_gestalt
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_gestalt_consciousness
+			}
+		}
+		species_archetype = { value = MACHINE }
+	}
+
+	description = "origin_libra_antientropy_instruction_effects"
+	negative_description = "origin_libra_antientropy_instruction_negative_effects"
+	traits = {
+		trait = trait_libra_antientropy_instruction_0
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_planetarian = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_planetarian.dds"
+	picture = GFX_origin_libra_planetarian
+	max_once_global = yes
+
+	playable = {
+		has_astral_planes_dlc = yes
+	}
+	possible = {
+		civics = {
+			value = civic_machine_sovereign_guardianship
+		}
+	}
+
+	starting_colony = pc_nuked
+	description = "origin_libra_planetarian_effects"
+	negative_description = "origin_libra_planetarian_negative_effects"
+
+	initializers = { libra_planetarian_start }
+	modifier = {
+		country_border_friction_mult = -0.65
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_extreme_base_weight
+	}
+}
+
+origin_libra_eden_accord = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_eden_accord.dds"
+	picture = GFX_origin_libra_eden_accord
+	max_once_global = yes
+
+	playable = {
+		has_humanoids = yes
+	}
+	possible = {
+		civics = {
+			value = civic_machine_servitor
+		}
+	}
+
+	description = "origin_libra_eden_accord_effects"
+	negative_description = "origin_libra_eden_accord_negative_effects"
+
+	modifier = {
+		country_produces_mult = 0.1
+		country_government_civic_points_add = 1
+		pop_cat_bio_trophy_political_power = 2.5
+		planet_bio_trophies_trade_produces_add = 1
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_extreme_base_weight
+	}
+}
+
+origin_libra_polemics_mechanism = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_polemics_mechanism.dds"
+	picture = GFX_origin_libra_polemics_mechanism
+	max_once_global = yes
+
+	playable = {
+		has_first_contact_dlc = yes
+	}
+	possible = {
+		authority = { value = auth_machine_intelligence }
+	}
+
+	description = "origin_libra_polemics_mechanism_effects"
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_miracle_builder = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_miracle_builder.dds"
+	picture = GFX_origin_libra_miracle_builder
+	max_once_global = yes
+
+	playable = {
+		has_utopia = yes
+		has_megacorp = yes
+		has_overlord_dlc = yes
+		has_machine_age_dlc = yes
+	}
+
+	initializers = { libra_miracle_builder_start }
+	description = "origin_libra_miracle_builder_effects"
+
+	modifier = {
+		country_base_influence_produces_add = 1
+		ship_home_territory_fire_rate_mult = 0.35
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_rare_base_weight
+	}
+}
+
+origin_libra_may_storm = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_may_storm.dds"
+	picture = GFX_origin_libra_may_storm
+	max_once_global = yes
+
+	playable = {
+		has_nemesis = yes
+	}
+	possible = {
+		authority = { value = auth_democratic }
+	}
+
+	initializers = { libra_may_storm_sol_start libra_may_storm_start }
+	description = "origin_libra_may_storm_effects"
+
+	modifier = {
+		damage_vs_superior_empires_mult = 0.15
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_extreme_iteration = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_extreme_iteration.dds"
+	picture = GFX_origin_libra_extreme_iteration
+	max_once_global = yes
+
+	playable = {
+		has_toxoids = yes
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = libra_tooltip_materialist_or_gestalt
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_gestalt_consciousness
+			}
+		}
+		species_archetype = { value = MACHINE }
+	}
+
+	description = "origin_libra_extreme_iteration_effects"
+
+	modifier = {
+		MACHINE_species_trait_points_add = 3
+		MACHINE_species_trait_picks_add = 1
+		subspecies_integration_add = 100
+	}
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_default_base_weight
+	}
+}
+
+origin_libra_centurion = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_libra_centurion.dds"
+	picture = GFX_origin_libra_centurion
+	max_once_global = yes
+
+	possible = {
+		ethics = { value = ethic_fanatic_militarist }
+	}
+
+	description = "origin_libra_centurion_effects"
+
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = @origin_libra_high_base_weight
+	}
+}

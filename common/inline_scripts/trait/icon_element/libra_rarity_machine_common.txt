@@ -1,0 +1,5 @@
+layer = {
+	icon = "GFX_trait_bg"
+	color = "trait_bg_physics"
+	#color = "trait_bg_machine"
+}

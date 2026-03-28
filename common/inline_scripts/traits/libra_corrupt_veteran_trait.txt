@@ -1,0 +1,84 @@
+leader_trait_type = veteran
+leader_trait_rarity = veteran
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = corrupt
+	RARITY = veteran
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_negative"
+	}
+	layer = {
+		icon = "GFX_trait_glow_libra_corrupt_veteran"
+		color = "trait_rarity_veteran"
+	}
+	layer = {
+		icon = "GFX_trait_frame_libra_corrupt_veteran"
+		color = "trait_rarity_veteran"
+	}
+	layer = {
+		icon = "GFX_trait_glow_libra_corrupt_destiny"
+		color = "trait_rarity_destiny"
+		visible = {
+			exists = owner
+			owner = { has_modifier = agenda_libra_degeneracy_b_finish_modifier }
+		}
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+}
+sorting_priority = @trait_sorting_priority_veteran_$COUNCIL$_3
+
+
+custom_tooltip_with_modifiers = leader_trait_libra_corrupt_effect_tt
+on_gained_effect = {
+	set_leader_flag = libra_has_corrupt_leader_trait
+}
+selectable_weight = {
+	weight = @subclass_trait_weight
+	modifier = {
+		factor = 2
+		num_leader_traits = {
+			value > 0
+			negative = yes
+		}
+	}
+	modifier = {
+		factor = 3
+		num_leader_traits = {
+			value > 1
+			count_tiers = yes
+			negative = yes
+		}
+	}
+	modifier = {
+		factor = 0
+		check_modifier_value = {
+			modifier = leader_trait_selection_options_add
+			value > 14
+		}
+	}
+}
+ai_weight = {
+	modifier = {
+		factor = 3
+		num_leader_traits = {
+			value > 0
+			negative = yes
+		}
+	}
+	modifier = {
+		factor = 4
+		exists = owner
+		owner = { has_tradition = tr_libra_degeneracy_adopt }
+	}
+}

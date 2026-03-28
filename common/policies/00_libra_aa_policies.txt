@@ -1,0 +1,589 @@
+# ####################
+# Directive 76
+# ####################
+
+libra_directive_76 = {
+	potential = {
+		has_country_flag = libra_directive_76_policy
+		is_variable_set = libra_aa_path
+		check_variable = { which = libra_aa_path value = 10 }
+	}
+
+	option = {
+		name = policy_libra_directive_76_a
+		modifier = {
+			planet_soldiers_energy_produces_add = 2
+			planet_soldiers_minerals_produces_add = 2
+			planet_soldiers_food_produces_add = 2
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 3
+				or = {
+					has_deficit = energy
+					has_deficit = minerals
+					has_deficit = food
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_directive_76_b
+		modifier = {
+			planet_soldiers_unity_produces_add = 1
+			planet_soldiers_trade_produces_add = 4
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_directive_76_c
+		modifier = {
+			planet_soldiers_physics_research_produces_add = 1
+			planet_soldiers_society_research_produces_add = 1
+			planet_soldiers_engineering_research_produces_add = 1
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+}
+
+# ####################
+# Cybernetic
+# ####################
+
+libra_cybernetic_growth_2 = {
+	prerequisites = { "tech_libra_cybernetic_growth_2" }
+	potential = {
+		is_variable_set = libra_aa_path
+		not = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+	}
+
+	option = {
+		name = policy_libra_cybernetic_growth_2_a
+		modifier = {
+			planet_jobs_productive_produces_mult = 0.05
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_cybernetic_growth_2_b
+		modifier = {
+			planet_stability_add = -5
+			pop_environment_tolerance = -0.1
+			planet_jobs_productive_produces_mult = 0.2
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_cybernetic_growth_2_c
+		modifier = {
+			planet_stability_add = -15
+			pop_environment_tolerance = -0.15
+			planet_jobs_productive_produces_mult = 0.35
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				or = {
+					is_difficulty = 5
+					is_difficulty = 6
+				}
+			}
+		}
+	}
+}
+
+libra_cybernetic_growth_4 = {
+	prerequisites = { "tech_libra_cybernetic_growth_4" }
+	potential = {
+		is_variable_set = libra_aa_path
+		not = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+	}
+
+	option = {
+		name = policy_libra_cybernetic_growth_4_a
+		modifier = {
+			logistic_growth_mult = 0.15
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_cybernetic_growth_4_b
+		modifier = {
+			planet_pops_upkeep_mult = 0.1
+			pop_amenities_usage_mult = 0.1
+			logistic_growth_mult = 0.45
+			planet_carry_cap_add = 1250
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_cybernetic_growth_4_c
+		modifier = {
+			planet_pops_upkeep_mult = 0.2
+			pop_amenities_usage_mult = 0.2
+			logistic_growth_mult = 0.75
+			planet_carry_cap_add = 2500
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+}
+
+# ####################
+# Transcendental Cybernetics
+# ####################
+
+libra_transcendental_cybernetics_1 = {
+	potential = {
+		is_variable_set = libra_aa_path
+		has_technology = tech_libra_cybernetic_growth_1
+		check_variable = { which = libra_aa_path value = 40 }
+	}
+
+	option = {
+		name = policy_libra_transcendental_cybernetics_1_a
+		modifier = {
+			planet_researchers_upkeep_mult = -0.15
+			planet_pop_assemblers_physics_research_produces_add = 0.5
+			planet_pop_assemblers_society_research_produces_add = 0.5
+			planet_pop_assemblers_engineering_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_1_b
+		modifier = {
+			planet_bureaucrats_upkeep_mult = -0.15
+			planet_pop_assemblers_unity_produces_add = 1.5
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_1_c
+		modifier = {
+			planet_traders_upkeep_mult = -0.15
+			planet_pop_assemblers_trade_produces_add = 3
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+}
+
+libra_transcendental_cybernetics_2 = {
+	potential = {
+		is_variable_set = libra_aa_path
+		has_technology = tech_libra_cybernetic_growth_2
+		check_variable = { which = libra_aa_path value = 40 }
+	}
+
+	option = {
+		name = policy_libra_transcendental_cybernetics_2_a
+		modifier = {
+			planet_jobs_productive_produces_mult = 0.2
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_2_b
+		policy_flags = {
+			libra_transcendental_cybernetics_2_b
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				has_technology = tech_libra_cybernetic_exoskeleton_3
+			}
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_2_c
+		policy_flags = {
+			libra_transcendental_cybernetics_2_c
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_2_d
+		policy_flags = {
+			libra_transcendental_cybernetics_2_d
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+}
+
+libra_transcendental_cybernetics_3 = {
+	potential = {
+		is_variable_set = libra_aa_path
+		has_technology = tech_libra_cybernetic_growth_3
+		check_variable = { which = libra_aa_path value = 40 }
+	}
+
+	option = {
+		name = policy_libra_transcendental_cybernetics_3_a
+		modifier = {
+			ship_weapon_range_mult = 0.25
+			ship_engagement_range_mult = 0.5
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_3_b
+		modifier = {
+			ships_upkeep_mult = -0.15
+			armies_upkeep_mult = -0.25
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				has_deficit = energy
+			}
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_3_c
+		modifier = {
+			ship_speed_mult = 0.25
+			planet_army_build_speed_mult = 0.25
+			shipclass_military_build_speed_mult = 0.25
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+}
+
+libra_transcendental_cybernetics_4 = {
+	potential = {
+		is_variable_set = libra_aa_path
+		has_technology = tech_libra_cybernetic_growth_4
+		check_variable = { which = libra_aa_path value = 40 }
+	}
+
+	option = {
+		name = policy_libra_transcendental_cybernetics_4_a
+		modifier = {
+			logistic_growth_mult = 0.35
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_4_b
+		policy_flags = {
+			libra_transcendental_cybernetics_4_b
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 1
+				libra_ai_preferences_population = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_4_c
+		policy_flags = {
+			libra_transcendental_cybernetics_4_c
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				libra_ai_preferences_civilian = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_transcendental_cybernetics_4_d
+		policy_flags = {
+			libra_transcendental_cybernetics_4_d
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				libra_ai_preferences_planet = yes
+			}
+		}
+	}
+}
+
+# ####################
+# Nanotech
+# ####################
+
+libra_nanite_shipyard_order = {
+	prerequisites = { "tech_libra_nanite_shipyard" }
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+
+	option = {
+		name = policy_libra_nanite_shipyard_order_a
+		policy_flags = {
+			libra_nanite_shipyard_order_a
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_nanite_shipyard_order_b
+		policy_flags = {
+			libra_nanite_shipyard_order_b
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				has_deficit = energy
+			}
+		}
+	}
+	option = {
+		name = policy_libra_nanite_shipyard_order_c
+		policy_flags = {
+			libra_nanite_shipyard_order_c
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 1
+				used_naval_capacity_percent < 0.8
+			}
+			modifier = {
+				add = 1
+				or = {
+					recently_lost_war = yes
+					has_crisis = yes
+					is_at_war = yes
+				}
+			}
+		}
+	}
+}
+
+#
+
+libra_hurricane_eye_1 = {
+	potential = {
+		is_variable_set = libra_aa_path
+		has_ascension_perk = ap_libra_hurricane_eye
+		check_variable = { which = libra_aa_path value = 71 }
+	}
+
+	option = {
+		name = policy_libra_hurricane_eye_1_a
+		policy_flags = {
+			libra_hurricane_eye_1_a
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_hurricane_eye_1_b
+		policy_flags = {
+			libra_hurricane_eye_1_b
+		}
+		valid = {
+			has_technology = tech_juggernaut
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+}
+
+libra_hurricane_eye_2 = {
+	potential = {
+		is_variable_set = libra_aa_path
+		has_ascension_perk = ap_libra_hurricane_eye
+		check_variable = { which = libra_aa_path value = 71 }
+	}
+
+	option = {
+		name = policy_libra_hurricane_eye_2_a
+		policy_flags = {
+			libra_hurricane_eye_2_a
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+	option = {
+		name = policy_libra_hurricane_eye_2_b
+		policy_flags = {
+			libra_hurricane_eye_2_b
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_hurricane_eye_2_c
+		policy_flags = {
+			libra_hurricane_eye_2_c
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+}
+
+# ####################
+# Heavenly Throne
+# ####################
+
+libra_heavenly_throne = {
+	potential = {
+		is_variable_set = libra_aa_path
+		has_ascension_perk = ap_libra_heavenly_throne
+		check_variable = { which = libra_aa_path value = 90 }
+	}
+
+	option = {
+		name = policy_libra_heavenly_throne_a
+		potential = {
+			country_uses_food = yes
+		}
+		modifier = {
+			planet_telepaths_energy_produces_add = 4
+			planet_telepaths_minerals_produces_add = 4
+			planet_telepaths_food_produces_add = 4
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				or = {
+					has_deficit = energy
+					has_deficit = minerals
+					has_deficit = food
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_heavenly_throne_a_nf
+		potential = {
+			country_uses_food = no
+		}
+		modifier = {
+			planet_telepaths_energy_produces_add = 8
+			planet_telepaths_minerals_produces_add = 4
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				or = {
+					has_deficit = energy
+					has_deficit = minerals
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_heavenly_throne_b
+		potential = {
+			country_uses_consumer_goods = yes
+		}
+		modifier = {
+			planet_telepaths_alloys_produces_add = 2
+			planet_telepaths_consumer_goods_produces_add = 4
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				or = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					is_homicidal = yes
+					has_resource = {
+						type = alloys
+						amount < 7500
+					}
+					has_deficit = consumer_goods
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_heavenly_throne_b_nl
+		potential = {
+			country_uses_consumer_goods = no
+		}
+		modifier = {
+			planet_telepaths_alloys_produces_add = 4
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				or = {
+					is_homicidal = yes
+					has_resource = {
+						type = alloys
+						amount < 7500
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_heavenly_throne_c
+		modifier = {
+			planet_telepaths_unity_produces_add = 2
+			planet_telepaths_trade_produces_add = 8
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+}

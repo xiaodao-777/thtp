@@ -1,0 +1,2310 @@
+spriteTypes = {
+
+#
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_adventure"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_adventure.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_adventure"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_adventure.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_adventure"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_adventure.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_adventure"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_adventure.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_adventure"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_adventure.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_adventure_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_adventure_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_adventure_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_adventure_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_adventure_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_adventure_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_adventure_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_adventure_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_adventure_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_adventure_5.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_1"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_1.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_2"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_2.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_3"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_3.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_4"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_4.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_5"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_5.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_6"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_6.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_7"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_7.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_8"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_8.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_9"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_9.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_aesthetic_wonders_10"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_aesthetic_wonders_10.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_1"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_1.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_2"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_2.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_3"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_3.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_4"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_4.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_5"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_5.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_6"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_6.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_7"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_7.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_8"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_8.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_9"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_9.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_historical_items_10"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_historical_items_10.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_1"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_1.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_2"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_2.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_3"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_3.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_4"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_4.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_5"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_5.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_6"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_6.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_7"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_7.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_8"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_8.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_9"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_9.dds"
+	}
+	spriteType = {
+		name = "GFX_specimen_libra_adventure_xeno_geology_10"
+		texturefile = "gfx/interface/icons/specimens/libra_adventure_xeno_geology_10.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_ceremony_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_ceremony_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_ceremony_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_ceremony_b.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_ceremony"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_ceremony.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_ceremony"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_ceremony.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_ceremony"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_ceremony.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_ceremony"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_ceremony.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_ceremony_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_ceremony_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_ceremony_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_ceremony_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_ceremony_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_ceremony_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_ceremony_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_ceremony_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_ceremony_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_ceremony_5.dds"
+	}
+	spriteType = {
+		name = "GFX_message_libra_ceremony"
+		texturefile = "gfx/interface/icons/message/message_libra_ceremony.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_ceremony"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_ceremony.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_meditation"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_meditation.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_meditation"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_meditation.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_meditation"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_meditation.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_meditation"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_meditation.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_meditation"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_meditation.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_meditation_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_meditation_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_meditation_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_meditation_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_meditation_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_meditation_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_meditation_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_meditation_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_meditation_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_meditation_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_imperium_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_imperium_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_imperium_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_imperium_b.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_imperium"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_imperium.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_imperium"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_imperium.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_imperium"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_imperium.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_imperium"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_imperium.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_imperium_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_imperium_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_imperium_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_imperium_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_imperium_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_imperium_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_imperium_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_imperium_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_imperium_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_imperium_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_frugality"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_frugality.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_frugality"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_frugality.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_frugality"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_frugality.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_frugality"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_frugality.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_frugality"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_frugality.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_frugality_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_frugality_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_frugality_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_frugality_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_frugality_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_frugality_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_frugality_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_frugality_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_frugality_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_frugality_5.dds"
+	}
+	spriteType = {
+		name = "GFX_message_libra_frugality"
+		texturefile = "gfx/interface/icons/message/message_libra_frugality.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_introspection_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_introspection_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_introspection_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_introspection_b.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_introspection_c"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_introspection_c.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_introspection"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_introspection.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_introspection"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_introspection.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_introspection"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_introspection.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_introspection"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_introspection.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_introspection_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_introspection_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_introspection_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_introspection_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_introspection_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_introspection_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_introspection_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_introspection_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_introspection_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_introspection_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_construmcracy"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_construmcracy.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_construmcracy"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_construmcracy.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_construmcracy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_construmcracy.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_construmcracy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_construmcracy.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_construmcracy"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_construmcracy.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_construmcracy_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_construmcracy_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_construmcracy_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_construmcracy_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_construmcracy_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_construmcracy_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_construmcracy_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_construmcracy_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_construmcracy_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_construmcracy_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_overclock"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_overclock.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_overclock"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_overclock.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_overclock"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_overclock.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_overclock"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_overclock.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_overclock"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_overclock.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_overclock_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_overclock_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_overclock_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_overclock_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_overclock_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_overclock_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_overclock_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_overclock_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_overclock_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_overclock_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_degeneracy_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_degeneracy_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_degeneracy_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_degeneracy_b.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_degeneracy"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_degeneracy.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_degeneracy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_degeneracy.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_degeneracy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_degeneracy.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_degeneracy"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_degeneracy.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_degeneracy_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_degeneracy_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_degeneracy_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_degeneracy_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_degeneracy_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_degeneracy_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_degeneracy_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_degeneracy_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_degeneracy_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_degeneracy_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_pendragon"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_pendragon.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_pendragon"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_pendragon.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_pendragon"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_pendragon.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_pendragon"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_pendragon.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_pendragon"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_pendragon.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_pendragon_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_pendragon_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_pendragon_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_pendragon_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_pendragon_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_pendragon_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_pendragon_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_pendragon_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_pendragon_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_pendragon_5.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_pendragon"
+		texturefile = "gfx/event_pictures/libra_pendragon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_victory"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_victory.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_victory"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_victory.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_victory"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_victory.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_victory"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_victory.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_victory"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_victory.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_victory_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_victory_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_victory_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_victory_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_victory_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_victory_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_victory_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_victory_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_victory_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_victory_5.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_victory"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_victory.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_grandmastery_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_grandmastery_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_grandmastery_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_grandmastery_b.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_grandmastery"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_grandmastery.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_grandmastery"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_grandmastery.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_grandmastery"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_grandmastery.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_grandmastery"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_grandmastery.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_grandmastery_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_grandmastery_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_grandmastery_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_grandmastery_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_grandmastery_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_grandmastery_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_grandmastery_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_grandmastery_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_grandmastery_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_grandmastery_5.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_grandmastery_commander"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_grandmastery_commander.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_grandmastery_official"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_grandmastery_official.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_grandmastery_scientist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_grandmastery_scientist.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_sumptuary"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_sumptuary.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_sumptuary"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_sumptuary.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_sumptuary"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_sumptuary.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_sumptuary"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_sumptuary.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_sumptuary"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_sumptuary.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_sumptuary_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_sumptuary_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_sumptuary_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_sumptuary_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_sumptuary_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_sumptuary_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_sumptuary_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_sumptuary_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_sumptuary_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_sumptuary_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_occlusion"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_occlusion.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_occlusion"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_occlusion.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_occlusion"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_occlusion.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_occlusion"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_occlusion.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_occlusion"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_occlusion.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_occlusion_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_occlusion_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_occlusion_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_occlusion_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_occlusion_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_occlusion_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_occlusion_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_occlusion_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_occlusion_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_occlusion_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_profundity"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_profundity.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_profundity"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_profundity.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_profundity"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_profundity.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_profundity"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_profundity.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_profundity"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_profundity.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_profundity_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_profundity_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_profundity_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_profundity_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_profundity_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_profundity_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_profundity_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_profundity_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_profundity_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_profundity_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_drudgery"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_drudgery.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_drudgery"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_drudgery.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_drudgery"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_drudgery.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_drudgery"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_drudgery.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_drudgery"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_drudgery.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_drudgery_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_drudgery_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_drudgery_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_drudgery_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_drudgery_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_drudgery_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_drudgery_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_drudgery_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_drudgery_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_drudgery_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_autarchy"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_autarchy.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_autarchy"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_autarchy.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_autarchy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_autarchy.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_autarchy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_autarchy.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_autarchy"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_autarchy.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_autarchy_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_autarchy_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_autarchy_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_autarchy_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_autarchy_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_autarchy_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_autarchy_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_autarchy_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_autarchy_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_autarchy_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_relic_libra_autarchy_seal"
+		texturefile = "gfx/interface/icons/relics/r_libra_autarchy_seal.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_libra_autarchy_seal_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 12				# in seconds
+			animationdelay = 1			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_cosmoplasty"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_cosmoplasty.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_cosmoplasty"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_cosmoplasty.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_cosmoplasty"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_cosmoplasty.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_cosmoplasty"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_cosmoplasty.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_cosmoplasty"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_cosmoplasty.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_cosmoplasty_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_cosmoplasty_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_cosmoplasty_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_cosmoplasty_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_cosmoplasty_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_cosmoplasty_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_cosmoplasty_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_cosmoplasty_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_cosmoplasty_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_cosmoplasty_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_magnificence"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_magnificence.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_magnificence_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_magnificence_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_magnificence_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_magnificence_b.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_magnificence"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_magnificence.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_magnificence"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_magnificence.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_magnificence"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_magnificence.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_magnificence"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_magnificence.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_magnificence_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_magnificence_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_magnificence_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_magnificence_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_magnificence_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_magnificence_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_magnificence_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_magnificence_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_magnificence_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_magnificence_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_vector"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_vector.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_vector"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_vector.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_vector"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_vector.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_vector"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_vector.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_vector"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_vector.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_vector_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_vector_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_vector_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_vector_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_vector_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_vector_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_vector_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_vector_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_vector_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_vector_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_havoc"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_havoc.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_havoc"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_havoc.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_havoc"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_havoc.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_havoc"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_havoc.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_havoc"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_havoc.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_havoc_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_havoc_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_havoc_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_havoc_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_havoc_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_havoc_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_havoc_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_havoc_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_havoc_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_havoc_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_bastion"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_bastion.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_bastion"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_bastion.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_bastion"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_bastion.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_bastion"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_bastion.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_bastion"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_bastion.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_bastion_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_bastion_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_bastion_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_bastion_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_bastion_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_bastion_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_bastion_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_bastion_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_bastion_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_bastion_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_suzerainty"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_suzerainty.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_suzerainty"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_suzerainty.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_suzerainty"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_suzerainty.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_suzerainty"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_suzerainty.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_suzerainty"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_suzerainty.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_suzerainty_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_suzerainty_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_suzerainty_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_suzerainty_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_suzerainty_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_suzerainty_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_suzerainty_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_suzerainty_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_suzerainty_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_suzerainty_5.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_evt_libra_monster_hunter"
+		texturefile = "gfx/event_pictures/libra_monster_hunter.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_libra_elemental_grandmaster"
+		texturefile = "gfx/event_pictures/libra_elemental_grandmaster_0.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_libra_genesis_project"
+		texturefile = "gfx/event_pictures/libra_genesis_project_0.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_libra_terminator"
+		texturefile = "gfx/event_pictures/libra_terminator_0.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+
+	spriteType = {
+		name = "GFX_evt_libra_matrix_fusion_1"
+		texturefile = "gfx/event_pictures/libra_matrix_fusion_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_matrix_fusion_2"
+		texturefile = "gfx/event_pictures/libra_matrix_fusion_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_libra_godfather_1"
+		texturefile = "gfx/event_pictures/libra_godfather_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_godfather_2"
+		texturefile = "gfx/event_pictures/libra_godfather_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_origin_libra_praises_to_life"
+		texturefile = "gfx/event_pictures/origins/origin_libra_praises_to_life.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_praises_to_life"
+		name = "GFX_origin_libra_praises_to_life_zoom_1"
+		upper_left = { x = 0 y = 0 }
+		lower_right = { x = 143 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_praises_to_life"
+		name = "GFX_origin_libra_praises_to_life_zoom_2"
+		upper_left = { x = 55 y = 5 }
+		lower_right = { x = 165 y = 85 }
+	}
+	spriteType = {
+		name = "GFX_libra_praises_to_life_stage_icon"
+		texturefile = "gfx/interface/icons/situation_log/situations/stages/libra_praises_to_life_stage_icon.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_libra_praises_to_life_stage_1"
+		texturefile = "gfx/interface/icons/situation_log/situations/stages/libra_praises_to_life_stage_1.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_praises_to_life_stage_2"
+		texturefile = "gfx/interface/icons/situation_log/situations/stages/libra_praises_to_life_stage_2.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_praises_to_life_stage_3"
+		texturefile = "gfx/interface/icons/situation_log/situations/stages/libra_praises_to_life_stage_3.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_praises_to_life_stage_4"
+		texturefile = "gfx/interface/icons/situation_log/situations/stages/libra_praises_to_life_stage_4.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_praises_to_life"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_praises_to_life.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_councilor_libra_praises_to_life"
+		texturefile = "gfx/interface/council_view/icon_councilor_libra_praises_to_life.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_praises_to_life_stage_1"
+		texturefile = "gfx/event_pictures/libra_praises_to_life_stage_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_praises_to_life_stage_2"
+		texturefile = "gfx/event_pictures/libra_praises_to_life_stage_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_praises_to_life_stage_3"
+		texturefile = "gfx/event_pictures/libra_praises_to_life_stage_3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_praises_to_life_stage_4"
+		texturefile = "gfx/event_pictures/libra_praises_to_life_stage_4.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_origin_libra_psalm_of_waves"
+		texturefile = "gfx/event_pictures/origins/origin_libra_psalm_of_waves.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_psalm_of_waves"
+		name = "GFX_origin_libra_psalm_of_waves_zoom_1"
+		upper_left = { x = 24 y = 5 }
+		lower_right = { x = 167 y = 109 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_psalm_of_waves"
+		name = "GFX_origin_libra_psalm_of_waves_zoom_2"
+		upper_left = { x = 24 y = 5 }
+		lower_right = { x = 134 y = 85 }
+	}
+	spriteType = {
+		name = "GFX_icon_councilor_libra_psalm_of_waves"
+		texturefile = "gfx/interface/council_view/icon_councilor_libra_psalm_of_waves.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_psalm_of_waves_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_psalm_of_waves_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_psalm_of_waves_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_psalm_of_waves_b.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_psalm_of_waves_c"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_psalm_of_waves_c.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_origin_libra_ultimate_market"
+		texturefile = "gfx/event_pictures/origins/origin_libra_ultimate_market.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_ultimate_market"
+		name = "GFX_origin_libra_ultimate_market_zoom_1"
+		upper_left = { x = 39 y = 5 }
+    		lower_right = { x = 182 y = 109 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_ultimate_market"
+		name = "GFX_origin_libra_ultimate_market_zoom_2"
+		upper_left = { x = 39 y = 5 }
+    		lower_right = { x = 149 y = 85 }
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_ultimate_market"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_ultimate_market.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_origin_libra_enlightenment_wisdom"
+		texturefile = "gfx/event_pictures/origins/origin_libra_enlightenment_wisdom.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_enlightenment_wisdom"
+		name = "GFX_origin_libra_enlightenment_wisdom_zoom_1"
+		upper_left = { x = 39 y = 5 }
+    		lower_right = { x = 182 y = 109 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_enlightenment_wisdom"
+		name = "GFX_origin_libra_enlightenment_wisdom_zoom_2"
+		upper_left = { x = 39 y = 5 }
+    		lower_right = { x = 149 y = 85 }
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_enlightenment_wisdom"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_enlightenment_wisdom.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_origin_libra_crimson_nights"
+		texturefile = "gfx/event_pictures/origins/origin_libra_crimson_nights.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_crimson_nights"
+		name = "GFX_origin_libra_crimson_nights_zoom_1"
+		upper_left = { x = 20 y = 5 }
+		lower_right = { x = 163 y = 109 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_crimson_nights"
+		name = "GFX_origin_libra_crimson_nights_zoom_2"
+		upper_left = { x = 35 y = 10 }
+		lower_right = { x = 145 y = 90 }
+	}
+	spriteType = {
+		name = "GFX_icon_councilor_libra_crimson_nights"
+		texturefile = "gfx/interface/council_view/icon_councilor_libra_crimson_nights.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_crimson_nights_vampire"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_crimson_nights_vampire.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_crimson_nights_ancestor"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_crimson_nights_ancestor.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_crimson_potential_liberation"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_crimson_potential_liberation.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_crimson_nights"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_crimson_nights.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_vampire_beam_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_vampire_beam_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_vampire_beam_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_vampire_beam_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_vampire_energy_lance"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_vampire_energy_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_vampire_kinetic_artillery"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_vampire_kinetic_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_vampire_strike_craft"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_vampire_strike_craft.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_vampire_torpedoes"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_vampire_torpedoes.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_crimson_vampire"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_crimson_vampire.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_crimson_vampire"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_crimson_vampire.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_crimson_vampire"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_crimson_vampire.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_crimson_vampire"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_crimson_vampire.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_crimson_vampire"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_crimson_vampire.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_vampire_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_vampire_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_vampire_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_vampire_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_vampire_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_vampire_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_vampire_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_vampire_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_vampire_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_vampire_5.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_crimson_ancestor"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_crimson_ancestor.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_crimson_ancestor_2_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_crimson_ancestor_2_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_crimson_ancestor_2_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_crimson_ancestor_2_b.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_crimson_ancestor"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_crimson_ancestor.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_crimson_ancestor"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_crimson_ancestor.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_crimson_ancestor"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_crimson_ancestor.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_crimson_ancestor"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_crimson_ancestor.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_ancestor_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_ancestor_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_ancestor_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_ancestor_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_ancestor_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_ancestor_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_ancestor_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_ancestor_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_crimson_ancestor_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_crimson_ancestor_5.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_crimson_nights_01_room"
+		texturefile = "gfx/portraits/city_sets/libra_crimson_nights_01_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_crimson_nights_02_room"
+		texturefile = "gfx/portraits/city_sets/libra_crimson_nights_02_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_crimson_nights_03_room"
+		texturefile = "gfx/portraits/city_sets/libra_crimson_nights_03_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_crimson_nights_04_room"
+		texturefile = "gfx/portraits/city_sets/libra_crimson_nights_04_room.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_crimson_nights_1"
+		texturefile = "gfx/event_pictures/libra_crimson_nights_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_crimson_nights_2"
+		texturefile = "gfx/event_pictures/libra_crimson_nights_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_origin_libra_shadow_consciousness"
+		texturefile = "gfx/event_pictures/origins/origin_libra_shadow_consciousness.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_shadow_consciousness"
+		name = "GFX_origin_libra_shadow_consciousness_zoom_1"
+		upper_left = { x = 20 y = 5 }
+		lower_right = { x = 163 y = 109 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_shadow_consciousness"
+		name = "GFX_origin_libra_shadow_consciousness_zoom_2"
+		upper_left = { x = 35 y = 10 }
+		lower_right = { x = 145 y = 90 }
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_shadow_consciousness"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_shadow_consciousness.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_shadow_consciousness"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_shadow_consciousness.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_shadow_consciousness_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_shadow_consciousness_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_shadow_consciousness_d"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_shadow_consciousness_d.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_origin_libra_dragonborn"
+		texturefile = "gfx/event_pictures/origins/origin_libra_dragonborn.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_dragonborn"
+		name = "GFX_origin_libra_dragonborn_zoom_1"
+		upper_left = { x = 35 y = 0 }
+		lower_right = { x = 178 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_dragonborn"
+		name = "GFX_origin_libra_dragonborn_zoom_2"
+		upper_left = { x = 50 y = 0 }
+		lower_right = { x = 160 y = 80 }
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_dragonborn"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_dragonborn.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_councilor_libra_dragonborn"
+		texturefile = "gfx/interface/council_view/icon_councilor_libra_dragonborn.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_dragonchant"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_dragonchant.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_dragonchant"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_dragonchant.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_dragonchant"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_dragonchant.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_dragonchant"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_dragonchant.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_dragonchant"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_dragonchant.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonchant_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonchant_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonchant_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonchant_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonchant_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonchant_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonchant_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonchant_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonchant_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonchant_5.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_dragonlight"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_dragonlight.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_dragonlight"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_dragonlight.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_dragonlight"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_dragonlight.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_dragonlight"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_dragonlight.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_dragonlight"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_dragonlight.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonlight_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonlight_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonlight_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonlight_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonlight_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonlight_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonlight_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonlight_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragonlight_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragonlight_5.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_dragondark"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_dragondark.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_libra_dragondark"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_libra_dragondark.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_libra_dragondark"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_dragondark.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_libra_dragondark"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_libra_dragondark.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_libra_dragondark"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_dragondark.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragondark_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragondark_1.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragondark_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragondark_2.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragondark_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragondark_3.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragondark_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragondark_4.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_libra_dragondark_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_libra_dragondark_5.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_site_dragonborn"
+		texturefile = "gfx/event_pictures/libra_site_dragonborn.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragon_breath_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragon_breath_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragon_breath_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragon_breath_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragon_breath_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragon_breath_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragon_breath_light"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragon_breath_light.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragon_breath_dark"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragon_breath_dark.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_libra_dragon_wing_skewer_a"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragon_wing_skewer_a.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragon_wing_skewer_b"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragon_wing_skewer_b.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragon_wing_skewer_c"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragon_wing_skewer_c.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_laser"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_laser.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_torpedo"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_torpedo.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_artillery"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_strike_craft"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_strike_craft.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_shield"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_aura_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_aura_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_aura_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_aura_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_aura_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_aura_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_aura_4"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_aura_4.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_dragonborn_aura_5"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_dragonborn_aura_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_paradox_loop"
+		texturefile = "gfx/event_pictures/origins/origin_libra_paradox_loop.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_paradox_loop"
+		name = "GFX_origin_libra_paradox_loop_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_paradox_loop"
+		name = "GFX_origin_libra_paradox_loop_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_paradise_lose"
+		texturefile = "gfx/event_pictures/origins/origin_libra_paradise_lose.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_paradise_lose"
+		name = "GFX_origin_libra_paradise_lose_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_paradise_lose"
+		name = "GFX_origin_libra_paradise_lose_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_paradise_lose"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_paradise_lose.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_paradise_lose"
+		texturefile = "gfx/event_pictures/libra_paradise_lose.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_interstellar_port"
+		texturefile = "gfx/event_pictures/origins/origin_libra_interstellar_port.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_interstellar_port"
+		name = "GFX_origin_libra_interstellar_port_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_interstellar_port"
+		name = "GFX_origin_libra_interstellar_port_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_antientropy_instruction"
+		texturefile = "gfx/event_pictures/origins/origin_libra_antientropy_instruction.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_antientropy_instruction"
+		name = "GFX_origin_libra_antientropy_instruction_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_antientropy_instruction"
+		name = "GFX_origin_libra_antientropy_instruction_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+	spriteType = {
+		name = "GFX_wg_libra_antientropy_instruction"
+		texturefile = "gfx/interface/icons/diplomacy/diplomatic_rival_mutual_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_wg_end_threat_libra_antientropy_instruction"
+		texturefile = "gfx/interface/icons/diplomacy/diplomatic_rival_mutual_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_antientropy_instruction_1"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_antientropy_instruction_1.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_antientropy_instruction_2"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_antientropy_instruction_2.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_antientropy_instruction_3"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_antientropy_instruction_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_laser_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_laser_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_laser_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_laser_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_laser_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_laser_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_energy_lance"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_energy_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_point_defense"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_point_defense.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_kinetic_artillery_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_kinetic_artillery_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_kinetic_artillery_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_kinetic_artillery_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_kinetic_artillery_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_kinetic_artillery_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_mass_accelerator"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_mass_accelerator.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_flak_batteries"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_flak_batteries.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_missiles_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_missiles_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_missiles_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_missiles_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_missiles_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_missiles_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_torpedo"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_torpedo.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_strike_craft_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_strike_craft_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_strike_craft_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_strike_craft_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_shield_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_shield_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_shield_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_shield_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_shield_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_shield_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_armor_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_armor_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_armor_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_armor_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_antientropy_armor_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_antientropy_armor_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_planetarian"
+		texturefile = "gfx/event_pictures/origins/origin_libra_planetarian.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_planetarian"
+		name = "GFX_origin_libra_planetarian_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_planetarian"
+		name = "GFX_origin_libra_planetarian_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_planetarian_ruler"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_planetarian_ruler.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_planetarian_yumemi"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_planetarian_yumemi.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_planetarian_01_room"
+		texturefile = "gfx/portraits/city_sets/libra_planetarian_01_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_planetarian_02_room"
+		texturefile = "gfx/portraits/city_sets/libra_planetarian_02_room.dds"
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_eden_accord"
+		texturefile = "gfx/event_pictures/origins/origin_libra_eden_accord.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_eden_accord"
+		name = "GFX_origin_libra_eden_accord_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_eden_accord"
+		name = "GFX_origin_libra_eden_accord_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+	spriteType = {
+		name = "GFX_wg_libra_eden_accord_subjugation"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_hasvassal.dds"
+	}
+	spriteType = {
+		name = "GFX_wg_libra_eden_accord"
+		texturefile = "gfx/interface/icons/diplomacy/diplomatic_rival_mutual_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_wg_end_threat_libra_eden_accord"
+		texturefile = "gfx/interface/icons/diplomacy/diplomatic_rival_mutual_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_eden_accord_e"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_eden_accord_e.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_eden_accord_g_1"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_eden_accord_g_1.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_eden_accord_g_2"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_eden_accord_g_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_polemics_mechanism"
+		texturefile = "gfx/event_pictures/origins/origin_libra_polemics_mechanism.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_polemics_mechanism"
+		name = "GFX_origin_libra_polemics_mechanism_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_polemics_mechanism"
+		name = "GFX_origin_libra_polemics_mechanism_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_miracle_builder"
+		texturefile = "gfx/event_pictures/origins/origin_libra_miracle_builder.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_miracle_builder"
+		name = "GFX_origin_libra_miracle_builder_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_miracle_builder"
+		name = "GFX_origin_libra_miracle_builder_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_may_storm"
+		texturefile = "gfx/event_pictures/origins/origin_libra_may_storm.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_may_storm"
+		name = "GFX_origin_libra_may_storm_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_may_storm"
+		name = "GFX_origin_libra_may_storm_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+	spriteType = {
+		name = "GFX_wg_libra_may_storm"
+		texturefile = "gfx/interface/icons/diplomacy/diplomatic_rival_mutual_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_wg_end_threat_libra_may_storm"
+		texturefile = "gfx/interface/icons/diplomacy/diplomatic_rival_mutual_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_may_storm_conscript"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_may_storm_conscript.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_may_storm_militarist"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_may_storm_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_may_storm_pacifist"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_may_storm_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_preset_libra_may_storm_vassal_state"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_libra_may_storm_vassal_state.dds"
+	}
+	spriteType = {
+		name = "GFX_preset_libra_may_storm_vassal_state_bulwark"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_libra_may_storm_vassal_state_bulwark.dds"
+	}
+	spriteType = {
+		name = "GFX_preset_libra_may_storm_vassal_state_scholarium"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_libra_may_storm_vassal_state_scholarium.dds"
+	}
+	spriteType = {
+		name = "GFX_preset_libra_may_storm_vassal_state_prospectorium"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_libra_may_storm_vassal_state_prospectorium.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_may_storm_0"
+		texturefile = "gfx/event_pictures/libra_may_storm_0.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_extreme_iteration"
+		texturefile = "gfx/event_pictures/origins/origin_libra_extreme_iteration.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_extreme_iteration"
+		name = "GFX_origin_libra_extreme_iteration_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_extreme_iteration"
+		name = "GFX_origin_libra_extreme_iteration_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+	spriteType = {
+		name = "GFX_icon_councilor_libra_extreme_iteration"
+		texturefile = "gfx/interface/council_view/icon_councilor_libra_extreme_iteration.dds"
+	}
+
+	spriteType = {
+		name = "GFX_origin_libra_centurion"
+		texturefile = "gfx/event_pictures/origins/origin_libra_centurion.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_centurion"
+		name = "GFX_origin_libra_centurion_zoom_1"
+		upper_left = { x = 37 y = 0 }
+		lower_right = { x = 180 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_centurion"
+		name = "GFX_origin_libra_centurion_zoom_2"
+		upper_left = { x = 47 y = 10 }
+		lower_right = { x = 157 y = 90 }
+	}
+	spriteType = {
+		name = "GFX_icon_councilor_libra_primus_pilus"
+		texturefile = "gfx/interface/council_view/icon_councilor_libra_primus_pilus.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_councilor_libra_praetorian_commander"
+		texturefile = "gfx/interface/council_view/icon_councilor_libra_praetorian_commander.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_centurion"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_centurion.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_centurion_elite"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_centurion_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_message_libra_centurion"
+		texturefile = "gfx/interface/icons/message/message_libra_centurion.dds"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_origin_libra_machina_manifestation"
+		texturefile = "gfx/event_pictures/origins/origin_libra_machina_manifestation.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_machina_manifestation"
+		name = "GFX_origin_libra_machina_manifestation_zoom_1"
+		upper_left = { x = 42 y = 0 }
+		lower_right = { x = 185 y = 104 }
+	}
+	spriteType = {
+		parent = "GFX_origin_libra_machina_manifestation"
+		name = "GFX_origin_libra_machina_manifestation_zoom_2"
+		upper_left = { x = 50 y = 10 }
+		lower_right = { x = 160 y = 90 }
+	}
+}

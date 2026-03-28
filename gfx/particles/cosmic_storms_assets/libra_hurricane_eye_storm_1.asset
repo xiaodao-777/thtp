@@ -1,0 +1,1067 @@
+particle=
+{
+	name="libra_hurricane_eye_1_file"
+	subsystem=
+	{
+		name="ParticleExplosions"
+		max_amount=3
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 46 12 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 10 }
+		invert=no
+		trail=no
+		spritesheet_animation=yes
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture=
+		{
+			file="gfx/particles/particlesblast6x6.dds"
+			x=6
+			y=6
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=180
+			y=180
+			z=180
+			alpha=255,blastfade
+		}
+		position=
+		{
+			x=0
+			y=0
+			z=0
+		}
+		start={ 0 4 }
+		duration=-1
+		emission_pulse_duration={ 3 10 }
+		emission_pulse_silence={ 0 5 }
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0
+		life={ 4.5 0.5 }
+		emission={ 1 1 }
+		size={ 5,grow2 2 }
+		rotation={ 0 180 }
+		rotation_speed=5
+		mass=3.5
+		force=vortex,rotate
+	}
+	subsystem=
+	{
+		name="smoke_glow"
+		max_amount=40
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 25 8 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 15 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture=
+		{
+			file="gfx/particles/cloud_5.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=120
+			y={ 120 15 }
+			z={ 120 25 }
+			alpha=255,smoke_glow_alpha
+		}
+		position=
+		{
+			x=0
+			y=-6
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.5
+		life={ 8 3 }
+		emission=200
+		size={ 25 3 }
+		rotation={ 0 180 }
+		rotation_speed=5
+	}
+	subsystem=
+	{
+		name="glow"
+		max_amount=40
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 29 15 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 15 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture=
+		{
+			file="gfx/particles/glow.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=160
+			y={ 160 30 }
+			z={ 160 30 }
+			alpha={ 210,glow_fade 15 }
+		}
+		position=
+		{
+			x=0
+			y=-1
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.5
+		life={ 4 3 }
+		emission=1
+		size={ 34 7 }
+		rotation={ 0 180 }
+		rotation_speed=5
+		mass={ 3.5 0.5 }
+		force=vortex
+	}
+	subsystem=
+	{
+		name="lightning"
+		max_amount=30
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 20 5 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 10 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=no
+		texture=
+		{
+			file="gfx/particles/lightning2x2_tex.dds"
+			x=2
+			y=2
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=255
+			y=255
+			z=255
+			alpha={ 255,lightning_alpha 25 }
+		}
+		position=
+		{
+			x=0
+			y=-4
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		life={ 0.7 0.3 }
+		emission={ 5 2 }
+		size={ 8 3 }
+		particle_yaw={ 0 180 }
+		particle_pitch={ 0 180 }
+		rotation={ 0 180 }
+	}
+	subsystem=
+	{
+		name="lightning_out"
+		max_amount=30
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 50 15 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 10 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=no
+		texture=
+		{
+			file="gfx/particles/lightning2x2_tex.dds"
+			x=2
+			y=2
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=255
+			y=255
+			z=255
+			alpha={ 255,lightning_alpha 25 }
+		}
+		position=
+		{
+			x=0
+			y=-4
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		life={ 0.7 0.3 }
+		emission={ 2 2 }
+		size={ 15 3 }
+		particle_yaw={ 0 180 }
+		particle_pitch={ 0 180 }
+		rotation={ 0 180 }
+	}
+	subsystem=
+	{
+		name="Tracers_All"
+		max_amount=10
+		slave_particles=0
+		sort="distance"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 50 30 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 10 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=no
+		texture=
+		{
+			file="gfx/particles/lens_flare_sharp.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=150
+			y={ 150 0 }
+			z={ 150 0 }
+			alpha={ 255,glow_fade 30 }
+		}
+		position=
+		{
+			x=0
+			y=0
+			z=0
+		}
+		start=0
+		duration=-1
+		emission_pulse_duration=0
+		emission_pulse_silence=0
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.5
+		life={ 3 1 }
+		emission=2
+		size={ 7,glow_size 1 }
+		rotation={ 0 180 }
+		rotation_speed_yaw={ 50 25 }
+		rotation_speed_pitch={ 0 25 }
+		mass={ 3.5 0.5 }
+		force=flow
+	}
+	subsystem=
+	{
+		name="FlowParticles"
+		max_amount=50
+		slave_particles=0
+		sort="distance"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 50 10 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 15 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture=
+		{
+			file="gfx/particles/lens_flare_01.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=200
+			y={ 200 0 }
+			z={ 200 0 }
+			alpha={ 200,glow_fade 50 }
+		}
+		position=
+		{
+			x=20
+			y=0
+			z=20
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0
+		life={ 15 1 }
+		emission=2
+		size={ 2,glow_size 1 }
+		rotation={ 0 180 }
+		rotation_speed=5
+		mass={ 3.5 0.5 }
+		force=flow,Wind
+	}
+	subsystem=
+	{
+		name="FlowParticles2"
+		max_amount=3000
+		slave_particles=0
+		sort="distance"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 50 25 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 15 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture=
+		{
+			file="gfx/particles/lens_flare_01.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=200
+			y={ 200 0 }
+			z={ 200 0 }
+			alpha={ 200,glow_fade 50 }
+		}
+		position=
+		{
+			x=0
+			y=0
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0
+		life={ 15 1 }
+		emission=300
+		size={ 1,glow_size 0.5 }
+		rotation={ 0 180 }
+		rotation_speed=5
+		mass={ 3.5 0.5 }
+		force=vortex,rotate
+	}
+	subsystem=
+	{
+		name="FlowParticles3"
+		max_amount=17
+		slave_particles=0
+		sort="distance"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 46 10 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 15 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture=
+		{
+			file="gfx/particles/lens_flare_01.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=200
+			y={ 200 0 }
+			z={ 200 0 }
+			alpha=255,alphaflicker
+		}
+		position=
+		{
+			x=0
+			y=0
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ 0 10 }
+		velocity_yaw={ 180 180 }
+		velocity={ 4 1.5 }
+		life={ 5 1 }
+		emission={ 10 5 }
+		size={ 0.8,GlowSize2 0.4 }
+		rotation={ 0 180 }
+		rotation_speed={ 90 30 }
+		mass={ 3.5 0.5 }
+		force=rotate2,vortex
+	}
+	subsystem=
+	{
+		name="smoke_dark"
+		max_amount=200
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 50 30 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 5 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture=
+		{
+			file="gfx/particles/cloud_5.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color=
+		{
+			x=40
+			y=40
+			z=40
+			alpha=255,alpha_fade
+		}
+		position=
+		{
+			x=0
+			y=1
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.5
+		life={ 7 2 }
+		emission=300
+		size={ 15 6 }
+		rotation={ 0 180 }
+		rotation_speed=5
+		mass={ 3.5 1 }
+		force=vortex
+	}
+	subsystem=
+	{
+		name="smoke_mid"
+		max_amount=50
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 60 12.5 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 1 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=no
+		texture=
+		{
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x={ 80 10 }
+			y={ 80 15 }
+			z={ 80 20 }
+			alpha={ 10,alpha_fade 10 }
+		}
+		position=
+		{
+			x=0
+			y=0
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.1
+		life={ 8 3 }
+		emission=70
+		size={ 90,grow 10 }
+		particle_yaw={ 0 10 }
+		particle_pitch={ 90 10 }
+		rotation={ 0 180 }
+		rotation_speed=1
+		mass={ 3 2 }
+		force=vortex
+	}
+	subsystem=
+	{
+		name="smoke_outer_dark"
+		max_amount=15
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 60 25 }
+		sphere_emitter_yaw={ 0 360 }
+		sphere_emitter_pitch={ 0 25 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=no
+		texture=
+		{
+			file="gfx/particles/cloud_low_alpha.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=62
+			y={ 62 10 }
+			z={ 62 10 }
+			alpha={ 150,alpha_fade 50 }
+		}
+		position=
+		{
+			x=-5
+			y=0
+			z=-5
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.2
+		life={ 8 3 }
+		emission=100
+		size={ 150 10 }
+		particle_yaw={ 0 90 }
+		particle_pitch={ 90 50 }
+		rotation={ 0 180 }
+		rotation_speed=1
+		mass={ 4 2 }
+		force=vortex
+	}
+	subsystem=
+	{
+		name="smoke_outer"
+		max_amount=60
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 80 25 }
+		sphere_emitter_yaw={ 0 360 }
+		sphere_emitter_pitch={ 0 1 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=no
+		texture=
+		{
+			file="gfx/particles/cloud_low_alpha.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x=150
+			y={ 150 10 }
+			z={ 150 10 }
+			alpha=255,alpha_fade
+		}
+		position=
+		{
+			x=-5
+			y=0
+			z=-5
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.2
+		life={ 8 3 }
+		emission=100
+		size={ 60 10 }
+		particle_yaw={ 0 10 }
+		particle_pitch={ 90 10 }
+		rotation={ 0 180 }
+		rotation_speed=1
+		mass={ 4 2 }
+		force=vortex
+	}
+	subsystem=
+	{
+		name="smoke_outer_big_planes"
+		max_amount=60
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 90 30 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 1 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=no
+		texture=
+		{
+			file="gfx/particles/cloud_low_alpha.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x={ 100 15 }
+			y={ 100 10 }
+			z={ 100 20 }
+			alpha={ 255,alpha_fade 50 }
+		}
+		position=
+		{
+			x=3
+			y=-3
+			z=3
+		}
+		duration=-1
+		emitter_yaw={ 180 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.2
+		life={ 8 3 }
+		emission=100
+		size={ 80 5 }
+		particle_yaw={ 0 5 }
+		particle_pitch={ 90 5 }
+		rotation={ 0 180 }
+		rotation_speed=1
+		mass={ 4 2 }
+		force=vortex
+	}
+	subsystem=
+	{
+		name="smoke_inner"
+		max_amount=50
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 45 10 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 1 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=no
+		texture=
+		{
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color=
+		{
+			x={ 130 10 }
+			y={ 130 15 }
+			z={ 130 20 }
+			alpha=15,alpha_fade
+		}
+		position=
+		{
+			x=0
+			y=0
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.1
+		life={ 8 3 }
+		emission=100
+		size={ 70,grow 10 }
+		particle_yaw={ 0 10 }
+		particle_pitch={ 90 10 }
+		rotation={ 0 180 }
+		rotation_speed=1
+		mass={ 3 2 }
+		force=vortex
+	}
+	subsystem=
+	{
+		name="smoke_outer_bill"
+		max_amount=30
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 50 20 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 2 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture=
+		{
+			file="gfx/particles/cloud_5.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color=
+		{
+			x=130
+			y={ 130 0 }
+			z={ 130 10 }
+			alpha=150,alpha_fade
+		}
+		position=
+		{
+			x=0
+			y=-4
+			z=0
+		}
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ -10 25 }
+		velocity_yaw=90
+		velocity=0.1
+		life={ 8 3 }
+		emission=100
+		size={ 45 10 }
+		particle_pitch=90
+		rotation={ 0 180 }
+		rotation_speed=1
+		mass={ 5 2 }
+		force=vortex
+	}
+	animation=
+	{
+		name="alpha_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve=
+		{
+			0 0 0.4 0.50781 0.91471 0.79688 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation=
+	{
+		name="glow_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve=
+		{
+			0 0 0.235 0.977 0.532 0.68 0.774 0.922 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation=
+	{
+		name="glow_size"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve=
+		{
+			0 0.617 0.212 1 0.656 0.758 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation=
+	{
+		name="lightning_alpha"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve=
+		{
+			0 0 0.07941 0.25781 0.13529 0.11719 0.256 0.18 0.335 1 0.4 0.156 0.49412 0.75 0.56176 0.29688 0.65 0.78125 0.821 0.938 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation=
+	{
+		name="smoke_glow_alpha"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve=
+		{
+			0 0 0.25588 0.94531 0.66765 0.64063 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation=
+	{
+		name="grow"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve=
+		{
+			0 0.711 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation=
+	{
+		name="grow2"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve=
+		{
+			0 0.0625 0.39118 0.21094 0.67353 0.44531 0.88235 0.88281 0.9999 1 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation=
+	{
+		name="blastfade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0.1
+		maxValue=1
+		curve=
+		{
+			0 1 0.34412 0.89063 0.70588 0.22656 1 0.04688 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation=
+	{
+		name="GlowSize2"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0.1
+		maxValue=6
+		curve=
+		{
+			0 0 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation=
+	{
+		name="alphaflicker"
+		start=0
+		duration=1
+		repeat=yes
+		minValue=0
+		maxValue=1
+		curve=
+		{
+			0 0.03906 0.10294 0.39063 0.13235 0.14844 0.23529 0.69531 0.25588 0.20313 0.35588 0.79688 0.38235 0.45313 0.47059 0.97656 0.50294 0.25 0.58235 0.82813 0.62353 0.39063 0.67059 0.99219 0.73529 0.27344 0.83824 0.61719 0.84706 0.17969 0.93235 0.40625 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	force=
+	{
+		type="turbulence"
+		name="vortex"
+		position=
+		{
+			0 0 0 
+		}
+		direction=
+		{
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=0.6
+	}
+	force=
+	{
+		type="turbulence"
+		name="flow"
+		position=
+		{
+			0 0 0 
+		}
+		direction=
+		{
+			50 150 150 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=10
+	}
+	force=
+	{
+		type="planar"
+		name="Wind"
+		position=
+		{
+			0 0 0 
+		}
+		direction=
+		{
+			-20 0 -20 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=0.1
+	}
+	force=
+	{
+		type="spin"
+		name="rotate"
+		position=
+		{
+			0 0 0 
+		}
+		direction=
+		{
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=0.05,0.02
+	}
+	force=
+	{
+		type="spin"
+		name="rotate2"
+		position=
+		{
+			0 0 0 
+		}
+		direction=
+		{
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=0.2
+	}
+}

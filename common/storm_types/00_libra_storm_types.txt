@@ -1,0 +1,467 @@
+libra_hurricane_eye_storm_1 = {
+	storm_min_radius = {
+		base = 108
+		mult = value:storm_size_multiplier
+	}
+	storm_max_radius = {
+		base = 120
+		mult = value:storm_size_multiplier
+	}
+	storm_min_steps = {
+		base = 2
+	}
+	storm_max_steps = {
+		base = 2
+	}
+	storm_speed = {
+		base = 0.04
+	}
+	storm_activation_period_in_months = {
+		base = 3
+	}
+	storm_monthly_added_devastation = {
+		base = 0
+	}
+
+	spawn_weight = 0
+	description = libra_hurricane_eye_storm_lore_description
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { not = { has_tradition = tr_nanotech_finish } }
+		}
+		country_produces_mult = -0.25
+		planet_crime_floor_add = 25
+		custom_tooltip = libra_hurricane_eye_storm_1_planet_tt_1
+		#show_only_custom_tooltip = no
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_hurricane_eye }
+		}
+		country_produces_mult = 0.25
+		planet_crime_floor_add = -25
+		custom_tooltip = libra_hurricane_eye_storm_1_planet_tt_2
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			exists = owner
+			owner = { not = { has_tradition = tr_nanotech_finish } }
+		}
+		ship_accuracy_mult = -0.25
+		ship_speed_reduction = 0.25
+		ship_armor_reduction = 0.5
+		ship_disengage_chance_reduction = 0.5
+		custom_tooltip = libra_hurricane_eye_storm_1_fleet_tt_1
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_hurricane_eye }
+		}
+		ship_armor_hardening_add = 0.25
+		ship_shield_hardening_add = 0.25
+		ship_armor_regen_add_perc = 0.35
+		ship_shield_regen_add_perc = 0.35
+		custom_tooltip = libra_hurricane_eye_storm_1_fleet_tt_2
+	}
+
+	on_start = {
+		every_system_within_storm = {
+			added_to_storm_base_effect = yes
+			libra_hurricane_eye_storm_add = yes
+		}
+	}
+
+	on_finished = {
+		every_system_within_storm = {
+			removed_from_storm_base_effect = yes
+			libra_hurricane_eye_storm_remove = yes
+		}
+	}
+
+	on_moved = {
+		every_system_added_to_storm = {
+			added_to_storm_base_effect = yes
+			libra_hurricane_eye_storm_add = yes
+			every_system_planet = {
+				limit = {
+					is_colonizable = yes
+					count_deposits = {
+						type = d_nanotech_devastation
+						count < 12
+					}
+				}
+				add_deposit = d_nanotech_devastation
+				random = {
+					chance = 50
+					add_deposit = d_nanotech_devastation
+				}
+			}
+		}
+
+		every_system_removed_from_storm = {
+			removed_from_storm_base_effect = yes
+			libra_hurricane_eye_storm_remove = yes
+			every_system_planet = {
+				limit = {
+					is_colony = yes
+					count_deposits = {
+						type = d_nanotech_devastation
+						count < 10
+					}
+				}
+				random = {
+					chance = 50
+					add_deposit = d_nanotech_devastation
+				}
+			}
+		}
+	}
+
+	cosmic_storm_texture_path = "gfx/map/storms/NebulaOpacity.dds"
+	cosmic_storm_texture_color_path = "gfx/map/storms/libra_hurricane_eye_storm_color.dds"
+	cosmic_storm_event_sprite = "GFX_libra_hurricane_eye_storm"
+	icon = GFX_planetview_libra_hurricane_eye_storm_modifier_frame
+
+	cosmic_storm_texture_lightning_paths = {
+		"gfx/map/storms/lightning/lightning_big_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_big_storm_02.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_02.dds"
+	}
+
+	cosmic_storm_galaxy_lightning_time = 5.0
+	cosmic_storm_galaxy_max_opacity = 0.4
+
+	show_notification = {
+		NOT = { has_ascension_perk = ap_libra_hurricane_eye }
+	}
+}
+
+libra_hurricane_eye_storm_2 = {
+	storm_min_radius = {
+		base = 54
+		mult = value:storm_size_multiplier
+	}
+	storm_max_radius = {
+		base = 60
+		mult = value:storm_size_multiplier
+	}
+	storm_min_steps = {
+		base = 4
+		modifier = {
+			add = 1
+			galaxy_size = small
+		}
+		modifier = {
+			add = 2
+			galaxy_size = medium
+		}
+		modifier = {
+			add = 3
+			galaxy_size = large
+		}
+		modifier = {
+			add = 4
+			galaxy_size = huge
+		}
+	}
+	storm_max_steps = {
+		base = 5
+		modifier = {
+			add = 1
+			galaxy_size = small
+		}
+		modifier = {
+			add = 2
+			galaxy_size = medium
+		}
+		modifier = {
+			add = 3
+			galaxy_size = large
+		}
+		modifier = {
+			add = 4
+			galaxy_size = huge
+		}
+	}
+	storm_speed = {
+		base = 0.2
+	}
+	storm_activation_period_in_months = {
+		base = 3
+	}
+	storm_monthly_added_devastation = {
+		base = 0
+	}
+
+	spawn_weight = 0
+	description = libra_hurricane_eye_storm_lore_description
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { not = { has_tradition = tr_nanotech_finish } }
+		}
+		planet_jobs_upkeep_mult = 0.5
+		planet_structures_upkeep_mult = 0.5
+		custom_tooltip = libra_hurricane_eye_storm_2_planet_tt_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_hurricane_eye }
+		}
+		planet_jobs_upkeep_mult = -0.5
+		planet_structures_upkeep_mult = -0.5
+		custom_tooltip = libra_hurricane_eye_storm_2_planet_tt_2
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			exists = owner
+			owner = { not = { has_tradition = tr_nanotech_finish } }
+		}
+		ship_armor_reduction = 0.5
+		ship_shield_reduction = 0.5
+		ship_armor_regen_add_perc = -0.6
+		ship_shield_regen_add_perc = -0.6
+		custom_tooltip = libra_hurricane_eye_storm_2_fleet_tt_1
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_hurricane_eye }
+		}
+		ship_evasion_mult = 0.25
+		ship_hull_regen_add_perc = 0.25
+		ship_armor_regen_add_perc = 0.6
+		ship_shield_regen_add_perc = 0.6
+		custom_tooltip = libra_hurricane_eye_storm_2_fleet_tt_2
+	}
+
+	on_start = {
+		every_system_within_storm = {
+			added_to_storm_base_effect = yes
+			libra_hurricane_eye_storm_add = yes
+		}
+	}
+
+	on_finished = {
+		every_system_within_storm = {
+			removed_from_storm_base_effect = yes
+			libra_hurricane_eye_storm_remove = yes
+		}
+	}
+
+	on_moved = {
+		every_system_added_to_storm = {
+			added_to_storm_base_effect = yes
+			libra_hurricane_eye_storm_add = yes
+			every_system_planet = {
+				limit = {
+					is_colony = yes
+					count_deposits = {
+						type = d_nanotech_devastation
+						count < 12
+					}
+				}
+				random = {
+					chance = 70
+					add_deposit = d_nanotech_devastation
+				}
+			}
+		}
+
+		every_system_removed_from_storm = {
+			removed_from_storm_base_effect = yes
+			libra_hurricane_eye_storm_remove = yes
+			every_system_planet = {
+				limit = {
+					is_colonizable = yes
+					count_deposits = {
+						type = d_nanotech_devastation
+						count < 15
+					}
+				}
+				add_deposit = d_nanotech_devastation
+				random = {
+					chance = 50
+					add_deposit = d_nanotech_devastation
+				}
+				random = {
+					chance = 50
+					add_deposit = d_nanotech_devastation
+				}
+			}
+		}
+	}
+
+	cosmic_storm_texture_path = "gfx/map/storms/NebulaOpacity.dds"
+	cosmic_storm_texture_color_path = "gfx/map/storms/libra_hurricane_eye_storm_color.dds"
+	cosmic_storm_event_sprite = "GFX_libra_hurricane_eye_storm"
+	icon = GFX_planetview_libra_hurricane_eye_storm_modifier_frame
+
+	cosmic_storm_texture_lightning_paths = {
+		"gfx/map/storms/lightning/lightning_big_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_big_storm_02.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_02.dds"
+	}
+
+	cosmic_storm_galaxy_lightning_time = 5.0
+	cosmic_storm_galaxy_max_opacity = 0.4
+
+	show_notification = {
+		NOT = { has_ascension_perk = ap_libra_hurricane_eye }
+	}
+}
+
+libra_hurricane_eye_storm_3 = {
+	storm_min_radius = {
+		base = 77
+		mult = value:storm_size_multiplier
+	}
+	storm_max_radius = {
+		base = 88
+		mult = value:storm_size_multiplier
+	}
+	storm_min_steps = {
+		base = 2
+	}
+	storm_max_steps = {
+		base = 2
+	}
+	storm_speed = {
+		base = 0.1
+	}
+	storm_activation_period_in_months = {
+		base = 3
+	}
+	storm_monthly_added_devastation = {
+		base = 0
+	}
+
+	spawn_weight = 0
+	description = libra_hurricane_eye_storm_lore_description
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { not = { has_tradition = tr_nanotech_finish } }
+		}
+		planet_stability_mult = -0.5
+		planet_orbital_bombardment_damage = 1
+		custom_tooltip = libra_hurricane_eye_storm_3_planet_tt_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_hurricane_eye }
+		}
+		planet_stability_mult = 0.25
+		planet_orbital_bombardment_damage = -0.5
+		custom_tooltip = libra_hurricane_eye_storm_3_planet_tt_2
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			exists = owner
+			owner = { not = { has_tradition = tr_nanotech_finish } }
+		}
+		ship_accuracy_add = -20
+		ship_weapon_range_mult = -0.2
+		ship_engagement_range_mult = -0.5
+		ship_hull_regen_add_perc = -0.25
+		custom_tooltip = libra_hurricane_eye_storm_3_fleet_tt_1
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_hurricane_eye }
+		}
+		ship_accuracy_add = 10
+		ship_weapon_range_mult = 0.1
+		ship_engagement_range_mult = 0.25
+		ship_hull_regen_add_perc = 0.25
+		custom_tooltip = libra_hurricane_eye_storm_3_fleet_tt_2
+	}
+
+	on_start = {
+		every_system_within_storm = {
+			added_to_storm_base_effect = yes
+			libra_hurricane_eye_storm_add = yes
+		}
+	}
+
+	on_finished = {
+		every_system_within_storm = {
+			removed_from_storm_base_effect = yes
+			libra_hurricane_eye_storm_remove = yes
+		}
+	}
+
+	on_moved = {
+		every_system_added_to_storm = {
+			added_to_storm_base_effect = yes
+			libra_hurricane_eye_storm_add = yes
+			every_system_planet = {
+				limit = {
+					is_colonizable = yes
+					count_deposits = {
+						type = d_nanotech_devastation
+						count < 18
+					}
+				}
+				add_deposit = d_nanotech_devastation
+				add_deposit = d_nanotech_devastation
+				random = {
+					chance = 50
+					add_deposit = d_nanotech_devastation
+				}
+				random = {
+					chance = 50
+					add_deposit = d_nanotech_devastation
+				}
+			}
+		}
+
+		every_system_removed_from_storm = {
+			removed_from_storm_base_effect = yes
+			libra_hurricane_eye_storm_remove = yes
+			every_system_planet = {
+				limit = {
+					is_colony = yes
+					count_deposits = {
+						type = d_nanotech_devastation
+						count < 15
+					}
+				}
+				add_deposit = d_nanotech_devastation
+			}
+		}
+	}
+
+	cosmic_storm_texture_path = "gfx/map/storms/NebulaOpacity.dds"
+	cosmic_storm_texture_color_path = "gfx/map/storms/libra_hurricane_eye_storm_color.dds"
+	cosmic_storm_event_sprite = "GFX_libra_hurricane_eye_storm"
+	icon = GFX_planetview_libra_hurricane_eye_storm_modifier_frame
+
+	cosmic_storm_texture_lightning_paths = {
+		"gfx/map/storms/lightning/lightning_big_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_big_storm_02.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_02.dds"
+	}
+
+	cosmic_storm_galaxy_lightning_time = 5.0
+	cosmic_storm_galaxy_max_opacity = 0.4
+
+	show_notification = {
+		NOT = { has_ascension_perk = ap_libra_hurricane_eye }
+	}
+}

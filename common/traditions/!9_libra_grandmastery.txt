@@ -1,0 +1,258 @@
+tr_libra_grandmastery_adopt = {
+	unlocks_agenda = agenda_libra_grandmastery_a
+	custom_tooltip = tr_libra_grandmastery_adopt_desc
+	on_enabled = {
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_base_skill < 4
+					can_have_libra_special_leader_traits = yes
+				}
+				add_skill_without_trait_selection = 1
+			}
+		}
+	}
+	on_disabled = {
+		every_owned_leader = {
+			remove_trait = leader_trait_libra_grandmastery_commander
+			remove_trait = leader_trait_libra_grandmastery_commander_max
+			remove_trait = leader_trait_libra_grandmastery_official
+			remove_trait = leader_trait_libra_grandmastery_official_max
+			remove_trait = leader_trait_libra_grandmastery_scientist
+			remove_trait = leader_trait_libra_grandmastery_scientist_max
+		}
+		remove_modifier = libra_grandmastery_5_modifier
+		clear_variable = libra_grandmastery_count
+	}
+	possible = {
+		if = {
+			limit = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			has_technology = tech_embodied_dynamism
+		}
+		else = {
+			has_technology = tech_collective_self
+		}
+	}
+}
+
+tr_libra_grandmastery_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		council_agenda_finishing_effect_duration_mult = 0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_grandmastery_finish_desc
+}
+
+tr_libra_grandmastery_1 = {
+	on_enabled = {
+		hidden_effect = {
+			ordered_owned_leader = {
+				limit = {
+					leader_class = commander
+					nor = {
+						has_trait = leader_trait_libra_grandmastery_commander
+						has_trait = leader_trait_libra_grandmastery_commander_max
+					}
+					can_have_libra_special_leader_traits = yes
+				}
+				position = 0
+				order_by = trigger:leader_years_of_service
+				if = {
+					limit = { leader_years_of_service > 49 }
+					add_trait = {
+						trait = leader_trait_libra_grandmastery_commander_max
+						show_message = yes
+					}
+				}
+				else = {
+					add_trait = {
+						trait = leader_trait_libra_grandmastery_commander
+						show_message = yes
+					}
+				}
+			}
+			change_variable = {
+				which = libra_grandmastery_count
+				value = 1
+			}
+		}
+	}
+	modifier = {
+		council_agenda_progress_speed = 0.1
+		commander_skill_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_grandmastery_1_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_grandmastery_2 = {
+	on_enabled = {
+		hidden_effect = {
+			ordered_owned_leader = {
+				limit = {
+					leader_class = official
+					nor = {
+						has_trait = leader_trait_libra_grandmastery_official
+						has_trait = leader_trait_libra_grandmastery_official_max
+					}
+					can_have_libra_special_leader_traits = yes
+				}
+				position = 0
+				order_by = trigger:leader_years_of_service
+				if = {
+					limit = { leader_years_of_service > 49 }
+					add_trait = {
+						trait = leader_trait_libra_grandmastery_official_max
+						show_message = yes
+					}
+				}
+				else = {
+					add_trait = {
+						trait = leader_trait_libra_grandmastery_official
+						show_message = yes
+					}
+				}
+			}
+			change_variable = {
+				which = libra_grandmastery_count
+				value = 1
+			}
+		}
+	}
+	modifier = {
+		negative_traits_country = -1
+		official_initial_skill = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_grandmastery_2_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_grandmastery_3 = {
+	on_enabled = {
+		hidden_effect = {
+			ordered_owned_leader = {
+				limit = {
+					leader_class = scientist
+					nor = {
+						has_trait = leader_trait_libra_grandmastery_scientist
+						has_trait = leader_trait_libra_grandmastery_scientist_max
+					}
+					can_have_libra_special_leader_traits = yes
+				}
+				position = 0
+				order_by = trigger:leader_years_of_service
+				if = {
+					limit = { leader_years_of_service > 49 }
+					add_trait = {
+						trait = leader_trait_libra_grandmastery_scientist_max
+						show_message = yes
+					}
+				}
+				else = {
+					add_trait = {
+						trait = leader_trait_libra_grandmastery_scientist
+						show_message = yes
+					}
+				}
+			}
+			every_owned_leader = {
+				limit = { leader_class = scientist }
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+				change_variable = {
+					which = libra_extra_starting_traits_count
+					value = 1
+				}
+			}
+			every_pool_leader = {
+				limit = { leader_class = scientist }
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+				change_variable = {
+					which = libra_extra_starting_traits_count
+					value = 1
+				}
+			}
+			change_variable = {
+				which = libra_grandmastery_count
+				value = 1
+			}
+		}
+	}
+	modifier = {
+		species_leader_exp_gain = 0.1
+		libra_scientist_starting_traits_country = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_grandmastery_3_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_grandmastery_4 = {
+	possible = {
+		has_tradition = tr_libra_grandmastery_1
+		has_tradition = tr_libra_grandmastery_2
+	}
+	modifier = {
+		envoys_add = 1
+		planet_soldiers_energy_produces_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_grandmastery_4_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_grandmastery_5 = {
+	possible = {
+		has_tradition = tr_libra_grandmastery_2
+		has_tradition = tr_libra_grandmastery_3
+	}
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_variable_set = libra_grandmastery_count
+					check_variable = {
+						which = libra_grandmastery_count
+						value < 15
+					}
+				}
+				add_modifier = {
+					modifier = libra_grandmastery_5_modifier
+					multiplier = libra_grandmastery_count
+				}
+			}
+			else_if = {
+				limit = { is_variable_set = libra_grandmastery_count }
+				add_modifier = {
+					modifier = libra_grandmastery_5_modifier
+					multiplier = 15
+				}
+			}
+		}
+	}
+	modifier = {
+		ruler_skill_add = 2
+	}
+	custom_tooltip_with_modifiers = tr_libra_grandmastery_5_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}

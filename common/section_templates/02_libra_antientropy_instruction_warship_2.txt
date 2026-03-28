@@ -1,0 +1,243 @@
+ship_section_template = {
+	key = "LIBRA_ANTIENTROPY_INSTRUCTION_WARSHIP_2_1"
+	ship_size = libra_antientropy_instruction_warship_2
+	fits_on_slot = mid
+	entity = "libra_antientropy_instruction_warship_medium_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { screen screen_stealth carrier carrier_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "large_gun_01_r"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "large_gun_01_l"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "invisible_small_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "invisible_small_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "invisible_small_turret"
+		locatorname = "large_gun_01_l"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "invisible_small_turret"
+		locatorname = "large_gun_01_r"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "invisible_point_defence_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "PD_02"
+		template = "invisible_point_defence_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	medium_utility_slots = 12
+	aux_utility_slots = 4
+}
+
+ship_section_template = {
+	key = "LIBRA_ANTIENTROPY_INSTRUCTION_WARSHIP_2_2"
+	ship_size = libra_antientropy_instruction_warship_2
+	fits_on_slot = mid
+	entity = "libra_antientropy_instruction_warship_medium_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { gunship gunship_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "invisible_large_turret"
+		locatorname = "large_gun_01_r"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "invisible_large_turret"
+		locatorname = "large_gun_01_l"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "invisible_large_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "invisible_small_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "invisible_point_defence_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	medium_utility_slots = 12
+	aux_utility_slots = 4
+}
+
+ship_section_template = {
+	key = "LIBRA_ANTIENTROPY_INSTRUCTION_WARSHIP_2_3"
+	ship_size = libra_antientropy_instruction_warship_2
+	fits_on_slot = mid
+	entity = "libra_antientropy_instruction_warship_medium_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { explosive explosive_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	prerequisites = { tech_torpedoes_1 }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_explosive
+		}
+	}
+
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "invisible_missile_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "TORPEDO_02"
+		template = "invisible_missile_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "TORPEDO_03"
+		template = "invisible_missile_turret"
+		locatorname = "large_gun_01_l"
+	}
+	component_slot = {
+		name = "TORPEDO_04"
+		template = "invisible_missile_turret"
+		locatorname = "large_gun_01_r"
+	}
+	component_slot = {
+		name = "TORPEDO_05"
+		template = "invisible_missile_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "TORPEDO_06"
+		template = "invisible_missile_turret"
+		locatorname = "large_gun_01_l"
+	}
+	component_slot = {
+		name = "TORPEDO_07"
+		template = "invisible_missile_turret"
+		locatorname = "large_gun_01_r"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "invisible_small_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "invisible_small_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "invisible_small_turret"
+		locatorname = "large_gun_01_l"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "invisible_small_turret"
+		locatorname = "large_gun_01_r"
+	}
+
+	medium_utility_slots = 12
+	aux_utility_slots = 4
+}
+
+ship_section_template = {
+	key = "LIBRA_ANTIENTROPY_INSTRUCTION_WARSHIP_2_4"
+	ship_size = libra_antientropy_instruction_warship_2
+	fits_on_slot = mid
+	entity = "libra_antientropy_instruction_warship_medium_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { artillery artillery_stealth }
+
+	prerequisites = {
+		OR = {
+			tech_harbinger_build_speed
+			tech_cruiser_build_speed
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_energy
+		}
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "libra_invisible_extra_large_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "invisible_large_turret"
+		locatorname = "large_gun_01_r"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "invisible_large_turret"
+		locatorname = "large_gun_01_l"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	medium_utility_slots = 12
+	aux_utility_slots = 4
+}

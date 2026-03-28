@@ -1,0 +1,5 @@
+inline_script = {
+	script = trait/subtitle/libra_$RARITY$_trait
+	TYPE = $TYPE$
+	CLASS = $CLASS$
+}

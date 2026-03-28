@@ -1,0 +1,1920 @@
+
+
+# #############
+# Tradition
+#############
+
+building_libra_great_library = {
+	base_buildtime = @b3_time
+	category = research
+	planet_limit = 1
+	empire_limit = 3
+
+	building_sets = {
+		research
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_tradition = tr_libra_profundity_finish }
+		libra_is_special_colony_type = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			owner = { not = { has_tradition = tr_libra_profundity_finish } }
+			libra_is_special_colony_type = yes
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		produces = {
+			physics_research = 30
+			society_research = 30
+			engineering_research = 30
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_physicists_unity_produces_add = 0.5
+		planet_biologists_unity_produces_add = 0.5
+		planet_engineers_unity_produces_add = 0.5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_analyst_add = @building_static_jobs_very_high
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_calculator_drone_add = @building_static_jobs_very_high
+	}
+
+	inline_script = {
+		script = districts/ai_research_extra_weighting
+		AMOUNT = 12
+	}
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_cosmoplasty_complex = {
+	base_buildtime = @b3_time
+	icon = holding_orbital_assembly_complex
+	category = government
+	planet_limit = 1
+
+	building_sets = {
+		unity
+		urban
+		farming
+		mining
+		generator
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_tradition = tr_libra_cosmoplasty_3 }
+		is_artificial = no
+		libra_is_special_colony_type = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = building_libra_cosmoplasty_fail
+			or = {
+				has_any_megastructure = yes
+				has_planet_flag = has_megastructure
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			owner = { not = { has_tradition = tr_libra_cosmoplasty_3 } }
+			is_artificial = yes
+			libra_is_special_colony_type = yes
+			and = {
+				has_any_megastructure = no
+				not = { has_planet_flag = has_megastructure }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			influence = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			alloys = @b3_alloy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_politician_add = @building_static_jobs
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_evaluator_add = @building_static_jobs_high
+	}
+	triggered_planet_modifier = {
+		potential = { uses_district_set = standard }
+		district_generator_max_add = 3
+		district_mining_max_add = 3
+		district_farming_max_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = { uses_district_set = volcanic_world }
+		district_generator_max_add = 3
+		district_mining_max_add = 3
+		district_polytechnic_max_add = 1
+	}
+
+	ai_resource_production = {
+		trigger = { free_district_slots < 2 }
+		energy = 20
+		physics_research = 20
+		engineering_research = 20
+		society_research = 20
+		unity = 20
+	}
+	ai_weight_coefficient = 1.5
+}
+
+# #############
+# Origin
+#############
+
+building_libra_temple_of_waves = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	category = government
+
+	building_sets = {
+		government
+		urban
+		research
+		unity
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_psalm_of_waves
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		or = {
+			is_planet_class = pc_ocean
+			is_planet_class = pc_gaia
+			is_planet_class = pc_hive
+		#	is_planet_class = pc_libra_apostle
+			is_planet_class = pc_ringworld_habitable
+			has_modifier = flooded_habitat
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			owner = { not = { has_origin = origin_libra_psalm_of_waves } }
+			nor = {
+				is_planet_class = pc_ocean
+				is_planet_class = pc_gaia
+				is_planet_class = pc_hive
+			#	is_planet_class = pc_libra_apostle
+			#	is_planet_class = pc_libra_brain
+				is_planet_class = pc_ringworld_habitable
+				has_modifier = flooded_habitat
+			}
+		}
+	}
+
+	upgrades = {
+		"building_libra_temple_of_waves_2"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		produces = {
+			trigger = { exists = planet }
+			physics_research = 0.005
+			society_research = 0.005
+			engineering_research = 0.005
+			multiplier = planet.trigger:sapient_pop_amount
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		upkeep = {
+			trigger = { exists = planet }
+			trade = 0.01
+			multiplier = planet.trigger:sapient_pop_amount
+		}
+	}
+
+	planet_modifier = {
+		logistic_growth_mult = 0.15
+	}
+
+	triggered_desc = {
+		text = building_libra_temple_of_waves_effect
+	}
+
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 300
+	}
+
+	ai_resource_production = {
+		alloys = 5
+		unity = 10
+	}
+	ai_weight_coefficient = 3
+}
+
+building_libra_temple_of_waves_2 = {
+	base_buildtime = @b3_time
+	category = government
+	can_build = no
+
+	building_sets = {
+		government
+		urban
+		research
+		unity
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_psalm_of_waves
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			owner = { not = { has_origin = origin_libra_psalm_of_waves } }
+			nor = {
+				is_planet_class = pc_ocean
+				is_planet_class = pc_gaia
+				is_planet_class = pc_hive
+			#	is_planet_class = pc_libra_apostle
+				is_planet_class = pc_ringworld_habitable
+				has_modifier = flooded_habitat
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_adaptive_bureaucracy"
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_libra_psalm_of_waves
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		produces = {
+			trigger = { exists = planet }
+			physics_research = 0.01
+			society_research = 0.01
+			engineering_research = 0.01
+			multiplier = planet.trigger:sapient_pop_amount
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+		upkeep = {
+			trigger = { exists = planet }
+			trade = 0.02
+			multiplier = planet.trigger:sapient_pop_amount
+		}
+	}
+
+	planet_modifier = {
+		logistic_growth_mult = 0.25
+	}
+
+	triggered_desc = {
+		text = building_libra_temple_of_waves_2_effect
+	}
+
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = @building_static_jobs_very_high
+	}
+
+	ai_resource_production = {
+		alloys = 5
+		unity = 15
+	}
+	ai_weight_coefficient = 3
+}
+
+#
+
+building_libra_enlightenment_wisdom = {
+	base_buildtime = @b3_time
+	planet_limit = {
+		base = 1
+	 	modifier = {
+	 		add = 2
+			exists = owner
+			owner = { is_variable_set = libra_enlightenment_wisdom_extra_building }
+	 	}
+	}
+	empire_limit = {
+		base = 1
+	 	modifier = {
+	 		add = owner.libra_enlightenment_wisdom_extra_building
+			exists = owner
+			owner = { is_variable_set = libra_enlightenment_wisdom_extra_building }
+	 	}
+	}
+
+	category = government
+
+	building_sets = {
+		automation
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_enlightenment_wisdom }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_enlightenment_wisdom } }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+	country_modifier = {
+		species_leader_exp_gain = 0.05
+		council_agenda_progress_speed = 0.05
+	}
+	planet_modifier = {
+		district_automated_workforce = 0.05
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = 100
+	}
+
+	ai_resource_production = {
+		unity = 15
+	}
+	ai_weight_coefficient = 5
+}
+
+#
+
+building_libra_crimson_nights = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	empire_limit = {
+		base = 11
+	 	modifier = { 
+	 		add = owner.libra_crimson_nights_extra_building
+			owner = { is_variable_set = libra_crimson_nights_extra_building }
+	 	}
+	}
+	category = research
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+		research
+		society
+		unity
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_crimson_nights }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_crimson_nights } }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_mult = 0.2
+		planet_amenities_mult = 0.2
+		job_libra_vampire_noble_add = 1
+		job_libra_vampire_servant_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_libra_vampire_noble_add = -1
+		job_libra_vampire_servant_add = -200
+		job_libra_vampire_queen_add = 1
+		job_libra_vampire_drone_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = no
+				has_tradition = tr_libra_crimson_vampire_5
+				or = {
+					has_tradition = tr_libra_crimson_ancestor_3
+					has_country_flag = libra_crimson_vampire_peace
+				}
+			}
+		}
+		job_libra_vampire_servant_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = no
+				is_variable_set = libra_crimson_nights_extra_jobs
+			}
+		}
+		job_libra_vampire_servant_add = 50
+		mult = owner.libra_crimson_nights_extra_jobs
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				has_tradition = tr_libra_crimson_vampire_5
+				or = {
+					has_tradition = tr_libra_crimson_ancestor_3
+					has_country_flag = libra_crimson_vampire_peace
+				}
+			}
+		}
+		job_libra_vampire_drone_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_variable_set = libra_crimson_nights_extra_jobs
+			}
+		}
+		job_libra_vampire_drone_add = 50
+		mult = owner.libra_crimson_nights_extra_jobs
+	}
+
+	ai_resource_production = {
+		unity = 15
+		society_research = 15
+	}
+}
+
+#
+
+building_libra_paradox_processor = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = research
+
+	building_sets = {
+		research
+		physics
+		society
+		engineering
+		generator
+		betharian
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_paradox_loop }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_paradox_loop } }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			trigger = { exists = owner }
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+		upkeep = {
+			trigger = { exists = owner }
+			energy = 10
+			multiplier = owner.trigger:num_ascension_perks
+		}
+	}
+
+	planet_modifier = {
+		job_libra_calculator_drone_add = @building_static_jobs_very_high
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_active_building = building_betharian_power_plant
+		}
+		planet_miners_minerals_produces_add = 1
+	}
+
+	triggered_desc = {
+		text = building_libra_paradox_processor_effect
+	}
+
+	ai_resource_production = {
+		unity = 10
+	}
+	ai_weight_coefficient = 2
+}
+
+#
+
+building_libra_paradise_lose = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	category = government
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+		unity
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_paradise_lose
+			has_valid_civic = civic_dystopian_society
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_paradise_lose } }
+	}
+
+	upgrades = {
+		"building_libra_paradise_lose_2"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 15
+	}
+	planet_modifier = {
+		job_politician_add = 100
+		job_dystopian_enforcer_add = 200
+		enforcer_jobs_bonus_workforce_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_libra_paradise_lose
+				has_country_flag = libra_paradise_lose_full
+			}
+		}
+		job_politician_add = 100
+		pop_cat_ruler_political_power = 2
+	}
+}
+
+building_libra_paradise_lose_2 = {
+	base_buildtime = @b3_time
+	category = government
+	can_build = no
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+		unity
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_paradise_lose
+			has_valid_civic = civic_dystopian_society
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_paradise_lose } }
+	}
+
+	prerequisites = {
+		"tech_neural_implants"
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_libra_paradise_lose
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 30
+	}
+
+	planet_modifier = {
+		job_politician_add = 200
+		job_dystopian_enforcer_add = 400
+		enforcer_jobs_bonus_workforce_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_libra_paradise_lose
+				has_country_flag = libra_paradise_lose_full
+			}
+		}
+		job_politician_add = 200
+		pop_cat_ruler_political_power = 4
+	}
+}
+
+#
+
+building_libra_interstellar_exchange = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = trade
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+		trade
+		fortress
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_interstellar_port
+			has_corporate_government = yes
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			or = {
+				not = { has_origin = origin_libra_interstellar_port }
+				has_corporate_government = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		produces = {
+			trigger = { exists = planet }
+			trade = 0.01
+			mult = trigger:pop_amount
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+	planet_modifier = {
+		pop_category_civilians_energy_upkeep_add = 1
+		job_libra_outland_distributor_add = 100
+		job_libra_corporate_sentry_add = 300
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_a
+			}
+		}
+		job_libra_outland_distributor_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_c
+			}
+		}
+		job_libra_corporate_sentry_add = 50
+		mult = value:libra_interstellar_port_c_count
+	}
+
+	triggered_desc = {
+		text = building_libra_interstellar_exchange_effect_desc
+	}
+}
+
+building_libra_interstellar_port_office = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+
+	owner_type = corporate
+	category = research
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = { has_origin = origin_libra_interstellar_port }
+		exists = owner
+		owner = { has_corporate_government = no }
+	}
+
+	allow = {
+		pop_amount >= 1000
+	}
+
+	country_modifier = {
+		species_leader_exp_gain = 0.01
+	}
+
+	planet_modifier = {
+		job_libra_corporate_sentry_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = {
+				has_valid_civic = civic_libra_interstellar_port_d
+			}
+		}
+		job_libra_corporate_sentry_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = {
+				is_criminal_syndicate = yes
+				is_illegal_criminal = yes
+			}
+		}
+		planet_crime_add = 50
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = {
+				is_criminal_syndicate = yes
+				is_legit_or_legal_criminal = yes
+			}
+		}
+		planet_crime_floor_add = 15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = {
+				has_valid_civic = civic_libra_interstellar_port_c
+			}
+		}
+		country_trade_produces_mult = 0.0001
+		mult = value:libra_interstellar_port_c_mult
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = {
+				has_valid_civic = civic_libra_interstellar_port_c
+			}
+		}
+		job_capital_trader_add = 250
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			alloys = @b3_minerals
+			influence = 50
+		}
+		produces = {
+			trigger = { exists = planet }
+			physics_research = 0.01
+			engineering_research = 0.01
+			society_research = 0.01
+			mult = trigger:pop_amount
+		}
+		produces = {
+			trigger = {
+				exists = branch_office_owner
+				branch_office_owner = {
+					has_valid_civic = civic_libra_interstellar_port_f
+				}
+			}
+			energy = 18
+			unity = 3
+			mult = value:branch_office_value_for_buildings
+		}
+		upkeep = {
+			alloys = @b3_upkeep
+		}
+		upkeep = {
+			trigger = { exists = planet }
+			consumer_goods = 0.01
+			mult = trigger:pop_amount
+		}
+	}
+
+	triggered_desc = {
+		text = building_libra_interstellar_port_office_effect
+	}
+
+	ai_weight = {
+		weight = 0.03
+		mult = trigger:pop_amount
+		add = 20
+	}
+}
+
+holding_libra_interstellar_port_office = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	empire_limit = 10
+
+	owner_type = subject_holding
+	category = government
+
+	potential = {
+		exists = owner.overlord
+		owner.overlord = {
+			has_origin = origin_libra_interstellar_port
+			has_corporate_government = yes
+		}
+	}
+
+	allow = {
+		is_capital = yes
+		sapient_pop_amount >= 1000
+	}
+
+	country_modifier = {
+		country_produces_mult = 0.02
+	}
+
+	planet_modifier = {
+		monthly_loyalty = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_overlord_executive_add = 200
+		pop_cat_civilian_bonus_workforce_mult = -0.35
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		planet_jobs_produces_mult = 0.2
+		job_overlord_propagandist_drone_add = 200
+		pop_cat_maintenance_drone_bonus_workforce_mult = -0.35
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.overlord
+			owner.overlord = { is_criminal_syndicate = yes }
+		}
+		monthly_loyalty = -1
+		planet_crime_floor_add = 40
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			alloys = @b3_minerals
+		}
+		produces = {
+			trigger = { exists = planet }
+			physics_research = 0.02
+			engineering_research = 0.02
+			society_research = 0.02
+			mult = trigger:pop_amount
+		}
+		upkeep = {
+			alloys = @b3_upkeep
+		}
+		upkeep = {
+			trigger = { exists = planet }
+			energy = 0.02
+			mult = trigger:pop_amount
+		}
+	}
+
+	triggered_desc = {
+		text = holding_libra_interstellar_port_office_effect
+	}
+
+	ai_resource_production = {
+		unity = 20
+	}
+}
+
+#
+
+building_libra_antientropy_instruction = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	category = government
+
+	building_sets = {
+		fortress
+		research
+		trade
+		generator
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_antientropy_instruction
+			or = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_antientropy_instruction } }
+	}
+
+	upgrades = {
+		"building_libra_antientropy_instruction_2"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_defense_armies_add = 2
+		planet_technician_energy_produces_add = 1
+		job_libra_phantom_unit_add = 100
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_phantom_unit_add = 25
+		mult = value:libra_count_districts|TYPE|any|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_phantom_unit_add = -100
+		job_libra_phantom_mechanist_add = 100
+		pop_ethic_xenophobe_attraction_mult = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_phantom_mechanist_add = 25
+		mult = value:libra_count_districts|TYPE|any|
+	}
+
+	triggered_desc = {
+		text = building_libra_antientropy_instruction_effect_desc
+	}
+
+	ai_resource_production = {
+		energy = 10
+		physics_research = 10
+		society_research = 10
+		engineering_research = 10
+		trade = 15
+	}
+	ai_weight_coefficient = 3
+}
+
+building_libra_antientropy_instruction_2 = {
+	base_buildtime = @b3_time
+	category = government
+	can_build = no
+
+	building_sets = {
+		fortress
+		research
+		trade
+		generator
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_antientropy_instruction
+			or = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_antientropy_instruction } }
+	}
+
+	prerequisites = {
+		"tech_libra_antientropy_facility_2"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_defense_armies_add = 4
+		planet_technician_energy_produces_add = 2
+		job_libra_phantom_unit_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_phantom_unit_add = 50
+		mult = value:libra_count_districts|TYPE|any|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_phantom_unit_add = -200
+		job_libra_phantom_mechanist_add = 200
+		pop_ethic_xenophobe_attraction_mult = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_phantom_mechanist_add = 50
+		mult = value:libra_count_districts|TYPE|any|
+	}
+
+	triggered_desc = {
+		text = building_libra_antientropy_instruction_effect_desc
+	}
+
+	ai_resource_production = {
+		energy = 15
+		physics_research = 15
+		society_research = 15
+		engineering_research = 15
+		trade = 25
+	}
+	ai_weight_coefficient = 3
+}
+
+#
+
+building_libra_planetarian = {
+	base_buildtime = @b3_time
+	planetary_ftl_inhibitor = yes
+	position_priority = 100
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 10
+
+	category = army
+	building_sets = {
+		government
+		fortress
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_planetarian }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_planetarian } }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			alloys = @b2_upkeep
+		}
+	}
+
+	country_modifier = {
+		pop_bonus_workforce_mult = -0.02
+		bonus_automated_workforce_mult = 0.02
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = inner_focus }
+		}
+		planet_soldiers_trade_produces_add = 0.4
+	}
+	planet_modifier = {
+		planet_amenities_no_happiness_add = 3500
+		pop_bonus_workforce_mult = 0.35
+		job_warrior_drone_add = @building_static_jobs
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = inner_focus }
+		}
+		job_warrior_drone_add = @building_static_jobs_very_high
+	}
+
+	triggered_desc = {
+		text = building_libra_planetarian_effect_desc
+	}
+
+	ai_resource_production = {
+		physics_research = 15
+		engineering_research = 15
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_planetarium = {
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_be_disabled = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = research
+	building_sets = {
+		government
+		research
+		physics
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_planetarian
+			has_country_flag = libra_unlock_planetarium
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_planetarian } }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b4_minerals
+			volatile_motes = @b4_rare_cost
+			exotic_gases = @b4_rare_cost
+			rare_crystals = @b4_rare_cost
+		}
+		produces = {
+			physics_research = 60
+			society_research = 30
+			engineering_research = 30
+		}
+		upkeep = {
+			alloys = @b4_upkeep
+			volatile_motes = @b4_rare_upkeep
+			exotic_gases = @b4_rare_upkeep
+			rare_crystals = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_biologists_engineering_research_produces_add = 0.5
+		planet_engineers_physics_research_produces_add = 0.5
+		planet_soldiers_engineering_research_produces_add = 1
+	}
+	planet_modifier = {
+		job_libra_calculator_drone_add = @building_static_jobs_high
+		job_warrior_drone_add = @building_static_jobs_very_high
+	}
+
+	ai_resource_production = {
+		physics_research = 100
+	}
+	ai_weight_coefficient = 3
+}
+
+#
+
+building_libra_eden_accord_1 = {
+	base_buildtime = @b1_time
+	planet_limit = 1
+	category = government
+	icon = building_medical_1
+
+	building_sets = {
+		government
+		unity
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_eden_accord
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_eden_accord } }
+	}
+
+	upgrades = {
+		"building_libra_eden_accord_2"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b1_minerals
+		}
+		upkeep = {
+			alloys = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		logistic_growth_mult = 0.1
+		pop_cat_simple_drone_bonus_workforce_mult = 0.1
+		job_evaluator_add = @building_static_jobs_high
+		job_bio_trophy_add = 1000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_libra_eden_accord_i }
+		}
+		logistic_growth_mult = 0.15
+	}
+
+	ai_resource_production = {
+		energy = 10
+		minerals = 10
+		food = 10
+		unity = 10
+	}
+	ai_weight_coefficient = 3
+}
+
+building_libra_eden_accord_2 = {
+	base_buildtime = @b2_time
+	category = government
+	can_build = no
+	icon = building_medical_2
+
+	building_sets = {
+		government
+		unity
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_eden_accord
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_eden_accord } }
+	}
+
+	prerequisites = {
+		"tech_colonization_3"
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_libra_eden_accord
+	}
+
+	upgrades = {
+		"building_libra_eden_accord_3"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			alloys = @b2_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		logistic_growth_mult = 0.2
+		pop_cat_simple_drone_bonus_workforce_mult = 0.2
+		job_evaluator_add = @building_static_jobs_very_high
+		job_bio_trophy_add = 3000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_libra_eden_accord_i }
+		}
+		logistic_growth_mult = 0.3
+	}
+
+	ai_resource_production = {
+		energy = 20
+		minerals = 20
+		food = 20
+		unity = 20
+	}
+	ai_weight_coefficient = 3
+}
+
+building_libra_eden_accord_3 = {
+	base_buildtime = @b3_time
+	category = government
+	can_build = no
+	icon = building_medical_3
+
+	building_sets = {
+		government
+		unity
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_eden_accord
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_eden_accord } }
+	}
+
+	prerequisites = {
+		"tech_colonization_5"
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_libra_eden_accord
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		logistic_growth_mult = 0.3
+		pop_cat_simple_drone_bonus_workforce_mult = 0.3
+		job_evaluator_add = 800
+		job_bio_trophy_add = 5000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_libra_eden_accord_i }
+		}
+		logistic_growth_mult = 0.45
+	}
+
+	ai_resource_production = {
+		energy = 20
+		minerals = 20
+		food = 20
+		unity = 20
+	}
+	ai_weight_coefficient = 3
+}
+
+#
+
+building_libra_may_storm = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = government
+
+	building_sets = {
+		government
+		urban
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_may_storm }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_origin = origin_libra_may_storm }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			alloys = @b3_upkeep
+		}
+	}
+
+	planet_modifier = {
+		job_libra_peoples_deputy_add = @building_static_jobs
+		job_libra_industry_commissar_add = @building_static_jobs
+		job_libra_shock_worker_add = @building_static_jobs
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = libra_may_storm_mod_1
+			not = { has_modifier = libra_may_storm_mod_2 }
+		}
+		job_libra_peoples_deputy_add = 50
+		mult = value:libra_count_districts|TYPE|any|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = libra_may_storm_mod_2
+			not = { has_modifier = libra_may_storm_mod_3 }
+		}
+		job_libra_industry_commissar_add = 50
+		mult = value:libra_count_districts|TYPE|any|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = libra_may_storm_mod_3
+			not = { has_modifier = libra_may_storm_mod_1 }
+		}
+		job_libra_shock_worker_add = 50
+		mult = value:libra_count_districts|TYPE|any|
+	}
+	triggered_desc = {
+		trigger = {
+			or = {
+				has_modifier = libra_may_storm_mod_1
+				has_modifier = libra_may_storm_mod_2
+				has_modifier = libra_may_storm_mod_3
+			}
+		}
+		text = building_libra_may_storm_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = policy_libra_may_storm_2_b }
+		}
+		planet_housing_add = 3000
+		planet_amenities_add = 6000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = policy_libra_may_storm_2_c }
+		}
+		planet_stability_add = 10
+		planet_jobs_productive_upkeep_mult = -0.1
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = policy_libra_may_storm_2_d }
+		}
+		country_naval_cap_add = 150
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = policy_libra_may_storm_2_e }
+		}
+		logistic_growth_mult = 0.2
+		bonus_pop_growth_mult = 0.2
+		planet_pop_assembly_mult = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = policy_libra_may_storm_2_f }
+		}
+		planet_jobs_worker_produces_mult = 0.35
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = policy_libra_may_storm_2_g }
+		}
+		country_trust_cap_add = 5
+		federation_experience_add = 0.2
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_may_storm_xenophile_b
+			}
+		}
+		country_resource_max_astral_threads_add = 200
+		country_resource_max_minor_artifacts_add = 200
+		country_resource_max_add = 25000
+	}
+
+	ai_resource_production = {
+		energy = 10
+		minerals = 10
+		food = 10
+		physics_research = 10
+		engineering_research = 10
+		society_research = 10
+		trade = 10
+		unity = 10
+	}
+	ai_weight_coefficient = 5
+}
+
+building_libra_may_storm_materialist = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_may_storm
+			has_valid_civic = civic_libra_may_storm_materialist_a
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_valid_civic = civic_libra_may_storm_materialist_a }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b2_minerals
+		}
+		upkeep = {
+			alloys = @b2_upkeep
+		}
+	}
+
+	planet_modifier = {
+		bonus_automated_workforce_mult = 0.15
+		foundry_jobs_bonus_workforce_mult = 0.25
+		artisan_jobs_bonus_workforce_mult = 0.25
+	}
+
+	ai_resource_production = {
+		alloys = 10
+		consumer_goods = 15
+	}
+	ai_weight_coefficient = 2
+}
+
+#
+
+building_libra_extreme_iteration = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = research
+
+	building_sets = {
+		research
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_extreme_iteration
+		}
+	}
+
+	allow = {
+		sapient_pop_amount >= 2500
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_origin = origin_libra_extreme_iteration } }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+	planet_modifier = {
+		habitability_floor_add = 0.1
+		habitability_ceil_add = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_politician_add = 100
+		job_libra_analyst_add = @building_static_jobs
+		pop_ethic_materialist_attraction_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_evaluator_add = @building_static_jobs
+		job_libra_calculator_drone_add = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_ideal = yes
+		}
+		pop_amenities_usage_robotic_mult = -0.1
+		planet_pops_robotics_upkeep_mult = -0.1
+		robotic_pop_bonus_workforce_mult = 0.05
+	}
+
+	ai_resource_production = {
+		energy = 5
+		minerals = 5
+		food = 5
+		alloys = 5
+		unity = 5
+	}
+	ai_weight_coefficient = 2
+}
+
+#
+
+building_libra_centurion_mirror = {
+	icon = holding_overlord_garrison
+	base_buildtime = @b5_time
+	position_priority = 100
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = army
+	building_sets = {
+		government
+		fortress
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_centurion }
+		libra_is_special_colony_type = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			libra_is_special_colony_type = yes
+			owner = { not = { has_origin = origin_libra_centurion } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b5_minerals
+		}
+		upkeep = {
+			energy = @b5_upkeep
+			trade = @b5_upkeep
+		}
+	}
+
+	country_modifier = {
+		planet_soldiers_unity_produces_add = 1
+		country_naval_cap_add = 100
+		job_soldier_or_warrior_add = 200
+	}
+	planet_modifier = {
+		planet_soldiers_physics_research_produces_add = 1
+		planet_soldiers_society_research_produces_add = 1
+		planet_soldiers_engineering_research_produces_add = 1
+	}
+
+	ai_resource_production = {
+		unity = 30
+		physics_research = 15
+		society_research = 15
+		engineering_research = 15
+	}
+	ai_weight_coefficient = 5
+}
+

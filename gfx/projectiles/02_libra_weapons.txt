@@ -1,0 +1,953 @@
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "libra_dragon_breath_x"
+	color = { 1.0 	0.9 	0.3 	1.0 }
+	hit_entity = "libra_dragon_breath_hit_entity"
+	shield_hit_entity = "libra_dragon_breath_shield_hit_entity"
+	muzzle_flash_entity = "libra_dragon_breath_muzzle_entity"
+	windup_entity = "libra_dragon_breath_windup_entity"
+
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "libra_dragon_breath_t"
+	color = { 1.0 	 0.9 	0.3 	0.8 }
+	hit_entity = "fme01_titan_laser_hit_entity"
+	shield_hit_entity = "fme01_titan_laser_shield_hit_entity"
+	muzzle_flash_entity = "fme01_titan_laser_muzzle_entity"
+	windup_entity = "fme01_titan_laser_windup_entity"
+	
+	#beam specific data
+	width = 10.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		40.0
+			0.7		5.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		40.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "libra_dragon_breath_light_x"
+	color = { 1.0 	 0.9 	0.3 	1.0 }
+	hit_entity = "tachyon_lance_hit_entity"
+	shield_hit_entity = "tachyon_lance_shield_hit_entity"
+	muzzle_flash_entity = "tachyon_lance_muzzle_entity"
+	windup_entity = "tachyon_lance_windup_entity"
+	
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "libra_dragon_breath_dark_x"
+	color = { 0.2 	 0.5 	1.0 	1.0 }
+	hit_entity = "libra_dragon_breath_hit_entity"
+	shield_hit_entity = "libra_dragon_breath_shield_hit_entity"
+	muzzle_flash_entity = "libra_dragon_breath_muzzle_entity"
+	windup_entity = "libra_dragon_breath_windup_entity"
+
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_laser_l"
+	color = {	1 	0.9 	0.35 	2.5 }
+	hit_entity = "dark_matter_laser_large_hit_entity"
+	shield_hit_entity = "dark_matter_laser_large_shield_hit_entity"
+	muzzle_flash_entity = "gamma_laser_small_muzzle_entity"
+	
+	#beam specific data
+	width = 3.50
+	texture_scroll_speed = 0.15
+	texture_tiling = 70.0
+	
+	hit = {
+
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		
+		
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 15.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.65
+	}
+	texture = "gfx/models/combat_items/black_matter_laser.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_laser_m"
+	color = {	1 	0.9 	0.35 	2.5 }
+	hit_entity = "dark_matter_laser_medium_hit_entity"
+	shield_hit_entity = "dark_matter_laser_medium_shield_hit_entity"
+	muzzle_flash_entity = "gamma_laser_medium_muzzle_entity"
+	
+	#beam specific data
+	width = 2.50
+	texture_scroll_speed = 0.15
+	texture_tiling = 60.0
+	
+	hit = {
+
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		
+		
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 15.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.45
+	}
+	texture = "gfx/models/combat_items/black_matter_laser.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_laser_s"
+	color = {	1 	0.9 	0.35 	2.5 }
+	hit_entity = "dark_matter_laser_small_hit_entity"
+	shield_hit_entity = "dark_matter_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "gamma_laser_large_muzzle_entity"
+	
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 0.15
+	texture_tiling = 50.0
+	
+	hit = {
+
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		
+		
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 15.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.35
+	}
+	texture = "gfx/models/combat_items/black_matter_laser.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_torpedo_l"
+	color = {	1.0 	0.9 	0.35 	3.0 }
+	hit_entity = "dark_matter_laser_large_hit_entity"
+	shield_hit_entity = "dark_matter_laser_large_shield_hit_entity"
+	muzzle_flash_entity = "missile_large_muzzle_flash_entity"
+	
+	#beam specific data
+	width = 12
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.75
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_torpedo_m"
+	color = {	1.0 	0.9 	0.35 	3.0 }
+	hit_entity = "dark_matter_laser_medium_hit_entity"
+	shield_hit_entity = "dark_matter_laser_medium_shield_hit_entity"
+	muzzle_flash_entity = "missile_medium_muzzle_flash_entity"
+	
+	#beam specific data
+	width = 9
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.75
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_torpedo_s"
+	color = {	1.0 	0.9 	0.35 	3.0 }
+	hit_entity = "dark_matter_laser_small_hit_entity"
+	shield_hit_entity = "dark_matter_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "missile_small_muzzle_flash_entity"
+	
+	#beam specific data
+	width = 6
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.75
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_artillery_l"
+	color = {	1.0 	0.9 	0.35 	4.0 }
+	hit_entity = "dark_matter_laser_large_hit_entity"
+	shield_hit_entity = "dark_matter_laser_large_shield_hit_entity"
+	muzzle_flash_entity = "auto_cannons_large_muzzle_entity"
+	
+	#beam specific data
+	width = 2.8
+	texture_scroll_speed = 25
+	texture_tiling = 15.0
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_artillery_m"
+	color = {	1.0 	0.9 	0.35 	4.0 }
+	hit_entity = "dark_matter_laser_medium_hit_entity"
+	shield_hit_entity = "dark_matter_laser_medium_shield_hit_entity"
+	muzzle_flash_entity = "auto_cannons_medium_muzzle_entity"
+	
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 26
+	texture_tiling = 15.0
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = medium
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_artillery_s"
+	color = {	1.0 	0.9 	0.35 	4.0 }
+	hit_entity = "dark_matter_laser_small_hit_entity"
+	shield_hit_entity = "dark_matter_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "auto_cannons_small_muzzle_entity"
+	
+	#beam specific data
+	width = 1.2
+	texture_scroll_speed = 27
+	texture_tiling = 15.0
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragon_wing_pd_a"
+	color = {	1.0 	0.9 	0.2 	1.5 }
+	hit_entity = "dark_matter_laser_small_hit_entity"
+	shield_hit_entity = "dark_matter_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "pd_white_laser_muzzle_entity"
+	
+	#beam specific data
+	width = 3.5
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.3
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragon_wing_medium_a"
+	color = {	1.0 	0.9 	0.2 	3.0 }
+	hit_entity = "dark_matter_laser_medium_hit_entity"
+	shield_hit_entity = "dark_matter_laser_medium_shield_hit_entity"
+	muzzle_flash_entity = "missile_medium_muzzle_flash_entity"
+	
+	#beam specific data
+	width = 10.5
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.85
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.6
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragon_wing_large_a"
+	color = { 1.0 	0.9 	0.2 	2.5 }
+	hit_entity = "libra_dragon_breath_hit_entity"
+	shield_hit_entity = "libra_dragon_breath_shield_hit_entity"
+	muzzle_flash_entity = "dragon_wing_muzzle_entity"
+	
+	#beam specific data
+	width = 21
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.9
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.6
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "libra_dragon_wing_pd_b"
+	color = {	1.0 	0.9 	0.2 	3.0 }
+	hit_entity = "dark_matter_laser_small_hit_entity"
+	shield_hit_entity = "dark_matter_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "disruptor_1_small_muzzle_entity"
+	
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 2.0
+	stretch_to_fit = no
+	texture_tiling = 2.0	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 0.65
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.35
+
+	}
+	texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragon_wing_medium_b"
+	color = {	1.0 	0.9 	0.2 	3.0 }
+	hit_entity = "dark_matter_laser_medium_hit_entity"
+	shield_hit_entity = "dark_matter_laser_medium_shield_hit_entity"
+	muzzle_flash_entity = "disruptor_1_medium_muzzle_entity"
+	
+	#beam specific data
+	width = 3.6
+	texture_scroll_speed = 1.0
+	stretch_to_fit = no
+	texture_tiling = 2.0
+
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+
+	}
+	texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragon_wing_large_b"
+	color = {	1.0 	0.9 	0.2 	3.0 }
+	hit_entity = "libra_dragon_breath_hit_entity"
+	shield_hit_entity = "libra_dragon_breath_shield_hit_entity"
+	muzzle_flash_entity = "dragon_wing_muzzle_entity"
+	
+	#beam specific data
+	width = 8.0
+	texture_scroll_speed = 1.0
+	stretch_to_fit = no
+	texture_tiling = 2.0
+
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 1.0
+
+	}
+	texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragon_wing_pd_c"
+	color = {	1.0 	0.9 	0.2 	5.0 }
+	hit_entity = "dark_matter_laser_small_hit_entity"
+	shield_hit_entity = "dark_matter_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "auto_cannons_small_muzzle_entity"
+	
+	#beam specific data
+	width = 1.2
+	texture_scroll_speed = 30.6
+	texture_tiling = 25.0
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragon_wing_medium_c"
+	color = {	1.0 	0.9 	0.2 	5.0 }
+	hit_entity = "dragon_wing_hit_entity"
+	shield_hit_entity = "dragon_wing_shield_hit_entity"
+	muzzle_flash_entity = "dragon_wing_muzzle_entity"
+
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 35.7
+	texture_tiling = 15.0
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = medium
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragon_wing_large_c"
+	color = {	1.0 	0.9 	0.2 	5.0 }
+	hit_entity = "libra_dragon_breath_hit_entity"
+	shield_hit_entity = "libra_dragon_breath_shield_hit_entity"
+	muzzle_flash_entity = "dragon_wing_muzzle_entity"
+	
+	#ballistic specific
+	width = 5.0
+	texture_scroll_speed = 51
+	texture_tiling = 18.0
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	name = "libra_dragonborn_strike_craft_laser"
+	color = { 1.0 	0.8 	0.2 	2.0 }
+	hit_entity = "pd_red_laser_hit_entity"
+	muzzle_flash_entity = "pd_red_laser_muzzle_entity"
+	
+	#beam specific data
+	width = 0.07
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+}

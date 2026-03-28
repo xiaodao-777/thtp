@@ -1,0 +1,71 @@
+libra_cute = {
+	species_class = LIBRACUTE
+
+	portraits = {
+		"libra_cute_1"
+		"libra_cute_2"
+		"libra_cute_3"
+		"libra_cute_4"
+		"libra_cute_5"
+		"libra_cute_6"
+		"libra_cute_7"
+		"libra_cute_8"
+		"libra_cute_9"
+		"libra_cute_10"
+		"libra_cute_11"
+		"libra_cute_12"
+		"libra_cute_13"
+		"libra_cute_14"
+		"libra_cute_15"
+		"libra_cute_16"
+		"libra_cute_17"
+		"libra_cute_18"
+	}
+}
+
+libra_punk = {
+	species_class = LIBRAPUNK
+
+	portraits = {
+		"cyb1"
+		"cyb2"
+		"cyb3"
+		"cyb4"
+		"cyb5"
+		"cyb6"
+		"cyb7"
+		"cyb8"
+		"cyb9"
+		"cyb10"
+		"cyb11"
+		"cyb12"
+		"cyb13"
+	}
+	conditional_portraits = {
+		randomizable = {
+			has_rick_the_cube_dlc = yes
+		}
+		playable = {
+			has_rick_the_cube_dlc = yes
+		}
+		portraits = {
+			"cyb_machine"
+		}
+	}
+}
+
+libra_extradimensionals = {
+	species_class = LIBRAEXD
+
+	portraits = {
+		"libra_exd0"
+		"libra_exd2"
+		"libra_exd6"
+		"libra_exd3"
+		"libra_exd7"
+		"libra_exd1"
+		"libra_exd5"
+		"libra_exd8"
+		"libra_exd4"
+	}
+}

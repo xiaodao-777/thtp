@@ -1,0 +1,162 @@
+portraits = {
+	libra_extradimensional_1	= {	entity = "portrait_libra_exd_01_entity"		clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "mammalian_01_greetings" }
+	libra_extradimensional_2	= {	entity = "portrait_libra_exd_02_entity"		clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "mammalian_01_greetings" }
+	libra_extradimensional_3	= {	entity = "portrait_libra_exd_03_entity"		clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "mammalian_01_greetings" }
+	libra_extradimensional_4	= {	entity = "portrait_libra_exd_04_entity"		clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "mammalian_01_greetings" }
+	libra_extradimensional_1_leader	= {	entity = "portrait_libra_exd_01_entity_leader"		clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "mammalian_01_greetings" }
+	libra_extradimensional_2_leader	= {	entity = "portrait_libra_exd_02_entity_leader"		clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "mammalian_01_greetings" }
+	libra_extradimensional_3_leader	= {	entity = "portrait_libra_exd_03_entity_leader"		clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "mammalian_01_greetings" }
+	libra_extradimensional_4_leader	= {	entity = "portrait_libra_exd_04_entity_leader"		clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "mammalian_01_greetings" }
+}
+
+portrait_groups = {
+	libra_exd0 = {
+		default = libra_extradimensional_4
+		species = {
+			add = {
+				portraits = {
+					libra_extradimensional_1
+					libra_extradimensional_2
+					libra_extradimensional_3
+					libra_extradimensional_4
+					exd1
+					exd2
+					exd3
+					exd4
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_extradimensional_1
+					libra_extradimensional_2
+					libra_extradimensional_3
+					libra_extradimensional_4
+					exd1
+					exd2
+					exd3
+					exd4
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_extradimensional_1_leader
+					libra_extradimensional_2_leader
+					libra_extradimensional_3_leader
+					libra_extradimensional_4_leader
+					exd1_leader
+					exd2_leader
+					exd3_leader
+					exd4_leader
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_exd1 = {
+		default = libra_extradimensional_1
+		leader = {
+			add = {
+				portraits = {
+					libra_extradimensional_1_leader
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_exd2 = {
+		default = libra_extradimensional_2
+		leader = {
+			add = {
+				portraits = {
+					libra_extradimensional_2_leader
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_exd3 = {
+		default = libra_extradimensional_3
+		leader = {
+			add = {
+				portraits = {
+					libra_extradimensional_3_leader
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_exd4 = {
+		default = libra_extradimensional_4
+		leader = {
+			add = {
+				portraits = {
+					libra_extradimensional_4_leader
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_exd5 = {
+		default = exd1
+		leader = {
+			add = {
+				portraits = {
+					exd1_leader
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_exd6 = {
+		default = exd2
+		leader = {
+			add = {
+				portraits = {
+					exd2_leader
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_exd7 = {
+		default = exd3
+		leader = {
+			add = {
+				portraits = {
+					exd3_leader
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_exd8 = {
+		default = exd4
+		leader = {
+			add = {
+				portraits = {
+					exd4_leader
+				}
+			}
+		}
+	}
+}

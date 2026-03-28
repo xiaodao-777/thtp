@@ -1,0 +1,1056 @@
+@civic_libra_extreme_base_weight = 30
+@civic_libra_high_base_weight = 20
+@civic_libra_default_base_weight = 15
+@civic_libra_uncommon_base_weight = 10
+@civic_libra_rare_base_weight = 5
+
+#############
+# Origin Civics
+#############
+
+civic_libra_crimson_nights = {
+	modification = no
+	potential = {
+		origin = { value = origin_libra_crimson_nights }
+		civics = { value = civic_libra_crimson_nights }
+	}
+	possible = {
+		species_class = {
+			OR = {
+				value = HUM
+				value = ROBOT
+				value = LIBRAPUNK
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	description = "civic_tooltip_libra_crimson_nights"
+	modifier = {
+		country_government_civic_points_add = 1
+		country_civics_influence_produces_add = 1
+		country_unity_produces_mult = 0.15
+		country_leader_cap_add = 2
+	}
+}
+
+#
+
+civic_libra_shadow_consciousness_a = {
+	potential = {
+		ethics = { value = ethic_gestalt_consciousness }
+		origin = { value = origin_libra_shadow_consciousness }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_shadow_consciousness_a"
+	negative_description = "libra_shadow_consciousness_civic_negative_effects"
+	modifier = {
+		planet_metallurgists_sr_dark_matter_produces_add = 0.05
+		planet_artisans_sr_dark_matter_produces_add = 0.05
+		planet_soldiers_sr_dark_matter_produces_add = 0.05
+		commander_skill_add = 2
+		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_shadow_consciousness_b = {
+	potential = {
+		ethics = { value = ethic_gestalt_consciousness }
+		origin = { value = origin_libra_shadow_consciousness }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_shadow_consciousness_b"
+	negative_description = "libra_shadow_consciousness_civic_negative_effects"
+	modifier = {
+		planet_pop_assemblers_sr_dark_matter_produces_add = 0.05
+		planet_bureaucrats_sr_dark_matter_produces_add = 0.05
+		planet_traders_sr_dark_matter_produces_add = 0.05
+		official_skill_add = 2
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_shadow_consciousness_c = {
+	potential = {
+		ethics = { value = ethic_gestalt_consciousness }
+		origin = { value = origin_libra_shadow_consciousness }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_shadow_consciousness_c"
+	negative_description = "libra_shadow_consciousness_civic_negative_effects"
+	modifier = {
+		planet_physicists_sr_dark_matter_produces_add = 0.05
+		planet_biologists_sr_dark_matter_produces_add = 0.05
+		planet_engineers_sr_dark_matter_produces_add = 0.05
+		scientist_skill_add = 2
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_shadow_consciousness_d = {
+	potential = {
+		ethics = { value = ethic_gestalt_consciousness }
+		origin = { value = origin_libra_shadow_consciousness }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_shadow_consciousness_d"
+	negative_description = "libra_shadow_consciousness_civic_negative_effects"
+	modifier = {
+		planet_technician_sr_dark_matter_produces_add = 0.05
+		planet_farmers_sr_dark_matter_produces_add = 0.05
+		planet_miners_sr_dark_matter_produces_add = 0.05
+		councilor_skill_add = 2
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+#
+
+civic_libra_interstellar_port_a = {
+	modification = {
+		add = { always = yes }
+		remove = {
+			custom_tooltip = {
+				fail_text = CIVIC_LOCKED
+				not = { has_civic = civic_libra_interstellar_port_a }
+			}
+		}
+	}
+	potential = {
+		origin = { value = origin_libra_interstellar_port }
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_interstellar_port_a"
+	modifier = {
+		pop_factions_produces_mult = 0.15
+		pop_category_rulers_energy_produces_add = 4
+		planet_traders_trade_produces_add = 0.5
+		pop_cat_civilian_bonus_workforce_mult = -0.05
+	}
+}
+
+civic_libra_interstellar_port_b = {
+	modification = {
+		add = { always = yes }
+		remove = {
+			custom_tooltip = {
+				fail_text = CIVIC_LOCKED
+				not = { has_civic = civic_libra_interstellar_port_b }
+			}
+		}
+	}
+	potential = {
+		origin = { value = origin_libra_interstellar_port }
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_interstellar_port_b"
+	modifier = {
+		country_enclave_capacity_add = 1
+		country_starbase_capacity_add = 3
+		planet_traders_trade_produces_add = 0.5
+		pop_cat_civilian_bonus_workforce_mult = -0.05
+	}
+}
+
+civic_libra_interstellar_port_c = {
+	modification = {
+		add = { always = yes }
+		remove = {
+			custom_tooltip = {
+				fail_text = CIVIC_LOCKED
+				not = { has_civic = civic_libra_interstellar_port_c }
+			}
+		}
+	}
+	potential = {
+		origin = { value = origin_libra_interstellar_port }
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_interstellar_port_c"
+	modifier = {
+		country_subject_acceptance_add = 10
+		country_naval_capacity_contribution_from_subjects_mult = 0.05
+		planet_traders_trade_produces_add = 0.5
+		pop_cat_civilian_bonus_workforce_mult = -0.05
+	}
+}
+
+civic_libra_interstellar_port_d = {
+	modification = {
+		add = { always = yes }
+		remove = {
+			custom_tooltip = {
+				fail_text = CIVIC_LOCKED
+				not = { has_civic = civic_libra_interstellar_port_d }
+			}
+		}
+	}
+	potential = {
+		origin = { value = origin_libra_interstellar_port }
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_interstellar_port_d"
+	modifier = {
+		planet_artisans_alloys_produces_add = 1
+		planet_soldiers_consumer_goods_produces_add = 1
+		planet_traders_trade_produces_add = 0.5
+		pop_cat_civilian_bonus_workforce_mult = -0.05
+	}
+}
+
+civic_libra_interstellar_port_e = {
+	modification = {
+		add = { always = yes }
+		remove = {
+			custom_tooltip = {
+				fail_text = CIVIC_LOCKED
+				not = { has_civic = civic_libra_interstellar_port_e }
+			}
+		}
+	}
+	potential = {
+		origin = { value = origin_libra_interstellar_port }
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_interstellar_port_e"
+	modifier = {
+		diplo_action_acceptance_add = 10
+		leader_skill_add = 1
+		planet_traders_trade_produces_add = 0.5
+		pop_cat_civilian_bonus_workforce_mult = -0.05
+	}
+}
+
+civic_libra_interstellar_port_f = {
+	modification = {
+		add = { always = yes }
+		remove = {
+			custom_tooltip = {
+				fail_text = CIVIC_LOCKED
+				not = { has_civic = civic_libra_interstellar_port_f }
+			}
+		}
+	}
+	potential = {
+		origin = { value = origin_libra_interstellar_port }
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_interstellar_port_f"
+	modifier = {
+		country_energy_produces_mult = 0.1
+		planet_traders_trade_produces_add = 0.5
+		pop_cat_civilian_bonus_workforce_mult = -0.05
+	}
+}
+
+#
+
+civic_libra_eden_accord_a = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_a"
+	modifier = {
+		leaders_cost_mult = 1
+		country_leader_pool_size = -1
+		leader_trait_selection_options_add = 1
+		leader_skill_add = 1
+		leader_initial_skill = 2
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_physics_research_produces_add = 1
+		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_b = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_b"
+	modifier = {
+		country_naval_cap_mult = 0.15
+		starbase_shipyard_build_cost_mult = -0.15
+		country_war_exhaustion_mult = -0.15
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_society_research_produces_add = 1
+		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_c = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_c"
+	modifier = {
+		species_leader_exp_gain = 0.2
+		planet_jobs_simple_drone_produces_mult = 0.2
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_engineering_research_produces_add = 1
+		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_d = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_d"
+	modifier = {
+		planet_housing_add = 1500
+		terraform_speed_mult = 0.5
+		planet_clear_blocker_speed_mult = 0.5
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_engineering_research_produces_add = 1
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_e = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_e"
+	modifier = {
+		planet_building_capacity_add = 1
+		planet_colony_development_speed_mult = 0.5
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_society_research_produces_add = 1
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_f = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_f"
+	modifier = {
+		specimens_produces_mult = 0.15
+		planet_artisans_minor_artifacts_produces_add = 0.1
+		planet_artisans_astral_threads_produces_add = 0.1
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_physics_research_produces_add = 1
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_g = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_g"
+	modifier = {
+		empire_size_systems_mult = -0.25
+		empire_size_colonies_mult = -0.5
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_engineering_research_produces_add = 1
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_h = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_h"
+	modifier = {
+		num_tech_alternatives_add = 1
+		planet_researchers_upkeep_mult = -0.1
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_physics_research_produces_add = 1
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_i = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_i"
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 4
+		BIOLOGICAL_species_trait_picks_add = 2
+		subspecies_integration_add = 200
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_society_research_produces_add = 1
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_j = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_j"
+	modifier = {
+		diplo_action_acceptance_add = 25
+		envoys_add = 2
+		envoy_improve_relations_mult = 0.25
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_trade_produces_add = 1
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_libra_eden_accord_k = {
+	modification = {
+		add = { always = yes }
+		remove = { years_passed > 12 }
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+		origin = { value = origin_libra_eden_accord }
+	}
+	possible = {
+		civics = { value = civic_machine_servitor }
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+	}
+	description = "civic_tooltip_libra_eden_accord_k"
+	modifier = {
+		country_energy_produces_mult = 0.15
+		planet_traders_trade_produces_add = 2
+		planet_traders_energy_upkeep_add = 2
+		planet_bio_trophies_unity_produces_add = -0.25
+		planet_bio_trophies_trade_produces_add = 1
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+#
+
+civic_libra_may_storm_spiritualist_a = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_materialist_a
+				value = civic_libra_may_storm_materialist_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_spiritualist = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_spiritualist_a"
+	modifier = {
+		pop_cat_ruler_bonus_workforce_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_spiritualist_attraction_mult = 0.5
+		planetary_ascension_effect_mult = 0.25
+	}
+}
+
+civic_libra_may_storm_spiritualist_b = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_materialist_a
+				value = civic_libra_may_storm_materialist_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_spiritualist = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_spiritualist_b"
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_spiritualist_attraction_mult = 0.5
+		planetary_ascension_cost_mult = -0.1
+		country_edict_fund_add = 50
+	}
+}
+
+civic_libra_may_storm_materialist_a = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_spiritualist_a
+				value = civic_libra_may_storm_spiritualist_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_materialist = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_materialist_a"
+	modifier = {
+		pop_cat_ruler_bonus_workforce_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_materialist_attraction_mult = 0.5
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_metallurgists_alloys_produces_add = 1
+		planet_metallurgists_energy_upkeep_add = 2
+	}
+}
+
+civic_libra_may_storm_materialist_b = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_spiritualist_a
+				value = civic_libra_may_storm_spiritualist_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_materialist = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_materialist_b"
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_materialist_attraction_mult = 0.5
+		ship_archaeological_site_clues_add = 2
+		ship_astral_rift_clues_add = 2
+		specimens_produces_mult = 0.2
+	}
+}
+
+civic_libra_may_storm_militarist_a = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_pacifist_a
+				value = civic_libra_may_storm_pacifist_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_militarist = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_militarist_a"
+	modifier = {
+		pop_cat_ruler_bonus_workforce_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_militarist_attraction_mult = 0.5
+		country_war_exhaustion_mult = -0.25
+		command_limit_add = 50
+	}
+}
+
+civic_libra_may_storm_militarist_b = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_pacifist_a
+				value = civic_libra_may_storm_pacifist_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_militarist = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_militarist_b"
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_militarist_attraction_mult = 0.5
+		damage_vs_player_crisis_mult = 0.5
+	}
+}
+
+civic_libra_may_storm_pacifist_a = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_militarist_a
+				value = civic_libra_may_storm_militarist_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_pacifist = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_pacifist_a"
+	modifier = {
+		pop_cat_ruler_bonus_workforce_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_pacifist_attraction_mult = 0.5
+		pop_citizen_happiness = 0.15
+		pop_ethics_shift_speed_mult = 1
+	}
+}
+
+civic_libra_may_storm_pacifist_b = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_militarist_a
+				value = civic_libra_may_storm_militarist_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_pacifist = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_pacifist_b"
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_pacifist_attraction_mult = 0.5
+		empire_size_pops_mult = -0.15
+		empire_size_districts_mult = -0.35
+	}
+}
+
+civic_libra_may_storm_xenophobe_a = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_xenophile_a
+				value = civic_libra_may_storm_xenophile_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_xenophobe = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_xenophobe_a"
+	modifier = {
+		pop_cat_ruler_bonus_workforce_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_xenophobe_attraction_mult = 0.5
+		country_starbase_capacity_mult = 0.25
+		starbase_defense_platform_capacity_mult = 0.25
+	}
+}
+
+civic_libra_may_storm_xenophobe_b = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_xenophile_a
+				value = civic_libra_may_storm_xenophile_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_xenophobe = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_xenophobe_b"
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_xenophobe_attraction_mult = 0.5
+		intel_encryption_add = 1
+		intel_decryption_add = 1
+		leader_skill_add = 1
+		councilor_skill_add = 1
+	}
+}
+
+civic_libra_may_storm_xenophile_a = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_xenophobe_a
+				value = civic_libra_may_storm_xenophobe_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_xenophile = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_xenophile_a"
+	modifier = {
+		pop_cat_ruler_bonus_workforce_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_xenophile_attraction_mult = 0.5
+		country_subject_acceptance_add = 25
+		envoys_add = 2
+		divided_patrongage_max_subjects = 5
+	}
+}
+
+civic_libra_may_storm_xenophile_b = {
+	potential = {
+		origin = { value = origin_libra_may_storm }
+	}
+	possible = {
+		authority = { value = auth_democratic }
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_libra_may_storm_xenophobe_a
+				value = civic_libra_may_storm_xenophobe_b
+			}
+		}
+	}
+	random_weight = { base = @civic_libra_extreme_base_weight }
+	ai_weight = {
+		base = @civic_libra_extreme_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			is_xenophile = yes
+		}
+	}
+	description = "civic_tooltip_libra_may_storm_xenophile_b"
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		pop_ethic_xenophile_attraction_mult = 0.5
+		external_leader_pool_add = 2
+		commercial_pact_mult = 0.25
+		research_sharing_mult = 0.25
+	}
+}

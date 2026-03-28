@@ -1,0 +1,3072 @@
+@libraadvancedtechcost = 36000
+
+# ####################
+# Astral Blade
+# ####################
+
+tech_libra_astral_lasers = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	category = { particles }
+	ai_update_type = military
+	is_insight = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_astral_blast = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	category = { particles }
+	ai_update_type = military
+	is_insight = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_astral_lance = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	category = { particles }
+	ai_update_type = military
+	is_insight = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_astral_torpedoes = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	category = { particles }
+	ai_update_type = military
+	is_insight = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_astral_reactors = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	category = { particles }
+	ai_update_type = all
+	is_insight = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 500
+	}
+}
+
+tech_libra_astral_shields = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	category = { field_manipulation }
+	ai_update_type = all
+	is_insight = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 80
+	}
+}
+
+tech_libra_astral_kinetic_artillery = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	ai_update_type = military
+	category = { propulsion }
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_astral_mass_accelerator = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	ai_update_type = military
+	category = { propulsion }
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_astral_flak_batteries = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	ai_update_type = military
+	category = { propulsion }
+	is_insight = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_astral_missiles = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	ai_update_type = military
+	category = { propulsion }
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+tech_libra_astral_strike_craft = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	ai_update_type = military
+	category = { voidcraft }
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}
+	}
+}
+
+tech_libra_astral_armor = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	ai_update_type = all
+	category = { materials }
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 60
+	}
+}
+
+# ####################
+# Genetics
+# ####################
+
+tech_libra_genetics_demystified = {
+	cost = @tier5cost1
+	area = society
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	category = { biology }
+	weight = 0
+
+	gateway = biological
+
+	potential = {
+		or = {
+			has_tradition = tr_genetics_finish
+			has_tradition = tr_cloning_finish
+			has_tradition = tr_purity_finish
+			has_tradition = tr_mutation_finish
+		}
+	}
+
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 1
+		BIOLOGICAL_species_trait_picks_add = 1
+		organic_pop_bonus_workforce_mult = 0.1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			organic_pop_bonus_workforce_mult = 0.2
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_ascension_perk = ap_libra_cutefied_world
+		}
+		modifier = {
+			ruler_skill_add = 1
+			organic_pop_bonus_workforce_mult = 0.15
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_genetic_flexible_a = {
+	cost = @tier5cost2
+	area = physics
+	tier = 5
+	is_insight = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_genetics_demystified" }
+	category = { computing }
+
+	modifier = {
+		logistic_growth_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+		planet_pop_assemblers_society_research_produces_add = 2
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = genetic_ascension_stage_1_mutation
+		}
+		modifier = {
+			custom_tooltip = tech_libra_genetic_flexible_a_mutation_tt
+			show_only_custom_tooltip = no
+			habitability_ceil_uncapped_add = 0.5
+			modify_species_cost_mult = -0.15
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = genetic_ascension_stage_1_purity
+		}
+		modifier = {
+			custom_tooltip = tech_libra_genetic_flexible_a_purity_tt
+			show_only_custom_tooltip = no
+			planet_stability_mult = 0.1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			is_hive_empire = yes
+			has_country_flag = genetic_ascension_stage_1_purity
+		}
+		modifier = {
+			custom_tooltip = tech_libra_genetic_flexible_a_purity_tt
+			show_only_custom_tooltip = no
+			organic_pop_bonus_workforce_mult = 0.1
+		}
+		weight = {
+			factor = 3
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_genetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_genetic_flexible_a
+		}
+	}
+
+	ai_weight = {
+		factor = 80
+	}
+}
+
+tech_libra_genetic_flexible_b = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	is_insight = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_genetics_demystified" }
+	category = { biology }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.15
+		planet_jobs_upkeep_mult = 0.1
+		leader_trait_selection_options_add = 1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = genetic_ascension_stage_2_cloning
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.15
+			planet_jobs_upkeep_mult = 0.1
+			country_leader_cap_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = genetic_ascension_stage_2_purity
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.15
+			planet_jobs_upkeep_mult = 0.1
+			leader_initial_skill = 1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_genetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_genetic_flexible_b
+		}
+	}
+
+	ai_weight = {
+		factor = 80
+	}
+}
+
+tech_libra_genetic_flexible_c = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	is_insight = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_genetics_demystified" }
+	category = { industry }
+
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 1
+		planet_jobs_productive_upkeep_mult = -0.1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = genetic_ascension_stage_3_cloning
+		}
+		modifier = {
+			planet_housing_mult = 0.1
+			organic_pop_bonus_workforce_mult = 0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = genetic_ascension_stage_3_mutation
+		}
+		modifier = {
+			BIOLOGICAL_species_trait_picks_add = 1
+			planet_pops_produces_mult = 0.25
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			bonus_pop_growth_mult = 0.15
+			planet_jobs_productive_upkeep_mult = -0.05
+		}
+		weight = {
+			factor = 3
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_ascension_perk = ap_libra_cutefied_world
+			has_country_flag = genetic_ascension_stage_3_mutation
+		}
+		modifier = {
+			planet_pops_produces_mult = 0.25
+			planet_jobs_productive_upkeep_mult = -0.05
+		}
+		weight = {
+			factor = 4
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_genetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_genetic_flexible_c
+		}
+	}
+
+	ai_weight = {
+		factor = 80
+	}
+}
+
+tech_repeatable_libra_genetics_a = {
+	area = society
+	category = { biology }
+	ai_update_type = all
+	prerequisites = { "tech_libra_genetic_flexible_a" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		organic_pop_bonus_workforce_mult = 0.04
+	}
+}
+
+tech_repeatable_libra_genetics_b = {
+	area = society
+	category = { statecraft }
+	ai_update_type = all
+	prerequisites = { "tech_libra_genetic_flexible_b" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_upkeep_mult = 0.04
+	}
+}
+
+# ####################
+# Cloning
+# ####################
+
+tech_libra_cloning_method = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	category = { computing }
+	weight = 0
+
+	gateway = biological
+
+	potential = {
+		has_tradition = tr_cloning_finish
+	}
+
+	modifier = {
+		bonus_pop_growth_mult = 0.1
+		leader_starting_age_mult = -0.2
+		planet_building_build_speed_mult = 0.2
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = genetic_ascension_stage_1_cloning
+			has_country_flag = genetic_ascension_stage_2_cloning
+			has_country_flag = genetic_ascension_stage_3_cloning
+		}
+		modifier = {
+			bonus_pop_growth_mult = 0.2
+			leader_starting_age_mult = -0.25
+			planet_building_build_speed_mult = 0.25
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 125
+	}
+}
+
+tech_libra_cloning_chamber = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_cloning_method" "tech_capacity_boosters" }
+	category = { biology }
+
+	modifier = {
+		planet_housing_mult = 0.1
+		pop_organic_resettlement_cost_mult = -0.25
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_cloning_chamber
+		}
+		modifier = {
+			factor = 0
+			or = {
+				not = { is_variable_set = libra_aa_path }
+				has_tradition = tr_cybernetics_adopt
+				has_tradition = tr_cybernetics_assimilator_adopt
+				has_tradition = tr_genetics_adopt
+				has_tradition = tr_purity_adopt
+				has_tradition = tr_mutation_adopt
+				has_tradition = tr_synthetics_adopt
+				has_tradition = tr_psionics_adopt
+				has_tradition = tr_psionics_shroud_adopt
+				has_tradition = tr_virtuality_adopt
+				has_tradition = tr_nanotech_adopt
+				has_tradition = tr_modularity_adopt
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 150
+	}
+}
+
+tech_libra_cloning_overload = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_cloning_chamber" "tech_libra_genetic_flexible_c" }
+	category = { biology }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.25
+		planet_jobs_upkeep_mult = 0.15
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_cloning_overload
+		}
+		modifier = {
+			factor = 0
+			or = {
+				not = { is_variable_set = libra_aa_path }
+				has_tradition = tr_cybernetics_adopt
+				has_tradition = tr_cybernetics_assimilator_adopt
+				has_tradition = tr_genetics_adopt
+				has_tradition = tr_purity_adopt
+				has_tradition = tr_mutation_adopt
+				has_tradition = tr_synthetics_adopt
+				has_tradition = tr_psionics_adopt
+				has_tradition = tr_psionics_shroud_adopt
+				has_tradition = tr_virtuality_adopt
+				has_tradition = tr_nanotech_adopt
+				has_tradition = tr_modularity_adopt
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 75
+	}
+}
+
+tech_repeatable_libra_cloning = {
+	area = society
+	category = { biology }
+	ai_update_type = all
+	prerequisites = { "tech_libra_cloning_overload" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		planet_carry_cap_add = 400
+		logistic_growth_mult = 0.1
+		leaders_upkeep_mult = -0.2
+	}
+}
+
+# ####################
+# Purity
+# ####################
+
+tech_libra_purity_sanctuary = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	category = { industry }
+	weight = 0
+
+	gateway = biological
+
+	potential = {
+		has_tradition = tr_purity_finish
+	}
+
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = genetic_ascension_stage_1_purity
+			has_country_flag = genetic_ascension_stage_2_purity
+			has_country_flag = genetic_ascension_stage_3_purity
+		}
+		modifier = {
+			BIOLOGICAL_species_trait_points_add = 1
+			BIOLOGICAL_species_trait_picks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_origin = origin_wilderness
+		}
+		modifier = {
+			BIOLOGICAL_species_trait_points_add = 1
+			BIOLOGICAL_species_trait_picks_add = 1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 125
+	}
+}
+
+tech_libra_purity_enhancement = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_purity_sanctuary" "tech_selected_lineages" }
+	category = { biology }
+
+	modifier = {
+		species_leader_exp_gain = 0.2
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_purity_enhancement
+		}
+		modifier = {
+			factor = 0
+			or = {
+				not = { is_variable_set = libra_aa_path }
+				has_tradition = tr_cybernetics_adopt
+				has_tradition = tr_cybernetics_assimilator_adopt
+				has_tradition = tr_genetics_adopt
+				has_tradition = tr_cloning_adopt
+				has_tradition = tr_mutation_adopt
+				has_tradition = tr_synthetics_adopt
+				has_tradition = tr_psionics_adopt
+				has_tradition = tr_psionics_shroud_adopt
+				has_tradition = tr_virtuality_adopt
+				has_tradition = tr_nanotech_adopt
+				has_tradition = tr_modularity_adopt
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 150
+	}
+}
+
+tech_libra_purity_traits = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_purity_sanctuary" "tech_gene_expressions" }
+	category = { biology }
+
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 1
+	}
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_TPST_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_TPST_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_purity_traits
+		}
+		modifier = {
+			factor = 0
+			or = {
+				not = { is_variable_set = libra_aa_path }
+				has_tradition = tr_cybernetics_adopt
+				has_tradition = tr_cybernetics_assimilator_adopt
+				has_tradition = tr_genetics_adopt
+				has_tradition = tr_cloning_adopt
+				has_tradition = tr_mutation_adopt
+				has_tradition = tr_synthetics_adopt
+				has_tradition = tr_psionics_adopt
+				has_tradition = tr_psionics_shroud_adopt
+				has_tradition = tr_virtuality_adopt
+				has_tradition = tr_nanotech_adopt
+				has_tradition = tr_modularity_adopt
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 75
+	}
+}
+
+tech_repeatable_libra_purity = {
+	area = society
+	category = { biology }
+	ai_update_type = all
+	prerequisites = { "tech_libra_purity_enhancement" "tech_libra_genetic_flexible_c" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		planet_carry_cap_add = 200
+		country_produces_mult = 0.04
+		planet_jobs_upkeep_mult = 0.03
+	}
+}
+
+# ####################
+# Mutation
+# ####################
+
+tech_libra_mutation_encoding = {
+	cost = @tier5cost1
+	area = society
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	category = { biology }
+	weight = 0
+
+	gateway = biological
+
+	potential = {
+		has_tradition = tr_mutation_finish
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_LRT_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_LRT_DESC"
+		}
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = genetic_ascension_stage_1_mutation
+			has_country_flag = genetic_ascension_stage_2_mutation
+			has_country_flag = genetic_ascension_stage_3_mutation
+		}
+		modifier = {
+			BIOLOGICAL_species_trait_points_add = 2
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			logistic_growth_mult = 0.25
+			organic_pop_bonus_workforce_mult = 0.15
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_ascension_perk = ap_libra_cutefied_world
+		}
+		prereqfor_desc = {
+			custom = {
+				title = "TECH_UNLOCK_LIBRA_LRT_TITLE"
+				desc = "TECH_UNLOCK_LIBRA_LRT_DESC"
+			}
+		}
+		modifier = {
+			councilor_skill_add = 1
+		}
+		weight = {
+			factor = 3
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 125
+	}
+}
+
+tech_libra_mutation_integration = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_mutation_encoding" }
+	category = { biology }
+
+	modifier = {
+		rare_tech_research_speed_mult = 0.25
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_mutation_integration
+		}
+		modifier = {
+			factor = 0
+			or = {
+				not = { is_variable_set = libra_aa_path }
+				has_tradition = tr_cybernetics_adopt
+				has_tradition = tr_cybernetics_assimilator_adopt
+				has_tradition = tr_genetics_adopt
+				has_tradition = tr_cloning_adopt
+				has_tradition = tr_purity_adopt
+				has_tradition = tr_synthetics_adopt
+				has_tradition = tr_psionics_adopt
+				has_tradition = tr_psionics_shroud_adopt
+				has_tradition = tr_virtuality_adopt
+				has_tradition = tr_nanotech_adopt
+				has_tradition = tr_modularity_adopt
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 150
+	}
+}
+
+tech_libra_mutation_protection = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_mutation_encoding" "tech_gene_expressions" }
+	category = { computing }
+
+	modifier = {
+		planet_doctors_trade_produces_add = 3
+		planet_pop_assemblers_trade_produces_add = 3
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_mutation_protection
+		}
+		modifier = {
+			factor = 0
+			or = {
+				not = { is_variable_set = libra_aa_path }
+				has_tradition = tr_cybernetics_adopt
+				has_tradition = tr_cybernetics_assimilator_adopt
+				has_tradition = tr_genetics_adopt
+				has_tradition = tr_cloning_adopt
+				has_tradition = tr_purity_adopt
+				has_tradition = tr_synthetics_adopt
+				has_tradition = tr_psionics_adopt
+				has_tradition = tr_psionics_shroud_adopt
+				has_tradition = tr_virtuality_adopt
+				has_tradition = tr_nanotech_adopt
+				has_tradition = tr_modularity_adopt
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 75
+	}
+}
+
+tech_repeatable_libra_mutation = {
+	area = society
+	category = { biology }
+	ai_update_type = all
+	prerequisites = { "tech_libra_mutation_integration" "tech_libra_mutation_protection" "tech_libra_genetic_flexible_c" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		planet_carry_cap_add = 300
+		council_agenda_cooldown_mult = -0.04
+		planet_pops_produces_mult = 0.05
+	}
+}
+
+# ####################
+# Cybernetics
+# ####################
+
+tech_libra_centralised_cybernetics = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	#prerequisites = { "tech_neuro_quantum_links" }
+	category = { new_worlds }
+	weight = 0
+
+	gateway = robotics
+
+	potential = {
+		or = {
+			has_tradition = tr_cybernetics_finish
+			has_tradition = tr_cybernetics_assimilator_finish
+		}
+	}
+
+	modifier = {
+		councilor_skill_add = -1
+		planet_pops_cyborgs_upkeep_mult = -0.15
+		robotic_pop_bonus_workforce_mult = 0.15
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			councilor_skill_add = -1
+			planet_pops_cyborgs_upkeep_mult = -0.15
+			pop_cat_simple_drone_bonus_workforce_mult = 0.15
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_civic = civic_machine_assimilator
+		}
+		modifier = {
+			councilor_skill_add = -1
+			planet_pops_cyborgs_upkeep_mult = -0.15
+			robotic_pop_bonus_workforce_mult = 0.25
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_cybernetic_adaptive_standards = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight1
+	prerequisites = { "tech_libra_centralised_cybernetics" "tech_global_research_initiative" }
+	category = { computing }
+
+	modifier = {
+		country_leader_cap_add = 1
+		council_agenda_progress_speed = 0.25
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_cybernetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_cybernetic_adaptive_standards
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_libra_universal_prosthesis = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_cybernetic_adaptive_standards" }
+	category = { industry }
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_UCT_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_UCT_DESC"
+		}
+	}
+	modifier = {
+		pop_amenities_usage_mult = -0.1
+		planet_pop_assemblers_trade_produces_add = 2
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			is_gestalt = yes
+		}
+		prereqfor_desc = {
+			custom = {
+				title = "TECH_UNLOCK_LIBRA_UCT_TITLE"
+				desc = "TECH_UNLOCK_LIBRA_UCT_DESC"
+			}
+		}
+		modifier = {
+			pop_amenities_usage_no_happiness_mult = -0.1
+			planet_pop_assemblers_trade_produces_add = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			nor = {
+				has_technology = tech_robomodding_points_2
+				has_technology = tech_nanite_assemblers
+				has_technology = tech_gene_expressions
+			}
+		}
+		inline_script = {
+			script = technologies/libra_cybernetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_universal_prosthesis
+		}
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_multiprosthesis_integration = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_universal_prosthesis" }
+	category = { industry }
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_MCT_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_MCT_DESC"
+		}
+	}
+	modifier = {
+		ROBOT_species_trait_points_add = 2
+		ROBOT_species_trait_picks_add = 1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			is_hive_empire = yes
+		}
+		prereqfor_desc = {
+			custom = {
+				title = "TECH_UNLOCK_LIBRA_MCT_TITLE"
+				desc = "TECH_UNLOCK_LIBRA_MCT_DESC"
+			}
+		}
+		modifier = {
+			BIOLOGICAL_species_trait_points_add = 2
+			BIOLOGICAL_species_trait_picks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+		prereqfor_desc = {
+			custom = {
+				title = "TECH_UNLOCK_LIBRA_MCT_TITLE"
+				desc = "TECH_UNLOCK_LIBRA_MCT_DESC"
+			}
+		}
+		modifier = {
+			MACHINE_species_trait_points_add = 2
+			MACHINE_species_trait_picks_add = 1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_cybernetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_multiprosthesis_integration
+		}
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_cybernetic_exoskeleton_1 = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight1
+	prerequisites = { "tech_libra_centralised_cybernetics" "tech_ship_armor_3" }
+	category = { materials }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_jobs_upkeep_mult = 0.1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_cybernetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_cybernetic_exoskeleton_1
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_libra_cybernetic_exoskeleton_2 = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_cybernetic_exoskeleton_1" "tech_ship_armor_4" }
+	category = { materials }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_jobs_upkeep_mult = 0.1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_cybernetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_cybernetic_exoskeleton_2
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_libra_cybernetic_exoskeleton_3 = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_cybernetic_exoskeleton_2" "tech_ship_armor_5" }
+	category = { materials }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_jobs_upkeep_mult = 0.1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_cybernetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_cybernetic_exoskeleton_3
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_libra_cybernetic_growth_1 = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	#prerequisites = { "tech_libra_centralised_cybernetics" }
+	category = { industry }
+	weight = 0
+
+	gateway = robotics
+
+	potential = {
+		or = {
+			has_tradition = tr_cybernetics_finish
+			has_tradition = tr_cybernetics_assimilator_finish
+		}
+	}
+
+	modifier = {
+		planet_carry_cap_add = 500
+		planet_pop_assembly_add = 1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			planet_carry_cap_add = 500
+			bonus_pop_growth_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_cybernetic_growth_2 = {
+	cost = @tier5cost1
+	area = society
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight1
+	prerequisites = { "tech_libra_cybernetic_growth_1" }
+	category = { statecraft }
+
+	modifier = {
+		planet_carry_cap_add = 500
+		logistic_growth_mult = 0.25
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_cybernetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_cybernetic_growth_2
+		}
+	}
+
+	ai_weight = {
+		factor = 75
+	}
+}
+
+tech_libra_cybernetic_growth_3 = {
+	cost = @tier5cost2
+	area = physics
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_cybernetic_growth_2" "tech_libra_cybernetic_exoskeleton_1" }
+	category = { computing }
+
+	modifier = {
+		planet_carry_cap_add = 500
+		planet_pop_assembly_add = 1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			planet_carry_cap_add = 500
+			bonus_pop_growth_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_cybernetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_cybernetic_growth_3
+		}
+	}
+
+	ai_weight = {
+		factor = 75
+	}
+}
+
+tech_libra_cybernetic_growth_4 = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_cybernetic_growth_3" "tech_libra_cybernetic_exoskeleton_2" }
+	category = { biology }
+
+	modifier = {
+		planet_carry_cap_add = 500
+		logistic_growth_mult = 0.25
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_cybernetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_cybernetic_growth_4
+		}
+	}
+
+	ai_weight = {
+		factor = 75
+	}
+}
+
+tech_repeatable_libra_cybernetic_labor = {
+	area = physics
+	category = { computing }
+	ai_update_type = all
+	prerequisites = { "tech_libra_cybernetic_exoskeleton_3" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		country_starbase_capacity_add = 1
+		planet_jobs_specialist_produces_mult = 0.03
+		planet_jobs_worker_produces_mult = 0.07
+	}
+}
+
+tech_repeatable_libra_cybernetic_experience_sharing = {
+	area = society
+	category = { statecraft }
+	ai_update_type = all
+	prerequisites = { "tech_libra_multiprosthesis_integration" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		councilor_skill_add = 1
+		army_starting_experience_add = 100
+		ship_starting_experience_add = 100
+	}
+}
+
+tech_repeatable_libra_cybernetic_growth = {
+	area = engineering
+	category = { industry }
+	ai_update_type = all
+	prerequisites = { "tech_libra_cybernetic_growth_4" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		planet_pops_upkeep_mult = -0.05
+		planet_pop_assembly_mult = 0.05
+		bonus_pop_growth_mult = 0.05
+	}
+}
+
+# ####################
+# Synthetic
+# ####################
+
+tech_libra_synthetic_commands = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	category = { computing }
+	weight = 0
+
+	gateway = robotics
+
+	potential = {
+		has_tradition = tr_synthetics_finish
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_SCRT_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_SCRT_DESC"
+		}
+	}
+	modifier = {
+		planet_jobs_productive_produces_mult = 0.25
+		planet_jobs_productive_upkeep_mult = 0.15
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_synthetic_correction = {
+	cost = @tier5cost2
+	area = physics
+	tier = 5
+	is_insight = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_synthetic_commands" }
+	category = { computing }
+
+	modifier = {
+		planet_stability_mult = 0.1
+		species_leader_exp_gain = 0.1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			subspecies_integration_add = 100
+			country_leader_pool_size = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			planet_pop_assembly_add = 1
+			leader_skill_add = 1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_synthetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_synthetic_correction
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_libra_synthetic_truth = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	is_insight = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_synthetic_correction" }
+	category = { computing }
+
+	modifier = {
+		ROBOT_species_trait_points_add = 1
+		robotic_pop_bonus_workforce_mult = 0.05
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			ROBOT_species_trait_points_add = 2
+			ROBOT_species_trait_picks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			robotic_pop_bonus_workforce_mult = 0.1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_synthetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_synthetic_truth
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_libra_synthetic_leaders = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	category = { industry }
+	weight = 0
+
+	gateway = robotics
+
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_SLTU_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_SLTU_DESC"
+		}
+	}
+	modifier = {
+		country_leader_cap_add = 2
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_synthetic_workforce = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	is_insight = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_synthetic_leaders" "tech_robomodding_points_2" }
+	category = { industry }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		robotic_pop_bonus_workforce_mult = 0.1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			planet_pops_robotics_upkeep_mult = -0.1
+			pop_amenities_usage_robotic_mult = -0.1
+			robotic_pop_bonus_workforce_mult = 0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			ROBOT_pop_happiness = 0.1
+			planet_pop_assembly_mult = 0.1
+			robotic_pop_bonus_workforce_mult = 0.1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_synthetic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_synthetic_workforce
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_repeatable_libra_synthetic_a = {
+	area = physics
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_libra_synthetic_workforce" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		armies_upkeep_mult = -0.02
+		ships_upkeep_mult = -0.02
+		robotic_pop_bonus_workforce_mult = 0.03
+	}
+}
+
+tech_repeatable_libra_synthetic_b = {
+	area = society
+	category = { statecraft }
+	ai_update_type = all
+	prerequisites = { "tech_libra_synthetic_commands" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		council_agenda_finishing_effect_duration_mult = 0.05
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_upkeep_mult = 0.05
+	}
+}
+
+tech_repeatable_libra_synthetic_c = {
+	area = engineering
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_libra_synthetic_truth" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		planet_pop_assembly_add = 0.6
+		ship_shield_mult = 0.08
+		ship_armor_mult = 0.08
+	}
+}
+
+# ####################
+# Modularity
+# ####################
+
+tech_libra_modular_society = {
+	icon = tech_robomodding_m
+	area = society
+	cost = @tier5cost1
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	ai_update_type = all
+	category = { statecraft }
+	weight = 0
+
+	gateway = capital
+
+	potential = {
+		has_tradition = tr_modularity_finish
+	}
+
+	modifier = {
+		country_government_civic_points_add = 1
+		council_agenda_progress_speed = 0.25
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			not = { is_variable_set = libra_aa_path }
+		}
+		modifier = {
+			council_agenda_progress_speed = 0.25
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_modular_living_metal_separation = {
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_modular_society" "tech_mine_living_metal" }
+	category = { materials }
+	weight = @tier5weight2
+
+	modifier = {
+		planet_metallurgists_sr_living_metal_produces_add = 0.1
+		planet_metallurgists_energy_upkeep_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_modularity_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_modular_living_metal_separation
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_libra_modular_trait_points_1 = {
+	icon = tech_binary_motivators
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_modular_society" "tech_nanite_assemblers" }
+	category = { industry }
+	weight = @tier5weight2
+
+	modifier = {
+		MACHINE_species_trait_picks_add = 1
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_AMMT_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_AMMT_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_modularity_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_modular_trait_points_1
+		}
+	}
+
+	ai_weight = {
+		factor = 150
+	}
+}
+
+tech_libra_modular_trait_points_2 = {
+	icon = tech_nanite_assemblers
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_modular_trait_points_1" }
+	category = { industry }
+	weight = @tier5weight3
+
+	modifier = {
+		MACHINE_species_trait_points_add = 3
+		MACHINE_species_trait_picks_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_modularity_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_modular_trait_points_2
+		}
+	}
+
+	ai_weight = {
+		factor = 80
+	}
+}
+
+tech_libra_modular_edge_IoT = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_modular_society" "tech_mega_assembly" }
+	category = { computing }
+	weight = @tier5weight3
+
+	modifier = {
+		subspecies_integration_add = 200
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_modularity_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_modular_edge_IoT
+		}
+	}
+
+	ai_weight = {
+		factor = 300
+	}
+}
+
+tech_repeatable_libra_modular_allocation_algorithm = {
+	area = physics
+	category = { computing }
+	prerequisites = { "tech_libra_modular_edge_IoT" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.05
+		planet_structures_upkeep_mult = -0.03
+		planet_jobs_productive_upkeep_mult = -0.03
+	}
+}
+
+tech_repeatable_libra_modular_pioneer_unit = {
+	area = society
+	category = { military_theory }
+	prerequisites = { "tech_libra_modular_society" "tech_biomechanics" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		country_leader_cap_add = 1
+		army_damage_mult = 0.1
+		army_health = 0.1
+	}
+}
+
+tech_repeatable_libra_modular_precision_components = {
+	area = engineering
+	category = { industry }
+	prerequisites = { "tech_libra_modular_living_metal_separation" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 7
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_upkeep_mult = 0.05
+	}
+}
+
+# #############
+# Atomic Heart
+#############
+
+tech_libra_atomic_heart_a = {
+	area = physics
+	tier = @fallentechtier
+	cost = @libraadvancedtechcost
+	category = { computing }
+	ai_update_type = military
+	is_dangerous = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_ATOMIC_CC_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_ATOMIC_CC_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_atomic_heart_b = {
+	area = physics
+	tier = @fallentechtier
+	cost = @libraadvancedtechcost
+	category = { particles }
+	ai_update_type = military
+	is_dangerous = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 150
+	}
+}
+
+tech_libra_atomic_heart_c = {
+	area = engineering
+	tier = @fallentechtier
+	cost = @libraadvancedtechcost
+	category = { industry }
+	ai_update_type = all
+	is_dangerous = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 175
+	}
+}
+
+tech_libra_atomic_heart_d = {
+	area = engineering
+	tier = @fallentechtier
+	cost = @libraadvancedtechcost
+	category = { materials }
+	ai_update_type = all
+	is_dangerous = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+# ####################
+# Nanotech
+# ####################
+
+tech_libra_nanite_shipyard = {
+	area = engineering
+	cost = @tier5cost1
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	ai_update_type = all
+	#prerequisites = { "tech_starbase_5" "tech_zero_point_power" }
+	category = { voidcraft }
+	weight = 0
+
+	gateway = ship
+
+	potential = {
+		has_tradition = tr_nanotech_finish
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "allow_libra_nanite_shipyard"
+			desc = "libra_nanite_shipyard_0_MEGASTRUCTURE_DETAILS"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_nanite_locusts = {
+	area = engineering
+	cost = @tier5cost1
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	ai_update_type = all
+	#prerequisites = { "tech_biomechanics" "tech_climate_restoration" }
+	category = { voidcraft }
+	weight = 0
+
+	gateway = ship
+
+	potential = {
+		has_tradition = tr_nanotech_finish
+	}
+
+	#modifier = {
+	#	pop_purge_speed = 1
+	#}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_nanite_command_group = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_nanite_locusts" "tech_ascension_theory" }
+	category = { voidcraft }
+	weight = @tier5weight3
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_nanite_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_nanite_command_group
+		}
+	}
+
+	ai_weight = {
+		factor = 80
+	}
+}
+
+tech_libra_nanite_industry_association = {
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_nanite_shipyard" "tech_global_production_strategy" "tech_nanite_transmutation" }
+	category = { industry }
+	weight = @tier5weight2
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_NANORECYCLING_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_NANORECYCLING_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_nanite_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_nanite_industry_association
+		}
+	}
+
+	ai_weight = {
+		factor = 80
+	}
+}
+
+tech_libra_nanite_unity_citadel = {
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_nanite_shipyard" }
+	category = { industry }
+	weight = @tier5weight2
+
+	modifier = {
+		empire_size_districts_mult = -0.1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			nor = {
+				has_technology = tech_autocurating_vault
+				has_technology = tech_transcendent_faith
+			}
+		}
+		inline_script = {
+			script = technologies/libra_nanite_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_nanite_unity_citadel
+		}
+	}
+
+	ai_weight = {
+		factor = 80
+	}
+}
+
+tech_libra_nanite_trade_hub = {
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_nanite_shipyard" "tech_libra_interstellar_logistics_planning" }
+	category = { industry }
+	weight = @tier5weight2
+
+	modifier = {
+		arc_furnace_limit_add = 2
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_nanite_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_nanite_trade_hub
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_libra_nanite_power_hub = {
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_nanite_shipyard" "tech_power_hub_2" }
+	category = { industry }
+	weight = @tier5weight2
+
+	modifier = {
+		planet_technician_engineering_research_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_nanite_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_nanite_power_hub
+		}
+	}
+
+	ai_weight = {
+		factor = @energy_grid_ai_factor
+	}
+}
+
+tech_libra_nanite_food_processing = {
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_nanite_shipyard" "tech_food_processing_2" }
+	category = { industry }
+	weight = @tier5weight2
+
+	modifier = {
+		planet_farmers_nanites_produces_add = 1.8
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_nanite_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_nanite_food_processing
+		}
+	}
+
+	ai_weight = {
+		factor = @farming_building_ai_weight_factor
+		modifier = {
+			factor = 0
+			country_uses_food = no
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_agrarian_idyll
+				is_anglers_empire = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			is_catalytic_empire = yes
+		}
+	}
+}
+
+tech_libra_nanite_mineral_purification = {
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	prerequisites = { "tech_libra_nanite_shipyard" "tech_mineral_purification_2" }
+	category = { industry }
+	weight = @tier5weight2
+
+	modifier = {
+		planet_miners_nanites_produces_add = 1.8
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_nanite_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_nanite_mineral_purification
+		}
+	}
+
+	ai_weight = {
+		factor = @ai_mining_building_factor
+	}
+}
+
+tech_libra_nanite_titans = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = military
+	category = { voidcraft }
+	prerequisites = { "tech_titans" "tech_libra_nanite_locusts" }
+	weight = @tier5weight3
+	is_reverse_engineerable = no
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_LIBRA_NANITE_TITAN_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_NANITE_TITAN_DESC"
+		}
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_NIAS_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_NIAS_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_nanite_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_nanite_titans
+		}
+	}
+
+	ai_weight = {
+		factor = @ai_ship_types_factor
+	}
+}
+
+tech_libra_nanite_barrier = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	category = { materials }
+	prerequisites = { "tech_shields_5" "tech_ship_armor_5" "tech_nanite_repair_system" "tech_libra_nanite_shipyard" }
+	weight = @tier5weight3
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_nanites_produces_add = 50
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_nanite_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_nanite_barrier
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_repeatable_libra_network_optimization = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @LibraAPrepeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { voidcraft }
+	levels = 5
+	is_rare = yes
+	prerequisites = { "tech_libra_nanite_shipyard" "tech_space_science_5" "tech_space_mining_5" }
+	weight = @repeatableTechWeight
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			or = {
+				not = { is_variable_set = libra_aa_path }
+				has_tradition = tr_synthetics_adopt
+				has_tradition = tr_cybernetics_adopt
+				has_tradition = tr_cybernetics_assimilator_adopt
+				has_tradition = tr_psionics_adopt
+				has_tradition = tr_psionics_shroud_adopt
+				has_tradition = tr_genetics_adopt
+				has_tradition = tr_cloning_adopt
+				has_tradition = tr_purity_adopt
+				has_tradition = tr_mutation_adopt
+				has_tradition = tr_virtuality_adopt
+				has_tradition = tr_modularity_adopt
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		country_tech_nanites_produces_add = 20
+		stations_produces_mult = 0.2
+	}
+}
+
+tech_repeatable_libra_barrier_enhancement = {
+	area = engineering
+	category = { materials }
+	prerequisites = { "tech_libra_nanite_barrier" "tech_shield_hardeners_1" "tech_armor_hardeners_1" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 5
+	}
+
+	modifier = {
+		ship_armor_hardening_add = 0.05
+		ship_shield_hardening_add = 0.05
+	}
+}
+
+tech_repeatable_libra_combined_harvesting = {
+	area = engineering
+	category = { industry }
+	prerequisites = { "tech_libra_nanite_shipyard" "tech_nanite_transmutation" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		planet_libra_nanoreplica_nanites_produces_add = 0.8
+		planet_libra_nanoreplica_alloys_upkeep_add = 0.2
+	}
+}
+
+# ####################
+# Virtuality
+# ####################
+
+tech_libra_reality_deconstruction = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	category = { computing }
+	weight = 0
+
+	gateway = robotics
+
+	potential = {
+		has_tradition = tr_virtuality_finish
+	}
+
+	modifier = {
+		planet_pop_assembly_reduction = 1
+		robotic_pop_bonus_workforce_mult = 0.25
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_augmented_reality = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_virtuality_overclocking" "tech_libra_virtuality_topology" "tech_libra_virtuality_synchronous" }
+	category = { computing }
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_virtuality_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_augmented_reality
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_libra_virtuality_overclocking = {
+	cost = @tier5cost2
+	area = physics
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_reality_deconstruction" "tech_capital_productivity_1" }
+	category = { computing }
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_virtuality_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_virtuality_overclocking
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_libra_virtuality_topology = {
+	cost = @tier5cost2
+	area = physics
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_reality_deconstruction" "tech_encryption_3" }
+	category = { computing }
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_virtuality_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_virtuality_topology
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_libra_virtuality_synchronous = {
+	cost = @tier5cost2
+	area = physics
+	tier = 5
+	is_rare = yes
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_reality_deconstruction" "tech_decryption_3" }
+	category = { computing }
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_virtuality_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_virtuality_synchronous
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_repeatable_libra_virtuality_a = {
+	area = society
+	category = { statecraft }
+	ai_update_type = all
+	prerequisites = { "tech_libra_virtuality_overclocking" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		country_produces_mult = 0.02
+		divided_patrongage_max_subjects = 1
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			is_homicidal = yes
+		}
+		modifier = {
+			country_produces_mult = 0.04
+		}
+	}
+}
+
+tech_repeatable_libra_virtuality_b = {
+	area = engineering
+	category = { industry }
+	ai_update_type = all
+	prerequisites = { "tech_libra_virtuality_topology" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		planet_colony_development_speed_mult = 0.2
+		planet_decision_enact_speed_mult = 0.1
+		planet_building_build_speed_mult = 0.1
+	}
+}
+
+tech_repeatable_libra_virtuality_c = {
+	area = engineering
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_libra_virtuality_synchronous" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		bonus_automated_workforce_mult = 0.05
+		robotic_pop_bonus_workforce_mult = 0.05
+	}
+}
+
+# ####################
+# Psionics
+# ####################
+
+tech_libra_psionic_apocalypse = {
+	cost = @tier5cost1
+	area = society
+	tier = 5
+	is_rare = yes
+	is_insight = yes
+	is_dangerous = yes
+	#prerequisites = { "tech_telepathy" }
+	category = { psionics }
+	is_reverse_engineerable = no
+	weight = 0
+
+	gateway = psionics
+
+	potential = {
+		or = {
+			has_tradition = tr_psionics_finish
+			has_tradition = tr_psionics_shroud_finish
+		}
+	}
+
+	modifier = {
+		logistic_growth_mult = 0.25
+		leader_trait_selection_options_add = 1
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_is_machine_empire
+		}
+		modifier = {
+			planet_pop_assemblers_upkeep_mult = -0.25
+			leader_trait_selection_options_add = 1
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_libra_psionic_destiny = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_psionic_apocalypse" "tech_thought_enforcement" }
+	category = { psionics }
+	is_reverse_engineerable = no
+
+	gateway = psionics
+
+	modifier = {
+		country_tech_influence_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_psionic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_psionic_destiny
+		}
+	}
+
+	ai_weight = {
+		factor = 120
+	}
+}
+
+tech_libra_psionic_favour = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_psionic_apocalypse" "tech_ascension_theory" }
+	category = { psionics }
+	is_reverse_engineerable = no
+
+	modifier = {
+		councilor_skill_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_psionic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_psionic_favour
+		}
+	}
+
+	ai_weight = {
+		factor = 120
+	}
+}
+
+tech_libra_psionic_reflection = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	weight = @tier5weight2
+	prerequisites = { "tech_libra_psionic_apocalypse" "tech_thought_enforcement" }
+	category = { psionics }
+	is_reverse_engineerable = no
+
+	gateway = psionics
+
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_psionic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_psionic_reflection
+		}
+	}
+
+	ai_weight = {
+		factor = 120
+	}
+}
+
+tech_libra_psionic_eulogy = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	weight = @tier5weight3
+	prerequisites = { "tech_libra_psionic_favour" "tech_libra_psionic_destiny" "tech_libra_psionic_reflection" }
+	category = { psionics }
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_government_civic_points_add = 1
+		psionic_aura_intensity_mult = 0.25
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_PSIE_CA_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_PSIE_CA_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/libra_psionic_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_psionic_eulogy
+		}
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+}
+
+tech_repeatable_libra_psionic_foreordination = {
+	area = society
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_libra_psionic_destiny" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 6
+	}
+
+	modifier = {
+		shroud_delve_cooldown = -0.05
+		psionic_aura_effectiveness_mult = 0.05
+		starbase_defense_platform_capacity_mult = 0.05
+	}
+}
+
+tech_repeatable_libra_psionic_balmy_breeze = {
+	area = society
+	category = { psionics }
+	prerequisites = { "tech_libra_psionic_favour" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 8
+	}
+
+	modifier = {
+		country_produces_mult = 0.04
+		planet_jobs_productive_produces_mult = 0.04
+		planet_jobs_upkeep_mult = 0.04
+	}
+}
+
+tech_repeatable_libra_psionic_dod = {
+	area = society
+	category = { psionics }
+	prerequisites = { "tech_libra_psionic_reflection" }
+	inline_script = technologies/libra_repeatable_ap_technologies
+
+	ai_weight = {
+		factor = 7
+	}
+
+	modifier = {
+		country_tech_sr_zro_produces_add = 5
+		psionic_pop_bonus_workforce_mult = 0.05
+		council_agenda_progress_speed = 0.07
+	}
+}
+
+#
+
+tech_libra_zro_power_core = {
+	area = society
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	category = { psionics }
+	weight = 0
+	is_reverse_engineerable = no
+}
+
+tech_libra_zro_propulsion = {
+	area = society
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = all
+	category = { psionics }
+	weight = 0
+	is_reverse_engineerable = no
+}
+

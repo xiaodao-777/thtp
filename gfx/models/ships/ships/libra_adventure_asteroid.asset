@@ -1,0 +1,131 @@
+entity = {
+	name = "libra_adventure_asteroid_entity"
+	locator = { name = "part1"	position = { 0 0 0 } }
+
+	game_data = {
+		size = 10
+	}
+}
+
+entity = {
+	name = "libra_adventure_asteroid_entity_1"
+	pdxmesh = "libra_adventure_asteroid_mesh_1"
+
+	locator = { name = "root"	position = { 0 0 0 } }
+	
+	meshsettings = {
+		name = "hive_asteroid_01Shape"
+		index = 0
+		texture_diffuse = "hive_asteroid_crystals_diffuse.dds"
+		texture_normal = "hive_asteroid_crystals_normal.dds"
+		texture_specular = "hive_asteroid_crystals_specular.dds"
+		shader = "PdxMeshTerraAlphaBlend"
+	}
+
+	meshsettings = {
+		name = "hive_asteroid_01Shape"
+		index = 1
+		texture_diffuse = "asteroid_diffuse.dds"
+		texture_normal = "asteroid_normal.dds"
+		texture_specular = "asteroid_specular.dds"
+		shader = "PdxMeshShip"
+	}
+		
+	state = { name = "idle" }	
+	state = { name = "launch" state_time = 5
+		event = { trigger_once = yes sound = { soundeffect = "hive_minions_moving_out" } }
+		event = { trigger_once = yes sound = { soundeffect = "hive_minion_idle" } }
+	}
+	
+}
+
+entity = {
+	name = "libra_adventure_asteroid_entity_2"
+	pdxmesh = "libra_adventure_asteroid_mesh_2"
+
+	locator = { name = "root"	position = { 0 0 0 } }
+	
+	meshsettings = {
+		name = "hive_asteroid_03Shape"
+		index = 0
+		texture_diffuse = "asteroid_diffuse.dds"
+		texture_normal = "asteroid_normal.dds"
+		texture_specular = "asteroid_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	meshsettings = {
+		name = "hive_asteroid_03Shape"
+		index = 1
+		texture_diffuse = "hive_asteroid_crystals_diffuse.dds"
+		texture_normal = "hive_asteroid_crystals_normal.dds"
+		texture_specular = "hive_asteroid_crystals_specular.dds"
+		shader = "PdxMeshTerraAlphaBlend"
+	}
+	
+	state = { name = "idle" }	
+	state = { name = "launch" state_time = 5
+		event = { trigger_once = yes sound = { soundeffect = "hive_minions_moving_out" } }
+		event = { trigger_once = yes sound = { soundeffect = "hive_minion_idle" } }
+	}	
+}
+
+entity = {
+	name = "libra_adventure_asteroid_entity_3"
+	pdxmesh = "libra_adventure_asteroid_mesh_1"
+
+	locator = { name = "root"	position = { 0 0 0 } }
+
+	meshsettings = {
+		name = "hive_asteroid_01Shape"
+		index = 0
+		texture_diffuse = "hive_asteroid_yellow_crystals_diffuse.dds"
+		texture_normal = "hive_asteroid_crystals_normal.dds"
+		texture_specular = "hive_asteroid_crystals_specular.dds"
+		shader = "PdxMeshTerraAlphaBlend"
+	}
+	meshsettings = {
+		name = "hive_asteroid_01Shape"
+		index = 1
+		texture_diffuse = "asteroid_diffuse.dds"
+		texture_normal = "asteroid_normal.dds"
+		texture_specular = "asteroid_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	state = { name = "idle" }
+	state = { name = "launch" state_time = 5
+		event = { trigger_once = yes sound = { soundeffect = "hive_minions_moving_out" } }
+		event = { trigger_once = yes sound = { soundeffect = "hive_minion_idle" } }
+	}
+	
+}
+
+entity = {
+	name = "libra_adventure_asteroid_entity_4"
+	pdxmesh = "libra_adventure_asteroid_mesh_2"
+
+	locator = { name = "root"	position = { 0 0 0 } }
+
+	meshsettings = {
+		name = "hive_asteroid_03Shape"
+		index = 0
+		texture_diffuse = "asteroid_diffuse.dds"
+		texture_normal = "asteroid_normal.dds"
+		texture_specular = "asteroid_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	meshsettings = {
+		name = "hive_asteroid_03Shape"
+		index = 1
+		texture_diffuse = "hive_asteroid_yellow_crystals_diffuse.dds"
+		texture_normal = "hive_asteroid_crystals_normal.dds"
+		texture_specular = "hive_asteroid_crystals_specular.dds"
+		shader = "PdxMeshTerraAlphaBlend"
+	}
+	
+	state = { name = "idle" }
+	state = { name = "launch" state_time = 5
+		event = { trigger_once = yes sound = { soundeffect = "hive_minions_moving_out" } }
+		event = { trigger_once = yes sound = { soundeffect = "hive_minion_idle" } }
+	}	
+}

@@ -1,0 +1,109 @@
+leader_trait_type = veteran
+leader_trait_rarity = veteran
+custom_subtitle = libra_veteran_genetic_commander_trait
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_society"
+	}
+	layer = {
+		icon = "GFX_trait_frame_libra_genetic_veteran"
+		color = "trait_rarity_destiny"
+	}
+	layer = {
+		icon = "GFX_trait_glow_libra_genetic_destiny"
+		color = "trait_rarity_veteran"
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	layer = {
+		icon = "GFX_trait_councilor"
+		visible = { is_ruler = yes }
+	}
+}
+sorting_priority = @trait_sorting_priority_veteran_no_none
+
+triggered_background_planet_modifier = {
+	potential = {
+		exists = FROM
+		FROM = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_same_value = root.owner
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 10 }
+			}
+			nor = {
+				has_building = building_fe_clinic_1
+				has_building = building_fe_clinic_2
+			}
+		}
+	}
+	job_libra_chromosome_engineer_add = 100
+}
+triggered_background_planet_modifier = {
+	potential = {
+		exists = FROM
+		FROM = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_same_value = root.owner
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 10 }
+			}
+			nor = {
+				has_building = building_fe_clinic_1
+				has_building = building_fe_clinic_2
+			}
+		}
+	}
+	job_libra_chromosome_drone_add = 100
+}
+
+leader_class = { commander }
+leader_potential_add = {
+	has_base_skill <= 10
+	not = { has_leader_flag = has_libra_extra_veteran_trait }
+	or = {
+		has_trait = subclass_commander_admiral
+		has_trait = subclass_commander_general
+	}
+	exists = owner
+	owner = {
+		is_variable_set = libra_aa_path
+		has_ascension_perk = ap_libra_directive_76
+		check_variable = { which = libra_aa_path value = 10 }
+	}
+}
+on_gained_effect = {
+	set_leader_flag = has_libra_extra_veteran_trait
+}
+selectable_weight = {
+	weight = @subclass_trait_weight
+	modifier = {
+		factor = 4
+		has_base_skill = 7
+	}
+	modifier = {
+		factor = 6
+		has_base_skill = 9
+	}
+	modifier = {
+		factor = 8
+		has_base_skill = 10
+	}
+	modifier = {
+		factor = 0
+		check_modifier_value = {
+			modifier = leader_trait_selection_options_add
+			value > 13
+		}
+	}
+}
+ai_weight = {
+	factor = 100
+}

@@ -1,0 +1,1755 @@
+libra_commander_starting_traits_total = {
+	base = 0
+	add = root.modifier:libra_leader_starting_traits_country
+	add = modifier:libra_leader_starting_traits_species
+	add = root.modifier:libra_commander_starting_traits_country
+	add = modifier:libra_commander_starting_traits_species
+}
+
+libra_commander_initial_skill_total = {
+	base = 0
+	add = modifier:libra_leader_initial_skill_species
+	add = modifier:libra_commander_initial_skill_species
+}
+
+libra_official_starting_traits_total = {
+	base = 0
+	add = root.modifier:libra_leader_starting_traits_country
+	add = modifier:libra_leader_starting_traits_species
+	add = root.modifier:libra_official_starting_traits_country
+	add = modifier:libra_official_starting_traits_species
+}
+
+libra_official_initial_skill_total = {
+	base = 0
+	add = modifier:libra_leader_initial_skill_species
+	add = modifier:libra_official_initial_skill_species
+}
+
+libra_scientist_starting_traits_total = {
+	base = 0
+	add = root.modifier:libra_leader_starting_traits_country
+	add = modifier:libra_leader_starting_traits_species
+	add = root.modifier:libra_scientist_starting_traits_country
+	add = modifier:libra_scientist_starting_traits_species
+}
+
+libra_scientist_initial_skill_total = {
+	base = 0
+	add = modifier:libra_leader_initial_skill_species
+	add = modifier:libra_scientist_initial_skill_species
+}
+
+libra_leader_starting_traits_total = {
+	base = 0
+	add = root.modifier:libra_leader_starting_traits_country
+	add = modifier:libra_leader_starting_traits_species
+	modifier = {
+		add = modifier:libra_commander_starting_traits_species
+		leader_class = commander
+	}
+	modifier = {
+		add = root.modifier:libra_commander_starting_traits_country
+		leader_class = commander
+	}
+	modifier = {
+		add = modifier:libra_official_starting_traits_species
+		leader_class = official
+	}
+	modifier = {
+		add = root.modifier:libra_official_starting_traits_country
+		leader_class = official
+	}
+	modifier = {
+		add = modifier:libra_scientist_starting_traits_species
+		leader_class = scientist
+	}
+	modifier = {
+		add = root.modifier:libra_scientist_starting_traits_country
+		leader_class = scientist
+	}
+}
+
+libra_extra_official_cap = {
+	base = 0
+	add = modifier:country_leader_cap_add
+	add = modifier:country_official_cap_add
+	max = $MAX$
+}
+
+libra_extra_scientist_cap = {
+	base = 0
+	add = modifier:country_leader_cap_add
+	add = modifier:country_scientist_cap_add
+	max = $MAX$
+}
+
+libra_extra_commander_cap = {
+	base = 0
+	add = modifier:country_leader_cap_add
+	add = modifier:country_commander_cap_add
+	max = $MAX$
+}
+
+libra_extra_leader_cap = {
+	base = 0
+	add = modifier:country_leader_cap_add
+	multiply = 3
+	add = modifier:country_commander_cap_add
+	add = modifier:country_official_cap_add
+	add = modifier:country_scientist_cap_add
+}
+
+libra_total_official_cap = {
+	base = 3
+	add = modifier:country_leader_cap_add
+	add = modifier:country_official_cap_add
+	max = $MAX$
+}
+
+libra_total_scientist_cap = {
+	base = 3
+	add = modifier:country_leader_cap_add
+	add = modifier:country_scientist_cap_add
+	max = $MAX$
+}
+
+libra_total_commander_cap = {
+	base = 3
+	add = modifier:country_leader_cap_add
+	add = modifier:country_commander_cap_add
+	max = $MAX$
+}
+
+libra_total_leader_cap = {
+	base = 3
+	add = modifier:country_leader_cap_add
+	multiply = 3
+	add = modifier:country_commander_cap_add
+	add = modifier:country_official_cap_add
+	add = modifier:country_scientist_cap_add
+}
+
+libra_ruler_skill_level = {
+	base = 0
+	modifier = {
+		add = ruler.trigger:has_total_skill
+		exists = ruler
+	}
+	add = modifier:ruler_skill_add
+	add = modifier:councilor_skill_add
+}
+
+libra_councilor_level = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		trigger_scope = owner
+		parameters = {
+			type = $TYPE$
+		}
+		mode = add
+	}
+	max = $MAX$
+}
+
+libra_count_negative_traits = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_leader_traits
+		parameters = {
+			negative = yes
+			count_tiers = no
+		}
+		mode = add
+	}
+}
+
+libra_count_negative_traits_tiers = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_leader_traits
+		parameters = {
+			negative = yes
+			count_tiers = yes
+		}
+		mode = add
+	}
+}
+
+#
+
+libra_naval_coverage_integer_mult = {
+	base = 1
+	add = modifier:country_naval_coverage_mult
+	min = 0
+}
+
+libra_power_projection_multiply = {
+	base = 0
+	add = trigger:used_naval_capacity_integer
+	add = modifier:country_naval_coverage_add
+	divide = trigger:empire_size
+	multiply = value:libra_naval_coverage_integer_mult
+	max = 1
+}
+
+libra_power_projection_multiply_round = {
+	base = 0
+	add = trigger:used_naval_capacity_integer
+	add = modifier:country_naval_coverage_add
+	divide = trigger:empire_size
+	multiply = value:libra_naval_coverage_integer_mult
+	max = 1
+	round_to = 0.001
+}
+
+libra_edict_size_effect = {
+	base = 0.01
+	mult = trigger:empire_sprawl_over_cap
+	add = 1
+	min = 1
+}
+
+#
+
+libra_num_ascension_perks = {
+	base = 0
+	add = trigger:num_ascension_perks
+	max = $MAX$
+}
+
+libra_num_starbase_modules = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_starbase_modules
+		parameters = {
+			type = $MODULE$
+			include_being_constructed = no
+		}
+		mode = add
+	}
+	multiply = $MULT$
+}
+
+libra_num_starbase_buildings = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_starbase_buildings
+		parameters = {
+			type = $MODULE$
+			include_being_constructed = no
+		}
+		mode = add
+	}
+	multiply = $MULT$
+}
+
+libra_num_ships = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_ship
+		parameters = {
+			limit = { is_ship_size = $SIZE$ }
+		}
+		mode = add
+	}
+	multiply = $MULT$
+}
+libra_num_jobs = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = $JOB$
+		}
+		mode = add
+	}
+	multiply = $MULT$
+}
+
+libra_num_buildings = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = $BUILDING$
+			disabled = no
+			in_construction = no
+		}
+		mode = add
+	}
+	multiply = $MULT$
+}
+
+libra_count_districts = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = $TYPE$
+		}
+		mode = add
+	}
+	modifier = {
+		multiply = 3
+		uses_district_set = ring_world
+	}
+	max = 64
+}
+
+libra_count_controlled_class_planets = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_controlled_planet
+		parameters = {
+			limit = {
+				is_planet_class = $CLASS$
+			}
+		}
+		mode = add
+	}
+	multiply = $MULT$
+}
+
+libra_planetary_ascension_mult = {
+	base = 0
+	add = trigger:has_planetary_ascension_tier
+	max = 10
+}
+
+libra_planetary_species_mult = {
+	base = 0
+	add = trigger:num_species
+	max = 5
+}
+
+libra_country_species_mult = {
+	base = 0
+	add = trigger:num_species
+	max = 20
+}
+
+libra_species_trait_total_num_mult = {
+	base = 0
+	add = trigger:num_traits
+	max = $MAX$
+}
+
+libra_species_trait_positive_num_mult = {
+	base = 0
+	add = trigger:num_positive_traits
+	max = $MAX$
+}
+
+libra_planet_habitability_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = habitability
+		trigger_scope = planet
+		parameters = {
+			who = root
+		}
+		mode = add
+	}
+}
+
+libra_species_habitability_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = habitability
+		parameters = {
+			who = from
+		}
+		mode = add
+	}
+}
+
+libra_count_machine_pops = {
+	base = 0.01
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_amount
+		parameters = {
+			limit = { is_robot_pop = yes }
+		}
+		mode = mult
+	}
+}
+
+libra_rare_techs_mult = {
+	base = 0
+	add = trigger:num_rare_techs
+	max = $MAX$
+}
+
+#
+
+libra_galaxy_bureaucratic_mult = {
+	base = 1200
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = enforcer
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = owner
+		parameters = {
+			job = enforcer
+		}
+		mode = add
+	}
+}
+libra_galaxy_bureaucratic_dystopian_mult = {
+	base = 1200
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = dystopian_enforcer
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = owner
+		parameters = {
+			job = dystopian_enforcer
+		}
+		mode = add
+	}
+}
+
+libra_gestalt_era_scientist_progress = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				is_hidden = no
+				leader_class = scientist
+				has_base_skill <= 10
+			}
+		}
+		mult = 0.4
+		mode = add
+	}
+	max = 4
+}
+libra_gestalt_era_official_progress = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				is_hidden = no
+				leader_class = official
+				has_base_skill <= 10
+			}
+		}
+		mult = 0.4
+		mode = add
+	}
+	max = 4
+}
+libra_gestalt_era_commander_progress = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				is_hidden = no
+				leader_class = commander
+				has_base_skill <= 10
+			}
+		}
+		mult = 0.4
+		mode = add
+	}
+	max = 4
+}
+
+libra_collective_unity_coordinator_count = {
+	base = 0.1
+	complex_trigger_modifier = {
+		trigger = count_owned_workforce
+		parameters = {
+			limit = { has_job_type = coordinator }
+		}
+		mode = mult
+	}
+	round = yes
+}
+
+libra_cardinal_cosmos_unity = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = has_monthly_income
+		parameters = {
+			resource = unity
+		}
+		mode = add
+	}
+	min = 0
+	pow = 0.5
+	multiply = -12
+	round = yes
+	add = value:libra_cardinal_cosmos_civics
+}
+libra_cardinal_cosmos_civics = {
+	base = 50
+	mult = trigger:civics_count
+}
+
+libra_golden_rule_mult = {
+	base = 0
+	set = trigger:income
+	modifier = {
+		set = trigger:expenses
+		has_edict = libra_golden_rule_0
+		resource_income_to_expenditure_balance_ratio = { resource = energy value > 1 }
+	}
+	modifier = {
+		multiply = 1.5
+		has_edict = libra_golden_rule_0
+	}
+	floor = yes
+}
+
+#
+
+libra_fe_assembly_clinic_count = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_fe_clinic_1
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_fe_clinic_2
+		}
+		mode = add
+		mult = 2
+	}
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_fe_assembly_1
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_fe_assembly_2
+		}
+		mode = add
+		mult = 2
+	}
+}
+
+libra_fe_assembly_penalties = {
+	base = 0.95
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_buildings
+		parameters = {
+			type = building_fe_assembly_1
+		}
+		mode = add
+		mult = -0.03
+	}
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_buildings
+		parameters = {
+			type = building_fe_assembly_2
+		}
+		mode = add
+		mult = -0.08
+	}
+	min = 0.01
+}
+
+libra_fe_clinic_penalties = {
+	base = 0.95
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_buildings
+		parameters = {
+			type = building_fe_clinic_1
+		}
+		mode = add
+		mult = -0.03
+	}
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_buildings
+		parameters = {
+			type = building_fe_clinic_2
+		}
+		mode = add
+		mult = -0.08
+	}
+	min = 0.01
+}
+
+libra_clone_vats_mult = {
+	base = 0.01
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_clone_vats
+			disabled = no
+			in_construction = no
+		}
+		mode = mult
+	}
+	max = 1
+}
+libra_perfected_clone_army_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_army
+		parameters = {
+			limit = { army_type = perfected_clone_army }
+		}
+		mode = add
+	}
+	max = 100
+}
+
+libra_count_directive_76_soldier_mult = {
+	base = 0.002
+	complex_trigger_modifier = {
+		trigger = total_country_workforce_with_job_tag
+		parameters = {
+			tags = { soldier }
+		}
+		mode = mult
+	}
+	floor = yes
+	max = 100
+}
+libra_count_directive_76_commander_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				leader_class = commander
+				has_base_skill < 10
+				has_trait = leader_trait_libra_directive_76
+			}
+		}
+		mode = add
+	}
+	max = 25
+}
+libra_directive_76_clone_vats_mult = {
+	base = 0.04
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		trigger_scope = owner
+		parameters = {
+			type = building_clone_vats
+			disabled = no
+			in_construction = no
+		}
+		mode = mult
+	}
+	max = 4
+}
+
+libra_flawless_sanctuary_mult = {
+	base = 0.2
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_libra_flawless_sanctuary
+			disabled = no
+			in_construction = no
+		}
+		mode = mult
+	}
+	max = 5
+}
+
+libra_babel_planet_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = count_owned_planet
+		parameters = {
+			limit = {
+				has_modifier = decision_libra_babel_modifier
+			}
+		}
+		mode = add
+	}
+	max = 30
+}
+libra_babel_building_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = count_starbase_buildings
+		parameters = {
+			type = libra_babel_tower
+			include_being_constructed = no
+		}
+		mode = add
+	}
+	max = 40
+}
+
+libra_cutefied_world_2_mult = {
+	base = 0.16
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_buildings
+		parameters = {
+			type = building_libra_evolutionary_laboratory
+			disabled = no
+			in_construction = no
+		}
+		mode = mult
+	}
+	max = 4.8
+}
+libra_cutefied_world_planets = {
+	base = 5
+	add = trigger:num_owned_planets
+	divide = 5
+	round = yes
+	max = 6
+}
+libra_cutefied_world_leaders = {
+	base = 10
+	add = trigger:num_owned_leaders
+	divide = 5
+	round = yes
+	max = 7
+}
+
+libra_cybernetics_jobs = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = libra_cybernetics_worker
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = libra_cybernetics_drone
+		}
+		mode = add
+	}
+	multiply = 0.00025
+}
+
+libra_augment_dispatch_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_augmentation_center
+			disabled = no
+			in_construction = no
+		}
+		mode = add
+	}
+	max = 25
+}
+libra_augment_dispatch_assimilator_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = augmentor_drone
+		}
+		mode = add
+	}
+	multiply = 0.01
+	max = 100
+}
+
+libra_count_atomic_heart_site = {
+	base = 0.01
+	complex_trigger_modifier = {
+		trigger = count_starbase_modules
+		trigger_scope = owner
+		parameters = {
+			type = libra_atomic_heart_site
+			include_being_constructed = no
+		}
+		mode = mult
+	}
+	max = 1
+}
+libra_count_atomic_heart_array = {
+	base = 0.04
+	complex_trigger_modifier = {
+		trigger = count_starbase_buildings
+		trigger_scope = owner
+		parameters = {
+			type = libra_atomic_heart_array
+			include_being_constructed = no
+		}
+		mode = mult
+	}
+	max = 1
+}
+libra_atomic_heart_exp_award = {
+	base = 0.03
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_amount
+		trigger_scope = owner
+		parameters = {
+			limit = { is_robot_pop = yes }
+		}
+		mode = mult
+	}
+	max = 3000
+}
+
+libra_num_nanite_harvester = {
+	base = 0.2
+	complex_trigger_modifier = {
+		trigger = count_starbase_buildings
+		parameters = {
+			type = nanite_harvester
+			include_being_constructed = no
+		}
+		mode = multiply
+	}
+}
+libra_num_pc_nanotech = {
+	base = 0.2
+	complex_trigger_modifier = {
+		trigger = count_controlled_planet
+		parameters = {
+			limit = {
+				is_planet_class = pc_nanotech
+			}
+		}
+		mode = multiply
+	}
+}
+libra_num_nanite_shipyard = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_megastructure
+		parameters = {
+			limit = {
+				is_megastructure_type = libra_nanite_shipyard_1
+			}
+		}
+		mode = add
+		mult = 0.1
+	}
+	complex_trigger_modifier = {
+		trigger = count_owned_megastructure
+		parameters = {
+			limit = {
+				is_megastructure_type = libra_nanite_shipyard_2
+			}
+		}
+		mode = add
+		mult = 0.2
+	}
+}
+
+
+
+libra_nanocore_exp_reward = {
+	base = 50
+	modifier = {
+		multiply = libra_nanocore_level
+		is_variable_set = libra_nanocore_level
+	}
+}
+libra_yggdrasil_build_speed_mult = {
+	base = 0
+	modifier = {
+		add = target.modifier:planet_building_build_speed_mult
+		exists = target
+	}
+	max = 8
+}
+
+libra_psionic_eulogy_ascension = {
+	base = 150
+	subtract = trigger:num_planetary_ascension_tiers
+	divide = 5
+	round = yes
+	max = 25
+	min = 5
+}
+libra_psionic_eulogy_pop = {
+	base = 220000
+	subtract = trigger:pop_amount
+	divide = 40
+	round = yes
+	max = 5000
+	min = 500
+}
+libra_psionic_eulogy_skill = {
+	base = 35
+	subtract = trigger:num_owned_leaders
+	max = 25
+	min = 5
+}
+
+libra_telepath_jobs = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = telepath
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = telepath_drone
+		}
+		mode = add
+	}
+	multiply = $MULT$
+}
+libra_psychic_jobs = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = libra_psychic
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		parameters = {
+			job = libra_psychic_drone
+		}
+		mode = add
+	}
+	multiply = $MULT$
+}
+
+libra_heavenly_throne_agenda_mult = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_libra_heavenly_throne_2
+			disabled = no
+			in_construction = no
+		}
+		mode = add
+		mult = 0.2
+	}
+	modifier = {
+		add = libra_heavenly_throne_success
+		is_variable_set = libra_heavenly_throne_success
+	}
+	max = 20
+}
+
+#
+
+libra_ceremony_exp_reward = {
+	base = 688
+	modifier = {
+		multiply = ruler.trigger:leader_years_of_service
+		exists = ruler
+	}
+	max = 88888
+	divide = value:libra_ceremony_num_leaders
+	floor = yes
+}
+libra_ceremony_num_leaders = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				has_base_skill < 10
+				or = {
+					is_hidden = no
+					is_councilor = yes
+					has_trait = leader_trait_libra_shield_machine
+				}
+			}
+		}
+		mode = add
+	}
+	min = 1
+}
+
+libra_frugality_1_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_starbase_buildings
+		parameters = {
+			type = resource_silo
+			include_being_constructed = no
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_resource_silo
+			disabled = no
+			in_construction = no
+		}
+		mode = add
+	}
+}
+
+libra_autarchy_2_districts_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = any
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = count_owned_planet
+		parameters = {
+			limit = {
+				uses_district_set = ring_world
+			}
+		}
+		mult = 10
+		mode = add
+	}
+}
+
+libra_vector_5_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_megastructure
+		parameters = {
+			limit = {
+				or = {
+					is_megastructure_type = gateway_final
+					is_megastructure_type = gateway_restored
+					is_megastructure_type = gateway_ness_restored
+					is_megastructure_type = lgate_base
+				}
+			}
+		}
+		mode = add
+	}
+	max = 10
+}
+
+#
+
+libra_necroid_4_effect_mult = {
+	base = 0.00003
+	modifier = {
+		multiply = libra_pop_purged_count
+		is_variable_set = libra_pop_purged_count
+	}
+	round_to = 0.001
+	max = 0.15
+}
+
+libra_lithoid_1_effect_mult = {
+	base = 400
+	add = trigger:pop_amount
+	divide = 100
+	floor = yes
+	min = 10
+	max = 40
+}
+
+libra_lithoid_7_effect_mult = {
+	base = 3600
+	subtract = trigger:pop_amount
+	divide = 100
+	floor = yes
+	min = -30
+	max = 30
+}
+
+libra_molluscoid_9_effect_mult = {
+	base = 0
+	add = trigger:pop_amount
+	divide = 100
+	floor = yes
+	max = 15
+}
+
+#
+
+libra_leader_trait_base_skill_mult = {
+	base = 0
+	add = trigger:has_base_skill
+	max = 10
+}
+libra_leader_trait_total_skill_mult = {
+	base = 0
+	add = trigger:has_total_skill
+	max = 20
+}
+
+libra_commander_admiral_xenophobe_effect_mult = {
+	base = 0.0001
+	modifier = {
+		multiply = libra_pop_purged_count
+		is_variable_set = libra_pop_purged_count
+	}
+	round_to = 0.01
+	max = 1.25
+}
+
+libra_commander_general_xenophobe_effect_mult = {
+	base = 0.5
+	multiply = fromfrom.trigger:pop_amount
+	floor = yes
+}
+
+libra_official_governor_authoritarian_effect_mult = {
+	base = 0.01
+	complex_trigger_modifier = {
+		trigger = total_workforce_with_job_tag
+		trigger_scope = planet
+		parameters = {
+			tags = { enforcer }
+		}
+		mode = mult
+	}
+	max = 15
+}
+
+libra_scientist_governor_authoritarian_effect_mult = {
+	base = 0.01
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_amount
+		trigger_scope = planet
+		parameters = {
+			limit = { is_pop_category = ruler }
+		}
+		mode = mult
+	}
+	max = 10
+}
+
+libra_ethic_destiny_trait_sector_controlled_systems_mult = {
+	base = 0
+	modifier = {
+		add = planet.sector.trigger:controlled_systems
+		exists = planet.sector
+	}
+	max = 15
+}
+libra_ethic_destiny_trait_sector_owned_planets_mult = {
+	base = 0
+	modifier = {
+		add = planet.sector.trigger:num_owned_planets
+		exists = planet.sector
+	}
+	max = 7
+}
+
+libra_ethic_destiny_trait_planetary_ascension_tiers_mult = {
+	base = 0
+	add = trigger:num_planetary_ascension_tiers
+	max = 100
+}
+
+libra_ethic_destiny_trait_planetary_ascension_mult = {
+	base = 0
+	modifier = {
+		add = planet.trigger:has_planetary_ascension_tier
+		exists = planet
+	}
+	max = 8
+}
+libra_ethic_destiny_trait_planet_stability_mult = {
+	base = 0
+	modifier = {
+		add = planet.trigger:planet_stability
+		exists = planet
+	}
+}
+libra_ethic_destiny_trait_planet_ethos_mult = {
+	base = 0
+	modifier = {
+		add = planet.trigger:ethos
+		exists = planet
+	}
+}
+libra_ethic_destiny_trait_planet_happiness_mult = {
+	base = 0
+	modifier = {
+		add = planet.trigger:happiness_planet
+		exists = planet
+	}
+}
+libra_ethic_destiny_trait_planet_crime_mult = {
+	base = 0
+	modifier = {
+		#subtract = planet.trigger:planet_crime
+		add = planet.trigger:planet_crime
+		exists = planet
+	}
+}
+libra_ethic_destiny_trait_planet_free_housing_mult = {
+	base = 0.01
+	modifier = {
+		multiply = planet.trigger:free_housing
+		exists = planet
+	}
+	max = 50
+}
+libra_ethic_destiny_trait_planet_free_amenities_mult = {
+	base = 0.01
+	modifier = {
+		multiply = planet.trigger:free_amenities
+		exists = planet
+	}
+	max = 50
+}
+
+libra_ethic_destiny_trait_years_mult = {
+	base = 0
+	add = trigger:years_passed
+	max = 100
+}
+libra_ethic_destiny_trait_service_mult = {
+	base = 0
+	add = trigger:leader_years_of_service
+	max = 50
+}
+
+libra_ethic_destiny_trait_relic_mult = {
+	base = 0
+	add = trigger:num_owned_relics
+	max = 5
+}
+libra_ethic_destiny_trait_specimen_mult = {
+	base = 0
+	add = trigger:acquired_specimen_count
+	max = 25
+}
+
+libra_ethic_destiny_trait_subjects_mult = {
+	base = 0
+	add = trigger:subjects
+	max = 10
+}
+libra_ethic_destiny_trait_vassals_mult = {
+	base = 0
+	add = trigger:vassals
+	max = 5
+}
+
+libra_ethic_destiny_trait_ascension_perks_mult = {
+	base = 0
+	add = trigger:num_ascension_perks
+	max = 8
+}
+libra_ethic_destiny_trait_tradition_categories_mult = {
+	base = 0
+	add = trigger:num_tradition_categories
+	max = 7
+}
+
+libra_ethic_destiny_trait_councilor_research_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		parameters = {
+			type = councilor_research
+		}
+		mode = add
+	}
+	max = 30
+}
+libra_ethic_destiny_trait_councilor_defense_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		parameters = {
+			type = councilor_defense
+		}
+		mode = add
+	}
+	max = 30
+}
+libra_ethic_destiny_trait_councilor_state_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		parameters = {
+			type = councilor_state
+		}
+		mode = add
+	}
+	max = 30
+}
+
+libra_ethic_destiny_trait_gestalt_growth_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		parameters = {
+			type = councilor_gestalt_growth
+		}
+		mode = add
+	}
+	max = 30
+}
+libra_ethic_destiny_trait_gestalt_cognitive_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		parameters = {
+			type = councilor_gestalt_cognitive
+		}
+		mode = add
+	}
+	max = 30
+}
+libra_ethic_destiny_trait_gestalt_legion_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		parameters = {
+			type = councilor_gestalt_legion
+		}
+		mode = add
+	}
+	max = 30
+}
+libra_ethic_destiny_trait_gestalt_regulatory_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		parameters = {
+			type = councilor_gestalt_regulatory
+		}
+		mode = add
+	}
+	max = 30
+}
+
+libra_ethic_destiny_trait_diplomacy_weight_mult = {
+	base = 0
+	add = trigger:diplomacy_weight
+	max = 200000
+}
+
+libra_ethic_destiny_trait_repeatable_techs_mult = {
+	base = 0
+	add = trigger:num_repeatable_techs
+	max = 50
+}
+libra_ethic_destiny_trait_rare_techs_mult = {
+	base = 0
+	add = trigger:num_rare_techs
+	max = 40
+}
+libra_ethic_destiny_trait_insight_techs_mult = {
+	base = 0
+	add = trigger:num_insight_techs
+	max = 10
+}
+libra_ethic_destiny_trait_dangerous_techs_mult = {
+	base = 0
+	add = trigger:num_dangerous_techs
+	max = 5
+}
+
+libra_ethic_destiny_trait_independence_mult = {
+	base = 0
+	add = trigger:num_support_independence
+	max = 5
+}
+libra_ethic_destiny_trait_guarantees_mult = {
+	base = 0
+	add = trigger:num_guarantees
+	max = 4
+}
+libra_ethic_destiny_trait_non_aggression_pacts_mult = {
+	base = 0
+	add = trigger:num_non_aggression_pacts
+	max = 4
+}
+libra_ethic_destiny_trait_defensive_pacts_mult = {
+	base = 0
+	add = trigger:num_defensive_pacts
+	max = 4
+}
+libra_ethic_destiny_trait_commercial_pacts_mult = {
+	base = 0
+	add = trigger:num_commercial_pacts
+	max = 4
+}
+libra_ethic_destiny_trait_research_agreements_mult = {
+	base = 0
+	add = trigger:num_research_agreements
+	max = 4
+}
+libra_ethic_destiny_trait_migration_pacts_mult = {
+	base = 0
+	add = trigger:num_migration_pacts
+	max = 4
+}
+libra_ethic_destiny_trait_rivals_mult = {
+	base = 0
+	add = trigger:num_rivals
+	max = 5
+}
+libra_ethic_destiny_trait_closed_borders_mult = {
+	base = 0
+	add = trigger:num_closed_borders
+	max = 10
+}
+
+libra_ethic_destiny_trait_traits_mult = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_leader_traits
+		parameters = {
+			count_tiers = yes
+		}
+		mode = add
+	}
+	max = 20
+}
+
+libra_corrupt_trait_effect_mult = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = num_leader_traits
+		parameters = {
+			negative = yes
+			count_tiers = yes
+		}
+		mode = add
+	}
+	max = 6
+	modifier = {
+		add = 1
+		exists = owner
+		owner = {
+			has_tradition = tr_libra_degeneracy_2
+		}
+	}
+	modifier = {
+		multiply = 1.5
+		exists = owner
+		owner = {
+			has_modifier = agenda_libra_degeneracy_b_finish_modifier
+		}
+	}
+}
+
+libra_corrupt_destiny_trait_effect_mult = {
+	base = 3
+	complex_trigger_modifier = {
+		trigger = num_leader_traits
+		parameters = {
+			negative = yes
+			count_tiers = yes
+		}
+		mode = add
+	}
+	max = 8
+}
+
+#
+
+libra_psalm_of_waves_exp_reward = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_buildings
+		parameters = {
+			type = building_libra_temple_of_waves
+			disabled = no
+			in_construction = no
+		}
+		mode = add
+		mult = 150
+	}
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_buildings
+		parameters = {
+			type = building_libra_temple_of_waves_2
+			disabled = no
+			in_construction = no
+		}
+		mode = add
+		mult = 250
+	}
+	max = 6000
+	modifier = {
+		add = 2000
+		species = {
+			or = {
+				is_species_class = AQUATIC
+				is_species_class = ROBOT
+				is_species_class = LIBRAEXD
+				is_species_class = LIBRAPUNK
+			}
+		}
+	}
+}
+
+libra_shadow_consciousness_darkmatter_income = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = resource_revenue_compare
+		parameters = {
+			resource = sr_dark_matter
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = resource_revenue_compare
+		parameters = {
+			resource = sr_dark_matter
+			category = monthly_trades
+		}
+		mode = subtract
+	}
+	min = 1
+}
+
+libra_dragonborn_decision_cost_mult = {
+	base = 0
+	modifier = {
+		add = value:libra_dragonborn_decision_deposit_mult
+		is_artificial = no
+	}
+	modifier = {
+		set = 5
+		is_artificial = yes
+		uses_district_set = habitat
+	}
+	modifier = {
+		set = 8
+		is_artificial = yes
+		not = { uses_district_set = habitat }
+	}
+	modifier = {
+		add = owner.libra_dragonborn_decision_count
+		owner = { is_variable_set = libra_dragonborn_decision_count }
+	}
+	max = 60
+}
+libra_dragonborn_decision_deposit_mult = {
+	base = 0
+	add = trigger:planet_size
+	divide = 3
+	floor = yes
+	max = 9
+	min = 1
+}
+libra_dragonlight_1_scientist_cap_usage = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				leader_class = scientist
+			}
+		}
+		mode = add
+	}
+	max = value:libra_total_scientist_cap|MAX|25|
+}
+libra_dragonlight_1_official_cap_usage = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				leader_class = official
+			}
+		}
+		mode = add
+	}
+	max = value:libra_total_official_cap|MAX|25|
+}
+libra_dragonlight_1_commander_cap_usage = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				leader_class = commander
+			}
+		}
+		mode = add
+	}
+	max = value:libra_total_commander_cap|MAX|25|
+}
+
+libra_paradise_lose_leader_count = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				has_trait = leader_trait_libra_paradise_lose
+			}
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				has_trait = leader_trait_libra_paradise_lose_2
+			}
+		}
+		mode = add
+		mult = 2
+	}
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				has_trait = leader_trait_libra_paradise_lose_3
+			}
+		}
+		mode = add
+		mult = 3
+	}
+	max = 150
+}
+libra_paradise_lose_politician_count = {
+	base = 0.0001
+	complex_trigger_modifier = {
+		trigger = count_owned_workforce
+		parameters = {
+			limit = { has_job_type = politician }
+		}
+		mode = mult
+	}
+	round_to = 0.01
+	max = 2.5
+}
+
+libra_interstellar_port_c_count = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_buildings
+		parameters = {
+			type = holding_libra_interstellar_port_office
+			disabled = no
+			in_construction = no
+			owner_type = subject_holding
+		}
+		mode = add
+	}
+	max = 10
+}
+
+libra_interstellar_port_c_mult = {
+	base = 0
+	add = trigger:pop_amount
+	max = 5000
+}
+
+libra_antientropy_instruction_mult = {
+	base = 0
+	add = fromfromfrom.trigger:ship_size_multiplier
+	min = 1
+}
+
+libra_eden_accord_negative_mult = {
+	base = 0
+	add = trigger:civics_count
+	modifier = {
+		subtract = 1
+		has_valid_civic = civic_machine_servitor
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_a
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_b
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_c
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_d
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_e
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_f
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_g
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_h
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_i
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_j
+	}
+	modifier = {
+		subtract = 1
+		has_civic = civic_libra_eden_accord_k
+	}
+	modifier = {
+		subtract = 1
+		is_galactic_emperor = yes
+	}
+	min = 0
+	
+}
+
+libra_centurion_exp_reward = {
+	base = 5000
+	divide = value:agenda_leadership_conditioning_num_leaders
+	floor = yes
+}
+
+#
+
+edict_size_effect = {
+	base = 0.01
+	mult = trigger:empire_sprawl_over_cap
+	add = 1
+	min = 0.5
+}

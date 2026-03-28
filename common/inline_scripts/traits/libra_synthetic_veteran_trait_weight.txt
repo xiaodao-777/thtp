@@ -1,0 +1,14 @@
+modifier = {
+	factor = @libra_synthetic_veteran_trait_extra_weight
+	or = {
+		has_base_skill > 6
+		has_total_skill > 7
+	}
+}
+modifier = {
+	factor = 0
+	check_modifier_value = {
+		modifier = leader_trait_selection_options_add
+		value > 13
+	}
+}

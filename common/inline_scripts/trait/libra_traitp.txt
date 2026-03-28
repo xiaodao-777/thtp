@@ -1,0 +1,32 @@
+leader_trait_type = veteran
+leader_trait_rarity = veteran
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = psionic
+	RARITY = veteran
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_psionic"
+	}
+	layer = {
+		icon = "GFX_trait_glow_libra_psionic_destiny"
+		color = "trait_rarity_destiny"
+	}
+	layer = {
+		icon = "GFX_trait_frame_libra_psionic_veteran"
+		color = "trait_rarity_veteran"
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+	inline_script = trait/icon_element/tier_$TIER$
+}
+sorting_priority = @trait_sorting_priority_veteran_$COUNCIL$_$TIER$

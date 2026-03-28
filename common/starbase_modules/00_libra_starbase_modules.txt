@@ -1,0 +1,163 @@
+libra_astromining_bay = {
+	icon = "GFX_starbase_mining_terminal"
+	section = "REFINERY_STARBASE_SECTION"
+	construction_days = 240
+
+	potential = {
+		is_normal_starbase = yes
+		owner = {
+			has_ascension_perk = ap_libra_starry_miner
+		}
+	}
+
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 50
+		}
+
+		produces = {
+			energy = 12
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_galactic_community_member = yes
+				}
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+			energy = 8
+		}
+	}
+
+	system_modifier = {
+		station_gatherers_produces_mult = 0.15
+	}
+	triggered_system_modifier = {
+		potential = {
+			is_scope_valid = yes
+			has_starbase_building = libra_astromining_hub
+		}
+		station_gatherers_produces_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 750
+			owner = { is_void_dweller_empire = no }
+			or = {
+				has_starbase_building = nanite_harvester
+				has_starbase_building = libra_astromining_hub
+			}
+		}
+		modifier = {
+			add = 750
+			solar_system = {
+				any_system_megastructure = {
+					or = {
+						is_megastructure_type = orbital_arc_furnace_1
+						is_megastructure_type = orbital_arc_furnace_2
+						is_megastructure_type = orbital_arc_furnace_3
+						is_megastructure_type = orbital_arc_furnace_4
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			has_starbase_module = libra_astromining_bay
+		}
+		modifier = {
+			factor = 0
+		#	owner = { has_ascension_perk = ap_libra_transtemporal_resonance }
+			solar_system = {
+				OR = {
+					has_natural_wormhole = yes
+					has_astral_rift = yes
+					has_star_flag = lgate
+					has_star_flag = lcluster_lgate
+					has_star_flag = spawned_shroud_tunnel
+					has_star_flag = shroudwalker_enclave_system
+					any_system_planet = { is_astral_scar = yes }
+				}
+			}
+		}
+	}
+}
+
+libra_atomic_heart_site = {
+	icon = "GFX_libra_atomic_heart_site"
+	section = "SCIENCE_STARBASE_SECTION"
+	construction_days = 180
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_atomic_heart
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 60 }
+		}
+		is_normal_starbase = yes
+	}
+
+	possible = {
+		count_starbase_modules = {
+			type = libra_atomic_heart_site
+			include_being_constructed = yes
+			count <= 6
+		}
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet"
+			exists = solar_system
+			solar_system = {
+				any_system_colony = {
+					is_owned_by = from
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_atomic_heart }
+		}
+	}
+
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 50
+			sr_living_metal = 10
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	country_modifier = {
+		country_edict_fund_add = 5
+		country_naval_cap_add = 5
+	}
+
+	system_modifier = {
+		planet_pop_assembly_add = 0.5
+		station_researchers_produces_mult = 0.25
+	}
+
+	station_modifier = {
+		ship_hull_add = 5000
+		starbase_defense_platform_capacity_add = 2
+	}
+
+	ai_weight = {
+		weight = 2000
+	}
+}

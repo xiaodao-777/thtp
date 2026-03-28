@@ -1,0 +1,114 @@
+tr_libra_autarchy_adopt = {
+	unlocks_agenda = agenda_libra_autarchy
+	on_disabled = {
+		remove_relic = r_libra_autarchy_seal
+	}
+	modifier = {
+		country_claim_influence_cost_mult = -0.15
+		country_hostile_claim_influence_cost_mult = 0.25
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_homicidal = yes }
+		modifier = {
+			country_influence_produces_mult = 0.1
+			country_war_exhaustion_mult = -0.1
+		}
+	}
+
+	possible = {
+		has_technology = tech_manifest_destiny
+	}
+}
+
+tr_libra_autarchy_finish = {
+	modifier = {
+		country_starbase_capacity_mult = 0.15
+		espionage_hostile_operation_difficulty_mult = 0.25
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_autarchy_1 = {
+	triggered_modifier = {
+		country_traditions_physics_research_produces_add = 45
+		country_traditions_society_research_produces_add = 45
+		country_traditions_engineering_research_produces_add = 45
+		mult = trigger:used_starbase_capacity_integer
+	}
+	custom_tooltip = tr_libra_autarchy_1_desc
+
+	ai_weight = {
+		factor = 9000
+	}
+}
+
+tr_libra_autarchy_2 = {
+	possible = {
+		has_tradition = tr_libra_autarchy_1
+	}
+	triggered_modifier = {
+		country_traditions_physics_research_produces_add = 3
+		country_traditions_society_research_produces_add = 3
+		country_traditions_engineering_research_produces_add = 3
+		mult = value:libra_autarchy_2_districts_mult
+	}
+	custom_tooltip = tr_libra_autarchy_2_desc
+
+	ai_weight = {
+		factor = 9000
+	}
+}
+
+tr_libra_autarchy_3 = {
+	possible = {
+		has_tradition = tr_libra_autarchy_2
+	}
+	triggered_modifier = {
+		country_traditions_energy_produces_add = 7
+		country_traditions_trade_produces_add = 5
+		country_traditions_alloys_produces_add = 3
+		mult = trigger:controlled_systems
+	}
+	custom_tooltip = tr_libra_autarchy_3_desc
+
+	ai_weight = {
+		factor = 9000
+	}
+}
+
+tr_libra_autarchy_4 = {
+	possible = {
+		has_tradition = tr_libra_autarchy_2
+	}
+	triggered_modifier = {
+		country_traditions_volatile_motes_produces_add = 5
+		country_traditions_exotic_gases_produces_add = 5
+		country_traditions_rare_crystals_produces_add = 5
+		mult = trigger:num_owned_planets
+	}
+	custom_tooltip = tr_libra_autarchy_4_desc
+
+	ai_weight = {
+		factor = 6000
+	}
+}
+
+tr_libra_autarchy_5 = {
+	possible = {
+		has_tradition = tr_libra_autarchy_3
+		has_tradition = tr_libra_autarchy_4
+	}
+	triggered_modifier = {
+		country_traditions_physics_research_produces_add = 0.5
+		country_traditions_society_research_produces_add = 0.5
+		country_traditions_engineering_research_produces_add = 0.5
+		mult = trigger:used_naval_capacity_integer
+	}
+	custom_tooltip = tr_libra_autarchy_5_desc
+
+	ai_weight = {
+		factor = 9000
+	}
+}

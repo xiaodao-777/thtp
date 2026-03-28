@@ -1,0 +1,43 @@
+tradition_libra_vector = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_vector_adopt } }
+		text = tradition_libra_vector_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_vector_adopt }
+		text = tradition_libra_vector_adopt_desc
+	}
+	tree_template = "tree_11_11_21"
+	adoption_bonus = "tr_libra_vector_adopt"
+	finish_bonus = "tr_libra_vector_finish"
+	traditions = {
+		"tr_libra_vector_1"
+		"tr_libra_vector_2"
+		"tr_libra_vector_3"
+		"tr_libra_vector_4"
+		"tr_libra_vector_5"
+	}
+
+	ai_weight = {
+		factor = 20
+		modifier = {
+			add = 10
+			has_origin = origin_libra_interstellar_port
+		}
+		modifier = {
+			factor = 1.25
+			libra_ai_preferences_trade = yes
+		}
+		modifier = {
+			factor = 1.4
+			or = {
+				libra_ai_preferences_elite = yes
+				libra_ai_preferences_technology = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			is_preferred_weapons = weapon_type_energy
+		}
+	}
+}

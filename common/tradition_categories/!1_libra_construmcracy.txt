@@ -1,0 +1,28 @@
+tradition_libra_construmcracy = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_construmcracy_adopt } }
+		text = tradition_libra_construmcracy_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_construmcracy_adopt }
+		text = tradition_libra_construmcracy_adopt_desc
+	}
+	tree_template = "tree_21_11"
+	adoption_bonus = "tr_libra_construmcracy_adopt"
+	finish_bonus = "tr_libra_construmcracy_finish"
+	traditions = {
+		"tr_libra_construmcracy_1"
+		"tr_libra_construmcracy_2"
+		"tr_libra_construmcracy_3"
+		"tr_libra_construmcracy_4"
+		"tr_libra_construmcracy_5"
+	}
+
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_libra_yggdrasil
+		}
+	}
+}

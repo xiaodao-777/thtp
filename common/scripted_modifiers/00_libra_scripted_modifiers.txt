@@ -1,0 +1,81 @@
+libra_leader_starting_traits_country = {
+	icon = mod_leader_skill_levels
+	good = yes
+	category = country
+}
+
+libra_commander_starting_traits_country = {
+	icon = mod_country_commander_cap_add
+	good = yes
+	category = country
+}
+
+libra_scientist_starting_traits_country = {
+	icon = mod_country_scientist_cap_add
+	good = yes
+	category = country
+}
+
+libra_official_starting_traits_country = {
+	icon = mod_country_official_cap_add
+	good = yes
+	category = country
+}
+
+libra_leader_starting_traits_species = {
+	icon = mod_leader_skill_levels
+	good = yes
+	category = leader
+}
+
+libra_commander_starting_traits_species = {
+	icon = mod_country_commander_cap_add
+	good = yes
+	category = leader
+}
+
+libra_scientist_starting_traits_species = {
+	icon = mod_country_scientist_cap_add
+	good = yes
+	category = leader
+}
+
+libra_official_starting_traits_species = {
+	icon = mod_country_official_cap_add
+	good = yes
+	category = leader
+}
+
+#
+
+libra_leader_initial_skill_species = {
+	icon = mod_leader_skill_levels
+	good = yes
+	category = leader
+}
+
+libra_commander_initial_skill_species = {
+	icon = mod_leader_skill_levels
+	good = yes
+	category = leader
+}
+
+libra_scientist_initial_skill_species = {
+	icon = mod_leader_skill_levels
+	good = yes
+	category = leader
+}
+
+libra_official_initial_skill_species = {
+	icon = mod_leader_skill_levels
+	good = yes
+	category = leader
+}
+
+#
+
+libra_colony_start_species_pops = {
+	icon = mod_colony_start_num_pops_add
+	good = yes
+	category = ship
+}

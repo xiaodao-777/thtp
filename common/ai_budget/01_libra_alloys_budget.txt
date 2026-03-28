@@ -1,0 +1,120 @@
+libra_alloys_expenditure_planets = {
+	resource = alloys
+	type = expenditure
+	category = planets
+
+	potential = {
+		or = {
+			has_resource = {
+				type = alloys
+				amount > 1600
+			}
+			is_at_war = no
+		}
+		or = {
+			has_origin = origin_libra_interstellar_port
+			has_origin = origin_libra_antientropy_instruction
+			has_origin = origin_libra_planetarian
+			has_origin = origin_libra_eden_accord
+			has_origin = origin_libra_may_storm
+			has_tradition = tr_nanotech_finish
+			has_tradition = tr_libra_cosmoplasty_finish
+			has_ascension_perk = ap_libra_cosmological_constant
+			has_ascension_perk = ap_libra_yggdrasil
+			has_ascension_perk = ap_libra_heavenly_throne
+			has_country_flag = libra_exdimensional_fusion_d
+
+			has_ascension_perk = ap_cosmogenesis
+
+		#	has_ascension_perk = ap_libra_mist_wonderland
+		#	has_ascension_perk = ap_libra_oceanus
+		#	has_ascension_perk = ap_libra_elemental_grandmaster
+		#	has_ascension_perk = ap_libra_genesis_project
+		}
+	}
+
+	weight = {
+		weight = 0.2
+		modifier = {
+			add = 0.1
+			has_ascension_perk = ap_libra_yggdrasil
+		}
+		modifier = {
+			factor = 2
+			resource_stockpile_compare = { resource = alloys value >= 3000 }
+		}
+		modifier = {
+			factor = 2
+			resource_stockpile_compare = { resource = alloys value >= 5000 }
+		}
+	}
+
+	desired_min = {
+		base = 800
+	}
+
+	desired_max = {
+		base = 2000
+		modifier = {
+			add = 1000
+			resource_stockpile_compare = { resource = alloys value >= 7500 }
+		}
+		modifier = {
+			add = 1000
+			resource_stockpile_compare = { resource = alloys value >= 12500 }
+		}
+	}
+}
+
+libra_alloys_expenditure_armies = {
+	resource = alloys
+	type = expenditure
+	category = armies
+
+	potential = {
+		or = {
+			has_origin = origin_libra_centurion
+			has_resource = {
+				type = alloys
+				amount > 1500
+			}
+		}
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 2
+			OR = {
+				has_relic = r_war_forge
+				has_origin = origin_libra_centurion
+			#	has_ascension_perk = ap_libra_terminator
+			}
+		}
+
+	}
+
+	desired_min = {
+		base = 0
+		modifier = {
+			add = 100
+			OR = {
+				has_relic = r_war_forge
+				has_origin = origin_libra_centurion
+			#	has_ascension_perk = ap_libra_terminator
+			}
+		}
+	}
+
+	desired_max = {
+		base = 500
+		modifier = {
+			add = 500
+			or = {
+				has_relic = r_war_forge
+				has_origin = origin_libra_centurion
+			}
+			has_resource = { type = alloys amount > 8000 }
+		}
+	}
+}

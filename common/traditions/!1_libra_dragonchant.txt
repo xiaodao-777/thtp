@@ -1,0 +1,106 @@
+tr_libra_dragonchant_adopt = {
+	unlocks_agenda = agenda_libra_dragonchant
+	custom_tooltip = tr_libra_dragonchant_adopt_desc
+	possible = {
+		is_species_class = REP
+	}
+	on_enabled = {
+		country_event = { id = libra_origin.0723 }
+	}
+}
+
+tr_libra_dragonchant_finish = {
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = libra_origin.0711 days = 3 }
+		}
+	}
+	modifier = {
+		ascension_perks_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_dragonchant_finish_desc
+}
+
+tr_libra_dragonchant_1 = {
+	modifier = {
+		planet_stability_add = 5
+		logistic_growth_mult = 0.15
+	}
+}
+
+tr_libra_dragonchant_2 = {
+	possible = {
+		has_tradition = tr_libra_dragonchant_1
+	}
+	custom_tooltip = tr_libra_dragonchant_2_desc
+	triggered_modifier = {
+		potential = { always = yes }
+		country_traditions_influence_produces_add = 0.15
+		planet_libra_dragonborn_unity_produces_add = 0.5
+		mult = value:councilor_level|TYPE|councilor_libra_dragonborn|
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_hive_empire = yes }
+		custom_tooltip = tr_libra_dragonchant_2_hive_desc
+		triggered_modifier = {
+			potential = { always = yes }
+			species_leader_exp_gain = 0.02
+			country_traditions_influence_produces_add = 0.1
+			planet_libra_dragonborn_unity_produces_add = 0.5
+			mult = value:libra_ruler_skill_level
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_dragonchant_3 = {
+	possible = {
+		has_tradition = tr_libra_dragonchant_1
+	}
+	modifier = {
+		planet_libra_dragonborn_food_produces_add = 6
+		planet_soldiers_food_produces_add = 4
+	}
+
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tr_libra_dragonchant_4 = {
+	possible = {
+		has_tradition = tr_libra_dragonchant_2
+	}
+	modifier = {
+		council_agenda_progress_speed = 0.25
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_libra_dragonchant_5 = {
+	possible = {
+		has_tradition = tr_libra_dragonchant_3
+	}
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = libra_origin.0715 }
+		}
+	}
+	modifier = {
+		country_starbase_capacity_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_dragonchant_5_desc
+
+	ai_weight = {
+		factor = 1000
+	}
+}

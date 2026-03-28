@@ -1,0 +1,24 @@
+tradition_libra_frugality = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_frugality_adopt } }
+		text = tradition_libra_frugality_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_frugality_adopt }
+		text = tradition_libra_frugality_adopt_desc
+	}
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_libra_frugality_adopt"
+	finish_bonus = "tr_libra_frugality_finish"
+	traditions = {
+		"tr_libra_frugality_1"
+		"tr_libra_frugality_2"
+		"tr_libra_frugality_3"
+		"tr_libra_frugality_4"
+		"tr_libra_frugality_5"
+	}
+
+	ai_weight = {
+		factor = 30
+	}
+}

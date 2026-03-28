@@ -1,0 +1,140 @@
+libra_gestalt_colony_maintenance = {
+	prerequisites = { "tech_libra_gestalt_maintenance_3" }
+
+	option = {
+		name = policy_libra_gestalt_colony_maintenance_a
+		potential = {
+			nor = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_maintenance_drones_physics_research_produces_add = 0.25
+			planet_maintenance_drones_society_research_produces_add = 0.25
+			planet_maintenance_drones_engineering_research_produces_add = 0.25
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+	option = {
+		name = policy_libra_gestalt_colony_maintenance_a_swap
+		potential = {
+			or = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_traders_physics_research_produces_add = 0.25
+			planet_traders_society_research_produces_add = 0.25
+			planet_traders_engineering_research_produces_add = 0.25
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+	option = {
+		name = policy_libra_gestalt_colony_maintenance_b
+		potential = {
+			nor = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_maintenance_drones_unity_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 4
+				num_ascension_perks < 5
+			}
+		}
+	}
+	option = {
+		name = policy_libra_gestalt_colony_maintenance_b_swap
+		potential = {
+			or = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_traders_unity_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 4
+				num_ascension_perks < 5
+			}
+		}
+	}
+	option = {
+		name = policy_libra_gestalt_colony_maintenance_c
+		potential = {
+			nor = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_maintenance_drones_trade_produces_add = 1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_gestalt_colony_maintenance_c_swap
+		potential = {
+			or = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_traders_trade_produces_add = 1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_gestalt_colony_maintenance_d
+		modifier = {
+			pop_amenities_usage_no_happiness_mult = -0.15
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_gestalt_colony_maintenance_e
+		modifier = {
+			pop_logistics_drone_bonus_workforce_mult = 0.2
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 1
+				has_ascension_perk = ap_libra_storm_deviation
+			}
+			modifier = {
+				add = 2
+				has_tradition = tr_virtuality_adopt
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+tr_libra_crimson_ancestor_adopt = {
+	unlocks_agenda = agenda_libra_crimson_ancestor
+	possible = {
+		#has_technology = tech_libra_vampire_beam_1
+		custom_tooltip = {
+			fail_text = "tr_libra_crimson_ancestor_fail_1"
+			has_tradition = tr_libra_crimson_vampire_finish
+			or = {
+				has_country_flag = libra_crimson_vampire_peace
+				has_country_flag = libra_crimson_vampire_war
+			}
+		}
+		if = {
+			limit = { is_natural_design_empire = yes }
+			num_ascension_perks > 2
+		}
+		else = {
+			custom_tooltip = {
+				fail_text = "tr_libra_crimson_ancestor_fail_2"
+				libra_has_finished_organic_ascension_path = yes
+			}
+		}
+	}
+	custom_tooltip = tr_libra_crimson_ancestor_desc
+	on_enabled = {
+		country_event = { id = libra_origin.0540 days = 1 }
+	}
+}
+
+tr_libra_crimson_ancestor_finish = {
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = libra_origin.0542 }
+		}
+	}
+	modifier = {
+		councilor_skill_add = 2
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_crimson_ancestor_1 = {
+	custom_tooltip = tr_libra_crimson_ancestor_1_desc
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			is_hive_empire = yes
+		}
+		custom_tooltip_with_modifiers = tr_libra_crimson_ancestor_1_hive_desc
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_crimson_ancestor_2 = {
+	custom_tooltip = tr_libra_crimson_ancestor_2_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_crimson_ancestor_3 = {
+	possible = {
+		has_tradition = tr_libra_crimson_ancestor_1
+		has_tradition = tr_libra_crimson_ancestor_2
+	}
+	custom_tooltip = tr_libra_crimson_ancestor_3_desc
+	on_enabled = {
+		hidden_effect = { country_event = { id = libra_origin.0541 } }
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_valid_civic = civic_aristocratic_elite
+		}
+		modifier = {
+			planet_jobs_specialist_produces_mult = 0.1
+		}
+		custom_tooltip_with_modifiers = tr_libra_crimson_ancestor_3_desc
+		on_enabled = {
+			hidden_effect = { country_event = { id = libra_origin.0541 } }
+		}
+	}
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_crimson_ancestor_4 = {
+	possible = {
+		has_tradition = tr_libra_crimson_ancestor_3
+	}
+	modifier = {
+		divided_patrongage_max_subjects = 2
+	}
+	custom_tooltip_with_modifiers = tr_libra_crimson_ancestor_4_desc
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			is_homicidal = yes
+		}
+		modifier = {
+			intel_decryption_add = 2
+			intel_encryption_add = 2
+		}
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_crimson_ancestor_5 = {
+	possible = {
+		has_tradition = tr_libra_crimson_ancestor_3
+	}
+	modifier = {
+		command_limit_add = 20
+	}
+	custom_tooltip_with_modifiers = tr_libra_crimson_ancestor_5_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}

@@ -1,0 +1,41 @@
+tradition_libra_occlusion = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_occlusion_adopt } }
+		text = tradition_libra_occlusion_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_occlusion_adopt }
+		text = tradition_libra_occlusion_adopt_desc
+	}
+	tree_template = "tree_12_11"
+	adoption_bonus = "tr_libra_occlusion_adopt"
+	finish_bonus = "tr_libra_occlusion_finish"
+	traditions = {
+		"tr_libra_occlusion_1"
+		"tr_libra_occlusion_2"
+		"tr_libra_occlusion_3"
+		"tr_libra_occlusion_4"
+		"tr_libra_occlusion_5"
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1.2
+			is_galactic_community_member = no
+		}
+		modifier = {
+			factor = 1.25
+			is_galactic_community_formed = yes
+			is_galactic_community_member = no
+		}
+		modifier = {
+			factor = 3
+			num_rivals > 1
+		}
+		modifier = {
+			factor = 4
+			is_homicidal = yes
+		}
+	}
+}

@@ -1,0 +1,647 @@
+# #############
+# Genetics
+#############
+
+libra_chromosome_engineer = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_clone_vats
+		}
+	}
+
+	tags = { research pop_assembly }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_libra_chromosome_engineer
+		produces = {
+			society_research = 2
+			trade = 6
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.025
+		fake_pop_growth_mod = 1
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			nor = {
+				has_trait = trait_psionic
+				has_trait = trait_latent_psionic
+				has_trait = trait_cybernetic
+				has_trait = trait_limited_cybernetic
+			}
+		}
+		bonus_pop_growth = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_libra_genetic_flexible_a
+				has_country_flag = genetic_ascension_stage_1_mutation
+				not = { has_country_flag = genetic_ascension_stage_1_purity }
+			}
+		}
+		bonus_pop_growth_mult = 0.025
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_libra_genetic_flexible_a
+				has_country_flag = genetic_ascension_stage_1_purity
+			}
+		}
+		fake_pop_growth_mod = 0.5
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_libra_genetic_flexible_a
+				has_country_flag = genetic_ascension_stage_1_purity
+			}
+		}
+		bonus_pop_growth = 0.5
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = 1.5
+		mult = value:job_weights_modifier|JOB|libra_chromosome_engineer|RESOURCE|society_research|
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_chromosome_drone = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_clone_vats
+		}
+	}
+
+	tags = { research pop_assembly }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_libra_chromosome_engineer
+		produces = {
+			society_research = 2
+			trade = 6
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.025
+		fake_pop_growth_mod = 1
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			nor = {
+				has_trait = trait_psionic
+				has_trait = trait_latent_psionic
+				has_trait = trait_cybernetic
+				has_trait = trait_limited_cybernetic
+			}
+		}
+		bonus_pop_growth = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_libra_genetic_flexible_a
+				has_country_flag = genetic_ascension_stage_1_mutation
+				not = { has_country_flag = genetic_ascension_stage_1_purity }
+			}
+		}
+		bonus_pop_growth_mult = 0.025
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_libra_genetic_flexible_a
+				or = {
+					has_country_flag = genetic_ascension_stage_1_purity
+					has_origin = origin_wilderness
+				}
+			}
+		}
+		fake_pop_growth_mod = 0.5
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_libra_genetic_flexible_a
+				or = {
+					has_country_flag = genetic_ascension_stage_1_purity
+					has_origin = origin_wilderness
+				}
+			}
+		}
+		bonus_pop_growth = 0.5
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = 1.5
+		mult = value:job_weights_modifier|JOB|libra_chromosome_drone|RESOURCE|society_research|
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+# #############
+# Cybernetic
+#############
+
+libra_cybernetics_worker = {
+	category = worker
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_libra_augment_dispatch_centre
+		}
+	}
+
+	tags = { research trade crime }
+	triggered_tags = {
+		trigger = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+		}
+		tags = { pop_assembly }
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	possible = {
+		or = {
+			has_trait = trait_hive_mind
+			not = { has_trait = trait_cybernetic }
+		}
+	}
+
+	resources = {
+		category = planet_libra_augmentors
+		produces = {
+			physics_research = 3
+			society_research = 3
+			engineering_research = 3
+			trade = 5
+		}
+		upkeep = {
+			energy = 2
+			alloys = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_crime_add = -5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+		}
+		fake_pop_growth_mod = 0.5
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+		}
+		bonus_pop_growth = 0.5
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		mult = 2
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_cybernetics_drone = {
+	category = simple_drone
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_libra_augment_dispatch_centre
+		}
+	}
+
+	tags = { research trade crime }
+	triggered_tags = {
+		trigger = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+		}
+		tags = { pop_assembly }
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		or = {
+			has_trait = trait_hive_mind
+			not = { has_trait = trait_cybernetic }
+		}
+	}
+
+	resources = {
+		category = planet_libra_augmentors
+		produces = {
+			physics_research = 3
+			society_research = 3
+			engineering_research = 3
+			trade = 5
+		}
+		upkeep = {
+			energy = 2
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_hive_empire = yes }
+			}
+			alloys = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_crime_no_happiness_add = -5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+		}
+		fake_pop_growth_mod = 0.5
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+		}
+		bonus_pop_growth = 0.5
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		mult = 2
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+# #############
+# Nanotech
+#############
+
+libra_replica_technician = {
+	category = worker
+	can_be_automated = no
+	exempt_from_ai_amenity_prioritization = yes
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_libra_nano_replication_centre
+		}
+	}
+
+	tags = { research amenities }
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	possible = {
+		has_trait = trait_machine_unit
+		nor = {
+			has_trait = trait_robot_digital_1
+			has_trait = trait_robot_digital_2
+			has_trait = trait_robot_latent_psionic
+			has_trait = trait_robot_psionic
+			has_trait = trait_robot_monoform
+			has_trait = trait_robot_ceaseless_symmetric_annihilation_engine
+		}
+	}
+
+	resources = {
+		category = planet_libra_nanoreplica
+		produces = {
+			engineering_research = 2
+			nanites = 4
+		}
+		upkeep = {
+			alloys = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		mult = value:job_weights_modifier|JOB|libra_replica_technician|RESOURCE|nanites|
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_replica_unit = {
+	category = simple_drone
+	can_be_automated = no
+	exempt_from_ai_amenity_prioritization = yes
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_libra_nano_replication_centre
+		}
+	}
+
+	tags = { research amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		has_trait = trait_machine_unit
+		nor = {
+			has_trait = trait_robot_digital_1
+			has_trait = trait_robot_digital_2
+			has_trait = trait_robot_latent_psionic
+			has_trait = trait_robot_psionic
+			has_trait = trait_robot_monoform
+			has_trait = trait_robot_ceaseless_symmetric_annihilation_engine
+		}
+	}
+
+	resources = {
+		category = planet_libra_nanoreplica
+		produces = {
+			engineering_research = 2
+			nanites = 4
+		}
+		upkeep = {
+			alloys = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		mult = value:job_weights_modifier|JOB|libra_replica_unit|RESOURCE|nanites|
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+# #############
+# Common
+#############
+
+libra_analyst = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_research_lab_2
+			icon = libra_analyst
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	tags = { research }
+
+	resources = {
+		category = planet_libra_calculator
+		produces = {
+			physics_research = 0.5
+			engineering_research = 0.5
+			society_research = 0.5
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_research_modifier|JOB|libra_analyst|
+	}
+
+#	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_calculator_drone = {
+	category = simple_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_research_lab_2
+			icon = libra_calculator_drone
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	tags = { research }
+
+	resources = {
+		category = planet_libra_calculator
+		produces = {
+			physics_research = 0.5
+			engineering_research = 0.5
+			society_research = 0.5
+		}
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|libra_calculator_drone|
+	}
+
+#	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}

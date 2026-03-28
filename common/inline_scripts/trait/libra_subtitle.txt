@@ -1,0 +1,8 @@
+# TYPE: default psionic corrupt ……
+
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = $TYPE$
+	RARITY = $RARITY$
+	CLASS = $CLASS$
+}

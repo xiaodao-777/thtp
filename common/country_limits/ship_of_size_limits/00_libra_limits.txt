@@ -1,0 +1,127 @@
+libra_large_ship_synthetic_limit = { 
+	ship_types = {
+		libra_large_ship_synthetic
+	}
+	base = 48
+	max = 12000
+	naval_cap_fraction = 0.24
+	
+	show = {
+		is_scope_valid = yes
+		has_ascension_perk = ap_libra_synthetic_voice
+	}
+}
+
+libra_synthetic_mothership_limit = { 
+	ship_types = {
+		libra_synthetic_mothership
+	}
+	base = 320
+	max = 1920
+	naval_cap_fraction = 0.04
+	
+	show = {
+		is_scope_valid = yes
+		has_ascension_perk = ap_libra_synthetic_voice
+	}
+}
+
+libra_junkie_battleship_limit = {
+	ship_types = {
+		libra_junkie_battleship
+	}
+	base = 48
+	naval_cap_fraction = 0.24
+	
+	show = {
+		is_scope_valid = yes
+		has_ascension_perk = ap_libra_intergalactic_junkie
+	}
+}
+
+libra_crimson_nights_warship_limit = { 
+	ship_types = {
+		libra_crimson_nights_warship
+	}
+	base = 20
+	naval_cap_fraction = 0.32
+	
+	show = {
+		is_scope_valid = yes
+		has_valid_civic = civic_libra_crimson_nights
+		has_country_flag = libra_crimson_nights_unlock_civic
+	}
+}
+
+libra_dragonborn_small_limit = { 
+	ship_types = {
+		libra_dragonborn_small
+	}
+	base = 24
+	naval_cap_fraction = 0.72
+	
+	show = {
+		is_scope_valid = yes
+		has_origin = origin_libra_dragonborn
+		has_tradition = tr_libra_dragonchant_5
+	}
+}
+
+libra_dragonborn_medium_limit = { 
+	ship_types = {
+		libra_dragonborn_medium
+	}
+	base = 48
+	max = 23040
+	naval_cap_fraction = 0.24
+	
+	show = {
+		is_scope_valid = yes
+		has_origin = origin_libra_dragonborn
+		has_country_flag = libra_dragonborn_medium_unlocked
+	}
+}
+
+libra_dragonborn_large_limit = { 
+	ship_types = {
+		libra_dragonborn_large
+	}
+	base = 96
+	max = 7680
+	naval_cap_fraction = 0.08
+	
+	show = {
+		is_scope_valid = yes
+		has_origin = origin_libra_dragonborn
+		has_country_flag = libra_dragonborn_large_unlocked
+	}
+}
+
+libra_antientropy_instruction_warship_limit = { 
+	ship_types = {
+		libra_antientropy_instruction_warship_3
+	}
+	base = 80
+	max = 16000
+	naval_cap_fraction = 0.16
+	
+	show = {
+		is_scope_valid = yes
+		has_origin = origin_libra_antientropy_instruction
+		has_technology = tech_titans
+	}
+}
+
+libra_nanite_titan_limit = { 
+	ship_types = {
+		libra_nanite_titan
+	}
+	base = 80
+	max = 16000
+	naval_cap_fraction = 0.16
+	
+	show = {
+		is_scope_valid = yes
+		has_technology = tech_libra_nanite_titans
+	}
+}

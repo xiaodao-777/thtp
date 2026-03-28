@@ -1,0 +1,12 @@
+layer = {
+	icon = "GFX_trait_bg"
+	color = "trait_bg_society"
+}
+layer = {
+	icon = "GFX_trait_glow_libra_genetic_destiny"
+	color = "trait_rarity_destiny"
+}
+layer = {
+	icon = "GFX_trait_frame_libra_genetic_destiny"
+	color = "trait_rarity_destiny"
+}

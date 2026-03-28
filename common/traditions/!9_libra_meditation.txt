@@ -1,0 +1,102 @@
+tr_libra_meditation_adopt = {
+	unlocks_agenda = agenda_libra_meditation
+	custom_tooltip_with_modifiers = tr_libra_meditation_adopt_desc
+	possible = {
+		has_technology = tech_administrative_ai
+	}
+}
+
+tr_libra_meditation_finish = {
+	modifier = {
+		leader_skill_add = 1
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_meditation_1 = {
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_meditation_1_desc
+
+	ai_weight = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_militarily = yes
+		}
+	}
+}
+
+tr_libra_meditation_2 = {
+	modifier = {
+		empire_size_mult = -0.1
+	}
+	custom_tooltip_with_modifiers = tr_libra_meditation_2_desc
+
+	ai_weight = {
+		factor = 1500
+	}
+}
+
+tr_libra_meditation_3 = {
+	possible = {
+		has_tradition = tr_libra_meditation_1
+	}
+	triggered_modifier = {
+		potential = {
+			controlled_systems < 25
+		}
+		starbases_upkeep_mult = -0.01
+		ship_starting_experience_add = 40
+		mult = trigger:controlled_systems
+	}
+	triggered_modifier = {
+		potential = { controlled_systems >= 25 }
+		starbases_upkeep_mult = -0.25
+		ship_starting_experience_add = 1000
+	}
+	custom_tooltip = tr_libra_meditation_3_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_meditation_4 = {
+	possible = {
+		has_tradition = tr_libra_meditation_2
+	}
+	triggered_modifier = {
+		all_technology_research_speed = 0.01
+		species_leader_exp_gain = 0.01
+		mult = trigger:num_insight_techs
+	}
+	custom_tooltip = tr_libra_meditation_4_desc
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { num_insight_techs >= 10 }
+		modifier = {
+			all_technology_research_speed = 0.1
+			species_leader_exp_gain = 0.1
+		}
+		custom_tooltip = tr_libra_meditation_4_desc
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_meditation_5 = {
+	possible = {
+		has_tradition = tr_libra_meditation_3
+		has_tradition = tr_libra_meditation_4
+	}
+	custom_tooltip_with_modifiers = tr_libra_meditation_5_desc
+
+	ai_weight = {
+		factor = 1000
+	}
+}

@@ -1,0 +1,146 @@
+decision_libra_string_puppeteer_a = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = default
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_string_puppeteer
+		}
+		not = { has_modifier = decision_libra_string_puppeteer_modifier }
+	}
+
+	allow = {
+		owner = {
+			not = { has_valid_civic = civic_fanatic_purifiers }
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = decision_libra_string_puppeteer_modifier
+			clear_on_owner_change = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 100
+			or = {
+				has_modifier = slave_colony
+				has_modifier = penal_colony
+				has_building = building_libra_star_ranch
+			}
+		}
+	}
+}
+
+decision_libra_string_puppeteer_b = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = default
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_string_puppeteer
+		}
+		has_modifier = decision_libra_string_puppeteer_modifier
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+		}
+	}
+
+	effect = {
+		remove_modifier = decision_libra_string_puppeteer_modifier
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			or = {
+				has_modifier = slave_colony
+				has_modifier = penal_colony
+				has_building = building_libra_star_ranch
+			}
+		}
+	}
+}
+
+decision_libra_shield_machine = {
+	owned_planets_only = yes
+	icon = decision_deal
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_shield_machine
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_leader_not_libra_shield_machine"
+			owner = { is_ai = no }
+			nand = {
+				exists = leader
+				leader = { has_trait = leader_trait_libra_shield_machine }
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				owner = { any_owned_leader = { has_trait = leader_trait_libra_shield_machine } }
+			}
+			custom_tooltip = decision_libra_shield_machine_effect_a
+		}
+		else = {
+			custom_tooltip = decision_libra_shield_machine_effect_b
+		}
+		hidden_effect = {
+			planet_event = { id = libra_fairy.4010 }
+		}
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 0.01
+			owner = {
+				not = { has_country_flag = libra_shield_machine_moved }
+			}
+		}
+		modifier = {
+			factor = trigger:sapient_pop_amount
+			or = {
+				libra_has_farming_designation = yes
+				libra_has_generator_designation = yes
+				libra_has_mining_designation = yes
+				libra_has_rural_designation = yes
+			}
+		}
+	}
+}

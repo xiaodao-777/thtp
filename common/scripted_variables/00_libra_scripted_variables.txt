@@ -1,0 +1,136 @@
+@trait_sorting_priority_paragon_triggered_none = 240
+@trait_sorting_priority_paragon_triggered_1 = 245
+@trait_sorting_priority_paragon_triggered_2 = 250
+@trait_sorting_priority_paragon_triggered_3 = 260
+
+@libra_designation_bonus = 2
+
+@libra_common_destiny_trait_weight = 500
+@libra_ethic_destiny_trait_weight = 4000
+
+@libra_psionic_common_trait_ai_weight = 3
+@libra_psionic_common_trait_extra_weight = 2
+@libra_psionic_veteran_trait_extra_weight = 3
+
+@libra_synthetic_veteran_trait_extra_weight = 3
+
+#
+
+@LibraAPrepeatableTechLevelCost = 10000
+
+@libra_path_not_match_factor = 0
+
+#################
+# Components
+#################
+
+# Small
+
+@s_t1_libra_base_cost = 35
+@s_t2_libra_base_cost = 53
+@s_t3_libra_base_cost = 79
+@s_t4_libra_base_cost = 79
+@s_t5_libra_base_cost = 119
+@s_t6_libra_base_cost = 179
+@s_t7_libra_base_cost = 268
+
+# Medium
+
+@m_t1_libra_base_cost = 88
+@m_t2_libra_base_cost = 132
+@m_t3_libra_base_cost = 197
+@m_t4_libra_base_cost = 197
+@m_t5_libra_base_cost = 296
+@m_t6_libra_base_cost = 443
+@m_t7_libra_base_cost = 665
+
+# Large
+
+@l_t1_libra_base_cost = 221
+@l_t2_libra_base_cost = 331
+@l_t3_libra_base_cost = 497
+@l_t4_libra_base_cost = 497
+@l_t5_libra_base_cost = 745
+@l_t6_libra_base_cost = 1117
+@l_t7_libra_base_cost = 1675
+
+# Extra Large
+
+@xl_t5_libra_base_cost = 1925
+@xl_t6_libra_base_cost = 2916
+@xl_t7_libra_base_cost = 4375
+
+# Titanic
+
+@titanic_t5_libra_cost = 1388
+@titanic_t5_libra_base_cost = 1225
+@titanic_t6_libra_base_cost = 7291
+@titanic_t7_libra_base_cost =10938
+
+@titanic_t5_libra_upkeep_energy = 8.1
+@titanic_t5_libra_upkeep_alloys = 1.215
+
+#################
+# SHIELDS
+#################
+
+# Small
+
+@shield_s_t1_libra_base_cost = 18
+@shield_s_t2_libra_base_cost = 27
+@shield_s_t3_libra_base_cost = 40
+@shield_s_t4_libra_base_cost = 40
+@shield_s_t5_libra_base_cost = 60
+@shield_s_t6_libra_base_cost = 89
+@shield_s_t7_libra_base_cost = 133
+
+# Medium
+
+@shield_m_t1_libra_base_cost = 45
+@shield_m_t2_libra_base_cost = 68
+@shield_m_t3_libra_base_cost = 102
+@shield_m_t4_libra_base_cost = 102
+@shield_m_t5_libra_base_cost = 152
+@shield_m_t6_libra_base_cost = 229
+@shield_m_t7_libra_base_cost = 342
+
+# Large
+
+@shield_l_t1_libra_base_cost = 113
+@shield_l_t2_libra_base_cost = 169
+@shield_l_t3_libra_base_cost = 254
+@shield_l_t4_libra_base_cost = 254
+@shield_l_t5_libra_base_cost = 380
+@shield_l_t6_libra_base_cost = 570
+@shield_l_t7_libra_base_cost = 855
+
+#############
+# ARMOR	
+#############
+
+@armor_s_t1_libra_base_cost = 18
+@armor_s_t2_libra_base_cost = 27
+@armor_s_t3_libra_base_cost = 40
+@armor_s_t4_libra_base_cost = 60
+@armor_s_t5_libra_base_cost = 89
+@armor_s_t6_libra_base_cost = 133
+@armor_s_t7_libra_base_cost = 200
+@armor_s_t7_libra_cost = 62
+
+@armor_m_t1_libra_base_cost = 45
+@armor_m_t2_libra_base_cost = 68
+@armor_m_t3_libra_base_cost = 102
+@armor_m_t4_libra_base_cost = 150
+@armor_m_t5_libra_base_cost = 229
+@armor_m_t6_libra_base_cost = 342
+@armor_m_t7_libra_base_cost = 513
+@armor_m_t7_libra_cost = 155
+
+@armor_l_t1_libra_base_cost = 113
+@armor_l_t2_libra_base_cost = 169
+@armor_l_t3_libra_base_cost = 254
+@armor_l_t4_libra_base_cost = 380
+@armor_l_t5_libra_base_cost = 570
+@armor_l_t6_libra_base_cost = 855
+@armor_l_t7_libra_base_cost = 1282
+@armor_l_t7_libra_cost = 387

@@ -1,0 +1,577 @@
+leader_trait_libra_shield_machine = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = machine
+		CLASS = commander
+		ICON = "GFX_leader_trait_arbiter"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 2
+	}
+	triggered_self_modifier = {
+		potential = { is_idle = no }
+		leader_commanders_unity_upkeep_add = 30
+	}
+	planet_modifier = {
+		terraform_speed_mult = 0.5
+		planet_decision_enact_speed_mult = 0.5
+		planet_building_build_speed_mult = 0.5
+		planet_jobs_simple_drone_produces_mult = 0.5
+	}
+	sector_modifier = {
+		terraform_speed_mult = 0.25
+		planet_decision_enact_speed_mult = 0.25
+		planet_building_build_speed_mult = 0.25
+		planet_jobs_simple_drone_produces_mult = 0.25
+	}
+	triggered_system_modifier = {
+		planet_technician_energy_produces_add = 0.25
+		planet_miners_minerals_produces_add = 0.2
+		planet_farmers_food_produces_add = 0.2
+		planet_soldiers_trade_produces_add = 0.2
+		mult = value:libra_leader_trait_total_skill_mult
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_total_skill_effect_tt
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+#
+
+leader_trait_libra_ultimate_directive_ruler = {
+	force_councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_legendary_leader"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 3
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			has_base_skill <= 10
+			owner = { has_ascension_perk = ap_libra_ultimate_directive }
+		}
+		council_agenda_progress_speed = 0.1
+		mult = trigger:has_total_skill
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_total_skill_effect_tt
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_ultimate_directive_growth = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_libra_ultimate_directive_growth"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 2
+	}
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_ultimate_directive_growth_mult
+				has_ascension_perk = ap_libra_ultimate_directive
+			}
+		}
+		leader_skill_add = 1
+		mult = owner.libra_ultimate_directive_growth_mult
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_ultimate_directive_growth_mult
+				has_ascension_perk = ap_libra_ultimate_directive
+			}
+		}
+		pop_fabricator_bonus_workforce_mult = 0.05
+		pop_artisan_drone_bonus_workforce_mult = 0.05
+		pop_coordinator_bonus_workforce_mult = 0.05
+		mult = owner.libra_ultimate_directive_growth_mult
+	}
+	triggered_councilor_modifier = {
+		potential = { is_councilor_type = councilor_gestalt_growth }
+		country_produces_mult = 0.005
+		mult = owner.value:libra_ethic_destiny_trait_gestalt_growth_mult
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_councilor_effect_tt
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_ultimate_directive_cognitive = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_libra_ultimate_directive_cognitive"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 2
+	}
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_ultimate_directive_cognitive_mult
+				has_ascension_perk = ap_libra_ultimate_directive
+			}
+		}
+		leader_skill_add = 1
+		mult = owner.libra_ultimate_directive_cognitive_mult
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_ultimate_directive_cognitive_mult
+				has_ascension_perk = ap_libra_ultimate_directive
+			}
+		}
+		pop_calculator_physicist_bonus_workforce_mult = 0.05
+		pop_calculator_biologist_bonus_workforce_mult = 0.05
+		pop_calculator_engineer_bonus_workforce_mult = 0.05
+		mult = owner.libra_ultimate_directive_cognitive_mult
+	}
+	triggered_councilor_modifier = {
+		potential = { is_councilor_type = councilor_gestalt_cognitive }
+		all_technology_research_speed = 0.01
+		mult = owner.value:libra_ethic_destiny_trait_gestalt_cognitive_mult
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_councilor_effect_tt
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_ultimate_directive_legion = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_libra_ultimate_directive_legion"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 2
+	}
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_ultimate_directive_legion_mult
+				has_ascension_perk = ap_libra_ultimate_directive
+			}
+		}
+		leader_skill_add = 1
+		mult = owner.libra_ultimate_directive_legion_mult
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_ultimate_directive_legion_mult
+				has_ascension_perk = ap_libra_ultimate_directive
+			}
+		}
+		pop_warrior_drone_bonus_workforce_mult = 0.05
+		pop_patrol_drone_bonus_workforce_mult = 0.05
+		pop_logistics_drone_bonus_workforce_mult = 0.05
+		mult = owner.libra_ultimate_directive_legion_mult
+	}
+	triggered_councilor_modifier = {
+		potential = { is_councilor_type = councilor_gestalt_legion }
+		country_naval_cap_mult = 0.01
+		mult = owner.value:libra_ethic_destiny_trait_gestalt_legion_mult
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_councilor_effect_tt
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_ultimate_directive_regulatory = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_libra_ultimate_directive_regulatory"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 2
+	}
+	triggered_self_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_ultimate_directive_regulatory_mult
+				has_ascension_perk = ap_libra_ultimate_directive
+			}
+		}
+		leader_skill_add = 1
+		mult = owner.libra_ultimate_directive_regulatory_mult
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_ultimate_directive_regulatory_mult
+				has_ascension_perk = ap_libra_ultimate_directive
+			}
+		}
+		pop_technician_drone_bonus_workforce_mult = 0.05
+		pop_mining_drone_bonus_workforce_mult = 0.05
+		pop_agri_drone_bonus_workforce_mult = 0.05
+		mult = owner.libra_ultimate_directive_regulatory_mult
+	}
+	triggered_councilor_modifier = {
+		potential = { is_councilor_type = councilor_gestalt_regulatory }
+		species_leader_exp_gain = 0.01
+		mult = owner.value:libra_ethic_destiny_trait_gestalt_regulatory_mult
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_councilor_effect_tt
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+#
+
+leader_trait_libra_gestalt_era_commander = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = default
+		CLASS = official
+		ICON = "GFX_leader_trait_libra_gestalt_era_commander"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+	}
+	triggered_self_modifier = {
+		potential = {
+			is_councilor = no
+			is_variable_set = libra_gestalt_era_skill_mult
+		}
+		leader_skill_add = 1
+		mult = libra_gestalt_era_skill_mult
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			is_variable_set = libra_gestalt_era_skill_mult
+		}
+		ships_upkeep_mult = -0.02
+		armies_upkeep_mult = -0.02
+		mult = libra_gestalt_era_skill_mult
+	}
+	triggered_desc = {
+		trigger = { is_variable_set = libra_gestalt_era_skill_mult }
+		text = leader_trait_libra_gestalt_era_effect_tt
+	}
+	on_gained_effect = {
+		set_variable = { which = libra_gestalt_era_skill_mult value = 0 }
+	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_gestalt_era_official = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = default
+		CLASS = official
+		ICON = "GFX_leader_trait_libra_gestalt_era_official"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+	}
+	triggered_self_modifier = {
+		potential = {
+			is_councilor = no
+			is_variable_set = libra_gestalt_era_skill_mult
+		}
+		leader_skill_add = 1
+		mult = libra_gestalt_era_skill_mult
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			is_variable_set = libra_gestalt_era_skill_mult
+		}
+		planet_pops_upkeep_mult = -0.01
+		planet_jobs_upkeep_mult = -0.01
+		planet_structures_upkeep_mult = -0.02
+		mult = libra_gestalt_era_skill_mult
+	}
+	triggered_desc = {
+		trigger = { is_variable_set = libra_gestalt_era_skill_mult }
+		text = leader_trait_libra_gestalt_era_effect_tt
+	}
+	on_gained_effect = {
+		set_variable = { which = libra_gestalt_era_skill_mult value = 0 }
+	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_gestalt_era_scientist = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = default
+		CLASS = scientist
+		ICON = "GFX_leader_trait_libra_gestalt_era_scientist"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+	}
+	triggered_self_modifier = {
+		potential = {
+			is_councilor = no
+			is_variable_set = libra_gestalt_era_skill_mult
+		}
+		leader_skill_add = 1
+		mult = libra_gestalt_era_skill_mult
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			is_variable_set = libra_gestalt_era_skill_mult
+		}
+		country_society_research_produces_mult = 0.025
+		country_physics_research_produces_mult = 0.025
+		country_engineering_research_produces_mult = 0.025
+		mult = libra_gestalt_era_skill_mult
+	}
+	triggered_desc = {
+		trigger = { is_variable_set = libra_gestalt_era_skill_mult }
+		text = leader_trait_libra_gestalt_era_effect_tt
+	}
+	on_gained_effect = {
+		set_variable = { which = libra_gestalt_era_skill_mult value = 0 }
+	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+#
+
+leader_trait_libra_reciprocity_commander = {
+	custom_subtitle = libra_main_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = corrupt
+		CLASS = commander
+		ICON = "GFX_leader_trait_libra_reciprocity"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		species_leader_exp_gain = 2
+		leader_trait_selection_options_add = 3
+	}
+	triggered_self_modifier = {
+		custom_tooltip = leader_trait_libra_reciprocity_tt
+	}
+	fleet_modifier = {
+		ship_armor_penetration_add = 1
+		ship_armor_regen_add_perc = 0.5
+		ship_shield_penetration_add = 1
+		ship_shield_regen_add_perc = 0.5
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+	trade_acceptance_weight = 100
+	on_gained_effect = {
+		leader_event = { id = libra_main.0109 days = 3600 random = 720 }
+	}
+}
+
+leader_trait_libra_reciprocity_official = {
+	custom_subtitle = libra_main_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = cyborg
+		CLASS = official
+		ICON = "GFX_leader_trait_libra_reciprocity"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		species_leader_exp_gain = 2
+		leader_trait_selection_options_add = 3
+	}
+	triggered_self_modifier = {
+		custom_tooltip = leader_trait_libra_reciprocity_tt
+	}
+	planet_modifier = {
+		planet_building_build_speed_mult = 1
+		founder_species_growth_mult = 0.5
+	}
+	sector_modifier = {
+		planet_building_build_speed_mult = 0.5
+		founder_species_growth_mult = 0.25
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+	on_gained_effect = {
+		leader_event = { id = libra_main.0109 days = 3600 random = 720 }
+	}
+}
+
+#
+
+leader_trait_libra_hoshino_kotori_miko_1 = {
+	custom_subtitle = libra_main_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = corrupt
+		CLASS = commander
+		ICON = "GFX_leader_trait_libra_hoshino_kotori_miko"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+	}
+	triggered_self_modifier = {
+		leader_commanders_engineering_research_produces_add = 32
+		mult = value:libra_ethic_destiny_trait_service_mult
+	}
+	fleet_modifier = {
+		command_limit_add = 1000
+	}
+	triggered_fleet_modifier = {
+		potential = { has_leader_flag = libra_hoshino_kotori_miko }
+		ship_shield_damage_mult = 0.02
+		ship_armor_damage_mult = 0.02
+		mult = value:libra_ethic_destiny_trait_service_mult
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_service_effect_tt
+	leader_class = { commander }
+	initial = no
+	randomized = no
+	on_gained_effect = {
+		leader_event = { id = libra_main.0109 days = 3600 random = 720 }
+	}
+}
+
+leader_trait_libra_hoshino_kotori_miko_2 = {
+	custom_subtitle = libra_main_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = cyborg
+		CLASS = official
+		ICON = "GFX_leader_trait_libra_hoshino_kotori_miko"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+	}
+	triggered_self_modifier = {
+		leader_officials_society_research_produces_add = 32
+		mult = value:libra_ethic_destiny_trait_service_mult
+	}
+	triggered_planet_modifier = {
+		potential = { has_leader_flag = libra_hoshino_kotori_miko }
+		country_produces_mult = 0.02
+		mult = value:libra_ethic_destiny_trait_service_mult
+	}
+	triggered_sector_modifier = {
+		potential = { has_leader_flag = libra_hoshino_kotori_miko }
+		country_produces_mult = 0.02
+		mult = value:libra_ethic_destiny_trait_service_mult
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_service_effect_tt
+	leader_class = { official }
+	initial = no
+	randomized = no
+	trade_acceptance_weight = 100
+	on_gained_effect = {
+		if = {
+			limit = { not = { has_leader_flag = libra_hoshino_kotori_miko } }
+			kill_leader = { show_notification = yes }
+		}
+	}
+}
+
+leader_trait_libra_hoshino_kotori_miko_3 = {
+	custom_subtitle = libra_main_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = machine
+		CLASS = scientist
+		ICON = "GFX_leader_trait_libra_hoshino_kotori_miko"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+	}
+	triggered_self_modifier = {
+		leader_scientists_physics_research_produces_add = 32
+		mult = value:libra_ethic_destiny_trait_service_mult
+	}
+	modifier = {
+		ship_cloaking_strength_add = 10
+	}
+	triggered_modifier = {
+		potential = { has_leader_flag = libra_hoshino_kotori_miko }
+		ship_archaeological_site_excavation_speed_mult = 0.08
+		ship_astral_rift_speed_mult = 0.08
+		mult = value:libra_ethic_destiny_trait_service_mult
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_service_effect_tt
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+	trade_acceptance_weight = 100
+	on_gained_effect = {
+		if = {
+			limit = { not = { has_leader_flag = libra_hoshino_kotori_miko } }
+			kill_leader = { show_notification = yes }
+		}
+	}
+}

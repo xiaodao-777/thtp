@@ -1,0 +1,9 @@
+leader_potential_add = {
+	can_use_libra_psionic_leader_traits = yes
+}
+on_gained_effect = {
+	set_leader_flag = has_libra_extra_common_trait
+}
+ai_weight = {
+	factor = @libra_psionic_common_trait_ai_weight
+}

@@ -1,0 +1,1558 @@
+# ####################
+# Astral Blade
+# ####################
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_SHIELD"
+	size = small
+	icon = "GFX_ship_part_libra_astral_shield"
+	icon_frame = 1
+	power = @power_S7
+	prerequisites = { tech_libra_astral_shields }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		ship_hull_add = 50
+		ship_shield_add = 450
+		ship_shield_regen_add_static = @regen_S7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_s_t7_libra_cost
+			astral_threads = 4
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_SHIELD"
+	size = medium
+	icon = "GFX_ship_part_libra_astral_shield"
+	icon_frame = 1
+	power = @power_M7
+	prerequisites = { tech_libra_astral_shields }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		ship_shield_add = 1350
+		ship_shield_regen_add_static = @regen_M7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_m_t7_libra_cost
+			astral_threads = 8
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_SHIELD"
+	size = large
+	icon = "GFX_ship_part_libra_astral_shield"
+	icon_frame = 1
+	power = @power_L7
+	prerequisites = { tech_libra_astral_shields }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		ship_shield_add = 4050
+		ship_shield_regen_add_static = @regen_L7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_l_t7_libra_cost
+			astral_threads = 16
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_ARMOR"
+	size = small
+	icon = "GFX_ship_part_libra_astral_armor"
+	icon_frame = 1
+	power = @power_S7
+	prerequisites = { tech_libra_astral_armor }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		ship_armor_add = 450
+		ship_armor_regen_add_static = @regen_S7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_s_t7_libra_cost
+			astral_threads = 4
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_libra_astral_armor"
+	icon_frame = 1
+	power = @power_M7
+	prerequisites = { tech_libra_astral_armor }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		ship_armor_add = 1350
+		ship_armor_regen_add_static = @regen_M7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_m_t7_libra_cost
+			astral_threads = 8
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_ARMOR"
+	size = large
+	icon = "GFX_ship_part_libra_astral_armor"
+	icon_frame = 1
+	power = @power_L7
+	prerequisites = { tech_libra_astral_armor }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		ship_armor_add = 4050
+		ship_armor_regen_add_static = @regen_L7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_l_t7_libra_cost
+			astral_threads = 16
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+#
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_SHIELD_BIO"
+	size = small
+	icon = "GFX_ship_part_libra_astral_shield_bio"
+	icon_frame = 1
+	power = @power_S7
+	prerequisites = { tech_libra_astral_shields }
+	potential = {
+		is_ship_category = bio_ship
+		libra_is_designable_bio_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	modifier = {
+		ship_shield_add = 360
+		ship_shield_regen_add_static = @bio_ship_regen_S7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_SHIELD_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_s_t7_libra_cost
+			astral_threads = 4
+		}
+		upkeep = {
+			food = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_SHIELD_BIO"
+	size = medium
+	icon = "GFX_ship_part_libra_astral_shield_bio"
+	icon_frame = 1
+	power = @power_M7
+	prerequisites = { tech_libra_astral_shields }
+	potential = {
+		is_ship_category = bio_ship
+		libra_is_designable_bio_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	modifier = {
+		ship_shield_add = 1080
+		ship_shield_regen_add_static = @bio_ship_regen_M7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_SHIELD_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_m_t7_libra_cost
+			astral_threads = 8
+		}
+		upkeep = {
+			food = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_SHIELD_BIO"
+	size = large
+	icon = "GFX_ship_part_libra_astral_shield_bio"
+	icon_frame = 1
+	power = @power_L7
+	prerequisites = { tech_libra_astral_shields }
+	potential = {
+		is_ship_category = bio_ship
+		libra_is_designable_bio_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	modifier = {
+		ship_shield_add = 3240
+		ship_shield_regen_add_static = @bio_ship_regen_L7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_SHIELD_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_l_t7_libra_cost
+			astral_threads = 16
+		}
+		upkeep = {
+			food = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_ARMOR_BIO"
+	size = small
+	icon = "GFX_ship_part_libra_astral_armor_bio"
+	icon_frame = 1
+	power = @power_S7
+	prerequisites = { tech_libra_astral_armor }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	modifier = {
+		ship_armor_add = 360
+		ship_armor_regen_add_static = @bio_ship_regen_S7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_ARMOR_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_s_t7_libra_cost
+			astral_threads = 4
+		}
+		upkeep = {
+			food = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_ARMOR_BIO"
+	size = medium
+	icon = "GFX_ship_part_libra_astral_armor_bio"
+	icon_frame = 1
+	power = @power_M7
+	prerequisites = { tech_libra_astral_armor }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	modifier = {
+		ship_armor_add = 1080
+		ship_armor_regen_add_static = @bio_ship_regen_M7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_ARMOR_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_m_t7_libra_cost
+			astral_threads = 8
+		}
+		upkeep = {
+			food = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_ARMOR_BIO"
+	size = large
+	icon = "GFX_ship_part_libra_astral_armor_bio"
+	icon_frame = 1
+	power = @power_L7
+	prerequisites = { tech_libra_astral_armor }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	modifier = {
+		ship_armor_add = 3240
+		ship_armor_regen_add_static = @bio_ship_regen_L7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ASTRAL_ARMOR_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @armor_l_t7_libra_cost
+			astral_threads = 16
+		}
+		upkeep = {
+			food = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# ####################
+# Dragonborn
+# ####################
+
+utility_component_template = {
+	key = "LIBRA_DRAGONBORN_SHIELD"
+	size = large
+	icon = "GFX_ship_part_libra_dragonborn_shield"
+	icon_frame = 1
+	power = @power_L7
+	prerequisites = { tech_libra_dragonborn_shield }
+	potential = {
+		OR = {
+			is_ship_size = libra_dragonborn_small
+			is_ship_size = libra_dragonborn_medium
+			is_ship_size = libra_dragonborn_large
+		}
+	}
+
+	modifier = {
+		ship_shield_add = 3840
+		ship_shield_regen_add_static = 24
+		ship_armor_add = 640
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.06
+		ship_armor_hardening_add = 0.01
+	}
+
+	component_set = "LIBRA_DRAGONBORN_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @armor_l_t7_libra_base_cost
+			sr_living_metal = @l_t7_rare
+		}
+		upkeep = {
+			food = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 56
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = sr_living_metal }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LIBRA_DRAGONBORN_ARMOR"
+	size = large
+	icon = "GFX_ship_part_libra_dragonborn_armor"
+	icon_frame = 1
+	power = @power_L7
+	prerequisites = { tech_libra_dragonborn_armor }
+	potential = {
+		OR = {
+			is_ship_size = libra_dragonborn_small
+			is_ship_size = libra_dragonborn_medium
+			is_ship_size = libra_dragonborn_large
+		}
+	}
+
+	modifier = {
+		ship_armor_add = 3840
+		ship_armor_regen_add_static = 24
+		ship_shield_add = 640
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.01
+		ship_armor_hardening_add = 0.06
+	}
+
+	component_set = "LIBRA_DRAGONBORN_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @armor_l_t7_libra_base_cost
+			sr_living_metal = @l_t7_rare
+		}
+		upkeep = {
+			food = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 56
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = sr_living_metal }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# ####################
+# Anti-entropy Instruction
+# ####################
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_SHIELD_1"
+	size = small
+	icon = "GFX_ship_part_libra_antientropy_shield_1"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_shield_1 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_shield_add = @armor_S1
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.01
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_SHIELD_1"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_ARMOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_s_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @s_t1_upkeep_energy
+			alloys = @s_t1_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_SHIELD_1"
+	size = medium
+	icon = "GFX_ship_part_libra_antientropy_shield_1"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_shield_1 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_shield_add = @armor_M1
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.01
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_SHIELD_1"
+	upgrades_to = "MEDIUM_LIBRA_ANTIENTROPY_ARMOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_m_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @m_t1_upkeep_energy
+			alloys = @m_t1_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_SHIELD_1"
+	size = large
+	icon = "GFX_ship_part_libra_antientropy_shield_1"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_shield_1 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_shield_add = @armor_L1
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.01
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_SHIELD_1"
+	upgrades_to = "LARGE_LIBRA_ANTIENTROPY_ARMOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_l_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @l_t1_upkeep_energy
+			alloys = @l_t1_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+#
+utility_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_SHIELD_2"
+	size = small
+	icon = "GFX_ship_part_libra_antientropy_shield_2"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_shield_2 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_shield_add = @armor_S4
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.04
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_SHIELD_2"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_SHIELD_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_s_t4_libra_base_cost
+			exotic_gases = 0.25
+		}
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 85
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_SHIELD_2"
+	size = medium
+	icon = "GFX_ship_part_libra_antientropy_shield_2"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_shield_2 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_shield_add = @armor_M4
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.04
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_SHIELD_2"
+	upgrades_to = "MEDIUM_LIBRA_ANTIENTROPY_SHIELD_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_m_t4_libra_base_cost
+			exotic_gases = 0.5
+		}
+		upkeep = {
+			energy = @m_t4_upkeep_energy
+			alloys = @m_t4_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 85
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_SHIELD_2"
+	size = large
+	icon = "GFX_ship_part_libra_antientropy_shield_2"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_shield_2 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_shield_add = @armor_L4
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.04
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_SHIELD_2"
+	upgrades_to = "LARGE_LIBRA_ANTIENTROPY_SHIELD_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_l_t4_libra_base_cost
+			exotic_gases = 1
+		}
+		upkeep = {
+			energy = @l_t4_upkeep_energy
+			alloys = @l_t4_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 85
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+#
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_SHIELD_3"
+	size = small
+	icon = "GFX_ship_part_libra_antientropy_shield_3"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_shield_3 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_shield_add = @armor_S7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_SHIELD_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_s_t7_libra_base_cost
+			exotic_gases = 0.55
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 125
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_SHIELD_3"
+	size = medium
+	icon = "GFX_ship_part_libra_antientropy_shield_3"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_shield_3 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_shield_add = @armor_M7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_SHIELD_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_m_t7_libra_base_cost
+			exotic_gases = 1.1
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 125
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_SHIELD_3"
+	size = large
+	icon = "GFX_ship_part_libra_antientropy_shield_3"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_shield_3 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_shield_add = @armor_L7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_SHIELD_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_l_t7_libra_base_cost
+			exotic_gases = 2.2
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 125
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+#
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_ARMOR_1"
+	size = small
+	icon = "GFX_ship_part_libra_antientropy_armor_1"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_armor_1 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_S1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.01
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_ARMOR_1"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_ARMOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_s_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @s_t1_upkeep_energy
+			alloys = @s_t1_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_ARMOR_1"
+	size = medium
+	icon = "GFX_ship_part_libra_antientropy_armor_1"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_armor_1 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_M1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.01
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_ARMOR_1"
+	upgrades_to = "MEDIUM_LIBRA_ANTIENTROPY_ARMOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_m_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @m_t1_upkeep_energy
+			alloys = @m_t1_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_ARMOR_1"
+	size = large
+	icon = "GFX_ship_part_libra_antientropy_armor_1"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_armor_1 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_L1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.01
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_ARMOR_1"
+	upgrades_to = "LARGE_LIBRA_ANTIENTROPY_ARMOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_l_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @l_t1_upkeep_energy
+			alloys = @l_t1_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+#
+utility_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_ARMOR_2"
+	size = small
+	icon = "GFX_ship_part_libra_antientropy_armor_2"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_armor_2 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_S4
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.04
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_ARMOR_2"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_ARMOR_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_s_t4_libra_base_cost
+			exotic_gases = 0.25
+		}
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 85
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_ARMOR_2"
+	size = medium
+	icon = "GFX_ship_part_libra_antientropy_armor_2"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_armor_2 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_M4
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.04
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_ARMOR_2"
+	upgrades_to = "MEDIUM_LIBRA_ANTIENTROPY_ARMOR_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_m_t4_libra_base_cost
+			exotic_gases = 0.5
+		}
+		upkeep = {
+			energy = @m_t4_upkeep_energy
+			alloys = @m_t4_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 85
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_ARMOR_2"
+	size = large
+	icon = "GFX_ship_part_libra_antientropy_armor_2"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_armor_2 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_L4
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.04
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_ARMOR_2"
+	upgrades_to = "LARGE_LIBRA_ANTIENTROPY_ARMOR_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_l_t4_libra_base_cost
+			exotic_gases = 1
+		}
+		upkeep = {
+			energy = @l_t4_upkeep_energy
+			alloys = @l_t4_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 85
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+#
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_ARMOR_3"
+	size = small
+	icon = "GFX_ship_part_libra_antientropy_armor_3"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_armor_3 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_S7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_ARMOR_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_s_t7_libra_base_cost
+			exotic_gases = 0.55
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 125
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_ARMOR_3"
+	size = medium
+	icon = "GFX_ship_part_libra_antientropy_armor_3"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_armor_3 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_M7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_ARMOR_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_m_t7_libra_base_cost
+			exotic_gases = 1.1
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 125
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_ARMOR_3"
+	size = large
+	icon = "GFX_ship_part_libra_antientropy_armor_3"
+	icon_frame = 1
+	power = 0
+	prerequisites = { tech_libra_antientropy_armor_3 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_L7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.07
+	}
+
+	component_set = "LIBRA_ANTIENTROPY_ARMOR_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @shield_l_t7_libra_base_cost
+			exotic_gases = 2.2
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 125
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# ####################
+# Nanotech
+# ####################
+
+utility_component_template = {
+	key = "SMALL_LIBRA_NANITE_BARRIER"
+	size = small
+	icon = "GFX_ship_part_libra_nanite_barrier"
+	icon_frame = 1
+	power = @power_S7
+	prerequisites = { tech_libra_nanite_barrier }
+	potential = {
+		from = { is_variable_set = libra_aa_path }
+		can_use_libra_nanotech_components = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_S6
+		ship_armor_regen_add_static = @regen_S7
+		ship_shield_add = @armor_S6
+		ship_shield_regen_add_static = @regen_S7
+	}
+
+	component_set = "LIBRA_NANITE_BARRIER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			nanites = @s_t7_rare
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			set = 0
+			not = { has_tradition = tr_nanotech_finish }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_NANITE_BARRIER"
+	size = medium
+	icon = "GFX_ship_part_libra_nanite_barrier"
+	icon_frame = 1
+	power = @power_M7
+	prerequisites = { tech_libra_nanite_barrier }
+	potential = {
+		from = { is_variable_set = libra_aa_path }
+		can_use_libra_nanotech_components = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_M6
+		ship_armor_regen_add_static = @regen_M7
+		ship_shield_add = @armor_M6
+		ship_shield_regen_add_static = @regen_M7
+	}
+
+	component_set = "LIBRA_NANITE_BARRIER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			nanites = @m_t7_rare
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			set = 0
+			not = { has_tradition = tr_nanotech_finish }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_NANITE_BARRIER"
+	size = large
+	icon = "GFX_ship_part_libra_nanite_barrier"
+	icon_frame = 1
+	power = @power_L7
+	prerequisites = { tech_libra_nanite_barrier }
+	potential = {
+		from = { is_variable_set = libra_aa_path }
+		can_use_libra_nanotech_components = yes
+	}
+
+	modifier = {
+		ship_armor_add = @armor_L6
+		ship_armor_regen_add_static = @regen_L7
+		ship_shield_add = @armor_L6
+		ship_shield_regen_add_static = @regen_L7
+	}
+
+	component_set = "LIBRA_NANITE_BARRIER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			nanites = @l_t7_rare
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			set = 0
+			not = { has_tradition = tr_nanotech_finish }
+		}
+	}
+}

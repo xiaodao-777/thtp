@@ -1,0 +1,497 @@
+wg_libra_antientropy_instruction = {
+	casus_belli = cb_libra_antientropy_instruction
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_end_threat_libra_antientropy_instruction
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+
+	forbidden_peace_offers = {
+		demand_surrender = ""
+		surrender = ""
+	}
+
+	surrender_acceptance = -1000
+
+	potential = {
+		NAND = {
+			is_galactic_emperor = yes
+			from = { is_galactic_community_member = yes }
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_end_threat_libra_antientropy_instruction = {
+	casus_belli = cb_stop_libra_antientropy_instruction
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_libra_antientropy_instruction
+
+	forbidden_peace_offers = {
+		demand_surrender = ""
+		surrender = ""
+	}
+
+	surrender_acceptance = -1000
+
+	potential = {
+		from = { has_origin = origin_libra_antientropy_instruction }
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+#
+
+@protectorate_tech_threshold = 0.4
+wg_libra_eden_accord_subjugation = {
+	casus_belli = cb_libra_eden_accord_subjugation
+
+	hide_if_no_cb = no
+	release_occupied_systems_on_status_quo = yes
+	secret_fealties_join_attacker = yes
+	show_agreement_terms = no
+
+	surrender_acceptance = -100
+
+	potential = {
+		NOT = { has_crisis_level = crisis_level_1 }
+		has_valid_civic = civic_libra_eden_accord_b
+		has_total_war_cb = no
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_subjugate_empire_member
+			NAND = {
+				has_galactic_emperor = yes
+				is_galactic_community_member = no
+				from = { is_galactic_community_member = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "cannot_use_against_custodian"
+			from = { is_galactic_custodian = no }
+		}
+		custom_tooltip = {
+			fail_text = "cannot_use_against_emperor"
+			from = { is_galactic_emperor = no }
+		}
+		custom_tooltip = {
+			fail_text = "cannot_use_against_btc"
+			from = { has_been_declared_crisis = no }
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.25
+				}
+			}
+			set_truce = {
+				target = FROM
+				type = war
+			}
+			FROM = {
+				set_truce = {
+					target = ROOT
+					type = war
+				}
+			}
+		}
+		if = {
+			limit = { from = { has_been_declared_crisis = no } }
+			from = {
+				set_subject_of = {
+					who = root
+					preset = preset_tributary
+				}
+				add_modifier = {
+					modifier = newly_subjugated_loyalty
+					years = 5
+				}
+			}
+		}
+	}
+
+	on_status_quo = {
+		if = {
+			limit = {
+				exists = last_created_country
+				last_created_country = {
+					has_country_flag = released_empire
+				}
+			}
+
+			last_created_country = {
+				set_origin_effect = yes
+				set_subject_of = {
+					who = root
+					preset = preset_tributary
+				}
+				add_modifier = {
+					modifier = newly_subjugated_loyalty
+					years = 5
+				}
+			}
+
+			if = {
+				limit = {
+					root = { is_megacorp = yes }
+					last_created_country = { is_megacorp = yes }
+				}
+				last_created_country = {
+					set_merchant_government_effect = yes
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			has_ai_personality_behaviour = wants_tribute
+		}
+	}
+}
+
+wg_libra_eden_accord = {
+	casus_belli = cb_libra_eden_accord_total_war
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_end_threat_libra_eden_accord
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+
+	forbidden_peace_offers = {
+		demand_surrender = ""
+		surrender = ""
+	}
+
+	surrender_acceptance = -1000
+
+	potential = {
+		from = { NOT = { is_country_type = fallen_empire } }
+		NAND = {
+			is_galactic_emperor = yes
+			from = { is_galactic_community_member = yes }
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_end_threat_libra_eden_accord = {
+	casus_belli = cb_stop_libra_eden_accord
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_libra_eden_accord
+
+	forbidden_peace_offers = {
+		demand_surrender = ""
+		surrender = ""
+	}
+
+	surrender_acceptance = -1000
+
+	potential = {
+		from = { has_valid_civic = civic_libra_eden_accord_b }
+		is_robot_empire = no
+		is_hive_empire = no
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_libra_may_storm = {
+	casus_belli = cb_libra_may_storm
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_end_threat_libra_may_storm
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+
+	forbidden_peace_offers = {
+		demand_surrender = ""
+		surrender = ""
+	}
+
+	surrender_acceptance = -1000
+
+	potential = {
+		NAND = {
+			is_galactic_emperor = yes
+			from = { is_galactic_community_member = yes }
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 120
+	}
+}
+
+wg_end_threat_libra_may_storm = {
+	casus_belli = cb_stop_libra_may_storm
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_libra_may_storm
+
+	forbidden_peace_offers = {
+		demand_surrender = ""
+		surrender = ""
+	}
+
+	surrender_acceptance = -1000
+
+	potential = {
+		from = { has_origin = origin_libra_may_storm }
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 120
+	}
+}
+
+#
+
+wg_libra_mystic_grail = {
+	casus_belli = cb_libra_mystic_grail
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+
+	surrender_acceptance = -40
+
+	potential = {
+		has_total_war_cb = no
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			country_event = { id = libra_main.1001 }
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+				remove_relic = r_libra_mystic_grail
+				country_event = { id = libra_main.1000 }
+			}
+		}
+		if = {
+			limit = {
+				is_country_type = fallen_empire
+			}
+			save_event_target_as = fallen_empire_humiliator
+			from = {
+				fallen_empire_humiliate_effect = yes
+			}
+		}
+		else = {
+			from = {
+				add_modifier = { modifier = humiliated days = 3600 }
+			}
+		}
+		add_relic = r_libra_mystic_grail
+	}
+
+	on_status_quo = {
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			add = 20
+			has_tradition = tr_libra_pendragon_adopt
+		}
+		modifier = {
+			factor = 3
+			has_tradition = tr_libra_victory_adopt
+		}
+		modifier = {
+			factor = 10
+			is_country_type = fallen_empire
+		}
+	}
+}

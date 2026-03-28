@@ -1,0 +1,201 @@
+tr_libra_occlusion_adopt = {
+	unlocks_agenda = agenda_libra_occlusion
+	on_enabled = {
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					or = {
+						leader_class = commander
+						leader_class = official
+					}
+				}
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+				change_variable = {
+					which = libra_extra_starting_traits_count
+					value = 1
+				}
+			}
+			every_pool_leader = {
+				limit = {
+					or = {
+						leader_class = commander
+						leader_class = official
+					}
+				}
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+				change_variable = {
+					which = libra_extra_starting_traits_count
+					value = 1
+				}
+			}
+			change_variable = {
+				which = libra_grandmastery_count
+				value = 1
+			}
+		}
+	}
+	modifier = {
+		intel_encryption_add = 1
+		libra_commander_starting_traits_country = 1
+		libra_official_starting_traits_country = 1
+	}
+	possible = {
+		has_technology = tech_encryption_2
+	}
+}
+
+tr_libra_occlusion_finish = {
+	modifier = {
+		ship_cloaking_detection_add = 1
+		country_border_friction_mult = -0.1
+		planet_politicians_unity_produces_add = 2
+		ascension_perks_add = 1
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			or = {
+				is_gestalt = yes
+				has_valid_civic = civic_worker_coop
+			}
+		}
+		modifier = {
+			ship_cloaking_detection_add = 1
+			country_border_friction_mult = -0.15
+			planet_bureaucrats_unity_produces_add = 0.5
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { has_valid_civic = civic_machine_servitor }
+		modifier = {
+			ship_cloaking_detection_add = 1
+			country_border_friction_mult = -0.15
+			planet_traders_unity_produces_add = 0.5
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+}
+
+tr_libra_occlusion_1 = {
+	modifier = {
+		all_technology_research_speed = 0.1
+		influential_jobs_bonus_workforce_mult = 0.1
+	}
+	custom_tooltip = tr_libra_occlusion_1_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_destroy_country_15
+		}
+		modifier = {
+			all_technology_research_speed = 0.3
+			influential_jobs_bonus_workforce_mult = 0.3
+		}
+		custom_tooltip = tr_libra_occlusion_1_desc
+	}
+
+	ai_weight = {
+		factor = 8000
+	}
+}
+
+tr_libra_occlusion_2 = {
+	modifier = {
+		planet_deposits_produces_mult = 0.25
+		country_traditions_influence_produces_add = 1
+	}
+	custom_tooltip = tr_libra_occlusion_2_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			is_galactic_community_member = yes
+		}
+		custom_tooltip = tr_libra_occlusion_2_desc
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 3
+			is_galactic_community_member = no
+		}
+	}
+}
+
+tr_libra_occlusion_3 = {
+	possible = {
+		has_tradition = tr_libra_occlusion_1
+	}
+	modifier = {
+		ship_cloaking_strength_add = 1
+		fleet_mia_time_mult = -0.15
+	}
+	custom_tooltip_with_modifiers = tr_libra_occlusion_3_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_occlusion_4 = {
+	possible = {
+		has_tradition = tr_libra_occlusion_1
+	}
+	modifier = {
+		councilor_skill_add = 1
+		country_naval_coverage_mult = 0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_occlusion_4_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_occlusion_5 = {
+	possible = {
+		has_tradition = tr_libra_occlusion_2
+	}
+	modifier = {
+		council_agenda_progress_speed = 0.25
+		planet_jobs_specialist_produces_mult = 0.1
+	}
+	custom_tooltip = tr_libra_occlusion_5_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			is_galactic_community_member = yes
+		}
+		custom_tooltip = tr_libra_occlusion_5_desc
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 3
+			is_galactic_community_member = no
+		}
+	}
+}

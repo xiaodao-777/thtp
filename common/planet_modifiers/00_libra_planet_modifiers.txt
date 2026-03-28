@@ -1,0 +1,609 @@
+pm_libra_planet_feature_modifier_0 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 10
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_0"
+}
+
+pm_libra_planet_feature_modifier_1 = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			not = { is_planet_class = pc_cosmogenesis_world }
+		}
+		modifier = {
+			add = 5
+			is_colonizable = yes
+			not = { is_planet_class = pc_cosmogenesis_world }
+		}
+		modifier = {
+			add = 5
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_1"
+}
+
+pm_libra_planet_feature_modifier_2 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			not = { is_planet_class = pc_cosmogenesis_world }
+		}
+		modifier = {
+			add = 5
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_2"
+}
+
+pm_libra_planet_feature_modifier_3 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			not = { is_planet_class = pc_cosmogenesis_world }
+		}
+		modifier = {
+			add = 5
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_3"
+}
+
+pm_libra_planet_feature_modifier_4 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 15
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_4"
+}
+
+pm_libra_planet_feature_modifier_5 = {
+	spawn_chance = {
+		base = 5
+		modifier = {
+			add = 5
+			is_colonizable = yes
+		}
+		modifier = {
+			add = 2
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_5"
+}
+
+pm_libra_planet_feature_modifier_6 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 10
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_6"
+}
+
+pm_libra_planet_feature_modifier_7 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_7"
+}
+
+pm_libra_planet_feature_modifier_8 = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			not = { is_planet_class = pc_cosmogenesis_world }
+		}
+		modifier = {
+			add = 5
+			is_colonizable = yes
+		}
+		modifier = {
+			add = 5
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_8"
+}
+
+pm_libra_planet_feature_modifier_9 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_9"
+}
+
+pm_libra_planet_feature_modifier_10 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 12
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_10"
+}
+
+pm_libra_planet_feature_modifier_11 = {
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_artificial = no
+		}
+		modifier = {
+			add = 5
+			is_colonizable = yes
+		}
+		modifier = {
+			add = 5
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_11"
+}
+
+pm_libra_planet_feature_modifier_12 = {
+	spawn_chance = {
+		base = 5
+		modifier = {
+			add = 5
+			is_colonizable = yes
+		}
+		modifier = {
+			add = 5
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_12"
+}
+
+pm_libra_planet_feature_modifier_13 = {
+	spawn_chance = {
+		modifier = {
+			add = 1
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 5
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			add = 9
+			is_planet_class = pc_relic
+		}
+		modifier = {
+			add = 4
+			is_planet_class = pc_shattered_ring_habitable
+		}
+		modifier = {
+			add = 1
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_13"
+}
+
+pm_libra_planet_feature_modifier_14 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 10
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			add = 5
+			is_planet_class = pc_relic
+		}
+		modifier = {
+			add = 5
+			is_planet_class = pc_shattered_ring_habitable
+		}
+		modifier = {
+			add = 5
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_14"
+}
+
+pm_libra_planet_feature_modifier_15 = {
+	spawn_chance = {
+		modifier = {
+			add = 12
+			is_colonizable = yes
+			is_artificial = no
+			not = { is_planet_class = pc_gaia }
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_15"
+}
+
+pm_libra_planet_feature_modifier_16 = {
+	spawn_chance = {
+		modifier = {
+			add = 12
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_16"
+}
+
+pm_libra_planet_feature_modifier_17 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 5
+			is_planet_class = pc_relic
+		}
+		modifier = {
+			add = 5
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_17"
+}
+
+pm_libra_planet_feature_modifier_18 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 3
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			add = 7
+			is_planet_class = pc_relic
+		}
+		modifier = {
+			add = 20
+			is_planet_class = pc_shattered_ring_habitable
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_18"
+}
+
+pm_libra_planet_feature_modifier_19 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 3
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			add = 7
+			is_planet_class = pc_relic
+		}
+		modifier = {
+			add = 20
+			is_planet_class = pc_shattered_ring_habitable
+		}
+		modifier = {
+			add = 5
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_19"
+}
+
+pm_libra_planet_feature_modifier_20 = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_colonizable = yes
+			is_artificial = no
+		}
+		modifier = {
+			add = 10
+			is_terraforming_candidate = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 0
+		}
+		modifier = {
+			factor = 0.4
+			num_modifiers > 1
+		}
+		modifier = {
+			factor = 0
+			num_modifiers > 2
+		}
+	}
+	modifier = "libra_planet_feature_modifier_20"
+}

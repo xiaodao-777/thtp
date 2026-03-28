@@ -1,0 +1,26 @@
+objectTypes = {
+	pdxparticle = {
+		name = "libra_hurricane_eye_1_effect"
+		type = "libra_hurricane_eye_1_file"
+		scale = 1
+	}
+
+	pdxparticle = {
+		name = "libra_apostle_planet_effect"
+		type = "libra_apostle_planet_file"
+		
+		scale = 1
+	}
+
+
+	pdxparticle = {
+		name = "libra_antientropy_instruction_exhaust_idle"
+		type = "libra_antientropy_instruction_exhaust_idle_effect"
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "libra_antientropy_instruction_exhaust_moving"
+		type = "libra_antientropy_instruction_exhaust_moving_effect"
+		scale = 1.0
+	}
+}

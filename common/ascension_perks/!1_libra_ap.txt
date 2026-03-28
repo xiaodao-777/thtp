@@ -1,0 +1,2117 @@
+# Alicis hates people who change this file
+
+ap_libra_starry_miner = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_starry_miner_tooltip"
+	}
+	modifier = {
+		country_starbase_capacity_add = 1
+		arc_furnace_limit_add = 1
+		country_commander_cap_add = 1
+	}
+
+	potential = {
+		is_machine_empire = no
+		not = { has_ascension_perk = ap_libra_starry_miner }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = default
+			not = { has_origin = origin_libra_miracle_builder }
+		}
+	}
+
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 1.5
+			has_technology = tech_orbital_arc_furnace
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 2
+			is_void_dweller_empire = yes
+		}
+		modifier = {
+			factor = 5
+			or = {
+				has_origin = origin_arc_welders
+				has_tradition = tr_libra_cosmoplasty_adopt
+			}
+		}
+	}
+}
+
+ap_libra_star_ranch = {
+	custom_tooltip = "ap_libra_star_ranch_tooltip"
+	modifier = {
+		country_commander_cap_add = 1
+		livestock_jobs_bonus_workforce_mult = 0.25
+	}
+
+	potential = {
+		is_homicidal = no
+		is_machine_empire = no
+		not = { has_ascension_perk = ap_libra_star_ranch }
+	}
+
+	possible = {
+		or = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+		modifier = {
+			add = 20
+			not = { has_ascension_perk = ap_libra_string_puppeteer }
+			or = {
+				is_hive_empire = no
+				has_valid_civic = civic_hive_natural_design
+			}
+			count_enslaved_species = {
+				count > 1
+				limit = { has_slavery_type = { type = slavery_livestock } }
+			}
+		}
+		modifier = {
+			factor = 2
+			num_assigned_jobs = {
+				value > 4000
+				job = livestock
+			}
+		}
+		modifier = {
+			factor = 2
+			num_assigned_jobs = {
+				value > 4000
+				job = livestock_lithoid
+			}
+		}
+	}
+}
+
+ap_libra_biomass_technician = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_biomass_technician_tooltip"
+	}
+	modifier = {
+		country_commander_cap_add = 1
+	}
+
+	potential = {
+		is_machine_empire = yes
+		not = { has_ascension_perk = ap_libra_biomass_technician }
+	}
+
+	possible = {
+		nor = {
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_machine_terminator
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			count_enslaved_species = {
+				count > 0
+				limit = { has_slavery_type = { type = slavery_matrix } }
+			}
+		}
+		modifier = {
+			factor = 10
+			num_assigned_jobs = {
+				value > 5000
+				job = organic_battery
+			}
+		}
+	}
+}
+
+ap_libra_string_puppeteer = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_string_puppeteer_tooltip"
+	}
+	modifier = {
+		planet_researchers_produces_mult = 0.1
+		country_scientist_cap_add = 1
+	}
+
+	potential = {
+		is_gestalt = no
+		has_country_flag = libra_is_machine_empire
+		not = { has_ascension_perk = ap_libra_string_puppeteer }
+	}
+
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 2
+			not = { has_ascension_perk = ap_libra_star_ranch }
+			or = {
+				is_xenophobe = yes
+				and = {
+					is_xenophile = no
+					num_species > 5
+				}
+			}
+		}
+	}
+}
+
+ap_libra_shield_machine = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_shield_machine_tooltip"
+		hidden_effect = { libra_create_shield_machine_effect = yes }
+	}
+	modifier = {
+		station_gatherers_produces_mult = 0.5
+	}
+
+	potential = {
+		is_machine_empire = yes
+		not = { has_ascension_perk = ap_libra_shield_machine }
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_tradition = tr_nanotech_adopt
+		}
+	}
+}
+
+ap_libra_storm_deviation = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_storm_deviation_tooltip"
+	}
+	modifier = {
+		capital_storm_diplo_weight_mult = 0.2
+		country_scientist_cap_add = 1
+	}
+
+	potential = {
+		has_cosmic_storms_dlc = yes
+		is_gestalt = yes
+		not = { has_ascension_perk = ap_libra_storm_deviation }
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			libra_ai_preferences_storm = yes
+		}
+		modifier = {
+			factor = 1.2
+			has_tradition = tr_virtuality_adopt
+		}
+	}
+}
+
+# #############
+# Executive AP
+#############
+
+ap_libra_transcendent_covenant = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_transcendent_covenant_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_fairy.0499 }
+			country_event = { id = libra_fairy.0500 days = 30 }
+			country_event = { id = libra_fairy.0509 days = 1 }
+			set_variable = { which = libra_ea_path value = 1 }
+		}
+	}
+	modifier = {
+		planetary_ascension_effect_mult = 0.5
+	}
+
+	potential = {
+		not = { is_variable_set = libra_ea_path }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_planet = yes
+		}
+	}
+}
+
+ap_libra_galaxy_ambition = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_galaxy_ambition_tooltip"
+		if = {
+			limit = { is_egalitarian = no }
+			custom_tooltip = "ap_libra_galaxy_ambition_policy_tooltip"
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.0499 }
+			country_event = { id = libra_fairy.0519 days = 1 }
+			set_variable = { which = libra_ea_path value = 2 }
+		}
+	}
+	modifier = {
+		councilor_skill_add = 3
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			is_egalitarian = yes
+		}
+		on_enabled = {
+			custom_tooltip = "ap_libra_galaxy_ambition_tooltip"
+			hidden_effect = {
+				country_event = { id = libra_fairy.0499 }
+				country_event = { id = libra_fairy.0519 days = 1 }
+				set_variable = { which = libra_ea_path value = 2 }
+			}
+		}
+		modifier = {
+			pop_bonus_workforce_mult = 0.1
+			councilor_skill_add = 3
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	potential = {
+		is_gestalt = no
+		not = { is_variable_set = libra_ea_path }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 1.5
+			libra_ai_preferences_elite = yes
+		}
+		modifier = {
+			factor = 2
+			libra_ai_preferences_council = yes
+		}
+		modifier = {
+			factor = 2
+			has_origin = origin_libra_paradise_lose
+		}
+	}
+}
+
+ap_libra_shift_in_focus = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_shift_in_focus_tooltip"
+		hidden_effect = {
+			set_government_cooldown = no
+			country_event = { id = libra_fairy.0499 }
+			country_event = { id = libra_fairy.0520 days = 15 }
+			country_event = { id = libra_fairy.0529 days = 1 }
+			set_variable = { which = libra_ea_path value = 3 }
+		}
+	}
+	modifier = {
+		country_government_civic_points_add = 1
+		country_admin_cap_add = 200
+	}
+
+	potential = {
+		is_gestalt = no
+		not = { is_variable_set = libra_ea_path }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 3
+			libra_ai_preferences_government = yes
+		}
+	}
+}
+
+ap_libra_third_choice = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_third_choice_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_fairy.0499 }
+			country_event = { id = libra_fairy.0530 days = 30 }
+			country_event = { id = libra_fairy.0539 days = 1 }
+			set_variable = { which = libra_third_choice_count value = 0 }
+			set_variable = { which = libra_ea_path value = 4 }
+		}
+	}
+	modifier = {
+		edicts_upkeep_mult = -0.35
+		council_agenda_early_activation_cost_mult = -0.35
+		planet_soldiers_trade_produces_add = 3
+	}
+
+	potential = {
+		or = {
+			is_gestalt = no
+			has_civic = civic_machine_servitor
+		}
+		not = { is_variable_set = libra_ea_path }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2500
+		modifier = {
+			factor = 2
+			libra_ai_preferences_militarily = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_tradition = tr_libra_meditation_adopt
+		}
+	}
+}
+
+ap_libra_ultimate_directive = {
+	on_enabled = {
+		custom_tooltip = "libra_ultimate_directive_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_fairy.0499 }
+			country_event = { id = libra_fairy.0542 }
+			country_event = { id = libra_fairy.0549 days = 1 }
+			set_variable = { which = libra_ea_path value = 5 }
+		}
+	}
+	modifier = {
+		councilor_skill_add = 1
+	}
+
+	potential = {
+		is_gestalt = yes
+		not = { is_variable_set = libra_ea_path }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_council = yes
+		}
+	}
+}
+
+ap_libra_gestalt_era = {
+	on_enabled = {
+		custom_tooltip = "libra_gestalt_era_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_fairy.0499 }
+			country_event = { id = libra_fairy.0550 }
+			country_event = { id = libra_fairy.0559 days = 1 }
+			set_variable = { which = libra_ea_path value = 6 }
+		}
+	}
+	modifier = {
+		leader_initial_skill = 1
+		leader_trait_selection_options_add = 1
+	}
+
+	potential = {
+		not = { is_variable_set = libra_ea_path }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_leader = yes
+		}
+	}
+}
+
+ap_libra_sages_notes = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_sages_notes_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_fairy.0499 }
+			country_event = { id = libra_fairy.0560 }
+			country_event = { id = libra_fairy.0569 days = 1 }
+			set_variable = { which = libra_ea_path value = 7 }
+		}
+	}
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+
+	potential = {
+		not = { is_variable_set = libra_ea_path }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_technology = yes
+		}
+	}
+}
+
+ap_libra_collective_unity = {
+	custom_tooltip = "ap_libra_collective_unity_tooltip"
+	on_enabled = {
+		country_event = { id = libra_fairy.0499 }
+		country_event = { id = libra_fairy.0579 days = 1 }
+		set_variable = { which = libra_ea_path value = 8 }
+	}
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+	triggered_modifier = {
+		potential = {
+			is_variable_set = libra_ea_path
+			check_variable = { which = libra_ea_path value = 8 }
+		}
+		empire_size_add = -1
+		mult = value:libra_collective_unity_coordinator_count
+	}
+
+	potential = {
+		is_gestalt = yes
+		nor = {
+			has_civic = civic_machine_servitor
+			is_variable_set = libra_ea_path
+		}
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_government = yes
+		}
+	}
+}
+
+ap_libra_cardinal_cosmos = {
+	custom_tooltip = "ap_libra_cardinal_cosmos_tooltip"
+	on_enabled = {
+		country_event = { id = libra_fairy.0499 }
+		country_event = { id = libra_fairy.0589 days = 1 }
+		set_variable = { which = libra_ea_path value = 9 }
+	}
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+	triggered_modifier = {
+		potential = {
+			is_variable_set = libra_ea_path
+			check_variable = { which = libra_ea_path value = 9 }
+		}
+		empire_size_add = 1
+		mult = value:libra_cardinal_cosmos_unity
+	}
+
+	potential = {
+		not = { is_variable_set = libra_ea_path }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_high_unity = yes
+		}
+	}
+}
+
+ap_libra_kings_game = {
+	custom_tooltip = "ap_libra_kings_game_tooltip"
+	on_enabled = {
+		country_event = { id = libra_fairy.0499 }
+		country_event = { id = libra_fairy.0599 days = 1 }
+		set_variable = { which = libra_ea_path value = 10 }
+	}
+	modifier = {
+		country_naval_capacity_contribution_from_subjects_mult = 0.05
+		empire_size_systems_mult = -0.5
+	}
+	triggered_modifier = {
+		potential = {
+			is_variable_set = libra_ea_path
+			check_variable = { which = libra_ea_path value = 10 }
+		}
+		planet_decision_enact_speed_mult = -0.02
+		mult = modifier:empire_size_districts_mult
+	}
+	triggered_modifier = {
+		potential = {
+			is_variable_set = libra_ea_path
+			check_variable = { which = libra_ea_path value = 10 }
+		}
+		council_agenda_progress_speed = -0.02
+		mult = modifier:empire_size_pops_mult
+	}
+
+	potential = {
+		not = { is_variable_set = libra_ea_path }
+		is_subject = no
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_executive_ascension_success
+		has_technology = tech_libra_analytics
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 1000
+		modifier = {
+			factor = trigger:subjects
+			is_overlord = yes
+		}
+	}
+}
+
+# #############
+# Qualified AP
+#############
+
+ap_libra_golden_rule = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_golden_rule_tooltip"
+		if = {
+			limit = { libra_crisis_ap_check = yes }
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		hidden_effect = {
+			set_policy = { policy = libra_golden_rule option = policy_libra_golden_rule_d cooldown = no }
+			country_event = { id = libra_fairy.2000 }
+			country_event = { id = libra_fairy.2010 days = 1 }
+		}
+	}
+	modifier = {
+		country_official_cap_add = 1
+		planet_traders_trade_produces_add = 1
+	}
+
+	potential = {
+		has_few_libra_qualified_ascension = yes
+		not = { has_ascension_perk = ap_libra_golden_rule }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_qualified_ascension_success
+		has_technology = tech_libra_interstellar_logistics_planning
+	}
+
+	ai_weight = {
+		base = 500
+		modifier = {
+			factor = 2
+			libra_ai_preferences_trade = yes
+		}
+		modifier = {
+			factor = 2
+			income > 2500
+		}
+	}
+}
+
+ap_libra_valiant_heroic = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_valiant_heroic_tooltip"
+		if = {
+			limit = { libra_crisis_ap_check = yes }
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		hidden_effect = {
+			set_variable = {
+				which = agenda_libra_valiant_heroic_count
+				value = 0
+			}
+			add_modifier = {
+				modifier = agenda_libra_valiant_heroic_effect
+				multiplier = 0
+			}
+			every_owned_leader = {
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+				change_variable = {
+					which = libra_extra_starting_traits_count
+					value = 1
+				}
+			}
+			every_pool_leader = {
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+				change_variable = {
+					which = libra_extra_starting_traits_count
+					value = 1
+				}
+			}
+			country_event = { id = libra_fairy.2051 days = 24 }
+			country_event = { id = libra_fairy.2060 days = 1 }
+		}
+	}
+	modifier = {
+		leader_skill_add = 1
+		libra_leader_starting_traits_country = 1
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			libra_crisis_ap_check = yes
+		}
+		on_enabled = {
+			custom_tooltip = "ap_libra_warrant_of_return_tooltip"
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+			hidden_effect = {
+				set_variable = {
+					which = agenda_libra_valiant_heroic_count
+					value = 0
+				}
+				add_modifier = {
+					modifier = agenda_libra_valiant_heroic_effect
+					multiplier = 0
+				}
+			}
+		}
+	}
+
+	potential = {
+		has_paragon_dlc = yes
+		has_few_libra_qualified_ascension = yes
+		not = { has_ascension_perk = ap_libra_valiant_heroic }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_qualified_ascension_success
+		has_technology = tech_self_aware_logic
+	}
+
+	ai_weight = {
+		base = 500
+		modifier = {
+			factor = 3
+			libra_ai_preferences_leader = yes
+		}
+	}
+}
+
+ap_libra_genetic_potential = {
+	on_enabled = {
+		if = {
+			limit = { libra_crisis_ap_check = yes }
+			custom_tooltip = "ap_libra_genetic_potential_policy_tooltip"
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		else = {
+			custom_tooltip = "ap_libra_genetic_potential_tooltip"
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.2150 days = 1 }
+		}
+	}
+	custom_tooltip = "ap_libra_genetic_potential_tooltip"
+	modifier = {
+		planet_pops_produces_mult = 0.25
+		country_society_tech_research_speed = 0.25
+		country_scientist_cap_add = 1
+	}
+	triggered_modifier = {
+		potential = {
+			has_ascension_perk = ap_libra_genetic_potential
+			num_owned_planets < 25
+		}
+		country_produces_mult = 0.01
+		logistic_growth_mult = 0.05
+		mult = trigger:num_owned_planets
+	}
+	triggered_modifier = {
+		potential = { num_owned_planets >= 25 }
+		country_produces_mult = 0.25
+		logistic_growth_mult = 1.25
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			libra_crisis_ap_check = yes
+		}
+		on_enabled = {
+			custom_tooltip = "ap_libra_genetic_potential_policy_tooltip"
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		modifier = {
+			country_society_tech_research_speed = 0.15
+			country_produces_mult = 0.15
+			logistic_growth_mult = 0.5
+		}
+	}
+
+	potential = {
+		has_country_flag = libra_is_biological_empire
+		has_few_libra_qualified_ascension = yes
+		not = { has_ascension_perk = ap_libra_genetic_potential }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_qualified_ascension_success
+		has_technology = tech_cloning
+	}
+
+	ai_weight = {
+		factor = 450
+		modifier = {
+			factor = 2
+			libra_ai_preferences_expansion = yes
+		}
+		modifier = {
+			factor = 2
+			libra_ai_preferences_population = yes
+		}
+		modifier = {
+			factor = 0
+			has_tradition = tr_synthetics_adopt
+		}
+	}
+}
+
+ap_libra_warrant_of_return = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_warrant_of_return_tooltip"
+		if = {
+			limit = { libra_crisis_ap_check = yes }
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.2100 }
+			country_event = { id = libra_fairy.2101 }
+			country_event = { id = libra_fairy.2140 days = 1 }
+			set_variable = { which = libra_warrant_of_return_relic_count value = 0 }
+		}
+	}
+	modifier = {
+		specimens_produces_mult = 0.15
+		relics_cost_mult = -0.15
+		country_official_cap_add = 1
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			libra_crisis_ap_check = yes
+		}
+		on_enabled = {
+			custom_tooltip = "ap_libra_warrant_of_return_tooltip"
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		modifier = {
+			country_official_cap_add = 1
+		}
+	}
+
+	potential = {
+		has_grand_archive_dlc = yes
+		has_few_libra_qualified_ascension = yes
+		not = { has_ascension_perk = ap_libra_warrant_of_return }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_qualified_ascension_success
+		has_technology = tech_galactic_archivism
+	}
+
+	ai_weight = {
+		base = 25
+		modifier = {
+			factor = 4
+			libra_ai_preferences_collection = yes
+		}
+		modifier = {
+			factor = 2
+			num_owned_relics > 2
+		}
+		modifier = {
+			factor = 2
+			num_owned_relics > 5
+		}
+		modifier = {
+			factor = 2
+			count_exhibit = {
+				count > 4
+				limit = {
+					or = {
+						is_specimen_rarity = epic
+						is_specimen_rarity = exceptional
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			count_exhibit = {
+				count > 11
+				limit = {
+					or = {
+						is_specimen_rarity = epic
+						is_specimen_rarity = exceptional
+					}
+				}
+			}
+		}
+	}
+}
+
+ap_libra_synthetic_voice = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_synthetic_voice_tooltip"
+		if = {
+			limit = { libra_crisis_ap_check = yes }
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.2200 days = 1 }
+		}
+	}
+	modifier = {
+		command_limit_add = 50
+		country_commander_cap_add = 1
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			libra_crisis_ap_check = yes
+		}
+		on_enabled = {
+			custom_tooltip = "ap_libra_synthetic_voice_tooltip"
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		modifier = {
+			country_commander_cap_add = 1
+		}
+	}
+
+	potential = {
+		has_few_libra_qualified_ascension = yes
+		not = { has_ascension_perk = ap_libra_synthetic_voice }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_qualified_ascension_success
+		or = {
+			#	has_technology = tech_libra_cybernetic_adaptive_standards
+			has_technology = tech_synthetic_workers
+			has_technology = tech_nanite_assemblers
+		}
+		custom_tooltip = {
+			fail_text = default
+			not = { has_ascension_perk = ap_libra_intergalactic_junkie }
+		}
+		custom_tooltip = {
+			fail_text = default
+			not = { has_ascension_perk = ap_libra_ghost_mechanist }
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_no_bio_ship"
+			not = { uses_ship_category = bio_ship }
+		}
+	}
+
+	ai_weight = {
+		factor = 250
+		modifier = {
+			factor = 2
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 3
+			or = {
+				has_tradition = tr_virtuality_adopt
+				has_tradition = tr_synthetics_adopt
+				has_tradition = tr_cybernetics_adopt
+				has_tradition = tr_cybernetics_assimilator_adopt
+			}
+		}
+		#modifier = {
+		#	factor = 3
+		#	has_ascension_perk = ap_libra_atomic_heart
+		#}
+		modifier = {
+			factor = 0
+			libra_ai_preferences_ship = no
+		}
+	}
+}
+
+ap_libra_intergalactic_junkie = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_intergalactic_junkie_tooltip"
+		if = {
+			limit = { libra_crisis_ap_check = yes }
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.2250 days = 1 }
+		}
+	}
+	modifier = {
+		country_minerals_produces_mult = 0.25
+		scavenge_debris_mult = 0.25
+		country_commander_cap_add = 1
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			libra_crisis_ap_check = yes
+		}
+		on_enabled = {
+			custom_tooltip = "ap_libra_intergalactic_junkie_tooltip"
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		modifier = {
+			country_commander_cap_add = 1
+		}
+	}
+
+	potential = {
+		has_few_libra_qualified_ascension = yes
+		not = { has_ascension_perk = ap_libra_intergalactic_junkie }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_qualified_ascension_success
+		has_technology = tech_space_defense_station_improvement
+		custom_tooltip = {
+			fail_text = default
+			not = { has_ascension_perk = ap_libra_synthetic_voice }
+		}
+		custom_tooltip = {
+			fail_text = default
+			not = { has_ascension_perk = ap_libra_ghost_mechanist }
+		}
+		#custom_tooltip = {
+		#	fail_text = "requires_libra_no_bio_ship"
+		#	not = { uses_ship_category = bio_ship }
+		#}
+	}
+
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 20
+			libra_ai_preferences_ship = yes
+		}
+		modifier = {
+			factor = 3
+			or = {
+				is_at_war = yes
+				recently_lost_war = yes
+				is_hive_empire = yes
+			}
+		}
+	}
+}
+
+ap_libra_astral_blade = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_astral_blade_tooltip"
+		if = {
+			limit = { libra_crisis_ap_check = yes }
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.2301 days = 24 }
+			country_event = { id = libra_fairy.2310 days = 1 }
+		}
+	}
+	modifier = {
+		pop_purge_speed = 1
+		ship_orbital_bombardment_mult = 1
+		#planet_physicists_astral_threads_produces_add
+		planet_biologists_astral_threads_produces_add = 0.3
+		planet_engineers_astral_threads_produces_add = 0.3
+		country_scientist_cap_add = 1
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			libra_crisis_ap_check = yes
+		}
+		on_enabled = {
+			custom_tooltip = "ap_libra_astral_blade_tooltip"
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+			hidden_effect = {
+				country_event = { id = libra_fairy.2301 days = 24 }
+			}
+		}
+		modifier = {
+			pop_purge_speed = 1
+			country_scientist_cap_add = 1
+		}
+	}
+
+	potential = {
+		has_few_libra_qualified_ascension = yes
+		not = { has_ascension_perk = ap_libra_astral_blade }
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_qualified_ascension_success
+		has_technology = tech_astral_harvesting
+	}
+
+	ai_weight = {
+		factor = 0
+		modifier = {
+			add = 800
+			libra_ai_preferences_weapon = yes
+		}
+		modifier = {
+			factor = 1.5
+			libra_ai_preferences_militarily = yes
+		}
+		modifier = {
+			factor = 1.2
+			libra_ai_preferences_technology = yes
+		}
+		#modifier = {
+		#	factor = 3
+		#	has_ascension_perk = ap_libra_atomic_heart
+		#}
+	}
+}
+
+ap_libra_ghost_mechanist = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_ghost_mechanist_tooltip"
+		if = {
+			limit = { libra_crisis_ap_check = yes }
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		hidden_effect = {
+			add_tech_progress = { tech = tech_libra_antientropy_lasers_1 progress = 0.25 }
+			add_tech_progress = { tech = tech_libra_antientropy_missiles_1 progress = 0.25 }
+			add_tech_progress = { tech = tech_libra_antientropy_kinetic_artillery_1 progress = 0.25 }
+			add_tech_progress = { tech = tech_libra_antientropy_shield_1 progress = 0.25 }
+			add_tech_progress = { tech = tech_libra_antientropy_armor_1 progress = 0.25 }
+			country_event = { id = libra_fairy.2350 days = 1 }
+		}
+	}
+	modifier = {
+		category_psionics_research_speed_mult = 0.2
+		planet_technician_energy_produces_add = 1
+		planet_engineers_engineering_research_produces_add = 1
+		country_scientist_cap_add = 1
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			libra_crisis_ap_check = yes
+		}
+		on_enabled = {
+			custom_tooltip = "ap_libra_ghost_mechanist_tooltip"
+			custom_tooltip = "libra_qualified_ascension_crisis_tt"
+		}
+		modifier = {
+			country_scientist_cap_add = 1
+		}
+	}
+
+	potential = {
+		has_few_libra_qualified_ascension = yes
+		has_country_flag = libra_is_machine_empire
+		nor = {
+			has_ascension_perk = ap_libra_ghost_mechanist
+			has_origin = origin_libra_antientropy_instruction
+		}
+	}
+
+	possible = {
+		custom_tooltip = requires_no_libra_qualified_ascension_success
+		if = {
+			limit = { is_gestalt = yes }
+			has_ascension_perk = ap_mechromancy
+		}
+		else = {
+			has_ascension_perk = ap_libra_string_puppeteer
+		}
+		custom_tooltip = {
+			fail_text = default
+			not = { has_ascension_perk = ap_libra_intergalactic_junkie }
+		}
+		custom_tooltip = {
+			fail_text = default
+			not = { has_ascension_perk = ap_libra_synthetic_voice }
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+		modifier = {
+			add = 800
+			libra_ai_preferences_weapon = yes
+		}
+		modifier = {
+			factor = 1.2
+			libra_ai_preferences_technology = yes
+		}
+		modifier = {
+			factor = 1.5
+			libra_ai_preferences_ship = no
+		}
+	}
+}
+
+# #############
+# Cloning
+#############
+
+ap_libra_directive_76 = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_directive_76_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.10001 }
+			country_event = { id = libra_fairy.10000 days = 3 }
+		}
+	}
+	modifier = {
+		job_soldier_or_warrior_add = 500
+	}
+
+	potential = {
+		has_country_flag = libra_is_biological_empire
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_nanotech_adopt
+			has_tradition = tr_virtuality_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_cloning_ascension_path"
+			has_tradition = tr_cloning_finish
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_militarily = yes
+		}
+	}
+}
+
+# #############
+# Purity
+#############
+
+ap_libra_ode_to_babel = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_ode_to_babel_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.11001 }
+			country_event = { id = libra_fairy.11000 days = 3 }
+		}
+	}
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 1
+		BIOLOGICAL_species_trait_picks_add = 3
+	}
+
+	potential = {
+		has_country_flag = libra_is_biological_empire
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_nanotech_adopt
+			has_tradition = tr_virtuality_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_purity_ascension_path"
+			has_tradition = tr_purity_finish
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 1600
+		modifier = {
+			factor = 2
+			has_country_flag = genetic_ascension_stage_1_purity
+		}
+		modifier = {
+			factor = 1.25
+			has_country_flag = genetic_ascension_stage_2_purity
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = genetic_ascension_stage_3_purity
+		}
+	}
+}
+
+# ####################
+# Mutation
+# ####################
+
+ap_libra_evolutionary_endpoint = {
+	custom_tooltip = "ap_libra_evolutionary_endpoint_tooltip"
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.12001 }
+			country_event = { id = libra_fairy.12000 days = 3 }
+		}
+	}
+	modifier = {
+		country_produces_mult = -0.16
+	}
+	triggered_modifier = {
+		potential = {
+			num_traits < 16
+		}
+		country_produces_mult = 0.035
+		country_society_tech_research_speed = 0.05
+		mult = trigger:num_traits
+	}
+	triggered_modifier = {
+		potential = {
+			num_traits >= 16
+		}
+		country_produces_mult = 0.56
+		country_society_tech_research_speed = 0.8
+	}
+	triggered_modifier = {
+		potential = {
+			has_country_flag = libra_evolutionary_endpoint
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 30 }
+		}
+		country_government_civic_points_add = 3
+		organic_pop_bonus_workforce_mult = 0.5
+	}
+
+	potential = {
+		has_country_flag = libra_is_biological_empire
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_nanotech_adopt
+			has_tradition = tr_virtuality_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_mutation_ascension_path"
+			has_tradition = tr_mutation_finish
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 1600
+		modifier = {
+			factor = 2
+			libra_ai_preferences_government = yes
+		}
+		modifier = {
+			factor = 2
+			has_origin = origin_evolutionary_predators
+		}
+	}
+}
+
+ap_libra_cutefied_world = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_cutefied_world_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.12101 }
+			country_event = { id = libra_fairy.12100 days = 3 }
+		}
+	}
+	modifier = {
+		subspecies_integration_add = 100
+	}
+
+	potential = {
+		has_country_flag = libra_is_biological_empire
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_nanotech_adopt
+			has_tradition = tr_virtuality_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_mutation_ascension_path"
+			has_tradition = tr_mutation_finish
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+		custom_tooltip = {
+			fail_text = default
+			nor = {
+				has_origin = origin_libra_crimson_nights
+				has_origin = origin_libra_dragonborn
+				has_origin = origin_evolutionary_predators
+				has_origin = origin_overtuned
+				has_origin = origin_necrophage
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 1600
+		modifier = {
+			factor = 2
+			libra_ai_preferences_government = yes
+		}
+		modifier = {
+			factor = 2
+			has_origin = origin_evolutionary_predators
+		}
+	}
+}
+
+# #############
+# Cybernetics
+#############
+
+ap_libra_transcendental_cybernetics = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_transcendental_cybernetics_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.13001 }
+			country_event = { id = libra_fairy.13000 days = 3 }
+		}
+	}
+	modifier = {
+		rare_tech_research_speed_mult = 0.25
+	}
+
+	potential = {
+		or = {
+			has_country_flag = libra_is_biological_empire
+			has_civic = civic_machine_assimilator
+		}
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_nanotech_adopt
+			has_tradition = tr_virtuality_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_cybernetics_ascension_path"
+			or = {
+				has_tradition = tr_cybernetics_finish
+				has_tradition = tr_cybernetics_assimilator_finish
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_population = yes
+		}
+	}
+}
+
+# #############
+# Synthetics
+#############
+
+ap_libra_cosmological_constant = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_cosmological_constant_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.14001 }
+			country_event = { id = libra_fairy.14000 days = 3 }
+		}
+	}
+	modifier = {
+		ROBOT_species_trait_points_add = 2
+		ROBOT_species_trait_picks_add = 1
+	}
+
+	potential = {
+		is_hive_empire = no
+		or = {
+			has_country_flag = libra_is_biological_empire
+			and = {
+				has_machine_age_dlc = no
+				is_machine_empire = yes
+			}
+		}
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_nanotech_adopt
+			has_tradition = tr_virtuality_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_synthetics_ascension_path"
+			has_tradition = tr_synthetics_finish
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_technology = yes
+		}
+	}
+}
+
+# #############
+# Modularity
+#############
+
+ap_libra_atomic_heart = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_atomic_heart_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.15001 }
+			country_event = { id = libra_fairy.15000 days = 3 }
+		}
+	}
+	modifier = {
+		MACHINE_species_trait_points_add = 6
+		MACHINE_species_trait_picks_add = 2
+	}
+
+	potential = {
+		has_country_flag = libra_is_machine_empire
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_nanotech_adopt
+			has_tradition = tr_virtuality_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_modularity_ascension_path"
+			has_tradition = tr_modularity_finish
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			or = {
+				is_capitalist = yes
+				should_ai_focus_on_trade = yes
+				galaxy_percentage > 0.1
+				has_ascension_perk = ap_libra_synthetic_voice
+				has_ascension_perk = ap_libra_astral_blade
+			}
+		}
+	}
+}
+
+# #############
+# Nanotech
+#############
+
+ap_libra_nanocore = {
+	custom_tooltip = "ap_libra_nanocore_tooltip"
+	on_enabled = {
+		country_event = { id = libra_main.0011 }
+		country_event = { id = libra_fairy.16001 }
+		country_event = { id = libra_fairy.16000 days = 3 }
+	}
+	modifier = {
+		leader_initial_skill = 1
+		leader_trait_selection_options_add = 1
+	}
+	triggered_modifier = {
+		potential = {
+			exists = ruler
+			ruler = { leader_class = official }
+		}
+		planet_building_build_speed_mult = 0.01
+		shipclass_military_build_speed_mult = 0.01
+		all_technology_research_speed = 0.03
+		empire_size_colonies_mult = -0.01
+		mult = value:libra_ruler_skill_level
+	}
+	triggered_modifier = {
+		potential = {
+			exists = ruler
+			ruler = { leader_class = commander }
+		}
+		planet_building_build_speed_mult = 0.01
+		shipclass_military_build_speed_mult = 0.03
+		all_technology_research_speed = 0.01
+		empire_size_districts_mult = -0.01
+		mult = value:libra_ruler_skill_level
+	}
+	triggered_modifier = {
+		potential = {
+			exists = ruler
+			ruler = { leader_class = scientist }
+		}
+		planet_building_build_speed_mult = 0.01
+		shipclass_military_build_speed_mult = 0.01
+		all_technology_research_speed = 0.03
+		empire_size_systems_mult = -0.01
+		mult = value:libra_ruler_skill_level
+	}
+
+	potential = {
+		has_country_flag = libra_is_machine_empire
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_virtuality_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_nanotech_ascension_path"
+			has_tradition = tr_nanotech_finish
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_leader = yes
+		}
+	}
+}
+
+ap_libra_hurricane_eye = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_hurricane_eye_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.16101 }
+			country_event = { id = libra_fairy.16100 days = 3 }
+		}
+	}
+	modifier = {
+		command_limit_add = 200
+	}
+
+	potential = {
+		has_country_flag = libra_is_machine_empire
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_virtuality_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_nanotech_ascension_path"
+			has_tradition = tr_nanotech_finish
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 1000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_militarily = yes
+		}
+		modifier = {
+			factor = 0.75
+			or = {
+				is_difficulty = 0
+				is_difficulty = 1
+			}
+		}
+	}
+}
+
+# #############
+# Virtuality
+#############
+
+ap_libra_yggdrasil = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_yggdrasil_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.17001 }
+			country_event = { id = libra_fairy.17000 days = 3 }
+		}
+	}
+	modifier = {
+		sector_max_jumps_add = 2
+		bonus_automated_workforce_mult = -0.25
+		robotic_pop_bonus_workforce_mult = 0.25
+	}
+
+	potential = {
+		has_country_flag = libra_is_machine_empire
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_psionics_adopt
+			has_tradition = tr_psionics_shroud_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_nanotech_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_virtuality_ascension_path"
+			has_tradition = tr_virtuality_finish
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 1200
+		modifier = {
+			factor = 4
+			num_owned_planets < 4
+			#not = { has_origin = origin_libra_machina_manifestation }
+		}
+	}
+}
+
+# #############
+# Psionics
+#############
+
+ap_libra_heavenly_throne = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_heavenly_throne_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.18001 }
+			country_event = { id = libra_fairy.18000 days = 3 }
+		}
+	}
+	modifier = {
+		ruler_skill_add = 2
+	}
+
+	potential = {
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_nanotech_adopt
+			has_tradition = tr_virtuality_adopt
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_psionics_ascension_path"
+			or = {
+				has_tradition = tr_psionics_finish
+				has_tradition = tr_psionics_shroud_finish
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 4
+			libra_ai_preferences_planet = yes
+		}
+	}
+}
+
+ap_libra_liber_genesis = {
+	on_enabled = {
+		custom_tooltip = "ap_libra_liber_genesis_tooltip"
+		hidden_effect = {
+			country_event = { id = libra_main.0011 }
+			country_event = { id = libra_fairy.18101 }
+			country_event = { id = libra_fairy.18100 days = 3 }
+		}
+	}
+	modifier = {
+		
+	}
+
+	potential = {
+		block_libra_advanced_ascension = no
+		not = { is_variable_set = libra_aa_path }
+		nor = {
+			has_tradition = tr_cybernetics_adopt
+			has_tradition = tr_cybernetics_assimilator_adopt
+			has_tradition = tr_genetics_adopt
+			has_tradition = tr_cloning_adopt
+			has_tradition = tr_purity_adopt
+			has_tradition = tr_mutation_adopt
+			has_tradition = tr_synthetics_adopt
+			has_tradition = tr_modularity_adopt
+			has_tradition = tr_nanotech_adopt
+			has_tradition = tr_virtuality_adopt
+
+			has_country_flag = clone_army_full_potential
+		}
+	}
+
+	possible = {
+		custom_tooltip = libra_advanced_ascension_possible_tt
+		custom_tooltip = {
+			fail_text = "requires_libra_psionics_ascension_path"
+			or = {
+				has_tradition = tr_psionics_finish
+				has_tradition = tr_psionics_shroud_finish
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+		custom_tooltip = {
+			fail_text = "requires_libra_fairy_age"
+			has_technology = tech_libra_fairy_age
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 4
+			libra_ai_preferences_population = yes
+		}
+	}
+}

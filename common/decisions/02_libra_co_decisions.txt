@@ -1,0 +1,1298 @@
+decision_libra_crimson_vampire = {
+	owned_planets_only = yes
+	sound = event_psionic
+
+	enactment_time = 180
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_crimson_nights
+			has_tradition = tr_libra_crimson_vampire_1
+		}
+		libra_can_clear_blockers = yes
+	}
+
+	allow = {
+		has_building = building_libra_crimson_nights
+		not = { has_modifier = decision_libra_crimson_vampire_modifier }
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+		cost = {
+			#trigger = { has_modifier = libra_crimson_nights_planet_sideeffect }
+			energy = 600
+			multiplier = trigger:num_uncleared_blockers
+		}
+		cost = {
+			trigger = { has_modifier = libra_crimson_nights_planet_sideeffect }
+			energy = 1.2
+			multiplier = trigger:pop_amount
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_crimson_vampire_effect
+		switch = {
+			trigger = has_modifier 
+			culture_shock_stone_age = {
+				remove_modifier = culture_shock_stone_age
+			}
+			culture_shock_bronze_age = {
+				remove_modifier = culture_shock_bronze_age
+			}
+			culture_shock_iron_age = {
+				remove_modifier = culture_shock_iron_age
+			}
+			culture_shock_late_medieval_age = {
+				remove_modifier = culture_shock_late_medieval_age
+			}
+			culture_shock_renaissance_age = {
+				remove_modifier = culture_shock_renaissance_age
+			}
+			culture_shock_steam_age = {
+				remove_modifier = culture_shock_steam_age
+			}
+			culture_shock_industrial_age = {
+				remove_modifier = culture_shock_industrial_age
+			}
+			culture_shock_machine_age = {
+				remove_modifier = culture_shock_machine_age
+			}
+			culture_shock_atomic_age = {
+				remove_modifier = culture_shock_atomic_age
+			}
+			culture_shock_early_space_age = {
+				remove_modifier = culture_shock_early_space_age
+			}
+		}
+		if = {
+			limit = { has_modifier = libra_crimson_nights_planet_sideeffect }
+			remove_modifier = libra_crimson_nights_planet_sideeffect
+		}
+		add_modifier = {
+			modifier = "decision_libra_crimson_vampire_modifier"
+			clear_on_owner_change = yes
+			days = 1800
+		}
+		hidden_effect = {
+			planet_event = { id = libra_origin.0503 }
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 500
+			not = { has_planet_flag = recently_decision_crimson_vampire }
+		}
+	}
+}
+
+decision_libra_shadow_consciousness_b = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+
+	enactment_time = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_shadow_consciousness
+			has_valid_civic = civic_libra_shadow_consciousness_b
+		}
+	}
+	
+	allow = {
+		not = { has_modifier = decision_libra_shadow_consciousness_b_modifier }
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			sr_dark_matter = 200
+		}
+	}
+
+	effect = {
+		add_planet_devastation = 5
+		custom_tooltip = decision_libra_shadow_consciousness_b_effect
+		add_modifier = {
+			modifier = decision_libra_shadow_consciousness_b_modifier
+			clear_on_owner_change = yes
+			days = 3600
+		}
+		hidden_effect = {
+			create_pop_group = {
+				species = owner_main_species
+				size = 300
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+decision_libra_dragonborn = {
+	owned_planets_only = yes
+	sound = event_psionic
+
+	enactment_time = 720
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_dragonborn
+			has_tradition = tr_libra_dragonchant_adopt
+		}
+		not = { has_deposit = d_libra_dragonborn }
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 200
+			multiplier = value:libra_dragonborn_decision_cost_mult
+		}
+		cost = {
+			trigger = {
+				not = { has_planet_flag = has_decision_libra_dragonborn }
+			}
+			influence = 100
+		}
+	}
+
+ 	abort_trigger = {
+		has_deposit = d_libra_dragonborn
+	}
+
+	on_queued = {
+		owner = {
+			change_variable = {
+				which = libra_dragonborn_decision_count
+				value = 1
+			}
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = {
+				which = libra_dragonborn_decision_count
+				value = -1
+			}
+		}
+	}
+
+	abort_effect = {
+		owner = {
+			change_variable = {
+				which = libra_dragonborn_decision_count
+				value = -1
+			}
+		}	
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_dragonborn_effect
+		hidden_effect = {
+			set_planet_flag = has_decision_libra_dragonborn
+			if = {
+				limit = {
+					is_artificial = yes
+					not = { uses_district_set = habitat }
+				}
+				while = {
+					count = 8
+					add_deposit = d_libra_dragonborn
+				}
+			}
+			else_if = {
+				limit = {
+					uses_district_set = habitat
+				}
+				while = {
+					count = 5
+					add_deposit = d_libra_dragonborn
+				}
+			}
+			else = {
+				while = {
+					count = value:libra_dragonborn_decision_deposit_mult
+					add_deposit = d_libra_dragonborn
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 2
+			planet_size >= 18
+		}
+		modifier = {
+			factor = 2
+			is_artificial = yes
+			not = { uses_district_set = habitat }
+		}
+	}
+}
+
+decision_libra_antientropy_instruction_a = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_martial_law_machine
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_antientropy_instruction
+			is_variable_set = libra_antientropy_instruction_index
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "decision_libra_antientropy_instruction_fail_1"
+			not = { has_planet_flag = recently_libra_antientropy_instruction_decision }
+		}
+		owner = {
+			custom_tooltip = {
+				fail_text = "decision_libra_antientropy_instruction_fail_2"
+				is_variable_set = libra_antientropy_instruction_index
+				check_variable = {
+					which = libra_antientropy_instruction_index
+					value > 59
+				}
+			}
+			custom_tooltip = {
+				fail_text = "decision_libra_antientropy_instruction_fail_3"
+				or = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_antientropy_instruction_a_effect
+		hidden_effect = {
+			planet_event = { id = libra_origin.1110 }
+		}
+		if = {
+			limit = {
+				owner = { is_variable_set = libra_antientropy_instruction_index }
+			}
+			custom_tooltip = decision_libra_antientropy_instruction_index
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 100
+			has_ground_combat = yes
+			not = { has_planet_flag = recently_libra_antientropy_instruction_decision_ai }
+		}
+	}
+}
+
+decision_libra_antientropy_instruction_b = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_martial_law
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_antientropy_instruction
+			is_variable_set = libra_antientropy_instruction_index
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "decision_libra_antientropy_instruction_fail_1"
+			not = { has_planet_flag = recently_libra_antientropy_instruction_decision }
+		}
+		owner = {
+			custom_tooltip = {
+				fail_text = "decision_libra_antientropy_instruction_fail_2"
+				is_variable_set = libra_antientropy_instruction_index
+				check_variable = {
+					which = libra_antientropy_instruction_index
+					value > 119
+				}
+			}
+			custom_tooltip = {
+				fail_text = "decision_libra_antientropy_instruction_fail_3"
+				or = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_antientropy_instruction_b_effect
+		hidden_effect = {
+			owner = { country_event = { id = libra_origin.1111 } }
+		}
+		if = {
+			limit = {
+				owner = { is_variable_set = libra_antientropy_instruction_index }
+			}
+			custom_tooltip = decision_libra_antientropy_instruction_index
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 5
+			has_ground_combat = no
+			owner = {
+				is_variable_set = libra_antientropy_instruction_index
+				check_variable = {
+					which = libra_antientropy_instruction_index
+					value > 239
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = { used_naval_capacity_percent < 0.4 }
+		}
+		modifier = {
+			factor = 2
+			owner = { used_naval_capacity_percent < 0.7 }
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				or = {
+					is_at_war = yes
+					has_crisis = yes
+					end_game_years_passed >= 0
+				}
+			}
+		}
+	}
+}
+
+#
+
+decision_libra_eden_accord_enforce_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_crime
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 0.3
+			multiplier = trigger:sapient_pop_amount
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_eden_accord }
+	}
+
+	allow = {
+		owner = { has_valid_civic = civic_libra_eden_accord_b }
+		not = { has_modifier = libra_eden_accord_enforce_mod }
+	}
+
+	effect = {
+		add_modifier = { modifier = libra_eden_accord_enforce_mod days = 5400 clear_on_owner_change = yes }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			add = 10
+			planet_crime > 30
+		}
+	}
+}
+
+decision_libra_eden_accord_stability_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_end_martial_law_machine
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 0.3
+			multiplier = trigger:sapient_pop_amount
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_eden_accord }
+	}
+
+	allow = {
+		owner = { has_valid_civic = civic_libra_eden_accord_b }
+		not = { has_modifier = libra_eden_accord_stability_mod }
+	}
+
+	effect = {
+		add_modifier = { modifier = "libra_eden_accord_stability_mod" days = 5400 clear_on_owner_change = yes }
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			add = 25
+			owner = {
+				libra_ai_war_trigger = yes
+			}
+		}
+	}
+}
+
+decision_libra_eden_accord_expel_population = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_expel_population
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+		cost = {
+			trigger = {
+				has_orbital_bombardment = yes
+			}
+			energy = 2000
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_eden_accord }
+		any_owned_species = {
+			has_living_standard = { country = root.owner type = living_standard_organic_trophy }
+		}
+	}
+
+	allow = {
+		owner = { has_valid_civic = civic_libra_eden_accord_b }
+		not = { has_modifier = planet_population_expelled }
+		custom_tooltip = {
+			fail_text = "requires_allow_libra_eden_accord_expel_population"
+			owner = { any_owned_planet = { sapient_pop_amount > 0 not = { is_same_value = root } } }
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_eden_accord_expel_population_tooltip
+		add_modifier = { modifier = "planet_population_expelled" days = 1800 clear_on_owner_change = yes }
+		hidden_effect = {
+			every_owned_pop_group = {
+				limit = {
+					has_living_standard = { country = root.owner type = living_standard_organic_trophy }
+				}
+				owner = {
+					random_owned_planet = {
+						limit = {
+							sapient_pop_amount > 0
+							not = { is_same_value = root }
+						}
+						weights = {
+							base = 1
+							modifier = { factor = 14 has_available_jobs = "machine_nurse" }
+							modifier = { factor = 15 has_available_jobs = "bio_trophy" }
+						}
+						save_event_target_as = libra_resettle_planet
+					}
+				}
+				resettle_pop = { pop = this planet = event_target:libra_resettle_planet }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 10
+			planet_devastation > 5
+			has_orbital_bombardment = yes
+		}
+		modifier = {
+			add = 15
+			planet_devastation > 25
+			has_orbital_bombardment = yes
+		}
+		modifier = {
+			add = 25
+			planet_devastation > 50
+			has_orbital_bombardment = yes
+		}
+	}
+}
+
+decision_libra_ea_paradise_project = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_resort_colony
+	enactment_time = 240
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_eden_accord }
+		count_deposits = { type = d_libra_eden_accord_paradise count < 4 }
+	}
+
+	allow = {
+		owner = { has_valid_civic = civic_libra_eden_accord_d }
+	}
+
+	effect = {
+		add_deposit = d_libra_eden_accord_paradise
+		hidden_effect = {
+			every_deposit = {
+				limit = { is_deposit_type = d_libra_eden_accord_paradise }
+				set_deposit_flag = keep_deposit_on_terraform
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 2
+			num_free_districts = { type = any value < 8 }
+		}
+		modifier = {
+			factor = 2
+			num_free_districts = { type = any value < 5 }
+		}
+		modifier = {
+			factor = 2
+			num_free_districts = { type = any value < 2 }
+		}
+	}
+}
+
+decision_libra_eden_accord_luxuries_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			consumer_goods = 0.1
+			multiplier = trigger:sapient_pop_amount
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_eden_accord }
+	}
+
+	allow = {
+		owner = { has_valid_civic = civic_libra_eden_accord_i }
+		not = { has_modifier = planet_luxuries_boost }
+	}
+
+	effect = {
+		add_modifier = { modifier = planet_luxuries_boost days = 5400 }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			add = 10
+			free_amenities < 0
+			pop_amount > 1000
+		}
+	}
+}
+
+decision_libra_ea_beautification_function = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_resort_colony
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_eden_accord }
+	}
+
+	allow = {
+		owner = { has_valid_civic = civic_libra_eden_accord_j }
+		custom_tooltip = {
+			fail_text = "requires_allow_libra_eden_accord_beautification"
+			count_owned_species = { limit = { has_living_standard = { country = root.owner type = living_standard_organic_trophy } } count > 1 }
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_ea_beautification_tooltip
+		hidden_effect = {
+			ordered_owned_species = {
+				limit = {
+					has_living_standard = { country = root.owner type = living_standard_organic_trophy }
+				}
+				position = 0
+				order_by = trigger:sapient_pop_amount
+				save_event_target_as = libra_species_target
+			}
+			every_owned_pop_group = {
+				limit = {
+					not = { is_same_species = event_target:libra_species_target }
+					has_living_standard = { country = root.owner type = living_standard_organic_trophy }
+				}
+				change_species = event_target:libra_species_target
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#
+
+decision_libra_may_storm_1 = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = default
+
+	enactment_time = 0
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_may_storm
+			has_authority = auth_democratic
+		}
+		not = { has_modifier = libra_may_storm_mod_1 }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+		}
+		cost = {
+			minerals = 50
+			multiplier = trigger:planet_size
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { has_modifier = libra_may_storm_mod_2 }
+			remove_modifier = libra_may_storm_mod_2
+		}
+		if = {
+			limit = { has_modifier = libra_may_storm_mod_3 }
+			remove_modifier = libra_may_storm_mod_3
+		}
+		add_modifier = {
+			modifier = libra_may_storm_mod_1
+			clear_on_owner_change = yes
+		}
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			nor = {
+				has_modifier = libra_may_storm_mod_1
+				has_modifier = libra_may_storm_mod_2
+				has_modifier = libra_may_storm_mod_3
+			}
+		}
+		modifier = {
+			add = 100
+			or = {
+				libra_has_farming_designation = yes
+				libra_has_fortress_designation = yes
+				libra_has_factory_designation = yes
+			}
+		}
+		modifier = {
+			add = 100
+			has_building = building_biolab_3
+			nor = {
+				has_building = building_physics_lab_3
+				has_building = building_engineering_facility_3
+			}
+		}
+	}
+}
+
+decision_libra_may_storm_2 = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = default
+
+	enactment_time = 0
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_may_storm
+			has_authority = auth_democratic
+		}
+		not = { has_modifier = libra_may_storm_mod_2 }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+		}
+		cost = {
+			minerals = 50
+			multiplier = trigger:planet_size
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { has_modifier = libra_may_storm_mod_3 }
+			remove_modifier = libra_may_storm_mod_3
+		}
+		if = {
+			limit = { has_modifier = libra_may_storm_mod_1 }
+			remove_modifier = libra_may_storm_mod_1
+		}
+		add_modifier = {
+			modifier = libra_may_storm_mod_2
+			clear_on_owner_change = yes
+		}
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			nor = {
+				has_modifier = libra_may_storm_mod_1
+				has_modifier = libra_may_storm_mod_2
+				has_modifier = libra_may_storm_mod_3
+			}
+		}
+		modifier = {
+			add = 100
+			or = {
+				libra_has_mining_designation = yes
+				libra_has_industrial_designation = yes
+				libra_has_foundry_designation = yes
+			}
+		}
+		modifier = {
+			add = 100
+			has_building = building_engineering_facility_3
+			nor = {
+				has_building = building_physics_lab_3
+				has_building = building_biolab_3
+			}
+		}
+	}
+}
+
+decision_libra_may_storm_3 = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = default
+
+	enactment_time = 0
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_may_storm
+			has_authority = auth_democratic
+		}
+		not = { has_modifier = libra_may_storm_mod_3 }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+		}
+		cost = {
+			minerals = 50
+			multiplier = trigger:planet_size
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { has_modifier = libra_may_storm_mod_1 }
+			remove_modifier = libra_may_storm_mod_1
+		}
+		if = {
+			limit = { has_modifier = libra_may_storm_mod_2 }
+			remove_modifier = libra_may_storm_mod_2
+		}
+		add_modifier = {
+			modifier = libra_may_storm_mod_3
+			clear_on_owner_change = yes
+		}
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			nor = {
+				has_modifier = libra_may_storm_mod_1
+				has_modifier = libra_may_storm_mod_2
+				has_modifier = libra_may_storm_mod_3
+			}
+		}
+		modifier = {
+			add = 100
+			or = {
+				libra_has_generator_designation = yes
+				libra_has_trade_designation = yes
+				libra_has_unity_designation = yes
+			}
+		}
+		modifier = {
+			add = 100
+			has_building = building_physics_lab_3
+			nor = {
+				has_building = building_biolab_3
+				has_building = building_engineering_facility_3
+			}
+		}
+	}
+}
+
+decision_libra_may_storm_spiritualist_b = {
+	owned_planets_only = yes
+	sound = event_psionic
+	icon = decision_strategic_resources
+
+	enactment_time = 240
+
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_libra_may_storm_spiritualist_b }
+		num_uncleared_blockers > 0
+		libra_can_clear_blockers = yes
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	effect = {
+		clear_blockers = yes
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+#
+
+decision_libra_centurion_a = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_alien_propaganda
+
+	enactment_time = 360
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_centurion }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "decision_libra_centurion_a_fail"
+			exists = leader
+			leader = { is_councilor = yes }
+		}
+		owner = {
+			custom_tooltip = {
+				fail_text = "decision_libra_centurion_count_fail"
+				is_variable_set = libra_centurion_count
+				check_variable = {
+					which = libra_centurion_count
+					value > 0
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	on_queued = {
+		owner = { 
+			subtract_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = { 
+			change_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	abort_trigger = {
+		not = {
+			exists = leader
+			leader = { is_councilor = yes }
+		}
+	}
+
+	abort_effect = {
+		owner = { 
+			change_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_centurion_effect
+		owner = {
+			add_council_agenda_progress_percent = 1
+			custom_tooltip = decision_libra_centurion_a_effect
+			hidden_effect = {
+				 country_event = { id = libra_origin.1810 }
+			}
+		}
+		if = {
+			limit = {
+				owner = { is_variable_set = libra_centurion_count }
+			}
+			custom_tooltip = decision_libra_centurion_count
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 15
+			owner = {
+				or = {
+					council_agenda_progress_percent < 0.15
+					has_resource = { type = influence amount < 200 }
+				}
+			}
+		}
+	}
+}
+
+decision_libra_centurion_b = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_thought_police
+
+	enactment_time = 360
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_centurion }
+	}
+	
+	allow = {
+		has_planetary_ascension_tier < 9
+		owner = {
+			custom_tooltip = {
+				fail_text = "decision_libra_centurion_count_fail"
+				is_variable_set = libra_centurion_count
+				check_variable = {
+					which = libra_centurion_count
+					value > 0
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	on_queued = {
+		owner = { 
+			subtract_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = { 
+			change_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	abort_trigger = {
+		has_planetary_ascension_tier > 8
+	}
+
+	abort_effect = {
+		owner = { 
+			change_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_centurion_effect
+		custom_tooltip = decision_libra_centurion_b_effect
+		hidden_effect = {
+			planet_event = { id = libra_origin.1811 }
+		}
+		if = {
+			limit = {
+				owner = { is_variable_set = libra_centurion_count }
+			}
+			custom_tooltip = decision_libra_centurion_count
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 15
+			sapient_pop_amount > 4000
+		}
+		modifier = {
+			add = 10
+			sapient_pop_amount > 6000
+		}
+	}
+}
+
+decision_libra_centurion_c = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_strategic_resources
+
+	enactment_time = 360
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_centurion }
+	}
+	
+	allow = {
+		is_capital = yes
+		owner = {
+			custom_tooltip = {
+				fail_text = "decision_libra_centurion_count_fail"
+				is_variable_set = libra_centurion_count
+				check_variable = {
+					which = libra_centurion_count
+					value > 0
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	on_queued = {
+		owner = { 
+			subtract_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = { 
+			change_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	abort_trigger = {
+		is_capital = no
+	}
+
+	abort_effect = {
+		owner = { 
+			change_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_centurion_effect
+		custom_tooltip = decision_libra_centurion_c_effect
+		hidden_effect = {
+			owner = { country_event = { id = libra_origin.1812 } }
+		}
+		if = {
+			limit = {
+				owner = { is_variable_set = libra_centurion_count }
+			}
+			custom_tooltip = decision_libra_centurion_count
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 15
+			owner = {
+				or = {
+					has_resource = { type = alloys amount < 2000 }
+					has_resource = { type = consumer_goods amount < 3000 }
+				}
+			}
+		}
+	}
+}
+
+decision_libra_centurion_d = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_martial_law
+
+	enactment_time = 360
+
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_libra_centurion }
+	}
+	
+	allow = {
+		has_active_building = building_libra_centurion_mirror
+		owner = {
+			custom_tooltip = {
+				fail_text = "decision_libra_centurion_count_fail"
+				is_variable_set = libra_centurion_count
+				check_variable = {
+					which = libra_centurion_count
+					value > 0
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	on_queued = {
+		owner = { 
+			subtract_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = { 
+			change_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	abort_trigger = {
+		not = { has_active_building = building_libra_centurion_mirror }
+	}
+
+	abort_effect = {
+		owner = { 
+			change_variable = { which = libra_centurion_count value = 1 }
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_centurion_effect
+		custom_tooltip = decision_libra_centurion_d_effect
+		hidden_effect = {
+			owner = { country_event = { id = libra_origin.1813 } }
+		}
+		if = {
+			limit = {
+				owner = { is_variable_set = libra_centurion_count }
+			}
+			custom_tooltip = decision_libra_centurion_count
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 20
+			owner = {
+				is_variable_set = libra_centurion_count
+				check_variable = {
+					which = libra_centurion_count
+					value > 2
+				}
+			}
+		}
+	}
+}

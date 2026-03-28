@@ -1,0 +1,299 @@
+libra_nanite_shipyard_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 17 y = 17 }
+	build_time = 900
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2500
+			unity = 2500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 250
+		}
+	}
+	dismantle_time = 120
+	dismantle_potential = {
+		is_upgrading = no
+	}
+	dismantle_possible = {
+		can_dismantle_megastructure = {
+			TECH = tech_mega_engineering
+		}
+	}
+	should_ai_dismantle = {
+		from = {
+			not = {
+				has_tradition = tr_nanotech_finish
+			}
+		}
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 2500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
+
+	potential = { is_variable_set = libra_aa_path }
+	prerequisites = { "tech_libra_nanite_shipyard" }
+
+	construction_blocks_and_blocked_by = self_type
+	possible = {
+		hidden_trigger = {
+			exists = starbase
+		}
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_black_hole_neutron_star_pulsar"
+			NOT = {
+				is_star_class = sc_black_hole
+				is_star_class = sc_neutron_star
+				is_star_class = sc_pulsar
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOR = {
+				has_megastructure = libra_nanite_shipyard_0
+				has_megastructure = libra_nanite_shipyard_1
+				has_megastructure = libra_nanite_shipyard_2
+				#has_megastructure = libra_exd_starbase_1
+				#has_megastructure = libra_exd_starbase_2
+				#has_megastructure = libra_exd_starbase_3
+			}
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+		}
+	}
+
+	# root = system
+	# from = country
+	ai_weight = {
+		factor = 15
+
+		modifier = {
+			factor = 0.1
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}
+
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				NOT = {
+					owner = { is_same_value = from }
+				}
+			}
+		}
+	}
+
+	on_build_start = { }
+	on_build_cancel = { }
+	on_build_complete = { }
+}
+
+libra_nanite_shipyard_1 = {
+	entity = "libra_nanite_shipyard_1_entity"
+	construction_entity = "libra_nanite_shipyard_1_entity"
+	portrait = GFX_libra_nanite_shipyard_background
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 17 y = 17 }
+	build_time = 900
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2500
+			unity = 2500
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = libra_nanite_shipyard_order_a }
+			}
+			engineering_research = 180
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = libra_nanite_shipyard_order_b }
+			}
+			energy = 180
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = libra_nanite_shipyard_order_c }
+			}
+			nanites = 120
+		}
+		upkeep = {
+			alloys = 25
+		}
+	}
+
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 500
+		}
+	}
+	dismantle_time = 240
+	dismantle_potential = {
+		is_upgrading = no
+	}
+	dismantle_possible = {
+		can_dismantle_megastructure = {
+			TECH = tech_mega_engineering
+		}
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 5000
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
+
+	upgrade_from = {
+		libra_nanite_shipyard_0
+	}
+
+	prerequisites = { "tech_libra_nanite_shipyard" }
+
+	construction_blocks_and_blocked_by = none
+
+	ship_modifier = {
+		ship_starting_experience_add = 100
+	}
+	station_modifier = {
+		starbase_shipyard_capacity_add = 8
+	}
+	country_modifier = {
+		country_naval_cap_add = 40
+		country_resource_max_nanites_add = 20000
+	}
+}
+
+libra_nanite_shipyard_2 = {
+	entity = "libra_nanite_shipyard_2_entity"
+	construction_entity = "libra_nanite_shipyard_2_entity"
+	portrait = GFX_libra_nanite_shipyard_background
+	place_entity_on_planet_plane = no
+	entity_offset = { x = 17 y = 17 }
+	build_time = 900
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2500
+			unity = 2500
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = libra_nanite_shipyard_order_a }
+			}
+			engineering_research = 360
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = libra_nanite_shipyard_order_b }
+			}
+			energy = 360
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = libra_nanite_shipyard_order_c }
+			}
+			nanites = 240
+		}
+		upkeep = {
+			alloys = 50
+		}
+	}
+
+	dismantle_cost = {
+		category = megastructures
+		cost = {
+			energy = 750
+		}
+	}
+	dismantle_time = 360
+	dismantle_potential = {
+		is_upgrading = no
+	}
+	dismantle_possible = {
+		can_dismantle_megastructure = {
+			TECH = tech_mega_engineering
+		}
+	}
+	on_dismantle_complete = {
+		from = {
+			add_resource = {
+				alloys = 7500
+				mult = modifier:megastructure_dismantle_refund_mult
+			}
+		}
+	}
+
+	upgrade_from = {
+		libra_nanite_shipyard_1
+	}
+
+	prerequisites = { "tech_libra_nanite_shipyard" }
+
+	construction_blocks_and_blocked_by = none
+
+	ship_modifier = {
+		ship_starting_experience_add = 100
+	}
+	station_modifier = {
+		starbase_shipyard_capacity_add = 12
+	}
+	country_modifier = {
+		country_naval_cap_add = 80
+		country_resource_max_nanites_add = 30000
+	}
+}

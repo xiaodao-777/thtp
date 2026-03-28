@@ -1,0 +1,1099 @@
+@base_agenda_cost = 7000
+@half_agenda_cost = 3500
+
+agenda_libra_adventure = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_adventure_adopt
+	}
+
+	modifier = {
+		ship_hyperlane_range_add = 1
+		starbase_outpost_cost_mult = -0.15
+		planet_colony_development_speed_mult = 0.25
+	}
+ 	finish_modifier = agenda_libra_adventure_finish_modifier
+	effect = {
+		custom_tooltip = decision_libra_adventure_finish_effect
+		hidden_effect = {
+			country_event = { id = libra_fairy.1502 }
+			country_event = { id = libra_fairy.1502 days = 1 }
+			country_event = { id = libra_main.1003 days = 2 }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			years_passed < 25
+		}
+		modifier = {
+			factor = 3
+			count_exhibit = {
+				limit = { contains_specimen = yes }
+				count < 10
+			}
+		}
+		modifier = {
+			factor = 4
+			count_exhibit = {
+				limit = { contains_specimen = yes }
+				count < 20
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_ceremony_a = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_ceremony_adopt
+	}
+
+	modifier = {
+		country_produces_mult = 0.05
+	}
+ 	finish_modifier = agenda_libra_ceremony_a_finish_modifier
+	effect = {
+		if = {
+			limit = { is_variable_set = libra_ceremony_count }
+			custom_tooltip = agenda_libra_ceremony_a_character_effect
+		}
+		custom_tooltip = agenda_libra_ceremony_a_finish_effect
+		hidden_effect = {
+			country_event = { id = libra_fairy.1520 }
+		}
+	}
+
+	ai_weight = {
+		base = 100
+		modifier = {
+			factor = 2
+			years_passed < 40
+		}
+	}
+}
+
+agenda_libra_ceremony_b = {
+	agenda_cost = @base_agenda_cost
+	potential = {
+		has_tradition = tr_libra_ceremony_finish
+	}
+
+	modifier = {
+		country_agendas_influence_produces_add = 0.5
+	}
+ 	finish_modifier = agenda_libra_ceremony_b_finish_modifier
+	effect = {
+		if = {
+			limit = { is_variable_set = libra_ceremony_count }
+			custom_tooltip = agenda_libra_ceremony_b_character_effect
+		}
+		custom_tooltip = agenda_libra_ceremony_b_finish_effect
+		hidden_effect = {
+			country_event = { id = libra_fairy.1521 }
+		}
+	}
+
+	ai_weight = {
+		base = 200
+		modifier = {
+			factor = 2
+			has_resource = {
+				type = influence
+				amount < 200
+			}
+		}
+		modifier = {
+			factor = 5
+			is_variable_set = libra_ceremony_count
+			check_variable = {
+				which = libra_ceremony_count
+				value > 11
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_meditation = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_meditation_adopt
+	}
+
+	modifier = {
+		country_physics_research_produces_mult = 0.05
+		country_society_research_produces_mult = 0.05
+		country_engineering_research_produces_mult = 0.05
+	}
+ 	finish_modifier = agenda_libra_meditation_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_meditation_finish_effect
+		hidden_effect = {
+			country_event = { id = libra_fairy.1530 }
+		}
+	}
+
+	ai_weight = {
+		base = 200
+		modifier = {
+			factor = 1.5
+			mid_game_years_passed > 0
+		}
+	}
+}
+
+#
+
+agenda_libra_imperium_a = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_imperium_adopt
+	}
+
+	modifier = {
+		planet_stability_mult = 0.05
+		diplo_weight_mult = 0.05
+		country_influence_produces_mult = 0.15
+		country_naval_coverage_mult = 0.15
+	}
+ 	finish_modifier = agenda_libra_imperium_a_finish_modifier
+
+	ai_weight = {
+		base = 200
+	}
+}
+
+agenda_libra_imperium_b = {
+	agenda_cost = @half_agenda_cost
+	potential = {
+		has_tradition = tr_libra_imperium_2
+	}
+
+	modifier = {
+		council_agenda_progress_speed = 0.25
+	}
+ 	finish_modifier = agenda_libra_imperium_b_finish_modifier
+	effect = {
+		if = {
+			limit = { is_gestalt = no }
+			custom_tooltip = agenda_libra_imperium_b_finish_effect
+			hidden_effect = {
+				country_event = { id = libra_fairy.1540 }
+			}
+		}
+		else = {
+			custom_tooltip = agenda_libra_imperium_b_finish_gestalt_effect
+			hidden_effect = {
+				country_event = { id = libra_fairy.1541 }
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_frugality = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_frugality_adopt
+	}
+
+	modifier = {
+		country_energy_produces_mult = 0.05
+		country_trade_produces_mult = 0.05
+	}
+ 	finish_modifier = agenda_libra_frugality_finish_modifier
+	effect = {
+		ordered_owned_planet = {
+			position = 0
+			order_by = trigger:sapient_pop_amount
+			custom_tooltip = agenda_libra_frugality_finish_effect
+			add_modifier = {
+				modifier = libra_frugality_finish_planet_modifier
+				days = 5400
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 225
+	}
+}
+
+#
+
+agenda_libra_introspection_a = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_introspection_adopt
+	}
+
+	modifier = {
+		leader_skill_add = 1
+	}
+ 	finish_modifier = agenda_libra_introspection_a_finish_modifier
+
+	ai_weight = {
+		base = 225
+	}
+}
+
+agenda_libra_introspection_b = {
+	agenda_cost = @base_agenda_cost
+ 	agenda_cooldown = 5400
+	potential = {
+		has_tradition = tr_libra_introspection_3
+	}
+
+ 	finish_modifier = agenda_libra_introspection_b_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_introspection_b_finish_effect
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_base_skill < 10
+					num_leader_traits = {
+						value > 0
+						negative = yes
+					}
+				}
+				while = {
+					count = value:leader_num_negative_leader_trait_tiers
+					add_experience = 1200
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_libra_degeneracy_adopt
+		}
+	}
+}
+
+agenda_libra_introspection_c = {
+	agenda_cost = @base_agenda_cost
+	potential = {
+		has_tradition = tr_libra_introspection_finish
+	}
+
+ 	finish_modifier = agenda_libra_introspection_c_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_introspection_c_finish_effect
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					num_leader_traits = {
+						value > 0
+						negative = yes
+					}
+				}
+				if = {
+					limit = { has_base_skill < 10 }
+					add_experience = 800
+				}
+				change_variable = {
+					which = leader_pending_negative_traits_unmodified
+					value = value:leader_num_negative_leader_trait_tiers
+				}
+				remove_trait = all_negative
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			has_tradition = tr_libra_degeneracy_adopt
+		}
+	}
+}
+
+#
+
+agenda_libra_construmcracy = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_construmcracy_adopt
+	}
+
+	modifier = {
+		megastructure_build_speed_mult = 0.15
+		planet_building_build_speed_mult = 0.15
+	}
+ 	finish_modifier = agenda_libra_construmcracy_finish_modifier
+	effect = {
+		ordered_owned_planet = {
+			limit = { sapient_pop_amount > 0 }
+			position = 0
+			order_by = trigger:colony_age
+			inverse = yes
+			custom_tooltip = agenda_libra_construmcracy_finish_effect
+			add_modifier = {
+				modifier = libra_construmcracy_finish_planet_modifier
+				days = 9000
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			or = {
+				years_passed < 40
+				has_technology = tech_mega_engineering
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_overclock = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_overclock_adopt
+	}
+
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_jobs_upkeep_mult = 0.05
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.05
+	}
+ 	finish_modifier = agenda_libra_overclock_finish_modifier
+
+
+	ai_weight = {
+		base = 200
+	}
+}
+
+#
+
+agenda_libra_degeneracy_a = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_degeneracy_adopt
+	}
+
+	modifier = {
+		planet_crime_add = -5
+		country_unity_produces_mult = 0.05
+		founder_species_growth_mult = 0.05
+	}
+ 	finish_modifier = agenda_libra_degeneracy_a_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_degeneracy_a_finish_effect
+		hidden_effect = {
+			change_variable = { which = libra_degeneracy_decision_count value = 3 }
+		}
+	}
+
+	ai_weight = {
+		base = 225
+		modifier = {
+			factor = 2
+			libra_ai_preferences_population = yes
+		}
+	}
+}
+
+agenda_libra_degeneracy_b = {
+	agenda_cost = @base_agenda_cost
+	potential = {
+		has_tradition = tr_libra_degeneracy_finish
+	}
+
+	modifier = {
+		council_agenda_progress_speed = 0.15
+	}
+ 	finish_modifier = agenda_libra_degeneracy_b_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_degeneracy_b_finish_effect
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					is_event_leader = no
+					or = {
+						is_hidden = no
+						is_councilor = yes
+					}
+					or = {
+						has_leader_flag = libra_has_corrupt_leader_trait
+						not = { has_leader_flag = immune_to_negative_traits }
+					}
+					num_leader_traits = {
+						value < 6
+						count_tiers = yes
+						negative = yes
+					}
+				}
+				random = {
+					chance = 33
+					add_trait = {
+						trait = random_negative
+						show_message = yes
+					}
+					change_variable = {
+						which = leader_pending_negative_traits_unmodified
+						value = -1
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 600
+	}
+}
+
+#
+
+agenda_libra_pendragon = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_pendragon_adopt
+	}
+
+	modifier = {
+		shipclass_military_build_speed_mult = 0.25
+		country_society_tech_research_speed = 0.15
+	}
+ 	finish_modifier = agenda_libra_pendragon_finish_modifier
+	effect = {
+		if = {
+			limit = {
+				count_situation = {
+					count < 2
+					limit = { is_situation_type = situation_libra_pendragon }
+				}
+			}
+			start_situation = {
+				type = situation_libra_pendragon
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 500
+		modifier = {
+			factor = 1.25
+			is_variable_set = libra_pendragon_count
+			check_variable = {
+				which = libra_pendragon_count
+				value < 4
+			}
+		}
+		modifier = {
+			factor = 1.6
+			or = {
+				is_at_war = yes
+				has_crisis = yes
+				end_game_years_passed >= 0
+			}
+		}
+	}
+}
+
+agenda_libra_victory = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_victory_adopt
+	}
+
+	modifier = {
+		planet_engineers_engineering_research_produces_add = 1
+		planet_engineers_energy_upkeep_add = 1
+		commander_skill_add = 1
+	}
+ 	finish_modifier = agenda_libra_victory_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_victory_finish_effect
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_base_skill <= 10
+					leader_class = commander
+				}
+				if = {
+					limit = {
+						not = { has_trait = leader_trait_libra_victory }
+					}
+					add_trait = {
+						trait = leader_trait_libra_victory
+						show_message = no
+					}
+				}
+				else_if = {
+					limit = {
+						has_base_skill < 10
+					}
+					add_experience = 1000
+				}
+			}
+			create_message = {
+				type = MESSAGE_ALL_GAINED_TRAIT
+				localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+				days = @toast_message_days
+				variable = {
+					type = key
+					value = leader_trait_libra_victory
+					localization = TRAIT
+				}
+				variable = {
+					key = TRAIT_KEY
+					value = leader_trait_libra_victory
+				}
+				variable = {
+					key = "border"
+					value = "GFX_invisible"
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 400
+		modifier = {
+			factor = 2
+			or = {
+				is_at_war = yes
+				has_crisis = yes
+				end_game_years_passed >= 0
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_grandmastery_a = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_grandmastery_adopt
+	}
+
+	modifier = {
+		country_edict_fund_add = 200
+	}
+ 	finish_modifier = agenda_libra_grandmastery_a_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_grandmastery_a_finish_effect
+		hidden_effect = {
+			country_event = { id = libra_fairy.1610 }
+		}
+	}
+
+	ai_weight = {
+		base = 500
+	}
+}
+
+agenda_libra_grandmastery_b = {
+	agenda_cost = @base_agenda_cost
+	potential = {
+		has_tradition = tr_libra_grandmastery_finish
+	}
+
+	modifier = {
+		country_edict_fund_add = 200
+	}
+ 	finish_modifier = agenda_libra_grandmastery_b_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_grandmastery_b_finish_effect
+		hidden_effect = {
+			country_event = { id = libra_fairy.1612 }
+		}
+	}
+
+	ai_weight = {
+		base = 500
+	}
+}
+
+#
+
+agenda_libra_sumptuary = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_sumptuary_adopt
+	}
+
+	modifier = {
+		planet_stability_mult = 0.1
+		bonus_automated_workforce_mult = 0.1
+	}
+ 	finish_modifier = agenda_libra_sumptuary_finish_modifier
+	effect = {
+		ordered_owned_planet = {
+			limit = { sapient_pop_amount > 0 }
+			position = 0
+			order_by = trigger:free_amenities
+			custom_tooltip = agenda_libra_sumptuary_finish_effect
+			add_modifier = {
+				modifier = libra_sumptuary_finish_planet_modifier
+				days = 3600
+			}
+		}
+	}
+
+	ai_weight = {
+	}
+}
+
+#
+
+agenda_libra_occlusion = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_occlusion_adopt
+	}
+
+	modifier = {
+		diplo_weight_mult = -0.15
+		planet_army_build_speed_mult = 0.25
+		starbase_shipyard_build_speed_mult = 0.25
+		shipsize_military_station_small_build_speed_mult = 0.25
+	}
+ 	finish_modifier = agenda_libra_occlusion_finish_modifier
+
+	ai_weight = {
+		modifier = {
+			set = 650
+			or = {
+				is_at_war = yes
+				has_crisis = yes
+				recently_lost_war = yes
+				end_game_years_passed >= 0
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_profundity = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_profundity_adopt
+	}
+
+	modifier = {
+		diplo_weight_technology_mult = 0.15
+		country_physics_research_produces_mult = 0.05
+		country_society_research_produces_mult = 0.05
+		country_engineering_research_produces_mult = 0.05
+	}
+ 	finish_modifier = agenda_libra_profundity_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_profundity_effect
+		hidden_effect = {
+			country_event = { id = libra_fairy.1630 }
+		}
+	}
+
+	ai_weight = {
+		base = 300
+	}
+}
+
+#
+
+agenda_libra_drudgery = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_drudgery_adopt
+	}
+
+	modifier = {
+		country_minerals_produces_mult = 0.1
+		country_food_produces_mult = 0.1
+	}
+ 	finish_modifier = agenda_libra_drudgery_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_drudgery_effect
+		hidden_effect = {
+			country_event = { id = libra_fairy.1640 }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 3
+			or = {
+				has_deficit = minerals
+				has_deficit = food
+			}
+		}
+		modifier = {
+			factor = 3
+			count_enslaved_species = {
+				count > 0
+			}
+			or = {
+				has_deficit = energy
+				has_deficit = trade
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_autarchy = {
+	agenda_cost = @base_agenda_cost
+	agenda_finish_modifier_duration = 1800
+	allow = {
+		has_tradition = tr_libra_autarchy_adopt
+	}
+
+	modifier = {
+		country_starbase_influence_cost_mult = -0.25
+		starbase_upgrade_cost_mult = -0.25
+	}
+ 	finish_modifier = agenda_libra_autarchy_finish_modifier
+
+	ai_weight = {
+		base = 275
+	}
+}
+
+#
+
+agenda_libra_cosmoplasty = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_cosmoplasty_adopt
+	}
+
+	modifier = {
+		megastructures_cost_mult = -0.1
+	}
+ 	finish_modifier = agenda_libra_cosmoplasty_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_cosmoplasty_finish_effect
+		hidden_effect = {
+			every_owned_planet = {
+				limit = {
+					or = {
+						is_artificial = yes
+						has_any_megastructure = yes
+						has_planet_flag = has_megastructure
+					}
+				}
+				add_modifier = {
+					modifier = libra_cosmoplasty_planet_modifier
+					days = 1800
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			has_technology = tech_mega_engineering
+		}
+	}
+}
+
+#
+
+agenda_libra_magnificence = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_magnificence_adopt
+	}
+
+	modifier = {
+		country_megastructure_build_cap_add = 1
+	}
+ 	finish_modifier = agenda_libra_magnificence_finish_modifier_1
+	effect = {
+		custom_tooltip = agenda_libra_magnificence_finish_effect
+		hidden_effect = {
+			every_owned_megastructure = {
+				remove_modifier = agenda_libra_magnificence_finish_modifier_2
+				add_modifier = {
+					modifier = agenda_libra_magnificence_finish_modifier_2
+					days = 5400
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 275
+		modifier = {
+			add = 50
+			has_technology = tech_dyson_sphere
+		}
+		modifier = {
+			add = 50
+			has_technology = tech_matter_decompressor
+		}
+	}
+}
+
+agenda_libra_magnificence_a = {
+	agenda_cost = @half_agenda_cost
+ 	agenda_cooldown = 1800
+	potential = {
+		has_tradition = tr_libra_magnificence_1
+		nand = {
+			has_technology = tech_science_nexus
+			has_technology = tech_sentry_array
+			has_technology = tech_strategic_coordination
+			has_technology = tech_interstellar_assembly
+			has_technology = tech_mega_art
+			has_technology = tech_mega_shipyard
+			has_technology = tech_quantum_catapult
+		}
+	}
+
+	modifier = {
+		rare_tech_draw_chance_mult = -0.25
+	}
+	effect = {
+		custom_tooltip = agenda_libra_magnificence_a_finish_effect
+		hidden_effect = {
+			random_list = {
+				1 = {
+					modifier = {
+						factor = 0
+						has_technology = tech_science_nexus
+					}
+					add_tech_progress = { tech = tech_science_nexus progress = 0.75 }
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_technology = tech_sentry_array
+					}
+					add_tech_progress = { tech = tech_sentry_array progress = 0.75 }
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_technology = tech_strategic_coordination
+					}
+					add_tech_progress = { tech = tech_strategic_coordination progress = 0.75 }
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_technology = tech_interstellar_assembly
+					}
+					add_tech_progress = { tech = tech_interstellar_assembly progress = 0.75 }
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_technology = tech_mega_art
+					}
+					add_tech_progress = { tech = tech_mega_art progress = 0.75 }
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_technology = tech_mega_shipyard
+					}
+					add_tech_progress = { tech = tech_mega_shipyard progress = 0.75 }
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_technology = tech_quantum_catapult
+					}
+					add_tech_progress = { tech = tech_quantum_catapult progress = 0.75 }
+				}
+				
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 200
+		modifier = {
+			factor = 2.5
+			is_at_war = no
+			has_crisis = no
+		}
+	}
+}
+
+agenda_libra_magnificence_b = {
+	agenda_cost = @half_agenda_cost
+ 	agenda_cooldown = 14400
+	potential = {
+		has_tradition = tr_libra_magnificence_2
+	}
+
+	modifier = {
+		megastructure_build_speed_mult = -0.25
+	}
+	effect = {
+		custom_tooltip = agenda_libra_magnificence_b_finish_effect
+		hidden_effect = {
+			every_owned_megastructure = {
+				limit = { is_upgrading = yes }
+				finish_upgrade = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 200
+			any_owned_megastructure = { is_upgrading = yes }
+		}
+		modifier = {
+			add = 300
+			count_owned_megastructure = {
+				count > 2
+				limit = { is_upgrading = yes }
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_vector = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_vector_adopt
+	}
+
+	modifier = {
+		ship_evasion_mult = 0.05
+		ship_speed_mult = 0.1
+	}
+ 	finish_modifier = agenda_libra_vector_finish_modifier
+
+	ai_weight = {
+		modifier = {
+			set = 400
+			libra_ai_war_trigger = yes
+		}
+	}
+}
+
+#
+
+agenda_libra_havoc = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_havoc_adopt
+	}
+
+	modifier = {
+		ship_friendly_territory_armor_mult = 0.25
+		ship_friendly_territory_shield_mult = 0.25
+		ship_friendly_territory_fire_rate_mult = 0.15
+	}
+ 	finish_modifier = agenda_libra_havoc_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_havoc_finish_effect
+	}
+
+	ai_weight = {
+		modifier = {
+			set = 1000
+			libra_ai_war_trigger = yes
+		}
+	}
+}
+
+#
+
+agenda_libra_bastion = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_bastion_adopt
+	}
+
+	modifier = {
+		planet_orbital_bombardment_damage = -0.15
+		planet_storm_devastation_mult = -0.15
+	}
+ 	finish_modifier = agenda_libra_bastion_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_bastion_finish_effect
+		hidden_effect = {
+			every_owned_nonprimary_starbase = {
+				limit = {
+					fleet = { is_in_combat = no }
+					OR = {
+						is_orbital_ring = yes
+						is_space_citadel = yes
+					}
+					is_controlled_by = owner
+					used_defense_platform_capacity_percent < 1
+				}
+				spawn_free_defense_platform = yes
+				if = {
+					limit = { used_defense_platform_capacity_percent < 1 }
+					spawn_free_defense_platform = yes
+				}
+				if = {
+					limit = { used_defense_platform_capacity_percent < 1 }
+					spawn_free_defense_platform = yes
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			set = 1000
+			libra_ai_war_trigger = yes
+		}
+	}
+}
+
+#
+
+agenda_libra_suzerainty = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_libra_suzerainty_adopt
+	}
+
+	modifier = {
+		monthly_loyalty_from_subjects = 1
+	}
+ 	finish_modifier = agenda_libra_suzerainty_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_suzerainty_finish_effect
+		hidden_effect = {
+			every_subject = {
+				if = {
+					limit = { has_loyalty >= 100 }
+					country_event = { id = libra_fairy.1691 days = 6 }
+				}
+				else_if = {
+					limit = { has_loyalty >= 50 }
+					country_event = { id = libra_fairy.1692 days = 6 }
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			set = 1000
+			libra_ai_war_trigger = yes
+		}
+	}
+}

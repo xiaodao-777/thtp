@@ -1,0 +1,1085 @@
+# ####################
+# Astral Blade
+# ####################
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_MUTATION_BLAST"
+	prerequisites = { tech_libra_astral_blast }
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_astral_blast"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_s"
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_BLAST"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 60
+		}
+		cost = {
+			astral_threads = 12
+		}
+	}
+
+	damage = { min = 52 max = 113 }
+	windup = { min = 80 max = 90 }
+	total_fire_time = 15
+	range = 70
+	accuracy = 0.85
+	tracking = 0.6
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_MUTATION_BLAST"
+	prerequisites = { tech_libra_astral_blast }
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_astral_blast"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_s"
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_BLAST"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 116
+		}
+		cost = {
+			astral_threads = 20
+		}
+	}
+
+	damage = { min = 52 max = 113 }
+	windup = { min = 30 max = 40 }
+	total_fire_time = 15
+	range = 100
+	accuracy = 0.85
+	tracking = 0.45
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_MUTATION_BLAST"
+	prerequisites = { tech_libra_astral_blast }
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_blast"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_m"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_BLAST"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 228
+		}
+		cost = {
+			astral_threads = 28
+		}
+	}
+
+	damage = { min = 151 max = 212 }
+	windup = { min = 35 max = 45 }
+	total_fire_time = 15
+	range = 130
+	accuracy = 0.85
+	tracking = 0.3
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_BLAST"
+	prerequisites = { tech_libra_astral_blast }
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_blast"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_l"
+	tags = { weapon_type_energy x_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_BLAST"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 456
+		}
+		cost = {
+			astral_threads = 36
+		}
+	}
+
+	damage = { min = 366 max = 426 }
+	windup = { min = 40 max = 50 }
+	total_fire_time = 15
+	range = 160
+	accuracy = 0.85
+	tracking = 0.15
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	size_damage_factor = 0.01
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_MUTATION_TORPEDO"
+	prerequisites = { tech_libra_astral_torpedoes }
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_astral_torpedo"
+	icon_frame = 1
+	projectile_gfx = "neutron_torpedoes"
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_TORPEDO"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 60
+		}
+		cost = {
+			astral_threads = 12
+		}
+	}
+
+	damage = { min = 42 max = 56 }
+	windup = { min = 300 max = 340 }
+	total_fire_time = 20
+	max_range = 100
+	min_range = 45
+	accuracy = 0.75
+	tracking = 0.35
+	firing_arc = 25
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	size_damage_factor = 0.2
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_MUTATION_TORPEDO"
+	prerequisites = { tech_libra_astral_torpedoes }
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_astral_torpedo"
+	icon_frame = 1
+	projectile_gfx = "neutron_torpedoes"
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_TORPEDO"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 116
+		}
+		cost = {
+			astral_threads = 20
+		}
+	}
+
+	damage = { min = 42 max = 56 }
+	windup = { min = 140 max = 160 }
+	total_fire_time = 20
+	max_range = 125
+	min_range = 45
+	accuracy = 0.75
+	tracking = 0.25
+	firing_arc = 25
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	size_damage_factor = 0.2
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_MUTATION_TORPEDO"
+	prerequisites = { tech_libra_astral_torpedoes }
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_torpedo"
+	icon_frame = 1
+	projectile_gfx = "neutron_torpedoes"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_TORPEDO"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 228
+		}
+		cost = {
+			astral_threads = 28
+		}
+	}
+
+	damage = { min = 42 max = 56 }
+	windup = { min = 60 max = 70 }
+	total_fire_time = 20
+	max_range = 150
+	min_range = 45
+	accuracy = 0.75
+	tracking = 0.15
+	firing_arc = 25
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	size_damage_factor = 0.2
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_TORPEDO"
+	prerequisites = { tech_libra_astral_torpedoes }
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_torpedo"
+	icon_frame = 1
+	projectile_gfx = "neutron_torpedoes"
+	tags = { weapon_type_energy x_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_TORPEDO"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 456
+		}
+		cost = {
+			astral_threads = 36
+		}
+	}
+
+	damage = { min = 42 max = 56 }
+	windup = { min = 20 max = 25 }
+	total_fire_time = 20
+	max_range = 175
+	min_range = 45
+	accuracy = 0.75
+	tracking = 0.75
+	firing_arc = 25
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	size_damage_factor = 0.2
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+	prerequisites = { tech_libra_astral_mass_accelerator }
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_astral_mass_accelerator"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_s"
+	tags = { weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 60
+		}
+		cost = {
+			astral_threads = 12
+		}
+	}
+
+	damage = { min = 56 max = 96 }
+	windup = { min = 60 max = 80 }
+	total_fire_time = 10
+	range = 100
+	accuracy = 0.75
+	tracking = 0.7
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+	prerequisites = { tech_libra_astral_mass_accelerator }
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_astral_mass_accelerator"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_s"
+	tags = { weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 116
+		}
+		cost = {
+			astral_threads = 20
+		}
+	}
+
+	damage = { min = 56 max = 96 }
+	windup = { min = 20 max = 40 }
+	total_fire_time = 10
+	range = 100
+	accuracy = 0.75
+	tracking = 0.55
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+	prerequisites = { tech_libra_astral_mass_accelerator }
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_mass_accelerator"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_m"
+	tags = { weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 228
+		}
+		cost = {
+			astral_threads = 28
+		}
+	}
+
+	damage = { min = 170 max = 210 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10
+	range = 130
+	accuracy = 0.75
+	tracking = 0.4
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+	prerequisites = { tech_libra_astral_mass_accelerator }
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_mass_accelerator"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_l"
+	tags = { weapon_type_kinetic x_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 456
+		}
+		cost = {
+			astral_threads = 36
+		}
+	}
+
+	damage = { min = 436 max = 476 }
+	windup = { min = 40 max = 60 }
+	total_fire_time = 10
+	range = 160
+	accuracy = 0.75
+	tracking = 0.25
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	size_damage_factor = 0.01
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_MUTATION_FLAK"
+	prerequisites = { tech_libra_astral_flak_batteries }
+	size = small
+	type = point_defence
+	icon = "GFX_ship_part_libra_astral_flak_batteries"
+	icon_frame = 1
+	projectile_gfx = "flak_pd_3"
+	point_defence_targets = { "missile" "strike_craft" }
+	tags = { weapon_type_kinetic weapon_type_point_defense s_slot }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_hull }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_FLAK"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 60
+		}
+		cost = {
+			astral_threads = 12
+		}
+	}
+
+	damage = { min = 8 max = 15 }
+	windup = 7
+	total_fire_time = 3
+	range = 25
+	accuracy = 0.75
+	tracking = 0.95
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_MUTATION_FLAK"
+	prerequisites = { tech_libra_astral_flak_batteries }
+	size = medium
+	type = point_defence
+	icon = "GFX_ship_part_libra_astral_flak_batteries"
+	icon_frame = 1
+	projectile_gfx = "flak_pd_3"
+	point_defence_targets = { "missile" "strike_craft" }
+	tags = { weapon_type_kinetic weapon_type_point_defense m_slot }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_hull }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_FLAK"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 116
+		}
+		cost = {
+			astral_threads = 20
+		}
+	}
+
+	damage = { min = 8 max = 15 }
+	windup = 3
+	total_fire_time = 2
+	range = 30
+	accuracy = 0.75
+	tracking = 0.9
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_MUTATION_FLAK"
+	prerequisites = { tech_libra_astral_flak_batteries }
+	size = large
+	type = point_defence
+	icon = "GFX_ship_part_libra_astral_flak_batteries"
+	icon_frame = 1
+	projectile_gfx = "flak_pd_3"
+	point_defence_targets = { "missile" "strike_craft" }
+	tags = { weapon_type_kinetic weapon_type_point_defense l_slot }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_hull }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_FLAK"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 228
+		}
+		cost = {
+			astral_threads = 28
+		}
+	}
+
+	damage = { min = 16 max = 30 }
+	windup = 3
+	total_fire_time = 2
+	range = 35
+	accuracy = 0.75
+	tracking = 0.85
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_FLAK"
+	prerequisites = { tech_libra_astral_flak_batteries }
+	size = extra_large
+	type = point_defence
+	icon = "GFX_ship_part_libra_astral_flak_batteries"
+	icon_frame = 1
+	projectile_gfx = "flak_pd_3"
+	point_defence_targets = { "missile" "strike_craft" }
+	tags = { weapon_type_kinetic weapon_type_point_defense x_slot }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_hull }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MUTATION_FLAK"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 456
+		}
+		cost = {
+			astral_threads = 36
+		}
+	}
+
+	damage = { min = 32 max = 60 }
+	windup = 3
+	total_fire_time = 2
+	range = 40
+	accuracy = 0.75
+	tracking = 0.8
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+#
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_MUTATION_SHIELD"
+	size = small
+	icon = "GFX_ship_part_libra_astral_shield"
+	icon_frame = 1
+	prerequisites = { tech_libra_astral_shields }
+
+	modifier = {
+		ship_shield_add = 224
+		ship_shield_regen_add_static = 0.8
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.05
+	}
+
+	component_set = "LIBRA_ASTRAL_MUTATION_SHIELD"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 60
+		}
+		cost = {
+			astral_threads = 9
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_MUTATION_SHIELD"
+	size = medium
+	icon = "GFX_ship_part_libra_astral_shield"
+	icon_frame = 1
+	prerequisites = { tech_libra_astral_shields }
+
+	modifier = {
+		ship_shield_add = 560
+		ship_shield_regen_add_static = @regen_S7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.05
+	}
+
+	component_set = "LIBRA_ASTRAL_MUTATION_SHIELD"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 116
+		}
+		cost = {
+			astral_threads = 14
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_MUTATION_SHIELD"
+	size = large
+	icon = "GFX_ship_part_libra_astral_shield"
+	icon_frame = 1
+	prerequisites = { tech_libra_astral_shields }
+
+	modifier = {
+		ship_shield_add = 1400
+		ship_shield_regen_add_static = @regen_M7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.05
+	}
+
+	component_set = "LIBRA_ASTRAL_MUTATION_SHIELD"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 228
+		}
+		cost = {
+			astral_threads = 18
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_SHIELD"
+	size = extra_large
+	icon = "GFX_ship_part_libra_astral_shield"
+	icon_frame = 1
+	prerequisites = { tech_libra_astral_shields }
+
+	modifier = {
+		ship_shield_add = 3360
+		ship_shield_regen_add_static = @regen_L7
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.05
+	}
+
+	component_set = "LIBRA_ASTRAL_MUTATION_SHIELD"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 456
+		}
+		cost = {
+			astral_threads = 24
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_MUTATION_ARMOR"
+	size = small
+	icon = "GFX_ship_part_libra_astral_armor"
+	icon_frame = 1
+	prerequisites = { tech_libra_astral_armor }
+
+	modifier = {
+		ship_armor_add = 224
+		ship_armor_regen_add_static = 0.8
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.05
+	}
+
+	component_set = "LIBRA_ASTRAL_MUTATION_ARMOR"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 60
+		}
+		cost = {
+			astral_threads = 9
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_MUTATION_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_libra_astral_armor"
+	icon_frame = 1
+	prerequisites = { tech_libra_astral_armor }
+
+	modifier = {
+		ship_armor_add = 560
+		ship_armor_regen_add_static = @regen_S7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.05
+	}
+
+	component_set = "LIBRA_ASTRAL_MUTATION_ARMOR"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 116
+		}
+		cost = {
+			astral_threads = 14
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_MUTATION_ARMOR"
+	size = large
+	icon = "GFX_ship_part_libra_astral_armor"
+	icon_frame = 1
+	prerequisites = { tech_libra_astral_armor }
+
+	modifier = {
+		ship_armor_add = 1400
+		ship_armor_regen_add_static = @regen_M7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.05
+	}
+
+	component_set = "LIBRA_ASTRAL_MUTATION_ARMOR"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 228
+		}
+		cost = {
+			astral_threads = 18
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_ARMOR"
+	size = extra_large
+	icon = "GFX_ship_part_libra_astral_armor"
+	icon_frame = 1
+	prerequisites = { tech_libra_astral_armor }
+
+	modifier = {
+		ship_armor_add = 3360
+		ship_armor_regen_add_static = @regen_L7
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = 0.05
+	}
+
+	component_set = "LIBRA_ASTRAL_MUTATION_ARMOR"
+	resources = {
+		category = ship_components
+		inline_script = {
+			script = "grand_archive/mutations/component_dynamic_cost"
+			COST = 456
+		}
+		cost = {
+			astral_threads = 24
+		}
+	}
+
+	ai_weight = {
+		weight = 55
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}

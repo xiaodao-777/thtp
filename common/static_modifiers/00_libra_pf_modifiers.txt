@@ -1,0 +1,452 @@
+libra_planet_feature_modifier_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_0.dds"
+	icon_frame = 1
+	planetary_ascension_cost_mult = -0.15
+	planet_jobs_produces_mult = 0.05
+}
+libra_planet_feature_modifier_0_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_0.dds"
+	icon_frame = 1
+	planetary_ascension_cost_mult = -0.15
+	planet_jobs_produces_mult = 0.1
+	planet_buildings_produces_mult = 0.1
+}
+libra_planet_feature_modifier_0_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_0.dds"
+	icon_frame = 1
+	planetary_ascension_cost_mult = -0.15
+	planet_jobs_produces_mult = 0.15
+}
+libra_planet_feature_modifier_0_c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_0.dds"
+	icon_frame = 3
+	planet_jobs_produces_mult = -0.1
+	planet_buildings_produces_mult = -0.1
+}
+
+libra_planet_feature_modifier_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_1.dds"
+	icon_frame = 1
+	planet_stability_add = 5
+	planet_jobs_produces_mult = 0.05
+}
+libra_planet_feature_modifier_1_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_1.dds"
+	icon_frame = 1
+	planet_stability_add = 10
+}
+libra_planet_feature_modifier_1_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_1.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.1
+}
+libra_planet_feature_modifier_1_c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_1.dds"
+	icon_frame = 1
+	planet_stability_add = 10
+	planet_jobs_produces_mult = 0.1
+}
+
+libra_planet_feature_modifier_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_2.dds"
+	icon_frame = 1
+	planet_amenities_add = 100
+}
+libra_planet_feature_modifier_2_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_2.dds"
+	icon_frame = 1
+	planet_amenities_add = 200
+}
+libra_planet_feature_modifier_2_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_2.dds"
+	icon_frame = 2
+	planet_max_districts_add = -1
+	planet_amenities_add = 200
+}
+
+libra_planet_feature_modifier_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_3.dds"
+	icon_frame = 1
+	planet_housing_add = 100
+}
+libra_planet_feature_modifier_3_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_3.dds"
+	icon_frame = 1
+	planet_housing_add = 150
+}
+libra_planet_feature_modifier_3_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_3.dds"
+	icon_frame = 1
+	planet_housing_add = 200
+}
+
+libra_planet_feature_modifier_4 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_4.dds"
+	icon_frame = 1
+	planet_structures_cost_mult = -0.1
+}
+libra_planet_feature_modifier_4_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_4.dds"
+	icon_frame = 1
+	planet_structures_cost_mult = -0.15
+}
+libra_planet_feature_modifier_4_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_4.dds"
+	icon_frame = 1
+	pop_environment_tolerance = -0.1
+	planet_max_districts_add = 1
+	planet_structures_cost_mult = -0.1
+}
+
+libra_planet_feature_modifier_5 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_5.dds"
+	icon_frame = 1
+	planet_pop_assembly_mult = 0.1
+	bonus_pop_growth_mult = 0.1
+}
+libra_planet_feature_modifier_5_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_5.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.1
+	planet_pops_organics_upkeep_mult = -0.1
+}
+libra_planet_feature_modifier_5_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_5.dds"
+	icon_frame = 1
+	planet_pop_assembly_mult = 0.2
+	bonus_pop_growth_mult = 0.2
+}
+
+libra_planet_feature_modifier_6 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_6.dds"
+	icon_frame = 1
+	planet_max_districts_add = 2
+}
+libra_planet_feature_modifier_6_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_6.dds"
+	icon_frame = 1
+	planet_max_districts_add = 1
+}
+libra_planet_feature_modifier_6_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_6.dds"
+	icon_frame = 1
+	planet_max_districts_add = 4
+}
+
+libra_planet_feature_modifier_7 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_7.dds"
+	icon_frame = 1
+	planet_soldiers_society_research_produces_add = 1
+}
+libra_planet_feature_modifier_7_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_7.dds"
+	icon_frame = 1
+	pop_environment_tolerance = -0.2
+	planet_soldiers_society_research_produces_add = 1
+}
+libra_planet_feature_modifier_7_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_7.dds"
+	icon_frame = 1
+	planet_researchers_produces_mult = 0.2
+	planet_soldiers_society_research_produces_add = 1
+}
+libra_planet_feature_modifier_7_c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_7.dds"
+	icon_frame = 1
+	planet_researchers_produces_mult = 0.1
+	planet_soldiers_society_research_produces_add = 1.5
+}
+
+libra_planet_feature_modifier_8 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_8.dds"
+	icon_frame = 2
+	planet_jobs_produces_mult = 0.1
+	planet_buildings_produces_mult = 0.1
+	planet_jobs_upkeep_mult = 0.05
+	planet_buildings_upkeep_mult = 0.05
+}
+libra_planet_feature_modifier_8_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_8.dds"
+	icon_frame = 2
+	planet_jobs_produces_mult = 0.2
+	planet_buildings_produces_mult = 0.2
+	planet_jobs_upkeep_mult = 0.1
+	planet_buildings_upkeep_mult = 0.1
+}
+libra_planet_feature_modifier_8_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_8.dds"
+	icon_frame = 2
+	planet_jobs_produces_mult = 0.4
+	planet_buildings_produces_mult = 0.4
+	planet_jobs_upkeep_mult = 0.2
+	planet_buildings_upkeep_mult = 0.2
+}
+libra_planet_feature_modifier_8_c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_8.dds"
+	icon_frame = 2
+	planet_jobs_produces_mult = 1
+	planet_buildings_produces_mult = 1
+	planet_jobs_upkeep_mult = 1
+	planet_buildings_upkeep_mult = 1
+}
+
+libra_planet_feature_modifier_9 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_9.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.1
+	planet_farmers_food_produces_add = -1
+	planet_farmers_energy_produces_add = 1
+	planet_farmers_volatile_motes_produces_add = 0.05
+}
+libra_planet_feature_modifier_9_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_9.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.4
+	planet_farmers_food_produces_add = -1
+	planet_farmers_volatile_motes_produces_add = 0.2
+}
+libra_planet_feature_modifier_9_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_9.dds"
+	icon_frame = 1
+	planet_farmers_energy_produces_add = 0.5
+	planet_farmers_volatile_motes_produces_add = 0.05
+}
+libra_planet_feature_modifier_9_c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_9.dds"
+	icon_frame = 1
+	planet_farmers_volatile_motes_produces_add = 0.1
+}
+
+libra_planet_feature_modifier_10 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_10.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.15
+	planet_farmers_minerals_produces_add = 1
+	planet_farmers_exotic_gases_produces_add = 0.05
+}
+libra_planet_feature_modifier_10_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_10.dds"
+	icon_frame = 1
+	planet_miners_exotic_gases_produces_add = 0.1
+	planet_farmers_exotic_gases_produces_add = 0.1
+}
+libra_planet_feature_modifier_10_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_10.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.3
+	planet_farmers_exotic_gases_produces_add = 0.1
+}
+libra_planet_feature_modifier_10_c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_10.dds"
+	icon_frame = 1
+	planet_farmers_minerals_produces_add = 1
+	planet_farmers_exotic_gases_produces_add = 0.05
+}
+
+libra_planet_feature_modifier_11 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_11.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.15
+	planet_technician_energy_produces_add = 1
+	planet_miners_energy_produces_add = 1
+}
+libra_planet_feature_modifier_11_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_11.dds"
+	icon_frame = 1
+	planet_technician_energy_produces_add = 1
+	planet_miners_energy_produces_add = 1
+}
+libra_planet_feature_modifier_11_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_11.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.35
+	planet_technician_energy_produces_add = 2
+	planet_miners_energy_produces_add = 2
+}
+libra_planet_feature_modifier_11_c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_11.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.05
+	planet_technician_energy_produces_add = 1
+	planet_miners_energy_produces_add = 1
+}
+
+libra_planet_feature_modifier_12 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_12.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.1
+	planet_jobs_produces_mult = 0.1
+}
+libra_planet_feature_modifier_12_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_12.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.15
+}
+
+libra_planet_feature_modifier_13 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_13.dds"
+	icon_frame = 2
+	planet_building_build_speed_mult = -0.25
+	planet_biologists_society_research_produces_add = 0.5
+	planet_biologists_minor_artifacts_produces_add = 0.05
+}
+libra_planet_feature_modifier_13_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_13.dds"
+	icon_frame = 1
+	planet_biologists_society_research_produces_add = 0.5
+	planet_biologists_minor_artifacts_produces_add = 0.05
+}
+libra_planet_feature_modifier_13_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_13.dds"
+	icon_frame = 2
+	planet_building_build_speed_mult = -0.25
+	planet_biologists_society_research_produces_add = 1
+	planet_biologists_minor_artifacts_produces_add = 0.1
+}
+
+libra_planet_feature_modifier_14 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_14.dds"
+	icon_frame = 2
+	planet_clear_blocker_speed_mult = -0.2
+	planet_building_build_speed_mult = -0.2
+	planet_miners_alloys_produces_add = 0.25
+	planet_engineers_engineering_research_produces_add = 0.5
+}
+libra_planet_feature_modifier_14_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_14.dds"
+	icon_frame = 1
+	planet_miners_alloys_produces_add = 0.5
+}
+libra_planet_feature_modifier_14_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_14.dds"
+	icon_frame = 1
+	planet_miners_alloys_produces_add = 0.5
+	planet_engineers_engineering_research_produces_add = 0.5
+}
+libra_planet_feature_modifier_14_c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_14.dds"
+	icon_frame = 1
+	planet_clear_blocker_speed_mult = -0.15
+	planet_building_build_speed_mult = -0.15
+	planet_miners_alloys_produces_add = 0.5
+	planet_engineers_engineering_research_produces_add = 1
+}
+
+libra_planet_feature_modifier_15 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_15.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.1
+	planet_carry_cap_add = -1000
+	planet_researchers_produces_mult = 0.25
+	planet_jobs_society_research_produces_mult = 0.25
+}
+libra_planet_feature_modifier_15_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_15.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.05
+	planet_carry_cap_add = -500
+	planet_researchers_produces_mult = 0.3
+	planet_jobs_society_research_produces_mult = 0.3
+}
+libra_planet_feature_modifier_15_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_15.dds"
+	icon_frame = 1
+	planet_researchers_produces_mult = 0.35
+	planet_jobs_society_research_produces_mult = 0.35
+}
+
+libra_planet_feature_modifier_16 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_16.dds"
+	icon_frame = 1
+	planet_orbital_bombardment_damage = -0.25
+	planet_physicists_physics_research_produces_add = 0.5
+}
+libra_planet_feature_modifier_16_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_16.dds"
+	icon_frame = 1
+	planet_orbital_bombardment_damage = -0.5
+	planet_physicists_physics_research_produces_add = 0.5
+}
+libra_planet_feature_modifier_16_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_16.dds"
+	icon_frame = 1
+	planet_orbital_bombardment_damage = -0.25
+	planet_physicists_physics_research_produces_add = 1
+}
+
+libra_planet_feature_modifier_17 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_17.dds"
+	icon_frame = 1
+	planet_jobs_unity_produces_mult = 0.1
+	planet_bureaucrats_produces_mult = 0.1
+	planet_entertainers_produces_mult = 0.1
+}
+libra_planet_feature_modifier_17_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_17.dds"
+	icon_frame = 1
+	planet_jobs_unity_produces_mult = 0.2
+	planet_bureaucrats_produces_mult = 0.2
+	planet_entertainers_produces_mult = 0.2
+}
+
+libra_planet_feature_modifier_18 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_18.dds"
+	icon_frame = 1
+	planet_structures_cost_mult = -0.15
+}
+libra_planet_feature_modifier_18_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_18.dds"
+	icon_frame = 1
+	planet_building_build_speed_mult = 0.5
+	planet_structures_cost_mult = -0.15
+}
+libra_planet_feature_modifier_18_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_18.dds"
+	icon_frame = 2
+	planet_building_build_speed_mult = -0.15
+	planet_structures_cost_mult = -0.15
+}
+
+libra_planet_feature_modifier_19 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_19.dds"
+	icon_frame = 1
+	planet_jobs_alloys_produces_mult = 0.1
+	planet_buildings_alloys_produces_mult = 0.1
+	planet_jobs_consumer_goods_produces_mult = 0.1
+	planet_buildings_consumer_goods_produces_mult = 0.1
+}
+libra_planet_feature_modifier_19_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_19.dds"
+	icon_frame = 1
+	planet_jobs_alloys_produces_mult = 0.2
+	planet_buildings_alloys_produces_mult = 0.2
+	planet_jobs_consumer_goods_produces_mult = 0.2
+	planet_buildings_consumer_goods_produces_mult = 0.2
+}
+
+libra_planet_feature_modifier_20 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_20.dds"
+	icon_frame = 1
+	planet_farmers_food_produces_add = 0.5
+	planet_farmers_rare_crystals_produces_add = 0.1
+}
+libra_planet_feature_modifier_20_a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_20.dds"
+	icon_frame = 1
+	planet_farmers_food_produces_add = 0.5
+	planet_farmers_rare_crystals_produces_add = 0.15
+}
+libra_planet_feature_modifier_20_b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_20.dds"
+	icon_frame = 2
+	planet_farmers_food_produces_add = -0.5
+	planet_farmers_rare_crystals_produces_add = 0.15
+	planet_miners_rare_crystals_produces_add = 0.1
+}
+libra_planet_feature_modifier_20_c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_planet_feature_modifier_20.dds"
+	icon_frame = 2
+	planet_structures_cost_mult = 0.1
+	planet_farmers_food_produces_add = 0.5
+	planet_farmers_rare_crystals_produces_add = 0.2
+}

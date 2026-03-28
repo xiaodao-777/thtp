@@ -1,0 +1,128 @@
+tr_libra_victory_adopt = {
+	unlocks_agenda = agenda_libra_victory
+	modifier = {
+		damage_vs_superior_empires_mult = 0.25
+		damage_vs_player_crisis_mult = 0.25
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			or = {
+				has_tradition = tr_libra_pendragon_adopt
+				has_tradition = tr_libra_havoc_adopt
+			}
+		}
+		modifier = {
+			damage_vs_superior_empires_mult = 0.25
+			damage_vs_player_crisis_mult = 0.5
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_libra_pendragon_adopt
+			has_tradition = tr_libra_havoc_adopt
+		}
+		modifier = {
+			damage_vs_superior_empires_mult = 0.25
+			damage_vs_player_crisis_mult = 0.75
+		}
+	}
+	on_disabled = {
+		every_owned_leader = {	
+			remove_trait = leader_trait_libra_victory
+		}
+	}
+	possible = {
+		if = {
+			limit = { not = { has_origin = origin_libra_centurion } }
+			has_technology = tech_command_matrix
+		}
+	}
+}
+
+tr_libra_victory_finish = {
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = libra_origin.1833 }
+		}
+	}
+	modifier = {
+		ship_hull_mult = 0.15
+		country_commander_cap_add = 2
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_victory_1 = {
+	modifier = {
+		ship_weapon_damage = 0.15
+		ship_fire_rate_mult = 0.15
+		army_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_victory_2 = {
+	custom_tooltip = tr_libra_victory_2_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_victory_3 = {
+	modifier = {
+		ship_armor_hardening_add = 0.15
+		ship_shield_hardening_add = 0.15
+		army_health = 0.25
+	}
+
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tr_libra_victory_4 = {
+	possible = {
+		has_tradition = tr_libra_victory_1
+		has_tradition = tr_libra_victory_2
+	}
+	modifier = {
+		ship_speed_mult = 0.15
+	}
+	custom_tooltip = tr_libra_victory_4_desc
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { libra_war_effect_trigger = yes }
+		modifier = {
+			country_alloys_produces_mult = 0.15
+		}
+		custom_tooltip = tr_libra_victory_4_desc
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_victory_5 = {
+	possible = {
+		has_tradition = tr_libra_victory_2
+		has_tradition = tr_libra_victory_3
+	}
+	modifier = {
+		army_morale_damage_mult = 0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_victory_5_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}

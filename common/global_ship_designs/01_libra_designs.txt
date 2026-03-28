@@ -1,0 +1,379 @@
+ship_design = {
+	name = "NAME_Libra_Guardian_01"
+	ship_size = behemoth_04
+	is_event_design = yes
+
+	section = {
+		template = "behemoth_04_section"
+		slot = "mid"
+
+		component = {
+			slot = "PLANET_KILLER_GUN_01"
+			template = "PLANET_KILLER_MAW"
+		}
+
+		component = {
+			slot = "TITANIC_01"
+			template = "BEHEMOTH_TITAN_WEAPON"
+		}
+		component = {
+			slot = "TITANIC_02"
+			template = "BEHEMOTH_TITAN_WEAPON"
+		}
+		component = {
+			slot = "TITANIC_03"
+			template = "BEHEMOTH_TITAN_WEAPON"
+		}
+		component = {
+			slot = "TITANIC_04"
+			template = "BEHEMOTH_TITAN_WEAPON"
+		}
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "LIBRA_DRAGON_BREATH_3_X"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "LIBRA_DRAGON_BREATH_3_X"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "LIBRA_DRAGON_BREATH_LIGHT_X"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "LIBRA_DRAGON_BREATH_LIGHT_X"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "LIBRA_DRAGON_BREATH_DARK_X"
+		}
+		component = {
+			slot = "EXTRA_LARGE_06"
+			template = "LIBRA_DRAGON_BREATH_DARK_X"
+		}
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+		component = {
+			slot = "LARGE_GUN_09"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+		component = {
+			slot = "LARGE_GUN_10"
+			template = "LARGE_LIBRA_DRAGON_WING_SKEWER_A"
+		}
+
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_06"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_07"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_08"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_09"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_10"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_11"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_12"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_13"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_14"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_15"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+		component = {
+			slot = "MEDIUM_GUN_16"
+			template = "MEDIUM_LIBRA_DRAGONBORN_TORPEDO"
+		}
+
+		component = {
+			slot = "PD_01"
+			template = "SMALL_LIBRA_DRAGON_WING_SKEWER_C"
+		}
+		component = {
+			slot = "PD_02"
+			template = "SMALL_LIBRA_DRAGON_WING_SKEWER_C"
+		}
+		component = {
+			slot = "PD_03"
+			template = "SMALL_LIBRA_DRAGON_WING_SKEWER_C"
+		}
+		component = {
+			slot = "PD_04"
+			template = "SMALL_LIBRA_DRAGON_WING_SKEWER_C"
+		}
+		component = {
+			slot = "PD_05"
+			template = "SMALL_LIBRA_DRAGON_WING_SKEWER_C"
+		}
+		component = {
+			slot = "PD_06"
+			template = "SMALL_LIBRA_DRAGON_WING_SKEWER_C"
+		}
+		component = {
+			slot = "PD_07"
+			template = "SMALL_LIBRA_DRAGON_WING_SKEWER_C"
+		}
+		component = {
+			slot = "PD_08"
+			template = "SMALL_LIBRA_DRAGON_WING_SKEWER_C"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_21"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_22"
+			template = "LIBRA_DRAGONBORN_SHIELD"
+		}
+		component = {
+			slot = "LARGE_UTILITY_23"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_24"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_25"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_26"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_27"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_28"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_29"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_30"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_31"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_32"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_33"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_34"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_35"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_36"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_37"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_38"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_39"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_40"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_41"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_42"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_43"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_44"
+			template = "LIBRA_DRAGONBORN_ARMOR"
+		}
+	}
+	required_component = "BIO_HYPER_DRIVE_3"
+	required_component = "BIO_COMBAT_COMPUTER_ARTILLERY_PRECOG"
+	required_component = "BEHEMOTH_PROPULSION_4"
+	required_component = "BIOSHIP_SENSOR_4"
+	required_component = "SHIP_BEHEMOTH_RAGE"
+	required_component = "SHIP_BEHEMOTH_GROWTH"
+}

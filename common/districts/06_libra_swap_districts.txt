@@ -1,0 +1,23 @@
+district_libra_nexus_food = {
+	icon = district_farming
+	overlay_icon = GFX_district_food
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = agriculture_4
+	}
+
+	triggered_flavor_desc = {
+		text = agriculture_4_desc
+	}
+}

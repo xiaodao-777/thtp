@@ -1,0 +1,79 @@
+entity = {
+	name = "libra_automated_dreadnought_entity"
+	pdxmesh = "locator_mesh"
+	locator = { name = "part1" 	position = { 0 0 0 } }
+	locator = { name = "explosion" 	position = { 0 -15 -50 } }
+	cull_radius = 10.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "moving" state_time = 5 }
+	state = { name = "death" state_time = 8.9 looping = no
+		event = { time = 8.8 node = "explosion" particle = "dreadnought_explosion_particle" keep_particle = yes }
+	}
+
+	game_data = {
+		size = 32
+	}
+}
+
+entity = {
+	name = "libra_scavenger_bot_entity"
+	pdxmesh = "leviathan_01_scavenger_bot_frame_mesh"
+	
+	locator = { name = "part1" }
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" 
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_idle" stop_on_state_change = yes } }
+	}
+	state = { name = "working" animation = "idle" animation_blend_time = 5 
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_work_start" } }
+		event = { time = 5.0 trigger_once = yes sound = { soundeffect = "scavenger_bot_work_loop" stop_on_state_change = yes } }
+	}
+	state = { name = "moving" animation = "moving" animation_blend_time = 5 
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_move_start" } }
+		event = { time = 7.0 trigger_once = yes sound = { soundeffect = "scavenger_bot_move_loop" stop_on_state_change = yes } }
+	}
+	state = { name = "death" animation = "death" looping = no
+		event = { time = 4.73 node = "bot_1_explosion" 	particle = "small_player_ship_explosion_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 4.5 node = "bot_2_explosion" 	particle = "small_player_ship_explosion_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 4.93 node = "bot_3_explosion" 	particle = "small_player_ship_explosion_particle" keep_particle = yes trigger_once = yes }
+		event = { trigger_once = yes sound = { soundeffect = "scavenger_bot_death" } }
+	}
+
+	game_data = {
+		size = 40
+	}
+}
+
+entity = {
+	name = "libra_techno_sphere_entity"
+	pdxmesh = "locator_mesh"
+	
+	locator = { name = "part1"	position = { 0 0 0 } }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 11 looping = no
+		event = { time = 10.9 node = "part1" particle = "technosphere_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+	}
+
+	game_data = {
+		size = 45
+	}
+}
+
+entity = {
+	name = "libra_ancient_station_entity"
+	pdxmesh = "ancient_station_xl_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"	animation = "idle" }
+	state = { name = "death" animation = "death" looping = no 
+		event = { time = 6.5 particle = "technosphere_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+	}
+
+	game_data = {
+		size = 57
+	}
+}

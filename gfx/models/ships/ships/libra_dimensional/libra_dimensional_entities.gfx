@@ -1,0 +1,69 @@
+objectTypes = {
+	pdxmesh = {
+		name = "libra_psionic_warship_large_mesh"
+		file = "gfx/models/ships/extra_dimensional_01/extra_dimensional_large_ship.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+			texture_diffuse = "ship_mask_purple.dds"
+		}
+	}
+	pdxmesh = {
+		name = "libra_psionic_warship_medium_mesh"
+		file = "gfx/models/ships/extra_dimensional_01/extra_dimensional_medium_ship.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+			texture_diffuse = "ship_mask_purple.dds"
+		}
+	}
+	pdxmesh = {
+		name = "libra_psionic_warship_small_mesh"
+		file = "gfx/models/ships/extra_dimensional_01/extra_dimensional_small_ship.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+			texture_diffuse = "ship_mask_purple.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "libra_exd_starbase_1_mesh"
+		file = "gfx/models/ships/extra_dimensional_01/extra_dimensional_small_station.mesh"
+		scale = 3.0
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+			texture_diffuse = "ship_mask_purple.dds"
+		}
+	}
+	pdxmesh = {
+		name = "libra_exd_starbase_2_mesh"
+		file = "gfx/models/ships/extra_dimensional_01/extra_dimensional_large_station.mesh"
+		scale = 2.0
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+			texture_diffuse = "ship_mask_purple.dds"
+		}
+	}
+	pdxmesh = {
+		name = "libra_exd_starbase_3_mesh"
+		file = "gfx/models/ships/extra_dimensional_01/extra_dimensional_anchor_station.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"	type = "extra_dimensional_anchor_station_idle_animation" }
+		
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+			texture_diffuse = "ship_mask_purple.dds"
+		}
+	}
+	pdxmesh = {
+		name = "libra_exd_starbase_portal_mesh"
+		file = "gfx/models/ships/extra_dimensional_01/extra_dimensional_anchor_station_portal.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "libra_exd_starbase_portal_diffuse.dds"
+		}
+	}
+}

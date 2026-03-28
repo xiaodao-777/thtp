@@ -1,0 +1,759 @@
+@Edict1Cost = 20
+@Edict2Cost = 25
+@Edict3Cost = 30
+
+@EdictPerpetual = -1
+
+libra_meditation_campaign_1 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_meditation_adopt
+	}
+
+	modifier = {
+		country_border_friction_mult = -0.15
+		council_agenda_progress_speed = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+libra_meditation_campaign_2 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_meditation_1
+	}
+
+	modifier = {
+		ship_speed_mult = 0.15
+		ship_windup_mult = -0.05
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+libra_meditation_campaign_3 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_meditation_2
+	}
+
+	modifier = {
+		planet_decision_enact_speed_mult = 0.25
+		planet_building_build_speed_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+libra_meditation_campaign_4 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_meditation_5
+	}
+
+	modifier = {
+		ship_weapon_damage = 0.1
+		damage_vs_superior_empires_mult = 0.1
+		damage_vs_player_crisis_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			or = {
+				is_at_war = yes
+				has_crisis = yes
+				end_game_years_passed > 0
+			}
+		}
+	}
+}
+
+libra_meditation_campaign_5 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_meditation_5
+	}
+
+	modifier = {
+		pop_bonus_workforce_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_meditation_campaign_6 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_meditation_5
+	}
+
+	modifier = {
+		logistic_growth_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+		planet_pop_assembly_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+#
+
+libra_sumptuary_campaign_1 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_sumptuary_4
+	}
+
+	modifier = {
+		leader_lifespan_add = 25
+		founder_species_growth_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_sumptuary_campaign_2 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_sumptuary_5
+	}
+
+	modifier = {
+		planet_amenities_mult = 0.1
+		country_unity_produces_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+		modifier = {
+			weight = @EdictHighPrio
+			is_gestalt = yes
+		}
+	}
+}
+
+libra_sumptuary_campaign_3 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_sumptuary_5
+	}
+
+	modifier = {
+		country_traditions_influence_produces_add = 1
+		rivalries_unity_produces_add = 5
+		dangerous_tech_research_speed_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+#
+
+libra_occlusion_campaign_1 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_occlusion_3
+	}
+
+	allow = {
+		not = { has_edict = libra_occlusion_campaign_2 }
+	}
+
+	modifier = {
+		diplo_weight_mult = -0.1
+		diplo_weight_naval_mult = -0.15
+		ship_weapon_damage = 0.25
+		army_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			or = {
+				is_galactic_community_member = no
+				is_at_war = yes
+				has_crisis = yes
+				end_game_years_passed > 0
+			}
+		}
+	}
+}
+
+libra_occlusion_campaign_2 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+		upkeep = {
+			energy = @Edict1Cost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_occlusion_4
+	}
+
+	allow = {
+		not = { has_edict = libra_occlusion_campaign_1 }
+	}
+
+	modifier = {
+		diplo_weight_mult = 0.1
+		diplo_weight_naval_mult = 0.15
+		damage_vs_rival_mult = 0.15
+		damage_vs_player_crisis_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = @EdictLowPrio
+			is_galactic_community_member = yes
+		}
+		modifier = {
+			factor = 3
+			num_rivals > 1
+		}
+	}
+}
+
+#
+
+@LibraProfundityCost = 60
+
+libra_profundity_campaign_1 = {
+	length = 1800
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @LibraProfundityCost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_profundity_1
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_libra_profundity_points"
+			is_variable_set = libra_profundity_1
+			check_variable = {
+				which = libra_profundity_1
+				value > 9
+			}
+		}
+	}
+
+	modifier = {
+		country_alloys_produces_mult = 0.1
+	}
+	effect = {
+		custom_tooltip = edict_libra_profundity_campaign_1_effect
+		if = {
+			limit = { is_variable_set = libra_profundity_1 }
+			custom_tooltip = libra_profundity_point_num
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.1631 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			has_resource = {
+				type = alloys
+				amount < 2000
+			}
+		}
+	}
+}
+
+libra_profundity_campaign_2 = {
+	length = 1800
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @LibraProfundityCost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_profundity_1
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_libra_profundity_points"
+			is_variable_set = libra_profundity_1
+			check_variable = {
+				which = libra_profundity_1
+				value > 9
+			}
+		}
+	}
+
+	modifier = {
+		country_trade_produces_mult = 0.1
+	}
+	effect = {
+		custom_tooltip = edict_libra_profundity_campaign_2_effect
+		if = {
+			limit = { is_variable_set = libra_profundity_1 }
+			custom_tooltip = libra_profundity_point_num
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.1632 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			has_resource = {
+				type = trade
+				amount < 3600
+			}
+		}
+	}
+}
+
+libra_profundity_campaign_3 = {
+	length = 1800
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @LibraProfundityCost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_profundity_1
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_libra_profundity_points"
+			is_variable_set = libra_profundity_1
+			check_variable = {
+				which = libra_profundity_1
+				value > 9
+			}
+		}
+	}
+
+	modifier = {
+		country_minerals_produces_mult = 0.1
+	}
+	effect = {
+		custom_tooltip = edict_libra_profundity_campaign_3_effect
+		if = {
+			limit = { is_variable_set = libra_profundity_1 }
+			custom_tooltip = libra_profundity_point_num
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.1633 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			has_resource = {
+				type = minerals
+				amount < 4800
+			}
+		}
+	}
+}
+
+libra_profundity_campaign_4 = {
+	length = 3600
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @LibraProfundityCost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_profundity_2
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_libra_profundity_points"
+			is_variable_set = libra_profundity_1
+			check_variable = {
+				which = libra_profundity_1
+				value > 9
+			}
+		}
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.05
+	}
+	effect = {
+		custom_tooltip = edict_libra_profundity_campaign_4_effect
+		if = {
+			limit = { is_variable_set = libra_profundity_1 }
+			custom_tooltip = libra_profundity_point_num
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.1634 }
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			libra_ai_preferences_leader = yes
+		}
+	}
+}
+
+libra_profundity_campaign_5 = {
+	length = 3600
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @LibraProfundityCost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_profundity_3
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_libra_profundity_points"
+			is_variable_set = libra_profundity_1
+			check_variable = {
+				which = libra_profundity_1
+				value > 9
+			}
+		}
+		not = { has_modifier = libra_profundity_campaign_5_mod }
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.05
+	}
+	effect = {
+		custom_tooltip = edict_libra_profundity_campaign_5_effect
+		if = {
+			limit = { is_variable_set = libra_profundity_1 }
+			custom_tooltip = libra_profundity_point_num
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.1635 }
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			libra_ai_preferences_leader = yes
+		}
+	}
+}
+
+libra_profundity_campaign_6 = {
+	length = 3600
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @LibraProfundityCost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_profundity_4
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_libra_profundity_points"
+			is_variable_set = libra_profundity_1
+			check_variable = {
+				which = libra_profundity_1
+				value > 9
+			}
+		}
+		not = { has_modifier = libra_profundity_campaign_6_mod }
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.05
+	}
+	effect = {
+		custom_tooltip = edict_libra_profundity_campaign_6_effect
+		if = {
+			limit = { is_variable_set = libra_profundity_1 }
+			custom_tooltip = libra_profundity_point_num
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.1636 }
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			libra_ai_preferences_leader = yes
+		}
+	}
+}
+
+libra_profundity_campaign_7 = {
+	length = 3600
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @LibraProfundityCost
+			multiplier = value:libra_edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_profundity_5
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_libra_profundity_points"
+			is_variable_set = libra_profundity_1
+			check_variable = {
+				which = libra_profundity_1
+				value > 9
+			}
+		}
+		not = { has_modifier = libra_profundity_campaign_7_mod }
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.05
+	}
+	effect = {
+		custom_tooltip = edict_libra_profundity_campaign_7_effect
+		if = {
+			limit = { is_variable_set = libra_profundity_1 }
+			custom_tooltip = libra_profundity_point_num
+		}
+		hidden_effect = {
+			country_event = { id = libra_fairy.1637 }
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			libra_ai_preferences_leader = yes
+		}
+	}
+}

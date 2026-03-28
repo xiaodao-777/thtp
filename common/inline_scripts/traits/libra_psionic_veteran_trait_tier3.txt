@@ -1,0 +1,42 @@
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = psionic
+	RARITY = veteran
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_psionic"
+	}
+	layer = {
+		icon = "GFX_trait_glow_veteran"
+		color = "trait_rarity_veteran"
+	}
+	layer = {
+		icon = "GFX_trait_frame_libra_psionic_veteran"
+		color = "trait_rarity_veteran"
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+	layer = {
+		icon = "GFX_trait_tier_3"
+	}
+}
+leader_trait_type = veteran
+leader_trait_rarity = veteran
+sorting_priority = @trait_sorting_priority_veteran_$COUNCIL$_3
+
+triggered_self_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_libra_heavenly_throne }
+	}
+	leader_skill_add = 3
+}

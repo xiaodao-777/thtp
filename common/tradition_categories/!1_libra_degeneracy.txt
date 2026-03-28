@@ -1,0 +1,28 @@
+tradition_libra_degeneracy = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_degeneracy_adopt } }
+		text = tradition_libra_degeneracy_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_degeneracy_adopt }
+		text = tradition_libra_degeneracy_adopt_desc
+	}
+	tree_template = "tree_11_111"
+	adoption_bonus = "tr_libra_degeneracy_adopt"
+	finish_bonus = "tr_libra_degeneracy_finish"
+	traditions = {
+		"tr_libra_degeneracy_1"
+		"tr_libra_degeneracy_2"
+		"tr_libra_degeneracy_3"
+		"tr_libra_degeneracy_4"
+		"tr_libra_degeneracy_5"
+	}
+
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 1.5
+			libra_ai_preferences_leader = yes
+		}
+	}
+}

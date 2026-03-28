@@ -1,0 +1,93 @@
+tr_libra_construmcracy_adopt = {
+	unlocks_agenda = agenda_libra_construmcracy
+	modifier = {
+		colony_start_urban_districts_add = 1
+	}
+	possible = {
+		has_technology = tech_assembly_pattern
+	}
+}
+
+tr_libra_construmcracy_finish = {
+	modifier = {
+		planet_decision_enact_speed_mult = 0.25
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_construmcracy_1 = {
+	modifier = {
+		terraform_speed_mult = 0.25
+		planet_clear_blocker_speed_mult = 0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_construmcracy_1_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_construmcracy_2 = {
+	modifier = {
+		planet_housing_add = 1000
+		planet_carry_cap_add = 1000
+	}
+	custom_tooltip_with_modifiers = tr_libra_construmcracy_2_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_construmcracy_3 = {
+	modifier = {
+		starbase_upgrade_cost_mult = -0.05
+		starbase_upgrade_speed_mult = 0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_construmcracy_3_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_construmcracy_4 = {
+	possible = {
+		has_tradition = tr_libra_construmcracy_1
+		has_tradition = tr_libra_construmcracy_2
+	}
+	modifier = {
+		planet_structures_cost_mult = -0.05
+		planet_non_artificial_max_districts_add = 1
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_void_dweller_origin = yes
+		}
+		modifier = {
+			planet_structures_cost_mult = -0.05
+			habitat_max_districts_add = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_construmcracy_5 = {
+	possible = {
+		has_tradition = tr_libra_construmcracy_3
+	}
+	modifier = {
+		megastructures_cost_mult = -0.05
+		megastructure_build_speed_mult = 0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_construmcracy_5_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}

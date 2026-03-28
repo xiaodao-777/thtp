@@ -1,0 +1,557 @@
+libra_biomass_technician = {
+	potential = {
+		has_ascension_perk = ap_libra_biomass_technician
+	}
+
+	option = {
+		name = policy_libra_biomass_technician_a
+		modifier = {
+			planet_organic_batteries_energy_produces_add = 3
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				has_deficit = energy
+			}
+		}
+	}
+	option = {
+		name = policy_libra_biomass_technician_b
+		modifier = {
+			planet_organic_batteries_unity_produces_add = 2
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				num_ascension_perks < 5
+			}
+		}
+	}
+	option = {
+		name = policy_libra_biomass_technician_c
+		modifier = {
+			planet_organic_batteries_physics_research_produces_add = 0.5
+			planet_organic_batteries_society_research_produces_add = 0.5
+			planet_organic_batteries_engineering_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_biomass_technician_d
+		modifier = {
+			logistic_growth_mult = 0.5
+			planet_pops_minerals_upkeep_mult = -0.25
+			planet_pops_food_upkeep_mult = -0.25
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				has_valid_civic = civic_machine_guided_sapience
+			}
+		}
+	}
+}
+
+#
+
+libra_galaxy_ambition = {
+	potential = {
+		has_ascension_perk = ap_libra_galaxy_ambition
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 2 }
+	}
+
+	option = {
+		name = policy_libra_galaxy_ambition_a
+		modifier = {
+			pop_category_rulers_trade_produces_add = 5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				libra_ai_preferences_trade = yes
+			}
+			modifier = {
+				add = 2
+				has_monthly_income = {
+					resource = trade
+					value < -1
+				}
+				has_resource = {
+					type = trade
+					amount < 1200
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_galaxy_ambition_b
+		modifier = {
+			pop_category_rulers_alloys_produces_add = 2.5
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_galaxy_ambition_c
+		modifier = {
+			pop_category_rulers_physics_research_produces_add = 4
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				is_at_war = no
+				has_crisis = no
+				is_preferred_weapons = weapon_type_energy
+			}
+		}
+	}
+	option = {
+		name = policy_libra_galaxy_ambition_d
+		modifier = {
+			pop_category_rulers_society_research_produces_add = 4
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				is_at_war = no
+				has_crisis = no
+				or = {
+					uses_ship_category = bio_ship
+					is_preferred_weapons = weapon_type_strike_craft
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_galaxy_ambition_e
+		modifier = {
+			pop_category_rulers_engineering_research_produces_add = 4
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				is_at_war = no
+				has_crisis = no
+				or = {
+					is_preferred_weapons = weapon_type_kinetic
+					is_preferred_weapons = weapon_type_explosive
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_galaxy_ambition_f
+		modifier = {
+			pop_category_rulers_unity_produces_add = 4
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 4
+				num_ascension_perks < 6
+			}
+		}
+	}
+}
+
+libra_third_choice = {
+	potential = {
+		has_ascension_perk = ap_libra_third_choice
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 4 }
+	}
+
+	option = {
+		name = policy_libra_third_choice_a
+		policy_flags = {
+			libra_third_choice_a
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_third_choice_b
+		policy_flags = {
+			libra_third_choice_b
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.25
+			category_particles_draw_chance_mult = 0.15
+			category_field_manipulation_research_speed_mult = 0.25
+			category_field_manipulation_draw_chance_mult = 0.15
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				num_ascension_perks > 5
+				is_preferred_weapons = weapon_type_energy
+			}
+		}
+	}
+	option = {
+		name = policy_libra_third_choice_c
+		policy_flags = {
+			libra_third_choice_c
+		}
+		modifier = {
+			category_military_theory_research_speed_mult = 0.25
+			category_military_theory_draw_chance_mult = 0.15
+			category_statecraft_research_speed_mult = 0.25
+			category_statecraft_draw_chance_mult = 0.15
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				num_ascension_perks > 5
+				or = {
+					uses_ship_category = bio_ship
+					is_preferred_weapons = weapon_type_strike_craft
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_third_choice_d
+		policy_flags = {
+			libra_third_choice_d
+		}
+		modifier = {
+			category_propulsion_research_speed_mult = 0.25
+			category_propulsion_draw_chance_mult = 0.15
+			category_materials_research_speed_mult = 0.25
+			category_materials_draw_chance_mult = 0.15
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				num_ascension_perks > 5
+				or = {
+					is_preferred_weapons = weapon_type_kinetic
+					is_preferred_weapons = weapon_type_explosive
+				}
+			}
+		}
+	}
+}
+
+libra_collective_unity = {
+	potential = {
+		has_ascension_perk = ap_libra_collective_unity
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 8 }
+	}
+
+	option = {
+		name = policy_libra_collective_unity_a
+		modifier = {
+			planet_jobs_complex_and_simple_drone_produces_mult = 0.2
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_collective_unity_b
+		potential = {
+			is_wilderness_empire = no
+			not = { has_tradition = tr_virtuality_adopt }
+		}
+		modifier = {
+			planet_maintenance_drones_trade_produces_add = 3
+			planet_maintenance_drones_energy_upkeep_add = 1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_civilian = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_collective_unity_c
+		modifier = {
+			planetary_ascension_effect_mult = 0.25
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_planet = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_collective_unity_d
+		modifier = {
+			bonus_pop_growth_mult = 0.2
+			planet_pop_assembly_mult = 0.2
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_population = yes
+			}
+		}
+	}
+}
+
+#
+
+libra_golden_rule = {
+	potential = {
+		has_ascension_perk = ap_libra_golden_rule
+		libra_crisis_ap_check = no
+	}
+
+	option = {
+		name = policy_libra_golden_rule_a
+		policy_flags = {
+			libra_golden_rule_a
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				used_naval_capacity_percent < 0.8
+				or = {
+					is_at_war = yes
+					has_crisis = yes
+					recently_lost_war = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_golden_rule_b
+		policy_flags = {
+			libra_golden_rule_b
+		}
+		potential = {
+			country_uses_consumer_goods = yes
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 4
+				has_deficit = consumer_goods
+			}
+		}
+	}
+	option = {
+		name = policy_libra_golden_rule_c
+		policy_flags = {
+			libra_golden_rule_c
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_golden_rule_d
+		policy_flags = {
+			libra_golden_rule_d
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				num_ascension_perks < 5
+			}
+		}
+	}
+	option = {
+		name = policy_libra_golden_rule_e
+		policy_flags = {
+			libra_golden_rule_e
+		}
+		potential = {
+			is_galactic_emperor = no
+		}
+		valid = {
+			is_galactic_custodian = yes
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = policy_libra_golden_rule_f
+		policy_flags = {
+			libra_golden_rule_f
+		}
+		valid = {
+			is_galactic_emperor = yes
+		}
+		AI_weight = {
+			weight = 100
+		}
+	}
+}
+
+libra_valiant_heroic = {
+	potential = {
+		has_ascension_perk = ap_libra_valiant_heroic
+	}
+
+	option = {
+		name = policy_libra_valiant_heroic_a
+		potential = {
+			is_homicidal = no
+		}
+		modifier = {
+			external_leader_pool_add = 3
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_valiant_heroic_b
+		modifier = {
+			leader_starting_age_add = -5
+			species_leader_exp_gain = 0.15
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+	option = {
+		name = policy_libra_valiant_heroic_c
+		modifier = {
+			leaders_upkeep_mult = -0.2
+			negative_traits_country = -1
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				num_ascension_perks < 5
+			}
+		}
+	}
+	option = {
+		name = policy_libra_valiant_heroic_d
+		potential = {
+			libra_crisis_ap_check = no
+			is_galactic_emperor = no
+		}
+		valid = {
+			is_galactic_custodian = yes
+		}
+		modifier = {
+			external_leader_pool_add = 1
+			leader_initial_skill = 1
+		}
+		AI_weight = {
+			weight = 5
+		}
+	}
+	option = {
+		name = policy_libra_valiant_heroic_e
+		potential = {
+			libra_crisis_ap_check = no
+		}
+		valid = {
+			is_galactic_emperor = yes
+		}
+		modifier = {
+			external_leader_pool_add = 1
+			leader_skill_add = 1
+			negative_traits_country = -1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}
+
+libra_genetic_potential = {
+	potential = {
+		has_ascension_perk = ap_libra_genetic_potential
+	}
+
+	option = {
+		name = policy_libra_genetic_potential_a
+		modifier = {
+			logistic_growth_mult = 0.25
+			planet_carry_cap_add = 1500
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_genetic_potential_b
+		modifier = {
+			planet_pops_upkeep_mult = -0.25
+			pop_amenities_usage_mult = -0.15
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 1
+				has_tradition = tr_cybernetics_adopt
+			}
+		}
+	}
+	option = {
+		name = policy_libra_genetic_potential_c
+		modifier = {
+			pop_environment_tolerance = 0.3
+			bonus_pop_growth = 0.05
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 1
+				or = {
+					years_passed < 20
+					has_country_flag = genetic_ascension_stage_1_mutation
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_genetic_potential_d
+		modifier = {
+			job_max_workforce_mult = 0.1
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				has_tradition = tr_psionics_adopt
+			}
+		}
+	}
+	option = {
+		name = policy_libra_genetic_potential_e
+		modifier = {
+			pop_bonus_workforce_mult = 0.15
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				has_tradition = tr_cloning_adopt
+			}
+		}
+	}
+}

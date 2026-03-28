@@ -1,0 +1,49 @@
+tradition_libra_autarchy = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_autarchy_adopt } }
+		text = tradition_libra_autarchy_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_autarchy_adopt }
+		text = tradition_libra_autarchy_adopt_desc
+	}
+	tree_template = "tree_11_12_21"
+	adoption_bonus = "tr_libra_autarchy_adopt"
+	finish_bonus = "tr_libra_autarchy_finish"
+	traditions = {
+		"tr_libra_autarchy_1"
+		"tr_libra_autarchy_2"
+		"tr_libra_autarchy_3"
+		"tr_libra_autarchy_4"
+		"tr_libra_autarchy_5"
+	}
+
+	ai_weight = {
+		base = 10
+		modifier = {
+			add = 20
+			galaxy_percentage > 0.05
+		}
+		modifier = {
+			add = 25
+			or = {
+				is_part_of_galactic_council = yes
+				galaxy_percentage > 0.25
+			}
+		}
+		modifier = {
+			add = 50
+			or = {
+				is_galactic_custodian = yes
+				galaxy_percentage > 0.55
+			}
+		}
+		modifier = {
+			add = 100
+			or = {
+				is_galactic_emperor = yes
+				galaxy_percentage > 0.95
+			}
+		}
+	}
+}

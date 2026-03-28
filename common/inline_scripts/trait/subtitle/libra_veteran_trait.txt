@@ -1,0 +1,1 @@
+custom_subtitle = libra_veteran_$TYPE$_$CLASS$_trait

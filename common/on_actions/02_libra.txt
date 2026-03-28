@@ -1,0 +1,544 @@
+on_game_start = {
+	events = {
+		libra_main.0000
+	}
+}
+
+on_mid_game_pulse = {
+	events = {
+		libra_main.0099
+	}
+}
+
+on_game_start_country = {
+	events = {
+		libra_fairy.0001
+	}
+}
+
+on_five_year_pulse_country = {
+	events = {
+		libra_origin.0007
+	}
+}
+
+on_decade_pulse_country = {
+	events = {
+		libra_fairy.0016
+	}
+}
+
+on_post_communications_established = {
+	events = {
+		libra_origin.1408
+		libra_origin.1409
+	}
+}
+
+on_custom_diplomacy = {
+	events = {
+		libra_main.0100
+	}
+}
+
+on_country_created = {
+	events = {
+		libra_fairy.0005
+	}
+}
+
+on_country_destroyed = {
+	events = {
+		libra_fairy.0020
+		libra_fairy.0532
+		libra_fairy.1591
+		libra_origin.1407
+		libra_origin.1803
+	}
+}
+
+on_war_beginning = {
+	events = {
+		libra_fairy.1592
+		libra_origin.1802
+	}
+}
+
+on_war_won = {
+	events = {
+		libra_fairy.0531
+		libra_fairy.1590
+		libra_origin.1406
+	}
+}
+
+on_war_lost = {
+	events = {
+		libra_fairy.0533
+	}
+}
+
+on_tradition_picked = {
+	events = {
+		libra_fairy.0012
+	}
+}
+
+on_ascension_perk_picked = {
+	events = {
+		libra_fairy.0022
+	}
+}
+
+on_shroud_breached = {
+	events = {
+		libra_fairy.18020
+	}
+}
+
+on_relic_received = {
+	events = {	
+		libra_fairy.2100
+		libra_fairy.1524
+		libra_origin.1320
+	}
+}
+
+on_relic_lost = {
+	events = {
+		libra_fairy.2100
+	}
+}
+
+on_relic_activated = {
+	events = {
+		libra_fairy.2101
+		libra_origin.1321
+	}
+}
+
+on_specimen_acquired = {
+	events = {
+		libra_fairy.1524
+		libra_fairy.2102
+		libra_origin.1320
+	}
+}
+
+on_specimen_sold = {
+	events = {
+		libra_fairy.2102
+	}
+}
+
+on_exhibit_unlocked = {
+	events = {
+		libra_fairy.2102
+	}
+}
+
+on_agenda_finished = {
+	events = {
+		libra_fairy.0501
+		libra_fairy.0540
+		libra_fairy.16004
+	}
+}
+
+on_pre_government_changed = {
+	events = {
+		libra_fairy.0521
+	}
+}
+
+on_post_government_changed = {
+	events = {
+		libra_fairy.0520
+		libra_origin.1301
+		libra_origin.1311
+	}
+}
+
+on_resolution_passed = {
+	events = {
+		libra_fairy.1005
+		libra_fairy.1620
+		libra_origin.1401
+	}
+}
+
+on_resolution_failed = {
+	events = {
+		libra_fairy.1006
+		libra_fairy.1621
+		libra_origin.1402
+	}
+}
+
+on_system_first_visited = {
+	events = {
+	}
+}
+
+on_entering_system_first_time = {
+	events = {
+		libra_fairy.1007
+		libra_fairy.1500
+		libra_main.0150
+	}
+}
+
+on_system_lost = {
+	events = {
+		libra_fairy.1680
+	}
+}
+
+on_system_occupied = {
+	events = {
+		libra_fairy.1681
+	}
+}
+
+on_system_survey_ship = {
+	events = {
+		libra_fairy.1001
+		libra_fairy.1017
+	}
+}
+
+on_system_survey = {
+	events = {
+		libra_main.3006
+	}
+}
+
+on_survey_planet = {
+	events = {
+		libra_fairy.1002
+		libra_fairy.1018
+		libra_fairy.1031
+		libra_fairy.1032
+		libra_fairy.1033
+	}
+}
+
+anomaly_success = {
+	events = {
+		libra_fairy.1003
+		libra_fairy.1012
+	}
+}
+
+on_debris_researched = {
+	events = {
+		libra_fairy.1004
+	#	libra_fairy.1013
+	}
+}
+
+on_debris_scavenged = {
+	events = {
+		libra_fairy.1004
+	#	libra_fairy.1013
+	}
+}
+
+on_debris_scavenged_and_researched = {
+	events = {
+		libra_fairy.1004
+	#	libra_fairy.1013
+	}
+}
+
+on_arch_stage_finished = {
+	events = {
+		libra_fairy.1008
+		libra_fairy.1014
+	}
+}
+
+on_arch_site_finished = {
+	events = {
+		libra_fairy.1011
+		libra_fairy.1015
+	}
+}
+
+on_astral_rift_exploration_complete = {
+	events = {
+		libra_fairy.1009
+		libra_fairy.1016
+	}
+}
+
+on_ground_combat_started = {
+	events = {
+		libra_fairy.1030
+		libra_fairy.1028
+		libra_fairy.1024
+		libra_fairy.1027
+		libra_fairy.1023
+		libra_fairy.1022
+	}
+}
+
+on_army_killed_in_combat = {
+	events = {
+		libra_fairy.1029
+		libra_origin.1101
+	}
+}
+
+on_planet_attackers_win = {
+	events = {
+		libra_fairy.1020
+		libra_fairy.1021
+		libra_origin.1801
+	}
+}
+
+on_planet_attackers_lose = {
+	events = {
+	}
+}
+
+on_planet_defenders_win = {
+	events = {
+	}
+}
+
+on_planet_defenders_lose = {
+	events = {
+	}
+}
+
+on_entering_battle = {
+	events = {
+		libra_fairy.1010
+	}
+}
+
+on_ship_destroyed_victim = {
+	events = {
+	}
+}
+
+on_ship_destroyed_perp = {
+	events = {
+		libra_origin.1102
+	}
+}
+
+on_space_battle_won = {
+	events = {
+		libra_fairy.1683
+	}
+}
+
+on_building_starbase_outpost = {
+	events = {
+		libra_fairy.0011
+	}
+}
+
+on_megastructure_built = {
+	events = {
+		libra_fairy.1525
+		libra_fairy.1571
+		libra_fairy.1660
+		libra_origin.1501
+	}
+}
+
+on_megastructure_upgraded = {
+	events = {
+		libra_fairy.1525
+		libra_fairy.1571
+		libra_fairy.1661
+		libra_origin.1501
+	}
+}
+
+on_colony_destroyed = {
+	events = {
+	}
+}
+
+on_planet_transfer = {
+	events = {
+		libra_fairy.0015
+	}
+}
+
+on_planet_conquer = {
+	events = {
+		libra_origin.0502
+	}
+}
+
+on_colonized = {
+	events = {
+		libra_fairy.0004
+		libra_fairy.0007
+		libra_origin.0501
+	}
+}
+
+on_terraforming_complete = {
+	events = {
+		libra_fairy.0010
+	}
+}
+
+on_blocker_cleared = {
+	events = {
+		libra_fairy.1550
+	}
+}
+
+on_building_complete = {
+	events = {
+		libra_fairy.1570
+	}
+}
+
+on_building_upgraded = {
+	events = {
+		libra_fairy.1570
+	}
+}
+
+on_district_complete = {
+	events = {
+		libra_fairy.1570
+	}
+}
+
+on_pop_grown = {
+	events = {
+	}
+}
+
+on_pop_purged = {
+	events = {
+		libra_fairy.0008
+	}
+}
+
+on_pop_bombed_to_death = {
+	events = {
+		libra_fairy.1670
+		libra_fairy.2300
+		libra_fairy.16900
+	}
+}
+
+on_modification_complete = {
+	events = {
+		libra_fairy.0003
+		libra_fairy.13900
+		libra_fairy.14900
+	}
+}
+
+on_subspecies_integration_step = {
+	events = {
+		libra_fairy.0003
+		libra_fairy.13900
+		libra_fairy.14900
+	}
+}
+
+on_subspecies_integration_complete = {
+	events = {
+		libra_fairy.0003
+		libra_fairy.13900
+		libra_fairy.14900
+	}
+}
+
+on_leader_death = {
+	events = {
+		libra_fairy.1561
+	}
+}
+
+on_leader_hired = {
+	events = {
+		libra_fairy.0451
+		libra_fairy.1611
+		libra_fairy.10016
+		libra_origin.0901
+	}
+}
+
+on_leader_fired = {
+	events = {
+	}
+}
+
+on_leader_level_up = {
+	events = {
+		libra_fairy.1560
+	}
+}
+
+on_leader_spawned = {
+	events = {
+		libra_fairy.0002
+		libra_fairy.12102
+		libra_fairy.13901
+		libra_fairy.14901
+		libra_origin.0510
+		libra_origin.1001
+	}
+}
+
+on_added_to_leader_pool = {
+	events = {
+		libra_fairy.0450
+		libra_fairy.2050
+		libra_origin.1310
+		libra_origin.1403
+	}
+}
+
+on_ruler_created = {
+	events = {
+		libra_fairy.0006
+	}
+}
+
+on_new_heir = {
+	events = {
+		libra_origin.0901
+	}
+}
+
+on_single_player_save_game_load = {
+	events = {
+		libra_main.0050
+	}
+}
+
+on_libra_random_transcendental_cybernetic = {
+	random_events = {
+		1 = libra_fairy.13011
+		7 = libra_fairy.13012
+		7 = libra_fairy.13013
+		7 = libra_fairy.13014
+		7 = libra_fairy.13015
+		7 = libra_fairy.13016
+		7 = libra_fairy.13017
+		7 = libra_fairy.13018
+		7 = libra_fairy.13019
+		7 = libra_fairy.13020
+		7 = libra_fairy.13021
+		7 = libra_fairy.13022
+		7 = libra_fairy.13023
+		7 = libra_fairy.13024
+		7 = libra_fairy.13025
+		7 = libra_fairy.13026
+	}
+}

@@ -1,0 +1,1776 @@
+@Edict1Cost = 20
+@Edict2Cost = 25
+@Edict3Cost = 30
+
+@EdictPerpetual = -1
+
+@LibraSagesNotesEnergyCost = 24
+@LibraSagesNotesRareCost = 12
+@LibraGoldenRuleCost = 20
+
+libra_gestalt_maintenance = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_gestalt_maintenance_1"
+ 	}
+
+	modifier = {
+		pop_job_amenities_mult = 0.2
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+libra_gestalt_research = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_gestalt_research_2"
+ 	}
+
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+	}
+}
+
+libra_gestalt_analyze_optimisation = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_analyze_node_optimisation"
+ 	}
+
+	modifier = {
+		all_technology_research_speed = 0.1
+		planet_researchers_upkeep_mult = -0.1
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+#
+
+libra_wilderness_methods = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_origin = origin_wilderness
+	}
+
+ 	prerequisites = {
+		"tech_libra_hive_production_methods"
+ 	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_wilderness
+	}
+
+	modifier = {
+		logistic_growth_mult = -0.1
+		bonus_pop_growth_mult = -0.1
+		planet_jobs_produces_mult = 0.2
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+	}
+}
+
+# #############
+# Sages Notes
+#############
+
+libra_sages_notes_a = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_sages_notes
+		check_variable = { which = libra_ea_path value = 7 }
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			energy = @LibraSagesNotesEnergyCost
+			exotic_gases = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			energy = @LibraSagesNotesEnergyCost
+			exotic_gases = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_physics_research_produces_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_sages_notes_b = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_sages_notes
+		check_variable = { which = libra_ea_path value = 7 }
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			energy = @LibraSagesNotesEnergyCost
+			rare_crystals = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			energy = @LibraSagesNotesEnergyCost
+			rare_crystals = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_society_research_produces_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_sages_notes_c = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_sages_notes
+		check_variable = { which = libra_ea_path value = 7 }
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			energy = @LibraSagesNotesEnergyCost
+			volatile_motes = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			energy = @LibraSagesNotesEnergyCost
+			volatile_motes = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_engineering_research_produces_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_sages_notes_d = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_sages_notes
+		check_variable = { which = libra_ea_path value = 7 }
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			energy = @LibraSagesNotesEnergyCost
+			minor_artifacts = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			energy = @LibraSagesNotesEnergyCost
+			minor_artifacts = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_energy_produces_mult = 0.15
+		country_minerals_produces_mult = 0.15
+		country_food_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_sages_notes_e = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_sages_notes
+		check_variable = { which = libra_ea_path value = 7 }
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			energy = @LibraSagesNotesEnergyCost
+			astral_threads = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			energy = @LibraSagesNotesEnergyCost
+			astral_threads = @LibraSagesNotesRareCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.15
+		country_consumer_goods_produces_mult = 0.15
+		country_alloys_produces_mult = 0.15
+		country_trade_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+# #############
+# Cardinal Cosmos
+#############
+
+@LibraCardinalCosmosLength = 3600
+
+libra_cardinal_cosmos_a = {
+	length = @LibraCardinalCosmosLength
+	icon = "GFX_edict_type_policy"
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_cardinal_cosmos
+		check_variable = { which = libra_ea_path value = 9 }
+	}
+
+	allow = {
+		nor = {
+			has_edict = libra_cardinal_cosmos_b
+			has_edict = libra_cardinal_cosmos_c
+			has_edict = libra_cardinal_cosmos_d
+		}
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		empire_size_penalty_mult = 0.25
+		leader_skill_add = 1
+		councilor_skill_add = 1
+		ruler_skill_add = 1
+		leader_trait_selection_options_add = 1
+	}
+	effect = {
+		custom_tooltip = edict_libra_cardinal_cosmos_a_tt
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_base_skill < 10
+				}
+				add_experience = 300
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			empire_size < 100
+		}
+		modifier = {
+			factor = 2
+			libra_ai_preferences_leader = yes
+		}
+	}
+}
+
+libra_cardinal_cosmos_b = {
+	length = @LibraCardinalCosmosLength
+	icon = "GFX_edict_type_policy"
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_cardinal_cosmos
+		check_variable = { which = libra_ea_path value = 9 }
+	}
+
+	allow = {
+		nor = {
+			has_edict = libra_cardinal_cosmos_a
+			has_edict = libra_cardinal_cosmos_c
+			has_edict = libra_cardinal_cosmos_d
+		}
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		empire_size_penalty_mult = 0.25
+		num_tech_alternatives_add = 1
+		all_technology_research_speed = 0.15
+	}
+	effect = {
+		custom_tooltip = edict_libra_cardinal_cosmos_b_tt
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					leader_class = scientist
+					has_base_skill < 10
+				}
+				add_experience = 1250
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			empire_size < 100
+		}
+		modifier = {
+			factor = 2
+			libra_ai_preferences_technology = yes
+		}
+	}
+}
+
+libra_cardinal_cosmos_c = {
+	length = @LibraCardinalCosmosLength
+	icon = "GFX_edict_type_policy"
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_cardinal_cosmos
+		check_variable = { which = libra_ea_path value = 9 }
+	}
+
+	allow = {
+		nor = {
+			has_edict = libra_cardinal_cosmos_a
+			has_edict = libra_cardinal_cosmos_b
+			has_edict = libra_cardinal_cosmos_d
+		}
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		empire_size_penalty_mult = 0.25
+		country_produces_mult = 0.12
+	}
+	effect = {
+		custom_tooltip = edict_libra_cardinal_cosmos_c_tt
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					leader_class = official
+					has_base_skill < 10
+				}
+				add_experience = 1250
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			empire_size < 100
+		}
+	}
+}
+
+libra_cardinal_cosmos_d = {
+	length = @LibraCardinalCosmosLength
+	icon = "GFX_edict_type_policy"
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_cardinal_cosmos
+		check_variable = { which = libra_ea_path value = 9 }
+	}
+
+	allow = {
+		nor = {
+			has_edict = libra_cardinal_cosmos_a
+			has_edict = libra_cardinal_cosmos_b
+			has_edict = libra_cardinal_cosmos_c
+		}
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		empire_size_penalty_mult = 0.25
+		starbase_shipyard_build_cost_mult = -0.1
+		armies_cost_mult = -0.1
+	}
+	effect = {
+		custom_tooltip = edict_libra_cardinal_cosmos_d_tt
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					leader_class = commander
+					has_base_skill < 10
+				}
+				add_experience = 1250
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			empire_size < 100
+		}
+		modifier = {
+			factor = 2
+			libra_ai_preferences_militarily = yes
+		}
+	}
+}
+
+# #############
+# Golden Rule
+#############
+
+libra_golden_rule_0 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	potential = {
+		has_ascension_perk = ap_libra_golden_rule
+		libra_crisis_ap_check = no
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_energy_produces_mult = 0.15
+		country_minerals_produces_mult = 0.15
+		country_food_produces_mult = 0.15
+	}
+
+	effect = {
+		custom_tooltip = edict_libra_golden_rule_0_tt
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			resource_income_to_expenditure_balance_ratio = {
+				resource = energy
+				value < 1.45
+			}
+		}
+		modifier = {
+			factor = 1.2
+			resource_income_to_expenditure_balance_ratio = {
+				resource = energy
+				value < 1.25
+			}
+		}
+		modifier = {
+			factor = 1.5
+			resource_income_to_expenditure_balance_ratio = {
+				resource = energy
+				value < 1
+			}
+		}
+	}
+}
+
+libra_golden_rule_a = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	potential = {
+		has_ascension_perk = ap_libra_golden_rule
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_alloys_produces_mult = 0.15
+		planet_metallurgists_alloys_produces_add = 0.5
+		planet_metallurgists_trade_upkeep_add = 1
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+libra_golden_rule_b = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	potential = {
+		has_ascension_perk = ap_libra_golden_rule
+		country_uses_consumer_goods = yes
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_consumer_goods_produces_mult = 0.15
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_artisans_trade_upkeep_add = 1
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+libra_golden_rule_c = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	potential = {
+		has_ascension_perk = ap_libra_golden_rule
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.15
+		planet_bureaucrats_unity_produces_add = 1
+		planet_bureaucrats_trade_upkeep_add = 1
+		planet_bio_trophies_unity_produces_add = 0.5
+		planet_bio_trophies_trade_upkeep_add = 0.5
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+libra_golden_rule_d = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	potential = {
+		has_ascension_perk = ap_libra_golden_rule
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_physics_research_produces_mult = 0.15
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_physicists_trade_upkeep_add = 0.5
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_golden_rule_e = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	potential = {
+		has_ascension_perk = ap_libra_golden_rule
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_society_research_produces_mult = 0.15
+		planet_biologists_society_research_produces_add = 0.5
+		planet_biologists_trade_upkeep_add = 0.5
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_golden_rule_f = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	potential = {
+		has_ascension_perk = ap_libra_golden_rule
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trade = @LibraGoldenRuleCost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_engineering_research_produces_mult = 0.15
+		planet_engineers_engineering_research_produces_add = 0.5
+		planet_engineers_trade_upkeep_add = 0.5
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+# #############
+# Traditions
+#############
+
+# Degeneracy
+
+libra_degeneracy_1 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_degeneracy_1
+	}
+
+	modifier = {
+		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.1
+		worker_and_simple_drone_cat_bonus_workforce_mult = -0.1
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+libra_degeneracy_2 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_degeneracy_3
+	}
+
+	modifier = {
+		pop_demotion_time_mult = -0.25
+		pop_promotion_time_mult = -0.25
+		pop_job_amenities_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+	}
+}
+
+libra_degeneracy_3 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_degeneracy_5
+	}
+
+	modifier = {
+		founder_species_growth_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+# Autarchy
+
+libra_autarchy_1 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_autarchy_1
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "libra_autarchy_0_requires"
+			or = {
+				controlled_systems > 24
+				has_edict = libra_autarchy_1
+			}
+		}
+		or = {
+			is_part_of_galactic_council = yes
+			is_galactic_custodian = yes
+			is_galactic_emperor = yes
+			galaxy_percentage > 0.05
+		}
+	}
+
+	modifier = {
+		council_agenda_progress_speed = 0.25
+		planet_jobs_worker_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_autarchy_2 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_autarchy_2
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "libra_autarchy_1_requires"
+			or = {
+				controlled_systems > 49
+				has_edict = libra_autarchy_2
+			}
+		}
+		or = {
+			is_part_of_galactic_council = yes
+			is_galactic_custodian = yes
+			is_galactic_emperor = yes
+			galaxy_percentage > 0.25
+		}
+	}
+
+	modifier = {
+		planet_decision_enact_speed_mult = 0.25
+		planet_jobs_specialist_produces_mult = 0.1
+		planet_jobs_ruler_produces_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_autarchy_3 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_autarchy_3
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "libra_autarchy_2_requires"
+			or = {
+				controlled_systems > 99
+				has_edict = libra_autarchy_3
+			}
+		}
+		or = {
+			is_galactic_custodian = yes
+			is_galactic_emperor = yes
+			galaxy_percentage > 0.55
+		}
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.25
+		planet_researchers_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_autarchy_4 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_autarchy_4
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "libra_autarchy_2_requires"
+			or = {
+				controlled_systems > 99
+				has_edict = libra_autarchy_4
+			}
+		}
+		or = {
+			is_galactic_custodian = yes
+			is_galactic_emperor = yes
+			galaxy_percentage > 0.55
+		}
+	}
+
+	modifier = {
+		country_naval_cap_mult = 0.25
+		planet_metallurgists_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_autarchy_5 = {
+	length = 1
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 200
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_autarchy_5
+		not = { has_relic = r_libra_autarchy_seal }
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "libra_autarchy_3_requires"
+			controlled_systems > 199
+		}
+		or = {
+			is_galactic_emperor = yes
+			galaxy_percentage > 0.95
+		}
+	}
+
+	effect = {
+		add_relic = r_libra_autarchy_seal
+		hidden_effect = {
+			country_event = { id = libra_fairy.1650 }
+		}
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+# Vector
+
+libra_vector_1 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_vector_1
+	}
+
+	allow = {
+		has_technology = tech_hyper_relays
+	}
+
+	modifier = {
+		megastructures_hyper_relay_physics_research_produces_add = 60
+		megastructures_hyper_relay_society_research_produces_add = 40
+		megastructures_hyper_relay_engineering_research_produces_add = 40
+		megastructures_hyper_relay_energy_upkeep_add = 80
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_vector_2 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_vector_2
+	}
+
+	modifier = {
+		army_disengage_chance_mult = 0.5
+		ship_disengage_chance_mult = 0.25
+		ship_disengage_opportunities_add = 1
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			libra_ai_war_trigger = yes
+		}
+	}
+}
+
+libra_vector_finish = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 120
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_vector_finish
+	}
+
+	modifier = {
+		sector_max_jumps_add = 1
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Bastion
+
+libra_bastion_1 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_tradition = tr_libra_bastion_3
+	}
+
+	modifier = {
+		planet_defense_armies_add = 12
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			libra_ai_war_trigger = yes
+		}
+	}
+}
+
+# #############
+# Cloning
+#############
+
+libra_cloning_overload = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+ 	prerequisites = { "tech_libra_cloning_overload" }
+
+	modifier = {
+		planet_stability_add = -5
+		planet_buildings_clone_vats_upkeep_mult = -0.25
+		organic_pop_bonus_workforce_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdicMedPrio
+	}
+}
+
+# #############
+# Purity
+#############
+
+libra_purity_enhancement = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+ 	prerequisites = { "tech_libra_purity_enhancement" }
+
+	modifier = {
+		council_agenda_progress_speed = 0.2
+		planet_jobs_productive_produces_mult = 0.2
+		planet_jobs_productive_upkeep_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdicMedPrio
+	}
+}
+
+# #############
+# Mutation
+#############
+
+libra_mutation_protection = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+ 	prerequisites = { "tech_libra_mutation_protection" }
+
+	modifier = {
+		planet_stability_add = 5
+		pop_bonus_workforce_mult = 0.15
+		planet_pops_upkeep_mult = 0.15
+		pop_amenities_usage_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdicMedPrio
+	}
+}
+
+# #############
+# Cybernetic
+#############
+
+libra_cybernetic_growth_1 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+		not = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+	}
+ 	prerequisites = { "tech_libra_cybernetic_growth_1" }
+
+	modifier = {
+		leader_initial_skill = 1
+		planet_bureaucrats_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_cybernetic_growth_3 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+		not = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+	}
+ 	prerequisites = { "tech_libra_cybernetic_growth_3" }
+
+	modifier = {
+		num_tech_alternatives_add = 1
+		leader_trait_selection_options_add = 1
+		planet_researchers_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+# #############
+# Virtuality
+#############
+
+libra_virtuality_1 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+	allow = {
+		not = { has_edict = libra_virtuality_2 }
+	}
+ 	prerequisites = { "tech_libra_augmented_reality" }
+
+	modifier = {
+		country_leader_cap_add = 2
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_virtuality_2 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+	allow = {
+		not = { has_edict = libra_virtuality_1 }
+	}
+ 	prerequisites = { "tech_libra_augmented_reality" }
+
+	modifier = {
+		leader_trait_selection_options_add = 1
+		species_leader_exp_gain = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_virtuality_3 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+	allow = {
+		not = { has_edict = libra_virtuality_4 }
+	}
+ 	prerequisites = { "tech_libra_virtuality_overclocking" }
+
+	modifier = {
+		planet_jobs_productive_produces_mult = 0.25
+		planet_jobs_productive_upkeep_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_virtuality_4 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+	allow = {
+		not = { has_edict = libra_virtuality_3 }
+	}
+ 	prerequisites = { "tech_libra_virtuality_overclocking" }
+
+	modifier = {
+		planet_jobs_productive_upkeep_mult = -0.1
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+libra_virtuality_5 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+	allow = {
+		not = { has_edict = libra_virtuality_6 }
+	}
+ 	prerequisites = { "tech_libra_virtuality_topology" }
+
+	modifier = {
+		all_technology_research_speed = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+		modifier = {
+			weight = @EdictHighPrio
+			libra_ai_preferences_technology = yes
+		}
+	}
+}
+
+libra_virtuality_6 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+	allow = {
+		not = { has_edict = libra_virtuality_5 }
+	}
+ 	prerequisites = { "tech_libra_virtuality_topology" }
+
+	modifier = {
+		country_naval_cap_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			libra_ai_preferences_militarily = yes
+		}
+	}
+}
+
+libra_virtuality_7 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+	allow = {
+		not = { has_edict = libra_virtuality_8 }
+	}
+ 	prerequisites = { "tech_libra_virtuality_synchronous" }
+
+	modifier = {
+		council_agenda_progress_speed = 0.25
+		council_agenda_finishing_effect_duration_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+libra_virtuality_8 = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_lock_in_months = 60
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+	allow = {
+		not = { has_edict = libra_virtuality_7 }
+	}
+ 	prerequisites = { "tech_libra_virtuality_synchronous" }
+
+	modifier = {
+		country_admin_cap_add = 100
+		empire_size_penalty_mult = -0.15
+	}
+
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			weight = @EdictHighPrio
+			empire_sprawl_over_cap > 75
+			not = { has_ascension_perk = ap_libra_third_choice }
+		}
+	}
+}
+
+# #############
+# Psionic
+#############
+
+libra_psionic_zro_extraction = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_variable_set = libra_aa_path
+	}
+ 	prerequisites = { "tech_libra_psionic_apocalypse" }
+
+	modifier = {
+		planet_miners_sr_zro_produces_add = 0.05
+		planet_miners_energy_upkeep_add = 1
+		planet_farmers_sr_zro_produces_add = 0.05
+		planet_farmers_energy_upkeep_add = 1
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}

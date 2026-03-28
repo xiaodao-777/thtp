@@ -1,0 +1,67 @@
+libra_astral_threads_expenditure_starbases = {
+	resource = astral_threads
+	type = expenditure
+	category = starbases
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.15
+	}
+
+	desired_max = {
+		base = 200
+	}
+}
+
+libra_astral_threads_expenditure_ships = {
+	resource = astral_threads
+	type = expenditure
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			add = 0.5
+			has_ascension_perk = ap_libra_astral_blade
+		}
+	}
+}
+
+libra_astral_threads_expenditure_edicts = {
+	resource = astral_threads
+	type = expenditure
+	category = edicts
+
+	potential = {
+		has_ascension_perk = ap_libra_astral_blade
+	}
+
+	weight = {
+		weight = 0.1
+	}
+}
+
+libra_astral_threads_upkeep_starbases = {
+	resource = astral_threads
+	type = upkeep
+	category = starbases
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.1
+	}
+
+	desired_max = {
+		base = 300
+	}
+}

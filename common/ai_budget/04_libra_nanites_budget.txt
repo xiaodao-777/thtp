@@ -1,0 +1,142 @@
+libra_nanites_expenditure_edicts = {
+	resource = nanites
+	type = expenditure
+	category = edicts
+
+	potential = {
+		nand = {
+			has_tradition = tr_nanotech_5
+			resource_income_compare = {
+				resource = nanites
+				value < 8
+			}
+		}
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			add = 3
+			has_tradition = tr_nanotech_5
+			nand = {
+				has_edict = nanotech_naval_augmentation
+				has_edict = nanotech_energy_augmentation
+				has_edict = nanotech_alloy_augmentation
+			}
+		}
+		modifier = {
+			add = 3
+			has_technology = tech_libra_nanite_command_group
+			nand = {
+				has_edict = libra_nanite_command_a
+				has_edict = libra_nanite_command_b
+				has_edict = libra_nanite_command_c
+			}
+		}
+	}
+
+	desired_max = {
+		base = 200
+		modifier = {
+			add = 8000
+			has_tradition = tr_nanotech_5
+			nand = {
+				has_edict = nanotech_naval_augmentation
+				has_edict = nanotech_energy_augmentation
+				has_edict = nanotech_alloy_augmentation
+			}
+		}
+		modifier = {
+			add = 8000
+			has_technology = tech_libra_nanite_command_group
+			nand = {
+				has_edict = libra_nanite_command_a
+				has_edict = libra_nanite_command_b
+				has_edict = libra_nanite_command_c
+			}
+		}
+	}
+}
+
+libra_nanites_expenditure_ships = {
+	resource = nanites
+	type = expenditure
+	category = ships
+
+	potential = {
+		has_tradition = tr_nanotech_adopt
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			add = 0.2
+			has_tradition = tr_nanotech_4
+		}
+		modifier = {
+			factor = 2
+			used_naval_capacity_percent < 0.9
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				recently_lost_war = yes
+				is_at_war = yes
+				any_neighbor_country = {
+					has_ascension_perk = ap_become_the_crisis
+				}
+				any_country = {
+					is_crisis_faction = yes
+				}
+			}
+		}
+	}
+
+	desired_max = {
+		base = 250
+		modifier = {
+			factor = 30
+			has_tradition = tr_nanotech_4
+		}
+	}
+}
+
+libra_nanites_expenditure_armies = {
+	resource = nanites
+	type = expenditure
+	category = armies
+
+	potential = {
+		has_technology = tech_libra_nanite_locusts
+	}
+
+	weight = {
+		weight = 0.15
+	}
+
+	desired_min = {
+		base = 400
+	}
+
+	desired_max = {
+		base = 1600
+	}
+}
+
+libra_nanites_expenditure_upgrade = {
+	resource = nanites
+	type = expenditure
+	category = ship_upgrades
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		base = 0.15
+	}
+
+	desired_max = {
+		base = 500
+	}
+}

@@ -1,0 +1,53 @@
+tradition_libra_bastion = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_bastion_adopt } }
+		text = tradition_libra_bastion_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_bastion_adopt }
+		text = tradition_libra_bastion_adopt_desc
+	}
+	tree_template = "tree_12_12"
+	adoption_bonus = "tr_libra_bastion_adopt"
+	finish_bonus = "tr_libra_bastion_finish"
+	traditions = {
+		"tr_libra_bastion_1"
+		"tr_libra_bastion_2"
+		"tr_libra_bastion_3"
+		"tr_libra_bastion_4"
+		"tr_libra_bastion_5"
+	}
+
+	ai_weight = {
+		base = 12
+		modifier = {
+			factor = 1.5
+			libra_ai_war_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			or = {
+				is_sovereign_guardianship_empire = yes
+				is_pacifist = yes
+				has_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_familiar_face
+				has_origin = origin_libra_centurion
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_country = {
+				is_country_type = default
+				or = {
+					is_ai = no
+					opinion_level = { who = root level <= poor }
+				}
+				relative_power = { who = root value >= superior }
+			}
+		}
+		modifier = {
+			factor = 3
+			libra_crisis_ap_check = yes
+		}
+	}
+}

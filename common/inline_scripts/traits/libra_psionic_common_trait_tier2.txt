@@ -1,0 +1,33 @@
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = psionic
+	RARITY = common
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_psionic"
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+	layer = {
+		icon = "GFX_trait_tier_2"
+	}
+}
+leader_trait_rarity = common
+sorting_priority = @trait_sorting_priority_common_$COUNCIL$_2
+
+triggered_self_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_libra_heavenly_throne }
+	}
+	species_leader_exp_gain = 0.2
+}

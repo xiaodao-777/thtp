@@ -1,0 +1,1437 @@
+libra_main_story_site_effect_1 = {		#mino
+}
+
+libra_main_story_site_effect_2 = {		#omiya
+	hidden_effect = {
+		hidden_effect = {
+			if = {
+				limit = { mid_game_years_passed < 13 }
+				change_variable = { which = libra_omiya value = 1 }
+			}
+		}
+	}
+}
+
+libra_momohana_humiliate_effect = {
+}
+
+
+libra_country_check = {
+	remove_country_flag = libra_is_machine_empire
+	remove_country_flag = libra_is_biological_empire
+	remove_country_flag = libra_is_organic_empire
+	remove_country_flag = libra_fairy_physics
+	remove_country_flag = libra_fairy_engineering
+	if = {
+		limit = {
+			or = {
+				species = { is_archetype = MACHINE }
+				has_authority = auth_machine_intelligence
+			}
+		}
+		set_country_flag = libra_is_machine_empire
+	}
+	else = {
+		set_country_flag = libra_is_biological_empire
+		if = {
+			limit = {
+				species = {
+					or = {
+						is_archetype = BIOLOGICAL
+						is_archetype = LITHOID
+					}
+				}
+			}
+			set_country_flag = libra_is_organic_empire
+		}
+	}
+	random_list = {
+		2 = { }
+		1 = { set_country_flag = libra_fairy_physics }
+		2 = { set_country_flag = libra_fairy_engineering }
+	}
+}
+
+libra_renowned_leader_effect = {
+	if = {
+		limit = {
+			NOT = { is_leader_tier = leader_tier_legendary }
+		}
+		set_leader_tier = leader_tier_renowned
+	}
+}
+
+libra_legendary_leader_effect = {
+	set_leader_tier = leader_tier_legendary
+}
+
+libra_leader_inital_effect = {
+	set_variable = {
+		which = libra_extra_starting_traits_count
+		value = 0
+	}
+	switch = {
+		trigger = leader_class
+		commander = {
+			add_skill_without_trait_selection = modifier:libra_commander_initial_skill_species
+			while = {
+				count = value:libra_commander_starting_traits_total
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+				change_variable = {
+					which = libra_extra_starting_traits_count
+					value = 1
+				}
+			}
+		}
+		official = {
+			add_skill_without_trait_selection = modifier:libra_official_initial_skill_species
+			while = {
+				count = value:libra_official_starting_traits_total
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+				change_variable = {
+					which = libra_extra_starting_traits_count
+					value = 1
+				}
+			}
+		}
+		scientist = {
+			add_skill_without_trait_selection = modifier:libra_scientist_initial_skill_species
+			while = {
+				count = value:libra_scientist_starting_traits_total
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+				change_variable = {
+					which = libra_extra_starting_traits_count
+					value = 1
+				}
+			}
+		}
+	}
+	add_skill_without_trait_selection = modifier:libra_leader_initial_skill_species
+}
+
+update_libra_leader_traits_after_modification = {
+	change_variable = {
+		which = libra_extra_starting_traits_count
+		value = 0
+	}
+	#while = {
+	#	limit = {
+	#		check_variable = {
+	#			which = libra_extra_starting_traits_count
+	#			value > value:libra_leader_starting_traits_total
+	#		}
+	#	}
+	#	add_trait = {
+	#		trait = random_negative
+	#		show_message = no
+	#	}
+	#	subtract_variable = {
+	#		which = libra_extra_starting_traits_count
+	#		value = 1
+	#	}
+	#}
+	while = {
+		limit = {
+			check_variable = {
+				which = libra_extra_starting_traits_count
+				value < value:libra_leader_starting_traits_total
+			}
+		}
+		add_trait = {
+			trait = random_common
+			show_message = no
+		}
+		change_variable = {
+			which = libra_extra_starting_traits_count
+			value = 1
+		}
+	}
+	remove_trait = leader_trait_libra_multi_prosthesis_a
+	remove_trait = leader_trait_libra_multi_prosthesis_b
+	remove_trait = leader_trait_libra_multi_prosthesis_c
+	remove_trait = leader_trait_libra_multi_prosthesis_d
+	remove_trait = leader_trait_libra_multi_prosthesis_e
+	remove_trait = leader_trait_libra_multi_prosthesis_f
+	remove_trait = leader_trait_libra_synthetic_command_a
+	remove_trait = leader_trait_libra_synthetic_command_b
+	remove_trait = leader_trait_libra_synthetic_command_c
+	remove_trait = leader_trait_libra_synthetic_command_d
+	remove_trait = leader_trait_libra_synthetic_command_e
+}
+
+libra_cyborg_leader_prosthesis_check = {
+	species = {
+		switch = {
+			trigger = has_trait
+			trait_libra_multi_prosthesis_a = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_multi_prosthesis_a
+						show_message = no
+					}
+				}
+			}
+			trait_libra_multi_prosthesis_b = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_multi_prosthesis_b
+						show_message = no
+					}
+				}
+			}
+			trait_libra_multi_prosthesis_c = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_multi_prosthesis_c
+						show_message = no
+					}
+				}
+			}
+			trait_libra_multi_prosthesis_d = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_multi_prosthesis_d
+						show_message = no
+					}
+				}
+			}
+			trait_libra_multi_prosthesis_e = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_multi_prosthesis_e
+						show_message = no
+					}
+				}
+			}
+			trait_libra_multi_prosthesis_f = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_multi_prosthesis_f
+						show_message = no
+					}
+				}
+			}
+		}
+	}
+}
+
+libra_synthetic_leader_commands_check = {
+	species = {
+		switch = {
+			trigger = has_trait
+			trait_libra_synthetic_commands_a = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_synthetic_command_a
+						show_message = no
+					}
+				}
+			}
+			trait_libra_synthetic_commands_b = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_synthetic_command_b
+						show_message = no
+					}
+				}
+			}
+			trait_libra_synthetic_commands_c = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_synthetic_command_c
+						show_message = no
+					}
+				}
+			}
+			trait_libra_synthetic_commands_d = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_synthetic_command_d
+						show_message = no
+					}
+				}
+			}
+			trait_libra_synthetic_commands_e = {
+				prev = {
+					add_trait = {
+						trait = leader_trait_libra_synthetic_command_e
+						show_message = no
+					}
+				}
+			}
+		}
+	}
+}
+
+libra_add_commander_admiral_destiny_effect = {
+	#	subclass_commander_admiral
+	random_list = {
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_destiny_a show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_destiny_b show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_destiny_c show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_destiny_d show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_militarist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_pacifist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_authoritarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_egalitarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_spiritualist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_materialist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_xenophobe show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_admiral_xenophile show_message = no }
+		}
+	}
+}
+
+libra_add_commander_general_destiny_effect = {
+	#	subclass_commander_general
+	random_list = {
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_destiny_a show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_destiny_b show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_destiny_c show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_destiny_d show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_militarist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_pacifist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_authoritarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_egalitarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_spiritualist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_materialist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_xenophobe show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_general_xenophile show_message = no }
+		}
+	}
+}
+
+libra_add_commander_governor_destiny_effect = {
+	#	subclass_commander_governor
+	random_list = {
+		0 = {
+			modifier = { set = 1 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_academia_recruiter show_message = no }
+		}
+		0 = {
+			modifier = { set = 1 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_taskmaster show_message = no }
+		}
+		0 = {
+			modifier = { set = 1 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_arbiter show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_commander_governor_destiny_a show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_governor_destiny_b show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_governor_destiny_c show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_commander_governor_destiny_d show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_commander_governor_militarist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_governor_pacifist show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_commander_governor_authoritarian show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_commander_governor_egalitarian show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_commander_governor_spiritualist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_governor_materialist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_governor_xenophobe show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_commander_governor_xenophile show_message = no }
+		}
+	}
+}
+
+libra_add_official_governor_destiny_effect = {
+	#	subclass_official_governor
+	random_list = {
+		0 = {
+			modifier = { set = 1 owner = { has_civic = civic_machine_servitor } }
+			add_trait = { trait = leader_trait_mediator show_message = no }
+		}
+		0 = {
+			modifier = { set = 1 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_urbanist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_governor_destiny_a show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_governor_destiny_b show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_governor_destiny_c show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { has_civic = civic_machine_servitor } }
+			add_trait = { trait = leader_trait_libra_official_governor_destiny_d show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_governor_militarist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_governor_pacifist show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_official_governor_authoritarian show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_official_governor_egalitarian show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { has_civic = civic_machine_servitor } }
+			add_trait = { trait = leader_trait_libra_official_governor_spiritualist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_governor_materialist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_governor_xenophobe show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_governor_xenophile show_message = no }
+		}
+	}
+}
+
+libra_add_official_delegate_destiny_effect = {
+	#	subclass_official_delegate
+	random_list = {
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_destiny_a show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_destiny_b show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_destiny_c show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_destiny_d show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_militarist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_pacifist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_authoritarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_egalitarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_spiritualist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_materialist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_xenophobe show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_official_delegate_xenophile show_message = no }
+		}
+	}
+}
+
+libra_add_scientist_explorer_destiny_effect = {
+	#	subclass_scientist_explorer
+	random_list = {
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_destiny_a show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_destiny_b show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_destiny_c show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_destiny_d show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_militarist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_pacifist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_authoritarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_egalitarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_spiritualist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_materialist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_xenophobe show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_explorer_xenophile show_message = no }
+		}
+	}
+}
+
+libra_add_scientist_scholar_destiny_effect = {
+	#	subclass_scientist_scholar
+	random_list = {
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_destiny_a show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_destiny_b show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_destiny_c show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_destiny_d show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_militarist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_pacifist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_authoritarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_egalitarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_spiritualist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_materialist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_xenophobe show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_scholar_xenophile show_message = no }
+		}
+	}
+}
+
+libra_add_scientist_governor_destiny_effect = {
+	#	subclass_scientist_governor
+	random_list = {
+		0 = {
+			modifier = { set = 1 owner = { is_machine_empire = yes } }
+			add_trait = { trait = leader_trait_robotist show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_scientist_governor_destiny_a show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_governor_destiny_b show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_governor_destiny_c show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_scientist_governor_destiny_d show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_governor_militarist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_governor_pacifist show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_scientist_governor_authoritarian show_message = no }
+		}
+		1 = {
+			modifier = { set = 0 owner = { is_gestalt = yes } }
+			add_trait = { trait = leader_trait_libra_scientist_governor_egalitarian show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_governor_spiritualist show_message = no }
+		}
+		1 = {
+			modifier = { set = 1 owner = { is_gestalt = yes not = { has_civic = civic_machine_servitor } } }
+			add_trait = { trait = leader_trait_libra_scientist_governor_materialist show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_governor_xenophobe show_message = no }
+		}
+		1 = {
+			add_trait = { trait = leader_trait_libra_scientist_governor_xenophile show_message = no }
+		}
+	}
+}
+
+
+#
+
+libra_restore_gestalt_councilor_effect = {
+	random_owned_leader = {
+		limit = {
+			is_councilor_type = $COUNCIL_POS$
+		}
+		custom_tooltip = restore_gestalt_councilor_effect_tooltip
+		save_global_event_target_as = culled_node
+		hidden_effect = {
+			set_leader_flag = culled_node # This blocks paragon.600 from generated an unused node.
+			owner = {
+				create_restored_node = {
+					CLASS = $CLASS$
+					COUNCIL_POS = $COUNCIL_POS$
+					DESC = $DESC$
+				}
+				prev = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				assign_restored_node = {
+					COUNCIL_POS = $COUNCIL_POS$
+				}
+				last_created_leader = {
+					switch = {
+						trigger = is_councilor_type
+						councilor_gestalt_cognitive = {
+							owner = {
+								if = {
+									limit = { has_valid_civic = civic_machine_predictive_analysis }
+									prev = { add_random_expertise_trait_effect = yes }
+								}
+								if = {
+									limit = { has_origin = origin_libra_paradox_loop }
+									prev = {
+										add_trait = {
+											trait = leader_trait_maniacal
+											show_message = no
+										}
+									}
+								}
+							}
+						}
+					}
+					add_trait = {
+						trait = random_common
+						show_message = no
+					}
+					libra_leader_inital_effect = yes
+					add_skill_without_trait_selection = value:restored_node_additional_skills
+				}
+			}
+		}
+	}
+}
+
+# #############
+# AP
+#############
+
+libra_create_shield_machine_effect = {
+	create_leader = {
+		class = commander
+		skill = 1
+		immortal = yes
+		hide_age = yes
+		hide_leader = yes
+	#	event_leader = yes
+		randomize_traits = no
+		can_assign_to_council = no
+		can_manually_change_location = no
+		species = owner_main_species
+		background_ethic = ethic_gestalt_consciousness
+		name = libra_shield_machine_leader_name
+		custom_description = libra_shield_machine_leader_desc
+		effect = {
+			change_leader_portrait = councilor_gestalt_legion_3
+			set_leader_flag = block_council_traits
+			set_leader_flag = libra_extra_node_leader
+			set_leader_flag = leader_death_events_blocked
+			set_skill = 4
+			add_trait = {
+				trait = subclass_commander_governor
+				show_message = no
+			}
+			add_trait = {
+				trait = leader_trait_libra_shield_machine
+				show_message = no
+			}
+			add_trait = {
+				trait = leader_trait_academia_recruiter
+				show_message = no
+			}
+			libra_leader_inital_effect = yes
+		}
+	}
+}
+
+#
+
+libra_ultimate_directive_add_leader_skill = {
+	every_owned_leader = {
+		limit = {
+			is_councilor = yes
+			is_ruler = no
+		}
+		libra_renowned_leader_effect = yes
+		remove_trait = leader_trait_libra_ultimate_directive_growth
+		remove_trait = leader_trait_libra_ultimate_directive_cognitive
+		remove_trait = leader_trait_libra_ultimate_directive_legion
+		remove_trait = leader_trait_libra_ultimate_directive_regulatory
+		switch = {
+			trigger = is_councilor_type
+			councilor_gestalt_growth = {
+				add_trait = {
+					trait = leader_trait_libra_ultimate_directive_growth
+					show_message = no
+				}
+			}
+			councilor_gestalt_cognitive = {
+				add_trait = {
+					trait = leader_trait_libra_ultimate_directive_cognitive
+					show_message = no
+				}
+			}
+			councilor_gestalt_legion = {
+				add_trait = {
+					trait = leader_trait_libra_ultimate_directive_legion
+					show_message = no
+				}
+			}
+			councilor_gestalt_regulatory = {
+				add_trait = {
+					trait = leader_trait_libra_ultimate_directive_regulatory
+					show_message = no
+				}
+			}
+		}
+	}
+}
+
+#
+
+remove_libra_aa_effect = {
+	remove_ascension_perk = ap_libra_directive_76
+	remove_country_flag = libra_directive_76_starbase
+	remove_country_flag = libra_directive_76_policy
+	remove_country_flag = libra_directive_76_building
+	remove_country_flag = libra_directive_76_decision
+	remove_country_flag = libra_directive_76_species_trait
+	remove_country_flag = libra_directive_76_leader_trait
+	remove_country_flag = libra_directive_76_agenda
+
+	remove_ascension_perk = ap_libra_ode_to_babel
+
+	remove_ascension_perk = ap_libra_evolutionary_endpoint
+	remove_country_flag = libra_evolutionary_endpoint
+
+	remove_ascension_perk = ap_libra_cutefied_world
+	remove_modifier = libra_cutefied_world_mod_1
+	remove_modifier = libra_cutefied_world_mod_2
+	remove_modifier = libra_cutefied_world_mod_3
+
+	remove_ascension_perk = ap_libra_transcendental_cybernetics
+
+	remove_ascension_perk = ap_libra_cosmological_constant
+
+	remove_ascension_perk = ap_libra_atomic_heart
+	remove_country_flag = libra_atomic_heart
+
+	remove_ascension_perk = ap_libra_nanocore
+	remove_ascension_perk = ap_libra_hurricane_eye
+
+	remove_ascension_perk = ap_libra_yggdrasil
+
+	remove_ascension_perk = ap_libra_heavenly_throne
+	remove_ascension_perk = ap_libra_liber_genesis
+}
+
+
+libra_hurricane_eye_storm_add = {
+	set_star_flag = storm_system
+	set_global_flag = cosmic_storm_has_occurred
+
+	inline_script = {
+		script = cosmic_storms/StormVisuals
+		STORM_NAME = "libra_hurricane_eye_storm"
+	}
+}
+
+libra_hurricane_eye_storm_remove = {
+	remove_storm_visuals_effect = yes
+	remove_star_flag = storm_system
+}
+
+# #############
+# Tradition
+#############
+
+libra_adventure_give_specimen_effect = {
+	random_list = {
+		1 = {
+			modifier = {
+				factor = 0
+				can_libra_adventure_give_aesthetic_wonders = no
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					can_libra_adventure_give_other_than_aesthetic_wonders = yes
+					check_variable = {
+						which = last_analysed_artifact_category
+						value = 1
+					}
+				}
+			}
+			libra_adventure_give_aesthetic_wonders_specimen = { ORIGIN = decision_libra_adventure_finish }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				can_libra_adventure_give_historical_items = no
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					can_libra_adventure_give_other_than_historical_items = yes
+					check_variable = {
+						which = last_analysed_artifact_category
+						value = 2
+					}
+				}
+			}
+			libra_adventure_give_historical_items_specimen = { ORIGIN = decision_libra_adventure_finish }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				can_libra_adventure_give_xeno_geology = no
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					can_libra_adventure_give_other_than_xeno_geology = yes
+					check_variable = {
+						which = last_analysed_artifact_category
+						value = 3
+					}
+				}
+			}
+			libra_adventure_give_xeno_geology_specimen = { ORIGIN = decision_libra_adventure_finish }
+		}
+	}
+}
+
+libra_adventure_give_aesthetic_wonders_specimen = {
+	set_variable = {
+		which = last_analysed_artifact_category
+		value = 1
+	}
+	random_list = {
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_aesthetic_wonders_1 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_1 origin = $ORIGIN$ }
+		}
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_aesthetic_wonders_2 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_2 origin = $ORIGIN$ }
+		}
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_aesthetic_wonders_3 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_3 origin = $ORIGIN$ }
+		}
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_aesthetic_wonders_4 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_4 origin = $ORIGIN$ }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				not = { can_give_specimen = libra_adventure_aesthetic_wonders_5 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_5 origin = $ORIGIN$ }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				not = { can_give_specimen = libra_adventure_aesthetic_wonders_6 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_6 origin = $ORIGIN$ }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				not = { can_give_specimen = libra_adventure_aesthetic_wonders_7 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_7 origin = $ORIGIN$ }
+		}
+		4 = {
+			modifier = {
+				factor = 0
+				any_playable_country = { has_specimen = libra_adventure_aesthetic_wonders_8 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_8 origin = $ORIGIN$ }
+		}
+		4 = {
+			modifier = {
+				factor = 0
+				any_playable_country = { has_specimen = libra_adventure_aesthetic_wonders_9 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_9 origin = $ORIGIN$ }
+		}
+		3 = {
+			modifier = {
+				factor = 0
+				any_playable_country = { has_specimen = libra_adventure_aesthetic_wonders_10 }
+			}
+			give_specimen = { key = libra_adventure_aesthetic_wonders_10 origin = $ORIGIN$ }
+		}
+	}
+}
+
+libra_adventure_give_historical_items_specimen = {
+	set_variable = {
+		which = last_analysed_artifact_category
+		value = 2
+	}
+	random_list = {
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_historical_items_1 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_1 origin = $ORIGIN$ }
+		}
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_historical_items_2 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_2 origin = $ORIGIN$ }
+		}
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_historical_items_3 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_3 origin = $ORIGIN$ }
+		}
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_historical_items_4 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_4 origin = $ORIGIN$ }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				not = { can_give_specimen = libra_adventure_historical_items_5 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_5 origin = $ORIGIN$ }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				not = { can_give_specimen = libra_adventure_historical_items_6 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_6 origin = $ORIGIN$ }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				not = { can_give_specimen = libra_adventure_historical_items_7 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_7 origin = $ORIGIN$ }
+		}
+		4 = {
+			modifier = {
+				factor = 0
+				any_playable_country = { has_specimen = libra_adventure_historical_items_8 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_8 origin = $ORIGIN$ }
+		}
+		4 = {
+			modifier = {
+				factor = 0
+				any_playable_country = { has_specimen = libra_adventure_historical_items_9 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_9 origin = $ORIGIN$ }
+		}
+		3 = {
+			modifier = {
+				factor = 0
+				any_playable_country = { has_specimen = libra_adventure_historical_items_10 }
+			}
+			give_specimen = { key = libra_adventure_historical_items_10 origin = $ORIGIN$ }
+		}
+	}
+}
+
+libra_adventure_give_xeno_geology_specimen = {
+	set_variable = {
+		which = last_analysed_artifact_category
+		value = 3
+	}
+	random_list = {
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_xeno_geology_1 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_1 origin = $ORIGIN$ }
+		}
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_xeno_geology_2 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_2 origin = $ORIGIN$ }
+		}
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_xeno_geology_3 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_3 origin = $ORIGIN$ }
+		}
+		6 = {
+			modifier = {
+				factor = 0.001
+				not = { can_give_specimen = libra_adventure_xeno_geology_4 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_4 origin = $ORIGIN$ }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				not = { can_give_specimen = libra_adventure_xeno_geology_5 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_5 origin = $ORIGIN$ }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				not = { can_give_specimen = libra_adventure_xeno_geology_6 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_6 origin = $ORIGIN$ }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				not = { can_give_specimen = libra_adventure_xeno_geology_7 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_7 origin = $ORIGIN$ }
+		}
+		4 = {
+			modifier = {
+				factor = 0
+				any_playable_country = { has_specimen = libra_adventure_xeno_geology_8 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_8 origin = $ORIGIN$ }
+		}
+		4 = {
+			modifier = {
+				factor = 0
+				any_playable_country = { has_specimen = libra_adventure_xeno_geology_9 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_9 origin = $ORIGIN$ }
+		}
+		3 = {
+			modifier = {
+				factor = 0
+				any_playable_country = { has_specimen = libra_adventure_xeno_geology_10 }
+			}
+			give_specimen = { key = libra_adventure_xeno_geology_10 origin = $ORIGIN$ }
+		}
+	}
+}
+
+libra_clear_overclock_modifiers = {
+	remove_modifier = libra_overclock_1_modifier
+	remove_modifier = libra_overclock_2_modifier
+	remove_modifier = libra_overclock_3_modifier
+	remove_modifier = libra_overclock_4_modifier
+	remove_modifier = libra_overclock_5_modifier
+}
+
+libra_add_pendragon_tradition_modifiers = {
+	if = {
+		limit = { has_tradition = tr_libra_pendragon_1 }
+		add_modifier = {
+			modifier = libra_pendragon_1_modifier_a
+			multiplier = libra_pendragon_count
+		}
+	}
+	if = {
+		limit = { has_tradition = tr_libra_pendragon_2 }
+		add_modifier = {
+			modifier = libra_pendragon_2_modifier_a
+			multiplier = libra_pendragon_count
+		}
+	}
+	if = {
+		limit = { has_tradition = tr_libra_pendragon_4 }
+		add_modifier = {
+			modifier = libra_pendragon_4_modifier_a
+			multiplier = libra_pendragon_count
+		}
+	}
+	if = {
+		limit = { has_tradition = tr_libra_pendragon_5 }
+		add_modifier = {
+			modifier = libra_pendragon_5_modifier_a
+			multiplier = libra_pendragon_count
+		}
+	}
+}
+
+libra_clear_pendragon_tradition_modifiers = {
+	remove_modifier = libra_pendragon_1_modifier_a
+	remove_modifier = libra_pendragon_2_modifier_a
+	remove_modifier = libra_pendragon_4_modifier_a
+	remove_modifier = libra_pendragon_5_modifier_a
+}
+
+libra_add_pendragon_situation_modifiers = {
+	if = {
+		limit = { has_tradition = tr_libra_pendragon_1 }
+		add_modifier = {
+			modifier = libra_pendragon_1_modifier_b
+		}
+	}
+	if = {
+		limit = { has_tradition = tr_libra_pendragon_2 }
+		add_modifier = {
+			modifier = libra_pendragon_2_modifier_b
+		}
+	}
+	if = {
+		limit = { has_tradition = tr_libra_pendragon_4 }
+		add_modifier = {
+			modifier = libra_pendragon_4_modifier_b
+		}
+	}
+	if = {
+		limit = { has_tradition = tr_libra_pendragon_5 }
+		add_modifier = {
+			modifier = libra_pendragon_5_modifier_b
+		}
+	}
+}
+
+libra_clear_pendragon_situation_modifiers = {
+	remove_modifier = libra_pendragon_1_modifier_b
+	remove_modifier = libra_pendragon_2_modifier_b
+	remove_modifier = libra_pendragon_4_modifier_b
+	remove_modifier = libra_pendragon_5_modifier_b
+}
+
+# #############
+# Origin
+#############
+
+libra_crimson_nights_ancestor_awaken_effect = {
+	change_variable = {
+		which = libra_crimson_nights_ancestor_awaken_count
+		value = 1
+	}
+	random_owned_leader = {
+		limit = {
+			or = {
+				has_trait = leader_trait_libra_crimson_nights_vampire_official
+				has_trait = leader_trait_libra_crimson_nights_vampire_commander
+				has_trait = leader_trait_libra_crimson_nights_vampire_scientist
+			}
+			species = {
+				or = {
+					is_species_class = HUM
+					is_species_class = ROBOT
+				}
+			}
+		}
+		switch = {
+			trigger = leader_class
+			official = {
+				remove_trait = leader_trait_libra_crimson_nights_vampire_official
+				add_trait = { trait = leader_trait_libra_crimson_nights_ancestor_official }
+			}
+			commander = {
+				remove_trait = leader_trait_libra_crimson_nights_vampire_commander
+				add_trait = { trait = leader_trait_libra_crimson_nights_ancestor_commander }
+			}
+			scientist = {
+				remove_trait = leader_trait_libra_crimson_nights_vampire_scientist
+				add_trait = { trait = leader_trait_libra_crimson_nights_ancestor_scientist }
+			}
+		}
+		add_experience = 1000
+		weights = {
+			base = 1
+			modifier = {
+				add = trigger:has_base_skill
+				always = yes
+			}
+			modifier = {
+				factor = 2
+				has_base_skill > 3
+			}
+			modifier = {
+				factor = 2
+				has_total_skill > 7
+			}
+			modifier = {
+				factor = 2
+				is_councilor = yes
+			}
+		}
+	}
+}
+
+libra_dragonborn_upgrade_leader_trait = {
+	switch = {
+		trigger = leader_class
+		official = {
+			switch = {
+				trigger = has_trait
+				default = {
+					add_trait = { trait = leader_trait_libra_dragonborn_official }
+				}
+				leader_trait_libra_dragonborn_official = {
+					add_trait = { trait = leader_trait_libra_dragonborn_official_2 }
+					remove_trait = leader_trait_libra_dragonborn_official
+				}
+				leader_trait_libra_dragonborn_official_2 = {
+					add_trait = { trait = leader_trait_libra_dragonborn_official_3 }
+					remove_trait = leader_trait_libra_dragonborn_official_2
+				}
+			}
+		}
+		commander = {
+			switch = {
+				trigger = has_trait
+				default = {
+					add_trait = { trait = leader_trait_libra_dragonborn_commander }
+				}
+				leader_trait_libra_dragonborn_commander = {
+					add_trait = { trait = leader_trait_libra_dragonborn_commander_2 }
+					remove_trait = leader_trait_libra_dragonborn_commander
+				}
+				leader_trait_libra_dragonborn_commander_2 = {
+					add_trait = { trait = leader_trait_libra_dragonborn_commander_3 }
+					remove_trait = leader_trait_libra_dragonborn_commander_2
+				}
+			}
+		}
+		scientist = {
+			switch = {
+				trigger = has_trait
+				default = {
+					add_trait = { trait = leader_trait_libra_dragonborn_scientist }
+				}
+				leader_trait_libra_dragonborn_scientist = {
+					add_trait = { trait = leader_trait_libra_dragonborn_scientist_2 }
+					remove_trait = leader_trait_libra_dragonborn_scientist
+				}
+				leader_trait_libra_dragonborn_scientist_2 = {
+					add_trait = { trait = leader_trait_libra_dragonborn_scientist_3 }
+					remove_trait = leader_trait_libra_dragonborn_scientist_2
+				}
+			}
+		}
+	}
+}
+
+libra_polemics_mechanism_effect_1 = {
+	add_monthly_resource_mult = {
+		resource = society_research
+		value = 6
+	}
+	add_monthly_resource_mult = {
+		resource = unity
+		value = 6
+	}
+	every_owned_leader = {
+		limit = {
+			has_base_skill < 10
+			is_councilor = yes
+		}
+		add_experience = 3000
+	}
+	create_message = {
+		type = LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_2
+		localization = LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_2_DESC
+		days = 30
+		target = capital_scope
+	}
+}
+
+libra_polemics_mechanism_effect_2 = {
+	add_monthly_resource_mult = {
+		resource = society_research
+		value = 9
+	}
+	add_monthly_resource_mult = {
+		resource = unity
+		value = 9
+	}
+	every_owned_planet = {
+		limit = {
+			is_under_colonization = no
+			has_planetary_ascension_tier < 10
+			not = { uses_district_set = cosmogenesis_world }
+		}
+		set_planetary_ascension_tier = value:add_planet_ascension_tier
+	}
+	create_message = {
+		type = LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_3
+		localization = LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_3_DESC
+		days = 30
+		target = capital_scope
+	}
+}
+
+#
+
+create_libra_agent = {
+	if = {
+		limit = { any_country = { is_ai = no } }
+		random_country = {
+			limit = { is_ai = no }
+			species = { save_event_target_as = libra_agent_species }
+		}
+	}
+	else = {
+		random_country = {
+			species = { save_event_target_as = libra_agent_species }
+		}
+	}
+	create_country = {
+		name = NAME_libra_agent
+		type = libra_agent
+		species = event_target:libra_agent_species
+		origin = origin_default
+		authority = auth_corporate
+		ethos = {
+			ethic = ethic_fanatic_xenophile
+			ethic = ethic_pacifist
+		}
+		civics = random
+		ignore_initial_colony_error = yes
+		flag = {
+			icon = {
+				category = "spherical"
+				file = "flag_spherical_6.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors={
+				"green"
+				"yellow"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			set_country_flag = libra_agent
+			save_global_event_target_as = libra_agent
+		}
+	}
+}

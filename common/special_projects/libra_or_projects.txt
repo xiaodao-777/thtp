@@ -1,0 +1,25 @@
+special_project = {
+	key = "LIBRA_ENLIGHTENMENT_WISDOM_PROJECT"
+	cost = 0
+	days_to_research = 3600
+	tech_department = physics_technology
+	picture = GFX_evt_hostile_infiltration
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 6
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		ship_event = { id = libra_origin.0442 }
+	}
+
+	on_fail = {
+	}
+}

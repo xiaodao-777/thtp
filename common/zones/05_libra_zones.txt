@@ -1,0 +1,132 @@
+zone_libra_paradox_betharian = {
+	icon = GFX_district_specialization_betharian
+	base_buildtime = @zone_buildtime
+
+	potential = {
+		nor = {
+			has_deposit = d_betharian_deposit
+			uses_district_set = standard
+		}
+		exists = owner
+		owner = { has_origin = origin_libra_paradox_loop }
+	}
+
+	unlock = {
+		hidden_trigger = {
+			nor = {
+				has_deposit = d_betharian_deposit
+				uses_district_set = standard
+			}
+		}
+		exists = owner
+		owner = { has_origin = origin_libra_paradox_loop }
+	}
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_miner_add
+		AMOUNT = @scaling_district_1_job
+	}
+
+	included_building_sets = {
+		mining
+		fallen_empire_mining
+		betharian
+		mining_automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		planet_miners_energy_produces_add = 1
+		planet_miners_minerals_produces_add = -1
+	}
+
+	ai_priority = 10
+
+	swap_type = district_mining_betharian
+	swap_type_weight = 5
+
+	zone_sets = {
+		minerals
+		ring_world
+		nexus
+	}
+}
+
+zone_libra_food_nexus = {
+	icon = GFX_district_specialization_food
+	base_buildtime = @zone_buildtime
+	potential = {
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_technology = tech_libra_nanite_locusts
+		}
+	}
+	unlock = {
+		is_planet_class = pc_nanotech
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				has_technology = tech_libra_nanite_locusts
+			}
+		}
+	}
+	show_in_tech = tech_libra_nanite_locusts
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_farmer_add = @doubled_scaling_district_1_job
+		mult = 3
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_agri_drone_add = @doubled_scaling_district_1_job
+		mult = 3
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		farming_automation
+		fallen_empire_farming
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	ai_priority = 5
+
+	swap_type = district_libra_nexus_food
+	swap_type_weight = 5
+
+	zone_sets = {
+		nexus
+	}
+
+	inline_script = {
+		script = zones/shared_arcology_zone_modifiers
+	}
+}

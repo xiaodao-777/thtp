@@ -1,0 +1,1 @@
+custom_subtitle = libra_paragon_$TYPE$_$CLASS$_trait

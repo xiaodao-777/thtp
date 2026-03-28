@@ -1,0 +1,407 @@
+defined_text = {
+	name = LibraCommonDefaultTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_common_default_councilor_trait
+	}
+	default = libra_common_default_leader_trait
+}
+defined_text = {
+	name = LibraVeteranDefaultTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_veteran_default_councilor_trait
+	}
+	default = libra_veteran_default_leader_trait
+}
+defined_text = {
+	name = LibraParagonDefaultTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_paragon_default_councilor_trait
+	}
+	default = libra_paragon_default_leader_trait
+}
+
+defined_text = {
+	name = LibraCommonGeneticTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_common_genetic_councilor_trait
+	}
+	default = libra_common_genetic_leader_trait
+}
+defined_text = {
+	name = LibraVeteranGeneticTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_veteran_genetic_councilor_trait
+	}
+	default = libra_veteran_genetic_leader_trait
+}
+defined_text = {
+	name = LibraParagonGeneticTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_paragon_genetic_councilor_trait
+	}
+	default = libra_paragon_genetic_leader_trait
+}
+
+defined_text = {
+	name = LibraCommonPsionicTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_common_psionic_councilor_trait
+	}
+	default = libra_common_psionic_leader_trait
+}
+defined_text = {
+	name = LibraVeteranPsionicTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_veteran_psionic_councilor_trait
+	}
+	default = libra_veteran_psionic_leader_trait
+}
+defined_text = {
+	name = LibraParagonPsionicTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_paragon_psionic_councilor_trait
+	}
+	default = libra_paragon_psionic_leader_trait
+}
+
+defined_text = {
+	name = LibraCommonCyborgTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_common_cyborg_councilor_trait
+	}
+	default = libra_common_cyborg_leader_trait
+}
+defined_text = {
+	name = LibraVeteranCyborgTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_veteran_cyborg_councilor_trait
+	}
+	default = libra_veteran_cyborg_leader_trait
+}
+defined_text = {
+	name = LibraParagonCyborgTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_paragon_cyborg_councilor_trait
+	}
+	default = libra_paragon_cyborg_leader_trait
+}
+
+defined_text = {
+	name = LibraCommonMachineTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_common_machine_councilor_trait
+	}
+	default = libra_common_machine_leader_trait
+}
+defined_text = {
+	name = LibraVeteranMachineTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_veteran_machine_councilor_trait
+	}
+	default = libra_veteran_machine_leader_trait
+}
+defined_text = {
+	name = LibraParagonMachineTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_paragon_machine_councilor_trait
+	}
+	default = libra_paragon_machine_leader_trait
+}
+
+defined_text = {
+	name = LibraCommonNegativeTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_common_negative_councilor_trait
+	}
+	default = libra_common_negative_leader_trait
+}
+defined_text = {
+	name = LibraVeteranNegativeTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_veteran_negative_councilor_trait
+	}
+	default = libra_veteran_negative_leader_trait
+}
+defined_text = {
+	name = LibraParagonNegativeTriggeredClass
+	random = no
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = libra_paragon_negative_councilor_trait
+	}
+	default = libra_paragon_negative_leader_trait
+}
+
+#
+
+defined_text = {
+	name = GetLibraVampireNoble
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						is_scope_type = country
+					}
+					exists = owner
+					owner = {
+						is_hive_empire = yes
+					}
+				}
+				AND = {
+					is_scope_type = country
+					is_hive_empire = yes
+				}
+			}
+		}
+		localization_key = job_libra_vampire_queen_plural
+	}
+	default = job_libra_vampire_noble_plural
+}
+defined_text = {
+	name = GetLibraVampireServant
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						is_scope_type = country
+					}
+					exists = owner
+					owner = {
+						is_hive_empire = yes
+					}
+				}
+				AND = {
+					is_scope_type = country
+					is_hive_empire = yes
+				}
+			}
+		}
+		localization_key = job_libra_vampire_drone_plural
+	}
+	default = job_libra_vampire_servant_plural
+}
+
+defined_text = {
+	name = GetLibraPhantomUnitWithIcon
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						is_scope_type = country
+					}
+					exists = owner
+					owner = {
+						is_machine_empire = yes
+					}
+				}
+				AND = {
+					is_scope_type = country
+					is_machine_empire = yes
+				}
+			}
+		}
+		localization_key = job_libra_phantom_unit_with_icon
+	}
+	default = job_libra_phantom_mechanist_with_icon
+}
+
+#
+
+defined_text = {
+	name = GetLibraChromosomeSwapPluralWithIcon
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						is_scope_type = country
+					}
+					exists = owner
+					owner = {
+						is_gestalt = yes
+					}
+				}
+				AND = {
+					is_scope_type = country
+					is_gestalt = yes
+				}
+			}
+		}
+		localization_key = job_libra_chromosome_drone_swap_plural_with_icon
+	}
+	default = job_libra_chromosome_engineer_swap_plural_with_icon
+}
+
+defined_text = {
+	name = GetLibraCyberneticsWorkerSwapPluralWithIcon
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						is_scope_type = country
+					}
+					exists = owner
+					owner = {
+						is_gestalt = yes
+					}
+				}
+				AND = {
+					is_scope_type = country
+					is_gestalt = yes
+				}
+			}
+		}
+		localization_key = job_libra_cybernetics_drone_swap_plural_with_icon
+	}
+	default = job_libra_cybernetics_worker_swap_plural_with_icon
+}
+
+defined_text = {
+	name = GetLibraReplicaTechnicianSwapPluralWithIcon
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						is_scope_type = country
+					}
+					exists = owner
+					owner = {
+						is_gestalt = yes
+					}
+				}
+				AND = {
+					is_scope_type = country
+					is_gestalt = yes
+				}
+			}
+		}
+		localization_key = job_libra_replica_unit_swap_plural_with_icon
+	}
+	default = job_libra_replica_technician_swap_plural_with_icon
+}
+
+defined_text = {
+	name = GetLibraPsychicSwapPluralWithIcon
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						is_scope_type = country
+					}
+					exists = owner
+					owner = {
+						is_gestalt = yes
+					}
+				}
+				AND = {
+					is_scope_type = country
+					is_gestalt = yes
+				}
+			}
+		}
+		localization_key = job_libra_psychic_drone_swap_plural_with_icon
+	}
+	default = job_libra_psychic_swap_plural_with_icon
+}
+
+defined_text = {
+	name = GetLibraHarmonizerSwapPluralWithIcon
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						is_scope_type = country
+					}
+					exists = owner
+					owner = {
+						is_gestalt = yes
+					}
+				}
+				AND = {
+					is_scope_type = country
+					is_gestalt = yes
+				}
+			}
+		}
+		localization_key = job_libra_harmonize_drone_swap_plural_with_icon
+	}
+	default = job_libra_harmonize_envoy_swap_plural_with_icon
+}
+

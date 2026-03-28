@@ -1,0 +1,176 @@
+tr_libra_ceremony_adopt = {
+	unlocks_agenda = agenda_libra_ceremony_a
+	on_enabled = {
+		hidden_effect = {
+			set_variable = { which = libra_ceremony_count value = 0 }
+			country_event = { id = libra_fairy.1522 days = 3 }
+		}
+	}
+	modifier = {
+		pop_happiness = 0.05
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { has_civic = civic_dystopian_society }
+		on_enabled = {
+			hidden_effect = {
+				set_variable = { which = libra_ceremony_count value = 0 }
+				country_event = { id = libra_fairy.1522 days = 3 }
+			}
+		}
+		modifier = {
+			pop_cat_ruler_happiness = 0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }
+		on_enabled = {
+			hidden_effect = {
+				set_variable = { which = libra_ceremony_count value = 0 }
+				country_event = { id = libra_fairy.1522 days = 3 }
+			}
+		}
+		modifier = {
+			planet_stability_add = 5
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	on_disabled = {
+		every_owned_leader = {	
+			remove_trait = leader_trait_libra_ceremony
+		}
+	}
+	possible = {
+		has_technology = tech_planetary_infrastructure_1
+	}
+}
+
+tr_libra_ceremony_finish = {
+	unlocks_agenda = agenda_libra_ceremony_b
+	modifier = {
+		ascension_perks_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_ceremony_finish_desc
+}
+
+tr_libra_ceremony_1 = {
+	modifier = {
+		planet_amenities_add = 500
+	}
+	custom_tooltip_with_modifiers = tr_libra_ceremony_1_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }
+		modifier = {
+			planet_amenities_no_happiness_add = 500
+		}
+		custom_tooltip_with_modifiers = tr_libra_ceremony_1_desc
+	}
+
+	ai_weight = {
+		factor = 8000
+	}
+}
+
+tr_libra_ceremony_2 = {
+	possible = {
+		has_tradition = tr_libra_ceremony_1
+	}
+	modifier = {
+		planet_housing_add = 500
+	}
+	custom_tooltip_with_modifiers = tr_libra_ceremony_2_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_ceremony_3 = {
+	possible = {
+		has_tradition = tr_libra_ceremony_2
+	}
+	modifier = {
+		planet_crime_add = -5
+	}
+	custom_tooltip_with_modifiers = tr_libra_ceremony_3_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }
+		modifier = {
+			planet_crime_no_happiness_add = -5
+		}
+		custom_tooltip_with_modifiers = tr_libra_ceremony_3_desc
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_ceremony_4 = {
+	on_enabled = {
+		hidden_effect = {
+			change_variable = { which = libra_ceremony_count value = 11 }
+		}
+	}
+	modifier = {
+		planet_non_artificial_max_districts_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_ceremony_4_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { has_void_dweller_origin = yes }
+		modifier = {
+			habitat_max_districts_add = 1
+		}
+		custom_tooltip_with_modifiers = tr_libra_ceremony_4_desc
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp }
+		modifier = {
+			planet_max_districts_add = 1
+		}
+		custom_tooltip_with_modifiers = tr_libra_ceremony_4_desc
+		weight = {
+			factor = 2
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_ceremony_5 = {
+	possible = {
+		has_tradition = tr_libra_ceremony_4
+	}
+	modifier = {
+		councilor_skill_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_ceremony_5_desc
+
+	ai_weight = {
+		factor = 4000
+	}
+}

@@ -1,0 +1,196 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_libra_story_specimen_1"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_1.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_story_specimen_2"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_2.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_story_specimen_3"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_3.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_story_specimen_4"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_4.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_story_specimen_5"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_5.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_story_specimen_6"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_6.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_story_specimen_7"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_7.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_story_specimen_8"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_8.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_story_specimen_9"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_9.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_story_specimen_10"
+		texturefile = "gfx/interface/icons/specimens/libra_story_specimen_10.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_relic_libra_main_story_1"
+		texturefile = "gfx/interface/icons/relics/r_libra_main_story_1.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_libra_main_story_1.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 1			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+#
+
+	SpriteType = {
+		name = "GFX_relic_libra_mystic_grail"
+		texturefile = "gfx/interface/icons/relics/r_libra_mystic_grail.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_libra_mystic_grail.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 1			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_wg_libra_mystic_grail"
+		texturefile = "gfx/interface/icons/diplomacy/diplomatic_rival_mutual_icon.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_reciprocity"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_reciprocity.dds"
+	}
+
+#
+	spriteType = {
+		name = "GFX_leader_trait_libra_kotori_fan"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_kotori_fan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_hoshino_kotori_miko"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_hoshino_kotori_miko.dds"
+	}
+	SpriteType = {
+		name = "GFX_relic_libra_kagura_suzu"
+		texturefile = "gfx/interface/icons/relics/r_libra_kagura_suzu.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_libra_kagura_suzu_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 12				# in seconds
+			animationdelay = 1			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_leader_recruitment_bg_libra_hoshino_kotori_1"
+		texturefile = "gfx/interface/leaders/recruitment_bgs/leader_recruitment_bg_libra_hoshino_kotori_1.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_recruitment_bg_libra_hoshino_kotori_2"
+		texturefile = "gfx/interface/leaders/recruitment_bgs/leader_recruitment_bg_libra_hoshino_kotori_2.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_recruitment_bg_libra_hoshino_kotori_3"
+		texturefile = "gfx/interface/leaders/recruitment_bgs/leader_recruitment_bg_libra_hoshino_kotori_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_libra_hoshino_kotori_01_room"
+		texturefile = "gfx/portraits/city_sets/libra_hoshino_kotori_01_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_hoshino_kotori_02_room"
+		texturefile = "gfx/portraits/city_sets/libra_hoshino_kotori_02_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_hoshino_kotori_03_room"
+		texturefile = "gfx/portraits/city_sets/libra_hoshino_kotori_03_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_hoshino_kotori_04_room"
+		texturefile = "gfx/portraits/city_sets/libra_hoshino_kotori_04_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_hoshino_kotori_05_room"
+		texturefile = "gfx/portraits/city_sets/libra_hoshino_kotori_05_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_hoshino_kotori_06_room"
+		texturefile = "gfx/portraits/city_sets/libra_hoshino_kotori_06_room.dds"
+	}
+
+	spriteType = {
+		name = "GFX_libra_mino_01_room"
+		texturefile = "gfx/portraits/city_sets/libra_mino_01_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_mino_02_room"
+		texturefile = "gfx/portraits/city_sets/libra_mino_02_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_mino_03_room"
+		texturefile = "gfx/portraits/city_sets/libra_mino_03_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_mino_04_room"
+		texturefile = "gfx/portraits/city_sets/libra_mino_04_room.dds"
+	}
+
+	spriteType = {
+		name = "GFX_libra_kazanin_momohana_01_room"
+		texturefile = "gfx/portraits/city_sets/libra_kazanin_momohana_01_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_kazanin_momohana_02_room"
+		texturefile = "gfx/portraits/city_sets/libra_kazanin_momohana_02_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_kazanin_momohana_03_room"
+		texturefile = "gfx/portraits/city_sets/libra_kazanin_momohana_03_room.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_kazanin_momohana_04_room"
+		texturefile = "gfx/portraits/city_sets/libra_kazanin_momohana_04_room.dds"
+	}
+
+}

@@ -1,0 +1,8060 @@
+# #############
+# Cloning
+#############
+
+building_libra_duplex_cloning_chamber = {
+	base_buildtime = @b4_time
+	category = pop_assembly
+	planet_limit = 2
+	empire_limit = 8
+
+	building_sets = {
+		government
+		urban
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		libra_is_special_colony_type = no
+	}
+
+	allow = {
+		if = {
+			limit = {
+				or = {
+					has_building = building_libra_duplex_cloning_chamber
+					has_building_construction = building_libra_duplex_cloning_chamber
+				}
+			}
+			is_sector_capital = yes
+			has_planetary_ascension_tier > 9
+		}
+		nor = {
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+			libra_is_special_colony_type = yes
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_cloning_finish
+				}
+			}
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_cloning_chamber"
+ 	}
+
+	resources = {
+		category = planet_buildings_clone_vats
+		cost = {
+			minerals = @b4_minerals
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+			}
+			food = 500
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+			}
+			energy = 500
+		}
+		upkeep = {
+			energy = 20
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+			}
+			food = 80
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+			}
+			energy = 80
+		}
+	}
+
+	planet_modifier = {
+		planet_pops_organics_upkeep_mult = 0.25
+		fake_pop_growth_mod = 12
+		job_healthcare_add = 500
+		job_libra_chromosome_engineer_add = 700
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			nor = {
+				has_trait = trait_psionic
+				has_trait = trait_latent_psionic
+				has_trait = trait_cybernetic
+				has_trait = trait_limited_cybernetic
+			}
+		}
+		bonus_pop_growth = 12
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_healthcare_add = -500
+		job_libra_chromosome_engineer_add = -700
+		job_spawning_drone_add = 500
+		job_libra_chromosome_drone_add = 700
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			free_housing < 0
+		}
+		civilian_and_maintenance_drone_cat_bonus_workforce_mult = -0.35
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_clone_army
+				has_country_flag = clone_army_full_potential
+			}
+		}
+		clone_soldiers_sustained = 2500
+	}
+
+	triggered_desc = {
+		trigger = {
+			free_housing < 0
+		}
+		text = building_libra_duplex_cloning_chamber_tt
+	}
+
+	ai_weight_coefficient = 7
+}
+
+# #############
+# Directive 76
+#############
+
+building_libra_directive_76 = {
+	base_buildtime = @b4_time
+	category = pop_assembly
+	planet_limit = 1
+	empire_limit = 1
+	can_be_ruined = no
+	can_be_disabled = no
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_country_flag = libra_directive_76_building
+			check_variable = { which = libra_aa_path value = 10 }
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_directive_76 }
+		}
+	}
+
+	resources = {
+		category = planet_buildings_clone_vats
+		cost = {
+			minerals = @b4_minerals
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			rare_crystals = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_mult = 0.15
+		country_commander_cap_add = 5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_chromosome_drone_add = 50
+		job_warrior_drone_add = 100
+		mult = value:libra_count_districts|TYPE|any|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_chromosome_engineer_add = 50
+		job_soldier_add = 100
+		mult = value:libra_count_districts|TYPE|any|
+	}
+
+	triggered_desc = {
+		text = building_libra_directive_76_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_clone_army
+				has_country_flag = clone_army_full_potential
+			}
+		}
+		clone_soldiers_sustained = 5000
+	}
+
+	ai_resource_production = {
+		alloys = 25
+	}
+	ai_weight_coefficient = 5
+}
+
+# #############
+# Purity
+#############
+
+building_libra_flawless_sanctuary = {
+	base_buildtime = @b3_time
+	category = government
+	is_essential = yes
+	planet_limit = 1
+
+	building_sets = {
+		government
+		urban
+		research
+		society
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		nor = {
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_purity_finish
+				}
+			}
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_purity_sanctuary"
+ 	}
+
+	resources = {
+		category = planet_buildings_clone_vats
+		cost = {
+			minerals = @b3_minerals
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		planet_amenities_add = 2400
+		job_libra_chromosome_engineer_add = 400
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		planet_amenities_no_happiness_add = 2400
+		job_libra_chromosome_drone_add = 400
+	}
+
+	ai_resource_production = {
+		trade = 10
+		society_research = 12
+	}
+}
+
+# #############
+# Ode to Babel
+#############
+
+building_libra_babel_tower = {
+	base_buildtime = @b5_time
+	position_priority = 1
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	empire_limit = 1
+	planet_limit = 1
+
+	category = government
+
+	building_sets = {
+		government
+	}
+
+	potential = {
+		exists = owner
+		or = {
+			has_building = building_libra_babel_tower_2
+			owner = {
+				is_variable_set = libra_aa_path
+				has_ascension_perk = ap_libra_ode_to_babel
+				check_variable = { which = libra_aa_path value = 20 }
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_libra_rebuilding_babel_sit"
+			exists = owner
+			owner = { has_country_flag = can_build_libra_babel_tower }
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 20 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_babel
+		cost = {
+			minerals = @b5_minerals
+			volatile_motes = @b5_rare_cost
+			exotic_gases = @b5_rare_cost
+			rare_crystals = @b5_rare_cost
+		}
+		upkeep = {
+			energy = @b5_upkeep
+			volatile_motes = 5
+			exotic_gases = 5
+			rare_crystals = 5
+		}
+	}
+
+	country_modifier = {
+		BIOLOGICAL_species_trait_points_add = 0
+		logistic_growth_mult = 0.03
+		planet_jobs_productive_produces_mult = 0.012
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_variable_set = libra_babel_level }
+		}
+		logistic_growth_mult = 0.03
+		planet_jobs_productive_produces_mult = 0.012
+		multiplier = owner.libra_babel_level
+	}
+	triggered_country_modifier = {
+		country_naval_cap_mult = 0.03
+		multiplier = value:libra_babel_building_mult
+	}
+	triggered_country_modifier = {
+		all_technology_research_speed = 0.04
+		multiplier = value:libra_babel_planet_mult
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 10 }
+			}
+		}
+		leader_skill_add = 1
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 21 }
+			}
+		}
+		planet_pops_organics_upkeep_mult = -0.1
+		pop_amenities_usage_organic_mult = -0.1
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 32 }
+			}
+		}
+		BIOLOGICAL_species_trait_points_add = 1
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 43 }
+			}
+		}
+		country_leader_cap_add = 2
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 54 }
+			}
+		}
+		subspecies_integration_mult = 0.2
+		council_agenda_cooldown_mult = -0.2
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 65 }
+			}
+		}
+		BIOLOGICAL_species_trait_points_add = 2
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 76 }
+			}
+		}
+		planet_pop_assemblers_society_research_produces_add = 2
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 87 }
+			}
+		}
+		ship_shield_hardening_add = 0.3
+		ship_armor_hardening_add = 0.3
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value = 99 }
+			}
+		}
+		BIOLOGICAL_species_trait_points_add = 3
+	}
+
+	planet_modifier = {
+		job_politician_add = 400
+		job_libra_chromosome_engineer_add = 800
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_politician_add = -400
+		job_libra_chromosome_engineer_add = -800
+		job_evaluator_add = 600
+		job_libra_chromosome_drone_add = 800
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_variable_set = libra_babel_level }
+		}
+		text = building_libra_babel_tower_level
+	}
+	triggered_desc = {
+		text = building_libra_babel_tower_effect
+	}
+
+	ai_resource_production = {
+		trigger = {
+			is_capital = yes
+		}
+		energy = 50
+		food = 50
+		minerals = 50
+		alloys = 50
+		unity = 50
+		trade = 50
+		physics_research = 75
+		society_research = 75
+		engineering_research = 75
+	}
+	ai_weight_coefficient = 10
+
+	upgrades = {
+		"building_libra_babel_tower_2"
+	}
+
+	on_built = {
+		owner = {
+			remove_country_flag = can_build_libra_babel_tower
+			change_variable = { which = libra_babel_level value = 0 }
+		}
+	}
+	on_destroy = {
+		owner = {
+			country_event = { id = libra_fairy.11002 }
+		}
+	}
+}
+
+building_libra_babel_tower_2 = {
+	icon = building_libra_babel_tower
+	base_buildtime = @b4_time
+	position_priority = 1
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	can_build = no
+
+	category = government
+
+	building_sets = {
+		government
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 20 }
+			is_variable_set = libra_babel_level
+			check_variable = { which = libra_babel_level value < 99 }
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_babel_tower_2
+	}
+
+	convert_to = {
+		building_libra_babel_tower
+	}
+
+	resources = {
+		category = planet_libra_babel
+		cost = {
+			minerals = @b4_minerals
+			volatile_motes = @b4_rare_cost
+			exotic_gases = @b4_rare_cost
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b5_upkeep
+			volatile_motes = 5
+			exotic_gases = 5
+			rare_crystals = 5
+		}
+	}
+
+	country_modifier = {
+		logistic_growth_mult = 0.06
+		planet_jobs_productive_produces_mult = 0.024
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_variable_set = libra_babel_level }
+		}
+		logistic_growth_mult = 0.03
+		planet_jobs_productive_produces_mult = 0.012
+		multiplier = owner.libra_babel_level
+	}
+	triggered_country_modifier = {
+		country_naval_cap_mult = 0.03
+		multiplier = value:libra_babel_building_mult
+	}
+	triggered_country_modifier = {
+		all_technology_research_speed = 0.04
+		multiplier = value:libra_babel_planet_mult
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 9 }
+			}
+		}
+		leader_skill_add = 1
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 20 }
+			}
+		}
+		planet_pops_organics_upkeep_mult = -0.1
+		pop_amenities_usage_organic_mult = -0.1
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 31 }
+			}
+		}
+		BIOLOGICAL_species_trait_points_add = 1
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 42 }
+			}
+		}
+		country_leader_cap_add = 2
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 53 }
+			}
+		}
+		subspecies_integration_mult = 0.2
+		council_agenda_cooldown_mult = -0.2
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 64 }
+			}
+		}
+		BIOLOGICAL_species_trait_points_add = 2
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 75 }
+			}
+		}
+		planet_pop_assemblers_society_research_produces_add = 2
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value > 86 }
+			}
+		}
+		ship_shield_hardening_add = 0.3
+		ship_armor_hardening_add = 0.3
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_babel_level
+				check_variable = { which = libra_babel_level value = 98 }
+			}
+		}
+		BIOLOGICAL_species_trait_points_add = 3
+	}
+
+	planet_modifier = {
+		job_politician_add = 400
+		job_libra_chromosome_engineer_add = 800
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_politician_add = -400
+		job_libra_chromosome_engineer_add = -800
+		job_evaluator_add = 600
+		job_libra_chromosome_drone_add = 800
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_variable_set = libra_babel_level }
+		}
+		text = building_libra_babel_tower_level
+	}
+	triggered_desc = {
+		text = building_libra_babel_tower_effect
+	}
+
+	ai_resource_production = {
+		trade = 10
+		physics_research = 10
+		society_research = 10
+		engineering_research = 10
+	}
+	ai_weight_coefficient = 10
+
+	on_built = {
+		owner = {
+			if = {
+				limit = {
+					is_variable_set = libra_babel_level
+					check_variable = { which = libra_babel_level value < 99 }
+				}
+				change_variable = { which = libra_babel_level value = 1 }
+				country_event = { id = libra_fairy.11023 }
+				country_event = { id = libra_fairy.11026 }
+				country_event = { id = libra_fairy.11029 }
+			}
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+# #############
+# Mutation
+#############
+
+building_libra_evolutionary_laboratory = {
+	base_buildtime = @b3_time
+	category = pop_assembly
+	planet_limit = 1
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+		research
+		society
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		nor = {
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_mutation_finish
+				}
+			}
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_mutation_integration"
+ 	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 2
+		job_libra_chromosome_engineer_add = 300
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_chromosome_engineer_add = -300
+		job_libra_chromosome_drone_add = 300
+	}
+
+	triggered_planet_modifier = {
+		planet_jobs_produces_mult = 0.03
+		planet_jobs_upkeep_mult = 0.02
+		mult = value:libra_planetary_ascension_mult
+	}
+
+	triggered_desc = {
+		text = building_libra_evolutionary_laboratory_effect_desc
+	}
+
+	ai_resource_production = {
+		trade = 10
+		society_research = 10
+	}
+}
+
+# #############
+# Cybernetics
+#############
+
+building_libra_augment_dispatch_centre = {
+	base_buildtime = @b4_time
+	empire_limit = 1
+
+	is_essential = yes
+
+	category = pop_assembly
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			is_regular_empire = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				has_tradition = tr_cybernetics_finish
+				is_regular_empire = yes
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_cybernetic_adaptive_standards"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	convert_to = {
+		building_libra_augment_dispatch_centre_hive
+		building_libra_augment_dispatch_centre_assimilator
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			rare_crystals = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		planet_carry_cap_add = 500
+	}
+	triggered_country_modifier = {
+		potential = { exists = owner }
+		logistic_growth_mult = 0.04
+		planet_jobs_produces_mult = 0.01
+		planet_jobs_upkeep_mult = 0.01
+		mult = owner.value:libra_augment_dispatch_mult
+	}
+
+	planet_modifier = {
+		job_roboticist_add = 400
+		job_libra_cybernetics_worker_add = 800
+	}
+
+	triggered_desc = {
+		text = building_libra_augment_dispatch_centre_effect_desc
+	}
+
+	ai_resource_production = {
+		unity = 25
+	}
+	ai_weight_coefficient = 3
+}
+
+building_libra_augment_dispatch_centre_hive = {
+	icon = building_libra_augment_dispatch_centre
+	base_buildtime = @b4_time
+	empire_limit = 1
+
+	category = pop_assembly
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			is_hive_empire = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				has_tradition = tr_cybernetics_finish
+				is_hive_empire = yes
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_cybernetic_adaptive_standards"
+	}
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+	}
+
+	convert_to = {
+		building_libra_augment_dispatch_centre
+		building_libra_augment_dispatch_centre_assimilator
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			rare_crystals = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		job_spawning_drone_max_workforce_mult = 0.2
+	}
+	triggered_country_modifier = {
+		potential = { exists = owner }
+		logistic_growth_mult = 0.04
+		planet_jobs_produces_mult = 0.01
+		planet_jobs_upkeep_mult = 0.01
+		mult = owner.value:libra_augment_dispatch_mult
+	}
+
+	planet_modifier = {
+		job_augmentor_drone_add = 400
+		job_libra_cybernetics_drone_add = 800
+	}
+
+	triggered_desc = {
+		text = building_libra_augment_dispatch_centre_effect_desc
+	}
+
+	ai_resource_production = {
+		unity = 25
+	}
+	ai_weight_coefficient = 3
+}
+
+building_libra_augment_dispatch_centre_assimilator = {
+	icon = building_libra_augment_dispatch_centre
+	base_buildtime = @b4_time
+	empire_limit = 1
+
+	category = pop_assembly
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				has_tradition = tr_cybernetics_assimilator_finish
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_cybernetic_adaptive_standards"
+	}
+
+	show_tech_unlock_if = {
+		has_valid_civic = civic_machine_assimilator
+	}
+
+	convert_to = {
+		building_libra_augment_dispatch_centre
+		building_libra_augment_dispatch_centre_hive
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			rare_crystals = @b4_rare_upkeep
+		}
+	}
+	country_modifier = {
+		planet_carry_cap_add = 1000
+	}
+	triggered_country_modifier = {
+		potential = { exists = owner }
+		logistic_growth_mult = 0.01
+		planet_jobs_produces_mult = 0.0025
+		planet_jobs_upkeep_mult = 0.0025
+		mult = owner.value:libra_augment_dispatch_assimilator_mult
+	}
+
+	planet_modifier = {
+		job_augmentor_drone_add = 400
+		job_libra_cybernetics_drone_add = 800
+	}
+
+	triggered_desc = {
+		text = building_libra_augment_dispatch_centre_assimilator_effect_desc
+	}
+
+	ai_resource_production = {
+		unity = 25
+	}
+	ai_weight_coefficient = 3
+}
+
+building_libra_augment_site_1 = {
+	base_buildtime = @b1_time
+	planet_limit = 1
+	category = government
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		nor = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				or = {
+					has_tradition = tr_cybernetics_finish
+					has_tradition = tr_cybernetics_assimilator_finish
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_cybernetic_exoskeleton_1"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_libra_augment_site_2"
+	}
+
+	planet_modifier = {
+		planet_housing_add = 400
+		fake_pop_growth_mod = 1
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			nor = {
+				has_trait = trait_psionic
+				has_trait = trait_latent_psionic
+				has_trait = trait_erudite
+			}
+		}
+		bonus_pop_growth = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_cybernetics_worker_add = 400
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_cybernetics_drone_add = 400
+	}
+
+	triggered_planet_modifier = {
+		cyborg_pop_bonus_workforce_mult = 1
+		mult = value:libra_cybernetics_jobs
+	}
+	triggered_desc = {
+		text = building_libra_augment_site_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_2_b }
+		}
+		planet_jobs_productive_produces_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_2_c }
+		}
+		planet_jobs_specialist_produces_mult = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_2_d }
+		}
+		planet_jobs_worker_produces_mult = 0.2
+	}
+
+	ai_resource_production = {
+		physics_research = 10
+		society_research = 10
+		engineering_research = 10
+	}
+}
+
+building_libra_augment_site_2 = {
+	base_buildtime = @b2_time
+	category = government
+	can_build = no
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		nor = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				or = {
+					has_tradition = tr_cybernetics_finish
+					has_tradition = tr_cybernetics_assimilator_finish
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_cybernetic_exoskeleton_2"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			volatile_motes = @b2_rare_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_libra_augment_site_3"
+	}
+
+	planet_modifier = {
+		planet_housing_add = 800
+		fake_pop_growth_mod = 2
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			nor = {
+				has_trait = trait_psionic
+				has_trait = trait_latent_psionic
+				has_trait = trait_erudite
+			}
+		}
+		bonus_pop_growth = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_cybernetics_worker_add = 800
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_cybernetics_drone_add = 800
+	}
+
+	triggered_planet_modifier = {
+		cyborg_pop_bonus_workforce_mult = 1
+		mult = value:libra_cybernetics_jobs
+	}
+	triggered_desc = {
+		text = building_libra_augment_site_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_2_b }
+		}
+		planet_jobs_productive_produces_mult = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_2_c }
+		}
+		planet_jobs_specialist_produces_mult = 0.3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_2_d }
+		}
+		planet_jobs_worker_produces_mult = 0.4
+	}
+
+	ai_resource_production = {
+		physics_research = 20
+		society_research = 20
+		engineering_research = 20
+	}
+}
+
+building_libra_augment_site_3 = {
+	base_buildtime = @b3_time
+	category = government
+	can_build = no
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		nor = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				or = {
+					has_tradition = tr_cybernetics_finish
+					has_tradition = tr_cybernetics_assimilator_finish
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_cybernetic_exoskeleton_3"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1200
+		fake_pop_growth_mod = 3
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			nor = {
+				has_trait = trait_psionic
+				has_trait = trait_latent_psionic
+				has_trait = trait_erudite
+			}
+		}
+		bonus_pop_growth = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_cybernetics_worker_add = 1200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_cybernetics_drone_add = 1200
+	}
+
+	triggered_planet_modifier = {
+		cyborg_pop_bonus_workforce_mult = 1
+		mult = value:libra_cybernetics_jobs
+	}
+	triggered_desc = {
+		text = building_libra_augment_site_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_2_b }
+		}
+		planet_jobs_productive_produces_mult = 0.3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_2_c }
+		}
+		planet_jobs_specialist_produces_mult = 0.45
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_2_d }
+		}
+		planet_jobs_worker_produces_mult = 0.6
+	}
+
+	ai_resource_production = {
+		physics_research = 30
+		society_research = 30
+		engineering_research = 30
+	}
+}
+
+# #############
+# Transcendental Cybernetics
+#############
+
+building_libra_cybernetics_factory = {
+	base_buildtime = @b3_time
+	planet_limit = 2
+	category = pop_assembly
+
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = building_libra_cybernetics_factory_desc
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = building_libra_cybernetics_factory_hive_desc
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = building_libra_cybernetics_factory_assimilator_desc
+	}
+
+	building_sets = {
+		government
+		urban
+		research
+		engineering
+		trade
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 40 }
+			has_ascension_perk = ap_libra_transcendental_cybernetics
+		}
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			alloys = @b3_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_augmentors_upkeep_mult = -0.2
+		planet_pop_assemblers_upkeep_mult = -0.2
+		fake_pop_growth_mod = 4
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			nor = {
+				has_trait = trait_psionic
+				has_trait = trait_latent_psionic
+				has_trait = trait_erudite
+			}
+		}
+		bonus_pop_growth = 4
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_cybernetics_worker_add = 400
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_cybernetics_drone_add = 400
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = libra_transcendental_cybernetics_4_b
+				is_gestalt = no
+			}
+		}
+		job_max_workforce_mult = 0.1
+		job_libra_cybernetics_worker_max_workforce_mult = -0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = libra_transcendental_cybernetics_4_b
+				is_gestalt = yes
+			}
+		}
+		job_max_workforce_mult = 0.1
+		job_libra_cybernetics_drone_max_workforce_mult = -0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_4_c }
+		}
+		bonus_pop_growth_mult = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_policy_flag = libra_transcendental_cybernetics_4_d }
+		}
+		pop_bonus_workforce_mult = 0.15
+	}
+
+	ai_resource_production = {
+		unity = 15
+		trade = 15
+	}
+
+	ai_weight_coefficient = 2
+}
+
+# #############
+# Synthetic
+#############
+
+building_libra_personality_correction_institute = {
+	base_buildtime = @b1_time
+	planet_limit = 1
+	category = government
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		libra_is_special_colony_type = no
+	}
+
+	allow = {
+		nor = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			libra_is_special_colony_type = yes
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_synthetics_finish
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_synthetic_correction"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_libra_ministry_of_mechanical_truth"
+	}
+
+	planet_modifier = {
+		planet_pop_assembly_add = 1
+		job_max_workforce_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				not = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		job_roboticist_max_workforce_mult = -0.1
+		job_enforcer_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		job_roboticist_max_workforce_mult = -0.1
+		job_dystopian_enforcer_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_replicator_max_workforce_mult = -0.1
+		job_patrol_drone_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 50 }
+			}
+		}
+		planet_pop_assemblers_physics_research_produces_add = 0.5
+		planet_pop_assemblers_society_research_produces_add = 0.5
+		planet_pop_assemblers_engineering_research_produces_add = 0.5
+	}
+
+	ai_resource_production = {
+		unity = 10
+	}
+}
+
+building_libra_ministry_of_mechanical_truth = {
+	base_buildtime = @b2_time
+	category = government
+	can_build = no
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		libra_is_special_colony_type = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		nor = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			libra_is_special_colony_type = yes
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_synthetics_finish
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_synthetic_truth"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_pop_assembly_add = 2
+		job_max_workforce_mult = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				not = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		job_roboticist_max_workforce_mult = -0.2
+		job_enforcer_add = 400
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		job_roboticist_max_workforce_mult = -0.2
+		job_dystopian_enforcer_add = 400
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_replicator_max_workforce_mult = -0.2
+		job_patrol_drone_add = 400
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 50 }
+			}
+		}
+		planet_pop_assemblers_physics_research_produces_add = 1
+		planet_pop_assemblers_society_research_produces_add = 1
+		planet_pop_assemblers_engineering_research_produces_add = 1
+	}
+
+	ai_resource_production = {
+		unity = 20
+	}
+}
+
+# #############
+# Cosmological Constant
+#############
+
+@libra_cosmological_jobs = 800
+
+building_libra_cosmological_generator = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = resource
+
+	building_sets = {
+		generator
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+	}
+	allow = {
+		nor = {
+			has_building = building_class_3_singularity
+			has_building = building_class_4_singularity
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_class_3_singularity
+			has_building = building_class_4_singularity
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 50 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_technician_physics_research_produces_add = 1
+		planet_technician_society_research_produces_add = 1
+		planet_technician_engineering_research_produces_add = 1
+		planet_technician_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	ai_resource_production = {
+		physics_research = 15
+		society_research = 15
+		engineering_research = 15
+		energy = 5
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_mining = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = resource
+
+	building_sets = {
+		mining
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_mine_1
+			has_building = building_fe_mine_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_mine_1
+			has_building = building_fe_mine_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 50 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_miners_physics_research_produces_add = 1
+		planet_miners_society_research_produces_add = 1
+		planet_miners_engineering_research_produces_add = 1
+		planet_miners_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	ai_resource_production = {
+		physics_research = 15
+		society_research = 15
+		engineering_research = 15
+		minerals = 5
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_farming = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = resource
+
+	building_sets = {
+		farming
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+	}
+	allow = {
+		nor = {
+			has_building = building_nourishment_complex
+			has_building = building_nourishment_center
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_nourishment_complex
+			has_building = building_nourishment_center
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 50 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_farmers_physics_research_produces_add = 1
+		planet_farmers_society_research_produces_add = 1
+		planet_farmers_engineering_research_produces_add = 1
+		planet_farmers_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = jobs/farmers_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	ai_resource_production = {
+		physics_research = 15
+		society_research = 15
+		engineering_research = 15
+		food = 5
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_fortress = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = army
+
+	building_sets = {
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+		not = { has_modifier = resort_colony }
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_fortress
+			has_building = building_fe_stronghold
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_fortress
+			has_building = building_fe_stronghold
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_modifier = resort_colony
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 50 }
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_soldiers_physics_research_produces_add = 1
+		planet_soldiers_society_research_produces_add = 1
+		planet_soldiers_engineering_research_produces_add = 1
+		planet_soldiers_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = jobs/soldiers_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	ai_resource_production = {
+		physics_research = 17
+		society_research = 17
+		engineering_research = 17
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_foundry = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+		not = { has_modifier = resort_colony }
+	}
+	allow = {
+		nor = {
+			has_building = building_micro_forge
+			has_building = building_nano_forge
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_micro_forge
+			has_building = building_nano_forge
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_modifier = resort_colony
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 50 }
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_metallurgists_physics_research_produces_add = 1
+		planet_metallurgists_society_research_produces_add = 1
+		planet_metallurgists_engineering_research_produces_add = 1
+		planet_metallurgists_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	inline_script = {
+		script = districts/ai_alloys_extra_weighting
+		AMOUNT = 15
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_factory = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+		not = { has_modifier = resort_colony }
+	}
+	allow = {
+		nor = {
+			has_building = building_affluence_emporium
+			has_building = building_affluence_center
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_affluence_emporium
+			has_building = building_affluence_center
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_modifier = resort_colony
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 50 }
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_artisans_physics_research_produces_add = 1
+		planet_artisans_society_research_produces_add = 1
+		planet_artisans_engineering_research_produces_add = 1
+		planet_artisans_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = jobs/factory_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	inline_script = {
+		script = districts/ai_consumer_goods_extra_weighting
+		AMOUNT = 15
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_trade = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = trade
+
+	building_sets = {
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+		libra_is_special_colony_type = no
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_market_1
+			has_building = building_fe_market_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_market_1
+			has_building = building_fe_market_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		or = {
+			libra_is_special_colony_type = yes
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 50 }
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_traders_physics_research_produces_add = 1
+		planet_traders_society_research_produces_add = 1
+		planet_traders_engineering_research_produces_add = 1
+		planet_traders_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = jobs/trader_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	ai_resource_production = {
+		physics_research = 15
+		society_research = 15
+		engineering_research = 15
+		trade = 5
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_management = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = unity
+
+	building_sets = {
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+		libra_is_special_colony_type = no
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_administration_1
+			has_building = building_fe_administration_2
+			has_building = building_fe_temple_1
+			has_building = building_fe_temple_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_administration_1
+			has_building = building_fe_administration_2
+			has_building = building_fe_temple_1
+			has_building = building_fe_temple_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		or = {
+			libra_is_special_colony_type = yes
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 50 }
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_bureaucrats_physics_research_produces_add = 1
+		planet_bureaucrats_society_research_produces_add = 1
+		planet_bureaucrats_engineering_research_produces_add = 1
+		planet_bureaucrats_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	ai_resource_production = {
+		physics_research = 15
+		society_research = 15
+		engineering_research = 15
+		unity = 5
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_physics = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = research
+
+	building_sets = {
+		research
+		physics
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+		libra_is_special_colony_type = no
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_lab_1
+			has_building = building_fe_lab_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_lab_1
+			has_building = building_fe_lab_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		or = {
+			libra_is_special_colony_type = yes
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 50 }
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 1.5
+		planet_physicists_society_research_produces_add = 1.5
+		planet_physicists_engineering_research_produces_add = 1.5
+		planet_physicists_energy_upkeep_add = 4.5
+	}
+	inline_script = {
+		script = jobs/physicists_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	inline_script = {
+		script = districts/ai_research_physics_extra_weighting
+		AMOUNT = 10
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_society = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = research
+
+	building_sets = {
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+		libra_is_special_colony_type = no
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_lab_1
+			has_building = building_fe_lab_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_lab_1
+			has_building = building_fe_lab_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		or = {
+			libra_is_special_colony_type = yes
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 50 }
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_biologists_physics_research_produces_add = 1.5
+		planet_biologists_society_research_produces_add = 1.5
+		planet_biologists_engineering_research_produces_add = 1.5
+		planet_biologists_energy_upkeep_add = 4.5
+	}
+	inline_script = {
+		script = jobs/biologists_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	inline_script = {
+		script = districts/ai_research_society_extra_weighting
+		AMOUNT = 10
+	}
+	ai_weight_coefficient = 2
+}
+
+building_libra_cosmological_engineering = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	category = research
+
+	building_sets = {
+		research
+		engineering
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cosmological_constant
+			check_variable = { which = libra_aa_path value = 50 }
+		}
+		libra_is_special_colony_type = no
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_lab_1
+			has_building = building_fe_lab_2
+		}
+	}
+
+	ruined_trigger = {
+		or = {
+			has_building = building_fe_lab_1
+			has_building = building_fe_lab_2
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		or = {
+			libra_is_special_colony_type = yes
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 50 }
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_alloy_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 10000
+	}
+
+	planet_modifier = {
+		planet_engineers_physics_research_produces_add = 1.5
+		planet_engineers_society_research_produces_add = 1.5
+		planet_engineers_engineering_research_produces_add = 1.5
+		planet_engineers_energy_upkeep_add = 4.5
+	}
+	inline_script = {
+		script = jobs/engineers_add
+		AMOUNT = @libra_cosmological_jobs
+	}
+
+	inline_script = {
+		script = districts/ai_research_engineering_extra_weighting
+		AMOUNT = 10
+	}
+	ai_weight_coefficient = 2
+}
+
+# #############
+# Modularity
+#############
+
+building_libra_super_assembly_plant = {
+	base_buildtime = @b4_time
+	category = pop_assembly
+	planet_limit = 1
+	empire_limit = 5
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		libra_is_special_colony_type = no
+	}
+
+	allow = {
+		nor = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_modular_edge_IoT"
+ 	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			libra_is_special_colony_type = yes
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_modularity_finish
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			sr_living_metal = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			sr_living_metal = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_upkeep_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_replicator_add = 1600
+		planet_maintenance_drones_energy_upkeep_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_roboticist_add = 800
+		planet_civilians_consumer_goods_upkeep_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				has_country_flag = libra_atomic_heart
+				check_variable = { which = libra_aa_path value = 60 }
+			}
+		}
+		job_max_workforce_mult = 0.3
+	}
+
+	ai_resource_production = {
+		unity = 25
+		trade = 25
+	}
+	ai_weight_coefficient = 2
+}
+
+# #############
+# Atomic Heart
+#############
+
+building_libra_atomic_heart = {
+	base_buildtime = @b4_time
+	category = government
+	planet_limit = 1
+	empire_limit = 1
+
+	building_sets = {
+		government
+		urban
+		industrial
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_atomic_heart
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 60 }
+		}
+	}
+
+	allow = {
+		sapient_pop_amount >= 2500
+	}
+
+ 	prerequisites = {
+		"tech_libra_atomic_heart_d"
+ 	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_atomic_heart }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			sr_living_metal = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			sr_living_metal = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		job_max_workforce_mult = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_replicator_max_workforce_mult = -0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_roboticist_max_workforce_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_replicator_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_roboticist_add = 100
+	}
+
+	ai_resource_production = {
+		unity = 50
+		energy = 50
+		alloys = 50
+	}
+	ai_weight_coefficient = 5
+}
+
+# #############
+# Nanotech
+#############
+
+@libra_nanotech_automated_workforce_1 = 0.15
+@libra_nanotech_automated_workforce_1_m = -0.15
+@libra_nanotech_automated_workforce_2 = 0.25
+@libra_nanotech_automated_workforce_2_m = -0.25
+
+@libra_nanotech_cost_1 = 800
+@libra_nanotech_cost_2 = 1200
+@libra_nanotech_cost_rare_1 = 100
+@libra_nanotech_cost_rare_2 = 200
+@libra_nanotech_upkeep_energy = 35
+@libra_nanotech_upkeep_alloys = 15
+@libra_nanotech_upkeep_rare_1 = 1
+@libra_nanotech_upkeep_rare_2 = 5
+@libra_nanotech_upkeep_nanites_1 = 1
+@libra_nanotech_upkeep_nanites_2 = 5
+
+building_libra_nano_replication_centre = {
+	base_buildtime = @b4_time
+	category = trade
+	is_essential = yes
+	planet_limit = 1
+
+	building_sets = {
+		government
+		research
+		engineering
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		libra_is_special_colony_type = no
+	}
+
+	allow = {
+		nor = {
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			libra_is_special_colony_type = yes
+			has_building = building_fe_assembly_1
+			has_building = building_fe_assembly_2
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_shipyard"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_2
+			sr_dark_matter = @libra_nanotech_cost_rare_2
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			alloys = @libra_nanotech_upkeep_alloys
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_planet_class = pc_nanotech
+		}
+		planet_pop_assemblers_nanites_produces_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_libra_replica_unit_add = 100
+		mult = value:libra_count_districts|TYPE|any|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_libra_replica_technician_add = 100
+		mult = value:libra_count_districts|TYPE|any|
+	}
+
+	triggered_desc = {
+		text = building_libra_nano_replication_centre_effect_desc
+	}
+}
+
+building_nanite_transmuter = {
+	base_buildtime = @b3_time
+	icon = building_libra_nanite_transmuter
+	planet_limit = 5
+	#district_limit = 2
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		libra_is_special_colony_type = no
+	}
+
+	allow = {
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_ai = no
+					has_tradition = tr_nanotech_finish
+					has_monthly_income = {
+						resource = nanites
+						value > 1
+					}
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		libra_is_special_colony_type = yes
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_1
+			nanites = @libra_nanotech_cost_rare_1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					not = { has_deficit = nanites }
+				}
+			}
+			exotic_gases = 5
+			rare_crystals = 5
+			volatile_motes = 5
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = @libra_nanotech_upkeep_nanites_1
+		}
+	}
+
+	prerequisites = {
+		"tech_nanite_transmutation"
+	}
+
+	planet_modifier = {
+		planet_libra_nanite_buildings_exotic_gases_produces_mult = 0.1
+		planet_libra_nanite_buildings_rare_crystals_produces_mult = 0.1
+		planet_libra_nanite_buildings_volatile_motes_produces_mult = 0.1
+	}
+
+	ai_resource_production = {
+		rare_crystals = @b2_rare_upkeep
+		volatile_motes = @b2_rare_upkeep
+		exotic_gases = @b2_rare_upkeep
+	}
+	ai_weight_coefficient = 1.5
+
+	upgrades = {
+		"building_libra_nanite_refinery_complex"
+	}
+}
+
+building_libra_nanite_refinery_complex = {
+	base_buildtime = @b4_time
+	can_build = no
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		nor = {
+			has_building = building_dimensional_replicator
+			has_building = building_dimensional_fabricator
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			libra_is_special_colony_type = yes
+			has_building = building_dimensional_replicator
+			has_building = building_dimensional_fabricator
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_industry_association"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_2
+			nanites = @libra_nanotech_cost_rare_2
+		}
+		produces = {
+			exotic_gases = 10
+			rare_crystals = 10
+			volatile_motes = 10
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = 4
+		}
+	}
+
+	planet_modifier = {
+		planet_libra_nanite_buildings_exotic_gases_produces_mult = 0.2
+		planet_libra_nanite_buildings_rare_crystals_produces_mult = 0.2
+		planet_libra_nanite_buildings_volatile_motes_produces_mult = 0.2
+	}
+
+	ai_resource_production = {
+		rare_crystals = @b3_rare_upkeep
+		volatile_motes = @b3_rare_upkeep
+		exotic_gases = @b3_rare_upkeep
+	}
+	ai_weight_coefficient = 1.5
+}
+
+building_nanotech_cauldron = {
+	base_buildtime = @b3_time
+	icon = building_libra_nanotech_cauldron
+	planet_limit = 5
+	district_limit = 2
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_tradition = tr_nanotech_2 }
+		not = { has_modifier = resort_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			NOT = { owner = { has_tradition = tr_nanotech_2 } }
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_1
+			nanites = @libra_nanotech_cost_rare_1
+		}
+		produces = {
+			alloys = 36
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = @libra_nanotech_upkeep_nanites_1
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_alloys_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.05
+		job_fabricator_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+ 		job_artisan_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_fabricator_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+ 		job_artisan_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+		job_foundry_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+		job_artisan_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+
+	upgrades = {
+		"building_libra_nanite_forge_complex"
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_forge_complex = {
+	base_buildtime = @b4_time
+	can_build = no
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		nor = {
+			has_building = building_micro_forge
+			has_building = building_nano_forge
+			has_building = building_affluence_emporium
+			has_building = building_affluence_center
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			has_modifier = resort_colony
+			has_building = building_micro_forge
+			has_building = building_nano_forge
+			has_building = building_affluence_emporium
+			has_building = building_affluence_center
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_industry_association"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_2
+			nanites = @libra_nanotech_cost_rare_2
+		}
+		produces = {
+			alloys = 72
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = @libra_nanotech_upkeep_nanites_2
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 8
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_alloys_produces_mult = 0.2
+		planet_buildings_upkeep_mult = 0.1
+		job_fabricator_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+ 		job_artisan_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_fabricator_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+ 		job_artisan_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+		job_foundry_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+		job_artisan_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_nanolab_1 = {
+	base_buildtime = @b3_time
+	icon = building_libra_nanolab_1
+	planet_limit = 5
+	district_limit = 2
+
+	category = research
+
+	building_sets = {
+		research
+		physics
+		society
+		engineering
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_tradition = tr_nanotech_adopt }
+		libra_is_special_colony_type = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			NOT = { owner = { has_tradition = tr_nanotech_adopt } }
+			libra_is_special_colony_type = yes
+		}
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_1
+			nanites = @libra_nanotech_cost_rare_1
+		}
+		produces = {
+			physics_research = 18
+			society_research = 18
+			engineering_research = 24
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = @libra_nanotech_upkeep_nanites_1
+		}
+	}
+
+	planet_modifier = {
+		planet_libra_nanite_buildings_physics_research_produces_mult = 0.1
+		planet_libra_nanite_buildings_society_research_produces_mult = 0.1
+		planet_libra_nanite_buildings_engineering_research_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.05
+		job_calculator_physicist_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+ 		job_calculator_biologist_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+		job_calculator_engineer_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_calculator_physicist_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+ 		job_calculator_biologist_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+		job_calculator_engineer_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+		job_physicist_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+		job_biologist_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+		job_engineer_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = engineer_is_nanotech_researcher_tt
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = engineering_calculator_is_nanotech_researcher_tt
+	}
+
+	upgrades = {
+		"building_nanolab_2"
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_nanolab_2 = {
+	base_buildtime = @b4_time
+	icon = building_libra_nanolab_2
+	can_build = no
+
+	category = research
+
+	building_sets = {
+		research
+		physics
+		society
+		engineering
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_tradition = tr_nanotech_1 }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			NOT = { owner = { has_tradition = tr_nanotech_1 } }
+			libra_is_special_colony_type = yes
+		}
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_2
+			nanites = @libra_nanotech_cost_rare_2
+		}
+		produces = {
+			physics_research = 36
+			society_research = 36
+			engineering_research = 48
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = @libra_nanotech_upkeep_nanites_2
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 8
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_physics_research_produces_mult = 0.2
+		planet_libra_nanite_buildings_society_research_produces_mult = 0.2
+		planet_libra_nanite_buildings_engineering_research_produces_mult = 0.2
+		planet_buildings_upkeep_mult = 0.1
+		job_calculator_physicist_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+ 		job_calculator_biologist_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+		job_calculator_engineer_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_calculator_physicist_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+ 		job_calculator_biologist_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+		job_calculator_engineer_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+		job_physicist_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+		job_biologist_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+		job_engineer_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = engineer_is_nanotech_researcher_tt
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = engineering_calculator_is_nanotech_researcher_tt
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_unity_center = {
+	base_buildtime = @b3_time
+	category = unity
+	planet_limit = 5
+	district_limit = 2
+
+	building_sets = {
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		libra_is_special_colony_type = no
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_administration_1
+			has_building = building_fe_administration_2
+			has_building = building_fe_temple_1
+			has_building = building_fe_temple_2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			libra_is_special_colony_type = yes
+			has_building = building_fe_administration_1
+			has_building = building_fe_administration_2
+			has_building = building_fe_temple_1
+			has_building = building_fe_temple_2
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_unity_citadel"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_1
+			nanites = @libra_nanotech_cost_rare_1
+		}
+		produces = {
+			unity = 50
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = @libra_nanotech_upkeep_nanites_1
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_unity_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.05
+		job_coordinator_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_coordinator_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+		job_bureaucrat_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+
+	upgrades = {
+		"building_libra_nanite_unity_complex"
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_unity_complex = {
+	base_buildtime = @b4_time
+	can_build = no
+
+	category = unity
+
+	building_sets = {
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			libra_is_special_colony_type = yes
+			has_building = building_fe_administration_1
+			has_building = building_fe_administration_2
+			has_building = building_fe_temple_1
+			has_building = building_fe_temple_2
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_unity_citadel"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_2
+			nanites = @libra_nanotech_cost_rare_2
+		}
+		produces = {
+			unity = 100
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = @libra_nanotech_upkeep_nanites_2
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 8
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_unity_produces_mult = 0.2
+		planet_buildings_upkeep_mult = 0.1
+		job_coordinator_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_coordinator_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+		job_bureaucrat_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_trade_center = {
+	base_buildtime = @b3_time
+	category = trade
+	planet_limit = 5
+	district_limit = 2
+
+	building_sets = {
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		libra_is_special_colony_type = no
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_market_1
+			has_building = building_fe_market_2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			libra_is_special_colony_type = yes
+			has_building = building_fe_market_1
+			has_building = building_fe_market_2
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_trade_hub"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_1
+			nanites = @libra_nanotech_cost_rare_1
+		}
+		produces = {
+			trade = 80
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = @libra_nanotech_upkeep_nanites_1
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_trade_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.05
+		job_logistics_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_logistics_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+		job_trader_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+
+	upgrades = {
+		"building_libra_nanite_trade_complex"
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_trade_complex = {
+	base_buildtime = @b4_time
+	can_build = no
+
+	category = trade
+
+	building_sets = {
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			libra_is_special_colony_type = yes
+			has_building = building_fe_market_1
+			has_building = building_fe_market_2
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_trade_hub"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_2
+			nanites = @libra_nanotech_cost_rare_2
+		}
+		produces = {
+			trade = 160
+		}
+		upkeep = {
+			energy = @libra_nanotech_upkeep_energy
+			nanites = @libra_nanotech_upkeep_nanites_2
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 8
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_trade_produces_mult = 0.2
+		planet_buildings_upkeep_mult = 0.1
+		job_logistics_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_logistics_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+		job_trader_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_power_hub = {
+	base_buildtime = @b3_time
+	category = resource
+	planet_limit = 5
+	district_limit = 2
+
+	building_sets = {
+		generator
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		not = { has_modifier = resort_colony }
+	}
+	allow = {
+		nor = {
+			has_building = building_class_3_singularity
+			has_building = building_class_4_singularity
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			has_modifier = resort_colony
+			has_building = building_class_3_singularity
+			has_building = building_class_4_singularity
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_power_hub"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_1
+			rare_crystals = @libra_nanotech_cost_rare_1
+		}
+		produces = {
+			energy = 100
+		}
+		upkeep = {
+			alloys = @libra_nanotech_upkeep_alloys
+			rare_crystals = 1
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_energy_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.05
+		job_technician_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_technician_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+		job_technician_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+
+	upgrades = {
+		"building_libra_nanite_energy_complex"
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_energy_complex = {
+	base_buildtime = @b4_time
+	can_build = no
+
+	category = resource
+
+	building_sets = {
+		generator
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		not = { has_modifier = resort_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			has_modifier = resort_colony
+			has_building = building_class_3_singularity
+			has_building = building_class_4_singularity
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_power_hub"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_2
+			rare_crystals = @libra_nanotech_cost_rare_2
+		}
+		produces = {
+			energy = 200
+		}
+		upkeep = {
+			alloys = @libra_nanotech_upkeep_alloys
+			rare_crystals = 5
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 8
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_energy_produces_mult = 0.2
+		planet_buildings_upkeep_mult = 0.1
+		job_technician_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_technician_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+		job_technician_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_food_processing = {
+	base_buildtime = @b3_time
+	category = resource
+	planet_limit = 5
+	district_limit = 2
+
+	building_sets = {
+		farming
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		not = { has_modifier = resort_colony }
+	}
+	allow = {
+		nor = {
+			has_building = building_nourishment_complex
+			has_building = building_nourishment_center
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			has_modifier = resort_colony
+			has_building = building_nourishment_complex
+			has_building = building_nourishment_center
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_food_processing"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_1
+			exotic_gases = @libra_nanotech_cost_rare_1
+		}
+		produces = {
+			food = 90
+		}
+		upkeep = {
+			alloys = @libra_nanotech_upkeep_alloys
+			exotic_gases = 1
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_food_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.05
+		job_agri_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_agri_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+		job_farmer_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+
+	upgrades = {
+		"building_libra_nanite_food_complex"
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_food_complex = {
+	base_buildtime = @b4_time
+	can_build = no
+
+	category = resource
+
+	building_sets = {
+		farming
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		not = { has_modifier = resort_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			has_modifier = resort_colony
+			has_building = building_nourishment_complex
+			has_building = building_nourishment_center
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_food_processing"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_2
+			exotic_gases = @libra_nanotech_cost_rare_2
+		}
+		produces = {
+			food = 180
+		}
+		upkeep = {
+			alloys = @libra_nanotech_upkeep_alloys
+			exotic_gases = 5
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 8
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_food_produces_mult = 0.2
+		planet_buildings_upkeep_mult = 0.1
+		job_agri_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_agri_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+		job_farmer_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_mineral_purification = {
+	base_buildtime = @b3_time
+	category = resource
+	planet_limit = 5
+	district_limit = 2
+
+	building_sets = {
+		mining
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		not = { has_modifier = resort_colony }
+	}
+	allow = {
+		nor = {
+			has_building = building_fe_mine_1
+			has_building = building_fe_mine_2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			has_modifier = resort_colony
+			has_building = building_fe_mine_1
+			has_building = building_fe_mine_2
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_mineral_purification"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_1
+			volatile_motes = @libra_nanotech_cost_rare_1
+		}
+		produces = {
+			minerals = 90
+		}
+		upkeep = {
+			alloys = @libra_nanotech_upkeep_alloys
+			volatile_motes = 1
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_minerals_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.05
+		job_mining_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_mining_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_1_m
+		job_miner_automated_workforce_mult = @libra_nanotech_automated_workforce_1
+	}
+
+	upgrades = {
+		"building_libra_nanite_mineral_complex"
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+building_libra_nanite_mineral_complex = {
+	base_buildtime = @b4_time
+	can_build = no
+
+	category = resource
+
+	building_sets = {
+		mining
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		not = { has_modifier = resort_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_nanotech_finish
+				}
+			}
+			has_modifier = resort_colony
+			has_building = building_fe_mine_1
+			has_building = building_fe_mine_2
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_nanite_mineral_purification"
+	}
+
+	resources = {
+		category = planet_libra_nanite_buildings
+		cost = {
+			alloys = @libra_nanotech_cost_2
+			volatile_motes = @libra_nanotech_cost_rare_2
+		}
+		produces = {
+			minerals = 180
+		}
+		upkeep = {
+			alloys = @libra_nanotech_upkeep_alloys
+			volatile_motes = 5
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 8
+	}
+	planet_modifier = {
+		planet_libra_nanite_buildings_minerals_produces_mult = 0.2
+		planet_buildings_upkeep_mult = 0.1
+		job_mining_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		job_mining_drone_automated_workforce_mult = @libra_nanotech_automated_workforce_2_m
+		job_miner_automated_workforce_mult = @libra_nanotech_automated_workforce_2
+	}
+
+	ai_weight_coefficient = 1.5
+}
+
+# #############
+# Virtuality
+#############
+
+building_libra_AR_server = {
+	base_buildtime = @b4_time
+	category = research
+	planet_limit = 1
+	empire_limit = 1
+
+	building_sets = {
+		government
+		urban
+		research
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				has_tradition = tr_virtuality_finish
+			}
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_augmented_reality"
+ 	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			sr_dark_matter = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			sr_dark_matter = @b4_rare_upkeep
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			#pop_amount > 5000
+			exists = owner
+			owner = { has_policy_flag = virtuality_research_focus_flag }
+		}
+		planet_jobs_physics_research_produces_mult = 0.2
+		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_unity_produces_mult = 0.3
+		species_leader_exp_gain = 0.3
+	}
+	triggered_country_modifier = {
+		potential = {
+			#pop_amount > 5000
+			exists = owner
+			owner = { has_policy_flag = virtuality_unity_focus_flag }
+		}
+		planet_jobs_physics_research_produces_mult = 0.3
+		planet_jobs_society_research_produces_mult = 0.3
+		planet_jobs_engineering_research_produces_mult = 0.3
+		planet_jobs_unity_produces_mult = 0.2
+		species_leader_exp_gain = 0.3
+	}
+	triggered_country_modifier = {
+		potential = {
+			#pop_amount > 5000
+			exists = owner
+			owner = { has_policy_flag = virtuality_leader_focus_flag }
+		}
+		planet_jobs_physics_research_produces_mult = 0.3
+		planet_jobs_society_research_produces_mult = 0.3
+		planet_jobs_engineering_research_produces_mult = 0.3
+		planet_jobs_unity_produces_mult = 0.3
+		council_agenda_progress_speed = 0.25
+		councilor_skill_add = -2
+		leader_skill_add = 3
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 5000
+		pop_bonus_workforce_mult = -0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		planet_amenities_add = -5000
+		planet_amenities_no_happiness_add = 5000
+	}
+
+	triggered_desc = {
+		text = building_libra_AR_server_effect
+	}
+
+	ai_resource_production = {
+		trigger = {
+			or = {
+				has_building = building_libra_AR_server
+				pop_amount < 10000
+			}
+		}
+		unity = 25
+		trade = 25
+		physics_research = 25
+		society_research = 25
+		engineering_research = 25
+	}
+	ai_weight_coefficient = 1.2
+}
+
+building_libra_overclocking_matrix = {
+	base_buildtime = @b4_time
+	category = manufacturing
+	is_essential = yes
+	planet_limit = 1
+	empire_limit = 9
+
+	building_sets = {
+		government
+		urban
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		nor = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_virtuality_finish
+				}
+			}
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_virtuality_overclocking"
+ 	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			sr_dark_matter = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			sr_dark_matter = @b4_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.45
+		planet_jobs_upkeep_mult = 0.35
+		planet_metallurgists_produces_mult = 0.15
+		planet_artisans_produces_mult = 0.15
+	}
+}
+
+building_libra_topology_planning = {
+	base_buildtime = @b4_time
+	category = government
+	is_essential = yes
+	planet_limit = 1
+	empire_limit = 5
+
+	building_sets = {
+		government
+		urban
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		libra_is_special_colony_type = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			libra_is_special_colony_type = yes
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_virtuality_finish
+				}
+			}
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_virtuality_topology"
+ 	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			sr_dark_matter = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			sr_dark_matter = @b4_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2500
+		planet_building_build_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		planet_max_districts_add = 1
+		mult = value:libra_planetary_ascension_mult
+	}
+
+	triggered_desc = {
+		text = building_libra_topology_planning_effect_desc
+	}
+}
+
+building_libra_synchronous_coordinator = {
+	base_buildtime = @b4_time
+	category = pop_assembly
+	is_essential = yes
+	planet_limit = 1
+	empire_limit = 7
+
+	building_sets = {
+		government
+		urban
+		automation
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+		not = { has_modifier = resort_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		or = {
+			has_modifier = resort_colony
+			not = {
+				owner = {
+					is_variable_set = libra_aa_path
+					has_tradition = tr_virtuality_finish
+				}
+			}
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_virtuality_synchronous"
+ 	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			sr_dark_matter = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			sr_dark_matter = @b4_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		bonus_automated_workforce_mult = 0.5
+		robotic_pop_bonus_workforce_mult = 0.25
+	}
+}
+
+# #############
+# Yggdrasil
+#############
+
+@libra_yggdrasil_cost = 2000
+@libra_yggdrasil_upgrade_cost = 1000
+@libra_yggdrasil_upkeep_1 = 25
+@libra_yggdrasil_upkeep_2 = 50
+@libra_yggdrasil_job_1 = 1000
+@libra_yggdrasil_job_2 = 2000
+@libra_yggdrasil_job_3 = -1000
+@libra_yggdrasil_job_4 = -2000
+@libra_yggdrasil_speed = 0.02
+
+building_libra_yggdrasil_housing_1 = {
+	base_buildtime = @b5_time
+	position_priority = 10
+	can_be_ruined = no
+	can_be_disabled = no
+	planet_limit = 1
+	empire_limit = 5
+
+	category = government
+
+	building_sets = {
+		government
+		urban
+		entertainment
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+		nor = {
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		or = {
+			nand = {
+				exists = owner
+				owner = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 80 }
+				}
+			}
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		produces = {
+			trigger = { is_variable_set = libra_yggdrasil_housing_mult }
+			sr_dark_matter = 0.5
+			multiplier = libra_yggdrasil_housing_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = { is_variable_set = libra_yggdrasil_housing_mult }
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = libra_yggdrasil_housing_mult
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 50000
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_variable_set = libra_yggdrasil_housing_mult
+		}
+		country_resource_max_add = 50000
+		multiplier = libra_yggdrasil_housing_mult
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_capital = no
+		}
+		pop_bonus_workforce_mult = -0.25
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2500
+		planet_amenities_add = 5000
+		job_patrol_drone_add = 500
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = libra_yggdrasil_housing_mult
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		planet_housing_add = 2500
+		planet_amenities_add = 5000
+		job_patrol_drone_add = 500
+		multiplier = libra_yggdrasil_housing_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = no
+				not = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		job_patrol_drone_add = -500
+		job_dystopian_enforcer_add = 500
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		job_patrol_drone_add = -500
+		job_enforcer_add = 500
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = libra_yggdrasil_housing_mult
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				not = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		planet_housing_add = 2500
+		planet_amenities_add = 5000
+		job_enforcer_add = 500
+		multiplier = libra_yggdrasil_housing_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = libra_yggdrasil_housing_mult
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		planet_housing_add = 2500
+		planet_amenities_add = 5000
+		job_dystopian_enforcer_add = 500
+		multiplier = libra_yggdrasil_housing_mult
+	}
+
+	ai_resource_production = {
+		trade = 50
+		unity = 50
+	}
+	ai_resource_production = {
+		trigger = {
+			is_capital = yes
+		}
+		trade = 50
+		unity = 50
+	}
+	ai_weight_coefficient = 10
+
+	triggered_desc = {
+		trigger = {
+			is_capital = no
+		}
+		text = building_libra_yggdrasil_housing_tt
+	}
+
+	upgrades = {
+		"building_libra_yggdrasil_housing_2"
+	}
+
+	on_built = {
+		set_variable = {
+			which = libra_yggdrasil_housing_mult
+			value = 0
+		}
+	}
+
+	on_destroy = {
+		clear_variable = libra_yggdrasil_housing_mult
+	}
+}
+
+building_libra_yggdrasil_housing_2 = {
+	icon = building_libra_yggdrasil_housing_1
+	base_buildtime = @b5_time
+	position_priority = 10
+	can_be_ruined = no
+	can_build = no
+
+	category = government
+
+	building_sets = {
+		government
+		urban
+		entertainment
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_housing_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_housing_1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = { is_variable_set = libra_yggdrasil_housing_mult }
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = libra_yggdrasil_housing_mult
+		}
+		produces = {
+			sr_dark_matter = 0.5
+		}
+		produces = {
+			trigger = { is_variable_set = libra_yggdrasil_housing_mult }
+			sr_dark_matter = 0.5
+			multiplier = libra_yggdrasil_housing_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = { is_variable_set = libra_yggdrasil_housing_mult }
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = libra_yggdrasil_housing_mult
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 100000
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_variable_set = libra_yggdrasil_housing_mult
+		}
+		country_resource_max_add = 50000
+		multiplier = libra_yggdrasil_housing_mult
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_capital = no
+		}
+		pop_bonus_workforce_mult = -0.25
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5000
+		planet_amenities_add = 10000
+		job_patrol_drone_add = 1000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = libra_yggdrasil_housing_mult
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		planet_housing_add = 2500
+		planet_amenities_add = 5000
+		job_patrol_drone_add = 500
+		multiplier = libra_yggdrasil_housing_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = no
+				not = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		job_patrol_drone_add = @libra_yggdrasil_job_3
+		job_dystopian_enforcer_add = 1000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		job_patrol_drone_add = @libra_yggdrasil_job_3
+		job_enforcer_add = 1000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = libra_yggdrasil_housing_mult
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				not = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		planet_housing_add = 2500
+		planet_amenities_add = 5000
+		job_enforcer_add = 500
+		multiplier = libra_yggdrasil_housing_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = libra_yggdrasil_housing_mult
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		planet_housing_add = 2500
+		planet_amenities_add = 5000
+		job_dystopian_enforcer_add = 500
+		multiplier = libra_yggdrasil_housing_mult
+	}
+
+	ai_resource_production = {
+		trade = 300
+		unity = 300
+		trigger = {
+			or = {
+				planet_crime > 35
+				free_housing < 800
+				free_amenities < 800
+			}
+		}
+	}
+	ai_weight_coefficient = 2
+
+	triggered_desc = {
+		trigger = {
+			is_capital = no
+		}
+		text = building_libra_yggdrasil_housing_tt
+	}
+
+	on_built = {
+		change_variable = {
+			which = libra_yggdrasil_housing_mult
+			value = 1
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_foundry_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_foundry_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_foundry_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_metallurgists_alloys_produces_add = 2
+		planet_metallurgists_minerals_upkeep_add = 4
+		job_fabricator_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_metallurgists_alloys_produces_add = 0.5
+		planet_metallurgists_minerals_upkeep_add = -4
+		planet_metallurgists_food_upkeep_add = 6
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_foundry_mult
+			}
+		}
+		job_fabricator_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_foundry_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_fabricator_add = @libra_yggdrasil_job_3
+		job_foundry_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_foundry_mult
+			}
+		}
+		job_foundry_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_foundry_mult
+	}
+
+	ai_resource_production = {
+		alloys = 100
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_foundry_2"
+	}
+}
+
+building_libra_yggdrasil_foundry_2 = {
+	icon = building_libra_yggdrasil_foundry_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_foundry_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_foundry_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_foundry_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_foundry_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_foundry_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_foundry_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_metallurgists_alloys_produces_add = 2
+		planet_metallurgists_minerals_upkeep_add = 4
+		job_fabricator_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_metallurgists_alloys_produces_add = 0.5
+		planet_metallurgists_minerals_upkeep_add = -4
+		planet_metallurgists_food_upkeep_add = 6
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_foundry_mult
+			}
+		}
+		job_fabricator_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_foundry_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_fabricator_add = @libra_yggdrasil_job_4
+		job_foundry_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_foundry_mult
+			}
+		}
+		job_foundry_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_foundry_mult
+	}
+
+	ai_resource_production = {
+		alloys = 200
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_foundry_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_factory_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_factory_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_factory_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_artisans_consumer_goods_produces_add = 4
+		planet_artisans_minerals_upkeep_add = 4
+		job_artisan_drone_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_artisans_minerals_upkeep_add = -4
+		planet_artisans_food_upkeep_add = 6
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_factory_mult
+			}
+		}
+		job_artisan_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_factory_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_artisan_drone_add = @libra_yggdrasil_job_3
+		job_artisan_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_factory_mult
+			}
+		}
+		job_artisan_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_factory_mult
+	}
+
+	ai_resource_production = {
+		consumer_goods = 150
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_factory_2"
+	}
+}
+
+building_libra_yggdrasil_factory_2 = {
+	icon = building_libra_yggdrasil_factory_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_factory_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_factory_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_factory_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_factory_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_factory_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_factory_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_artisans_consumer_goods_produces_add = 4
+		planet_artisans_minerals_upkeep_add = 4
+		job_artisan_drone_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_artisans_minerals_upkeep_add = -4
+		planet_artisans_food_upkeep_add = 6
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_factory_mult
+			}
+		}
+		job_artisan_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_factory_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_artisan_drone_add = @libra_yggdrasil_job_4
+		job_artisan_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_factory_mult
+			}
+		}
+		job_artisan_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_factory_mult
+	}
+
+	ai_resource_production = {
+		consumer_goods = 300
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_factory_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_trade_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = trade
+
+	building_sets = {
+		urban
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_trade_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_trade_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_traders_trade_produces_add = 4
+		planet_traders_energy_upkeep_add = 2
+		job_logistics_drone_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_trade_mult
+			}
+		}
+		job_logistics_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_trade_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_logistics_drone_add = @libra_yggdrasil_job_3
+		job_trader_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_trade_mult
+			}
+		}
+		job_trader_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_trade_mult
+	}
+
+	ai_resource_production = {
+		trade = 200
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_trade_2"
+	}
+}
+
+building_libra_yggdrasil_trade_2 = {
+	icon = building_libra_yggdrasil_trade_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = trade
+
+	building_sets = {
+		urban
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_trade_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_trade_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_trade_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_trade_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_trade_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_trade_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_traders_trade_produces_add = 4
+		planet_traders_energy_upkeep_add = 2
+		job_logistics_drone_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_trade_mult
+			}
+		}
+		job_logistics_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_trade_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_logistics_drone_add = @libra_yggdrasil_job_4
+		job_trader_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_trade_mult
+			}
+		}
+		job_trader_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_trade_mult
+	}
+
+	ai_resource_production = {
+		trade = 400
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_trade_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_physics_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = research
+
+	building_sets = {
+		research
+		physics
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_physics_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_physics_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 3
+		planet_physicists_consumer_goods_upkeep_add = 2
+		job_calculator_physicist_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_physics_mult
+			}
+		}
+		job_calculator_physicist_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_physics_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_calculator_physicist_add = @libra_yggdrasil_job_3
+		job_physicist_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_physics_mult
+			}
+		}
+		job_physicist_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_physics_mult
+	}
+
+	ai_resource_production = {
+		physics_research = 300
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_physics_2"
+	}
+}
+
+building_libra_yggdrasil_physics_2 = {
+	icon = building_libra_yggdrasil_physics_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = research
+
+	building_sets = {
+		research
+		physics
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_physics_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_physics_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_physics_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_physics_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_physics_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_physics_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 3
+		planet_physicists_consumer_goods_upkeep_add = 2
+		job_calculator_physicist_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_physics_mult
+			}
+		}
+		job_calculator_physicist_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_physics_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_calculator_physicist_add = @libra_yggdrasil_job_4
+		job_physicist_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_physics_mult
+			}
+		}
+		job_physicist_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_physics_mult
+	}
+
+	ai_resource_production = {
+		physics_research = 600
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_physics_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_society_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = research
+
+	building_sets = {
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_society_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_society_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_biologists_society_research_produces_add = 3
+		planet_biologists_consumer_goods_upkeep_add = 2
+		job_calculator_biologist_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_society_mult
+			}
+		}
+		job_calculator_biologist_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_society_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_calculator_biologist_add = @libra_yggdrasil_job_3
+		job_biologist_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_society_mult
+			}
+		}
+		job_biologist_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_society_mult
+	}
+
+	ai_resource_production = {
+		society_research = 300
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_society_2"
+	}
+}
+
+building_libra_yggdrasil_society_2 = {
+	icon = building_libra_yggdrasil_society_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = research
+
+	building_sets = {
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_society_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_society_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_society_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_society_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_society_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_society_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_biologists_society_research_produces_add = 3
+		planet_biologists_consumer_goods_upkeep_add = 2
+		job_calculator_biologist_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_society_mult
+			}
+		}
+		job_calculator_biologist_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_society_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_calculator_biologist_add = @libra_yggdrasil_job_4
+		job_biologist_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_society_mult
+			}
+		}
+		job_biologist_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_society_mult
+	}
+
+	ai_resource_production = {
+		society_research = 600
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_society_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_engineering_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = research
+
+	building_sets = {
+		research
+		engineering
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_engineering_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_engineering_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_engineers_engineering_research_produces_add = 3
+		planet_engineers_consumer_goods_upkeep_add = 2
+		job_calculator_engineer_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_engineering_mult
+			}
+		}
+		job_calculator_engineer_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_engineering_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_calculator_engineer_add = @libra_yggdrasil_job_3
+		job_engineer_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_engineering_mult
+			}
+		}
+		job_engineer_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_engineering_mult
+	}
+
+	ai_resource_production = {
+		engineering_research = 300
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_engineering_2"
+	}
+}
+
+building_libra_yggdrasil_engineering_2 = {
+	icon = building_libra_yggdrasil_engineering_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = research
+
+	building_sets = {
+		research
+		engineering
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_engineering_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_engineering_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_engineering_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_engineering_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_engineering_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_engineering_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_engineers_engineering_research_produces_add = 3
+		planet_engineers_consumer_goods_upkeep_add = 2
+		job_calculator_engineer_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_engineering_mult
+			}
+		}
+		job_calculator_engineer_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_engineering_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_calculator_engineer_add = @libra_yggdrasil_job_4
+		job_engineer_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_engineering_mult
+			}
+		}
+		job_engineer_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_engineering_mult
+	}
+
+	ai_resource_production = {
+		engineering_research = 600
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_engineering_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_unity_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = unity
+
+	building_sets = {
+		government
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_unity_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_unity_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_bureaucrats_unity_produces_add = 3
+		planet_bureaucrats_consumer_goods_upkeep_add = 2
+		job_coordinator_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_unity_mult
+			}
+		}
+		job_coordinator_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_unity_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_coordinator_add = @libra_yggdrasil_job_3
+		job_bureaucrat_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_unity_mult
+			}
+		}
+		job_bureaucrat_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_unity_mult
+	}
+
+	ai_resource_production = {
+		unity = 200
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_unity_2"
+	}
+}
+
+building_libra_yggdrasil_unity_2 = {
+	icon = building_libra_yggdrasil_unity_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = unity
+
+	building_sets = {
+		government
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_unity_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_unity_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_unity_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_unity_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_unity_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_unity_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_bureaucrats_unity_produces_add = 3
+		planet_bureaucrats_consumer_goods_upkeep_add = 2
+		job_coordinator_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_unity_mult
+			}
+		}
+		job_coordinator_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_unity_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_coordinator_add = @libra_yggdrasil_job_4
+		job_bureaucrat_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_unity_mult
+			}
+		}
+		job_bureaucrat_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_unity_mult
+	}
+
+	ai_resource_production = {
+		unity = 400
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_unity_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_energy_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = resource
+
+	building_sets = {
+		generator
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_energy_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_energy_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_technician_energy_produces_add = 6
+		planet_technician_trade_upkeep_add = 2
+		job_technician_drone_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_energy_mult
+			}
+		}
+		job_technician_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_energy_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_technician_drone_add = @libra_yggdrasil_job_3
+		job_technician_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_energy_mult
+			}
+		}
+		job_technician_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_energy_mult
+	}
+
+	ai_resource_production = {
+		energy = 400
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_energy_2"
+	}
+}
+
+building_libra_yggdrasil_energy_2 = {
+	icon = building_libra_yggdrasil_energy_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = resource
+
+	building_sets = {
+		generator
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_energy_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_energy_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_energy_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_energy_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_energy_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_energy_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_technician_energy_produces_add = 6
+		planet_technician_trade_upkeep_add = 2
+		job_technician_drone_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_energy_mult
+			}
+		}
+		job_technician_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_energy_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_technician_drone_add = @libra_yggdrasil_job_4
+		job_technician_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_energy_mult
+			}
+		}
+		job_technician_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_energy_mult
+	}
+
+	ai_resource_production = {
+		energy = 800
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_energy_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_mineral_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = resource
+
+	building_sets = {
+		mining
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_mineral_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_mineral_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_miners_minerals_produces_add = 4
+		planet_miners_trade_upkeep_add = 2
+		job_mining_drone_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_mineral_mult
+			}
+		}
+		job_mining_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_mineral_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_mining_drone_add = @libra_yggdrasil_job_3
+		job_miner_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_mineral_mult
+			}
+		}
+		job_miner_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_mineral_mult
+	}
+
+	ai_resource_production = {
+		minerals = 300
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_mineral_2"
+	}
+}
+
+building_libra_yggdrasil_mineral_2 = {
+	icon = building_libra_yggdrasil_mineral_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = resource
+
+	building_sets = {
+		mining
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_mineral_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_mineral_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_mineral_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_mineral_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_mineral_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_mineral_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_miners_minerals_produces_add = 4
+		planet_miners_trade_upkeep_add = 2
+		job_mining_drone_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_mineral_mult
+			}
+		}
+		job_mining_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_mineral_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_mining_drone_add = @libra_yggdrasil_job_4
+		job_miner_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_mineral_mult
+			}
+		}
+		job_miner_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_mineral_mult
+	}
+
+	ai_resource_production = {
+		minerals = 600
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_mineral_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_food_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = resource
+
+	building_sets = {
+		farming
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_food_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_food_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_farmers_food_produces_add = 5
+		planet_farmers_trade_upkeep_add = 2
+		job_agri_drone_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_food_mult
+			}
+		}
+		job_agri_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_food_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_agri_drone_add = @libra_yggdrasil_job_3
+		job_farmer_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_food_mult
+			}
+		}
+		job_farmer_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_food_mult
+	}
+
+	ai_resource_production = {
+		food = 300
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_food_2"
+	}
+}
+
+building_libra_yggdrasil_food_2 = {
+	icon = building_libra_yggdrasil_food_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = resource
+
+	building_sets = {
+		farming
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_food_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_food_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_food_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_food_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_food_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_food_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_farmers_food_produces_add = 5
+		planet_farmers_trade_upkeep_add = 2
+		job_agri_drone_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_food_mult
+			}
+		}
+		job_agri_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_food_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_agri_drone_add = @libra_yggdrasil_job_4
+		job_farmer_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_food_mult
+			}
+		}
+		job_farmer_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_food_mult
+	}
+
+	ai_resource_production = {
+		food = 600
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_food_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+building_libra_yggdrasil_fortress_1 = {
+	base_buildtime = @b5_time
+	can_be_ruined = no
+	planet_limit = 1
+	empire_limit = 1
+
+	category = army
+
+	building_sets = {
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_yggdrasil
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_fortress_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_fortress_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_soldiers_physics_research_produces_add = 1
+		planet_soldiers_society_research_produces_add = 1
+		planet_soldiers_engineering_research_produces_add = 1
+		planet_soldiers_alloys_upkeep_add = 0.5
+		job_warrior_drone_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_fortress_mult
+			}
+		}
+		job_warrior_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_fortress_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_warrior_drone_add = @libra_yggdrasil_job_3
+		job_soldier_add = @libra_yggdrasil_job_1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_fortress_mult
+			}
+		}
+		job_soldier_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_fortress_mult
+	}
+
+	ai_resource_production = {
+		physics_research = 50
+		society_research = 50
+		engineering_research = 50
+		energy = 50
+		trade = 50
+	}
+	ai_weight_coefficient = 2
+
+	upgrades = {
+		"building_libra_yggdrasil_fortress_2"
+	}
+}
+
+building_libra_yggdrasil_fortress_2 = {
+	icon = building_libra_yggdrasil_fortress_1
+	base_buildtime = @b4_time
+	can_be_ruined = no
+	can_build = no
+
+	category = army
+
+	building_sets = {
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 80 }
+		}
+	}
+
+	allow = {
+		has_active_building = building_libra_yggdrasil_housing_1
+		num_buildings = { type = any value < 27 }
+		free_housing > 0
+		free_amenities > 0
+	}
+
+	destroy_trigger = {
+		has_building = building_libra_yggdrasil_fortress_2
+	}
+
+	convert_to = {
+		building_libra_yggdrasil_fortress_1
+	}
+
+	resources = {
+		category = planet_libra_yggdrasil
+		cost = {
+			alloys = @libra_yggdrasil_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_fortress_mult }
+			}
+			unity = @libra_yggdrasil_upgrade_cost
+			multiplier = owner.libra_yggdrasil_fortress_mult
+		}
+		upkeep = {
+			energy = @libra_yggdrasil_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_variable_set = libra_yggdrasil_fortress_mult }
+			}
+			energy = @libra_yggdrasil_upkeep_1
+			multiplier = owner.libra_yggdrasil_fortress_mult
+		}
+	}
+
+	planet_modifier = {
+		planet_soldiers_physics_research_produces_add = 1
+		planet_soldiers_society_research_produces_add = 1
+		planet_soldiers_engineering_research_produces_add = 1
+		planet_soldiers_alloys_upkeep_add = 0.5
+		job_warrior_drone_add = @libra_yggdrasil_job_2
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_variable_set = libra_yggdrasil_fortress_mult
+			}
+		}
+		job_warrior_drone_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_fortress_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = no }
+		}
+		job_warrior_drone_add = @libra_yggdrasil_job_4
+		job_soldier_add = @libra_yggdrasil_job_2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+				is_variable_set = libra_yggdrasil_fortress_mult
+			}
+		}
+		job_soldier_add = @libra_yggdrasil_job_1
+		planet_building_build_speed_mult = @libra_yggdrasil_speed
+		multiplier = owner.libra_yggdrasil_fortress_mult
+	}
+
+	ai_resource_production = {
+		physics_research = 100
+		society_research = 100
+		engineering_research = 100
+		energy = 100
+		trade = 100
+	}
+	ai_weight_coefficient = 2
+
+	on_built = {
+		owner = {
+			change_variable = { which = libra_yggdrasil_fortress_mult value = 1 }
+			country_event = { id = libra_fairy.17002 }
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+}
+
+# #############
+# Psionics
+#############
+
+building_libra_psionic_destiny_sanctum = {
+	base_buildtime = @b4_time
+	category = government
+	empire_limit = 3
+	planet_limit = 1
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		nor = {
+			has_building = building_libra_psionic_favour_sanctum
+			has_building_construction = building_libra_psionic_favour_sanctum
+			has_building = building_libra_psionic_reflection_sanctum
+			has_building_construction = building_libra_psionic_reflection_sanctum
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				or = {
+					has_tradition = tr_psionics_finish
+					has_tradition = tr_psionics_shroud_finish
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_psionic_destiny"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			exotic_gases = @b4_rare_cost
+			rare_crystals = @b4_rare_cost
+			volatile_motes = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			exotic_gases = @b4_rare_upkeep
+			rare_crystals = @b4_rare_upkeep
+			volatile_motes = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_commander_cap_add = 1
+		country_starbase_capacity_mult = 0.1
+		ship_psionic_aura_speed_mult = 0.1
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_psionic_destiny_enhance }
+		}
+		starbase_shipyard_build_speed_mult = 0.25
+		planet_army_build_speed_mult = 0.25
+	}
+
+	planet_modifier = {
+		planet_jobs_energy_produces_mult = 0.25
+		planet_jobs_minerals_produces_mult = 0.25
+		planet_jobs_food_produces_mult = 0.25
+		planet_jobs_sr_zro_produces_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_psychic_add = 100
+		job_telepath_add = 100
+		job_soldier_add = 600
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_psychic_drone_add = 100
+		job_telepath_drone_add = 100
+		job_warrior_drone_add = 600
+	}
+
+	ai_resource_production = {
+		energy = 25
+		minerals = 25
+		food = 25
+		sr_zro = 3
+	}
+	ai_weight_coefficient = 3
+}
+
+building_libra_psionic_favour_sanctum = {
+	base_buildtime = @b4_time
+	category = government
+	empire_limit = 3
+	planet_limit = 1
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		nor = {
+			has_building = building_libra_psionic_destiny_sanctum
+			has_building_construction = building_libra_psionic_destiny_sanctum
+			has_building = building_libra_psionic_reflection_sanctum
+			has_building_construction = building_libra_psionic_reflection_sanctum
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				or = {
+					has_tradition = tr_psionics_finish
+					has_tradition = tr_psionics_shroud_finish
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_psionic_favour"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			exotic_gases = @b4_rare_cost
+			rare_crystals = @b4_rare_cost
+			volatile_motes = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			exotic_gases = @b4_rare_upkeep
+			rare_crystals = @b4_rare_upkeep
+			volatile_motes = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_official_cap_add = 1
+		planet_jobs_produces_mult = 0.15
+		planet_jobs_upkeep_mult = 0.1
+	}
+
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = 0.25
+		planet_jobs_consumer_goods_produces_mult = 0.25
+		planet_jobs_unity_produces_mult = 0.25
+		planet_jobs_trade_produces_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_psychic_add = 100
+		job_telepath_add = 100
+		job_politician_add = 400
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_psychic_drone_add = 100
+		job_telepath_drone_add = 100
+		job_evaluator_add = 600
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_edict = libra_psionic_favour_enhance
+				not = { has_country_flag = libra_is_machine_empire }
+			}
+		}
+		fake_pop_growth_mod = 12
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			exists = owner
+			owner = {
+				has_edict = libra_psionic_favour_enhance
+				not = { has_country_flag = libra_is_machine_empire }
+			}
+		}
+		bonus_pop_growth = 12
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_edict = libra_psionic_favour_enhance
+				has_country_flag = libra_is_machine_empire
+			}
+		}
+		planet_pop_assembly_add = 12
+	}
+
+	ai_resource_production = {
+		alloys = 15
+		consumer_goods = 15
+		unity = 15
+		trade = 15
+	}
+	ai_weight_coefficient = 3
+}
+
+building_libra_psionic_reflection_sanctum = {
+	base_buildtime = @b4_time
+	category = government
+	empire_limit = 3
+	planet_limit = 1
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+		}
+	}
+
+	allow = {
+		nor = {
+			has_building = building_libra_psionic_destiny_sanctum
+			has_building_construction = building_libra_psionic_destiny_sanctum
+			has_building = building_libra_psionic_favour_sanctum
+			has_building_construction = building_libra_psionic_favour_sanctum
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		not = {
+			owner = {
+				is_variable_set = libra_aa_path
+				or = {
+					has_tradition = tr_psionics_finish
+					has_tradition = tr_psionics_shroud_finish
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_libra_psionic_reflection"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			exotic_gases = @b4_rare_cost
+			rare_crystals = @b4_rare_cost
+			volatile_motes = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			exotic_gases = @b4_rare_upkeep
+			rare_crystals = @b4_rare_upkeep
+			volatile_motes = @b4_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_scientist_cap_add = 1
+		all_technology_research_speed = 0.1
+		species_leader_exp_gain = 0.1
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_artificial = no
+			exists = owner
+			owner = { has_edict = libra_psionic_reflection_enhance }
+		}
+		district_generator_max_add = 5
+		district_mining_max_add = 5
+		district_farming_max_add = 5
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_artificial = yes
+			exists = owner
+			owner = { has_edict = libra_psionic_reflection_enhance }
+		}
+		district_hab_energy_max_add = 5
+		district_hab_mining_max_add = 5
+		district_hab_science_max_add = 5
+	}
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.25
+		planet_jobs_society_research_produces_mult = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.25
+		pop_job_amenities_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_psychic_add = 100
+		job_telepath_add = 100
+		job_libra_analyst_add = 600
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_psychic_drone_add = 100
+		job_telepath_drone_add = 100
+		job_libra_calculator_drone_add = 600
+	}
+
+	ai_resource_production = {
+		trigger = {
+			is_artificial = no
+			exists = owner
+			owner = { is_void_dweller_empire = no }
+		}
+		energy = 25
+		minerals = 20
+		physics_research = 25
+		society_research = 25
+		engineering_research = 25
+	}
+	ai_resource_production = {
+		trigger = {
+			is_artificial = yes
+			exists = owner
+			owner = { is_void_dweller_empire = yes }
+		}
+		energy = 25
+		minerals = 20
+		physics_research = 25
+		society_research = 25
+		engineering_research = 25
+	}
+	ai_weight_coefficient = 3
+}
+
+# #############
+# Heavenly Throne
+#############
+
+building_libra_heavenly_throne_1 = {
+	base_buildtime = @b2_time
+	category = government
+	planet_limit = 1
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+		entertainment
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_heavenly_throne
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 90 }
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 90 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_throne
+		cost = {
+			alloys = @b2_minerals
+			sr_zro = @b2_rare_cost
+		}
+		upkeep = {
+			alloys = @b2_upkeep
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		psionic_pop_bonus_workforce_mult = 0.1
+		mult = value:libra_planetary_ascension_mult
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_psychic_add = 100
+		job_libra_harmonize_envoy_add = 500
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_psychic_drone_add = 100
+		job_libra_harmonize_drone_add = 500
+	}
+
+	triggered_desc = {
+		text = building_libra_heavenly_throne_1_effect_desc
+	}
+
+	upgrades = {
+		"building_libra_heavenly_throne_2"
+	}
+
+	ai_resource_production = {
+		energy = 25
+		minerals = 25
+		alloys = 25
+		unity = 25
+		physics_research = 25
+		society_research = 25
+		engineering_research = 25
+	}
+}
+
+building_libra_heavenly_throne_2 = {
+	base_buildtime = @b3_time
+	category = government
+	can_build = no
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+		entertainment
+		origin
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_heavenly_throne
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 90 }
+		}
+	}
+
+	allow = {
+		has_planetary_ascension_tier > 9
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 90 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_libra_throne
+		cost = {
+			alloys = @b3_minerals
+			sr_zro = @b3_rare_cost
+		}
+		upkeep = {
+			alloys = @b3_upkeep
+			sr_zro = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		planet_telepaths_physics_research_produces_add = 0.1
+		planet_telepaths_society_research_produces_add = 0.1
+		planet_telepaths_engineering_research_produces_add = 0.1
+	}
+
+	planet_modifier = {
+		psionic_pop_bonus_workforce_mult = 1.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_psychic_add = 100
+		job_libra_harmonize_envoy_add = 500
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_libra_harmonize_envoy_add = 25
+		mult = value:libra_count_districts|TYPE|any|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_psychic_drone_add = 100
+		job_libra_harmonize_drone_add = 500
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_libra_harmonize_drone_add = 25
+		mult = value:libra_count_districts|TYPE|any|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = leader
+			leader = {
+				has_trait = leader_trait_chosen
+			}
+		}
+		planet_telepaths_physics_research_produces_add = 3
+		planet_telepaths_society_research_produces_add = 3
+		planet_telepaths_engineering_research_produces_add = 3
+		planet_telepaths_energy_upkeep_add = 6
+	}
+
+	triggered_desc = {
+		text = building_libra_heavenly_throne_2_effect_desc
+	}
+
+	ai_resource_production = {
+		energy = 50
+		minerals = 50
+		alloys = 50
+		unity = 50
+		physics_research = 75
+		society_research = 75
+		engineering_research = 75
+	}
+}

@@ -1,0 +1,172 @@
+component_set = {
+	key = "libra_corvette_power_core"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_destroyer_power_core"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_cruiser_power_core"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_battleship_power_core"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_titan_power_core"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_juggernaut_power_core"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_starbase_power_core"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_platform_power_core"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+#
+
+component_set = {
+	key = "libra_combat_computers"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}
+
+#
+
+component_set = {
+	key = "libra_corvette_thruster_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_destroyer_thruster_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_cruiser_thruster_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_battleship_thruster_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_titan_thruster_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_colossus_thruster_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+}
+
+#
+
+component_set = {
+	key = "libra_corvette_cloaking_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_cloak_dark_matter"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_destroyer_cloaking_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_cloak_dark_matter"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_cruiser_cloaking_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_cloak_dark_matter"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_battleship_cloaking_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_cloak_dark_matter"
+	icon_frame = 1
+}

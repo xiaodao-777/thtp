@@ -1,0 +1,24 @@
+libra_rare_crystals_expenditure_edicts = {
+	resource = rare_crystals
+	type = expenditure
+	category = edicts
+
+	potential = {
+		has_resource = {
+			type = rare_crystals
+			amount > 50
+		}
+		resource_income_compare = {
+			resource = rare_crystals
+			value > 3
+		}
+	}
+
+	weight = {
+		weight = 0.15
+	}
+
+	desired_max = {
+		base = 200
+	}
+}

@@ -1,0 +1,41 @@
+tradition_libra_havoc = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_havoc_adopt } }
+		text = tradition_libra_havoc_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_havoc_adopt }
+		text = tradition_libra_havoc_adopt_desc
+	}
+	tree_template = "tree_11_111"
+	adoption_bonus = "tr_libra_havoc_adopt"
+	finish_bonus = "tr_libra_havoc_finish"
+	traditions = {
+		"tr_libra_havoc_1"
+		"tr_libra_havoc_2"
+		"tr_libra_havoc_3"
+		"tr_libra_havoc_4"
+		"tr_libra_havoc_5"
+	}
+
+	ai_weight = {
+		factor = 40
+		modifier = {
+			factor = 2
+			libra_ai_preferences_militarily = yes
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_libra_victory_adopt
+			has_tradition = tr_libra_pendragon_adopt
+			any_playable_country = {
+				libra_crisis_ap_check = yes
+			}
+		}
+		modifier = {
+			set = 120
+			num_tradition_categories = 1
+			has_origin = origin_libra_centurion
+		}
+	}
+}

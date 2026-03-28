@@ -1,0 +1,44 @@
+leader_trait_libra_commander_admiral_corrupt_destiny_a_effect = {
+	ship_damage_reduction_mult = 1
+	ship_weapon_damage = 2
+}
+
+leader_trait_libra_commander_general_egalitarian_effect = {
+	all_technology_research_speed = -0.25
+	ship_fire_rate_mult = -0.25
+	planet_pops_upkeep_mult = 0.25
+}
+
+leader_trait_libra_official_delegate_destiny_a_effect = {
+	country_trade_produces_mult = 0.15
+}
+
+leader_trait_libra_official_delegate_pacifist_effect = {
+	pop_factions_produces_mult = 0.5
+}
+
+leader_trait_libra_official_delegate_authoritarian_effect = {
+	country_cost_mult = -0.05
+	council_agenda_progress_speed = 0.25
+}
+
+leader_trait_libra_official_delegate_egalitarian_effect = {
+	country_produces_mult = 0.1
+}
+
+leader_trait_libra_official_delegate_materialist_effect = {
+	all_technology_research_speed = 0.15
+}
+
+leader_trait_libra_scientist_scholar_destiny_c_effect = {
+	country_engineering_tech_research_speed = 0.2
+}
+
+leader_trait_libra_scientist_scholar_destiny_d_effect = {
+	country_society_tech_research_speed = 0.25
+}
+
+leader_trait_libra_scientist_scholar_xenophile_effect = {
+	country_physics_tech_research_speed = 0.05
+	planet_jobs_productive_upkeep_mult = -0.1
+}

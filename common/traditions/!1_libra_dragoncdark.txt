@@ -1,0 +1,186 @@
+tr_libra_dragondark_adopt = {
+	unlocks_agenda = agenda_libra_dragondark
+	possible = {
+		if = {
+			limit = { has_tradition = tr_libra_dragonlight_adopt }
+			num_ascension_perks > 3
+			custom_tooltip = {
+				fail_text = "tr_libra_dragonborn_fail_2"
+				has_tradition = tr_libra_dragonlight_finish
+				libra_has_finished_organic_ascension_path = yes
+			}
+		}
+		else = {
+			num_ascension_perks > 1
+			custom_tooltip = {
+				fail_text = "tr_libra_dragonborn_fail_1"
+				has_technology = tech_libra_dragon_breath_1
+				has_tradition = tr_libra_dragonchant_finish
+			}
+		}
+	}
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = { has_tradition = tr_libra_dragonlight_adopt }
+				country_event = { id = libra_origin.0728 }
+			}
+			else = {
+				country_event = { id = libra_origin.0725 }
+			}
+		}
+	}
+	modifier = {
+		country_starbase_capacity_mult = 0.2
+	}
+}
+
+tr_libra_dragondark_finish = {
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = { has_tradition = tr_libra_dragonlight_finish }
+				country_event = { id = libra_origin.0727 }
+			}
+			else = {
+				country_event = { id = libra_origin.0726 }
+			}
+		}
+	}
+	modifier = {
+		country_naval_cap_mult = 0.2
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_dragondark_1 = {
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = libra_origin.0751 }
+		}
+	}
+	modifier = {
+		planet_libra_dragonborn_sr_living_metal_produces_add = 0.1
+	}
+	custom_tooltip_with_modifiers = tr_libra_dragondark_1_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_dragondark_2 = {
+	modifier = {
+		ship_hull_damage_mult = 0.15
+		councilor_skill_add = 2
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_dragondark_3 = {
+	possible = {
+		has_tradition = tr_libra_dragondark_1
+	}
+	custom_tooltip = tr_libra_dragondark_3_desc
+	triggered_modifier = {
+		potential = { always = yes }
+		country_traditions_energy_produces_add = 0.3
+		country_traditions_alloys_produces_add = 0.1
+		mult = trigger:used_naval_capacity_integer
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_dragondark_4 = {
+	possible = {
+		has_tradition = tr_libra_dragondark_2
+	}
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = { has_tradition = tr_libra_dragonlight_3 }
+				if = {
+					limit = { is_gestalt = yes }
+					country_event = { id = libra_origin.0721 days = 30 }
+				}
+				else = {
+					country_event = { id = libra_origin.0720 days = 30 }
+				}
+				create_message = {
+					type = MESSAGE_ALL_GAINED_TRAIT
+					localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+					days = @toast_message_days
+					variable = {
+						type = key
+						value = leader_trait_libra_dragonborn_official_3
+						localization = TRAIT
+					}
+					variable = {
+						key = TRAIT_KEY
+						value = leader_trait_libra_dragonborn_official_3
+					}
+					variable = {
+						key = "border"
+						value = "GFX_invisible"
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { is_gestalt = yes }
+					country_event = { id = libra_origin.0717 days = 30 }
+				}
+				else = {
+					country_event = { id = libra_origin.0716 days = 30 }
+				}
+				create_message = {
+					type = MESSAGE_ALL_GAINED_TRAIT
+					localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+					days = @toast_message_days
+					variable = {
+						type = key
+						value = leader_trait_libra_dragonborn_official_2
+						localization = TRAIT
+					}
+					variable = {
+						key = TRAIT_KEY
+						value = leader_trait_libra_dragonborn_official_2
+					}
+					variable = {
+						key = "border"
+						value = "GFX_invisible"
+					}
+				}
+			}
+		}
+	}
+	modifier = {
+		intel_decryption_add = 2
+	}
+	custom_tooltip_with_modifiers = tr_libra_dragondark_4_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_dragondark_5 = {
+	possible = {
+		has_tradition = tr_libra_dragondark_3
+		has_tradition = tr_libra_dragondark_4
+	}
+	modifier = {
+		ship_armor_penetration_add = 0.25
+		ship_shield_penetration_add = 0.25
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}

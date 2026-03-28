@@ -1,0 +1,569 @@
+decision_libra_string_puppeteer_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_archaeological_dig.dds"
+	icon_frame = 2
+	biological_pop_happiness = 0.05
+	lithoid_pop_happiness = 0.05
+	planet_pops_organics_upkeep_mult = 0.1
+}
+
+#
+
+agenda_libra_transcendent_covenant_a_finish_modifier = {
+	scientist_exp_gain = 0.15
+	all_technology_research_speed = 0.2
+}
+agenda_libra_transcendent_covenant_b_finish_modifier = {
+	commander_exp_gain = 0.15
+	starbase_shipyard_build_cost_mult = -0.1
+}
+agenda_libra_transcendent_covenant_c_finish_modifier = {
+	official_exp_gain = 0.15
+	country_produces_mult = 0.15
+}
+
+ap_libra_shift_in_focus_modifier_1 = {
+	hide_from_country_list = yes
+	country_produces_mult = 0.05
+	country_edict_fund_mult = 0.1
+	empire_size_mult = -0.15
+}
+ap_libra_shift_in_focus_modifier_2 = {
+	hide_from_country_list = yes
+	country_produces_mult = 0.1
+	country_naval_cap_mult = 0.1
+	empire_size_mult = -0.1
+}
+ap_libra_shift_in_focus_modifier_auth_democratic = {
+	hide_from_country_list = yes
+	founder_species_growth_mult = 0.25
+}
+ap_libra_shift_in_focus_modifier_auth_oligarchic = {
+	hide_from_country_list = yes
+	all_technology_research_speed = 0.2
+}
+ap_libra_shift_in_focus_modifier_auth_dictatorial = {
+	hide_from_country_list = yes
+	starbase_shipyard_build_cost_mult = -0.1
+}
+ap_libra_shift_in_focus_modifier_auth_imperial = {
+	hide_from_country_list = yes
+	councilor_skill_add = 2
+}
+ap_libra_shift_in_focus_modifier_auth_corporate = {
+	hide_from_country_list = yes
+	specimens_produces_mult = 0.2
+}
+ap_libra_shift_in_focus_modifier_auth_default = {
+	hide_from_country_list = yes
+	country_influence_produces_mult = 0.2
+}
+
+ap_libra_third_choice_modifier_0 = {
+	hide_from_country_list = yes
+	empire_size_penalty_mult = -1
+}
+ap_libra_third_choice_modifier_1 = {
+	hide_from_country_list = yes
+	country_power_projection_physics_research_produces_add = 2
+	country_power_projection_society_research_produces_add = 2
+	country_power_projection_engineering_research_produces_add = 2
+}
+ap_libra_third_choice_modifier_2 = {
+	hide_from_country_list = yes
+	country_power_projection_physics_research_produces_add = 5
+}
+ap_libra_third_choice_modifier_3 = {
+	hide_from_country_list = yes
+	country_power_projection_society_research_produces_add = 5
+}
+ap_libra_third_choice_modifier_4 = {
+	hide_from_country_list = yes
+	country_power_projection_engineering_research_produces_add = 5
+}
+ap_libra_third_choice_modifier_5 = {
+	hide_from_country_list = yes
+	pop_citizen_happiness = 0.03
+	divided_patrongage_max_subjects = 1
+}
+ap_libra_third_choice_modifier_6 = {
+	starbase_shipyard_build_speed_mult = 0.75
+}
+
+ap_libra_ultimate_directive_modifier = {
+	hide_from_country_list = yes
+	councilor_skill_add = 1
+	empire_size_add = -105
+}
+
+ap_libra_gestalt_era_modifier_1 = {
+	hide_from_country_list = yes
+	empire_size_add = -2
+	country_naval_cap_add = 2
+}
+ap_libra_gestalt_era_modifier_2 = {
+	hide_from_country_list = yes
+	empire_size_add = -3
+	country_naval_cap_add = 1
+}
+ap_libra_gestalt_era_modifier_3 = {
+	hide_from_country_list = yes
+	empire_size_add = -1
+	country_naval_cap_add = 3
+}
+
+ap_libra_sages_notes_modifier = {
+	hide_from_country_list = yes
+	empire_size_add = -1
+}
+
+agenda_libra_kings_game_finish_modifier = {
+	monthly_loyalty_from_subjects = 2
+}
+agenda_libra_kings_game_effect = {
+	divided_patrongage_max_subjects = 1
+}
+trade_action_libra_kings_game_modifier = {
+	country_produces_mult = 0.1
+	empire_size_districts_mult = -0.15
+	empire_size_pops_mult = -0.15
+}
+
+#
+
+ap_libra_golden_rule_modifier_1 = {
+	hide_from_country_list = yes
+	country_traditions_alloys_produces_add = 0.1
+}
+ap_libra_golden_rule_modifier_2 = {
+	hide_from_country_list = yes
+	country_traditions_consumer_goods_produces_add = 0.2
+}
+ap_libra_golden_rule_modifier_3 = {
+	hide_from_country_list = yes
+	country_traditions_physics_research_produces_add = 0.05
+	country_traditions_society_research_produces_add = 0.05
+	country_traditions_engineering_research_produces_add = 0.05
+}
+ap_libra_golden_rule_modifier_4 = {
+	hide_from_country_list = yes
+	country_traditions_unity_produces_add = 0.15
+}
+ap_libra_golden_rule_modifier_5 = {
+	hide_from_country_list = yes
+	country_traditions_alloys_produces_add = 0.06
+	country_traditions_physics_research_produces_add = 0.03
+	country_traditions_society_research_produces_add = 0.03
+	country_traditions_engineering_research_produces_add = 0.03
+}
+ap_libra_golden_rule_modifier_6 = {
+	hide_from_country_list = yes
+	country_traditions_alloys_produces_add = 0.05
+	country_traditions_consumer_goods_produces_add = 0.1
+	country_traditions_physics_research_produces_add = 0.05
+	country_traditions_society_research_produces_add = 0.05
+	country_traditions_engineering_research_produces_add = 0.05
+	country_traditions_unity_produces_add = 0.075
+}
+
+agenda_libra_valiant_heroic_modifier = {
+	country_leader_pool_size = 4
+	leaders_cost_mult = -0.4
+}
+agenda_libra_valiant_heroic_effect = {
+	hide_from_country_list = yes
+	country_leader_cap_add = 2
+}
+agenda_libra_valiant_heroic_effect_1 = {
+	hide_from_country_list = yes
+	country_produces_mult = 0.02
+}
+agenda_libra_valiant_heroic_effect_2 = {
+	hide_from_country_list = yes
+	country_naval_cap_mult = 0.02
+}
+agenda_libra_valiant_heroic_effect_3 = {
+	hide_from_country_list = yes
+	all_technology_research_speed = 0.02
+}
+
+ap_libra_warrant_of_return_modifier_1 = {
+	hide_from_country_list = yes
+	country_physics_tech_research_speed = 0.1
+}
+ap_libra_warrant_of_return_modifier_2 = {
+	hide_from_country_list = yes
+	country_engineering_tech_research_speed = 0.1
+}
+ap_libra_warrant_of_return_modifier_3 = {
+	hide_from_country_list = yes
+	country_society_tech_research_speed = 0.1
+}
+ap_libra_warrant_of_return_modifier_4 = {
+	hide_from_country_list = yes
+	country_produces_mult = 0.05
+}
+ap_libra_warrant_of_return_modifier_5 = {
+	hide_from_country_list = yes
+	country_naval_cap_mult = 0.05
+}
+
+#
+
+agenda_libra_directive_76_a_modifier = {
+	ship_speed_mult = 0.5
+	country_war_exhaustion_mult = -0.5
+	ships_logistics_mult = -0.5
+}
+agenda_libra_directive_76_a_soldier_modifier = {
+	hide_from_country_list = yes
+	ship_weapon_damage = 0.01
+	ship_fire_rate_mult = 0.01
+}
+agenda_libra_directive_76_b_modifier = {
+	ship_shield_damage_mult = 0.35
+	ship_armor_damage_mult = 0.35
+	planet_bureaucrats_unity_produces_add = 2
+}
+agenda_libra_directive_76_b_vat_modifier = {
+	hide_from_country_list = yes
+	pop_purge_speed = 0.01
+	planet_pops_upkeep_mult = -0.005
+}
+agenda_libra_directive_76_c_modifier = {
+	planet_physicists_physics_research_produces_add = 2
+	planet_biologists_society_research_produces_add = 2
+	planet_engineers_engineering_research_produces_add = 2
+}
+agenda_libra_directive_76_c_soldier_modifier = {
+	hide_from_country_list = yes
+	all_technology_research_speed = 0.005
+	planet_decision_enact_speed_mult = 0.01
+}
+agenda_libra_directive_76_d_modifier = {
+	planet_jobs_worker_produces_mult = 0.5
+	planet_metallurgists_alloys_produces_add = 1
+	planet_artisans_consumer_goods_produces_add = 2
+}
+agenda_libra_directive_76_d_leader_modifier = {
+	hide_from_country_list = yes
+	starbase_shipyard_build_speed_mult = 0.04
+	planet_army_build_speed_mult = 0.04
+}
+agenda_libra_directive_76_e_modifier = {
+	logistic_growth_mult = 0.5
+	planet_buildings_clone_vats_upkeep_mult = -0.5
+	planet_traders_trade_produces_add = 4
+}
+agenda_libra_directive_76_e_army_modifier = {
+	hide_from_country_list = yes
+	planet_colony_development_speed_mult = 0.01
+	planet_building_build_speed_mult = 0.01
+}
+
+#
+
+decision_libra_babel_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_ode_to_babel.dds"
+	icon_frame = 1
+	organic_pop_bonus_workforce_mult = 0.25
+	planet_building_build_speed_mult = 0.25
+}
+
+#
+
+libra_evolutionary_endpoint_mod_3_1 = {
+	pop_environment_tolerance = 0.5
+}
+libra_evolutionary_endpoint_mod_3_2 = {
+	planet_pops_organics_upkeep_mult = -0.15
+	pop_amenities_usage_organic_mult = -0.15
+}
+
+libra_evolutionary_endpoint_mod_4_1 = {
+	planet_jobs_produces_mult = 0.2
+	planet_pops_upkeep_mult = 0.1
+	pop_amenities_usage_mult = 0.1
+}
+
+libra_evolutionary_endpoint_mod_5_1 = {
+	leader_organic_lifespan_mult = 0.25
+}
+
+libra_evolutionary_endpoint_mod_6_1 = {
+	army_damage_mult = 0.5
+	pop_bonus_workforce_mult = 0.25
+	logistic_growth_mult = -0.25
+	bonus_pop_growth_mult = -0.15
+}
+
+libra_evolutionary_endpoint_mod_8_1 = {
+	pop_bonus_workforce_mult = 0.15
+	country_unity_produces_mult = -0.15
+}
+
+libra_evolutionary_endpoint_mod_9_2 = {
+	planet_stability_add = -5
+	planet_jobs_productive_produces_mult = 0.2
+}
+
+libra_evolutionary_endpoint_mod_10_1 = {
+	all_technology_research_speed = 0.12
+}
+
+libra_evolutionary_endpoint_mod_14_2 = {
+	pop_environment_tolerance = 0.2
+	logistic_growth_mult = 0.2
+}
+libra_evolutionary_endpoint_mod_14_3 = {
+	army_damage_mult = 1
+	commander_skill_add = 3
+}
+
+libra_evolutionary_endpoint_mod_15_3 = {
+	planet_jobs_upkeep_mult = -0.12
+}
+
+libra_cutefied_world_mod_0 = {
+	country_base_influence_produces_add = 1
+	country_produces_mult = 0.1
+}
+libra_cutefied_world_mod_1 = {
+	pop_environment_tolerance = 0.3
+	planet_decision_enact_speed_mult = 0.25
+	terraform_speed_mult = 0.25
+}
+libra_cutefied_world_mod_2 = {
+	country_leader_pool_size = 1
+	leader_skill_add = 1
+	councilor_skill_add = 1
+	ruler_skill_add = 1
+}
+libra_cutefied_world_mod_3 = {
+	planet_pops_organics_upkeep_mult = -0.15
+	organic_pop_bonus_workforce_mult = 0.15
+}
+
+#
+
+libra_transcendental_cybernetic_mod_2_1 = {
+	intel_encryption_add = 2
+	intel_decryption_add = 2
+	envoys_add = 2
+}
+libra_transcendental_cybernetic_mod_2_2 = {
+	country_base_influence_produces_add = 2
+}
+
+libra_transcendental_cybernetic_mod_3_1 = {
+	army_damage_mult = 0.5
+	ship_friendly_territory_fire_rate_mult = 0.5
+	commander_skill_add = 3
+}
+libra_transcendental_cybernetic_mod_3_2 = {
+	leader_lifespan_add = 20
+	country_unity_produces_mult = 0.4
+	espionage_hostile_operation_difficulty_add = 4
+}
+
+libra_transcendental_cybernetic_mod_4_1 = {
+	leader_initial_skill = 1
+	species_leader_exp_gain = 0.35
+}
+libra_transcendental_cybernetic_mod_4_2 = {
+	leader_initial_skill = 1
+	leader_skill_add = 1
+	species_leader_exp_gain = 0.5
+}
+
+libra_transcendental_cybernetic_mod_5_1 = {
+	planet_stability_add = 10
+	country_trade_produces_mult = 0.35
+}
+libra_transcendental_cybernetic_mod_5_2 = {
+	empire_size_penalty_mult = -0.25
+	planet_bureaucrats_produces_mult = 0.25
+}
+
+libra_transcendental_cybernetic_mod_6_1 = {
+	planet_crime_add = 25
+	auto_mod_monthly_add = 100
+	pop_bonus_workforce_mult = 0.25
+}
+libra_transcendental_cybernetic_mod_6_2 = {
+	planet_crime_add = -25
+	pop_bonus_workforce_mult = 0.15
+}
+libra_transcendental_cybernetic_mod_6_3 = {
+	country_energy_produces_mult = -0.05
+	pop_bonus_workforce_mult = 0.2
+	official_skill_add = 3
+}
+
+libra_transcendental_cybernetic_mod_7_1 = {
+	logistic_growth_mult = 0.5
+}
+libra_transcendental_cybernetic_mod_7_2 = {
+	logistic_growth_mult = 0.5
+	bonus_pop_growth_mult = 0.25
+}
+
+libra_transcendental_cybernetic_mod_8_1 = {
+	planet_researchers_produces_mult = 0.5
+	planet_researchers_upkeep_mult = 0.1
+	scientist_skill_add = 3
+	scientist_lifespan_add = -10
+}
+libra_transcendental_cybernetic_mod_8_2 = {
+	num_tech_alternatives_add = 1
+	all_technology_research_speed = 0.15
+}
+
+libra_transcendental_cybernetic_mod_9_1 = {
+	army_health = 0.5
+	ship_weapon_damage = 0.5
+	commander_exp_gain = 0.25
+}
+libra_transcendental_cybernetic_mod_9_3 = {
+	country_war_exhaustion_mult = -0.25
+	ship_weapon_damage = 0.25
+	damage_vs_superior_empires_mult = 0.25
+	damage_vs_player_crisis_mult = 0.25
+	commander_initial_skill = 2
+}
+
+libra_transcendental_cybernetic_mod_10_1 = {
+	planet_jobs_productive_produces_mult = 0.2
+}
+
+libra_transcendental_cybernetic_mod_11_1 = {
+	pop_bonus_workforce_mult = 0.1
+	logistic_growth_mult = 0.2
+}
+libra_transcendental_cybernetic_mod_11_2 = {
+	pop_housing_usage_mult = -0.1
+	pop_amenities_usage_mult = -0.2
+}
+libra_transcendental_cybernetic_mod_11_3 = {
+	pop_bonus_workforce_mult = 0.05
+	logistic_growth_mult = 0.1
+	pop_housing_usage_mult = -0.1
+	pop_amenities_usage_mult = -0.1
+}
+
+libra_transcendental_cybernetic_mod_12_1 = {
+	subspecies_integration_add = 50
+	planet_pops_upkeep_mult = 0.15
+	planet_jobs_upkeep_mult = -0.2
+}
+libra_transcendental_cybernetic_mod_12_2 = {
+	planet_stability_add = 5
+	planet_jobs_upkeep_mult = -0.1
+}
+libra_transcendental_cybernetic_mod_12_3 = {
+	planet_stability_add = -10
+	subspecies_integration_add = 100
+	planet_jobs_upkeep_mult = -0.2
+}
+
+libra_transcendental_cybernetic_mod_13_1 = {
+	pop_cat_worker_bonus_workforce_mult = 0.25
+	pop_cat_complex_drone_bonus_workforce_mult = 0.25
+}
+
+libra_transcendental_cybernetic_mod_14_1 = {
+	robotic_pop_bonus_workforce_mult = 0.25
+	cyborg_pop_bonus_workforce_mult = 0.15
+	organic_pop_bonus_workforce_mult = 0.1
+}
+libra_transcendental_cybernetic_mod_14_2 = {
+	planet_pops_robotics_upkeep_mult = -0.5
+	cyborg_pop_bonus_workforce_mult = 0.25
+}
+
+libra_transcendental_cybernetic_mod_15_1 = {
+	councilor_skill_add = 1
+	council_agenda_progress_speed = 0.5
+}
+libra_transcendental_cybernetic_mod_15_2 = {
+	country_unity_produces_mult = 0.25
+	country_trade_produces_mult = 0.25
+}
+libra_transcendental_cybernetic_mod_15_3 = {
+	councilor_skill_add = 2
+	council_agenda_finishing_effect_duration_mult = 0.25
+	official_exp_gain = 0.25
+}
+
+libra_transcendental_cybernetic_mod_16_1 = {
+	planet_researchers_upkeep_mult = -0.35
+	scientist_exp_gain = 0.25
+}
+libra_transcendental_cybernetic_mod_16_2 = {
+	planet_bureaucrats_upkeep_mult = -0.35
+	pop_job_amenities_mult = 0.25
+}
+libra_transcendental_cybernetic_mod_16_3 = {
+	country_physics_tech_research_speed = 0.35
+	country_society_tech_research_speed = 0.15
+	country_engineering_tech_research_speed = 0.25
+}
+
+#
+
+libra_nanite_locusts_modifier = {
+	hide_from_country_list = yes
+	pop_purge_speed = 0.2
+}
+
+libra_hurricane_eye_modifier = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_glitchy_matrix.dds"
+	planet_stability_add = 5
+}
+libra_hurricane_eye_mod = {
+	country_naval_cap_add = 200
+}
+
+#
+
+ap_libra_yggdrasil_modifier = {
+	all_technology_research_speed = 0.1
+	country_produces_mult = 0.1
+	species_leader_exp_gain = 0.2
+}
+
+#
+
+agenda_libra_psionic_eulogy_modifier = {
+	planet_jobs_productive_upkeep_mult = -0.1
+}
+
+agenda_libra_heavenly_throne_modifier_1 = {
+	all_technology_research_speed = 0.04
+}
+agenda_libra_heavenly_throne_modifier_2 = {
+	species_leader_exp_gain = 0.05
+	council_agenda_progress_speed = 0.03
+}
+agenda_libra_heavenly_throne_modifier_3 = {
+	planet_jobs_produces_mult = 0.04
+}
+agenda_libra_heavenly_throne_modifier_4 = {
+	logistic_growth_mult = 0.05
+	planet_pop_assembly_mult = 0.03
+}
+
+libra_liber_genesis_mod = {
+	edicts_cost_mult = -0.5
+	planet_jobs_productive_upkeep_mult = -0.1
+}
+edict_libra_liber_genesis_mod = {
+	psionic_pop_bonus_workforce_mult = 0.1
+	subspecies_integration_add = 300
+}
+decision_libra_liber_genesis_mod = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_liber_genesis.dds"
+	icon_frame = 1
+	planet_jobs_productive_produces_mult = 0.1
+	planet_telepaths_unity_produces_add = 1
+}

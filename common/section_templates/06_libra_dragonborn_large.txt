@@ -1,0 +1,123 @@
+ship_section_template = {
+	key = "LIBRA_DB_LARGE_MID"
+	ship_size = libra_dragonborn_large
+	fits_on_slot = mid
+	entity = "libra_dragonborn_large_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { artillery artillery_stealth carrier carrier_stealth }
+
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "PRIMARY_GUN_02"
+		template = "invisible_titanic_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		template = "libra_invisible_extra_large_turret"
+		locatorname = "xl_gun_01_1_r"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		template = "libra_invisible_extra_large_turret"
+		locatorname = "xl_gun_01_2_r"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		template = "libra_invisible_extra_large_turret"
+		locatorname = "xl_gun_01_1_l"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		template = "libra_invisible_extra_large_turret"
+		locatorname = "xl_gun_01_2_l"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		template = "invisible_medium_turret"
+		locatorname = "xl_gun_01_1_r"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		template = "invisible_medium_turret"
+		locatorname = "xl_gun_01_2_r"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		template = "invisible_medium_turret"
+		locatorname = "xl_gun_01_1_l"
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		template = "invisible_medium_turret"
+		locatorname = "xl_gun_01_2_l"
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		template = "invisible_small_turret"
+		locatorname = "xl_gun_01_1_r"
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		template = "invisible_small_turret"
+		locatorname = "xl_gun_01_2_r"
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		template = "invisible_small_turret"
+		locatorname = "xl_gun_01_1_l"
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		template = "invisible_small_turret"
+		locatorname = "xl_gun_01_2_l"
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_05"
+		template = "invisible_point_defence_turret"
+		locatorname = "xl_gun_01_1_r"
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_06"
+		template = "invisible_point_defence_turret"
+		locatorname = "xl_gun_01_2_r"
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_07"
+		template = "invisible_point_defence_turret"
+		locatorname = "xl_gun_01_1_l"
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_08"
+		template = "invisible_point_defence_turret"
+		locatorname = "xl_gun_01_2_l"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "xl_gun_01_1_r"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "xl_gun_01_2_r"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "xl_gun_01_1_l"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "xl_gun_01_2_l"
+	}
+
+	aux_utility_slots = 6
+	large_utility_slots = 30
+}

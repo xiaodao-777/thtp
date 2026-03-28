@@ -1,0 +1,788 @@
+
+
+# #############
+# Ascension
+#############
+
+building_libra_star_ranch = {
+	base_buildtime = @b2_time
+	category = resource
+	empire_limit = 5
+
+	building_sets = {
+		farming
+		mining
+		generator
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_libra_star_ranch }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_ascension_perk = ap_libra_star_ranch } }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_wilderness_empire = yes }
+			}
+			biomass = @b2_biomass
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	country_modifier = {
+		pop_category_slave_upkeep_mult = -0.05
+		pop_cat_slave_happiness = 0.05
+		planet_jobs_worker_produces_mult = 0.05
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2500
+		logistic_growth_mult = 0.25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				not = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		job_enforcer_add = 250
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		job_dystopian_enforcer_add = 250
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_patrol_drone_add = 250
+	}
+
+	ai_resource_production = {
+		food = 25
+		minerals = 15
+	}
+}
+
+# storm deviation
+
+building_libra_gestalt_storm_summoning_1 = {
+	base_buildtime = @b1_time
+	planet_limit = 1
+	category = amenity
+
+	building_sets = {
+		government
+		urban
+		physics
+		trade
+		entertainment
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_libra_storm_deviation }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_ascension_perk = ap_libra_storm_deviation } }
+	}
+
+	resources = {
+		category = planet_buildings_storm_tech
+		cost = {
+			minerals = @b1_minerals
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_wilderness_empire = yes }
+			}
+			biomass = @b1_biomass
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_libra_gestalt_storm_summoning_2"
+	}
+
+	planet_modifier = {
+		planet_amenities_no_happiness_add = 2000
+		job_logistics_drone_add = @building_static_jobs
+		planet_traders_physics_research_produces_add = 0.5
+		planet_traders_energy_upkeep_add = 0.5
+		storm_attraction_field_modifier = @cosmic_storm_minor_storm_attraction
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				OR = {
+					has_environmental_effects = yes
+					has_star_flag = storm_system
+				}
+			}
+		}
+		planet_traders_physics_research_produces_add = 0.5
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_physicists_energy_upkeep_add = 0.5
+	}
+
+	inline_script = {
+		script = cosmic_storms/StormBuildingModifiers
+	}
+
+	on_built = {
+		create_influence_field_if_needed = yes
+	}
+
+	on_enabled = {
+		create_influence_field_if_needed = yes
+	}
+
+	custom_tooltip = "building_cosmic_storm_storm_summoning_theater_tt"
+
+	ai_weight_coefficient = 2
+}
+
+building_libra_gestalt_storm_summoning_2 = {
+	base_buildtime = @b2_time
+	category = amenity
+	can_build = no
+
+	building_sets = {
+		government
+		urban
+		physics
+		trade
+		entertainment
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_libra_storm_deviation }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_ascension_perk = ap_libra_storm_deviation } }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	prerequisites = {
+		"tech_storm_manipulation"
+	}
+
+	show_tech_unlock_if = {
+		has_ascension_perk = ap_libra_storm_deviation
+	}
+
+	resources = {
+		category = planet_buildings_storm_tech
+		cost = {
+			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_wilderness_empire = yes }
+			}
+			biomass = @b2_biomass
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			volatile_motes = @b2_rare_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_libra_gestalt_storm_summoning_3"
+	}
+
+	planet_modifier = {
+		planet_amenities_no_happiness_add = 4000
+		job_logistics_drone_add = @building_static_jobs_very_high
+		planet_traders_physics_research_produces_add = 1
+		planet_traders_energy_upkeep_add = 1
+		storm_attraction_field_modifier = @cosmic_storm_medium_storm_attraction
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				OR = {
+					has_environmental_effects = yes
+					has_star_flag = storm_system
+				}
+			}
+		}
+		planet_traders_physics_research_produces_add = 1
+		planet_physicists_physics_research_produces_add = 1
+		planet_physicists_energy_upkeep_add = 1
+	}
+
+	inline_script = {
+		script = cosmic_storms/StormBuildingModifiers
+	}
+
+	custom_storm_ai_weight = {
+		weight = 0
+		modifier = {
+			add = 10
+			AND = {
+				exists = owner
+				is_colony = yes
+			}
+		}
+	}
+
+	on_built = {
+		create_influence_field_if_needed = yes
+	}
+
+	on_enabled = {
+		create_influence_field_if_needed = yes
+	}
+
+	custom_tooltip = "building_cosmic_storm_storm_holo_theater_tt"
+
+	ai_weight_coefficient = 2
+}
+
+building_libra_gestalt_storm_summoning_3 = {
+	base_buildtime = @b3_time
+	category = amenity
+	can_build = no
+
+	building_sets = {
+		government
+		urban
+		physics
+		trade
+		entertainment
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_libra_storm_deviation }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { not = { has_ascension_perk = ap_libra_storm_deviation } }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	prerequisites = {
+		"tech_advanced_storm_manipulation"
+	}
+
+	show_tech_unlock_if = {
+		has_ascension_perk = ap_libra_storm_deviation
+	}
+
+	resources = {
+		category = planet_buildings_storm_tech
+		cost = {
+			minerals = @b3_minerals
+			volatile_motes = @b3_rare_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_wilderness_empire = yes }
+			}
+			biomass = @b3_biomass
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_no_happiness_add = 6000
+		job_logistics_drone_add = @building_static_jobs_very_high
+		planet_traders_physics_research_produces_add = 1.5
+		planet_traders_energy_upkeep_add = 1.5
+		storm_attraction_field_modifier = @cosmic_storm_severe_storm_attraction
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				OR = {
+					has_environmental_effects = yes
+					has_star_flag = storm_system
+				}
+			}
+		}
+		planet_traders_physics_research_produces_add = 1.5
+		planet_physicists_physics_research_produces_add = 1.5
+		planet_physicists_energy_upkeep_add = 1.5
+	}
+
+	inline_script = {
+		script = cosmic_storms/StormBuildingModifiers
+	}
+
+	custom_storm_ai_weight = {
+		weight = 0
+		modifier = {
+			add = 10
+			exists = owner
+		}
+	}
+
+	on_built = {
+		create_influence_field_if_needed = yes
+	}
+
+	on_enabled = {
+		create_influence_field_if_needed = yes
+	}
+
+	custom_tooltip = "building_cosmic_storm_storm_grand_theater_tt"
+
+	ai_weight_coefficient = 2
+}
+
+# galaxy ambition
+
+building_libra_galaxy_bureaucratic_1 = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = government
+	is_essential = yes
+
+	building_sets = {
+		government
+		urban
+		trade
+		industrial
+		foundry
+		research
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_galaxy_ambition
+			is_variable_set = libra_ea_path
+			check_variable = { which = libra_ea_path value = 2 }
+		}
+	}
+
+	allow = {
+		or = {
+			sapient_pop_amount >= 500
+			has_planetary_ascension_tier >= 1
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_galaxy_ambition }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 5
+		country_edict_fund_add = 5
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.05
+		planet_buildings_produces_mult = 0.05
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = 100
+	}
+	inline_script = {
+		script = "jobs/enforcers_add"
+		AMOUNT = 100
+	}
+
+	upgrades = {
+		"building_libra_galaxy_bureaucratic_2"
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_1"
+	}
+
+	show_tech_unlock_if = {
+		has_ascension_perk = ap_libra_galaxy_ambition
+	}
+
+	ai_resource_production = {
+		unity = 25
+	}
+}
+
+building_libra_galaxy_bureaucratic_2 = {
+	base_buildtime = @b2_time
+	category = government
+	is_essential = yes
+	can_build = no
+
+	building_sets = {
+		government
+		urban
+		trade
+		industrial
+		foundry
+		research
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_galaxy_ambition
+			is_variable_set = libra_ea_path
+			check_variable = { which = libra_ea_path value = 2 }
+		}
+	}
+
+	allow = {
+		or = {
+			sapient_pop_amount >= 1000
+			has_planetary_ascension_tier >= 3
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_galaxy_ambition }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 10
+		country_edict_fund_add = 10
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_buildings_produces_mult = 0.1
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = 200
+	}
+	inline_script = {
+		script = "jobs/enforcers_add"
+		AMOUNT = 200
+	}
+
+	upgrades = {
+		"building_libra_galaxy_bureaucratic_3"
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_2"
+	}
+
+	show_tech_unlock_if = {
+		has_ascension_perk = ap_libra_galaxy_ambition
+	}
+
+	ai_resource_production = {
+		unity = 30
+	}
+}
+
+building_libra_galaxy_bureaucratic_3 = {
+	base_buildtime = @b3_time
+	category = government
+	is_essential = yes
+	can_build = no
+
+	building_sets = {
+		government
+		urban
+		trade
+		industrial
+		foundry
+		research
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_galaxy_ambition
+			is_variable_set = libra_ea_path
+			check_variable = { which = libra_ea_path value = 2 }
+		}
+	}
+
+	allow = {
+		or = {
+			sapient_pop_amount >= 2500
+			has_planetary_ascension_tier >= 5
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_galaxy_ambition }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 20
+		country_edict_fund_add = 20
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.2
+		planet_buildings_produces_mult = 0.2
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = 300
+	}
+	inline_script = {
+		script = "jobs/enforcers_add"
+		AMOUNT = 300
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_3"
+	}
+
+	show_tech_unlock_if = {
+		has_ascension_perk = ap_libra_galaxy_ambition
+	}
+
+	ai_resource_production = {
+		unity = 35
+	}
+}
+
+building_libra_galaxy_bureaucratic_4 = {
+	base_buildtime = @b4_time
+	category = government
+	base_cap_amount = 1
+	empire_limit = 1
+	position_priority = 1
+
+	building_sets = {
+		government
+		urban
+		trade
+		industrial
+		foundry
+		research
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_galaxy_ambition
+			is_variable_set = libra_ea_path
+			check_variable = { which = libra_ea_path value = 2 }
+		}
+	}
+
+	allow = {
+		or = {
+			sapient_pop_amount >= 5000
+			has_planetary_ascension_tier >= 7
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_galaxy_ambition }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			rare_crystals = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			rare_crystals = @b4_rare_upkeep
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				not = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		empire_size_add = -0.1
+		multiplier = value:libra_galaxy_bureaucratic_mult
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		empire_size_add = -0.1
+		multiplier = value:libra_galaxy_bureaucratic_dystopian_mult
+	}
+
+	triggered_desc = {
+		text = building_libra_galaxy_bureaucratic_effect_desc
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = 1000
+	}
+
+	ai_resource_production = {
+		unity = 50
+	}
+	ai_weight_coefficient = 10
+}
+
+#
+
+holding_libra_kings_game = {
+	base_buildtime = @b3_time
+	planet_limit = 1
+	empire_limit = 5
+
+	owner_type = subject_holding
+	category = government
+
+	potential = {
+		exists = owner.overlord
+		owner.overlord = {
+			is_variable_set = libra_ea_path
+			has_ascension_perk = ap_libra_kings_game
+			check_variable = { which = libra_ea_path value = 10 }
+		}
+	}
+
+	allow = {
+		is_capital = yes
+	}
+
+	country_modifier = {
+		empire_size_districts_mult = -0.1
+		empire_size_pops_mult = -0.1
+		empire_size_branch_office_mult = -0.1
+	}
+
+	planet_modifier = {
+		country_produces_mult = 0.15
+		monthly_loyalty = 1.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_overlord_propagandist_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_overlord_propagandist_drone_add = 200
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+
+	ai_resource_production = {
+		trade = 25
+		unity = 25
+	}
+}

@@ -1,0 +1,394 @@
+decision_libra_adventure_finish = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+
+	enactment_time = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = tr_libra_adventure_finish
+		}
+		not = { uses_district_set = habitat }
+	}
+	
+	allow = {
+		not = { has_modifier = libra_adventure_decision_modifier }
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+
+	effect = {
+		add_planet_devastation = 15
+		custom_tooltip = decision_libra_adventure_finish_effect
+		add_modifier = { modifier = libra_adventure_decision_modifier days = 3600 }
+		hidden_effect = {
+			owner = { country_event = { id = libra_fairy.1502 } }
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 3
+			owner = {
+				count_exhibit = {
+					limit = { contains_specimen = yes }
+					count < 7
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = {
+				count_exhibit = {
+					limit = { contains_specimen = yes }
+					count < 14
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			owner = {
+				count_exhibit = {
+					limit = { contains_specimen = yes }
+					count < 21
+				}
+			}
+		}
+	}
+}
+
+decision_libra_frugality_finish = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = tr_libra_frugality_finish
+			not = { has_modifier = libra_frugality_decision_modifier }
+		}
+	}
+	
+	allow = {
+		has_planetary_ascension_tier > 0
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2500
+			influence = 100
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_frugality_finish_effect
+		hidden_effect = {
+			planet_event = { id = libra_fairy.1552 }
+		}
+	}
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 5
+			has_planetary_ascension_tier > 4
+		}
+		modifier = {
+			factor = 5
+			has_planetary_ascension_tier > 7
+		}
+	}
+}
+
+decision_libra_degeneracy_4 = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	enactment_time = 1080
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = tr_libra_degeneracy_4
+			is_variable_set = libra_degeneracy_decision_count
+		}
+	}
+	
+	allow = {
+		free_amenities > 600
+		custom_tooltip = {
+			fail_text = "libra_degeneracy_decision_count_fail"
+			exists = owner
+			owner = {
+				check_variable = {
+					which = libra_degeneracy_decision_count
+					value > 0
+				}
+			}
+		}
+	}
+
+ 	abort_trigger = {
+		free_amenities < 200
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2000
+		}
+	}
+
+	on_queued = {
+		owner = {
+			change_variable = {
+				which = libra_degeneracy_decision_count
+				value = -1
+			}
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = {
+				which = libra_degeneracy_decision_count
+				value = 1
+			}
+		}
+	}
+
+	abort_effect = {
+		owner = {
+			change_variable = {
+				which = libra_degeneracy_decision_count
+				value = 1
+			}
+		}	
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_degeneracy_4_effect
+		hidden_effect = {
+			planet_event = { id = libra_fairy.1580 }
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			add = 4
+			free_amenities > 2000
+		}
+		modifier = {
+			factor = 8
+			free_jobs > 500
+		}
+		modifier = {
+			factor = 10
+			free_jobs > 800
+			free_amenities > 3600
+		}
+	}
+}
+
+decision_libra_drudgery_4 = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+
+	enactment_time = 180
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = tr_libra_drudgery_4
+		}
+		not = { has_modifier = libra_drudgery_decision_modifier }
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = libra_drudgery_decision_modifier
+			clear_on_owner_change = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 10
+			planet_stability > 85
+		}
+		modifier = {
+			add = 40
+			planet_stability > 99
+		}
+	}
+}
+
+decision_libra_drudgery_5 = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = default
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = tr_libra_drudgery_5
+		}
+		has_modifier = libra_drudgery_decision_modifier
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	effect = {
+		remove_modifier = libra_drudgery_decision_modifier
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 100
+			planet_stability < 60
+		}
+	}
+}
+
+decision_libra_cosmoplasty_3 = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+
+	enactment_time = 720
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = tr_libra_cosmoplasty_3
+		}
+		is_artificial = yes
+		not = { has_deposit = d_libra_liber_cosmoplasty_tradition }
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 1000
+			influence = @b2_rare_cost
+		}
+	}
+
+	effect = {
+		add_deposit = d_libra_liber_cosmoplasty_tradition
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 100
+			free_district_slots < 2
+		}
+	}
+}
+
+decision_libra_bastion_1_a = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+
+	enactment_time = 180
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = tr_libra_bastion_1
+		}
+		not = { has_deposit = d_libra_bastion_tradition }
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	effect = {
+		add_deposit = d_libra_bastion_tradition
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 20
+			or = {
+				is_in_frontier_space = yes
+				solar_system = { is_bottleneck_system = yes }
+			}
+			owner = {
+				or = {
+					is_at_war = yes
+					has_crisis = yes
+				}
+			}
+		}
+	}
+}
+
+decision_libra_bastion_1_b = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = default
+
+	enactment_time = 360
+
+	potential = {
+		exists = owner
+		has_deposit = d_libra_bastion_tradition
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					not = { has_tradition = tr_libra_bastion_1 }
+				}
+			}
+			energy = 1000
+		}
+	}
+
+	effect = {
+		remove_deposit = d_libra_bastion_tradition
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 100
+			owner = {
+				is_at_war = no
+				has_crisis = no
+			}
+		}
+	}
+}

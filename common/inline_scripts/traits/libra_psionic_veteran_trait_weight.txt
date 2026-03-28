@@ -1,0 +1,28 @@
+modifier = {
+	factor = @libra_psionic_veteran_trait_extra_weight
+	or = {
+		has_base_skill > 5
+		has_total_skill > 6
+	}
+}
+modifier = {
+	factor = 0.5
+	check_modifier_value = {
+		modifier = leader_trait_selection_options_add
+		value > 5
+	}
+}
+modifier = {
+	factor = 0.5
+	check_modifier_value = {
+		modifier = leader_trait_selection_options_add
+		value > 9
+	}
+}
+modifier = {
+	factor = 0
+	check_modifier_value = {
+		modifier = leader_trait_selection_options_add
+		value > 14
+	}
+}

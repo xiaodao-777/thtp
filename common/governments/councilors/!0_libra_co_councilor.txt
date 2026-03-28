@@ -1,0 +1,618 @@
+councilor_libra_praises_to_life = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	possible = {
+		is_gestalt = no
+		has_origin = origin_libra_praises_to_life
+	}
+	modifier = {
+		pop_factions_produces_mult = 0.01
+		species_leader_exp_gain = 0.02
+		council_agenda_progress_speed = 0.02
+	}
+	icon = "GFX_icon_councilor_libra_praises_to_life"
+	custom_unlock_title = "councilor_libra_praises_to_life_unlock_title"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}
+
+councilor_libra_psalm_of_waves = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	possible = {
+		is_gestalt = no
+		has_origin = origin_libra_psalm_of_waves
+	}
+	modifier = {
+		logistic_growth_mult = 0.02
+		planet_pops_upkeep_mult = -0.01
+	}
+	icon = "GFX_icon_councilor_libra_psalm_of_waves"
+	custom_unlock_title = "councilor_libra_psalm_of_waves_unlock_title"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}
+
+councilor_libra_crimson_nights = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			has_trait = leader_trait_libra_crimson_nights_vampire_commander
+			has_trait = leader_trait_libra_crimson_nights_vampire_official
+			has_trait = leader_trait_libra_crimson_nights_vampire_scientist
+			has_trait = leader_trait_libra_crimson_nights_ancestor_commander
+			has_trait = leader_trait_libra_crimson_nights_ancestor_official
+			has_trait = leader_trait_libra_crimson_nights_ancestor_scientist
+		}
+	}
+	possible = {
+		is_gestalt = no
+		has_origin = origin_libra_crimson_nights
+	}
+	modifier = {
+		planet_crime_add = -2
+		leaders_upkeep_mult = -0.02
+		pop_citizen_happiness = 0.01
+	}
+	icon = "GFX_icon_councilor_libra_crimson_nights"
+	custom_unlock_title = "councilor_libra_crimson_nights_unlock_title"
+	conditional_tooltip = "councilor_libra_crimson_nights_conditional_tooltip"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}
+
+councilor_libra_dragonborn = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	possible = {
+		is_gestalt = no
+		has_origin = origin_libra_dragonborn
+	}
+	modifier = {
+		empire_size_penalty_mult = -0.01
+		species_leader_exp_gain = 0.02
+	}
+	icon = "GFX_icon_councilor_libra_dragonborn"
+	custom_unlock_title = "councilor_libra_dragonborn_unlock_title"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}
+
+#
+
+councilor_libra_interstellar_port_a = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+		OR = {
+			has_trait = leader_trait_libra_interstellar_port_commander
+			has_trait = leader_trait_libra_interstellar_port_official
+			has_trait = leader_trait_libra_interstellar_port_scientist
+		}
+	}
+	conditional_tooltip = "councilor_libra_interstellar_port_conditional_tooltip"
+	civic = civic_libra_interstellar_port_a
+	modifier = {
+		pop_cat_ruler_happiness = 0.01
+		pop_citizen_happiness = 0.01
+		pop_ethics_shift_speed_mult = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_interstellar_port_b = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+		OR = {
+			has_trait = leader_trait_libra_interstellar_port_commander
+			has_trait = leader_trait_libra_interstellar_port_official
+			has_trait = leader_trait_libra_interstellar_port_scientist
+		}
+	}
+	conditional_tooltip = "councilor_libra_interstellar_port_conditional_tooltip"
+	civic = civic_libra_interstellar_port_b
+	modifier = {
+		planet_traders_produces_mult = 0.02
+		planet_soldiers_trade_produces_add = 0.2
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}
+
+councilor_libra_interstellar_port_c = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+		OR = {
+			has_trait = leader_trait_libra_interstellar_port_commander
+			has_trait = leader_trait_libra_interstellar_port_official
+			has_trait = leader_trait_libra_interstellar_port_scientist
+		}
+	}
+	conditional_tooltip = "councilor_libra_interstellar_port_conditional_tooltip"
+	civic = civic_libra_interstellar_port_c
+	modifier = {
+		country_subject_trust_cap_add = 10
+		monthly_loyalty_from_subjects = 0.2
+		pop_libra_outland_distributor_bonus_workforce_mult = 0.04
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_interstellar_port_d = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+		OR = {
+			has_trait = leader_trait_libra_interstellar_port_commander
+			has_trait = leader_trait_libra_interstellar_port_official
+			has_trait = leader_trait_libra_interstellar_port_scientist
+		}
+	}
+	conditional_tooltip = "councilor_libra_interstellar_port_conditional_tooltip"
+	civic = civic_libra_interstellar_port_d
+	modifier = {
+		planet_artisans_produces_mult = 0.02
+		pop_libra_corporate_sentry_bonus_workforce_mult = 0.03
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_interstellar_port_e = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+		OR = {
+			has_trait = leader_trait_libra_interstellar_port_commander
+			has_trait = leader_trait_libra_interstellar_port_official
+			has_trait = leader_trait_libra_interstellar_port_scientist
+		}
+	}
+	conditional_tooltip = "councilor_libra_interstellar_port_conditional_tooltip"
+	civic = civic_libra_interstellar_port_e
+	modifier = {
+		all_technology_research_speed = 0.02
+		envoy_improve_relations_mult = 0.1
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_interstellar_port_f = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+		OR = {
+			has_trait = leader_trait_libra_interstellar_port_commander
+			has_trait = leader_trait_libra_interstellar_port_official
+			has_trait = leader_trait_libra_interstellar_port_scientist
+		}
+	}
+	conditional_tooltip = "councilor_libra_interstellar_port_conditional_tooltip"
+	civic = civic_libra_interstellar_port_f
+	modifier = {
+		branch_office_value_mult = 0.01
+		commercial_pact_mult = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 2
+}
+
+#
+
+councilor_libra_may_storm_spiritualist_a = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_spiritualist_a
+	modifier = {
+		faction_approval = 0.02
+		country_unity_produces_mult = 0.03
+		planet_crime_floor_add = -3
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 2
+}
+
+councilor_libra_may_storm_spiritualist_b = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_spiritualist_b
+	modifier = {
+		planet_structures_cost_mult = -0.01
+		planet_structures_upkeep_mult = -0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_may_storm_materialist_a = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_materialist_a
+	modifier = {
+		country_alloys_produces_mult = 0.015
+		country_consumer_goods_produces_mult = 0.015
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_may_storm_materialist_b = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_materialist_b
+	modifier = {
+		planet_bureaucrats_produces_mult = 0.02
+		planet_bureaucrats_upkeep_mult = -0.01
+		planet_researchers_produces_mult = 0.02
+		planet_researchers_upkeep_mult = -0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_may_storm_militarist_a = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_militarist_a
+	modifier = {
+		army_damage_mult = 0.02
+		army_morale_damage_mult = 0.02
+		ship_weapon_damage = 0.02
+		ship_fire_rate_mult = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_may_storm_militarist_b = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_militarist_b
+	modifier = {
+		armies_cost_mult = -0.005
+		planet_army_build_speed_mult = 0.02
+		starbase_shipyard_build_cost_mult = -0.005
+		starbase_shipyard_build_speed_mult = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}
+
+councilor_libra_may_storm_pacifist_a = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_pacifist_a
+	modifier = {
+		planet_housing_add = 100
+		ship_colonizer_cost_mult = -0.03
+		planet_colony_development_speed_mult = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 2
+}
+
+councilor_libra_may_storm_pacifist_b = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_pacifist_b
+	modifier = {
+		planet_stability_add = 1
+		planet_amenities_add = 200
+		species_leader_exp_gain = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_may_storm_xenophobe_a = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_xenophobe_a
+	modifier = {
+		ship_armor_hardening_add = 0.02
+		ship_shield_hardening_add = 0.02
+		army_defense_damage_mult = 0.1
+		army_defense_morale_mult = 0.1
+		ship_friendly_territory_armor_mult = 0.05
+		ship_friendly_territory_shield_mult = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 1
+}
+
+councilor_libra_may_storm_xenophobe_b = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_xenophobe_b
+	modifier = {
+		planet_jobs_specialist_produces_mult = 0.01
+		planet_jobs_worker_produces_mult = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}
+
+councilor_libra_may_storm_xenophile_a = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_xenophile_a
+	modifier = {
+		monthly_loyalty_from_subjects = 0.3
+		country_naval_capacity_contribution_from_subjects_mult = 0.005
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 2
+}
+
+councilor_libra_may_storm_xenophile_b = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+	civic = civic_libra_may_storm_xenophile_b
+	modifier = {
+		diplomacy_upkeep_mult = -0.02
+		diplo_action_acceptance_add = 2
+		country_trust_cap_add = 5
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 2
+}
+
+#
+
+councilor_libra_extreme_iteration = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+		species = { is_robotic = yes }
+	}
+	possible = {
+		is_gestalt = no
+		has_origin = origin_libra_extreme_iteration
+	}
+	modifier = {
+		planet_pops_robotics_upkeep_mult = -0.01
+		pop_amenities_usage_robotic_mult = -0.01
+	}
+	icon = "GFX_icon_councilor_libra_extreme_iteration"
+	custom_unlock_title = "councilor_libra_extreme_iteration_unlock_title"
+	conditional_tooltip = "councilor_libra_extreme_iteration_conditional_tooltip"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}
+
+#
+
+councilor_libra_primus_pilus = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			and = {
+				has_base_skill > 7
+				leader_class = official
+			}
+			and = {
+				has_base_skill > 7
+				leader_class = scientist
+			}
+		}
+	}
+	possible = {
+		is_gestalt = no
+		has_origin = origin_libra_centurion
+	}
+	modifier = {
+		country_alloys_produces_mult = 0.02
+		country_war_exhaustion_mult = -0.02
+		country_power_projection_influence_produces_mult = 0.02
+	}
+	icon = "GFX_icon_councilor_libra_primus_pilus"
+	custom_unlock_title = "councilor_libra_centurion_unlock_title"
+	conditional_tooltip = "councilor_libra_primus_pilus_conditional_tooltip"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}
+
+councilor_libra_praetorian_commander = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			and = {
+				has_ethic = ethic_militarist
+				leader_class = official
+			}
+			and = {
+				has_ethic = ethic_militarist
+				leader_class = scientist
+			}
+		}
+	}
+	possible = {
+		is_gestalt = no
+		has_origin = origin_libra_centurion
+	}
+	modifier = {
+		all_technology_research_speed = 0.02
+		army_damage_taken_mult = -0.02
+		planet_soldiers_consumer_goods_produces_add = 0.2
+	}
+	icon = "GFX_icon_councilor_libra_praetorian_commander"
+	custom_unlock_title = "councilor_libra_centurion_unlock_title"
+	conditional_tooltip = "councilor_libra_praetorian_commander_conditional_tooltip"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_priority = 0
+}

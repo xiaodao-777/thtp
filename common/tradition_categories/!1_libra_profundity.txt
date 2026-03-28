@@ -1,0 +1,28 @@
+tradition_libra_profundity = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_profundity_adopt } }
+		text = tradition_libra_profundity_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_profundity_adopt }
+		text = tradition_libra_profundity_adopt_desc
+	}
+	tree_template = "tree_12_11_11"
+	adoption_bonus = "tr_libra_profundity_adopt"
+	finish_bonus = "tr_libra_profundity_finish"
+	traditions = {
+		"tr_libra_profundity_1"
+		"tr_libra_profundity_2"
+		"tr_libra_profundity_3"
+		"tr_libra_profundity_4"
+		"tr_libra_profundity_5"
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 3
+			libra_ai_preferences_technology = yes
+		}
+	}
+}

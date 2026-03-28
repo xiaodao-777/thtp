@@ -1,0 +1,1522 @@
+# #############
+# Crimson Nights
+#############
+
+libra_vampire_noble = {
+	category = ruler
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_crimson_nights
+		}
+	}
+
+	tags = { unity amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		or = {
+			has_trait = trait_libra_crimson_nights_vampire
+			has_trait = trait_libra_crimson_nights_ancestor
+		}
+	}
+
+	resources = {
+		category = planet_nobles
+		produces = {
+			unity = 500
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_tradition = tr_libra_crimson_vampire_3
+					or = {
+						has_country_flag = libra_crimson_vampire_war
+						has_tradition = tr_libra_crimson_ancestor_3
+					}
+				}
+			}
+			sr_dark_matter = 100
+		}
+		upkeep = {
+			energy = 500
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_libra_crimson_ancestor_1 }
+		}
+		country_naval_cap_add = 200
+		mult = value:councilor_level|TYPE|councilor_libra_crimson_nights|
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = 2
+	}
+
+	inline_script = "jobs/automodding_priority_charisma"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_vampire_servant = {
+	category = specialist
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_crimson_nights
+		}
+	}
+
+	tags = { crime amenities research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		or = {
+			has_trait = trait_libra_crimson_nights_vampire
+			has_trait = trait_libra_crimson_nights_ancestor
+		}
+	}
+
+	resources = {
+		category = planet_libra_vampires
+		produces = {
+			physics_research = 2
+			society_research = 4
+			engineering_research = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_tradition = tr_libra_crimson_ancestor_1 }
+			}
+			physics_research = 0.2
+			society_research = 0.2
+			engineering_research = 0.2
+			mult = value:councilor_level|TYPE|councilor_libra_crimson_nights|
+		}
+		upkeep = {
+			food = 6
+		}
+	}
+
+	planet_modifier = {
+		planet_crime_add = -15
+	}
+
+	triggered_planet_modifier = {
+		planet_amenities_add = 500
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_research_modifier|JOB|libra_vampire_servant|
+	}
+
+	#inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_vampire_queen = {
+	category = ruler
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_libra_crimson_nights
+		}
+	}
+
+	tags = { unity amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		or = {
+			has_trait = trait_libra_crimson_nights_vampire
+			has_trait = trait_libra_crimson_nights_ancestor
+		}
+	}
+
+	resources = {
+		category = planet_nobles
+		produces = {
+			unity = 500
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_tradition = tr_libra_crimson_vampire_3
+					or = {
+						has_country_flag = libra_crimson_vampire_war
+						has_tradition = tr_libra_crimson_ancestor_3
+					}
+				}
+			}
+			sr_dark_matter = 100
+		}
+		upkeep = {
+			energy = 500
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_libra_crimson_ancestor_1 }
+		}
+		country_naval_cap_add = 200
+		mult = value:councilor_level|TYPE|councilor_gestalt_regulatory|
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = 2
+	}
+
+	inline_script = "jobs/automodding_priority_charisma"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_vampire_drone = {
+	category = complex_drone
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_libra_crimson_nights
+		}
+	}
+
+	tags = { crime amenities research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		or = {
+			has_trait = trait_libra_crimson_nights_vampire
+			has_trait = trait_libra_crimson_nights_ancestor
+		}
+	}
+
+	resources = {
+		category = planet_libra_vampires
+		produces = {
+			physics_research = 2
+			society_research = 4
+			engineering_research = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_tradition = tr_libra_crimson_ancestor_1 }
+			}
+			physics_research = 0.2
+			society_research = 0.2
+			engineering_research = 0.2
+			mult = value:councilor_level|TYPE|councilor_gestalt_regulatory|
+		}
+		upkeep = {
+			food = 6
+		}
+	}
+
+	planet_modifier = {
+		planet_crime_no_happiness_add = -15
+	}
+
+	triggered_planet_modifier = {
+		planet_amenities_no_happiness_add = 500
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|libra_vampire_drone|
+	}
+
+	#inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+# #############
+# Interstellar Port
+#############
+
+libra_outland_distributor = {
+	category = ruler
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_interstellar_exchange
+		}
+	}
+
+	tags = { unity trade amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+
+	resources = {
+		category = planet_libra_outland_distributor
+		produces = {
+			unity = 4
+			trade = 12
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_libra_interstellar_port_f }
+			}
+			unity = 2
+			trade = 4
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_libra_interstellar_port_e }
+			}
+			physics_research = 4
+			society_research = 4
+			engineering_research = 4
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_amenities_add = 800
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:job_weights_multiple_resources_modifier|JOB|libra_outland_distributor|RESOURCE1|unity|WEIGHT1|0.3|RESOURCE2|trade|WEIGHT2|0.7|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	inline_script = "jobs/automodding_priority_charisma"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_corporate_sentry = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_libra_interstellar_port_office
+		}
+	}
+
+	tags = { alloys trade soldier }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_libra_corporate_sentry
+		produces = {
+			alloys = 2
+			trade = 8
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_libra_interstellar_port_b }
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_libra_interstellar_port_e }
+			}
+			physics_research = 2
+			society_research = 2
+			engineering_research = 2
+		}
+		produces = {
+			trigger = {
+				exists = branch_office_owner
+				branch_office_owner = { has_civic = civic_libra_interstellar_port_b }
+			}
+			alloys = -1
+			trade = 16
+		}
+		upkeep = {
+			energy = 8
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_multiple_resources_modifier|JOB|libra_corporate_sentry|RESOURCE1|alloys|WEIGHT1|0.3|RESOURCE2|trade|WEIGHT2|0.7|
+	}
+
+	#inline_script = "jobs/automodding_priority_trade"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_overlord_executive = {
+	category = specialist
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_propaganda_office
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_overlord_propagandists
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_propagandists
+	}
+
+	country_modifier = {
+		planet_jobs_trade_produces_mult = 0.1
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+# #############
+# Anti-entropy Instruction
+#############
+
+libra_phantom_mechanist = {
+	category = specialist
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_antientropy_instruction
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		has_trait = trait_libra_antientropy_instruction_0
+	}
+
+	tags = { research trade amenities }
+
+	resources = {
+		category = planet_jobs_specialist
+		produces = {
+			physics_research = 2
+			society_research = 2
+			engineering_research = 2
+			trade = 6
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_libra_antientropy_facility_1 }
+			}
+			physics_research = 1
+			society_research = 1
+			engineering_research = 1
+		}
+		upkeep = {
+			energy = 8
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 3
+	}
+
+	triggered_planet_modifier = {
+		planet_amenities_add = 300
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:job_weights_research_modifier|JOB|libra_phantom_mechanist|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	#inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_phantom_unit = {
+	category = complex_drone
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_libra_antientropy_instruction
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		has_trait = trait_libra_antientropy_instruction_0
+	}
+
+	tags = { research trade amenities }
+
+	resources = {
+		category = planet_jobs_specialist
+		produces = {
+			physics_research = 2
+			society_research = 2
+			engineering_research = 2
+			trade = 6
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_libra_antientropy_facility_1 }
+			}
+			physics_research = 1
+			society_research = 1
+			engineering_research = 1
+		}
+		upkeep = {
+			energy = 8
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 3
+	}
+
+	triggered_planet_modifier = {
+		planet_amenities_no_happiness_add = 300
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @synapse_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|libra_phantom_unit|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	#inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+# #############
+# May Storm
+#############
+
+libra_peoples_deputy = {
+	category = ruler
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_may_storm
+		}
+	}
+
+	tags = { food soldier consumer_goods research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+
+	resources = {
+		category = planet_libra_peoples_deputies
+		produces = {
+			food = 3
+			consumer_goods = 2
+			society_research = 2
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 2
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = 2
+	}
+
+	inline_script = "jobs/automodding_priority_charisma"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_industry_commissar = {
+	category = ruler
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_may_storm
+		}
+	}
+
+	tags = { minerals alloys amenities research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+
+	resources = {
+		category = planet_libra_industry_commissars
+		produces = {
+			minerals = 3
+			alloys = 2
+			engineering_research = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_amenities_no_happiness_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = 2
+	}
+
+	inline_script = "jobs/automodding_priority_charisma"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_shock_worker = {
+	category = ruler
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_may_storm
+		}
+	}
+
+	tags = { energy unity amenities research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+
+	resources = {
+		category = planet_libra_shock_workers
+		produces = {
+			energy = 3
+			trade = 2
+			unity = 2
+			physics_research = 2
+		}
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = 2
+	}
+
+	inline_script = "jobs/automodding_priority_charisma"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+# #############
+# Psionic
+#############
+
+libra_psychic = {
+	category = ruler
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_psionic_destiny_sanctum
+		}
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = { has_ascension_perk = ap_libra_liber_genesis }
+				exists = planet
+				planet = { has_building = building_libra_psionic_destiny_sanctum }
+			}
+			name = libra_destiny_mentor
+			icon = libra_destiny_mentor
+			desc = job_libra_destiny_mentor_desc
+			building_icon = building_libra_psionic_destiny_sanctum
+			weight = 3
+		}
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = { has_ascension_perk = ap_libra_liber_genesis }
+				exists = planet
+				planet = { has_building = building_libra_psionic_favour_sanctum }
+			}
+			name = libra_grace_apostle
+			icon = libra_grace_apostle
+			desc = job_libra_grace_apostle_desc
+			building_icon = building_libra_psionic_favour_sanctum
+			weight = 4
+		}
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = { has_ascension_perk = ap_libra_liber_genesis }
+				exists = planet
+				planet = { has_building = building_libra_psionic_reflection_sanctum }
+			}
+			name = libra_apocalypse_doctor
+			icon = libra_apocalypse_doctor
+			desc = job_libra_apocalypse_doctor_desc
+			building_icon = building_libra_psionic_reflection_sanctum
+			weight = 5
+		}
+	}
+
+	tags = { telepath psionic_aura amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+
+	possible = {
+		or = {
+			has_trait = trait_psionic
+			has_trait = trait_robot_psionic
+		}
+		nor = {
+			has_trait = trait_erudite
+			has_trait = trait_cybernetic
+			has_trait = trait_limited_cybernetic
+			has_trait = trait_robot_digital_1
+			has_trait = trait_robot_digital_2
+			has_trait = trait_robot_monoform
+			has_trait = trait_robot_ceaseless_symmetric_annihilation_engine
+		}
+	}
+
+	resources = {
+		category = planet_libra_psychics
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_productive_produces_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_add = 300
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = libra_is_biological_empire
+			}
+		}
+		fake_pop_growth_mod = 2
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = libra_is_biological_empire
+			}
+		}
+		bonus_pop_growth = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = libra_is_machine_empire
+			}
+		}
+		planet_pop_assembly_add = 1
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_liber_genesis }
+			exists = planet
+			planet = { has_building = building_libra_psionic_destiny_sanctum }
+		}
+		species_leader_exp_gain = 0.05
+		psionic_aura_intensity_mult = 0.05
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_liber_genesis }
+			exists = planet
+			planet = { has_building = building_libra_psionic_favour_sanctum }
+		}
+		planet_pop_assembly_mult = 0.05
+		bonus_pop_growth_mult = 0.05
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_liber_genesis }
+			exists = planet
+			planet = { has_building = building_libra_psionic_reflection_sanctum }
+		}
+		all_technology_research_speed = 0.05
+		planet_pops_produces_mult = 0.05
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = 1.5
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_psychic_drone = {
+	category = complex_drone
+	can_be_automated = no
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_libra_psionic_favour_sanctum
+		}
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = { is_machine_empire = yes }
+			}
+			name = libra_psychic_unit
+			icon = libra_psychic_unit
+			desc = job_libra_psychic_unit_desc
+			building_icon = building_libra_psionic_reflection_sanctum
+			weight = 2
+		}
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = { has_ascension_perk = ap_libra_liber_genesis }
+				exists = planet
+				planet = { has_building = building_libra_psionic_destiny_sanctum }
+			}
+			name = libra_destiny_mentor
+			icon = libra_destiny_mentor
+			desc = job_libra_destiny_mentor_desc
+			building_icon = building_libra_psionic_destiny_sanctum
+			weight = 3
+		}
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = { has_ascension_perk = ap_libra_liber_genesis }
+				exists = planet
+				planet = { has_building = building_libra_psionic_favour_sanctum }
+			}
+			name = libra_grace_apostle
+			icon = libra_grace_apostle
+			desc = job_libra_grace_apostle_desc
+			building_icon = building_libra_psionic_favour_sanctum
+			weight = 4
+		}
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = { has_ascension_perk = ap_libra_liber_genesis }
+				exists = planet
+				planet = { has_building = building_libra_psionic_reflection_sanctum }
+			}
+			name = libra_apocalypse_doctor
+			icon = libra_apocalypse_doctor
+			desc = job_libra_apocalypse_doctor_desc
+			building_icon = building_libra_psionic_reflection_sanctum
+			weight = 5
+		}
+	}
+
+	tags = { telepath psionic_aura amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+		or = {
+			has_trait = trait_psionic
+			has_trait = trait_robot_psionic
+		}
+		nor = {
+			has_trait = trait_erudite
+			has_trait = trait_cybernetic
+			has_trait = trait_limited_cybernetic
+			has_trait = trait_robot_digital_1
+			has_trait = trait_robot_digital_2
+			has_trait = trait_robot_monoform
+			has_trait = trait_robot_ceaseless_symmetric_annihilation_engine
+		}
+	}
+
+	resources = {
+		category = planet_libra_psychics
+		upkeep = {
+			energy = 4
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_productive_produces_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_no_happiness_add = 300
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = libra_is_biological_empire
+			}
+		}
+		fake_pop_growth_mod = 1
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = libra_is_biological_empire
+			}
+		}
+		bonus_pop_growth = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = libra_is_machine_empire
+			}
+		}
+		planet_pop_assembly_add = 1
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_liber_genesis }
+			exists = planet
+			planet = { has_building = building_libra_psionic_destiny_sanctum }
+		}
+		species_leader_exp_gain = 0.05
+		psionic_aura_intensity_mult = 0.05
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_liber_genesis }
+			exists = planet
+			planet = { has_building = building_libra_psionic_favour_sanctum }
+		}
+		planet_pop_assembly_mult = 0.05
+		bonus_pop_growth_mult = 0.05
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_libra_liber_genesis }
+			exists = planet
+			planet = { has_building = building_libra_psionic_reflection_sanctum }
+		}
+		all_technology_research_speed = 0.05
+		planet_pops_produces_mult = 0.05
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = 1.5
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_psychic_unit = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_libra_psionic_reflection_sanctum
+		}
+	}
+
+	possible = {
+		always = no
+	}
+}
+
+libra_destiny_mentor = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_psionic_destiny_sanctum
+		}
+	}
+
+	possible = {
+		always = no
+	}
+}
+
+libra_grace_apostle = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_psionic_favour_sanctum
+		}
+	}
+
+	possible = {
+		always = no
+	}
+}
+
+libra_apocalypse_doctor = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_libra_psionic_reflection_sanctum
+		}
+	}
+
+	possible = {
+		always = no
+	}
+}
+
+libra_harmonize_envoy = {
+	category = worker
+	can_be_automated = no
+	exempt_from_ai_amenity_prioritization = yes
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_libra_heavenly_throne_2
+		}
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_variable_set = libra_aa_path
+					has_edict = libra_liber_genesis_0
+					has_ascension_perk = ap_libra_liber_genesis
+				}
+			}
+			name = libra_creature_servant
+			icon = libra_creature_servant
+			desc = job_libra_creature_servant_desc
+			weight = 2
+		}
+	}
+
+	tags = { amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	possible = {
+		or = {
+			has_trait = trait_psionic
+			has_trait = trait_robot_psionic
+		}
+	}
+
+	resources = {
+		category = planet_libra_harmonizers
+		produces = {
+			energy = 2
+			food = 2
+			minerals = 2
+			trade = 2
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_add = 400
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				has_edict = libra_liber_genesis_0
+				check_variable = { which = libra_aa_path value = 91 }
+				has_country_flag = libra_is_biological_empire
+			}
+		}
+		fake_pop_growth_mod = 0.5
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				has_edict = libra_liber_genesis_0
+				check_variable = { which = libra_aa_path value = 91 }
+				has_country_flag = libra_is_biological_empire
+			}
+		}
+		bonus_pop_growth = 0.5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				has_edict = libra_liber_genesis_0
+				check_variable = { which = libra_aa_path value = 91 }
+				has_country_flag = libra_is_machine_empire
+			}
+		}
+		planet_pop_assembly_add = 0.5
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		mult = 2
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+libra_creature_servant = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_libra_psionic_reflection_sanctum
+		}
+	}
+
+	possible = {
+		always = no
+	}
+}
+
+libra_harmonize_drone = {
+	category = simple_drone
+	can_be_automated = no
+	exempt_from_ai_amenity_prioritization = yes
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_libra_heavenly_throne_2
+		}
+		swap_type = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_variable_set = libra_aa_path
+					has_edict = libra_liber_genesis_0
+					has_ascension_perk = ap_libra_liber_genesis
+				}
+			}
+			name = libra_creature_servant
+			icon = libra_creature_servant
+			desc = job_libra_creature_servant_desc
+			weight = 2
+		}
+	}
+
+	tags = { amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	possible = {
+		or = {
+			has_trait = trait_psionic
+			has_trait = trait_robot_psionic
+		}
+	}
+
+	resources = {
+		category = planet_libra_harmonizers
+		produces = {
+			energy = 2
+			food = 2
+			minerals = 2
+			trade = 2
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_no_happiness_add = 400
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				has_edict = libra_liber_genesis_0
+				check_variable = { which = libra_aa_path value = 91 }
+				has_country_flag = libra_is_biological_empire
+			}
+		}
+		fake_pop_growth_mod = 0.5
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				has_edict = libra_liber_genesis_0
+				check_variable = { which = libra_aa_path value = 91 }
+				has_country_flag = libra_is_biological_empire
+			}
+		}
+		bonus_pop_growth = 0.5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_variable_set = libra_aa_path
+				has_edict = libra_liber_genesis_0
+				check_variable = { which = libra_aa_path value = 91 }
+				has_country_flag = libra_is_machine_empire
+			}
+		}
+		planet_pop_assembly_add = 0.5
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		mult = 2
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}

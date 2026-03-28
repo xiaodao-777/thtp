@@ -1,0 +1,93 @@
+tr_libra_profundity_adopt = {
+	unlocks_agenda = agenda_libra_profundity
+	on_enabled = {
+		change_variable = {
+			which = libra_profundity_1
+			value = 0
+		}
+		change_variable = {
+			which = libra_profundity_2
+			value = 3
+		}
+		country_event = { id = libra_fairy.1630 }
+	}
+	custom_tooltip = tr_libra_profundity_adopt_desc
+	possible = {
+		has_technology = tech_basic_science_lab_3
+	}
+}
+
+tr_libra_profundity_finish = {
+	modifier = {
+		country_trust_cap_add = 50
+		ascension_perks_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_profundity_finish_desc
+}
+
+tr_libra_profundity_1 = {
+	modifier = {
+		country_resource_max_add = 50000
+	}
+	custom_tooltip_with_modifiers =tr_libra_profundity_1_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_profundity_2 = {
+	possible = {
+		has_tradition = tr_libra_profundity_1
+	}
+	modifier = {
+		country_leader_pool_size = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_profundity_2_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_profundity_3 = {
+	possible = {
+		has_tradition = tr_libra_profundity_1
+	}
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_profundity_3_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_profundity_4 = {
+	possible = {
+		has_tradition = tr_libra_profundity_2
+	}
+	modifier = {
+		country_traditions_influence_produces_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_profundity_4_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_profundity_5 = {
+	possible = {
+		has_tradition = tr_libra_profundity_3
+	}
+	modifier = {
+		envoys_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_profundity_5_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}

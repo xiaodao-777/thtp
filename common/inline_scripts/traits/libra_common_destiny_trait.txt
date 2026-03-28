@@ -1,0 +1,43 @@
+leader_trait_type = destiny
+leader_trait_rarity = destiny
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = default
+	RARITY = paragon
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_default"
+	}
+	layer = {
+		icon = "GFX_trait_glow_destiny"
+		color = "trait_rarity_destiny"
+	}
+	layer = {
+		icon = "GFX_trait_frame_destiny"
+		color = "trait_rarity_destiny"
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+}
+sorting_priority = @trait_sorting_priority_paragon_$COUNCIL$_none
+
+
+selectable_weight = {
+	weight = @libra_common_destiny_trait_weight
+	modifier = {
+		factor = 0
+		has_base_skill > 10
+	}
+}
+ai_weight = {
+	factor = 2
+}

@@ -1,0 +1,107 @@
+message_type = {
+	key = "LIBRA_TRANSCENDENT_COVENANT_EFFECT"
+	icon = "GFX_message_libra_transcendent_covenant"
+	icon_frame = 1
+
+	name = "LIBRA_TRANSCENDENT_COVENANT_EFFECT_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+
+	category = government
+	hidden_in_message_settings = yes
+}
+
+message_type = {
+	key = "LIBRA_CEREMONY_TRADITION_EFFECT"
+	icon = "GFX_message_libra_ceremony"
+	icon_frame = 1
+
+	name = "LIBRA_CEREMONY_TRADITION_EFFECT_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+
+	category = government
+	hidden_in_message_settings = yes
+}
+
+message_type = {
+	key = "LIBRA_FRUGALITY_TRADITION_EFFECT"
+	icon = "GFX_message_libra_frugality"
+	icon_frame = 2
+
+	name = "LIBRA_FRUGALITY_TRADITION_EFFECT_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_yellow"
+
+	category = economy
+	hidden_in_message_settings = yes
+}
+
+#
+
+message_type = {
+	key = "LIBRA_ASTRAL_INSIGHT"
+	icon = "GFX_message_libra_astral_blade"
+	icon_frame = 1
+
+	name = "LIBRA_ASTRAL_INSIGHT_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+
+	category = science
+	hidden_in_message_settings = yes
+}
+
+#
+
+message_type = {
+	key = "LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_1"
+	icon = "GFX_message_conditional_effect_lost"
+	icon_frame = 1
+
+	name = "LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_1_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+
+	category = government
+	hidden_in_message_settings = yes
+}
+
+message_type = {
+	key = "LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_2"
+	icon = "GFX_message_conditional_effect_lost"
+	icon_frame = 1
+
+	name = "LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_2_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+
+	category = government
+	hidden_in_message_settings = yes
+}
+
+message_type = {
+	key = "LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_3"
+	icon = "GFX_message_conditional_effect_lost"
+	icon_frame = 1
+
+	name = "LIBRA_POLEMICS_MACHANISM_ORIGIN_EFFECT_3_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+
+	category = government
+	hidden_in_message_settings = yes
+}
+
+message_type = {
+	key = "LIBRA_CENTURION_ORIGIN_EFFECT"
+	icon = "GFX_message_libra_centurion"
+	icon_frame = 1
+
+	name = "LIBRA_CENTURION_ORIGIN_EFFECT_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+
+	category = government
+	hidden_in_message_settings = yes
+}

@@ -1,0 +1,228 @@
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_PRAISES_TO_LIFE"
+	trigger = {
+		has_origin = origin_libra_praises_to_life
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_PSALM_OF_WAVES"
+	trigger = {
+		has_origin = origin_libra_psalm_of_waves
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_ULTIMATE_MARKET"
+	trigger = {
+		has_origin = origin_libra_ultimate_market
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_ENLIGHTENMENT_WISDOM"
+	trigger = {
+		has_origin = origin_libra_enlightenment_wisdom
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_CRIMSON_NIGHTS"
+	trigger = {
+		has_origin = origin_libra_crimson_nights
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_SHADOW_CONSCIOUSNESS"
+	trigger = {
+		has_origin = origin_libra_shadow_consciousness
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_DRAGONBORN"
+	trigger = {
+		has_origin = origin_libra_dragonborn
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_PARADOX_LOOP"
+	trigger = {
+		has_origin = origin_libra_paradox_loop
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_PARADISE_LOSE"
+	trigger = {
+		has_origin = origin_libra_paradise_lose
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_INTERSTELLAR_PORT"
+	trigger = {
+		has_origin = origin_libra_interstellar_port
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_ANTIENTROPY_INSTRUCTION_IM"
+	trigger = {
+		has_origin = origin_libra_antientropy_instruction
+		is_gestalt = no
+	}
+}
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_ANTIENTROPY_INSTRUCTION_MI"
+	trigger = {
+		has_origin = origin_libra_antientropy_instruction
+		is_gestalt = yes
+		nor = {
+			has_civic = civic_machine_servitor
+			has_civic = civic_machine_terminator
+			has_civic = civic_machine_assimilator
+		}
+	}
+}
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_ANTIENTROPY_INSTRUCTION_SERVITOR"
+	trigger = {
+		has_origin = origin_libra_antientropy_instruction
+		has_civic = civic_machine_servitor
+	}
+}
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_ANTIENTROPY_INSTRUCTION_TERMINATOR"
+	trigger = {
+		has_origin = origin_libra_antientropy_instruction
+		has_civic = civic_machine_terminator
+	}
+}
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_ANTIENTROPY_INSTRUCTION_ASSIMILATOR"
+	trigger = {
+		has_origin = origin_libra_antientropy_instruction
+		has_civic = civic_machine_assimilator
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_PLANETARIAN"
+	trigger = {
+		has_origin = origin_libra_planetarian
+		not = { has_civic = civic_machine_servitor }
+	}
+}
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_PLANETARIAN_SERVITOR"
+	trigger = {
+		has_origin = origin_libra_planetarian
+		has_civic = civic_machine_servitor
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_EDEN_ACCORD"
+	trigger = {
+		has_origin = origin_libra_eden_accord
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_POLEMICS_MACHANISM"
+	trigger = {
+		has_origin = origin_libra_polemics_mechanism
+		nor = {
+			has_civic = civic_machine_servitor
+			has_civic = civic_machine_terminator
+			has_civic = civic_machine_assimilator
+		}
+	}
+}
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_POLEMICS_MACHANISM_SERVITOR"
+	trigger = {
+		has_origin = origin_libra_polemics_mechanism
+		has_civic = civic_machine_servitor
+	}
+}
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_POLEMICS_MACHANISM_TERMINATOR"
+	trigger = {
+		has_origin = origin_libra_polemics_mechanism
+		has_civic = civic_machine_terminator
+	}
+}
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_POLEMICS_MACHANISM_ASSIMILATOR"
+	trigger = {
+		has_origin = origin_libra_polemics_mechanism
+		has_civic = civic_machine_assimilator
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_MIRACLE_BUILDER"
+	trigger = {
+		has_origin = origin_libra_miracle_builder
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_MAY_STROM"
+	trigger = {
+		has_origin = origin_libra_may_storm
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_EXTREME_ITERATION_IM"
+	trigger = {
+		has_origin = origin_libra_extreme_iteration
+		is_gestalt = no
+	}
+}
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_EXTREME_ITERATION_MI"
+	trigger = {
+		has_origin = origin_libra_extreme_iteration
+		is_gestalt = yes
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_LIBRA_CENTURION"
+	trigger = {
+		has_origin = origin_libra_centurion
+	}
+}

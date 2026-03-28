@@ -1,0 +1,341 @@
+agenda_libra_adventure_finish_modifier = {
+	ship_hyperlane_range_add = 2
+	starbase_outpost_cost_mult = -0.3
+	planet_colony_development_speed_mult = 0.5
+}
+libra_adventure_decision_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_adventure_decision_modifier.dds"
+	icon_frame = 1
+	planet_structures_cost_mult = -0.1
+	planet_structures_upkeep_mult = -0.1
+}
+
+agenda_libra_ceremony_a_finish_modifier = {
+	country_produces_mult = 0.1
+}
+agenda_libra_ceremony_b_finish_modifier = {
+	country_agendas_influence_produces_add = 1
+}
+libra_ceremony_effect_modifier = {
+	hide_from_country_list = yes
+	country_edict_fund_add = 12
+	country_naval_cap_add = 12
+}
+
+agenda_libra_meditation_finish_modifier = {
+	physics_tech_cost_mult = -0.05
+	society_tech_cost_mult = -0.05
+	engineering_tech_cost_mult = -0.05
+}
+
+agenda_libra_imperium_a_finish_modifier = {
+	planet_stability_mult = 0.15
+	diplo_weight_mult = 0.15
+	country_influence_produces_mult = 0.25
+	country_naval_coverage_mult = 0.25
+}
+agenda_libra_imperium_a_finish_modifier = {
+	councilor_skill_add = 1
+	ruler_skill_add = 1
+}
+
+agenda_libra_frugality_finish_modifier = {
+	country_energy_produces_mult = 0.15
+	country_trade_produces_mult = 0.15
+}
+libra_frugality_finish_planet_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_frugality_finish_planet_modifier.dds"
+	icon_frame = 1
+	planet_pops_upkeep_mult = -0.1
+	planet_jobs_productive_upkeep_mult = -0.1
+}
+libra_frugality_decision_modifier = {
+	country_minerals_produces_mult = 0.025
+	country_food_produces_mult = 0.025
+	edicts_upkeep_mult = -0.025
+	leaders_upkeep_mult = -0.05
+}
+
+agenda_libra_introspection_a_finish_modifier = {
+	leader_skill_add = 2
+}
+agenda_libra_introspection_b_finish_modifier = {
+	leaders_upkeep_mult = -0.2
+}
+agenda_libra_introspection_c_finish_modifier = {
+	leader_trait_selection_options_add = 1
+}
+
+agenda_libra_construmcracy_finish_modifier = {
+	megastructure_build_speed_mult = 0.25
+	planet_building_capacity_add = 1
+}
+libra_construmcracy_finish_planet_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_construmcracy_finish_planet_modifier.dds"
+	icon_frame = 1
+	planet_decision_enact_speed_mult = 0.25
+	planet_building_build_speed_mult = 0.25
+}
+
+agenda_libra_overclock_finish_modifier = {
+	planet_jobs_produces_mult = 0.2
+	planet_jobs_upkeep_mult = 0.1
+	planet_buildings_produces_mult = 0.2
+	planet_buildings_upkeep_mult = 0.1
+}
+libra_overclock_1_modifier = {
+	hide_from_country_list = yes
+	leaders_upkeep_mult = 0.25
+	species_leader_exp_gain = 0.1
+	leader_skill_add = 1
+}
+libra_overclock_2_modifier = {
+	hide_from_country_list = yes
+	planet_structures_upkeep_mult = 0.1
+	planet_structures_cost_mult = -0.1
+	planet_building_build_speed_mult = 0.1
+}
+libra_overclock_3_modifier = {
+	hide_from_country_list = yes
+	armies_upkeep_mult = 0.1
+	army_damage_taken_mult = -0.1
+}
+libra_overclock_4_modifier = {
+	hide_from_country_list = yes
+	planet_jobs_upkeep_mult = 0.1
+	planet_jobs_produces_mult = 0.1
+	pop_job_amenities_mult = 0.1
+}
+libra_overclock_5_modifier = {
+	hide_from_country_list = yes
+	ships_upkeep_mult = 0.1
+	ship_hull_damage_mult = 0.1
+	ship_armor_damage_mult = 0.05
+	ship_shield_damage_mult = 0.05
+}
+
+agenda_libra_degeneracy_a_finish_modifier = {
+	planet_crime_add = -15
+	country_unity_produces_mult = 0.15
+	founder_species_growth_mult = 0.15
+}
+agenda_libra_degeneracy_b_finish_modifier = {
+	custom_tooltip = agenda_libra_degeneracy_b_finish_modifier_tt
+	#show_only_custom_tooltip = no
+}
+
+agenda_libra_pendragon_finish_modifier = {
+	country_physics_tech_research_speed = 0.15
+	country_engineering_tech_research_speed = 0.15
+	
+}
+libra_pendragon_1_modifier_a = {
+	hide_from_country_list = yes
+	starbase_shipyard_build_cost_mult = -0.025
+	armies_cost_mult = -0.05
+}
+libra_pendragon_1_modifier_b = {
+	hide_from_country_list = yes
+	ship_weapon_range_mult = 0.15
+	ship_engagement_range_mult = 0.25
+}
+libra_pendragon_2_modifier_a = {
+	hide_from_country_list = yes
+	edicts_upkeep_mult = -0.05
+	country_power_projection_influence_produces_mult = 0.1
+}
+libra_pendragon_2_modifier_b = {
+	hide_from_country_list = yes
+	ship_armor_mult = 0.25
+	ship_shield_mult = 0.25
+}
+libra_pendragon_4_modifier_a = {
+	hide_from_country_list = yes
+	species_leader_exp_gain = 0.05
+	council_agenda_progress_speed = 0.1
+}
+libra_pendragon_4_modifier_b = {
+	hide_from_country_list = yes
+	ship_evasion_mult = 0.1
+}
+libra_pendragon_5_modifier_a = {
+	hide_from_country_list = yes
+	planet_jobs_specialist_produces_mult = 0.025
+	country_ship_upgrade_cost_mult = -0.05
+}
+libra_pendragon_5_modifier_b = {
+	hide_from_country_list = yes
+	ship_damage_reduction_mult = 0.1
+}
+
+agenda_libra_victory_finish_modifier = {
+	planet_engineers_engineering_research_produces_add = 1
+	planet_engineers_energy_upkeep_add = 1
+	commander_skill_add = 2
+}
+libra_victory_2_modifier = {
+	ships_logistics_mult = -0.15
+	country_power_projection_influence_produces_add = 2
+	planet_researchers_produces_mult = 0.15
+}
+libra_victory_5_modifier = {
+	ship_friendly_territory_fire_rate_mult = 0.25
+}
+
+agenda_libra_grandmastery_a_finish_modifier = {
+	country_edict_fund_add = 100
+}
+agenda_libra_grandmastery_b_finish_modifier = {
+	country_edict_fund_add = 100
+}
+libra_grandmastery_5_modifier = {
+	hide_from_country_list = yes
+	country_naval_cap_mult = 0.01
+	all_technology_research_speed = 0.01
+}
+
+agenda_libra_sumptuary_finish_modifier = {
+	planet_stability_mult = 0.2
+	bonus_automated_workforce_mult = 0.2
+}
+libra_sumptuary_finish_planet_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_sumptuary_finish_planet_modifier.dds"
+	icon_frame = 1
+	country_produces_mult = 0.15
+	founder_species_growth_mult = 0.15
+}
+
+agenda_libra_occlusion_finish_modifier = {
+	diplo_weight_mult = -0.25
+	army_health = 0.25
+	ship_fire_rate_mult = 0.25
+	planet_soldiers_influence_produces_add = 0.01
+}
+libra_occlusion_2_modifier = {
+	planet_deposits_produces_mult = 0.25
+	country_traditions_influence_produces_add = 1
+}
+libra_occlusion_5_modifier = {
+	council_agenda_progress_speed = 0.25
+	planet_jobs_specialist_produces_mult = 0.1
+}
+
+agenda_libra_profundity_finish_modifier = {
+	diplo_weight_technology_mult = 0.25
+	country_physics_research_produces_mult = 0.15
+	country_society_research_produces_mult = 0.15
+	country_engineering_research_produces_mult = 0.15
+}
+libra_profundity_campaign_5_mod = {
+	research_sharing_mult = 0.2
+	all_technology_research_speed = 0.2
+}
+libra_profundity_campaign_6_mod = {
+	edicts_cost_mult = -0.25
+	planet_jobs_productive_produces_mult = 0.15
+}
+libra_profundity_campaign_7_mod = {
+	ship_tracking_mult = 0.1
+	ship_shield_mult = 0.3
+	ship_armor_mult = 0.3
+}
+
+agenda_libra_drudgery_finish_modifier = {
+	country_minerals_produces_mult = 0.2
+	country_food_produces_mult = 0.2
+}
+libra_drudgery_decision_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_drudgery_decision.dds"
+	icon_frame = 1
+	planet_stability_add = -15
+	planet_jobs_produces_mult = 0.15
+	job_soldier_or_warrior_add = 200
+}
+
+agenda_libra_autarchy_finish_modifier = {
+	country_cost_mult = -0.1
+	starbase_upgrade_speed_mult = 0.25
+}
+libra_autarchy_seal_modifier = {
+	ruler_skill_add = 5
+	envoys_add = 5
+	diplo_action_acceptance_add = 50
+	diplomacy_upkeep_mult = -0.5
+}
+
+agenda_libra_cosmoplasty_finish_modifier = {
+	megastructures_cost_mult = -0.1
+	megastructure_build_speed_mult = 0.5
+	starbase_upgrade_speed_mult = 0.5
+}
+libra_cosmoplasty_planet_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_libra_cosmoplasty_agenda.dds"
+	icon_frame = 1
+	pop_bonus_workforce_mult = 0.1
+	bonus_automated_workforce_mult = 0.1
+}
+libra_cosmoplasty_4_mod = {
+	country_alloys_produces_mult = 0.15
+	country_consumer_goods_produces_mult = 0.15
+	country_influence_produces_mult = 0.15
+	starbase_building_build_speed_mult = 0.75
+}
+libra_cosmoplasty_5_mod = {
+	country_trade_produces_mult = 0.15
+	country_unity_produces_mult = 0.15
+	country_influence_produces_mult = 0.15
+	starbase_module_build_speed_mult = 0.75
+}
+
+agenda_libra_magnificence_finish_modifier_1 = {
+	megastructure_build_speed_add = 1
+}
+agenda_libra_magnificence_finish_modifier_2 = {
+	country_produces_mult = 0.5
+}
+
+agenda_libra_vector_finish_modifier = {
+	ship_evasion_mult = 0.1
+	ship_speed_mult = 0.5
+}
+
+agenda_libra_havoc_finish_modifier = {
+	ship_armor_mult = 0.25
+	ship_shield_mult = 0.25
+	ship_friendly_territory_fire_rate_mult = 0.25
+	army_defense_damage_mult = 0.5
+	army_defense_morale_mult = 0.5
+	army_defense_health_mult = 0.5
+}
+
+agenda_libra_bastion_finish_modifier = {
+	planet_orbital_bombardment_damage = -0.25
+	planet_storm_devastation_mult = -0.25
+	ship_friendly_territory_hull_mult = 1
+}
+
+agenda_libra_suzerainty_finish_modifier = {
+	monthly_loyalty_from_subjects = 2
+}
+trade_action_libra_suzerainty_2_modifier = {
+	country_naval_capacity_contribution_to_overlord_mult = 0.2
+	ships_logistics_mult = 0.1
+}
+trade_action_libra_suzerainty_3_modifier = {
+	all_technology_research_speed = 0.15
+	planet_researchers_produces_mult = 0.1
+}
+trade_action_libra_suzerainty_4_modifier = {
+	country_energy_produces_mult = 0.15
+	country_minerals_produces_mult = 0.15
+	country_food_produces_mult = 0.15
+	country_trade_produces_mult = 0.1
+}
+
+#
+
+libra_mystic_grail_modifier = {
+	country_produces_mult = 0.15
+	planet_jobs_specialist_produces_mult = 0.25
+	planet_jobs_ruler_produces_mult = 0.35
+}

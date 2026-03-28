@@ -1,0 +1,28 @@
+tradition_libra_magnificence = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_magnificence_adopt } }
+		text = tradition_libra_magnificence_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_magnificence_adopt }
+		text = tradition_libra_magnificence_adopt_desc
+	}
+	tree_template = "tree_11_12_21"
+	adoption_bonus = "tr_libra_magnificence_adopt"
+	finish_bonus = "tr_libra_magnificence_finish"
+	traditions = {
+		"tr_libra_magnificence_1"
+		"tr_libra_magnificence_2"
+		"tr_libra_magnificence_3"
+		"tr_libra_magnificence_4"
+		"tr_libra_magnificence_5"
+	}
+
+	ai_weight = {
+		factor = 40
+		modifier = {
+			factor = 5
+			has_origin = origin_libra_miracle_builder
+		}
+	}
+}

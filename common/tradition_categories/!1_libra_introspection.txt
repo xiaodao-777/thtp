@@ -1,0 +1,28 @@
+tradition_libra_introspection = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_introspection_adopt } }
+		text = tradition_libra_introspection_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_introspection_adopt }
+		text = tradition_libra_introspection_adopt_desc
+	}
+	tree_template = "tree_21_12"
+	adoption_bonus = "tr_libra_introspection_adopt"
+	finish_bonus = "tr_libra_introspection_finish"
+	traditions = {
+		"tr_libra_introspection_1"
+		"tr_libra_introspection_2"
+		"tr_libra_introspection_3"
+		"tr_libra_introspection_4"
+		"tr_libra_introspection_5"
+	}
+
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 3
+			libra_ai_preferences_leader = yes
+		}
+	}
+}

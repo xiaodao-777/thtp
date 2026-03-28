@@ -1,0 +1,96 @@
+tr_libra_frugality_adopt = {
+	unlocks_agenda = agenda_libra_frugality
+	modifier = {
+		planet_structures_upkeep_mult = -0.1
+	}
+	possible = {
+		has_technology = tech_refit_standards
+	}
+}
+
+tr_libra_frugality_finish = {
+	modifier = {
+		ascension_perks_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_frugality_finish_desc
+}
+
+tr_libra_frugality_1 = {
+	triggered_modifier = {
+		country_naval_cap_add = 10
+		country_resource_max_add = 5000
+		mult = value:libra_frugality_1_mult
+	}
+	custom_tooltip = tr_libra_frugality_1_desc
+
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_libra_frugality_2 = {
+	possible = {
+		has_tradition = tr_libra_frugality_1
+	}
+	modifier = {
+		armies_upkeep_mult = -0.1
+		ships_upkeep_mult = -0.1
+		ships_logistics_mult = -0.15
+	}
+
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_libra_frugality_3 = {
+	modifier = {
+		megastructures_upkeep_mult = -0.1
+		stations_upkeep_mult = -0.2
+	}
+	custom_tooltip_with_modifiers = tr_libra_frugality_3_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_frugality_4 = {
+	possible = {
+		has_tradition = tr_libra_frugality_3
+	}
+	modifier = {
+		planet_deposits_produces_mult = 0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_frugality_4_desc
+
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_libra_frugality_5 = {
+	possible = {
+		has_tradition = tr_libra_frugality_3
+	}
+	modifier = {
+		planet_crime_mult = -0.1
+		planet_amenities_mult = 0.1
+		planet_pops_upkeep_mult = -0.15
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }
+		modifier = {
+			planet_crime_no_happiness_mult = -0.1
+			planet_amenities_no_happiness_mult = 0.1
+			planet_pops_upkeep_mult = -0.15
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+	}
+}

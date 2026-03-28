@@ -1,0 +1,118 @@
+@corvette_collision_radius = 2.0
+
+@destroyer_collision_radius = 2.5
+
+@cruiser_collision_radius = 3
+
+@battleship_collision_radius = 3
+
+@titan_collision_radius = 15
+
+@build_block_radius_none = 0
+@build_block_radius_civilian = 20
+@build_block_radius_military = 200
+
+@speed_event_super_slow = 0.5
+@speed_very_slow = 80
+@speed_slow = 100
+@speed_default = 120
+@speed_fast = 140
+@speed_very_fast = 160
+
+@salvagecostsmall = 1000
+@salvagecostmedium = 2500
+@salvagecostlarge = 5000
+@salvagecostsmallrare = 250
+@salvagecostmediumrare = 500
+@salvagecostlargerare = 1000
+
+nanite_interdictor = {
+	formation_priority = @cruiser_formation_priority
+	graphical_culture = no
+	entity = gatebuilder_01_mothership_entity
+	hull_scale = 0.3
+	max_speed = @speed_default
+	acceleration = 0.25
+	rotation_speed = 0.175
+	collision_radius = @cruiser_collision_radius
+	max_hitpoints = 2000
+	modifier = {
+		ship_evasion_add = 20
+		ship_armor_add = 1500
+		ship_shield_add = 1500
+		ship_hull_regen_add_static = 15
+		ship_armor_regen_add_static = 15
+		ship_shield_regen_add_static = 15
+	}
+	size_multiplier = 16
+	fleet_slot_size = 3
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon = ship_size_military_4
+	base_buildtime = 180
+
+	can_have_federation_design = yes
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no #if yes, ship design will have a 3d view in the ship browser
+
+	default_behavior = carrier
+	ship_roles = { carrier energy_torpedoes explosive }
+	triggered_ship_roles = {
+		{
+			name = artillery
+			trigger = { has_technology = tech_libra_nanite_titans }
+		}
+		{
+			name = artillery_stealth
+			trigger = {
+				has_technology = tech_libra_nanite_titans
+				has_technology = tech_cloaking_1
+			}
+		}
+	}
+
+	potential_country = {
+		has_tradition = tr_nanotech_5
+	}
+
+	use_shipnames_from = cruiser
+
+	combat_disengage_chance = 1.25
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	components_add_to_cost = no
+
+	resources = {
+		category = ships
+		cost = {
+			nanites = 7500
+		}
+		upkeep = {
+			nanites = 5
+		}
+	}
+
+	available_to_everyone = yes
+
+	ai_ship_data = {
+		fraction = {
+			base = 0
+			modifier = {
+				add = 400
+				uses_standard_ship_sizes = yes
+			}
+			modifier = {
+				factor = 2.5
+				always = yes #not = { has_ascension_perk = ap_libra_platinum_storm }
+			}
+		}
+	}
+}

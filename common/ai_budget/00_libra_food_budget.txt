@@ -1,0 +1,88 @@
+libra_food_expenditure_edicts = {
+	resource = food
+	type = expenditure
+	category = edicts
+
+	potential = {
+		has_resource = {
+			type = food
+			amount > 1000
+		}
+		resource_income_compare = {
+			resource = food
+			value > 50
+		}
+	}
+
+	weight = {
+		weight = 0.15
+	}
+
+	desired_max = {
+		base = 600
+	}
+}
+
+libra_food_expenditure_armies = {
+	resource = food
+	type = expenditure
+	category = armies
+
+	potential = {
+		country_uses_bio_ships = yes
+		has_resource = {
+			type = food
+			amount > 1000
+		}
+		nor = {
+		#	has_origin = origin_libra_centurion
+			has_origin = origin_libra_crimson_nights
+			has_origin = origin_libra_antientropy_instruction
+		}
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			add = 0.05
+			is_at_war = yes
+		}
+	}
+
+	desired_max = {
+		base = 1200
+	}
+}
+
+libra_food_expenditure_ships = {
+	resource = food
+	type = expenditure
+	category = ships
+
+	potential = {
+		has_origin = origin_libra_dragonborn
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 2
+			or = {
+				has_crisis = yes
+				is_at_war = yes
+			}
+		}
+		modifier = {
+			factor = 0.5
+			used_naval_capacity_percent >= 0.85
+		}
+		modifier = {
+			factor = 7
+			used_naval_capacity_percent < 0.85
+			nor = {
+				uses_fauna_ship_sizes = yes
+				country_uses_bio_ships = yes
+			}
+		}
+	}
+}

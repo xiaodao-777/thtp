@@ -1,0 +1,57 @@
+leader_trait_type = destiny
+leader_trait_rarity = destiny
+#ethic_destiny_trait = yes
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = default
+	RARITY = paragon
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_default"
+	}
+	layer = {
+		icon = "GFX_trait_glow_destiny"
+		color = "trait_rarity_destiny"
+	}
+	layer = {
+		icon = "GFX_trait_frame_destiny"
+		color = "trait_rarity_destiny"
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+}
+sorting_priority = @trait_sorting_priority_paragon_$COUNCIL$_none
+
+
+prerequisites = { tech_libra_analytics }
+leader_potential_add = {
+	years_passed > 9
+	has_base_skill < 10
+	has_paragon_dlc = yes
+	has_trait = subclass_$SUBCLASS$
+	has_ethic = ethic_$ETHIC$
+	exists = owner
+	owner = {
+		or = {
+			has_ethic = ethic_$ETHIC$
+			has_ethic = ethic_fanatic_$ETHIC$
+			has_ascension_perk = ap_libra_valiant_heroic
+		}
+	}
+}
+selectable_weight = {
+	weight = @libra_ethic_destiny_trait_weight
+}
+ai_weight = {
+	factor = 2
+}
+background_icon = "GFX_leader_background_libra_destiny_2"

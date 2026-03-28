@@ -1,0 +1,653 @@
+trade_action_libra_praises_to_life = {
+	fire_and_forget = yes
+
+	potential = {
+		has_origin = origin_libra_praises_to_life
+		from = {
+			not = { has_modifier = trade_action_libra_praises_to_life_modifier }
+			or = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+
+	on_traded_effect = {
+		from = {
+			add_trust = {
+				amount = 36
+				who = root
+			}
+			if = {
+				limit = { has_tradition = tr_libra_ceremony_adopt }
+				custom_tooltip = trade_action_libra_praises_to_life_effect
+				hidden_effect = {
+					change_variable = { which = libra_ceremony_count value = 2 }
+				}
+			}
+			else = {
+				add_resource = {
+					influence = 50
+				}
+			}
+			add_modifier = { modifier = trade_action_libra_praises_to_life_modifier days = 4320 }
+		}
+	}
+
+	ai_weight = {
+		weight = 36
+	}
+}
+
+trade_action_libra_crimson_ancestor = {
+	fire_and_forget = yes
+
+	potential = {
+		has_overlord = from
+		libra_use_special_pop = no
+		sapient_pop_amount > 2000
+		not = { has_modifier = trade_action_libra_crimson_ancestor_subject_modifier }
+		from = {
+			has_origin = origin_libra_crimson_nights
+			has_tradition = tr_libra_crimson_ancestor_4
+			is_homicidal = no
+		}
+	}
+
+	on_traded_effect = {
+		custom_tooltip = trade_action_libra_crimson_ancestor_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.0507 }
+		}
+		add_modifier = { modifier = trade_action_libra_crimson_ancestor_subject_modifier days = 3600 }
+	}
+
+	ai_weight = {
+		weight = 0.02
+		modifier = {
+			factor = trigger:sapient_pop_amount
+			always = yes
+		}
+	}
+}
+
+#
+
+trade_action_libra_interstellar_port_b = {
+	fire_and_forget = yes
+
+	potential = {
+		has_origin = origin_libra_interstellar_port
+		has_valid_civic = civic_libra_interstellar_port_b
+		from = {
+			not = { has_modifier = trade_action_libra_interstellar_port_b_modifier }
+		}
+	}
+
+	on_traded_effect = {
+		from = {
+			add_modifier = { modifier = trade_action_libra_interstellar_port_b_modifier }
+		}
+	}
+
+	ai_weight = {
+		weight = 25
+		modifier = {
+			factor = 2
+			from = { is_militarist = yes }
+		}
+		modifier = {
+			factor = 1.6
+			from = { is_gestalt = yes }
+		}
+	}
+}
+
+trade_action_libra_interstellar_port_e_a = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_interstellar_port
+		has_valid_civic = civic_libra_interstellar_port_e
+		has_resource = { type = influence amount > 100 }
+		or = {
+			has_commercial_pact = from
+			tech_unlocked_ratio = { who = from ratio > 0.8 }
+		}
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_interstellar_port_e_a
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_interstellar_port_e_a_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -10
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_interstellar_port_e_a_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_interstellar_port_e_a_modifier
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			add = 0.2
+			or = {
+				has_commercial_pact = from
+				is_in_federation_with = from
+				is_overlord_to = from
+			}
+		}
+		modifier = {
+			factor = 2
+			from = { is_authoritarian = yes }
+		}
+		modifier = {
+			factor = 1.5
+			from = { is_spiritualist = yes }
+		}
+	}
+}
+
+trade_action_libra_interstellar_port_e_b = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_interstellar_port
+		has_valid_civic = civic_libra_interstellar_port_e
+		has_resource = { type = influence amount > 100 }
+		or = {
+			has_commercial_pact = from
+			tech_unlocked_ratio = { who = from ratio > 0.8 }
+		}
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_interstellar_port_e_b
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_interstellar_port_e_b_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -10
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_interstellar_port_e_b_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_interstellar_port_e_b_modifier
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			add = 0.2
+			or = {
+				has_commercial_pact = from
+				is_in_federation_with = from
+				is_overlord_to = from
+			}
+		}
+		modifier = {
+			factor = 2
+			from = { is_pacifist = yes }
+		}
+		modifier = {
+			factor = 1.5
+			from = { is_xenophobe = yes }
+		}
+	}
+}
+
+trade_action_libra_interstellar_port_e_c = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_interstellar_port
+		has_valid_civic = civic_libra_interstellar_port_e
+		has_resource = { type = influence amount > 100 }
+		or = {
+			has_commercial_pact = from
+			tech_unlocked_ratio = { who = from ratio > 0.8 }
+		}
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_interstellar_port_e_c
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_interstellar_port_e_c_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -10
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_interstellar_port_e_c_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_interstellar_port_e_c_modifier
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			add = 0.2
+			or = {
+				has_commercial_pact = from
+				is_in_federation_with = from
+				is_overlord_to = from
+			}
+		}
+		modifier = {
+			factor = 2
+			from = { is_materialist = yes }
+		}
+		modifier = {
+			factor = 1.5
+			from = { is_pacifist = yes }
+		}
+	}
+}
+
+trade_action_libra_interstellar_port_e_d = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_interstellar_port
+		has_valid_civic = civic_libra_interstellar_port_e
+		has_resource = { type = influence amount > 100 }
+		or = {
+			has_commercial_pact = from
+			tech_unlocked_ratio = { who = from ratio > 0.8 }
+		}
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_interstellar_port_e_d
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_interstellar_port_e_d_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -10
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_interstellar_port_e_d_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_interstellar_port_e_d_modifier
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			add = 0.2
+			or = {
+				has_commercial_pact = from
+				is_in_federation_with = from
+				is_overlord_to = from
+			}
+		}
+		modifier = {
+			factor = 2
+			from = { is_gestalt = yes }
+		}
+		modifier = {
+			factor = 1.5
+			from = { is_xenophile = yes }
+		}
+	}
+}
+
+trade_action_libra_interstellar_port_e_e = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_interstellar_port
+		has_valid_civic = civic_libra_interstellar_port_e
+		has_resource = { type = influence amount > 100 }
+		or = {
+			has_commercial_pact = from
+			tech_unlocked_ratio = { who = from ratio > 0.8 }
+		}
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_interstellar_port_e_e
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_interstellar_port_e_e_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -10
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_interstellar_port_e_e_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_interstellar_port_e_e_modifier
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			add = 0.2
+			or = {
+				has_commercial_pact = from
+				is_in_federation_with = from
+				is_overlord_to = from
+			}
+		}
+		modifier = {
+			factor = 2
+			from = { is_machine_empire = yes }
+		}
+		modifier = {
+			factor = 2
+			from = { is_materialist = yes }
+		}
+	}
+}
+
+trade_action_libra_interstellar_port_e_f = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_interstellar_port
+		has_valid_civic = civic_libra_interstellar_port_e
+		has_resource = { type = influence amount > 100 }
+		or = {
+			has_commercial_pact = from
+			tech_unlocked_ratio = { who = from ratio > 0.8 }
+		}
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_interstellar_port_e_f
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_interstellar_port_e_f_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -10
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_interstellar_port_e_f_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_interstellar_port_e_f_modifier
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			add = 0.2
+			or = {
+				has_commercial_pact = from
+				is_in_federation_with = from
+				is_overlord_to = from
+			}
+		}
+		modifier = {
+			factor = 2
+			from = { is_hive_empire = yes }
+		}
+		modifier = {
+			factor = 2
+			from = { is_egalitarian = yes }
+		}
+	}
+}
+
+#
+
+trade_action_libra_eden_accord_k_1 = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_eden_accord
+		has_valid_civic = civic_libra_eden_accord_k
+		has_resource = { type = influence amount > 100 }
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_eden_accord_k_1
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_eden_accord_k_1_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -25
+		}
+		custom_tooltip = trade_action_libra_eden_accord_k_1_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.1330 }
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_eden_accord_k_1_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_eden_accord_k_1_modifier
+	}
+
+	ai_weight = {
+		weight = 0.5
+		modifier = {
+			factor = 3
+			from = { has_country_flag = libra_is_biological_empire }
+		}
+		modifier = {
+			factor = 1.2
+			from = { is_hive_empire = yes }
+		}
+	}
+}
+
+trade_action_libra_eden_accord_k_2 = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_eden_accord
+		has_valid_civic = civic_libra_eden_accord_k
+		has_resource = { type = influence amount > 100 }
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_eden_accord_k_2
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_eden_accord_k_2_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -25
+		}
+		custom_tooltip = trade_action_libra_eden_accord_k_2_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.1331 }
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_eden_accord_k_2_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_eden_accord_k_2_modifier
+	}
+
+	ai_weight = {
+		weight = 0.5
+		modifier = {
+			factor = 3
+			from = { is_gestalt = yes }
+		}
+		modifier = {
+			factor = 2
+			from = { is_xenophile = yes }
+		}
+	}
+}
+
+trade_action_libra_eden_accord_k_3 = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_eden_accord
+		has_valid_civic = civic_libra_eden_accord_k
+		has_resource = { type = influence amount > 100 }
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_eden_accord_k_3
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_eden_accord_k_3_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -25
+		}
+		custom_tooltip = trade_action_libra_eden_accord_k_3_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.1332 }
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_eden_accord_k_3_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_eden_accord_k_3_modifier
+	}
+
+	ai_weight = {
+		weight = 0.5
+		modifier = {
+			factor = 0
+			from = { is_hive_empire = yes }
+		}
+		modifier = {
+			factor = 4
+			from = {
+				or = {
+					has_country_flag = libra_is_machine_empire
+					has_tradition = tr_synthetics_finish
+				}
+			}
+		}
+	}
+}
+
+#
+
+trade_action_libra_may_storm_materialist = {
+	fire_and_forget = no
+
+	potential = {
+		has_origin = origin_libra_may_storm
+		has_valid_civic = civic_libra_may_storm_materialist_b
+		has_resource = { type = influence amount > 50 }
+		or = {
+			has_research_agreement = from
+			tech_unlocked_ratio = { who = from ratio > 0.9 }
+		}
+		nor = {
+			is_action_active = {
+				action = trade_action_libra_may_storm_materialist
+				with_country = from
+			}
+			from = { has_modifier = trade_action_libra_may_storm_materialist_modifier }
+		}
+	}
+
+	active = {
+		not = { is_at_war_with = from }
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -25
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_may_storm_materialist_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_may_storm_materialist_modifier
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}

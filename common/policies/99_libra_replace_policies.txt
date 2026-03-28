@@ -1,0 +1,116 @@
+logistics_policy = {
+	potential = {
+		is_gestalt = yes
+	}
+
+	option = {
+		name = "logistics_policy_gestalt"
+		on_enabled = {
+			hidden_effect = {
+				set_trade_conversions = {
+					trade = 1
+				}
+			}
+		}
+		modifier = {
+		}
+		AI_weight = {
+			factor = 1
+			modifier = {
+				add = 3
+				has_deficit = trade
+			}
+		}
+	}
+
+	option = {
+		name = "logistics_policy_libra_gestalt_1"
+		valid = {
+			has_technology = tech_libra_gestalt_power_hub
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.6
+				energy = 0.4
+			}
+		}
+		AI_weight = {
+			factor = 0
+			modifier = {
+				add = 4
+				has_deficit = energy
+			}
+		}
+	}
+	option = {
+		name = "logistics_policy_libra_gestalt_2"
+		valid = {
+			has_technology = tech_libra_gestalt_food_processing
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.6
+				food = 0.4
+			}
+		}
+		AI_weight = {
+			factor = 0
+			modifier = {
+				add = 4
+				has_deficit = food
+			}
+		}
+	}
+	option = {
+		name = "logistics_policy_libra_gestalt_3"
+		valid = {
+			has_technology = tech_libra_gestalt_mineral_purification
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.6
+				minerals = 0.32
+			}
+		}
+		AI_weight = {
+			factor = 0
+			modifier = {
+				add = 4
+				has_deficit = minerals
+			}
+		}
+	}
+	option = {
+		name = "logistics_policy_libra_gestalt_4"
+		valid = {
+			has_technology = tech_libra_gestalt_research_3
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.6
+				physics_research = 0.048
+				society_research = 0.048
+				engineering_research = 0.048
+			}
+		}
+		AI_weight = {
+			factor = 2
+		}
+	}
+	#option = {
+	#	name = "logistics_policy_libra_gestalt_5"
+	#	on_enabled = {
+	#		set_trade_conversions = {
+	#			trade = 0.6
+	#			unity = 0.2
+	#		}
+	#	}
+	#	AI_weight = {
+	#		factor = 0
+	#		modifier = {
+	#			add = 3
+	#			num_ascension_perks < 5
+	#		}
+	#	}
+	#}
+}

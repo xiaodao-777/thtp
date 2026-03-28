@@ -1,0 +1,60 @@
+arc_site_libra_dragonborn = {
+	desc = arc_site_libra_dragonborn_desc
+	picture = GFX_evt_libra_site_dragonborn
+	stages = 6
+	weight = 0
+	max_instances = 999
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+		#has_origin = origin_libra_dragonborn
+		has_country_flag = libra_dragonborn_site_owner_@from.planet
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D1
+		event = libra_origin.0704
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D2
+		event = libra_origin.0705
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_D3
+		event = libra_origin.0706
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_D4
+		event = libra_origin.0707
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_D5
+		event = libra_origin.0708
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_F2
+		event = libra_origin.0709
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = no_events }
+		}
+	}
+}

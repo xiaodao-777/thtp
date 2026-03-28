@@ -1,0 +1,65 @@
+LIBRA_ASTRAL_MUTATION_BLAST = {
+	type = offensive
+	icon = "GFX_ship_part_libra_astral_blast"
+	ship_components = {
+		small = "SMALL_LIBRA_ASTRAL_MUTATION_BLAST"
+		medium = "MEDIUM_LIBRA_ASTRAL_MUTATION_BLAST"
+		large = "LARGE_LIBRA_ASTRAL_MUTATION_BLAST"
+		extra_large = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_BLAST"
+	}
+}
+
+LIBRA_ASTRAL_MUTATION_TORPEDO = {
+	type = offensive
+	icon = "GFX_ship_part_libra_astral_torpedo"
+	ship_components = {
+		small = "SMALL_LIBRA_ASTRAL_MUTATION_TORPEDO"
+		medium = "MEDIUM_LIBRA_ASTRAL_MUTATION_TORPEDO"
+		large = "LARGE_LIBRA_ASTRAL_MUTATION_TORPEDO"
+		extra_large = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_TORPEDO"
+	}
+}
+
+LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY = {
+	type = offensive
+	icon = "GFX_ship_part_libra_astral_mass_accelerator"
+	ship_components = {
+		small = "SMALL_LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+		medium = "MEDIUM_LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+		large = "LARGE_LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+		extra_large = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+	}
+}
+
+LIBRA_ASTRAL_MUTATION_FLAK = {
+	type = offensive
+	icon = "GFX_ship_part_libra_astral_flak_batteries"
+	ship_components = {
+		small = "SMALL_LIBRA_ASTRAL_MUTATION_FLAK"
+		medium = "MEDIUM_LIBRA_ASTRAL_MUTATION_FLAK"
+		large = "LARGE_LIBRA_ASTRAL_MUTATION_FLAK"
+		extra_large = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_FLAK"
+	}
+}
+
+LIBRA_ASTRAL_MUTATION_SHIELD = {
+	type = defensive
+	icon = "GFX_ship_part_libra_astral_shield"
+	ship_components = {
+		small = "SMALL_LIBRA_ASTRAL_MUTATION_SHIELD"
+		medium = "MEDIUM_LIBRA_ASTRAL_MUTATION_SHIELD"
+		large = "LARGE_LIBRA_ASTRAL_MUTATION_SHIELD"
+		extra_large = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_SHIELD"
+	}
+}
+
+LIBRA_ASTRAL_MUTATION_ARMOR = {
+	type = defensive
+	icon = "GFX_ship_part_libra_astral_armor"
+	ship_components = {
+		small = "SMALL_LIBRA_ASTRAL_MUTATION_ARMOR"
+		medium = "MEDIUM_LIBRA_ASTRAL_MUTATION_ARMOR"
+		large = "LARGE_LIBRA_ASTRAL_MUTATION_ARMOR"
+		extra_large = "EXTRA_LARGE_LIBRA_ASTRAL_MUTATION_ARMOR"
+	}
+}

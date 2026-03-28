@@ -1,0 +1,87 @@
+tr_libra_suzerainty_adopt = {
+	unlocks_agenda = agenda_libra_suzerainty
+	modifier = {
+		envoys_add = 2
+		monthly_loyalty_from_subjects = 1
+	}
+	possible = {
+		has_technology = tech_libra_overlord_directive
+	}
+}
+
+tr_libra_suzerainty_finish = {
+	modifier = {
+		country_enclave_capacity_add = 2
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_suzerainty_1 = {
+	modifier = {
+		country_subject_integration_speed_add = 0.1
+		subject_integration_influence_cost_mult = -0.3
+	}
+	custom_tooltip_with_modifiers = tr_libra_suzerainty_1_desc
+
+	ai_weight = {
+		factor = 8000
+	}
+}
+
+tr_libra_suzerainty_2 = {
+	modifier = {
+		country_subject_acceptance_add = 10
+		specialist_subject_conversion_time_mult = -0.3
+	}
+	custom_tooltip_with_modifiers = tr_libra_suzerainty_2_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_suzerainty_3 = {
+	possible = {
+		has_tradition = tr_libra_suzerainty_1
+		has_tradition = tr_libra_suzerainty_2
+	}
+	modifier = {
+		divided_patrongage_max_subjects = 1
+		country_subject_trust_cap_add = 50
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_suzerainty_4 = {
+	possible = {
+		has_tradition = tr_libra_suzerainty_3
+	}
+	triggered_modifier = {
+		council_agenda_finishing_effect_duration_mult = 0.05
+		external_leader_pool_add = 1
+		mult = value:libra_ethic_destiny_trait_vassals_mult
+	}
+	custom_tooltip = tr_libra_suzerainty_4_desc
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_suzerainty_5 = {
+	possible = {
+		has_tradition = tr_libra_suzerainty_3
+	}
+	triggered_modifier = {
+		empire_size_add = -10
+		country_traditions_influence_produces_add = 0.2
+		mult = value:libra_ethic_destiny_trait_subjects_mult
+	}
+	custom_tooltip = tr_libra_suzerainty_5_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}

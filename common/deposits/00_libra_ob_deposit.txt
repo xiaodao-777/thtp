@@ -1,0 +1,83 @@
+d_libra_starry_miner_1 = {
+	icon = d_mining_station
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 1
+			trade = 1
+		}
+	}
+
+	habitat_modifier = {
+		district_hab_mining_max_add = 1
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_libra_starry_miner_2 = {
+	icon = d_mining_station
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 2
+			trade = 1
+		}
+	}
+
+	habitat_modifier = {
+		district_hab_mining_max_add = 1
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_libra_starry_miner_3 = {
+	icon = d_mining_station
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 2
+			trade = 2
+		}
+	}
+
+	habitat_modifier = {
+		district_hab_mining_max_add = 1
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_libra_starry_miner_4 = {
+	icon = d_mining_station
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 3
+			trade = 2
+		}
+	}
+
+	habitat_modifier = {
+		district_hab_mining_max_add = 2
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}

@@ -1,0 +1,47 @@
+tradition_libra_victory = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_victory_adopt } }
+		text = tradition_libra_victory_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_victory_adopt }
+		text = tradition_libra_victory_adopt_desc
+	}
+	tree_template = "libra_tree_21_21"
+	adoption_bonus = "tr_libra_victory_adopt"
+	finish_bonus = "tr_libra_victory_finish"
+	traditions = {
+		"tr_libra_victory_1"
+		"tr_libra_victory_2"
+		"tr_libra_victory_3"
+		"tr_libra_victory_4"
+		"tr_libra_victory_5"
+	}
+
+	ai_weight = {
+		factor = 15
+		modifier = {
+			add = 15
+			or = {
+				has_crisis = yes
+				end_game_years_passed >= 0
+				libra_ai_preferences_militarily = yes
+			}
+		}
+		modifier = {
+			add = 35
+			any_playable_country = {
+				libra_crisis_ap_check = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_libra_pendragon_adopt
+		}
+		modifier = {
+			set = 120
+			num_tradition_categories < 2
+			has_origin = origin_libra_centurion
+		}
+	}
+}

@@ -1,0 +1,91 @@
+libra_unity_expenditure_ships = {
+	resource = unity
+	type = expenditure
+	category = ships
+
+	potential = {
+		or = {
+		#	and = {
+		#		has_technology = tech_libra_psionic_destroyers
+		#		has_tradition = tr_psionics_finish
+		#	}
+			and = {
+				has_valid_civic = civic_libra_crimson_nights
+				has_country_flag = libra_crimson_nights_unlock_civic
+			}
+		}
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			add = 0.15
+			OR = {
+				recently_lost_war = yes
+				is_at_war = yes
+			}
+		}
+		modifier = {
+			add = 0.15
+			used_naval_capacity_percent < 0.6
+			has_unlocked_all_traditions = yes
+		}
+		modifier = {
+			add = 0.15
+			used_naval_capacity_percent < 0.8
+		}
+	}
+
+	desired_max = {
+		base = 11111
+		modifier = {
+			add = 22222
+			has_unlocked_all_traditions = yes
+		}
+	}
+}
+
+libra_unity_expenditure_planets = {
+	resource = unity
+	type = expenditure
+	category = planets
+
+	potential = {
+		has_ascension_perk = ap_libra_yggdrasil
+	}
+
+	weight = {
+		weight = 0.2
+		modifier = {
+			add = 0.1
+			num_planetary_ascension_tiers >= 10
+		}
+		modifier = {
+			add = 0.3
+			num_tradition_categories > 10
+		}
+		modifier = {
+			add = 0.6
+			has_unlocked_all_traditions = yes
+		}
+	}
+
+	desired_min = {
+		base = 1000
+	}
+
+	desired_max = {
+		base = 8000
+		modifier = {
+			factor = 2
+			num_planetary_ascension_tiers >= 10
+		}
+		modifier = {
+			factor = 25
+			or = {
+				has_unlocked_all_traditions = yes
+				num_tradition_categories > 10
+			}
+		}
+	}
+}

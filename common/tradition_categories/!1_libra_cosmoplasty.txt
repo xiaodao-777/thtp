@@ -1,0 +1,28 @@
+tradition_libra_cosmoplasty = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_cosmoplasty_adopt } }
+		text = tradition_libra_cosmoplasty_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_cosmoplasty_adopt }
+		text = tradition_libra_cosmoplasty_adopt_desc
+	}
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_libra_cosmoplasty_adopt"
+	finish_bonus = "tr_libra_cosmoplasty_finish"
+	traditions = {
+		"tr_libra_cosmoplasty_1"
+		"tr_libra_cosmoplasty_2"
+		"tr_libra_cosmoplasty_3"
+		"tr_libra_cosmoplasty_4"
+		"tr_libra_cosmoplasty_5"
+	}
+
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 3
+			libra_ai_preferences_megastructures = yes
+		}
+	}
+}

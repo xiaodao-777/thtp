@@ -1,0 +1,614 @@
+@stickiness = 10
+@stickiness_low = 5
+@zone_urban = 100
+@zone_rural = 10
+@rural_max_size = 13
+@rural_over_max_size = -20
+
+col_libra_nanotech_capital = {
+	icon = GFX_colony_type_capital
+
+	potential = {
+		is_capital = yes
+		is_planet_class = pc_nanotech
+		exists = owner_or_space_owner
+		owner_or_space_owner = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_nanotech_finish
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_housing_add = 1000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = { is_gestalt = no }
+		}
+		planet_amenities_add = 1000
+		pop_government_ethic_attraction = 1
+		planet_jobs_produces_mult = 0.1
+		planet_buildings_produces_mult = 0.1
+		bonus_automated_workforce_mult = 0.1
+		planet_resettlement_unemployed_destination_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = { is_gestalt = yes }
+		}
+		planet_amenities_no_happiness_add = 1000
+		planet_crime_no_happiness_add = -20
+		planet_jobs_produces_mult = 0.15
+		planet_buildings_produces_mult = 0.15
+		bonus_automated_workforce_mult = 0.1
+		planet_resettlement_unemployed_destination_mult = 0.1
+	}
+
+	weight_modifier = {
+		base = 5000
+	}
+}
+
+col_libra_nanotech_foundry = {
+	icon = GFX_colony_type_foundry
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_nanotech_finish
+		}
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.1
+		planet_libra_nanite_buildings_alloys_produces_mult = 0.2
+		bonus_automated_workforce_mult = 0.1
+		planet_metallurgists_produces_mult = 0.1
+		planet_artisans_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_libra_nanotech_refinery
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_nanotech_cauldron
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_forge_complex
+			}
+			mode = add
+			mult = 4
+		}
+		modifier = {
+			add = @zone_urban
+			OR = {
+				num_zones = {
+					type = zone_industrial
+					value > 0
+				}
+				num_zones = {
+					type = zone_foundry
+					value > 0
+				}
+				num_zones = {
+					type = zone_industrial_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_foundry_nexus
+					value > 0
+				}
+			}
+		}
+		modifier = {
+			add = 10
+			or = {
+				has_building = building_foundry_upkeep_1
+				has_building = building_foundry_efficiency_1
+				has_building = building_ministry_production
+				has_building = building_production_center
+			}
+		}
+	}
+}
+
+col_libra_nanotech_refinery = {
+	icon = GFX_colony_type_refinery
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_nanotech_finish
+		}
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.1
+		planet_libra_nanite_buildings_exotic_gases_produces_mult = 0.2
+		planet_libra_nanite_buildings_rare_crystals_produces_mult = 0.2
+		planet_libra_nanite_buildings_volatile_motes_produces_mult = 0.2
+		bonus_automated_workforce_mult = 0.1
+		planet_metallurgists_produces_mult = 0.1
+		planet_artisans_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_libra_nanotech_refinery
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_nanite_transmuter
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_refinery_complex
+			}
+			mode = add
+			mult = 4
+		}
+		modifier = {
+			add = @zone_urban
+			OR = {
+				num_zones = {
+					type = zone_industrial
+					value > 0
+				}
+				num_zones = {
+					type = zone_foundry
+					value > 0
+				}
+				num_zones = {
+					type = zone_factory
+					value > 0
+				}
+				num_zones = {
+					type = zone_industrial_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_foundry_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_factory_nexus
+					value > 0
+				}
+			}
+		}
+	}
+}
+
+col_libra_nanotech_trade = {
+	icon = GFX_colony_type_urban
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_nanotech_finish
+		}
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.1
+		planet_libra_nanite_buildings_trade_produces_mult = 0.2
+		bonus_automated_workforce_mult = 0.1
+		planet_traders_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_libra_nanotech_trade
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_trade_center
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_trade_complex
+			}
+			mode = add
+			mult = 4
+		}
+		modifier = {
+			add = @zone_urban
+			OR = {
+				num_zones = {
+					type = zone_trade
+					value > 0
+				}
+				num_zones = {
+					type = zone_trade_nexus
+					value > 0
+				}
+			}
+		}
+	}
+}
+
+col_libra_nanotech_bureau = {
+	icon = GFX_colony_type_bureaucratic
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_nanotech_finish
+		}
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.1
+		planet_libra_nanite_buildings_unity_produces_mult = 0.2
+		bonus_automated_workforce_mult = 0.1
+		planet_bureaucrats_produces_mult = 0.1
+		planet_bio_trophies_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_libra_nanotech_bureau
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_unity_center
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_trade_complex
+			}
+			mode = add
+			mult = 4
+		}
+		modifier = {
+			add = @zone_urban
+			OR = {
+				num_zones = {
+					type = zone_unity
+					value > 0
+				}
+				num_zones = {
+					type = zone_unity_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_unity_spiritualist_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_unity_bio_trophy_nexus
+					value > 0
+				}
+			}
+		}
+	}
+}
+
+col_libra_nanotech_research = {
+	icon = GFX_colony_type_research
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_nanotech_finish
+		}
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.1
+		planet_libra_nanite_buildings_physics_research_produces_mult = 0.2
+		planet_libra_nanite_buildings_society_research_produces_mult = 0.2
+		planet_libra_nanite_buildings_engineering_research_produces_mult = 0.2
+		bonus_automated_workforce_mult = 0.1
+		planet_researchers_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_libra_nanotech_research
+		}
+		modifier = {
+			add = 5
+			has_building = building_astral_siphon_3
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_nanolab_1
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_nanolab_2
+			}
+			mode = add
+			mult = 4
+		}
+		modifier = {
+			add = @zone_urban
+			OR = {
+				num_zones = {
+					type = zone_research
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_engineering
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_physics
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_society
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_unity
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_physics_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_society_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_research_engineering_nexus
+					value > 0
+				}
+			}
+		}
+	}
+}
+
+col_libra_nanotech_generator = {
+	icon = GFX_colony_type_generator
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_nanotech_finish
+		}
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.1
+		planet_libra_nanite_buildings_energy_produces_mult = 0.2
+		bonus_automated_workforce_mult = 0.1
+		planet_technician_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_libra_nanotech_generator
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_power_hub
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_energy_complex
+			}
+			mode = add
+			mult = 4
+		}
+		modifier = {
+			add = @zone_urban
+			OR = {
+				num_zones = {
+					type = zone_volatile_motes_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_energy_nexus
+					value > 0
+				}
+			}
+		}
+	}
+}
+
+col_libra_nanotech_farming = {
+	icon = GFX_colony_type_farm
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_nanotech_finish
+			#country_uses_food = yes
+		}
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.1
+		planet_libra_nanite_buildings_food_produces_mult = 0.2
+		bonus_automated_workforce_mult = 0.1
+		planet_farmers_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_libra_nanotech_farming
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_food_processing
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_food_complex
+			}
+			mode = add
+			mult = 4
+		}
+		modifier = {
+			add = @zone_urban
+			OR = {
+				num_zones = {
+					type = zone_libra_food_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_exotic_gases_nexus
+					value > 0
+				}
+			}
+		}
+	}
+}
+
+col_libra_nanotech_mining = {
+	icon = GFX_colony_type_mine
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_nanotech_finish
+		}
+		is_planet_class = pc_nanotech
+		is_special_colony_type = no
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.1
+		planet_libra_nanite_buildings_minerals_produces_mult = 0.2
+		bonus_automated_workforce_mult = 0.1
+		planet_miners_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_libra_nanotech_mining
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_mineral_purification
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_libra_nanite_mineral_complex
+			}
+			mode = add
+			mult = 4
+		}
+		modifier = {
+			add = @zone_urban
+			OR = {
+				num_zones = {
+					type = zone_rare_crystals_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_betharian_nexus
+					value > 0
+				}
+				num_zones = {
+					type = zone_libra_paradox_betharian
+					value > 0
+				}
+				num_zones = {
+					type = zone_minerals_nexus
+					value > 0
+				}
+			}
+		}
+	}
+}

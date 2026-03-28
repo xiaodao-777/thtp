@@ -1,0 +1,42 @@
+tradition_libra_pendragon = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_pendragon_adopt } }
+		text = tradition_libra_pendragon_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_pendragon_adopt }
+		text = tradition_libra_pendragon_adopt_desc
+	}
+	tree_template = "tree_21_12"
+	adoption_bonus = "tr_libra_pendragon_adopt"
+	finish_bonus = "tr_libra_pendragon_finish"
+	traditions = {
+		"tr_libra_pendragon_1"
+		"tr_libra_pendragon_2"
+		"tr_libra_pendragon_3"
+		"tr_libra_pendragon_4"
+		"tr_libra_pendragon_5"
+	}
+
+	ai_weight = {
+		factor = 24
+		modifier = {
+			add = 26
+			any_neighbor_country = {
+				or = {
+					is_ai = no
+					libra_crisis_ap_check = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 2.5
+			has_tradition = tr_libra_victory_adopt
+		}
+		modifier = {
+			set = 120
+			num_tradition_categories < 2
+			has_origin = origin_libra_centurion
+		}
+	}
+}

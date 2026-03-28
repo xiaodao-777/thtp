@@ -1,0 +1,1011 @@
+portraits = {
+	libra_cute_1_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_1_1.dds" }
+	libra_cute_1_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_1_2.dds" }
+	libra_cute_1_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_1_3.dds" }
+	libra_cute_1_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_1_4.dds" }
+	libra_cute_1_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_1_5.dds" }
+	libra_cute_1_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_1_6.dds" }
+
+	libra_cute_2_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_2_1.dds" }
+	libra_cute_2_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_2_2.dds" }
+	libra_cute_2_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_2_3.dds" }
+	libra_cute_2_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_2_4.dds" }
+	libra_cute_2_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_2_5.dds" }
+	libra_cute_2_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_2_6.dds" }
+
+	libra_cute_3_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_3_1.dds" }
+	libra_cute_3_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_3_2.dds" }
+	libra_cute_3_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_3_3.dds" }
+	libra_cute_3_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_3_4.dds" }
+	libra_cute_3_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_3_5.dds" }
+	libra_cute_3_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_3_6.dds" }
+	libra_cute_3_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_3_7.dds" }
+	libra_cute_3_8 = { texturefile = "gfx/models/portraits/libraap/libra_cute_3_8.dds" }
+
+	libra_cute_4_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_4_1.dds" }
+	libra_cute_4_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_4_2.dds" }
+	libra_cute_4_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_4_3.dds" }
+	libra_cute_4_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_4_4.dds" }
+	libra_cute_4_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_4_5.dds" }
+	libra_cute_4_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_4_6.dds" }
+
+	libra_cute_5_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_5_1.dds" }
+	libra_cute_5_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_5_2.dds" }
+	libra_cute_5_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_5_3.dds" }
+	libra_cute_5_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_5_4.dds" }
+
+	libra_cute_6_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_6_1.dds" }
+	libra_cute_6_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_6_2.dds" }
+	libra_cute_6_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_6_3.dds" }
+	libra_cute_6_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_6_4.dds" }
+
+	libra_cute_7_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_7_1.dds" }
+	libra_cute_7_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_7_2.dds" }
+	libra_cute_7_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_7_3.dds" }
+	libra_cute_7_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_7_4.dds" }
+	libra_cute_7_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_7_5.dds" }
+	libra_cute_7_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_7_6.dds" }
+	libra_cute_7_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_7_7.dds" }
+	libra_cute_7_8 = { texturefile = "gfx/models/portraits/libraap/libra_cute_7_8.dds" }
+
+	libra_cute_8_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_1.dds" }
+	libra_cute_8_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_2.dds" }
+	libra_cute_8_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_3.dds" }
+	libra_cute_8_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_4.dds" }
+	libra_cute_8_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_5.dds" }
+	libra_cute_8_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_6.dds" }
+	libra_cute_8_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_7.dds" }
+	libra_cute_8_8 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_8.dds" }
+	libra_cute_8_9 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_9.dds" }
+	libra_cute_8_10 = { texturefile = "gfx/models/portraits/libraap/libra_cute_8_10.dds" }
+
+	libra_cute_9_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_9_1.dds" }
+	libra_cute_9_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_9_2.dds" }
+	libra_cute_9_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_9_3.dds" }
+	libra_cute_9_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_9_4.dds" }
+	libra_cute_9_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_9_5.dds" }
+	libra_cute_9_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_9_6.dds" }
+	libra_cute_9_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_9_7.dds" }
+
+	libra_cute_10_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_10_1.dds" }
+	libra_cute_10_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_10_2.dds" }
+	libra_cute_10_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_10_3.dds" }
+	libra_cute_10_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_10_4.dds" }
+	libra_cute_10_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_10_5.dds" }
+	libra_cute_10_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_10_6.dds" }
+	libra_cute_10_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_10_7.dds" }
+
+	libra_cute_11_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_11_1.dds" }
+	libra_cute_11_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_11_2.dds" }
+	libra_cute_11_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_11_3.dds" }
+	libra_cute_11_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_11_4.dds" }
+	libra_cute_11_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_11_5.dds" }
+	libra_cute_11_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_11_6.dds" }
+	libra_cute_11_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_11_7.dds" }
+
+	libra_cute_12_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_12_1.dds" }
+	libra_cute_12_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_12_2.dds" }
+	libra_cute_12_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_12_3.dds" }
+	libra_cute_12_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_12_4.dds" }
+	libra_cute_12_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_12_5.dds" }
+	libra_cute_12_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_12_6.dds" }
+	libra_cute_12_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_12_7.dds" }
+	libra_cute_12_8 = { texturefile = "gfx/models/portraits/libraap/libra_cute_12_8.dds" }
+
+	libra_cute_13_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_1.dds" }
+	libra_cute_13_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_2.dds" }
+	libra_cute_13_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_3.dds" }
+	libra_cute_13_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_4.dds" }
+	libra_cute_13_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_5.dds" }
+	libra_cute_13_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_6.dds" }
+	libra_cute_13_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_7.dds" }
+	libra_cute_13_8 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_8.dds" }
+	libra_cute_13_9 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_9.dds" }
+	libra_cute_13_10 = { texturefile = "gfx/models/portraits/libraap/libra_cute_13_10.dds" }
+
+	libra_cute_14_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_1.dds" }
+	libra_cute_14_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_2.dds" }
+	libra_cute_14_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_3.dds" }
+	libra_cute_14_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_4.dds" }
+	libra_cute_14_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_5.dds" }
+	libra_cute_14_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_6.dds" }
+	libra_cute_14_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_7.dds" }
+	libra_cute_14_8 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_8.dds" }
+	libra_cute_14_9 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_9.dds" }
+	libra_cute_14_10 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_10.dds" }
+	libra_cute_14_11 = { texturefile = "gfx/models/portraits/libraap/libra_cute_14_11.dds" }
+
+	libra_cute_15_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_15_1.dds" }
+	libra_cute_15_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_15_2.dds" }
+	libra_cute_15_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_15_3.dds" }
+	libra_cute_15_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_15_4.dds" }
+	libra_cute_15_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_15_5.dds" }
+	libra_cute_15_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_15_6.dds" }
+	libra_cute_15_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_15_7.dds" }
+
+	libra_cute_16_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_16_1.dds" }
+	libra_cute_16_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_16_2.dds" }
+	libra_cute_16_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_16_3.dds" }
+	libra_cute_16_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_16_4.dds" }
+	libra_cute_16_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_16_5.dds" }
+	libra_cute_16_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_16_6.dds" }
+	libra_cute_16_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_16_7.dds" }
+	libra_cute_16_8 = { texturefile = "gfx/models/portraits/libraap/libra_cute_16_8.dds" }
+
+	libra_cute_17_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_1.dds" }
+	libra_cute_17_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_2.dds" }
+	libra_cute_17_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_3.dds" }
+	libra_cute_17_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_4.dds" }
+	libra_cute_17_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_5.dds" }
+	libra_cute_17_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_6.dds" }
+	libra_cute_17_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_7.dds" }
+	libra_cute_17_8 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_8.dds" }
+	libra_cute_17_9 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_9.dds" }
+	libra_cute_17_10 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_10.dds" }
+	libra_cute_17_11 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_11.dds" }
+	libra_cute_17_12 = { texturefile = "gfx/models/portraits/libraap/libra_cute_17_12.dds" }
+
+	libra_cute_18_1 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_1.dds" }
+	libra_cute_18_2 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_2.dds" }
+	libra_cute_18_3 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_3.dds" }
+	libra_cute_18_4 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_4.dds" }
+	libra_cute_18_5 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_5.dds" }
+	libra_cute_18_6 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_6.dds" }
+	libra_cute_18_7 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_7.dds" }
+	libra_cute_18_8 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_8.dds" }
+	libra_cute_18_9 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_9.dds" }
+	libra_cute_18_10 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_10.dds" }
+	libra_cute_18_11 = { texturefile = "gfx/models/portraits/libraap/libra_cute_18_11.dds" }
+}
+
+portrait_groups = {
+	libra_cute_1 = {
+		default = libra_cute_1_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_1_1
+					libra_cute_1_2
+					libra_cute_1_3
+					libra_cute_1_4
+					libra_cute_1_5
+					libra_cute_1_6
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_1_1
+					libra_cute_1_2
+					libra_cute_1_3
+					libra_cute_1_4
+					libra_cute_1_5
+					libra_cute_1_6
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_1_1
+					libra_cute_1_2
+					libra_cute_1_3
+					libra_cute_1_4
+					libra_cute_1_5
+					libra_cute_1_6
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_2 = {
+		default = libra_cute_2_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_2_1
+					libra_cute_2_2
+					libra_cute_2_3
+					libra_cute_2_4
+					libra_cute_2_5
+					libra_cute_2_6
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_2_1
+					libra_cute_2_2
+					libra_cute_2_3
+					libra_cute_2_4
+					libra_cute_2_5
+					libra_cute_2_6
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_2_1
+					libra_cute_2_2
+					libra_cute_2_3
+					libra_cute_2_4
+					libra_cute_2_5
+					libra_cute_2_6
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_3 = {
+		default = libra_cute_3_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_3_1
+					libra_cute_3_2
+					libra_cute_3_3
+					libra_cute_3_4
+					libra_cute_3_5
+					libra_cute_3_6
+					libra_cute_3_7
+					libra_cute_3_8
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_3_1
+					libra_cute_3_2
+					libra_cute_3_3
+					libra_cute_3_4
+					libra_cute_3_5
+					libra_cute_3_6
+					libra_cute_3_7
+					libra_cute_3_8
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_3_1
+					libra_cute_3_2
+					libra_cute_3_3
+					libra_cute_3_4
+					libra_cute_3_5
+					libra_cute_3_6
+					libra_cute_3_7
+					libra_cute_3_8
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_4 = {
+		default = libra_cute_4_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_4_1
+					libra_cute_4_2
+					libra_cute_4_3
+					libra_cute_4_4
+					libra_cute_4_5
+					libra_cute_4_6
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_4_1
+					libra_cute_4_2
+					libra_cute_4_3
+					libra_cute_4_4
+					libra_cute_4_5
+					libra_cute_4_6
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_4_1
+					libra_cute_4_2
+					libra_cute_4_3
+					libra_cute_4_4
+					libra_cute_4_5
+					libra_cute_4_6
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_5 = {
+		default = libra_cute_5_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_5_1
+					libra_cute_5_2
+					libra_cute_5_3
+					libra_cute_5_4
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_5_1
+					libra_cute_5_2
+					libra_cute_5_3
+					libra_cute_5_4
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_5_1
+					libra_cute_5_2
+					libra_cute_5_3
+					libra_cute_5_4
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_6 = {
+		default = libra_cute_6_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_6_1
+					libra_cute_6_2
+					libra_cute_6_3
+					libra_cute_6_4
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_6_1
+					libra_cute_6_2
+					libra_cute_6_3
+					libra_cute_6_4
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_6_1
+					libra_cute_6_2
+					libra_cute_6_3
+					libra_cute_6_4
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_7 = {
+		default = libra_cute_7_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_7_1
+					libra_cute_7_2
+					libra_cute_7_3
+					libra_cute_7_4
+					libra_cute_7_5
+					libra_cute_7_6
+					libra_cute_7_7
+					libra_cute_7_8
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_7_1
+					libra_cute_7_2
+					libra_cute_7_3
+					libra_cute_7_4
+					libra_cute_7_5
+					libra_cute_7_6
+					libra_cute_7_7
+					libra_cute_7_8
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_7_1
+					libra_cute_7_2
+					libra_cute_7_3
+					libra_cute_7_4
+					libra_cute_7_5
+					libra_cute_7_6
+					libra_cute_7_7
+					libra_cute_7_8
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_8 = {
+		default = libra_cute_8_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_8_1
+					libra_cute_8_2
+					libra_cute_8_3
+					libra_cute_8_4
+					libra_cute_8_5
+					libra_cute_8_6
+					libra_cute_8_7
+					libra_cute_8_8
+					libra_cute_8_9
+					libra_cute_8_10
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_8_1
+					libra_cute_8_2
+					libra_cute_8_3
+					libra_cute_8_4
+					libra_cute_8_5
+					libra_cute_8_6
+					libra_cute_8_7
+					libra_cute_8_8
+					libra_cute_8_9
+					libra_cute_8_10
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_8_1
+					libra_cute_8_2
+					libra_cute_8_3
+					libra_cute_8_4
+					libra_cute_8_5
+					libra_cute_8_6
+					libra_cute_8_7
+					libra_cute_8_8
+					libra_cute_8_9
+					libra_cute_8_10
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_9 = {
+		default = libra_cute_9_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_9_1
+					libra_cute_9_2
+					libra_cute_9_3
+					libra_cute_9_4
+					libra_cute_9_5
+					libra_cute_9_6
+					libra_cute_9_7
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_9_1
+					libra_cute_9_2
+					libra_cute_9_3
+					libra_cute_9_4
+					libra_cute_9_5
+					libra_cute_9_6
+					libra_cute_9_7
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_9_1
+					libra_cute_9_2
+					libra_cute_9_3
+					libra_cute_9_4
+					libra_cute_9_5
+					libra_cute_9_6
+					libra_cute_9_7
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_10 = {
+		default = libra_cute_10_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_10_1
+					libra_cute_10_2
+					libra_cute_10_3
+					libra_cute_10_4
+					libra_cute_10_5
+					libra_cute_10_6
+					libra_cute_10_7
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_10_1
+					libra_cute_10_2
+					libra_cute_10_3
+					libra_cute_10_4
+					libra_cute_10_5
+					libra_cute_10_6
+					libra_cute_10_7
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_10_1
+					libra_cute_10_2
+					libra_cute_10_3
+					libra_cute_10_4
+					libra_cute_10_5
+					libra_cute_10_6
+					libra_cute_10_7
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_11 = {
+		default = libra_cute_11_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_11_1
+					libra_cute_11_2
+					libra_cute_11_3
+					libra_cute_11_4
+					libra_cute_11_5
+					libra_cute_11_6
+					libra_cute_11_7
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_11_1
+					libra_cute_11_2
+					libra_cute_11_3
+					libra_cute_11_4
+					libra_cute_11_5
+					libra_cute_11_6
+					libra_cute_11_7
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_11_1
+					libra_cute_11_2
+					libra_cute_11_3
+					libra_cute_11_4
+					libra_cute_11_5
+					libra_cute_11_6
+					libra_cute_11_7
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_12 = {
+		default = libra_cute_12_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_12_1
+					libra_cute_12_2
+					libra_cute_12_3
+					libra_cute_12_4
+					libra_cute_12_5
+					libra_cute_12_6
+					libra_cute_12_7
+					libra_cute_12_8
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_12_1
+					libra_cute_12_2
+					libra_cute_12_3
+					libra_cute_12_4
+					libra_cute_12_5
+					libra_cute_12_6
+					libra_cute_12_7
+					libra_cute_12_8
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_12_1
+					libra_cute_12_2
+					libra_cute_12_3
+					libra_cute_12_4
+					libra_cute_12_5
+					libra_cute_12_6
+					libra_cute_12_7
+					libra_cute_12_8
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_13 = {
+		default = libra_cute_13_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_13_1
+					libra_cute_13_2
+					libra_cute_13_3
+					libra_cute_13_4
+					libra_cute_13_5
+					libra_cute_13_6
+					libra_cute_13_7
+					libra_cute_13_8
+					libra_cute_13_9
+					libra_cute_13_10
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_13_1
+					libra_cute_13_2
+					libra_cute_13_3
+					libra_cute_13_4
+					libra_cute_13_5
+					libra_cute_13_6
+					libra_cute_13_7
+					libra_cute_13_8
+					libra_cute_13_9
+					libra_cute_13_10
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_13_1
+					libra_cute_13_2
+					libra_cute_13_3
+					libra_cute_13_4
+					libra_cute_13_5
+					libra_cute_13_6
+					libra_cute_13_7
+					libra_cute_13_8
+					libra_cute_13_9
+					libra_cute_13_10
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_14 = {
+		default = libra_cute_14_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_14_1
+					libra_cute_14_2
+					libra_cute_14_3
+					libra_cute_14_4
+					libra_cute_14_5
+					libra_cute_14_6
+					libra_cute_14_7
+					libra_cute_14_8
+					libra_cute_14_9
+					libra_cute_14_10
+					libra_cute_14_11
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_14_1
+					libra_cute_14_2
+					libra_cute_14_3
+					libra_cute_14_4
+					libra_cute_14_5
+					libra_cute_14_6
+					libra_cute_14_7
+					libra_cute_14_8
+					libra_cute_14_9
+					libra_cute_14_10
+					libra_cute_14_11
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_14_1
+					libra_cute_14_2
+					libra_cute_14_3
+					libra_cute_14_4
+					libra_cute_14_5
+					libra_cute_14_6
+					libra_cute_14_7
+					libra_cute_14_8
+					libra_cute_14_9
+					libra_cute_14_10
+					libra_cute_14_11
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_15 = {
+		default = libra_cute_15_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_15_1
+					libra_cute_15_2
+					libra_cute_15_3
+					libra_cute_15_4
+					libra_cute_15_5
+					libra_cute_15_6
+					libra_cute_15_7
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_15_1
+					libra_cute_15_2
+					libra_cute_15_3
+					libra_cute_15_4
+					libra_cute_15_5
+					libra_cute_15_6
+					libra_cute_15_7
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_15_1
+					libra_cute_15_2
+					libra_cute_15_3
+					libra_cute_15_4
+					libra_cute_15_5
+					libra_cute_15_6
+					libra_cute_15_7
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_16 = {
+		default = libra_cute_16_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_16_1
+					libra_cute_16_2
+					libra_cute_16_3
+					libra_cute_16_4
+					libra_cute_16_5
+					libra_cute_16_6
+					libra_cute_16_7
+					libra_cute_16_8
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_16_1
+					libra_cute_16_2
+					libra_cute_16_3
+					libra_cute_16_4
+					libra_cute_16_5
+					libra_cute_16_6
+					libra_cute_16_7
+					libra_cute_16_8
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_16_1
+					libra_cute_16_2
+					libra_cute_16_3
+					libra_cute_16_4
+					libra_cute_16_5
+					libra_cute_16_6
+					libra_cute_16_7
+					libra_cute_16_8
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_17 = {
+		default = libra_cute_17_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_17_1
+					libra_cute_17_2
+					libra_cute_17_3
+					libra_cute_17_4
+					libra_cute_17_5
+					libra_cute_17_6
+					libra_cute_17_7
+					libra_cute_17_8
+					libra_cute_17_9
+					libra_cute_17_10
+					libra_cute_17_11
+					libra_cute_17_12
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_17_1
+					libra_cute_17_2
+					libra_cute_17_3
+					libra_cute_17_4
+					libra_cute_17_5
+					libra_cute_17_6
+					libra_cute_17_7
+					libra_cute_17_8
+					libra_cute_17_9
+					libra_cute_17_10
+					libra_cute_17_11
+					libra_cute_17_12
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_17_1
+					libra_cute_17_2
+					libra_cute_17_3
+					libra_cute_17_4
+					libra_cute_17_5
+					libra_cute_17_6
+					libra_cute_17_7
+					libra_cute_17_8
+					libra_cute_17_9
+					libra_cute_17_10
+					libra_cute_17_11
+					libra_cute_17_12
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	libra_cute_18 = {
+		default = libra_cute_18_1
+		species = {
+			add = {
+				portraits = {
+					libra_cute_18_1
+					libra_cute_18_2
+					libra_cute_18_3
+					libra_cute_18_4
+					libra_cute_18_5
+					libra_cute_18_6
+					libra_cute_18_7
+					libra_cute_18_8
+					libra_cute_18_9
+					libra_cute_18_10
+					libra_cute_18_11
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					libra_cute_18_1
+					libra_cute_18_2
+					libra_cute_18_3
+					libra_cute_18_4
+					libra_cute_18_5
+					libra_cute_18_6
+					libra_cute_18_7
+					libra_cute_18_8
+					libra_cute_18_9
+					libra_cute_18_10
+					libra_cute_18_11
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					libra_cute_18_1
+					libra_cute_18_2
+					libra_cute_18_3
+					libra_cute_18_4
+					libra_cute_18_5
+					libra_cute_18_6
+					libra_cute_18_7
+					libra_cute_18_8
+					libra_cute_18_9
+					libra_cute_18_10
+					libra_cute_18_11
+				}
+			}
+		}
+	}
+}

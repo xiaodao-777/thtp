@@ -1,0 +1,712 @@
+tech_libra_overlord_directive = {
+	cost = @tier1cost2
+	area = society
+	tier = 1
+	category = { statecraft }
+	weight = @tier1weight2
+
+	modifier = {
+		divided_patrongage_max_subjects = 1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			is_overlord = no
+		}
+		modifier = {
+			factor = 2
+			subjects > 2
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			subjects > 1
+		}
+		modifier = {
+			factor = 3
+			subjects > 3
+		}
+	}
+}
+
+#
+
+tech_libra_interstellar_logistics_planning = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { statecraft }
+	weight = @tier2weight2
+
+	modifier = {
+		planet_traders_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.4
+			is_gestalt = no
+			not = { has_technology = tech_space_trading }
+		}
+		modifier = {
+			factor = 1.25
+			or = {
+				has_tradition = tr_mercantile_adopt
+				has_tradition = tr_logistics_adopt
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 10
+			or = {
+				is_gestalt = yes
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+}
+
+# ####################
+# Gestalt
+# ####################
+
+# Maintenance
+
+tech_libra_gestalt_maintenance_1 = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	category = { new_worlds }
+	weight = @tier1weight1
+	is_insight = yes
+
+	gateway = infrastructure
+
+	potential = {
+		is_gestalt = yes
+	}
+
+	modifier = {
+		planet_amenities_no_happiness_add = 500
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_libra_frugality_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+tech_libra_gestalt_maintenance_2 = {
+	cost = @tier2cost1
+	area = society
+	tier = 2
+	category = { new_worlds }
+	prerequisites = { "tech_libra_gestalt_maintenance_1" }
+	weight = @tier2weight1
+
+	potential = {
+		is_gestalt = yes
+	}
+
+	modifier = {
+		planet_amenities_no_happiness_add = 500
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_libra_frugality_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+tech_libra_gestalt_maintenance_3 = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { new_worlds }
+	prerequisites = { "tech_libra_gestalt_maintenance_2" "tech_colonial_centralization" }
+	weight = @tier3weight1
+
+	potential = {
+		is_gestalt = yes
+	}
+
+	modifier = {
+		planet_amenities_no_happiness_add = 500
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_libra_frugality_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+tech_libra_gestalt_maintenance_4 = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	is_rare = yes
+	category = { new_worlds }
+	prerequisites = { "tech_libra_gestalt_maintenance_3" "tech_galactic_administration" }
+	weight = @tier4weight1
+
+	modifier = {
+		planet_amenities_no_happiness_add = 1000
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_synchronicity_adopt
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_libra_frugality_adopt
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_gestalt_maintenance_4
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+# Research
+
+tech_libra_gestalt_research_1 = {
+	cost = @tier1cost3
+	area = physics
+	tier = 1
+	category = { computing }
+	prerequisites = { "tech_libra_gestalt_maintenance_1" "tech_basic_science_lab_1" }
+	weight = @tier1weight3
+
+	potential = {
+		is_gestalt = yes
+	}
+
+	modifier = {
+		planet_researchers_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_discovery_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+tech_libra_gestalt_research_2 = {
+	cost = @tier2cost3
+	area = physics
+	tier = 2
+	category = { computing }
+	prerequisites = { "tech_libra_gestalt_research_1" "tech_basic_science_lab_2" }
+	weight = @tier2weight3
+
+	potential = {
+		is_gestalt = yes
+	}
+
+	modifier = {
+		planet_researchers_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_discovery_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+tech_libra_gestalt_research_3 = {
+	cost = @tier3cost3
+	area = physics
+	tier = 3
+	category = { computing }
+	prerequisites = { "tech_libra_gestalt_research_2" "tech_basic_science_lab_3" }
+	weight = @tier3weight3
+
+	potential = {
+		is_gestalt = yes
+	}
+
+	modifier = {
+		planet_researchers_produces_mult = 0.1
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_GLPSR_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_GLPSR_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_discovery_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+tech_libra_analyze_node_optimisation = {
+	cost = @tier4cost2
+	area = society
+	tier = 4
+	is_rare = yes
+	category = { statecraft }
+	prerequisites = { "tech_libra_gestalt_research_3" }
+	weight = @tier4weight2
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 1.4
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 0.1
+			not = { has_technology = tech_libra_interstellar_logistics_planning }
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_analyze_node_optimisation
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+# Logistics
+
+tech_libra_gestalt_trade_1 = {
+	cost = @tier1cost3
+	area = engineering
+	tier = 1
+	category = { industry }
+	prerequisites = { "tech_libra_gestalt_maintenance_1" "tech_planetary_government" }
+	weight = @tier1weight3
+
+	potential = {
+		is_gestalt = yes
+	}
+
+	modifier = {
+		planet_traders_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_logistics_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+tech_libra_gestalt_trade_2 = {
+	cost = @tier2cost3
+	area = engineering
+	tier = 2
+	category = { industry }
+	prerequisites = { "tech_libra_gestalt_trade_1" "tech_libra_gestalt_maintenance_2" }
+	weight = @tier2weight3
+
+	potential = {
+		is_gestalt = yes
+	}
+
+	modifier = {
+		planet_traders_produces_mult = 0.1
+		country_trade_fee = -0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_logistics_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+tech_libra_gestalt_trade_3 = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	category = { industry }
+	prerequisites = { "tech_libra_gestalt_trade_2" "tech_libra_gestalt_maintenance_3" }
+	weight = @tier3weight3
+
+	potential = {
+		is_gestalt = yes
+	}
+
+	modifier = {
+		planet_traders_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_tradition = tr_logistics_adopt
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+tech_libra_logistics_node_optimisation = {
+	cost = @tier4cost2
+	area = society
+	tier = 4
+	is_rare = yes
+	category = { statecraft }
+	prerequisites = { "tech_libra_interstellar_logistics_planning" "tech_libra_gestalt_trade_3" }
+	weight = @tier4weight2
+
+	modifier = {
+		planet_traders_trade_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 1.4
+			has_tradition = tr_logistics_adopt
+		}
+		modifier = {
+			factor = 0.1
+			not = { has_technology = tech_libra_interstellar_logistics_planning }
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_logistics_node_optimisation
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+#
+
+tech_libra_gestalt_power_hub = {
+	cost = @tier3cost3
+	area = physics
+	tier = 3
+	is_rare = yes
+	category = { field_manipulation }
+	prerequisites = { "tech_power_hub_2" "tech_unity_of_purpose" }
+	weight = @tier3weight3
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_GLPSE_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_GLPSE_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			nor = {
+				has_technology = tech_libra_hive_production_methods
+				has_technology = tech_libra_machine_processing_algorithms
+			}
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_prosperity_adopt
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_gestalt_power_hub
+		}
+	}
+
+	ai_weight = {
+		factor = @energy_grid_ai_factor
+	}
+}
+
+tech_libra_gestalt_food_processing = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	is_rare = yes
+	category = { biology }
+	prerequisites = { "tech_food_processing_2" "tech_unity_of_purpose" }
+	weight = @tier3weight3
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_GLPSF_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_GLPSF_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			nor = {
+				has_technology = tech_libra_hive_production_methods
+				has_technology = tech_libra_machine_processing_algorithms
+			}
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_prosperity_adopt
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_gestalt_food_processing
+		}
+	}
+
+	ai_weight = {
+		factor = @farming_building_ai_weight_factor
+	}
+}
+
+tech_libra_gestalt_mineral_purification = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	is_rare = yes
+	category = { industry }
+	prerequisites = { "tech_mineral_purification_2" "tech_unity_of_purpose" }
+	weight = @tier3weight3
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_GLPSM_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_GLPSM_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			nor = {
+				has_technology = tech_libra_hive_production_methods
+				has_technology = tech_libra_machine_processing_algorithms
+			}
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_prosperity_adopt
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_gestalt_mineral_purification
+		}
+	}
+
+	ai_weight = {
+		factor = @ai_mining_building_factor
+	}
+}
+
+tech_libra_gestalt_combat_training = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	is_rare = yes
+	category = { military_theory }
+	prerequisites = { "tech_global_defense_grid" "tech_unity_of_purpose" }
+	weight = @tier4weight1
+
+	modifier = {
+		planet_soldiers_trade_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			nor = {
+				has_technology = tech_libra_hive_production_methods
+				has_technology = tech_libra_machine_processing_algorithms
+			}
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_supremacy_adopt
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_gestalt_combat_training
+		}
+	}
+
+	ai_weight = {
+		factor = 3
+	}
+}
+
+# Hive
+
+tech_libra_hive_production_methods = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	is_rare = yes
+	category = { statecraft }
+	prerequisites = { "tech_collective_production_methods" "tech_encryption_1" "tech_decryption_1" }
+	weight = @tier4weight1
+
+	gateway = capital
+
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_jobs_upkeep_mult = 0.1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 2
+			has_tradition = tr_libra_overclock_adopt
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_hive_production_methods
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+# Machine
+
+tech_libra_machine_processing_algorithms = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	is_rare = yes
+	category = { statecraft }
+	prerequisites = { "tech_resource_processing_algorithms" "tech_encryption_1" "tech_decryption_1" }
+	weight = @tier4weight1
+
+	gateway = capital
+
+	modifier = {
+		planet_pop_assembly_add = 1
+		planet_jobs_produces_mult = 0.1
+		planet_jobs_upkeep_mult = 0.1
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_modularity_finish
+		}
+		modifier = {
+			planet_pop_assembly_add = 2
+			planet_jobs_produces_mult = 0.1
+			planet_jobs_upkeep_mult = 0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_virtuality_finish
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.15
+			planet_jobs_upkeep_mult = 0.1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_psionics_shroud_finish
+		}
+		modifier = {
+			planet_pop_assembly_add = 1
+			planet_jobs_produces_mult = 0.1
+		}
+		weight = {
+			factor = 3
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 2
+			has_tradition = tr_libra_overclock_adopt
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_machine_processing_algorithms
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}

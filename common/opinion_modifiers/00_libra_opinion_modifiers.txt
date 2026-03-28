@@ -1,0 +1,180 @@
+opinion_libra_third_choice = {
+	opinion = {
+		base = 20
+	}
+
+	max = 300
+
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}
+
+opinion_libra_official_delegate_destiny_d = {
+	opinion = {
+		base = 50
+	}
+
+	max = 300
+
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}
+
+opinion_libra_cutefied_world = {
+	trigger = {
+		or = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+		from = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_cutefied_world
+		}
+	}
+	opinion = {
+		base = 50
+		modifier = {
+			add = 50
+			is_country_type = default
+		}
+	}
+}
+
+opinion_libra_hurricane_eye = {
+	opinion = {
+		base = -30
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}
+
+#
+
+opinion_libra_crimson_nights_them = {
+	trigger = {
+		is_country_type = default
+		from = {
+			has_origin = origin_libra_crimson_nights
+			nand = {
+				has_tradition = tr_libra_crimson_vampire_4
+				or = {
+					has_country_flag = libra_crimson_vampire_peace
+					has_tradition = tr_libra_crimson_ancestor_3
+				}
+			}
+		}
+		OR = {
+			is_subject = no
+			AND = {
+				is_subject = yes
+				FROM = {
+					NOT = { is_overlord_to = PREV }
+				}
+				any_agreement = {
+					NOT = {
+						has_term_value = {
+							term = subject_diplomacy
+							value = subject_can_not_do_diplomacy
+						}
+					}
+				}
+			}
+		}
+	}
+	opinion = {
+		base = -200
+	}
+}
+
+opinion_libra_antientropy_instruction = {
+	trigger = {
+		has_origin = origin_libra_antientropy_instruction
+	}
+	opinion = {
+		base = -200
+		modifier = {
+			factor = 0.5
+			is_in_federation_with = from
+		}
+	}
+}
+
+opinion_libra_antientropy_instruction_from = {
+	trigger = {
+		is_country_type = default
+		from = { has_origin = origin_libra_antientropy_instruction }
+		OR = {
+			is_subject = no
+			AND = {
+				is_subject = yes
+				FROM = {
+					NOT = { is_overlord_to = PREV }
+				}
+			}
+		}
+	}
+	opinion = {
+		base = -200
+		modifier = {
+			factor = 0.5
+			is_in_federation_with = from
+		}
+	}
+}
+
+opinion_libra_beautification_function = {
+	trigger = {
+		is_country_type = default
+		from = { has_valid_civic = civic_libra_eden_accord_j }
+		OR = {
+			is_subject = no
+			AND = {
+				is_subject = yes
+				FROM = {
+					NOT = { is_overlord_to = PREV }
+				}
+				any_agreement = {
+					NOT = {
+						has_term_value = {
+							term = subject_diplomacy
+							value = subject_can_not_do_diplomacy
+						}
+					}
+				}
+			}
+		}
+	}
+	opinion = {
+		base = 150
+	}
+}
+
+opinion_libra_may_storm_xenophile_b = {
+	trigger = {
+		is_country_type = default
+		has_origin = origin_libra_may_storm
+		has_valid_civic = civic_libra_may_storm_xenophile_b
+		from = {
+			nor = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_authority = auth_dictatorial
+				has_authority = auth_imperial
+			}
+		}
+	}
+	opinion = {
+		base = 150
+	}
+}

@@ -1,0 +1,44 @@
+tradition_libra_adventure = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_adventure_adopt } }
+		text = tradition_libra_adventure_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_adventure_adopt }
+		text = tradition_libra_adventure_adopt_desc
+	}
+	tree_template = "tree_12_12"
+	adoption_bonus = "tr_libra_adventure_adopt"
+	finish_bonus = "tr_libra_adventure_finish"
+	traditions = {
+		"tr_libra_adventure_1"
+		"tr_libra_adventure_2"
+		"tr_libra_adventure_3"
+		"tr_libra_adventure_4"
+		"tr_libra_adventure_5"
+	}
+
+	potential = {
+		has_grand_archive_dlc = yes
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 4
+			or = {
+				is_eager_explorer_empire = yes
+				libra_ai_preferences_collection = yes
+				libra_ai_preferences_expansion = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			num_tradition_categories < 3
+		}
+		modifier = {
+			factor = 2
+			num_tradition_categories < 2
+		}
+	}
+}

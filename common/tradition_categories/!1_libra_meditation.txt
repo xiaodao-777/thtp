@@ -1,0 +1,31 @@
+tradition_libra_meditation = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_meditation_adopt } }
+		text = tradition_libra_meditation_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_meditation_adopt }
+		text = tradition_libra_meditation_adopt_desc
+	}
+	tree_template = "tree_11_11_21"
+	adoption_bonus = "tr_libra_meditation_adopt"
+	finish_bonus = "tr_libra_meditation_finish"
+	traditions = {
+		"tr_libra_meditation_1"
+		"tr_libra_meditation_2"
+		"tr_libra_meditation_3"
+		"tr_libra_meditation_4"
+		"tr_libra_meditation_5"
+	}
+
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 2
+			or = {
+				libra_ai_preferences_leader = yes
+				libra_ai_preferences_technology = yes
+			}
+		}
+	}
+}

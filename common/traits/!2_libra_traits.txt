@@ -1,0 +1,6476 @@
+
+# #############
+# Psalm of Waves
+#############
+
+leader_trait_libra_psalm_of_waves_commander = {
+	force_councilor_trait = yes
+	custom_subtitle = libra_common_genetic_commander_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = machine
+		CLASS = commander
+		ICON = "GFX_leader_trait_aquatic_admiral"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	army_modifier = {
+		army_health = 0.1
+	}
+	fleet_modifier = {
+		ship_hull_mult = 0.1
+	}
+	planet_modifier = {
+		country_energy_produces_mult = 0.1
+		country_minerals_produces_mult = 0.1
+		country_food_produces_mult = 0.1
+	}
+	sector_modifier = {
+		country_energy_produces_mult = 0.05
+		country_minerals_produces_mult = 0.05
+		country_food_produces_mult = 0.05
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_psalm_of_waves_commander_2 = {
+	force_councilor_trait = yes
+	custom_subtitle = libra_veteran_genetic_commander_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = machine
+		CLASS = commander
+		ICON = "GFX_leader_trait_aquatic_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	army_modifier = {
+		army_morale = 0.2
+		army_health = 0.2
+	}
+	fleet_modifier = {
+		ship_hull_mult = 0.2
+		ship_weapon_range_mult = 0.2
+	}
+	planet_modifier = {
+		country_energy_produces_mult = 0.2
+		country_minerals_produces_mult = 0.2
+		country_food_produces_mult = 0.2
+	}
+	sector_modifier = {
+		country_energy_produces_mult = 0.1
+		country_minerals_produces_mult = 0.1
+		country_food_produces_mult = 0.1
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_psalm_of_waves_commander_3 = {
+	force_councilor_trait = yes
+	custom_subtitle = libra_paragon_genetic_commander_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = machine
+		CLASS = commander
+		ICON = "GFX_leader_trait_aquatic_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	army_modifier = {
+		army_damage_mult = 0.3
+		army_morale = 0.3
+		army_health = 0.3
+	}
+	fleet_modifier = {
+		ship_hull_mult = 0.3
+		ship_hull_damage_mult = 0.3
+		ship_weapon_range_mult = 0.3
+	}
+	planet_modifier = {
+		country_energy_produces_mult = 0.4
+		country_minerals_produces_mult = 0.4
+		country_food_produces_mult = 0.4
+	}
+	sector_modifier = {
+		country_energy_produces_mult = 0.2
+		country_minerals_produces_mult = 0.2
+		country_food_produces_mult = 0.2
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_psalm_of_waves_official = {
+	force_councilor_trait = yes
+	custom_subtitle = libra_common_genetic_official_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = machine
+		CLASS = official
+		ICON = "GFX_leader_trait_aquatic_admiral"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	federation_modifier = {
+		cohesion_ethics_penalty_mult = -0.1
+	}
+	galcom_modifier = {
+		diplo_weight_economy_mult = 0.1
+	}
+	planet_modifier = {
+		country_alloys_produces_mult = 0.1
+		country_consumer_goods_produces_mult = 0.1
+		country_unity_produces_mult = 0.1
+	}
+	sector_modifier = {
+		country_alloys_produces_mult = 0.05
+		country_consumer_goods_produces_mult = 0.05
+		country_unity_produces_mult = 0.05
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_psalm_of_waves_official_2 = {
+	force_councilor_trait = yes
+	custom_subtitle = libra_veteran_genetic_official_trait
+	inline_script = {
+		script = trait/icon_machine
+		CLASS = official
+		ICON = "GFX_leader_trait_aquatic_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	federation_modifier = {
+		cohesion_ethics_penalty_mult = -0.2
+		federation_experience_add = 2
+	}
+	galcom_modifier = {
+		diplo_weight_economy_mult = 0.1
+		resolutions_cost_mult = -0.1
+	}
+	planet_modifier = {
+		country_alloys_produces_mult = 0.2
+		country_consumer_goods_produces_mult = 0.2
+		country_unity_produces_mult = 0.2
+	}
+	sector_modifier = {
+		country_alloys_produces_mult = 0.1
+		country_consumer_goods_produces_mult = 0.1
+		country_unity_produces_mult = 0.1
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_psalm_of_waves_official_3 = {
+	force_councilor_trait = yes
+	custom_subtitle = libra_paragon_genetic_official_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = machine
+		CLASS = official
+		ICON = "GFX_leader_trait_aquatic_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	federation_modifier = {
+		cohesion_ethics_penalty_mult = -0.3
+		federation_experience_add = 3
+		federation_join_malus_mult = -0.3
+	}
+	galcom_modifier = {
+		diplo_weight_mult = 0.3
+		diplo_weight_economy_mult = 0.3
+		resolutions_cost_mult = -0.3
+	}
+	planet_modifier = {
+		country_alloys_produces_mult = 0.4
+		country_consumer_goods_produces_mult = 0.4
+		country_unity_produces_mult = 0.4
+	}
+	sector_modifier = {
+		country_alloys_produces_mult = 0.2
+		country_consumer_goods_produces_mult = 0.2
+		country_unity_produces_mult = 0.2
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_psalm_of_waves_scientist = {
+	force_councilor_trait = yes
+	custom_subtitle = libra_common_genetic_scientist_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = machine
+		CLASS = scientist
+		ICON = "GFX_leader_trait_aquatic_admiral"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		species_leader_exp_gain = 0.1
+	}
+	modifier = {
+		ship_speed_mult = 0.1
+	}
+	planet_modifier = {
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = 0.1
+		country_engineering_research_produces_mult = 0.1
+	}
+	sector_modifier = {
+		country_physics_research_produces_mult = 0.05
+		country_society_research_produces_mult = 0.05
+		country_engineering_research_produces_mult = 0.05
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_psalm_of_waves_scientist_2 = {
+	force_councilor_trait = yes
+	custom_subtitle = libra_veteran_genetic_scientist_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = machine
+		CLASS = scientist
+		ICON = "GFX_leader_trait_aquatic_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		species_leader_exp_gain = 0.2
+		leader_trait_selection_options_add = 2
+	}
+	modifier = {
+		ship_speed_mult = 0.2
+		science_ship_survey_speed = 0.2
+	}
+	planet_modifier = {
+		country_physics_research_produces_mult = 0.2
+		country_society_research_produces_mult = 0.2
+		country_engineering_research_produces_mult = 0.2
+	}
+	sector_modifier = {
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = 0.1
+		country_engineering_research_produces_mult = 0.1
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_psalm_of_waves_scientist_3 = {
+	force_councilor_trait = yes
+	custom_subtitle = libra_paragon_genetic_scientist_trait
+	inline_script = {
+		script = trait/libra_icon
+		TYPE = machine
+		CLASS = scientist
+		ICON = "GFX_leader_trait_aquatic_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = {
+		leader_lifespan_mult = 0.3
+		species_leader_exp_gain = 0.3
+		leader_trait_selection_options_add = 3
+	}
+	modifier = {
+		ship_speed_mult = 0.3
+		science_ship_survey_speed = 0.3
+		ship_anomaly_research_speed_mult = 0.3
+	}
+	planet_modifier = {
+		country_physics_research_produces_mult = 0.4
+		country_society_research_produces_mult = 0.4
+		country_engineering_research_produces_mult = 0.4
+	}
+	sector_modifier = {
+		country_physics_research_produces_mult = 0.2
+		country_society_research_produces_mult = 0.2
+		country_engineering_research_produces_mult = 0.2
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+trait_libra_psalm_of_waves_0 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species drawbacks unity research army production pop_output housing }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_1" "trait_libra_psalm_of_waves_2" "trait_libra_psalm_of_waves_3" "trait_libra_psalm_of_waves_4" "trait_libra_psalm_of_waves_5" "trait_libra_psalm_of_waves_6" "trait_libra_psalm_of_waves_7" "trait_libra_psalm_of_waves_8" "trait_libra_psalm_of_waves_9" }
+	modifier = {
+		pop_housing_usage_mult = 0.15
+		army_health = 0.15
+		bureaucrat_jobs_bonus_workforce_mult = 0.1
+		biologist_jobs_bonus_workforce_mult = 0.1
+		commander_skill_add = 2
+	}
+	custom_tooltip_with_modifiers = trait_libra_psalm_of_waves_0_tooltip
+	resources = {
+		category = planet_pops
+		produces = {
+			society_research = 0.5
+		}
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_psalm_of_waves_1 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species positive pop_growth pop_output amenities }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_0" "trait_libra_psalm_of_waves_2" "trait_libra_psalm_of_waves_3" "trait_libra_psalm_of_waves_4" "trait_libra_psalm_of_waves_5" "trait_libra_psalm_of_waves_6" "trait_libra_psalm_of_waves_7" "trait_libra_psalm_of_waves_8" "trait_libra_psalm_of_waves_9" }
+	modifier = {
+		army_morale_damage_mult = 0.25
+		planet_pops_upkeep_mult = -0.25
+		commander_skill_add = 2
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_psalm_of_waves_2 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species drawbacks amenities pop_output }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_0" "trait_libra_psalm_of_waves_1" "trait_libra_psalm_of_waves_3" "trait_libra_psalm_of_waves_4" "trait_libra_psalm_of_waves_5" "trait_libra_psalm_of_waves_6" "trait_libra_psalm_of_waves_7" "trait_libra_psalm_of_waves_8" "trait_libra_psalm_of_waves_9" }
+	modifier = {
+		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.1
+		worker_and_simple_drone_cat_bonus_workforce_mult = -0.1
+		official_skill_add = 2
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_psalm_of_waves_3 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species positive habitability pop_output }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_0" "trait_libra_psalm_of_waves_1" "trait_libra_psalm_of_waves_2" "trait_libra_psalm_of_waves_4" "trait_libra_psalm_of_waves_5" "trait_libra_psalm_of_waves_6" "trait_libra_psalm_of_waves_7" "trait_libra_psalm_of_waves_8" "trait_libra_psalm_of_waves_9" }
+	modifier = {
+		pop_bonus_workforce_mult = 0.05
+		commander_skill_add = 2
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_psalm_of_waves_4 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species positive housing empire_size }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_0" "trait_libra_psalm_of_waves_1" "trait_libra_psalm_of_waves_2" "trait_libra_psalm_of_waves_3" "trait_libra_psalm_of_waves_5" "trait_libra_psalm_of_waves_6" "trait_libra_psalm_of_waves_7" "trait_libra_psalm_of_waves_8" "trait_libra_psalm_of_waves_9" }
+	modifier = {
+		species_empire_size_mult = -0.1
+		official_skill_add = 2
+	}
+	triggered_species_modifier = {
+		pop_housing_usage_mult = -0.05
+		mult = trigger:num_negative_traits
+	}
+	custom_tooltip = trait_libra_psalm_of_waves_4_tooltip
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_psalm_of_waves_5 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species positive army leader migration pop_growth }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_0" "trait_libra_psalm_of_waves_1" "trait_libra_psalm_of_waves_2" "trait_libra_psalm_of_waves_3" "trait_libra_psalm_of_waves_4" "trait_libra_psalm_of_waves_6" "trait_libra_psalm_of_waves_7" "trait_libra_psalm_of_waves_8" "trait_libra_psalm_of_waves_9" }
+	modifier = {
+		pop_resettlement_cost_mult = -0.2
+		official_skill_add = 2
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		#potential = {
+		#	has_trait = trait_libra_psalm_of_waves_5
+		#}
+		divide_over_pop_groups = no
+		bonus_pop_growth = 0.01
+	}
+	custom_tooltip_with_modifiers = trait_libra_psalm_of_waves_5_tooltip
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_psalm_of_waves_6 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species positive pop_output pop_growth habitability }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_0" "trait_libra_psalm_of_waves_1" "trait_libra_psalm_of_waves_2" "trait_libra_psalm_of_waves_3" "trait_libra_psalm_of_waves_4" "trait_libra_psalm_of_waves_5" "trait_libra_psalm_of_waves_7" "trait_libra_psalm_of_waves_8" "trait_libra_psalm_of_waves_9" }
+	modifier = {
+		habitability_floor_add = 0.15
+		official_skill_add = 2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				or = {
+					has_climate = wet
+					has_modifier = flooded_habitat
+				}
+			}
+		}
+		worker_and_simple_drone_cat_bonus_workforce_mult = 0.075
+	}
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			nor = {
+				has_climate = wet
+				has_modifier = flooded_habitat
+			}
+		}
+		logistic_growth_mult = 0.1
+	}
+	custom_tooltip_with_modifiers = trait_libra_psalm_of_waves_6_tooltip
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_psalm_of_waves_7 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species positive mineral food army pop_output production }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_0" "trait_libra_psalm_of_waves_1" "trait_libra_psalm_of_waves_2" "trait_libra_psalm_of_waves_3" "trait_libra_psalm_of_waves_4" "trait_libra_psalm_of_waves_5" "trait_libra_psalm_of_waves_6" "trait_libra_psalm_of_waves_8" "trait_libra_psalm_of_waves_9" }
+	modifier = {
+		army_damage_mult = 0.15
+		farmer_jobs_bonus_workforce_mult = 0.15
+		commander_skill_add = 2
+	}
+	resources = {
+		category = planet_pops
+		produces = {
+			minerals = 0.1
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_psalm_of_waves_7_tooltip
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_farming_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_rural_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_fortress_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_psalm_of_waves_8 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species positive leader }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_0" "trait_libra_psalm_of_waves_1" "trait_libra_psalm_of_waves_2" "trait_libra_psalm_of_waves_3" "trait_libra_psalm_of_waves_4" "trait_libra_psalm_of_waves_5" "trait_libra_psalm_of_waves_6" "trait_libra_psalm_of_waves_7" "trait_libra_psalm_of_waves_9" }
+	modifier = {
+		commander_exp_gain = 0.15
+		libra_commander_starting_traits_species = 1
+		commander_skill_add = 2
+	}
+	slave_cost = {
+		energy = 750
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_psalm_of_waves_9 = {
+	cost = {
+		base = 0
+		modifier = {
+			add = 2
+			not = { has_origin = origin_libra_psalm_of_waves }
+		}
+	}
+	category = normal
+	randomized = no
+	allowed_origins = { origin_libra_psalm_of_waves }
+	allowed_archetypes = { BIOLOGICAL }
+	archetype_override = { can_use_libra_psalm_of_waves_traits_override = yes }
+	species_class = { AQUATIC ROBOT LIBRACUTE LIBRAPUNK LIBRAEXD }
+	localized_tags = { SPECIES_TRAIT_LIBRA_PSALM_OF_WAVES }
+	tags = { special species positive production trade }
+	species_potential_add = { can_use_libra_psalm_of_waves_traits = yes }
+	species_possible_remove = { can_remove_libra_psalm_of_waves_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_psalm_of_waves_0" "trait_libra_psalm_of_waves_1" "trait_libra_psalm_of_waves_2" "trait_libra_psalm_of_waves_3" "trait_libra_psalm_of_waves_4" "trait_libra_psalm_of_waves_5" "trait_libra_psalm_of_waves_6" "trait_libra_psalm_of_waves_7" "trait_libra_psalm_of_waves_8" }
+	modifier = {
+		official_skill_add = 2
+	}
+	resources = {
+		category = planet_pops
+		produces = {
+			trade = 0.5
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_psalm_of_waves_9_tooltip
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_trade_designation = yes }
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 10
+			exists = from
+			from = {
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+}
+
+# #############
+# Ultimate Market
+#############
+
+trait_libra_ultimate_market_cyborg = {
+	host_has_dlc = "The Machine Age"
+	cost = 3
+	initial = no
+	randomized = no
+	category = cyborg
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRAPUNK }
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+		SPECIES_TRAIT_LIBRA_ULTIMATE_MARKET
+	}
+	tags = { individual special cybernetic positive pop_output army }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		army_health = 0.5
+		pop_cat_worker_bonus_workforce_mult = 0.15
+		civilian_and_maintenance_drone_cat_bonus_workforce_mult = -0.35
+	}
+	resources = {
+		category = planet_pops
+		produces = {
+			trade = 1
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ultimate_market_cyborg_tooltip
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		base = 1
+	}
+}
+
+trait_libra_ultimate_market_cyborg_1 = {
+	host_has_dlc = "The Machine Age"
+	icon = "gfx/interface/icons/traits/trait_robot_history_warbot.dds"
+	cost = 0
+	initial = yes
+	randomized = no
+	category = cyborg
+	allowed_origins = { origin_libra_ultimate_market }
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRAPUNK }
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+		SPECIES_TRAIT_LIBRA_ULTIMATE_MARKET
+	}
+	tags = { individual special cybernetic positive pop_output army }
+	opposites = { "trait_libra_ultimate_market_cyborg_2" "trait_libra_ultimate_market_cyborg_3" "trait_libra_ultimate_market_cyborg_4" "trait_libra_ultimate_market_cyborg_5" "trait_libra_ultimate_market_cyborg_6" }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		army_damage_mult = 0.25
+		pop_soldier_bonus_workforce_mult = 0.15
+		pop_enforcer_bonus_workforce_mult = 0.15
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 0.5
+	}
+}
+
+trait_libra_ultimate_market_cyborg_2 = {
+	host_has_dlc = "The Machine Age"
+	icon = "gfx/interface/icons/traits/trait_robot_history_researchbot.dds"
+	cost = 0
+	initial = yes
+	randomized = no
+	category = cyborg
+	allowed_origins = { origin_libra_ultimate_market }
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRAPUNK }
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+		SPECIES_TRAIT_LIBRA_ULTIMATE_MARKET
+	}
+	tags = { individual special cybernetic positive pop_output research }
+	opposites = { "trait_libra_ultimate_market_cyborg_1" "trait_libra_ultimate_market_cyborg_3" "trait_libra_ultimate_market_cyborg_4" "trait_libra_ultimate_market_cyborg_5" "trait_libra_ultimate_market_cyborg_6" }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_physicist_bonus_workforce_mult = 0.15
+		pop_biologist_bonus_workforce_mult = 0.15
+		pop_engineer_bonus_workforce_mult = 0.15
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 0.5
+	}
+}
+
+trait_libra_ultimate_market_cyborg_3 = {
+	host_has_dlc = "The Machine Age"
+	icon = "gfx/interface/icons/traits/trait_robot_history_resourcebot.dds"
+	cost = 0
+	initial = yes
+	randomized = no
+	category = cyborg
+	allowed_origins = { origin_libra_ultimate_market }
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRAPUNK }
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+		SPECIES_TRAIT_LIBRA_ULTIMATE_MARKET
+	}
+	tags = { individual special cybernetic positive pop_output alloys consumer_goods }
+	opposites = { "trait_libra_ultimate_market_cyborg_1" "trait_libra_ultimate_market_cyborg_2" "trait_libra_ultimate_market_cyborg_4" "trait_libra_ultimate_market_cyborg_5" "trait_libra_ultimate_market_cyborg_6" }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_foundry_bonus_workforce_mult = 0.15
+		pop_artisan_bonus_workforce_mult = 0.15
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 0.5
+	}
+}
+
+trait_libra_ultimate_market_cyborg_4 = {
+	host_has_dlc = "The Machine Age"
+	icon = "gfx/interface/icons/traits/trait_robot_history_explorebot.dds"
+	cost = 0
+	initial = yes
+	randomized = no
+	category = cyborg
+	allowed_origins = { origin_libra_ultimate_market }
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRAPUNK }
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+		SPECIES_TRAIT_LIBRA_ULTIMATE_MARKET
+	}
+	tags = { individual special cybernetic positive pop_output unity trade }
+	opposites = { "trait_libra_ultimate_market_cyborg_1" "trait_libra_ultimate_market_cyborg_2" "trait_libra_ultimate_market_cyborg_3" "trait_libra_ultimate_market_cyborg_5" "trait_libra_ultimate_market_cyborg_6" }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_politician_bonus_workforce_mult = 0.15
+		pop_bureaucrat_bonus_workforce_mult = 0.15
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 0.5
+	}
+}
+
+trait_libra_ultimate_market_cyborg_5 = {
+	host_has_dlc = "The Machine Age"
+	icon = "gfx/interface/icons/traits/trait_robot_history_artbot.dds"
+	cost = 0
+	initial = yes
+	randomized = no
+	category = cyborg
+	allowed_origins = { origin_libra_ultimate_market }
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRAPUNK }
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+		SPECIES_TRAIT_LIBRA_ULTIMATE_MARKET
+	}
+	tags = { individual special cybernetic positive pop_output trade amenities }
+	opposites = { "trait_libra_ultimate_market_cyborg_1" "trait_libra_ultimate_market_cyborg_2" "trait_libra_ultimate_market_cyborg_3" "trait_libra_ultimate_market_cyborg_4" "trait_libra_ultimate_market_cyborg_6" }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_trader_bonus_workforce_mult = 0.15
+		pop_entertainer_bonus_workforce_mult = 0.15
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 0.5
+	}
+}
+
+trait_libra_ultimate_market_cyborg_6 = {
+	host_has_dlc = "The Machine Age"
+	icon = "gfx/interface/icons/traits/trait_robot_history_chatbot.dds"
+	cost = 0
+	initial = yes
+	randomized = no
+	category = cyborg
+	allowed_origins = { origin_libra_ultimate_market }
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRAPUNK }
+	localized_tags = {
+		SPECIES_TRAIT_CYBORG
+		SPECIES_TRAIT_LIBRA_ULTIMATE_MARKET
+	}
+	tags = { special cybernetic positive pop_output }
+	opposites = { "trait_libra_ultimate_market_cyborg_1" "trait_libra_ultimate_market_cyborg_2" "trait_libra_ultimate_market_cyborg_3" "trait_libra_ultimate_market_cyborg_4" "trait_libra_ultimate_market_cyborg_5" }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 0.5
+	}
+}
+
+# #############
+# Enlightenment Wisdom
+#############
+
+leader_trait_libra_enlightenment_wisdom_official = {
+	leader_trait_type = destiny
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = psionic
+		CLASS = official
+		ICON = "GFX_leader_trait_libra_enlightenment_wisdom"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	self_modifier = {
+		species_leader_exp_gain = -1
+	}
+	triggered_self_modifier = {
+		potential = { is_variable_set = libra_enlightenment_wisdom_mult }
+		leaders_upkeep_mult = -0.05
+		mult = libra_enlightenment_wisdom_mult
+	}
+
+	federation_modifier = {
+		federation_join_malus_mult = -0.3
+		federation_experience_add = 5
+	}
+	galcom_modifier = {
+		diplo_weight_opposing_mult = 0.3
+		diplo_weight_supporting_mult = 0.5
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.4
+		planet_buildings_produces_mult = 0.4
+		planet_jobs_upkeep_mult = -0.2
+		planet_buildings_upkeep_mult = -0.2
+	}
+	sector_modifier = {
+		planet_jobs_produces_mult = 0.2
+		planet_buildings_produces_mult = 0.2
+		planet_jobs_upkeep_mult = -0.1
+		planet_buildings_upkeep_mult = -0.1
+	}
+
+	triggered_councilor_modifier = {
+		potential = { is_ruler = no }
+		country_councilor_influence_produces_add = 0.5
+	}
+	triggered_councilor_modifier = {
+		potential = { is_ruler = yes }
+		country_leader_cap_add = 1
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	on_gained_effect = {
+		if = {
+			limit = { years_passed < 1 }
+			set_leader_flag = libra_enlightenment_wisdom_initial
+			set_variable = {
+				which = libra_enlightenment_wisdom_mult
+				value = 18
+			}
+			leader_event = { id = libra_origin.0410 days = 10800 random = 1800 }
+		}
+		else = {
+			kill_leader = { show_notification = no }
+		}
+	}
+}
+
+leader_trait_libra_enlightenment_wisdom_scientist = {
+	leader_trait_type = destiny
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = psionic
+		CLASS = scientist
+		ICON = "GFX_leader_trait_libra_enlightenment_wisdom"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	self_modifier = {
+		species_leader_exp_gain = -1
+	}
+	triggered_self_modifier = {
+		potential = { is_variable_set = libra_enlightenment_wisdom_mult }
+		leaders_upkeep_mult = -0.05
+		mult = libra_enlightenment_wisdom_mult
+	}
+
+	modifier = {
+		ship_disengage_opportunities_add = 3
+		science_ship_survey_speed = 0.3
+		ship_anomaly_research_speed_mult = 0.3
+		ship_speed_mult = 0.5
+		ship_archaeological_site_excavation_speed_mult = 0.5
+		ship_astral_rift_speed_mult = 0.5
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.4
+		planet_buildings_produces_mult = 0.4
+		planet_jobs_upkeep_mult = -0.2
+		planet_buildings_upkeep_mult = -0.2
+	}
+	sector_modifier = {
+		planet_jobs_produces_mult = 0.2
+		planet_buildings_produces_mult = 0.2
+		planet_jobs_upkeep_mult = -0.1
+		planet_buildings_upkeep_mult = -0.1
+	}
+
+	triggered_councilor_modifier = {
+		potential = { is_ruler = no }
+		country_councilor_influence_produces_add = 0.5
+	}
+	triggered_councilor_modifier = {
+		potential = { is_ruler = yes }
+		country_leader_cap_add = 1
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	on_gained_effect = {
+		if = {
+			limit = { years_passed < 1 }
+			set_leader_flag = libra_enlightenment_wisdom_initial
+			set_variable = {
+				which = libra_enlightenment_wisdom_mult
+				value = 18
+			}
+			leader_event = { id = libra_origin.0410 days = 10800 random = 1800 }
+		}
+		else = {
+			kill_leader = { show_notification = no }
+		}
+	}
+}
+
+leader_trait_libra_enlightenment_wisdom_commander = {
+	leader_trait_type = destiny
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = psionic
+		CLASS = commander
+		ICON = "GFX_leader_trait_libra_enlightenment_wisdom"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	self_modifier = {
+		species_leader_exp_gain = -1
+	}
+	triggered_self_modifier = {
+		potential = { is_variable_set = libra_enlightenment_wisdom_mult }
+		leaders_upkeep_mult = -0.05
+		mult = libra_enlightenment_wisdom_mult
+	}
+
+	fleet_modifier = {
+		ship_weapon_range_mult = 0.3
+		command_limit_add = 50
+	}
+	army_modifier = {
+		army_damage_taken_mult = -0.3
+		army_morale_damage_taken_mult = -0.5
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.4
+		planet_buildings_produces_mult = 0.4
+		planet_jobs_upkeep_mult = -0.2
+		planet_buildings_upkeep_mult = -0.2
+	}
+	sector_modifier = {
+		planet_jobs_produces_mult = 0.2
+		planet_buildings_produces_mult = 0.2
+		planet_jobs_upkeep_mult = -0.1
+		planet_buildings_upkeep_mult = -0.1
+	}
+
+	triggered_councilor_modifier = {
+		potential = { is_ruler = no }
+		country_councilor_influence_produces_add = 0.5
+	}
+	triggered_councilor_modifier = {
+		potential = { is_ruler = yes }
+		country_leader_cap_add = 1
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	on_gained_effect = {
+		if = {
+			limit = { years_passed < 1 }
+			set_leader_flag = libra_enlightenment_wisdom_initial
+			set_variable = {
+				which = libra_enlightenment_wisdom_mult
+				value = 18
+			}
+			leader_event = { id = libra_origin.0410 days = 10800 random = 1800 }
+		}
+		else = {
+			kill_leader = { show_notification = no }
+		}
+	}
+}
+
+leader_trait_libra_enlightenment_heritage_official = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = default
+		CLASS = official
+		ICON = "GFX_leader_trait_libra_enlightenment_wisdom"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	federation_modifier = {
+		federation_join_malus_mult = -0.3
+	}
+	triggered_federation_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		federation_experience_add = 0.4
+		mult = trigger:has_total_skill
+	}
+	galcom_modifier = {
+		diplo_weight_opposing_mult = 0.3
+	}
+	triggered_galcom_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		diplo_weight_supporting_mult = 0.04
+		mult = trigger:has_total_skill
+	}
+
+	planet_modifier = {
+		planet_jobs_upkeep_mult = -0.2
+		planet_buildings_upkeep_mult = -0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.02
+		planet_buildings_produces_mult = 0.02
+		mult = trigger:has_total_skill
+	}
+	sector_modifier = {
+		planet_jobs_upkeep_mult = -0.1
+		planet_buildings_upkeep_mult = -0.1
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.01
+		planet_buildings_produces_mult = 0.01
+		mult = trigger:has_total_skill
+	}
+
+	triggered_councilor_modifier = {
+		potential = { is_ruler = no }
+		country_leader_cap_add = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			leader_years_of_service < 100
+		}
+		country_ruler_influence_produces_add = 0.03
+		mult = trigger:leader_years_of_service
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			leader_years_of_service >= 100
+		}
+		country_ruler_influence_produces_add = 3
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	custom_tooltip_with_modifiers = leader_trait_libra_enlightenment_heritage_tt
+}
+
+leader_trait_libra_enlightenment_heritage_scientist = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = default
+		CLASS = scientist
+		ICON = "GFX_leader_trait_libra_enlightenment_wisdom"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	modifier = {
+		ship_disengage_opportunities_add = 3
+		science_ship_survey_speed = 0.3
+		ship_anomaly_research_speed_mult = 0.3
+	}
+	triggered_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		ship_speed_mult = 0.04
+		ship_archaeological_site_excavation_speed_mult = 0.04
+		ship_astral_rift_speed_mult = 0.04
+		mult = trigger:has_total_skill
+	}
+
+	planet_modifier = {
+		planet_jobs_upkeep_mult = -0.2
+		planet_buildings_upkeep_mult = -0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.02
+		planet_buildings_produces_mult = 0.02
+		mult = trigger:has_total_skill
+	}
+	sector_modifier = {
+		planet_jobs_upkeep_mult = -0.1
+		planet_buildings_upkeep_mult = -0.1
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.01
+		planet_buildings_produces_mult = 0.01
+	}
+
+	triggered_councilor_modifier = {
+		potential = { is_ruler = no }
+		country_leader_cap_add = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			leader_years_of_service < 100
+		}
+		country_ruler_influence_produces_add = 0.03
+		mult = trigger:leader_years_of_service
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			leader_years_of_service >= 100
+		}
+		country_ruler_influence_produces_add = 3
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	custom_tooltip_with_modifiers = leader_trait_libra_enlightenment_heritage_tt
+}
+
+leader_trait_libra_enlightenment_heritage_commander = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = default
+		CLASS = commander
+		ICON = "GFX_leader_trait_libra_enlightenment_wisdom"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	fleet_modifier = {
+		ship_weapon_range_mult = 0.3
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		command_limit_add = 4
+		mult = trigger:has_total_skill
+	}
+	army_modifier = {
+		army_damage_taken_mult = -0.3
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		army_morale_damage_taken_mult = -0.04
+		mult = trigger:has_total_skill
+	}
+
+	planet_modifier = {
+		planet_jobs_upkeep_mult = -0.2
+		planet_buildings_upkeep_mult = -0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.02
+		planet_buildings_produces_mult = 0.02
+		mult = trigger:has_total_skill
+	}
+	sector_modifier = {
+		planet_jobs_upkeep_mult = -0.1
+		planet_buildings_upkeep_mult = -0.1
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.01
+		planet_buildings_produces_mult = 0.01
+	}
+
+	triggered_councilor_modifier = {
+		potential = { is_ruler = no }
+		country_leader_cap_add = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			leader_years_of_service < 100
+		}
+		country_ruler_influence_produces_add = 0.03
+		mult = trigger:leader_years_of_service
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			leader_years_of_service >= 100
+		}
+		country_ruler_influence_produces_add = 3
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	custom_tooltip_with_modifiers = leader_trait_libra_enlightenment_heritage_tt
+}
+
+# #############
+# Crimson Nights
+#############
+
+trait_libra_crimson_nights_vampire = {
+	cost = 6
+	sorting_priority = 19
+	allowed_archetypes = { BIOLOGICAL ROBOT }
+	species_class = { HUM ROBOT }
+	opposites = { "trait_libra_crimson_nights_ancestor" }
+	initial = no
+	randomized = no
+	improves_leaders = yes
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic positive habitability army leader pop_output }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		pop_environment_tolerance = 0.2
+		leader_lifespan_add = 40
+		army_morale_damage_taken_mult = -0.15
+		pop_bonus_workforce_mult = 0.15
+	}
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+leader_trait_libra_crimson_nights_vampire_commander = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = psionic
+		CLASS = commander
+		ICON = "GFX_leader_trait_libra_crimson_nights_vampire"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		leader_commanders_food_upkeep_add = 2
+		mult = trigger:has_base_skill
+	}
+
+	triggered_fleet_modifier = {
+		potential = { is_councilor = no }
+		ship_weapon_range_mult = 0.2
+		ship_engagement_range_mult = 0.2
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		ship_shield_regen_add_perc = 0.04
+		ship_armor_regen_add_perc = 0.04
+		mult = trigger:has_total_skill
+	}
+
+	triggered_army_modifier = {
+		potential = { is_councilor = no }
+		army_morale_damage_mult = 0.2
+		army_collateral_damage_mult = -0.2
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		army_disengage_chance_mult = 0.04
+		army_experience_gain_mult = 0.04
+		mult = trigger:has_total_skill
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.2
+		bonus_pop_growth_mult = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.04
+		mult = trigger:has_total_skill
+	}
+	triggered_sector_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.02
+		mult = trigger:has_total_skill
+	}
+
+	councilor_modifier = {
+		empire_size_systems_mult = -0.05
+		empire_size_colonies_mult = -0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_libra_crimson_nights }
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.004
+		planet_buildings_produces_mult = 0.004
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+	custom_tooltip_with_modifiers = leader_trait_libra_crimson_nights_tt
+}
+
+leader_trait_libra_crimson_nights_vampire_official = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = psionic
+		CLASS = official
+		ICON = "GFX_leader_trait_libra_crimson_nights_vampire"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		leader_officials_food_upkeep_add = 2
+		mult = trigger:has_base_skill
+	}
+
+	triggered_federation_modifier = {
+		potential = { is_councilor = no }
+		federation_experience_add = 2
+		cohesion_add = 2
+	}
+	triggered_federation_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		federation_leader_fleet_scale_mult = 0.04
+		federation_fleet_cap_add = 20
+		mult = trigger:has_total_skill
+	}
+
+	triggered_galcom_modifier = {
+		potential = { is_councilor = no }
+		diplo_weight_pops_mult = 0.2
+		diplo_weight_naval_mult = 0.2
+	}
+	triggered_galcom_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		resolution_category_declare_crisis_vote_strength_mult = 0.04
+		resolution_category_galactic_focus_vote_strength_mult = 0.04
+		mult = trigger:has_total_skill
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.2
+		bonus_pop_growth_mult = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.04
+		mult = trigger:has_total_skill
+	}
+	triggered_sector_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.02
+		mult = trigger:has_total_skill
+	}
+
+	councilor_modifier = {
+		empire_size_systems_mult = -0.05
+		empire_size_colonies_mult = -0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_libra_crimson_nights }
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.004
+		planet_buildings_produces_mult = 0.004
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+	custom_tooltip_with_modifiers = leader_trait_libra_crimson_nights_tt
+}
+
+leader_trait_libra_crimson_nights_vampire_scientist = {
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = psionic
+		CLASS = scientist
+		ICON = "GFX_leader_trait_libra_crimson_nights_vampire"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		leader_scientists_food_upkeep_add = 2
+		mult = trigger:has_base_skill
+	}
+
+	triggered_self_modifier = {
+		potential = { is_councilor = no }
+		leader_trait_selection_options_add = 2
+		negative_traits_leader = -2
+	}
+	triggered_self_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		leader_scientists_physics_research_produces_add = 2
+		leader_scientists_society_research_produces_add = 2
+		leader_scientists_engineering_research_produces_add = 2
+		mult = trigger:has_total_skill
+	}
+
+	triggered_modifier = {
+		potential = { is_councilor = no }
+		ship_hyperlane_range_add = 2
+		ship_archaeological_site_excavation_speed_mult = 0.2
+		ship_astral_rift_speed_mult = 0.2
+	}
+	triggered_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		science_ship_survey_speed = 0.04
+		ship_anomaly_research_speed_mult = 0.04
+		mult = trigger:has_total_skill
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.2
+		bonus_pop_growth_mult = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.04
+		mult = trigger:has_total_skill
+	}
+	triggered_sector_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.02
+		mult = trigger:has_total_skill
+	}
+
+	councilor_modifier = {
+		empire_size_systems_mult = -0.05
+		empire_size_colonies_mult = -0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_libra_crimson_nights }
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.004
+		planet_buildings_produces_mult = 0.004
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+	custom_tooltip_with_modifiers = leader_trait_libra_crimson_nights_tt
+}
+
+trait_libra_crimson_nights_ancestor = {
+	cost = 6
+	sorting_priority = 19
+	allowed_archetypes = { BIOLOGICAL ROBOT }
+	species_class = { HUM ROBOT }
+	opposites = { "trait_libra_crimson_nights_vampire" }
+	initial = no
+	randomized = no
+	improves_leaders = yes
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic positive habitability army leader pop_output }
+	species_potential_add = { always = no }
+	species_possible_merge_add = { always = yes }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_environment_tolerance = 0.4
+		leader_lifespan_add = 80
+		army_morale_damage_taken_mult = -0.25
+		pop_bonus_workforce_mult = 0.25
+	}
+	slave_cost = {
+		energy = 3000
+	}
+	assembly_score = {
+		base = 2
+	}
+	ai_weight = {
+		factor = 100
+	}
+}
+
+leader_trait_libra_crimson_nights_ancestor_commander = {
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = psionic
+		CLASS = commander
+		ICON = "GFX_leader_trait_libra_crimson_nights_ancestor"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		leader_commanders_food_upkeep_add = 2
+		mult = trigger:has_base_skill
+	}
+
+	triggered_fleet_modifier = {
+		potential = { is_councilor = no }
+		ship_weapon_range_mult = 0.3
+		ship_engagement_range_mult = 0.3
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		ship_shield_regen_add_perc = 0.06
+		ship_armor_regen_add_perc = 0.06
+		mult = trigger:has_total_skill
+	}
+
+	triggered_army_modifier = {
+		potential = { is_councilor = no }
+		army_morale_damage_mult = 0.3
+		army_collateral_damage_mult = -0.3
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		army_disengage_chance_mult = 0.06
+		army_experience_gain_mult = 0.06
+		mult = trigger:has_total_skill
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.3
+		bonus_pop_growth_mult = 0.3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.06
+		mult = trigger:has_total_skill
+	}
+	triggered_sector_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.15
+		bonus_pop_growth_mult = 0.15
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.03
+		mult = trigger:has_total_skill
+	}
+
+	councilor_modifier = {
+		empire_size_systems_mult = -0.1
+		empire_size_colonies_mult = -0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_libra_crimson_nights }
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.006
+		planet_buildings_produces_mult = 0.006
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	custom_tooltip_with_modifiers = leader_trait_libra_crimson_nights_tt
+}
+
+leader_trait_libra_crimson_nights_ancestor_official = {
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = psionic
+		CLASS = official
+		ICON = "GFX_leader_trait_libra_crimson_nights_ancestor"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		leader_officials_food_upkeep_add = 2
+		mult = trigger:has_base_skill
+	}
+
+	triggered_federation_modifier = {
+		potential = { is_councilor = no }
+		federation_experience_add = 3
+		cohesion_add = 3
+	}
+	triggered_federation_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		federation_leader_fleet_scale_mult = 0.06
+		federation_fleet_cap_add = 30
+		mult = trigger:has_total_skill
+	}
+
+	triggered_galcom_modifier = {
+		potential = { is_councilor = no }
+		diplo_weight_pops_mult = 0.3
+		diplo_weight_naval_mult = 0.3
+	}
+	triggered_galcom_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		resolution_category_declare_crisis_vote_strength_mult = 0.06
+		resolution_category_galactic_focus_vote_strength_mult = 0.06
+		mult = trigger:has_total_skill
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.3
+		bonus_pop_growth_mult = 0.3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.06
+		mult = trigger:has_total_skill
+	}
+	triggered_sector_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.15
+		bonus_pop_growth_mult = 0.15
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.03
+		mult = trigger:has_total_skill
+	}
+
+	councilor_modifier = {
+		empire_size_systems_mult = -0.1
+		empire_size_colonies_mult = -0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_libra_crimson_nights }
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.006
+		planet_buildings_produces_mult = 0.006
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	custom_tooltip_with_modifiers = leader_trait_libra_crimson_nights_tt
+}
+
+leader_trait_libra_crimson_nights_ancestor_scientist = {
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = psionic
+		CLASS = scientist
+		ICON = "GFX_leader_trait_libra_crimson_nights_ancestor"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		leader_scientists_food_upkeep_add = 2
+		mult = trigger:has_base_skill
+	}
+
+	triggered_self_modifier = {
+		potential = { is_councilor = no }
+		leader_trait_selection_options_add = 3
+		negative_traits_leader = -3
+	}
+	triggered_self_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		leader_scientists_physics_research_produces_add = 3
+		leader_scientists_society_research_produces_add = 3
+		leader_scientists_engineering_research_produces_add = 3
+		mult = trigger:has_total_skill
+	}
+
+	triggered_modifier = {
+		potential = { is_councilor = no }
+		ship_hyperlane_range_add = 3
+		ship_archaeological_site_excavation_speed_mult = 0.3
+		ship_astral_rift_speed_mult = 0.3
+	}
+	triggered_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		science_ship_survey_speed = 0.06
+		ship_anomaly_research_speed_mult = 0.06
+		mult = trigger:has_total_skill
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.3
+		bonus_pop_growth_mult = 0.3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.06
+		mult = trigger:has_total_skill
+	}
+	triggered_sector_modifier = {
+		potential = { is_councilor = no }
+		planet_pop_assembly_mult = 0.15
+		bonus_pop_growth_mult = 0.15
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_councilor = no
+			has_base_skill <= 10
+		}
+		logistic_growth_mult = 0.03
+		mult = trigger:has_total_skill
+	}
+
+	councilor_modifier = {
+		empire_size_systems_mult = -0.1
+		empire_size_colonies_mult = -0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_libra_crimson_nights }
+			has_base_skill <= 10
+		}
+		planet_jobs_produces_mult = 0.006
+		planet_buildings_produces_mult = 0.006
+		mult = trigger:has_total_skill
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	custom_tooltip_with_modifiers = leader_trait_libra_crimson_nights_tt
+}
+
+trait_libra_crimson_nights_0 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		pop_bonus_workforce_mult = -0.05
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_1 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader army pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		army_damage_taken_mult = 0.2
+		enforcer_jobs_bonus_workforce_mult = -0.1
+		foundry_jobs_bonus_workforce_mult = -0.1
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_2 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader army pop_output food }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		army_damage_mult = -0.25
+		army_morale_damage_mult = -0.25
+		farmer_jobs_bonus_workforce_mult = -0.15
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_3 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader habitability pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		pc_ocean_habitability = -0.4
+		pc_continental_habitability = -0.3
+		pc_tropical_habitability = -0.3
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_4 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader amenities pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		pop_amenities_usage_mult = 0.35
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_5 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader migration pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		pop_resettlement_cost_mult = 0.66
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_6 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader upkeep pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.4
+		planet_pops_food_upkeep_mult = 0.4
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_7 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader amenities pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		trader_jobs_bonus_workforce_mult = -0.2
+		influential_jobs_bonus_workforce_mult = -0.2
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+	assembly_score = {
+		base = 1
+	}
+}
+
+trait_libra_crimson_nights_8 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		leaders_upkeep_mult = 0.4
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_9 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		leader_skill_add = -1
+		negative_leader_traits_species = 2
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_10 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader unity pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		bureaucrat_jobs_bonus_workforce_mult = -0.35
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_11 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader housing pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		pop_housing_usage_mult = 0.35
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_12 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader army pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		army_attack_morale_mult = -0.2
+		army_morale_damage_taken_mult = 0.2
+		commander_skill_add = -2
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_13 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		worker_and_simple_drone_cat_bonus_workforce_mult = -0.1
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_14 = {
+	cost = -3
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader habitability pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		pop_environment_tolerance = -0.2
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_15 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader empire_size pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		species_empire_size_mult = 0.2
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_libra_crimson_nights_16 = {
+	cost = -3
+	sorting_priority = 18
+	allowed_archetypes = { BIOLOGICAL ROBOT LIBRAPUNK }
+	species_class = { HUM ROBOT LIBRAPUNK }
+	allowed_origins = { origin_libra_crimson_nights }
+	randomized = no
+	category = psionic
+	localized_tags = { SPECIES_TRAIT_LIBRA_CRIMSON_NIGHTS }
+	tags = { special psionic drawbacks negative leader pop_output }
+	species_potential_add = { can_use_libra_crimson_nights_traits = yes }
+	species_possible_remove = { can_remove_libra_crimson_nights_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		leader_lifespan_add = -66
+		species_leader_exp_gain = 0.1
+		pop_libra_vampire_servant_bonus_workforce_mult = 0.05
+		pop_libra_vampire_drone_bonus_workforce_mult = 0.05
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+leader_trait_libra_crimson_potential_liberation_vampire = {
+	custom_subtitle = libra_veteran_psionic_triggered_trait
+	icon = {
+		layer = {
+			icon = "GFX_trait_bg"
+			color = "trait_bg_psionic"
+		}
+		inline_script = trait/icon_element/libra_rarity_psionic_veteran
+		layer = {
+			icon = GFX_leader_trait_libra_crimson_potential_liberation
+			color = "trait_icon_default"
+		}
+		inline_script = {
+			script = trait/icon_element/council_triggered
+			CLASS = leader
+		}
+		layer = {
+			icon = GFX_trait_timed
+		}
+	}
+	leader_trait_rarity = veteran
+	sorting_priority = @trait_sorting_priority_veteran_triggered_none
+
+	triggered_fleet_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = commander
+		}
+		ship_weapon_range_mult = 0.1
+		ship_engagement_range_mult = 0.1
+		ship_shield_regen_add_perc = 0.2
+		ship_armor_regen_add_perc = 0.2
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = commander
+		}
+		army_morale_damage_mult = 0.1
+		army_collateral_damage_mult = -0.1
+		army_disengage_chance_mult = 0.2
+		army_experience_gain_mult = 0.2
+	}
+
+	triggered_federation_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = official
+		}
+		federation_experience_add = 1
+		cohesion_add = 1
+		federation_leader_fleet_scale_mult = 0.2
+		federation_fleet_cap_add = 100
+	}
+	triggered_galcom_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = official
+		}
+		diplo_weight_pops_mult = 0.1
+		diplo_weight_naval_mult = 0.1
+		resolution_category_declare_crisis_vote_strength_mult = 0.2
+		resolution_category_galactic_focus_vote_strength_mult = 0.2
+	}
+
+	triggered_self_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = scientist
+		}
+		leader_trait_selection_options_add = 2
+		negative_traits_leader = -2
+		leader_scientists_physics_research_produces_add = 10
+		leader_scientists_society_research_produces_add = 10
+		leader_scientists_engineering_research_produces_add = 10
+	}
+	triggered_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = scientist
+		}
+		ship_hyperlane_range_add = 1
+		ship_archaeological_site_excavation_speed_mult = 0.1
+		ship_astral_rift_speed_mult = 0.1
+		science_ship_survey_speed = 0.2
+		ship_anomaly_research_speed_mult = 0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_councilor = no }
+		logistic_growth_mult = 0.2
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+	triggered_sector_modifier = {
+		potential = { is_councilor = no }
+		logistic_growth_mult = 0.1
+		planet_pop_assembly_mult = 0.05
+		bonus_pop_growth_mult = 0.05
+	}
+
+	councilor_modifier = {
+		empire_size_systems_mult = -0.025
+		empire_size_colonies_mult = -0.025
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_libra_crimson_nights }
+		}
+		planet_jobs_produces_mult = 0.02
+		planet_buildings_produces_mult = 0.02
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+	custom_tooltip_with_modifiers = leader_trait_libra_councilor_position_effect_tt
+}
+
+leader_trait_libra_crimson_potential_liberation_ancestor = {
+	custom_subtitle = libra_paragon_psionic_triggered_trait
+	icon = {
+		layer = {
+			icon = "GFX_trait_bg"
+			color = "trait_bg_psionic"
+		}
+		inline_script = trait/icon_element/libra_rarity_psionic_paragon
+		layer = {
+			icon = GFX_leader_trait_libra_crimson_potential_liberation
+			color = "trait_icon_default"
+		}
+		inline_script = {
+			script = trait/icon_element/council_triggered
+			CLASS = leader
+		}
+		layer = {
+			icon = GFX_trait_timed
+		}
+	}
+	leader_trait_rarity = paragon
+	sorting_priority = @trait_sorting_priority_paragon_triggered_none
+
+	triggered_fleet_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = commander
+		}
+		ship_weapon_range_mult = 0.2
+		ship_engagement_range_mult = 0.2
+		ship_shield_regen_add_perc = 0.4
+		ship_armor_regen_add_perc = 0.4
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = commander
+		}
+		army_morale_damage_mult = 0.2
+		army_collateral_damage_mult = -0.2
+		army_disengage_chance_mult = 0.4
+		army_experience_gain_mult = 0.4
+	}
+
+	triggered_federation_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = official
+		}
+		federation_experience_add = 2
+		cohesion_add = 2
+		federation_leader_fleet_scale_mult = 0.4
+		federation_fleet_cap_add = 200
+	}
+	triggered_galcom_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = official
+		}
+		diplo_weight_pops_mult = 0.2
+		diplo_weight_naval_mult = 0.2
+		resolution_category_declare_crisis_vote_strength_mult = 0.4
+		resolution_category_galactic_focus_vote_strength_mult = 0.4
+	}
+
+	triggered_self_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = scientist
+		}
+		leader_trait_selection_options_add = 2
+		negative_traits_leader = -2
+		leader_scientists_physics_research_produces_add = 20
+		leader_scientists_society_research_produces_add = 20
+		leader_scientists_engineering_research_produces_add = 20
+	}
+	triggered_modifier = {
+		potential = {
+			is_councilor = no
+			leader_class = scientist
+		}
+		ship_hyperlane_range_add = 2
+		ship_archaeological_site_excavation_speed_mult = 0.2
+		ship_astral_rift_speed_mult = 0.2
+		science_ship_survey_speed = 0.4
+		ship_anomaly_research_speed_mult = 0.4
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_councilor = no }
+		logistic_growth_mult = 0.4
+		planet_pop_assembly_mult = 0.2
+		bonus_pop_growth_mult = 0.2
+	}
+	triggered_sector_modifier = {
+		potential = { is_councilor = no }
+		logistic_growth_mult = 0.2
+		planet_pop_assembly_mult = 0.1
+		bonus_pop_growth_mult = 0.1
+	}
+
+	councilor_modifier = {
+		empire_size_systems_mult = -0.05
+		empire_size_colonies_mult = -0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_libra_crimson_nights }
+		}
+		planet_jobs_produces_mult = 0.04
+		planet_buildings_produces_mult = 0.04
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	notify_on_gained = no
+	custom_tooltip_with_modifiers = leader_trait_libra_councilor_position_effect_tt
+}
+
+# #############
+# Shadow Consciousness
+#############
+
+leader_trait_libra_shadow_consciousness = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = genetic
+		CLASS = leader
+		ICON = "GFX_leader_trait_libra_shadow_consciousness"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	triggered_background_planet_modifier = {
+		potential = {
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_jobs_upkeep_mult = -0.1
+		planet_structures_upkeep_mult = -0.1
+	}
+	councilor_modifier = {
+		planet_stability_add = 5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_libra_shadow_consciousness_c }
+		}
+		planet_researchers_produces_mult = 0.015
+		mult = value:libra_councilor_level|TYPE|councilor_gestalt_cognitive|MAX|30|
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_libra_shadow_consciousness }
+		}
+		custom_tooltip = leader_trait_libra_shadow_consciousness_tt
+		country_councilor_physics_research_produces_add = 3
+		country_councilor_society_research_produces_add = 3
+		country_councilor_engineering_research_produces_add = 3
+		mult = owner.value:libra_shadow_consciousness_darkmatter_income
+	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+# #############
+# Dragonborn
+#############
+
+trait_libra_dragonborn_0 = {
+	host_has_dlc = "Leviathans Story Pack"
+	cost = 4
+	allowed_archetypes = { BIOLOGICAL }
+	species_class = { REP }
+	tags = { special reptilian positive drawbacks army housing leader pop_output }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_dragonborn_1" "trait_libra_dragonborn_2" "trait_libra_dragonborn_3" "trait_libra_dragonborn_4" "trait_libra_dragonborn_5" }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		pop_housing_usage_mult = 1
+		habitability_floor_add = 0.5
+		army_morale = 0.5
+		leader_lifespan_mult = 0.5
+		pop_cat_ruler_bonus_workforce_mult = 0.2
+		worker_and_simple_drone_cat_bonus_workforce_mult = 0.15
+		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.2
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 1.5
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+trait_libra_dragonborn_1 = {
+	host_has_dlc = "Leviathans Story Pack"
+	cost = {
+		base = 4
+		modifier = {
+			subtract = 2
+			has_origin = origin_libra_dragonborn
+		}
+	}
+	category = advanced_genetic
+	allowed_archetypes = { BIOLOGICAL }
+	species_class = { REP }
+	tags = { special reptilian genetic_ascension positive army housing leader pop_output pop_growth }
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+	opposites = { "trait_libra_dragonborn_0" "trait_libra_dragonborn_2" "trait_libra_dragonborn_3" "trait_libra_dragonborn_4" "trait_libra_dragonborn_5" }
+	species_potential_add = { always = no }
+	species_possible_merge_add = { always = yes }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_housing_usage_mult = 1
+		bonus_pop_growth_mult = 0.25
+		habitability_floor_add = 0.5
+		army_morale = 1
+		pop_cat_ruler_bonus_workforce_mult = 0.3
+		worker_and_simple_drone_cat_bonus_workforce_mult = 0.25
+		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.25
+		negative_traits_leader = -1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 2
+	}
+}
+
+trait_libra_dragonborn_2 = {
+	host_has_dlc = "Leviathans Story Pack"
+	cost = {
+		base = 4
+		modifier = {
+			subtract = 2
+			has_origin = origin_libra_dragonborn
+		}
+	}
+	category = cyborg
+	allowed_archetypes = { BIOLOGICAL LIBRAPUNK }
+	species_class = { REP LIBRAPUNK }
+	tags = { special reptilian cybernetic positive army housing leader pop_output pop_growth }
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+	opposites = { "trait_libra_dragonborn_0" "trait_libra_dragonborn_1" "trait_libra_dragonborn_3" "trait_libra_dragonborn_4" "trait_libra_dragonborn_5" }
+	species_potential_add = { always = no }
+	species_possible_merge_add = { always = yes }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_housing_usage_mult = 1
+		logistic_growth_mult = 0.5
+		habitability_floor_add = 0.5
+		army_morale = 1
+		pop_bonus_workforce_mult = 0.25
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 2
+	}
+}
+
+trait_libra_dragonborn_3 = {
+	host_has_dlc = "Leviathans Story Pack"
+	cost = {
+		base = 3
+		modifier = {
+			subtract = 2
+			has_origin = origin_libra_dragonborn
+		}
+	}
+	category = robotic
+	allowed_archetypes = { ROBOT }
+	tags = { special reptilian synthetic positive army housing leader pop_output pop_growth }
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+	opposites = { "trait_libra_dragonborn_0" "trait_libra_dragonborn_1" "trait_libra_dragonborn_2" "trait_libra_dragonborn_4" "trait_libra_dragonborn_5" }
+	species_potential_add = { always = no }
+	species_possible_merge_add = { always = yes }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_housing_usage_mult = 1
+		planet_pop_assembly_mult = 0.25
+		habitability_floor_add = 0.5
+		army_morale = 1
+		pop_cat_ruler_bonus_workforce_mult = 0.3
+		worker_and_simple_drone_cat_bonus_workforce_mult = 0.25
+		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.25
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 2
+	}
+}
+
+trait_libra_dragonborn_4 = {
+	host_has_dlc = "Leviathans Story Pack"
+	cost = {
+		base = 4
+		modifier = {
+			subtract = 2
+			has_origin = origin_libra_dragonborn
+		}
+	}
+	category = psionic
+	allowed_archetypes = { BIOLOGICAL }
+	species_class = { REP }
+	tags = { special reptilian psionic positive army housing leader pop_output pop_growth }
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+	opposites = { "trait_libra_dragonborn_0" "trait_libra_dragonborn_1" "trait_libra_dragonborn_2" "trait_libra_dragonborn_3" "trait_libra_dragonborn_5" }
+	species_potential_add = { always = no }
+	species_possible_merge_add = { always = yes }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_housing_usage_mult = 1
+		logistic_growth_mult = 0.15
+		habitability_floor_add = 0.5
+		army_morale = 1
+		pop_bonus_workforce_mult = 0.35
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 2
+	}
+}
+
+trait_libra_dragonborn_5 = {
+	host_has_dlc = "Leviathans Story Pack"
+	cost = {
+		base = 4
+		modifier = {
+			subtract = 2
+			has_origin = origin_libra_dragonborn
+		}
+	}
+	category = psionic
+	allowed_archetypes = { OTHER }
+	species_class = { EXD LIBRAEXD }
+	tags = { special reptilian psionic extradimensional positive army housing leader pop_output }
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+	opposites = { "trait_libra_dragonborn_0" "trait_libra_dragonborn_1" "trait_libra_dragonborn_2" "trait_libra_dragonborn_3" "trait_libra_dragonborn_4" }
+	species_potential_add = { always = no }
+	species_possible_merge_add = { always = yes }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_housing_usage_mult = 1
+		habitability_floor_add = 0.5
+		army_morale = 1
+		pop_bonus_workforce_mult = 0.45
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 2
+	}
+}
+
+trait_libra_dragonborn_6 = {
+	host_has_dlc = "Leviathans Story Pack"
+	cost = 4
+	category = advanced_genetic
+	allowed_archetypes = { BIOLOGICAL }
+	species_class = { REP }
+	tags = { special reptilian organic positive army housing leader pop_output }
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+	opposites = { "trait_libra_dragonborn_0" "trait_libra_dragonborn_1" "trait_libra_dragonborn_2" "trait_libra_dragonborn_3" "trait_libra_dragonborn_4" }
+	species_potential_add = { always = no }
+	species_possible_merge_add = { always = yes }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = no }
+	modifier = {
+		pop_housing_usage_mult = 1
+		logistic_growth_mult = 0.5
+		habitability_floor_add = 0.5
+		army_morale = 1
+		pop_bonus_workforce_mult = 0.3
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 2
+	}
+}
+
+leader_trait_libra_dragonborn_official = {
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = genetic
+		ICON = "GFX_leader_trait_libra_dragonborn"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_federation_modifier = {
+		potential = { is_ruler = no }
+		cohesion_add = 1
+		federation_fleet_cap_add = 100
+	}
+	triggered_galcom_modifier = {
+		potential = { is_ruler = no }
+		diplo_weight_mult = 0.1
+		resolutions_cost_mult = -0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		logistic_growth_mult = 0.1
+		planet_decision_enact_speed_mult = 0.1
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		logistic_growth_mult = 0.05
+		planet_decision_enact_speed_mult = 0.05
+	}
+
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_housing_mult = 0.1
+		planet_stability_add = 10
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { has_origin = origin_libra_dragonborn }
+		}
+		envoys_add = 1
+		all_technology_research_speed = 0.05
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_dragonborn_commander = {
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = genetic
+		ICON = "GFX_leader_trait_libra_dragonborn"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_fleet_modifier = {
+		potential = { is_ruler = no }
+		ship_weapon_range_mult = 0.1
+		ship_engagement_range_mult = 0.1
+	}
+	triggered_self_modifier = {
+		potential = { is_ruler = no }
+		planet_combat_width_add = 1
+		leader_commanders_minor_artifacts_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -10
+		planet_building_build_speed_mult = 0.1
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -5
+		planet_building_build_speed_mult = 0.05
+	}
+
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_housing_mult = 0.1
+		planet_stability_add = 10
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { has_origin = origin_libra_dragonborn }
+		}
+		envoys_add = 1
+		all_technology_research_speed = 0.05
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_dragonborn_scientist = {
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = genetic
+		ICON = "GFX_leader_trait_libra_dragonborn"
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		potential = { is_ruler = no }
+		species_leader_exp_gain = 0.1
+		leader_trait_selection_options_add = 1
+	}
+	triggered_modifier = {
+		potential = { is_ruler = no }
+		science_ship_survey_speed = 0.1
+		ship_anomaly_research_speed_mult = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		planet_buildings_upkeep_mult = -0.1
+		planet_districts_upkeep_mult = -0.1
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		planet_buildings_upkeep_mult = -0.05
+		planet_districts_upkeep_mult = -0.05
+	}
+
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_housing_mult = 0.1
+		planet_stability_add = 10
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { has_origin = origin_libra_dragonborn }
+		}
+		envoys_add = 1
+		all_technology_research_speed = 0.05
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_dragonborn_official_2 = {
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = genetic
+		ICON = "GFX_leader_trait_libra_dragonborn"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_federation_modifier = {
+		potential = { is_ruler = no }
+		cohesion_add = 2
+		federation_fleet_cap_add = 200
+	}
+	triggered_galcom_modifier = {
+		potential = { is_ruler = no }
+		diplo_weight_mult = 0.2
+		resolutions_cost_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		logistic_growth_mult = 0.2
+		planet_decision_enact_speed_mult = 0.2
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		logistic_growth_mult = 0.1
+		planet_decision_enact_speed_mult = 0.1
+	}
+
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_housing_mult = 0.2
+		planet_stability_add = 20
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { has_origin = origin_libra_dragonborn }
+		}
+		envoys_add = 2
+		all_technology_research_speed = 0.1
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_dragonborn_commander_2 = {
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = genetic
+		ICON = "GFX_leader_trait_libra_dragonborn"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_fleet_modifier = {
+		potential = { is_ruler = no }
+		ship_weapon_range_mult = 0.2
+		ship_engagement_range_mult = 0.2
+	}
+	triggered_self_modifier = {
+		potential = { is_ruler = no }
+		planet_combat_width_add = 2
+		leader_commanders_minor_artifacts_produces_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -20
+		planet_building_build_speed_mult = 0.2
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -10
+		planet_building_build_speed_mult = 0.1
+	}
+
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_housing_mult = 0.2
+		planet_stability_add = 20
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { has_origin = origin_libra_dragonborn }
+		}
+		envoys_add = 2
+		all_technology_research_speed = 0.1
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_dragonborn_scientist_2 = {
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = genetic
+		ICON = "GFX_leader_trait_libra_dragonborn"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		potential = { is_ruler = no }
+		species_leader_exp_gain = 0.2
+		leader_trait_selection_options_add = 2
+	}
+	triggered_modifier = {
+		potential = { is_ruler = no }
+		science_ship_survey_speed = 0.2
+		ship_anomaly_research_speed_mult = 0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		planet_buildings_upkeep_mult = -0.2
+		planet_districts_upkeep_mult = -0.2
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		planet_buildings_upkeep_mult = -0.1
+		planet_districts_upkeep_mult = -0.1
+	}
+
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_housing_mult = 0.2
+		planet_stability_add = 20
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { has_origin = origin_libra_dragonborn }
+		}
+		envoys_add = 2
+		all_technology_research_speed = 0.1
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_dragonborn_official_3 = {
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = genetic
+		ICON = "GFX_leader_trait_libra_dragonborn"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_federation_modifier = {
+		potential = { is_ruler = no }
+		cohesion_add = 4
+		federation_fleet_cap_add = 400
+	}
+	triggered_galcom_modifier = {
+		potential = { is_ruler = no }
+		diplo_weight_mult = 0.4
+		resolutions_cost_mult = -0.4
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		logistic_growth_mult = 0.4
+		planet_decision_enact_speed_mult = 0.4
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		logistic_growth_mult = 0.2
+		planet_decision_enact_speed_mult = 0.2
+	}
+
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_housing_mult = 0.4
+		planet_stability_add = 40
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { has_origin = origin_libra_dragonborn }
+		}
+		envoys_add = 4
+		all_technology_research_speed = 0.2
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_dragonborn_commander_3 = {
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = genetic
+		ICON = "GFX_leader_trait_libra_dragonborn"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_fleet_modifier = {
+		potential = { is_ruler = no }
+		ship_weapon_range_mult = 0.4
+		ship_engagement_range_mult = 0.4
+	}
+	triggered_self_modifier = {
+		potential = { is_ruler = no }
+		planet_combat_width_add = 4
+		leader_commanders_minor_artifacts_produces_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -40
+		planet_building_build_speed_mult = 0.4
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -20
+		planet_building_build_speed_mult = 0.2
+	}
+
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_housing_mult = 0.4
+		planet_stability_add = 40
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { has_origin = origin_libra_dragonborn }
+		}
+		envoys_add = 4
+		all_technology_research_speed = 0.2
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_dragonborn_scientist_3 = {
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = genetic
+		ICON = "GFX_leader_trait_libra_dragonborn"
+		RARITY = paragon
+		COUNCIL = triggered
+		TIER = none
+	}
+
+	triggered_self_modifier = {
+		potential = { is_ruler = no }
+		species_leader_exp_gain = 0.4
+		leader_trait_selection_options_add = 4
+	}
+	triggered_modifier = {
+		potential = { is_ruler = no }
+		science_ship_survey_speed = 0.4
+		ship_anomaly_research_speed_mult = 0.4
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		planet_buildings_upkeep_mult = -0.4
+		planet_districts_upkeep_mult = -0.4
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		planet_buildings_upkeep_mult = -0.2
+		planet_districts_upkeep_mult = -0.2
+	}
+
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		planet_housing_mult = 0.4
+		planet_stability_add = 40
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { has_origin = origin_libra_dragonborn }
+		}
+		envoys_add = 4
+		all_technology_research_speed = 0.2
+	}
+
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+# #############
+# Paradox Loop
+#############
+
+trait_libra_paradox_loop = {
+	cost = 0
+	category = robotic
+	initial = no
+	randomized = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
+	allowed_archetypes = { MACHINE }
+	tags = { special machine positive pop_output mineral research production }
+	modifier = {
+		pop_mining_drone_bonus_workforce_mult = 0.1
+		pop_libra_calculator_drone_bonus_workforce_mult = 0.1
+	}
+	custom_tooltip_with_modifiers = trait_libra_paradox_loop_tooltip
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				is_pop_category = complex_drone
+			}
+			physics_research = 0.75
+			society_research = 0.75
+			engineering_research = 0.75
+		}
+	}
+
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 0.5
+	}
+}
+
+# #############
+# Paradise Lose
+#############
+
+leader_trait_libra_paradise_lose = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = default
+		ICON = "GFX_leader_trait_libra_paradise_lose"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = 1
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_weapon_damage = 0.1
+		ship_fire_rate_mult = 0.1
+		ship_weapon_range_mult = 0.1
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.1
+		army_health = 0.1
+	}
+	triggered_self_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		leader_scientists_physics_research_produces_add = 10
+		leader_scientists_society_research_produces_add = 10
+		leader_scientists_engineering_research_produces_add = 10
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.1
+		ship_archaeological_site_clues_add = 1
+		ship_astral_rift_clues_add = 1
+	}
+	triggered_federation_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		cohesion_add = 0.5
+		federation_leader_fleet_scale_mult = 0.05
+		federation_leader_diplo_weight_from_members_mult = 0.05
+	}
+	triggered_galcom_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		diplo_weight_mult = 0.05
+		diplo_weight_naval_mult = 0.05
+		resolutions_cost_mult = -0.05
+	}
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -10
+		planet_amenities_add = 400
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -5
+		planet_amenities_add = 200
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		country_naval_cap_mult = 0.03
+		pop_cat_ruler_happiness = 0.03
+		pop_demotion_time_mult = -0.05
+		species_leader_exp_gain = 0.05
+	}
+	councilor_modifier = {
+		pop_ethic_authoritarian_attraction_mult = 0.1
+	}
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		job_politician_add = 200
+		pop_category_rulers_influence_produces_add = 0.15
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_variable_set = libra_paradise_lose_ruler_mult }
+		}
+		custom_tooltip = leader_trait_libra_paradise_lose_ruler_tt
+		pop_politician_bonus_workforce_mult = 0.001
+		pop_bonus_workforce_mult = 0.002
+		mult = owner.libra_paradise_lose_ruler_mult
+	}
+	leader_class = { commander scientist official }
+	leader_potential_add = {
+		exists = owner
+		owner = { has_origin = origin_libra_paradise_lose }
+	}
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		factor = 5
+	}
+	ai_weight = 1000
+	on_gained_effect = {
+		owner = {
+			country_event = { id = libra_origin.0902 }
+		}
+	}
+}
+
+leader_trait_libra_paradise_lose_2 = {
+	leader_trait_type = veteran
+	replace_traits = { leader_trait_libra_paradise_lose }
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = default
+		ICON = "GFX_leader_trait_libra_paradise_lose"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = 2
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_weapon_damage = 0.2
+		ship_fire_rate_mult = 0.2
+		ship_weapon_range_mult = 0.2
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.2
+		army_morale_damage_mult = 0.2
+		army_health = 0.2
+	}
+	triggered_self_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		leader_scientists_physics_research_produces_add = 20
+		leader_scientists_society_research_produces_add = 20
+		leader_scientists_engineering_research_produces_add = 20
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.2
+		ship_archaeological_site_clues_add = 2
+		ship_astral_rift_clues_add = 2
+	}
+	triggered_federation_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		cohesion_add = 1
+		federation_leader_fleet_scale_mult = 0.1
+		federation_leader_diplo_weight_from_members_mult = 0.1
+	}
+	triggered_galcom_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		diplo_weight_mult = 0.1
+		diplo_weight_naval_mult = 0.1
+		resolutions_cost_mult = -0.1
+	}
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -20
+		planet_amenities_add = 800
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -10
+		planet_amenities_add = 400
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		country_naval_cap_mult = 0.06
+		pop_cat_ruler_happiness = 0.06
+		pop_demotion_time_mult = -0.1
+		species_leader_exp_gain = 0.1
+	}
+	councilor_modifier = {
+		pop_ethic_authoritarian_attraction_mult = 0.2
+	}
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		job_politician_add = 400
+		pop_category_rulers_influence_produces_add = 0.2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_variable_set = libra_paradise_lose_ruler_mult }
+		}
+		custom_tooltip = leader_trait_libra_paradise_lose_2_ruler_tt
+		pop_politician_bonus_workforce_mult = 0.002
+		pop_bonus_workforce_mult = 0.003
+		mult = owner.libra_paradise_lose_ruler_mult
+	}
+	leader_class = { commander scientist official }
+	ai_weight = 1000
+	on_gained_effect = {
+		owner = {
+			country_event = { id = libra_origin.0902 }
+		}
+	}
+}
+
+leader_trait_libra_paradise_lose_3 = {
+	leader_trait_type = veteran
+	replace_traits = { leader_trait_libra_paradise_lose_2 }
+	inline_script = {
+		script = trait/libra_trait
+		CLASS = leader
+		TYPE = default
+		ICON = "GFX_leader_trait_libra_paradise_lose"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = 3
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_weapon_damage = 0.3
+		ship_fire_rate_mult = 0.3
+		ship_weapon_range_mult = 0.3
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.3
+		army_morale_damage_mult = 0.3
+		army_health = 0.3
+	}
+	triggered_self_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		leader_scientists_physics_research_produces_add = 30
+		leader_scientists_society_research_produces_add = 30
+		leader_scientists_engineering_research_produces_add = 30
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.3
+		ship_archaeological_site_clues_add = 3
+		ship_astral_rift_clues_add = 3
+	}
+	triggered_federation_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		cohesion_add = 1.5
+		federation_leader_fleet_scale_mult = 0.15
+		federation_leader_diplo_weight_from_members_mult = 0.15
+	}
+	triggered_galcom_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		diplo_weight_mult = 0.15
+		diplo_weight_naval_mult = 0.15
+		resolutions_cost_mult = -0.15
+	}
+	triggered_planet_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -30
+		planet_amenities_add = 1200
+	}
+	triggered_sector_modifier = {
+		potential = { is_ruler = no }
+		planet_crime_add = -15
+		planet_amenities_add = 600
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		country_naval_cap_mult = 0.09
+		pop_cat_ruler_happiness = 0.09
+		pop_demotion_time_mult = -0.15
+		species_leader_exp_gain = 0.15
+	}
+	councilor_modifier = {
+		pop_ethic_authoritarian_attraction_mult = 0.3
+	}
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = { is_same_value = root.owner }
+			}
+		}
+		job_politician_add = 600
+		pop_category_rulers_influence_produces_add = 0.25
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = { is_variable_set = libra_paradise_lose_ruler_mult }
+		}
+		custom_tooltip = leader_trait_libra_paradise_lose_3_ruler_tt
+		pop_politician_bonus_workforce_mult = 0.003
+		pop_bonus_workforce_mult = 0.004
+		mult = owner.libra_paradise_lose_ruler_mult
+	}
+	leader_class = { commander scientist official }
+	ai_weight = 1000
+	on_gained_effect = {
+		owner = {
+			country_event = { id = libra_origin.0902 }
+		}
+	}
+}
+
+# #############
+# Interstellar Port
+#############
+
+leader_trait_libra_interstellar_port_commander = {
+	leader_trait_type = veteran
+	force_councilor_trait = yes
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = default
+		CLASS = leader
+		ICON = "GFX_leader_trait_merchant_of_numa"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = {
+				not = { has_valid_civic = civic_libra_interstellar_port_d }
+			}
+		}
+		planet_jobs_trade_produces_mult = 0.04
+		planet_buildings_trade_produces_mult = 0.04
+		mult = trigger:has_base_skill
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_d
+			}
+		}
+		job_libra_corporate_sentry_add = 100
+		planet_jobs_trade_produces_mult = 0.04
+		planet_buildings_trade_produces_mult = 0.04
+		mult = trigger:has_base_skill
+	}
+	triggered_sector_modifier = {
+		potential = {
+			has_base_skill <= 10
+		}
+		planet_jobs_trade_produces_mult = 0.02
+		planet_buildings_trade_produces_mult = 0.02
+		mult = trigger:has_base_skill
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_b
+			}
+		}
+		ship_weapon_damage = 0.05
+		ships_upkeep_mult = -0.02
+		mult = trigger:has_base_skill
+	}
+	triggered_army_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_b
+			}
+		}
+		army_damage_mult = 0.05
+		armies_upkeep_mult = -0.02
+		mult = trigger:has_base_skill
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_a
+			}
+		}
+		country_naval_cap_mult = 0.1
+	}
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = {
+					is_same_value = root.owner
+					has_valid_civic = civic_libra_interstellar_port_f
+				}
+			}
+		}
+		job_libra_outland_distributor_add = 100
+		mult = trigger:has_base_skill
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_base_skill_effect_tt
+	leader_class = { commander scientist official }
+	initial = no
+	selectable_weight = @subclass_trait_weight
+	leader_potential_add = {
+		exists = owner
+		owner = { has_origin = origin_libra_interstellar_port }
+		leader_class = commander
+	}
+}
+
+leader_trait_libra_interstellar_port_official = {
+	leader_trait_type = veteran
+	force_councilor_trait = yes
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = default
+		CLASS = leader
+		ICON = "GFX_leader_trait_merchant_of_numa"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = {
+				not = { has_valid_civic = civic_libra_interstellar_port_d }
+			}
+		}
+		planet_jobs_trade_produces_mult = 0.04
+		planet_buildings_trade_produces_mult = 0.04
+		mult = trigger:has_base_skill
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_d
+			}
+		}
+		job_libra_corporate_sentry_add = 100
+		planet_jobs_trade_produces_mult = 0.04
+		planet_buildings_trade_produces_mult = 0.04
+		mult = trigger:has_base_skill
+	}
+	triggered_sector_modifier = {
+		potential = {
+			has_base_skill <= 10
+		}
+		planet_jobs_trade_produces_mult = 0.02
+		planet_buildings_trade_produces_mult = 0.02
+		mult = trigger:has_base_skill
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_a
+			}
+		}
+		councilor_skill_add = 1
+	}
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = {
+					is_same_value = root.owner
+					has_valid_civic = civic_libra_interstellar_port_f
+				}
+			}
+		}
+		job_libra_outland_distributor_add = 100
+		mult = trigger:has_base_skill
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_base_skill_effect_tt
+	leader_class = { commander scientist official }
+	initial = no
+	selectable_weight = @subclass_trait_weight
+	leader_potential_add = {
+		exists = owner
+		owner = { has_origin = origin_libra_interstellar_port }
+		leader_class = official
+	}
+}
+
+leader_trait_libra_interstellar_port_scientist = {
+	leader_trait_type = veteran
+	force_councilor_trait = yes
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = default
+		CLASS = leader
+		ICON = "GFX_leader_trait_merchant_of_numa"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = {
+				not = { has_valid_civic = civic_libra_interstellar_port_d }
+			}
+		}
+		planet_jobs_trade_produces_mult = 0.04
+		planet_buildings_trade_produces_mult = 0.04
+		mult = trigger:has_base_skill
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_d
+			}
+		}
+		job_libra_corporate_sentry_add = 100
+		planet_jobs_trade_produces_mult = 0.04
+		planet_buildings_trade_produces_mult = 0.04
+		mult = trigger:has_base_skill
+	}
+	triggered_sector_modifier = {
+		potential = {
+			has_base_skill <= 10
+		}
+		planet_jobs_trade_produces_mult = 0.02
+		planet_buildings_trade_produces_mult = 0.02
+		mult = trigger:has_base_skill
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_libra_interstellar_port_a
+			}
+		}
+		all_technology_research_speed = 0.1
+	}
+	triggered_background_planet_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = FROM
+			FROM = {
+				exists = owner
+				owner = {
+					is_same_value = root.owner
+					has_valid_civic = civic_libra_interstellar_port_f
+				}
+			}
+		}
+		job_libra_outland_distributor_add = 100
+		mult = trigger:has_base_skill
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_base_skill_effect_tt
+	leader_class = { commander scientist official }
+	initial = no
+	selectable_weight = @subclass_trait_weight
+	leader_potential_add = {
+		exists = owner
+		owner = { has_origin = origin_libra_interstellar_port }
+		leader_class = scientist
+	}
+}
+
+# #############
+# Anti-entropy Instruction
+#############
+
+trait_libra_antientropy_instruction_0 = {
+	cost = 0
+	category = robotic
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output energy }
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		pop_civilian_bonus_workforce_mult = -0.25
+		influential_jobs_bonus_workforce_mult = -0.25
+		#pop_cat_maintenance_drone_bonus_workforce_mult = -0.25
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = planet
+			planet = { has_current_purge = yes }
+		}
+		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.35
+		worker_and_simple_drone_cat_bonus_workforce_mult = 0.5
+	}
+	custom_tooltip_with_modifiers = trait_libra_antientropy_instruction_0_tooltip
+
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+trait_libra_antientropy_instruction_1 = {
+	cost = 1
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output research }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.15
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.1
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.1
+		physicist_jobs_bonus_workforce_mult = 0.25
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_antientropy_instruction_2 = {
+	cost = 1
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output research }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.15
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.1
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.1
+		biologist_jobs_bonus_workforce_mult = 0.25
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_antientropy_instruction_3 = {
+	cost = 1
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output research }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.15
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.1
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.1
+		engineer_jobs_bonus_workforce_mult = 0.25
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_antientropy_instruction_4 = {
+	cost = 3
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output pop_growth housing }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.35
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.2
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.2
+		pop_housing_usage_mult = -0.1
+		planet_pop_assembly_mult = 0.2
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 2
+	}
+	ai_weight = {
+		factor = 3
+	}
+}
+
+trait_libra_antientropy_instruction_5 = {
+	cost = 2
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.25
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.15
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.15
+		worker_and_simple_drone_cat_bonus_workforce_mult = 0.15
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_antientropy_instruction_6 = {
+	cost = 2
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.25
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.15
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.15
+		specialist_and_complex_drone_cat_bonus_workforce_mult = 0.1
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_antientropy_instruction_7 = {
+	cost = 2
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output leader }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.25
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.15
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.15
+		leader_skill_add = 1
+		species_leader_exp_gain = 0.15
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_antientropy_instruction_8 = {
+	cost = 1
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output production rare_resource }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.15
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.1
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.1
+	}
+	custom_tooltip_with_modifiers = trait_libra_antientropy_instruction_8_tooltip
+	resources = {
+		category = planet_pops
+		produces = {
+			volatile_motes = 0.02
+		}
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_antientropy_instruction_9 = {
+	cost = 2
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output habitability empire_size }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.25
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.15
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.15
+		habitability_floor_add = 0.1
+		species_empire_size_mult = -0.2
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_antientropy_instruction_10 = {
+	cost = 3
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.35
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.2
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.2
+		pop_bonus_workforce_mult = 0.1
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 1.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_antientropy_instruction_11 = {
+	cost = 3
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output production trade }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.35
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.2
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.2
+	}
+	custom_tooltip_with_modifiers = trait_libra_antientropy_instruction_11_tooltip
+	resources = {
+		category = planet_pops
+		produces = {
+			trade = 1
+		}
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 1.5
+	}
+	ai_weight = {
+		factor = 3
+	}
+}
+
+trait_libra_antientropy_instruction_12 = {
+	cost = 1
+	category = robotic
+	randomized = no
+	allowed_origins = { origin_libra_antientropy_instruction }
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_ANTIENTROPY_INSTRUCTION }
+	tags = { machine special species positive drawbacks upkeep pop_output unity }
+	species_potential_add = { can_use_libra_antientropy_instruction_traits = yes }
+	species_possible_remove = { can_remove_libra_antientropy_instruction_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		planet_pops_energy_upkeep_mult = 0.15
+		pop_libra_phantom_unit_bonus_workforce_mult = 0.1
+		pop_libra_phantom_mechanist_bonus_workforce_mult = 0.1
+		bureaucrat_jobs_bonus_workforce_mult = 0.25
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# #############
+# Planetarian
+#############
+
+leader_trait_libra_planetarian_ruler = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = machine
+		CLASS = leader
+		ICON = "GFX_leader_trait_libra_planetarian_ruler"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+		species_leader_exp_gain = 0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			owner = {
+				has_origin = origin_libra_planetarian
+				not = { has_tradition = tr_virtuality_adopt }
+			}
+		}
+		planet_pop_assembly_add = 2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = {
+				has_origin = origin_libra_planetarian
+				has_tradition = tr_virtuality_adopt
+			}
+		}
+		planet_building_build_speed_mult = 0.5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = { has_valid_civic = civic_machine_sovereign_guardianship }
+		}
+		army_defense_damage_mult = 0.1
+		shipclass_starbase_hull_mult = 0.05
+		ship_friendly_territory_armor_mult = 0.05
+		ship_friendly_territory_shield_mult = 0.05
+		mult = trigger:has_total_skill
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_total_skill_effect_tt
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_libra_planetarian_yumemi = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/libra_trait
+		TYPE = machine
+		CLASS = leader
+		ICON = "GFX_leader_trait_libra_planetarian_yumemi"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		leader_trait_selection_options_add = 1
+		species_leader_exp_gain = 0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			owner = {
+				has_origin = origin_libra_planetarian
+				not = { has_tradition = tr_virtuality_adopt }
+			}
+		}
+		planet_pop_assembly_add = 2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			exists = owner
+			owner = {
+				has_origin = origin_libra_planetarian
+				has_tradition = tr_virtuality_adopt
+			}
+		}
+		planet_building_build_speed_mult = 0.5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_base_skill <= 10
+			exists = owner
+			owner = { has_valid_civic = civic_machine_sovereign_guardianship }
+		}
+		army_defense_damage_mult = 0.1
+		army_defense_health_mult = 0.1
+		shipclass_starbase_hull_mult = 0.1
+		ship_friendly_territory_armor_mult = 0.05
+		ship_friendly_territory_shield_mult = 0.05
+		ship_friendly_territory_fire_rate_mult = 0.05
+		mult = trigger:has_total_skill
+	}
+	custom_tooltip_with_modifiers = leader_trait_libra_total_skill_effect_tt
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+# #############
+# Extreme Iteration
+#############
+
+@libra_ex_iteration_hab_1 = -0.05
+@libra_ex_iteration_hab_2 = -0.1
+@libra_ex_iteration_hab_3 = -0.15
+@libra_ex_iteration_amenity = 0.2
+@libra_ex_iteration_bonus_1 = 0.15
+@libra_ex_iteration_bonus_2 = 0.3
+@libra_ex_iteration_upkeep_1 = 1
+@libra_ex_iteration_upkeep_2 = 2
+
+#
+trait_libra_ex_iteration_energy_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output energy }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		technician_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		technician_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_generator_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_rural_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_energy_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production energy }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_society_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			trade = @libra_ex_iteration_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			trade = @libra_ex_iteration_upkeep_1
+		}
+		produces = {
+			energy = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			energy = 3
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_energy_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_energy_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability pop_output energy }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		technician_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		technician_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_generator_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_rural_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_minerals_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output mineral }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		miner_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		miner_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_rural_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_minerals_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production mineral }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_society_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			trade = @libra_ex_iteration_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			trade = @libra_ex_iteration_upkeep_1
+		}
+		produces = {
+			minerals = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			minerals = 2
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_minerals_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_minerals_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output mineral }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		miner_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		miner_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_rural_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_food_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output food }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		farmer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		farmer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_farming_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_rural_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_food_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production food }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_society_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			trade = @libra_ex_iteration_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			trade = @libra_ex_iteration_upkeep_1
+		}
+		produces = {
+			food = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			food = 2
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_food_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_food_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output food }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		farmer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		farmer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_farming_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_rural_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_soldier_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output army }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		soldier_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+		enforcer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		soldier_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+		enforcer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_fortress_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_soldier_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production army }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_society_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			trade = @libra_ex_iteration_upkeep_1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			trade = @libra_ex_iteration_upkeep_1
+		}
+		produces = {
+			influence = 0.01
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			influence = 0.01
+		}
+	}
+	custom_tooltip_with_modifiers  = trait_libra_ex_iteration_soldier_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_soldier_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output army }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		soldier_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+		enforcer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		soldier_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+		enforcer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_fortress_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_alloys_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output alloys }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		foundry_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		foundry_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_foundry_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_industrial_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_alloys_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production alloys }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_society_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			minerals = @libra_ex_iteration_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			minerals = @libra_ex_iteration_upkeep_2
+		}
+		produces = {
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			alloys = 1
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_alloys_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_alloys_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output alloys }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		foundry_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		foundry_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_foundry_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_industrial_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_goods_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output consumer_goods }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		artisan_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		artisan_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_factory_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_industrial_designation = yes }
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 2
+			exists = from
+			from = { country_uses_consumer_goods = yes }
+		}
+	}
+}
+
+trait_libra_ex_iteration_goods_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production consumer_goods }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_society_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			minerals = @libra_ex_iteration_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			minerals = @libra_ex_iteration_upkeep_2
+		}
+		produces = {
+			consumer_goods = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			consumer_goods = 2
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_goods_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		modifier = {
+			factor = 2
+			exists = from
+			from = { country_uses_consumer_goods = yes }
+		}
+	}
+}
+
+trait_libra_ex_iteration_goods_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output consumer_goods }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		artisan_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		artisan_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_factory_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { libra_has_industrial_designation = yes }
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 2
+			exists = from
+			from = { country_uses_consumer_goods = yes }
+		}
+	}
+}
+
+#
+trait_libra_ex_iteration_unity_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output unity }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		bureaucrat_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		bureaucrat_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_unity_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_unity_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production unity }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_society_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			minerals = @libra_ex_iteration_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			minerals = @libra_ex_iteration_upkeep_2
+		}
+		produces = {
+			unity = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			unity = 2
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_unity_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_unity_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output unity }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		bureaucrat_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		bureaucrat_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_unity_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_trade_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output trade }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		trader_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		trader_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_trade_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_trade_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production trade }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_society_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @libra_ex_iteration_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			energy = @libra_ex_iteration_upkeep_2
+		}
+		produces = {
+			trade = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			trade = 2
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_trade_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		modifier = {
+			factor = 3
+			exists = from
+			from = { libra_ai_preferences_trade = yes }
+		}
+	}
+}
+
+trait_libra_ex_iteration_trade_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output trade }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		trader_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		trader_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		base = 0.5
+		modifier = {
+			add = 1
+			from = { libra_has_trade_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_physics_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output research }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		physicist_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		physicist_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_research_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_physics_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production research }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_society_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @libra_ex_iteration_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			energy = @libra_ex_iteration_upkeep_2
+		}
+		produces = {
+			physics_research = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			physics_research = 1
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_physics_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_physics_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output research }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		physicist_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		physicist_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_research_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_society_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output research }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		biologist_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		biologist_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_research_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_society_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production research }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_engineering_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @libra_ex_iteration_upkeep_2
+		}
+		produces = {
+			society_research = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			energy = @libra_ex_iteration_upkeep_2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			society_research = 1
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_society_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_society_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output research }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		biologist_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		biologist_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_research_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_engineering_1 = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities pop_output research }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		engineer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		engineer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { libra_has_research_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_engineering_2 = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability upkeep production research }
+	initial = no
+	randomized = no
+	opposites = { "trait_libra_ex_iteration_energy_2" "trait_libra_ex_iteration_minerals_2" "trait_libra_ex_iteration_food_2" "trait_libra_ex_iteration_soldier_2" "trait_libra_ex_iteration_alloys_2" "trait_libra_ex_iteration_goods_2" "trait_libra_ex_iteration_unity_2" "trait_libra_ex_iteration_trade_2" "trait_libra_ex_iteration_physics_2" "trait_libra_ex_iteration_society_2" }
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @libra_ex_iteration_upkeep_2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			energy = @libra_ex_iteration_upkeep_2
+		}
+		produces = {
+			engineering_research = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			engineering_research = 1
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_engineering_2_tooltip
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_engineering_3 = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production pop_output research }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		engineer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		engineer_jobs_bonus_workforce_mult = @libra_ex_iteration_bonus_2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_research_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+#
+trait_libra_ex_iteration_upkeep = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities upkeep }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		planet_pops_upkeep_mult = -0.2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		planet_pops_upkeep_mult = -0.2
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_housing = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities housing }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		pop_housing_usage_mult = -0.2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		pop_housing_usage_mult = -0.2
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_happiness = {
+	cost = 1
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities happiness }
+	allowed_origins = { origin_libra_extreme_iteration }
+	forbidden_ethics = { ethic_gestalt_consciousness }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_ceil_add = @libra_ex_iteration_hab_1
+		pop_amenities_usage_add = @libra_ex_iteration_amenity
+		pop_happiness = 0.1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		pop_happiness = 0.1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	ai_weight = {
+		modifier = {
+			factor = 2
+			exists = from
+			from = { is_gestalt = no }
+		}
+	}
+}
+
+trait_libra_ex_iteration_maintenance = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability amenities }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+		pop_amenities_usage_mult = -0.2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		pop_amenities_usage_mult = -0.2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_empire_size = {
+	cost = 2
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability empire_size }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_1
+		habitability_ceil_add = @libra_ex_iteration_hab_2
+		species_empire_size_mult = -0.2
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		species_empire_size_mult = -0.2
+	}
+	slave_cost = {
+		energy = 1500
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_rare = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability production rare_resource }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+	}
+	resources = {
+		category = planet_pops
+		produces = {
+			exotic_gases = 0.02
+			rare_crystals = 0.02
+			exotic_gases = 0.02
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = libra_extreme_iteration }
+			}
+			exotic_gases = 0.02
+			rare_crystals = 0.02
+			exotic_gases = 0.02
+		}
+	}
+	custom_tooltip_with_modifiers = trait_libra_ex_iteration_rare_tooltip
+	slave_cost = {
+		energy = 1500
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_libra_ex_iteration_productive = {
+	cost = 3
+	category = robotic
+	allowed_archetypes = { MACHINE }
+	localized_tags = { SPECIES_TRAIT_LIBRA_EXTREME_ITERATION }
+	tags = { machine special positive drawbacks habitability pop_output }
+	allowed_origins = { origin_libra_extreme_iteration }
+	randomized = no
+	species_potential_add = { can_use_libra_extreme_iteration_traits = yes }
+	species_possible_remove = { can_remove_libra_extreme_iteration_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	modifier = {
+		habitability_floor_add = @libra_ex_iteration_hab_2
+		habitability_ceil_add = @libra_ex_iteration_hab_3
+		pop_bonus_workforce_mult = 0.1
+	}
+	triggered_pop_group_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = libra_extreme_iteration }
+		}
+		pop_bonus_workforce_mult = 0.1
+	}
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 3
+	}
+}

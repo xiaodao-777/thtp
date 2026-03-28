@@ -1,0 +1,13 @@
+default = {
+	ship_of_size_limits = {
+		libra_large_ship_synthetic_limit
+		libra_synthetic_mothership_limit
+		libra_junkie_battleship_limit
+		libra_nanite_titan_limit
+		libra_crimson_nights_warship_limit
+		libra_dragonborn_small_limit
+		libra_dragonborn_medium_limit
+		libra_dragonborn_large_limit
+		libra_antientropy_instruction_warship_limit
+	}
+}

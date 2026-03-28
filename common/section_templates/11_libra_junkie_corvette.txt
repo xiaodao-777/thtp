@@ -1,0 +1,135 @@
+ship_section_template = {
+	key = "LIBRA_JUNKIE_CORVETTE_MID_S3"
+	ship_size = libra_junkie_corvette
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "pirate_01_pirate_corvette_S3_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { brawler brawler_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "small_gun_03"
+	}
+
+	small_utility_slots = 4
+	aux_utility_slots = 2
+}
+
+ship_section_template = {
+	key = "LIBRA_JUNKIE_CORVETTE_MID_S1P2"
+	ship_size = libra_junkie_corvette
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "pirate_01_pirate_corvette_S3_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { screen screen_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+		locatorname = "small_gun_03"
+	}
+
+	small_utility_slots = 4
+	aux_utility_slots = 2
+}
+
+ship_section_template = {
+	key = "LIBRA_JUNKIE_CORVETTE_MID_M1P1"
+	ship_size = libra_junkie_corvette
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "pirate_01_pirate_corvette_M1S1_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { gunship gunship_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_energy
+		}
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "small_gun_01"
+	}
+
+	small_utility_slots = 4
+	aux_utility_slots = 2
+}
+
+ship_section_template = {
+	key = "LIBRA_JUNKIE_CORVETTE_MID_G1S1"
+	ship_size = libra_junkie_corvette
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "pirate_01_pirate_corvette_M1S1_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { explosive explosive_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	prerequisites = { tech_torpedoes_1 }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_explosive
+		}
+	}
+
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "medium_missile_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}
+
+	small_utility_slots = 4
+	aux_utility_slots = 2
+}

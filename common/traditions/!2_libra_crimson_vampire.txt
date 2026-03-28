@@ -1,0 +1,301 @@
+tr_libra_crimson_vampire_adopt = {
+	unlocks_agenda = agenda_libra_crimson_vampire
+	custom_tooltip = tr_libra_crimson_vampire_adopt_desc
+	possible = {
+		is_species_class = HUM
+	}
+	on_enabled = {
+		hidden_effect = {
+			start_situation = {
+				type = situation_libra_return_to_mortal
+				target = capital_scope
+			}
+		}
+	}
+}
+
+tr_libra_crimson_vampire_finish = {
+	modifier = {
+		ascension_perks_add = 1
+	}
+	custom_tooltip = tr_libra_crimson_vampire_finish_effect
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_peace
+		}
+		modifier = {
+			country_produces_mult = 0.1
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_war
+		}
+		modifier = {
+			starbase_shipyard_build_cost_mult = -0.1
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_libra_crimson_ancestor_3
+		}
+		modifier = {
+			country_produces_mult = 0.1
+			starbase_shipyard_build_cost_mult = -0.1
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 3
+		}
+	}
+}
+
+tr_libra_crimson_vampire_1 = {
+	modifier = {
+		planet_decision_enact_speed_mult = 0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_crimson_vampire_1_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_crimson_vampire_2 = {
+	possible = {
+		has_tradition = tr_libra_crimson_vampire_1
+	}
+	custom_tooltip = tr_libra_crimson_vampire_2_effect
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_peace
+		}
+		modifier = {
+			planet_structures_cost_mult = -0.05
+			planet_building_build_speed_mult = 0.25
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_war
+		}
+		modifier = {
+			planet_stability_mult = 0.05
+			starbase_shipyard_build_speed_mult = 0.25
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_libra_crimson_ancestor_3
+		}
+		modifier = {
+			planet_stability_mult = 0.05
+			planet_structures_cost_mult = -0.05
+			starbase_shipyard_build_speed_mult = 0.25
+			planet_building_build_speed_mult = 0.25
+		}
+		weight = {
+			factor = 3
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_crimson_vampire_3 = {
+	possible = {
+		has_tradition = tr_libra_crimson_vampire_1
+	}
+	custom_tooltip = tr_libra_crimson_vampire_3_effect
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_peace
+		}
+		modifier = {
+			all_technology_research_speed = 0.05
+			planetary_ascension_cost_mult = -0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_war
+		}
+		modifier = {
+			ship_weapon_range_mult = 0.1
+		}
+		custom_tooltip_with_modifiers = tr_libra_crimson_vampire_3_war_desc
+		weight = {
+			factor = 2
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_libra_crimson_ancestor_3
+		}
+		modifier = {
+			all_technology_research_speed = 0.05
+			planetary_ascension_cost_mult = -0.1
+			ship_weapon_range_mult = 0.1
+		}
+		custom_tooltip_with_modifiers = tr_libra_crimson_vampire_3_war_desc
+		weight = {
+			factor = 3
+		}
+	}
+
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tr_libra_crimson_vampire_4 = {
+	possible = {
+		has_tradition = tr_libra_crimson_vampire_2
+	}
+	custom_tooltip = tr_libra_crimson_vampire_4_effect
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_peace
+		}
+		modifier = {
+			envoys_add = 1
+		}
+		custom_tooltip_with_modifiers = tr_libra_crimson_vampire_4_peace_desc
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_war
+		}
+		modifier = {
+			country_war_exhaustion_mult = -0.1
+			country_power_projection_influence_produces_add = 1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_libra_crimson_ancestor_3
+		}
+		modifier = {
+			country_war_exhaustion_mult = -0.1
+			envoys_add = 1
+			country_power_projection_influence_produces_add = 1
+		}
+		custom_tooltip_with_modifiers = tr_libra_crimson_vampire_4_peace_desc
+		weight = {
+			factor = 3
+		}
+	}
+
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tr_libra_crimson_vampire_5 = {
+	possible = {
+		has_tradition = tr_libra_crimson_vampire_3
+	}
+	custom_tooltip = tr_libra_crimson_vampire_5_effect
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_peace
+		}
+		modifier = {
+			founder_species_growth_mult = 0.2
+		}
+		custom_tooltip_with_modifiers = tr_libra_crimson_vampire_5_peace_desc
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_crimson_vampire_war
+		}
+		modifier = {
+			ships_upkeep_mult = -0.1
+			armies_upkeep_mult = -0.1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_libra_crimson_ancestor_3
+		}
+		modifier = {
+			ships_upkeep_mult = -0.1
+			armies_upkeep_mult = -0.1
+			founder_species_growth_mult = 0.2
+		}
+		custom_tooltip_with_modifiers = tr_libra_crimson_vampire_5_peace_desc
+		weight = {
+			factor = 3
+		}
+	}
+
+	ai_weight = {
+		factor = 4000
+	}
+}

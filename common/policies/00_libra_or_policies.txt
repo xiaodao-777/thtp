@@ -1,0 +1,1011 @@
+# #############
+# Ultimate Market
+#############
+
+libra_ultimate_market_1 = {
+	potential = {
+		has_origin = origin_libra_ultimate_market
+		has_valid_civic = civic_augmentation_bazaars
+	}
+
+	option = {
+		name = policy_libra_ultimate_market_1_a
+		modifier = {
+			pop_bonus_workforce_mult = 0.05
+		}
+		AI_weight = {
+			weight = 3
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_1_b
+		valid = {
+			not = { has_valid_civic = civic_worker_coop }
+		}
+		modifier = {
+			pop_cat_specialist_happiness = -0.1
+			pop_cat_ruler_bonus_workforce_mult = 0.15
+			pop_cat_specialist_bonus_workforce_mult = 0.15
+		}
+		AI_weight = {
+			weight = 2
+			modifier = {
+				add = 2
+				has_ascension_perk = ap_libra_galaxy_ambition
+			}
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_1_c
+		valid = {
+			not = { has_valid_civic = civic_worker_coop }
+		}
+		modifier = {
+			pop_cat_ruler_happiness = 0.05
+			pop_cat_worker_bonus_workforce_mult = 0.2
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_1_d
+		valid = {
+			has_valid_civic = civic_worker_coop
+		}
+		modifier = {
+			pop_cyborg_happiness = 0.05
+			pop_bonus_workforce_mult = 0.05
+			planet_pops_upkeep_mult = 0.15
+		}
+		AI_weight = {
+			weight = 5
+		}
+	}
+}
+
+libra_ultimate_market_2 = {
+	potential = {
+		has_origin = origin_libra_ultimate_market
+		has_valid_civic = civic_augmentation_bazaars
+	}
+
+	option = {
+		name = policy_libra_ultimate_market_2_a
+		modifier = {
+			specialist_subject_conversion_time_mult = -0.25
+			country_power_projection_influence_produces_mult = 0.15
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				has_resource = {
+					type = influence
+					amount < 100
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_2_b
+		modifier = {
+			divided_patrongage_max_subjects = 2
+			monthly_loyalty_from_subjects = 2
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_2_c
+		modifier = {
+			country_naval_capacity_contribution_from_subjects_mult = 0.1
+			country_enclave_capacity_add = 1
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_2_d
+		modifier = {
+			country_subject_acceptance_add = 25
+			subjects_unity_produces_add = 25
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				num_ascension_perks < 4
+			}
+		}
+	}
+}
+
+libra_ultimate_market_3 = {
+	potential = {
+		has_origin = origin_libra_ultimate_market
+		has_valid_civic = civic_augmentation_bazaars
+	}
+
+	option = {
+		name = policy_libra_ultimate_market_3_a
+		modifier = {
+			empire_size_branch_office_mult = -0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				empire_size > 400
+			}
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_3_b
+		potential = {
+			not = { has_valid_civic = civic_criminal_heritage }
+		}
+		modifier = {
+			branch_office_value_mult = 0.3
+		}
+		AI_weight = {
+			weight = 2
+			modifier = {
+				add = 2
+				has_resource = {
+					type = energy
+					amount < 5000
+				}
+				resource_income_compare = {
+					resource = energy
+					value < 25
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_3_c
+		modifier = {
+			planet_branch_offices_cost_mult = -0.35
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_3_d
+		potential = {
+			has_valid_civic = civic_criminal_heritage
+		}
+		modifier = {
+			branch_office_value_mult = 0.35
+		}
+		AI_weight = {
+			weight = 2
+			modifier = {
+				add = 2
+				has_resource = {
+					type = energy
+					amount < 5000
+				}
+				resource_income_compare = {
+					resource = energy
+					value < 25
+				}
+			}
+		}
+	}
+}
+
+libra_ultimate_market_4 = {
+	potential = {
+		has_origin = origin_libra_ultimate_market
+		has_valid_civic = civic_augmentation_bazaars
+	}
+
+	option = {
+		name = policy_libra_ultimate_market_4_a
+		modifier = {
+			planet_physicists_physics_research_produces_add = 0.5
+			planet_physicists_energy_upkeep_add = 1
+			planet_biologists_society_research_produces_add = 0.5
+			planet_biologists_energy_upkeep_add = 1
+			planet_engineers_engineering_research_produces_add = 0.5
+			planet_engineers_energy_upkeep_add = 1
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_4_b
+		modifier = {
+			planet_soldiers_unity_produces_add = 2
+			planet_soldiers_energy_upkeep_add = 1
+			planet_enforcers_trade_produces_add = 2
+			planet_enforcers_energy_upkeep_add = 1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				or = {
+					num_assigned_jobs = { job = soldier value > 2500 }
+					has_ascension_perk = ap_libra_galaxy_ambition
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_4_c
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 0.5
+			planet_metallurgists_energy_upkeep_add = 1
+			planet_artisans_consumer_goods_produces_add = 1
+			planet_artisans_energy_upkeep_add = 1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				or = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				add = 2
+				has_resource = {
+					type = alloys
+					amount < 2500
+				}
+				resource_income_compare = {
+					resource = alloys
+					value < 30
+				}
+			}
+			modifier = {
+				add = 2
+				has_resource = {
+					type = consumer_goods
+					amount < 3000
+				}
+				resource_income_compare = {
+					resource = consumer_goods
+					value < 0
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_4_d
+		modifier = {
+			planet_traders_trade_produces_add = 2
+			planet_traders_energy_upkeep_add = 1
+			planet_bureaucrats_unity_produces_add = 1
+			planet_bureaucrats_energy_upkeep_add = 1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				or = {
+					num_assigned_jobs = { job = trader value > 2500 }
+					has_valid_civic = civic_worker_coop
+					num_ascension_perks < 3
+				}
+			}
+		}
+	}
+}
+
+libra_ultimate_market_5 = {
+	potential = {
+		has_origin = origin_libra_ultimate_market
+		has_valid_civic = civic_augmentation_bazaars
+	}
+
+	option = {
+		name = policy_libra_ultimate_market_5_a
+		modifier = {
+			councilor_exp_gain = 0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				exists = ruler
+				ruler = { has_base_skill < 6 }
+			}
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_5_b
+		modifier = {
+			councilor_skill_add = 2
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_5_c
+		modifier = {
+			council_agenda_progress_speed = 0.45
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				years_passed < 20
+			}
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_5_d
+		modifier = {
+			leader_lifespan_add = 25
+			species_leader_exp_gain = 0.25
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+}
+
+libra_ultimate_market_6 = {
+	potential = {
+		has_origin = origin_libra_ultimate_market
+		has_valid_civic = civic_augmentation_bazaars
+	}
+
+	option = {
+		name = policy_libra_ultimate_market_6_a
+		modifier = {
+			planet_jobs_specialist_produces_mult = 0.3
+			planet_jobs_worker_produces_mult = -0.1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				or = {
+					is_difficulty = 5
+					is_difficulty = 6
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_6_b
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.3
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_6_c
+		modifier = {
+			planet_jobs_produces_mult = 0.15
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_6_d
+		modifier = {
+			planet_jobs_productive_upkeep_mult = -0.15
+		}
+		AI_weight = {
+			weight = 3
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_6_e
+		valid = {
+			has_valid_civic = civic_worker_coop
+		}
+		modifier = {
+			planet_jobs_productive_produces_mult = 0.2
+		}
+		AI_weight = {
+			weight = 5
+		}
+	}
+}
+
+libra_ultimate_market_7 = {
+	potential = {
+		has_origin = origin_libra_ultimate_market
+		has_valid_civic = civic_augmentation_bazaars
+	}
+
+	option = {
+		name = policy_libra_ultimate_market_7_a
+		modifier = {
+			ROBOT_species_trait_points_add = 3
+			ROBOT_species_trait_picks_add = 1
+			planet_pop_assemblers_physics_research_produces_add = 0.5
+			planet_pop_assemblers_engineering_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_ultimate_market_7_b
+		valid = {
+			has_technology = tech_gene_tailoring
+			has_tradition = tr_cybernetics_modular_cybernetics
+		}
+		modifier = {
+			BIOLOGICAL_species_trait_points_add = 3
+			BIOLOGICAL_species_trait_picks_add = 2
+			planet_pop_assemblers_trade_produces_add = 2
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				num_ascension_perks > 5
+			}
+		}
+	}
+}
+
+# #############
+# Paradox Loop
+#############
+
+libra_paradox_loop_a = {
+	potential = {
+		has_origin = origin_libra_paradox_loop
+	}
+
+	option = {
+		name = policy_libra_paradox_loop_a_a
+		modifier = {
+			planet_physicists_physics_research_produces_add = 0.5
+			planet_miners_physics_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				is_preferred_weapons = weapon_type_energy
+			}
+		}
+	}
+	option = {
+		name = policy_libra_paradox_loop_a_b
+		modifier = {
+			planet_biologists_society_research_produces_add = 0.5
+			planet_miners_society_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				or = {
+					uses_ship_category = bio_ship
+					is_preferred_weapons = weapon_type_strike_craft
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_paradox_loop_a_c
+		modifier = {
+			planet_engineers_engineering_research_produces_add = 0.5
+			planet_miners_engineering_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 3
+				or = {
+					is_preferred_weapons = weapon_type_kinetic
+					is_preferred_weapons = weapon_type_explosive
+				}
+			}
+		}
+	}
+}
+
+libra_paradox_loop_b = {
+	potential = {
+		has_origin = origin_libra_paradox_loop
+	}
+
+	option = {
+		name = policy_libra_paradox_loop_b_a
+		modifier = {
+			all_technology_research_speed = -0.05
+			planet_researchers_upkeep_mult = -0.05
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_paradox_loop_b_b
+		valid = {
+			num_ascension_perks >= 1
+		}
+		modifier = {
+			planet_researchers_produces_mult = 0.2
+			planet_researchers_upkeep_mult = 0.1
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+	option = {
+		name = policy_libra_paradox_loop_b_c
+		valid = {
+			num_ascension_perks >= 3
+		}
+		modifier = {
+			planet_researchers_produces_mult = 0.4
+			planet_researchers_upkeep_mult = 0.2
+		}
+		AI_weight = {
+			weight = 3
+		}
+	}
+	option = {
+		name = policy_libra_paradox_loop_b_d
+		valid = {
+			num_ascension_perks >= 5
+		}
+		modifier = {
+			planet_researchers_produces_mult = 0.6
+			planet_researchers_upkeep_mult = 0.3
+		}
+		AI_weight = {
+			weight = 2
+			modifier = {
+				add = 2
+				not = { has_deficit = energy }
+			}
+		}
+	}
+}
+
+# #############
+# May Storm
+#############
+
+libra_may_storm_1 = {
+	potential = {
+		has_origin = origin_libra_may_storm
+		has_authority = auth_democratic
+	}
+
+	option = {
+		name = policy_libra_may_storm_1_a
+		modifier = {
+			pop_cat_specialist_bonus_workforce_mult = 0.1
+			pop_cat_worker_bonus_workforce_mult = 0.1
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_1_b
+		valid = {
+			has_valid_civic = civic_libra_may_storm_materialist_b
+		}
+		modifier = {
+			planet_physicists_physics_research_produces_add = 0.75
+			planet_biologists_society_research_produces_add = 0.75
+			planet_engineers_engineering_research_produces_add = 0.75
+		}
+		AI_weight = {
+			weight = 3
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_1_c
+		valid = {
+			has_valid_civic = civic_libra_may_storm_spiritualist_a
+		}
+		modifier = {
+			planet_technician_unity_produces_add = 0.5
+			planet_farmers_unity_produces_add = 0.5
+			planet_miners_unity_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 4
+				num_ascension_perks < 4
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_1_d
+		valid = {
+			has_valid_civic = civic_libra_may_storm_militarist_a
+		}
+		modifier = {
+			planet_soldiers_physics_research_produces_add = 1
+			planet_metallurgists_alloys_produces_add = 1
+			planet_metallurgists_energy_upkeep_add = 1
+			planet_traders_trade_produces_add = 1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				libra_ai_preferences_militarily = yes
+			}
+			modifier = {
+				add = 2
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_1_e
+		valid = {
+			has_valid_civic = civic_libra_may_storm_xenophile_b
+		}
+		modifier = {
+			planet_artisans_trade_produces_add = 1
+			planet_engineers_society_research_produces_add = 0.5
+			planet_bureaucrats_trade_produces_add = 1
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 4
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_1_f
+		valid = {
+			has_valid_civic = civic_libra_may_storm_pacifist_b
+		}
+		modifier = {
+			planet_biologists_unity_produces_add = 1
+			planet_politicians_influence_produces_add = 0.01
+			planet_bureaucrats_society_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				num_ascension_perks < 5
+			}
+			modifier = {
+				add = 2
+				has_resource = {
+					type = influence
+					amount < 175
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_1_g
+		valid = {
+			has_valid_civic = civic_libra_may_storm_xenophobe_a
+		}
+		modifier = {
+			planet_soldiers_energy_produces_add = 1
+			planet_politicians_alloys_produces_add = 0.5
+			planet_traders_physics_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_militarily = yes
+			}
+		}
+	}
+}
+
+libra_may_storm_2 = {
+	potential = {
+		has_origin = origin_libra_may_storm
+		has_authority = auth_democratic
+	}
+
+	option = {
+		name = policy_libra_may_storm_2_a
+		modifier = {
+			planet_jobs_specialist_produces_mult = 0.075
+			planet_jobs_worker_produces_mult = 0.1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				nor = {
+					is_difficulty = 4
+					is_difficulty = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_2_b
+		valid = {
+			has_valid_civic = civic_libra_may_storm_materialist_a
+		}
+		policy_flags = {
+			policy_libra_may_storm_2_b
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				libra_ai_preferences_civilian = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_2_c
+		valid = {
+			has_valid_civic = civic_libra_may_storm_xenophobe_b
+		}
+		policy_flags = {
+			policy_libra_may_storm_2_c
+		}
+		AI_weight = {
+			weight = 2
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_2_d
+		valid = {
+			has_valid_civic = civic_libra_may_storm_militarist_b
+		}
+		policy_flags = {
+			policy_libra_may_storm_2_d
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				libra_ai_preferences_militarily = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_2_e
+		valid = {
+			has_valid_civic = civic_libra_may_storm_pacifist_a
+		}
+		policy_flags = {
+			policy_libra_may_storm_2_e
+		}
+		AI_weight = {
+			weight = 2
+			modifier = {
+				add = 1
+				libra_ai_preferences_population = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_2_f
+		valid = {
+			has_valid_civic = civic_libra_may_storm_spiritualist_b
+		}
+		policy_flags = {
+			policy_libra_may_storm_2_f
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_2_g
+		valid = {
+			has_valid_civic = civic_libra_may_storm_xenophile_a
+		}
+		policy_flags = {
+			policy_libra_may_storm_2_g
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				has_federation = yes
+			}
+		}
+	}
+}
+
+libra_may_storm_spiritualist_a = {
+	potential = {
+		has_origin = origin_libra_may_storm
+		has_valid_civic = civic_libra_may_storm_spiritualist_a
+	}
+
+	option = {
+		name = policy_libra_may_storm_spiritualist_a_a
+		modifier = {
+			planet_technician_physics_research_produces_add = 0.5
+			planet_farmers_physics_research_produces_add = 0.5
+			planet_miners_physics_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				is_preferred_weapons = weapon_type_energy
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_spiritualist_a_b
+		modifier = {
+			planet_technician_society_research_produces_add = 0.5
+			planet_farmers_society_research_produces_add = 0.5
+			planet_miners_society_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				num_ascension_perks < 3
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_spiritualist_a_c
+		modifier = {
+			planet_technician_engineering_research_produces_add = 0.5
+			planet_farmers_engineering_research_produces_add = 0.5
+			planet_miners_engineering_research_produces_add = 0.5
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				or = {
+					is_preferred_weapons = weapon_type_kinetic
+					is_preferred_weapons = weapon_type_explosive
+				}
+			}
+		}
+	}
+}
+
+libra_may_storm_xenophobe_a = {
+	potential = {
+		has_origin = origin_libra_may_storm
+		has_valid_civic = civic_libra_may_storm_xenophobe_a
+	}
+
+	option = {
+		name = policy_libra_may_storm_xenophobe_a_a
+		modifier = {
+			science_ship_survey_speed = 0.25
+			starbase_outpost_cost_mult = -0.25
+			country_starbase_influence_cost_mult = -0.25
+			country_starbase_influence_cost_distance_mult = -0.25
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				years_passed < 15
+			}
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_xenophobe_a_b
+		modifier = {
+			starbase_upgrade_cost_mult = -0.35
+			starbase_upgrade_speed_mult = 0.35
+			starbase_building_build_speed_mult = 0.5
+			starbase_module_build_speed_mult = 0.5
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_may_storm_xenophobe_a_c
+		modifier = {
+			army_damage_taken_mult = -0.15
+			ship_weapon_damage = 0.15
+			station_gatherers_produces_mult = 0.3
+			station_researchers_produces_mult = 0.3
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				or = {
+					is_at_war = yes
+					has_crisis = yes
+					end_game_years_passed > 0
+					has_tradition = tr_nanotech_adopt
+				}
+			}
+		}
+	}
+}
+
+# #############
+# Extreme Iteration
+#############
+
+libra_extreme_iteration = {
+	potential = {
+		has_origin = origin_libra_extreme_iteration
+	}
+
+	option = {
+		name = policy_libra_extreme_iteration_a
+		modifier = {
+			pop_amenities_usage_robotic_mult = 0.2
+			planet_pops_robotics_upkeep_mult = -0.1
+			robotic_pop_bonus_workforce_mult = 0.05
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 1
+				is_gestalt = no
+			}
+		}
+	}
+	option = {
+		name = policy_libra_extreme_iteration_b
+		modifier = {
+			pop_amenities_usage_robotic_mult = -0.1
+			planet_pops_robotics_upkeep_mult = 0.2
+			robotic_pop_bonus_workforce_mult = 0.05
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				is_gestalt = yes
+			}
+			modifier = {
+				add = 3
+				or = {
+					has_resource = { type = consumer_goods amount > 1800 }
+					resource_income_compare = { resource = consumer_goods value > 30 }
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_extreme_iteration_c
+		modifier = {
+			pop_amenities_usage_robotic_mult = -0.1
+			planet_pops_robotics_upkeep_mult = -0.1
+			robotic_pop_bonus_workforce_mult = -0.1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				is_difficulty = 6
+			}
+		}
+	}
+	option = {
+		name = policy_libra_extreme_iteration_d
+		AI_weight = {
+			weight = 1
+		}
+	}
+}

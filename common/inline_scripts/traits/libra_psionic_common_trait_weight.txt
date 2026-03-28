@@ -1,0 +1,25 @@
+modifier = {
+	factor = @libra_psionic_common_trait_extra_weight
+	owner = { has_tradition = tr_psionics_adopt }
+}
+modifier = {
+	factor = 0.5
+	check_modifier_value = {
+		modifier = leader_trait_selection_options_add
+		value > 4
+	}
+}
+modifier = {
+	factor = 0.5
+	check_modifier_value = {
+		modifier = leader_trait_selection_options_add
+		value > 8
+	}
+}
+modifier = {
+	factor = 0
+	check_modifier_value = {
+		modifier = leader_trait_selection_options_add
+		value > 12
+	}
+}

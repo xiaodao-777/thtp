@@ -1,0 +1,467 @@
+decision_nanotech_swarm_consume_world = {
+	icon = decision_tidal_lock_planet
+	sound = event_structural_collapse
+
+	resources = {
+		category = decisions
+	}
+	owned_planets_only = yes
+
+	potential = {
+		exists = owner
+		owner = { has_tradition = tr_nanotech_3 }
+		can_have_habitable_deposits = yes
+		nor = {
+			is_planet_class = pc_nanotech
+			has_planet_flag = being_devoured
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_nanotech_swarm_consume_world_effect_desc
+		set_timed_planet_flag = {
+			days = 360
+			flag = recently_eaten_planet
+		}
+		hidden_effect = {
+			set_planet_flag = colony_event
+			set_planet_flag = being_devoured
+			add_modifier = {
+				modifier = being_devoured_modifier_nanotech
+				days = -1
+			}
+			export_trigger_value_to_variable = {
+				trigger = planet_size
+				variable = num_districts_terravore
+			}
+			export_trigger_value_to_variable = {
+				trigger = count_deposits
+				parameters = {
+					type = d_nanotech_devastation
+				}
+				variable = num_lithoid_blockers
+			}
+			if = {
+				limit = {
+					is_variable_set = num_lithoid_blockers
+				}
+				subtract_variable = {
+					which = num_districts_terravore
+					value = num_lithoid_blockers
+				}
+				clear_variable = num_lithoid_blockers
+			}
+		}
+		owner = {
+			start_situation = {
+				type = situation_nanotech_consume_planet
+				target = root
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 800
+	}
+}
+
+decision_libra_nanite_locusts = {
+	icon = decision_tidal_lock_planet
+	sound = event_structural_collapse
+	owned_planets_only = yes
+
+	enactment_time = 60
+
+	potential = {
+		exists = owner
+		owner = { is_variable_set = libra_aa_path }
+		is_artificial = no
+		nor = {
+			is_planet_class = pc_nanotech
+			is_planet_class = pc_city
+			is_planet_class = pc_machine
+			has_planet_flag = being_devoured
+		}
+	}
+	prerequisites = { "tech_libra_nanite_locusts" }
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2000
+			influence = 100
+		}
+	}
+
+	effect = {
+		add_planet_devastation = 33
+		change_pc = pc_nanotech
+		custom_tooltip = decision_libra_nanite_locusts_effect
+		hidden_effect = {
+			planet_event = { id = libra_fairy.16901 }
+		}
+	}
+
+	on_queued = {
+		cancel_terraformation = yes
+		set_planet_flag = being_devoured
+		add_modifier = {
+			modifier = being_devoured_modifier_nanotech
+			days = -1
+		}
+	}
+
+	on_unqueued = {
+		remove_planet_flag = being_devoured
+		remove_modifier = being_devoured_modifier
+	}
+
+	abort_trigger = {
+		or = {
+			is_planet_class = pc_city
+			is_planet_class = pc_machine
+		}
+	}
+
+	abort_effect = {
+		remove_planet_flag = being_devoured
+		remove_modifier = being_devoured_modifier
+	}
+
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+#
+
+decision_libra_directive_76 = {
+	sound = event_structural_collapse
+	owned_planets_only = yes
+
+	potential = {
+		exists = owner
+		exists = leader
+		owner = {
+			has_country_flag = libra_directive_76_decision
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 10 }
+		}
+		has_active_building = building_libra_directive_76
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "decision_libra_directive_76_fail_1"
+			leader = {
+				is_leader_tier = leader_tier_default
+				is_event_leader = no
+				is_hidden = no
+				has_base_skill <= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = "decision_libra_directive_76_fail_2"
+			leader = {
+				species = { is_robotic = no }
+				nor = {
+					has_trait = leader_trait_psionic
+					has_trait = leader_trait_chosen
+					has_trait = leader_trait_cyborg
+					has_trait = leader_trait_limited_cyborg
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "decision_libra_directive_76_fail_3"
+			not = {
+				has_planet_flag = decision_libra_directive_76
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = { exists = leader }
+			energy = 1
+			unity = 1
+			mult = leader.value:leader_cost
+		}
+		cost = {
+			influence = 25
+		}
+		cost = {
+			trigger = { exists = leader }
+			influence = 5
+			mult = leader.trigger:has_base_skill
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_directive_76_effect
+		hidden_effect = {
+			planet_event = { id = libra_fairy.10010 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#
+
+decision_libra_ode_to_babel = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+
+	enactment_time = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_ode_to_babel
+			check_variable = { which = libra_aa_path value = 20 }
+		}
+		not = { has_modifier = decision_libra_babel_modifier }
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2000
+			unity = 1000
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = decision_libra_babel_modifier
+			clear_on_owner_change = yes
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = libra_fairy.11002 days = 1 }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 300
+	}
+}
+
+#
+
+decision_libra_evolutionary_endpoint = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+
+	enactment_time = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_evolutionary_endpoint
+			check_variable = { which = libra_aa_path value = 30 }
+		}
+		not = { has_deposit = d_libra_evolutionary_endpoint }
+	}
+
+	allow = {
+		nor = {
+			has_building = building_fe_clinic_1
+			has_building = building_fe_clinic_2
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2500
+		}
+	}
+
+	effect = {
+		add_deposit = d_libra_evolutionary_endpoint
+		if = {
+			limit = {
+				not = { has_building = building_libra_evolutionary_laboratory }
+			}
+			custom_tooltip = decision_libra_evolutionary_endpoint_tt_2
+		}
+		owner = {
+			random_situation = {
+				limit = {
+					is_situation_type = situation_libra_evolutionary_endpoint
+					situation_progress < 1056
+				}
+				custom_tooltip = decision_libra_evolutionary_endpoint_tt_1
+				hidden_effect = {
+					situation_event = { id = libra_fairy.12020 }
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 300
+	}
+}
+
+#
+
+decision_libra_atomic_heart = {
+	owned_planets_only = yes
+	icon = decision_deal
+
+	enactment_time = 3600
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_atomic_heart
+			check_variable = { which = libra_aa_path value = 60 }
+			not = { has_country_flag = libra_atomic_heart }
+		}
+	}
+
+	allow = {
+		is_capital = yes
+		owner = {
+			has_technology = tech_libra_atomic_heart_a
+			has_technology = tech_libra_atomic_heart_b
+			has_technology = tech_libra_atomic_heart_c
+			has_technology = tech_libra_atomic_heart_d
+		}
+	}
+
+	abort_trigger = {
+		is_capital = no
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			sr_living_metal = 5000
+			influence = 100
+		}
+	}
+
+	effect = {
+		owner = {
+			custom_tooltip = decision_libra_atomic_heart_effect
+			hidden_effect = {
+				set_country_flag = libra_atomic_heart
+				country_event = { id = libra_fairy.15002 }
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 5000
+	}
+}
+
+#
+
+decision_libra_hurricane_eye = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = default
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_hurricane_eye
+			check_variable = { which = libra_aa_path value = 60 }
+		}
+		not = { has_modifier = libra_hurricane_eye_modifier }
+	}
+
+	allow = {
+		is_planet_class = pc_nanotech
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_libra_hurricane_eye_tt
+		hidden_effect = {
+			owner = { 
+				every_owned_planet = {
+					remove_modifier = libra_hurricane_eye_modifier
+				}
+			}
+		}
+		add_modifier = {
+			modifier = libra_hurricane_eye_modifier
+			clear_on_owner_change = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	add = 10
+		#	owner = {
+		#		not = { any_owned_planet = { has_modifier = libra_hurricane_eye_modifier } }
+		#		solar_system = {
+		#			is_rim_system = no
+		#			is_bottleneck_system = yes
+		#		}
+		#	}
+		#}
+	}
+}
+
+#
+
+decision_libra_liber_genesis = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+
+	enactment_time = 720
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_liber_genesis
+			check_variable = { which = libra_aa_path value = 91 }
+		}
+		not = { has_deposit = d_libra_liber_genesis }
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			sr_zro = 200
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			remove_modifier = decision_libra_liber_genesis_mod
+		}
+		add_deposit = d_libra_liber_genesis
+		add_modifier = {
+			modifier = decision_libra_liber_genesis_mod
+			days = 1800
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}

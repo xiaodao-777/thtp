@@ -1,0 +1,646 @@
+libra_adventure_aesthetic_wonders_1 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_1"
+	type = aesthetic_wonder
+
+	rarity = common
+
+	resources = {
+		category = specimens
+		produces = {
+			consumer_goods = 10
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_adventure_aesthetic_wonders_2 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_2"
+	type = aesthetic_wonder
+
+	rarity = common
+
+	resources = {
+		category = specimens
+		produces = {
+			society_research = 20
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_adventure_aesthetic_wonders_3 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_3"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = common
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		planet_amenities_mult = 0.02
+	}
+}
+
+libra_adventure_aesthetic_wonders_4 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_4"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = common
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+libra_adventure_aesthetic_wonders_5 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_5"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		planet_stability_mult = 0.04
+	}
+}
+
+libra_adventure_aesthetic_wonders_6 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_6"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		planet_amenities_mult = 0.04
+	}
+}
+
+libra_adventure_aesthetic_wonders_7 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_7"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		country_alloys_produces_mult = 0.04
+	}
+}
+
+libra_adventure_aesthetic_wonders_8 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_8"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		country_energy_produces_mult = 0.06
+	}
+}
+
+libra_adventure_aesthetic_wonders_9 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_9"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		planet_housing_add = 800
+	}
+}
+
+libra_adventure_aesthetic_wonders_10 = {
+	icon = "GFX_specimen_libra_adventure_aesthetic_wonders_10"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = exceptional
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		country_produces_mult = 0.05
+	}
+}
+
+#
+
+libra_adventure_historical_items_1 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_1"
+	type = historical_item
+
+	rarity = common
+
+	resources = {
+		category = specimens
+		produces = {
+			physics_research = 20
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_adventure_historical_items_2 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_2"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = common
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		planet_amenities_add = 250
+	}
+}
+
+libra_adventure_historical_items_3 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_3"
+	type = historical_item
+
+	rarity = common
+
+	resources = {
+		category = specimens
+		produces = {
+			society_research = 20
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_adventure_historical_items_4 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_4"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = common
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		country_consumer_goods_produces_mult = 0.02
+	}
+}
+
+libra_adventure_historical_items_5 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_5"
+	type = historical_item
+
+	rarity = rare
+
+	resources = {
+		category = specimens
+		produces = {
+			engineering_research = 40
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_rare"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_adventure_historical_items_6 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_6"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		ship_weapon_damage = 0.04
+	}
+}
+
+libra_adventure_historical_items_7 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_7"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		planet_stability_mult = 0.04
+	}
+}
+
+libra_adventure_historical_items_8 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_8"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		all_technology_research_speed = 0.06
+	}
+}
+
+libra_adventure_historical_items_9 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_9"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		country_naval_cap_mult = 0.06
+	}
+}
+
+libra_adventure_historical_items_10 = {
+	icon = "GFX_specimen_libra_adventure_historical_items_10"
+	type = historical_item
+
+	rarity = exceptional
+
+	resources = {
+		category = specimens
+		produces = {
+			influence = 2
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_exceptional"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+#
+
+libra_adventure_xeno_geology_1 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_1"
+	type = xeno_geology
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = common
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		country_minerals_produces_mult = 0.02
+	}
+}
+
+libra_adventure_xeno_geology_2 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_2"
+	type = xeno_geology
+
+	rarity = common
+
+	resources = {
+		category = specimens
+		produces = {
+			sr_zro = 2
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_adventure_xeno_geology_3 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_3"
+	type = xeno_geology
+
+	rarity = common
+
+	resources = {
+		category = specimens
+		produces = {
+			unity = 10
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_adventure_xeno_geology_4 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_4"
+	type = xeno_geology
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = common
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		logistic_growth_mult = 0.08
+	}
+}
+
+libra_adventure_xeno_geology_5 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_5"
+	type = xeno_geology
+
+	rarity = rare
+
+	resources = {
+		category = specimens
+		produces = {
+			sr_living_metal = 4
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_rare"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_adventure_xeno_geology_6 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_6"
+	type = xeno_geology
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		country_edict_fund_add = 40
+	}
+}
+
+libra_adventure_xeno_geology_7 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_7"
+	type = xeno_geology
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		species_leader_exp_gain = 0.1
+	}
+}
+
+libra_adventure_xeno_geology_8 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_8"
+	type = xeno_geology
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		ship_evasion_add = 7
+	}
+}
+
+libra_adventure_xeno_geology_9 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_9"
+	type = xeno_geology
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		ship_tracking_add = 7
+	}
+}
+
+libra_adventure_xeno_geology_10 = {
+	icon = "GFX_specimen_libra_adventure_xeno_geology_10"
+	type = xeno_geology
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = exceptional
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		ship_shield_hardening_add = 0.15
+	}
+}
+
+# #############
+# Main
+#############
+
+libra_story_specimen_1 = {
+	icon = "GFX_libra_story_specimen_1"
+	type = xeno_geology
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		country_society_research_produces_mult = 0.04
+	}
+}
+
+libra_story_specimen_2 = {
+	icon = "GFX_libra_story_specimen_2"
+	type = historical_item
+
+	rarity = rare
+
+	resources = {
+		category = specimens
+		produces = {
+			unity = 20
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_story_specimen_3 = {
+	icon = "GFX_libra_story_specimen_3"
+	type = historical_item
+
+	rarity = epic
+
+	resources = {
+		category = specimens
+		produces = {
+			physics_research = 40
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_story_specimen_4 = {
+	icon = "GFX_libra_story_specimen_4"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		ship_fire_rate_mult = 0.07
+	}
+}
+
+libra_story_specimen_5 = {
+	icon = "GFX_libra_story_specimen_5"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		country_engineering_research_produces_mult = 0.06
+	}
+}
+
+libra_story_specimen_6 = {
+	icon = "GFX_libra_story_specimen_6"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		country_unity_produces_mult = 0.06
+	}
+}
+
+libra_story_specimen_7 = {
+	icon = "GFX_libra_story_specimen_7"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		planet_jobs_engineering_research_produces_mult = 0.05
+	}
+}
+
+libra_story_specimen_8 = {
+	icon = "GFX_libra_story_specimen_8"
+	type = aesthetic_wonder
+
+	rarity = epic
+
+	resources = {
+		category = specimens
+		produces = {
+			society_research = 40
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}
+
+libra_story_specimen_9 = {
+	icon = "GFX_libra_story_specimen_9"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		planet_amenities_add = 500
+	}
+}
+
+libra_story_specimen_10 = {
+	icon = "GFX_libra_story_specimen_10"
+	type = xeno_geology
+
+	rarity = exceptional
+
+	resources = {
+		category = specimens
+		produces = {
+			sr_zro = 22
+		}
+		upkeep = {
+			inline_script = "grand_archive/specimen_upkeeps/specimen_upkeep_common"
+			mult = value:grand_archive_size_effect
+		}
+	}
+}

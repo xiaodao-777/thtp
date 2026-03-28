@@ -1,0 +1,943 @@
+libra_adventure_asteroid = {
+	graphical_culture = no
+	hull_scale = 0.8
+	formation_priority = @frigate_formation_priority
+	max_speed = @speed_very_fast
+	acceleration = 0.35
+	rotation_speed = 0.2
+	collision_radius = @corvette_collision_radius
+	modifier = {
+		ship_evasion_add = 50
+	}
+	max_hitpoints = 200
+	size_multiplier = 4
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon = ship_size_military_1
+	base_buildtime = 30
+	default_behavior = swarm
+
+	enable_default_design = no
+	can_have_federation_design = no
+	enable_3dview_in_ship_browser = no
+
+	ship_roles = { brawler screen gunship }
+	triggered_ship_roles = {
+		{
+			name = explosive
+			trigger = { has_technology = tech_torpedoes_1 }
+		}
+		{
+			name = energy_torpedoes
+			trigger = { has_technology = tech_energy_torpedoes_1 }
+		}
+		{
+			name = brawler_stealth
+			trigger = { has_technology = tech_cloaking_1 }
+		}
+		{
+			name = screen_stealth
+			trigger = { has_technology = tech_cloaking_1 }
+		}
+		{
+			name = gunship_stealth
+			trigger = { has_technology = tech_cloaking_1 }
+		}
+		{
+			name = explosive_stealth
+			trigger = {
+				has_technology = tech_torpedoes_1
+				has_technology = tech_cloaking_1
+			}
+		}
+		{
+			name = energy_torpedoes_stealth
+			trigger = {
+				has_technology = tech_energy_torpedoes_1
+				has_technology = tech_cloaking_1
+			}
+		}
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	use_shipnames_from = corvette
+
+	combat_disengage_chance = 1.50
+
+	required_component_set = "libra_corvette_power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "libra_corvette_thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "libra_combat_computers"
+	required_component_set = "libra_corvette_cloaking_components"
+
+	potential_country = {
+		has_tradition = tr_libra_adventure_adopt
+	}
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @corvette_upkeep_energy
+			minerals = @corvette_upkeep_minerals
+		}
+		logistics = {
+			trade = @frigate_logistic_upkeep_trade
+		}
+	}
+
+	ai_ship_data = {
+		fraction = {
+			base = 0
+			modifier = {
+				add = 20
+				uses_standard_ship_sizes = yes
+			}
+			modifier = {
+				factor = 3
+				not = { has_technology = tech_battleships }
+			}
+		}
+	}
+
+	available_to_everyone = yes
+}
+
+#
+
+libra_small_ship_synthetic = {
+	graphical_culture = yes
+	entity = "synth_queen_01_small_ship_entity"
+	formation_priority = @cruiser_formation_priority
+	max_speed = @speed_fast
+	acceleration = 0.3
+	rotation_speed = 0.2
+	collision_radius = 6
+	modifier = {
+		ship_evasion_add = 60
+	}
+	ship_modifier = {
+		ship_disengage_opportunities_add = 1
+	}
+	max_hitpoints = 1800
+	size_multiplier = 12
+	fleet_slot_size = 2
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	base_buildtime = 300
+
+	enable_default_design = no
+	can_have_federation_design = yes
+	enable_3dview_in_ship_browser = no
+
+	default_behavior = picket
+	ship_roles = { gunship artillery carrier }
+	triggered_ship_roles = {
+		{
+			name = explosive
+			trigger = { has_technology = tech_torpedoes_1 }
+		}
+		{
+			name = energy_torpedoes
+			trigger = { has_technology = tech_energy_torpedoes_1 }
+		}
+		{
+			name = gunship_stealth
+			trigger = { has_technology = tech_cloaking_2 }
+		}
+		{
+			name = artillery_stealth
+			trigger = { has_technology = tech_cloaking_2 }
+		}
+		{
+			name = carrier_stealth
+			trigger = { has_technology = tech_cloaking_2 }
+		}
+		{
+			name = explosive_stealth
+			trigger = {
+				has_technology = tech_torpedoes_1
+				has_technology = tech_cloaking_2
+			}
+		}
+		{
+			name = energy_torpedoes_stealth
+			trigger = {
+				has_technology = tech_energy_torpedoes_1
+				has_technology = tech_cloaking_2
+			}
+		}
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	icon = ship_size_military_2
+	use_shipnames_from = destroyer
+
+	combat_disengage_chance = 2.5
+
+	required_component_set = "libra_destroyer_power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "libra_destroyer_thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "libra_combat_computers"
+	required_component_set = "libra_destroyer_cloaking_components"
+
+	prerequisites = { "tech_cruisers" }
+	potential_country = {
+		has_ascension_perk = ap_libra_synthetic_voice
+	}
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 1200
+		}
+		upkeep = {
+			energy = @cruiser_upkeep_energy
+			alloys = @cruiser_upkeep_alloys
+		}
+		logistics = {
+			trade = @cruiser_logistic_upkeep_trade
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 4
+	}
+
+	ai_ship_data = {
+		fraction = 720
+	}
+}
+
+libra_large_ship_synthetic = {
+	graphical_culture = yes
+	entity = "synth_queen_01_big_ship_entity"
+	formation_priority = @titan_formation_priority
+	max_speed = @speed_default
+	acceleration = 0.2
+	rotation_speed = 0.15
+	collision_radius = 8
+	modifier = {
+		ship_evasion_add = 20
+	}
+	ship_modifier = {
+		ship_disengage_opportunities_add = 1
+	}
+	max_hitpoints = 30000
+	size_multiplier = 48
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	base_buildtime = 1200
+
+	enable_default_design = no
+	can_have_federation_design = no
+	enable_3dview_in_ship_browser = no
+
+	default_behavior = picket
+	ship_roles = { gunship artillery carrier }
+	triggered_ship_roles = {
+		{
+			name = gunship_stealth
+			trigger = { has_technology = tech_cloaking_dark_matter }
+		}
+		{
+			name = artillery_stealth
+			trigger = { has_technology = tech_cloaking_dark_matter }
+		}
+		{
+			name = carrier_stealth
+			trigger = { has_technology = tech_cloaking_dark_matter }
+		}
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	icon = ship_size_military_8
+	use_shipnames_from = battleship
+
+	combat_disengage_chance = 2
+
+	required_component_set = "libra_battleship_power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "libra_battleship_thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "libra_combat_computers"
+	required_component_set = "libra_battleship_cloaking_components"
+
+	prerequisites = { "tech_titans" }
+	potential_country = {
+		has_ascension_perk = ap_libra_synthetic_voice
+	}
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 7200
+		}
+		upkeep = {
+			energy = @titan_upkeep_energy
+			alloys = @titan_upkeep_alloys
+		}
+		logistics = {
+			trade = @titan_logistic_upkeep_trade
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 16
+	}
+
+	ai_ship_data = {
+		fraction = 480
+	}
+}
+
+libra_synthetic_mothership = {
+	graphical_culture = yes
+	entity = "synth_queen_01_mothership_entity"
+	formation_priority = @corvette_formation_priority
+	max_speed = @speed_default
+	acceleration = 0.2
+	rotation_speed = 0.15
+	collision_radius = 16
+	modifier = {
+		ship_evasion_add = 1
+		ship_armor_add = 500000
+		ship_shield_add = 500000
+		ship_weapon_damage = 1
+		ship_hull_regen_add_perc = 0.1
+	}
+	ship_modifier = {
+		ship_disengage_chance_reduction = 1
+	}
+	max_hitpoints = 1000000
+	size_multiplier = 320
+	fleet_slot_size = 8
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon = ship_size_military_32
+	base_buildtime = 3600
+
+	enable_default_design = no
+	can_have_federation_design = no
+	enable_3dview_in_ship_browser = no
+
+	default_behavior = artillery
+	ship_roles = { artillery carrier }
+	triggered_ship_roles = {
+		{
+			name = artillery_stealth
+			trigger = { has_technology = tech_cloaking_dark_matter }
+		}
+		{
+			name = carrier_stealth
+			trigger = { has_technology = tech_cloaking_dark_matter }
+		}
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	use_shipnames_from = colossus
+
+	required_component_set = "libra_juggernaut_power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "libra_colossus_thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "libra_combat_computers"
+
+	prerequisites = { "tech_juggernaut" }
+	potential_country = {
+		has_ascension_perk = ap_libra_synthetic_voice
+	}
+
+	possible_construction = {
+		custom_tooltip = {
+			fail_text = starbase_citadel_trigger
+			OR = {
+				AND = {
+					is_scope_type = megastructure
+					OR = {
+						is_megastructure_type = mega_shipyard_3
+						is_megastructure_type = mega_shipyard_restored
+						is_megastructure_type = libra_nanite_shipyard_2
+					}
+				}
+				AND = {
+					is_scope_type = starbase
+					has_starbase_size >= starbase_citadel
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 240000
+    		}
+		upkeep = {
+			energy = 300
+			alloys = 150
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 512
+	}
+
+	ai_ship_data = {
+		min = 1
+		max = 3
+	}
+}
+
+#
+
+libra_junkie_corvette = {
+	entity = "pirate_01_pirate_corvette_entity"
+	graphical_culture = yes
+	formation_priority = @corvette_formation_priority
+	max_speed = @speed_very_fast
+	acceleration = 0.35
+	rotation_speed = 0.2
+	collision_radius = @corvette_collision_radius
+	modifier = {
+		ship_evasion_add = 60
+	}
+	max_hitpoints = 300
+	size_multiplier = 5
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	base_buildtime = 30
+
+	enable_default_design = no
+	can_have_federation_design = yes
+	enable_3dview_in_ship_browser = no
+
+	default_behavior = swarm
+	ship_roles = { brawler screen gunship }
+	triggered_ship_roles = {
+		{
+			name = explosive
+			trigger = { has_technology = tech_torpedoes_1 }
+		}
+		{
+			name = energy_torpedoes
+			trigger = { has_technology = tech_energy_torpedoes_1 }
+		}
+		{
+			name = brawler_stealth
+			trigger = { has_technology = tech_cloaking_1 }
+		}
+		{
+			name = screen_stealth
+			trigger = { has_technology = tech_cloaking_1 }
+		}
+		{
+			name = gunship_stealth
+			trigger = { has_technology = tech_cloaking_1 }
+		}
+		{
+			name = explosive_stealth
+			trigger = {
+				has_technology = tech_torpedoes_1
+				has_technology = tech_cloaking_1
+			}
+		}
+		{
+			name = energy_torpedoes_stealth
+			trigger = {
+				has_technology = tech_energy_torpedoes_1
+				has_technology = tech_cloaking_1
+			}
+		}
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	icon = ship_size_military_1
+	use_shipnames_from = corvette
+
+	combat_disengage_chance = 1
+
+	required_component_set = "libra_destroyer_power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "libra_corvette_thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "libra_combat_computers"
+	required_component_set = "libra_corvette_cloaking_components"
+
+	potential_country = {
+		has_ascension_perk = ap_libra_intergalactic_junkie
+	}
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			minerals = 2
+			alloys = @corvette_upkeep_alloys
+		}
+		logistics = {
+			trade = @corvette_logistic_upkeep_trade
+		}
+	}
+
+	min_upgrade_cost = {
+		minerals = 6
+	}
+
+	ai_ship_data = {
+		fraction = 120
+	}
+
+	available_to_everyone = yes
+}
+
+libra_junkie_destroyer = {
+	entity = "pirate_01_pirate_destroyer_entity"
+	graphical_culture = yes
+	formation_priority = @destroyer_formation_priority
+	max_speed = @speed_fast
+	acceleration = 0.3
+	rotation_speed = 0.2
+	collision_radius = @destroyer_collision_radius
+	modifier = {
+		ship_evasion_add = 40
+	}
+	max_hitpoints = 1800
+	size_multiplier = 10
+	fleet_slot_size = 2
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	base_buildtime = 60
+
+	enable_default_design = no
+	can_have_federation_design = yes
+	enable_3dview_in_ship_browser = no
+
+	default_behavior = picket
+	ship_roles = { screen gunship artillery }
+	triggered_ship_roles = {
+		{
+			name = explosive
+			trigger = { has_technology = tech_torpedoes_1 }
+		}
+		{
+			name = energy_torpedoes
+			trigger = { has_technology = tech_energy_torpedoes_1 }
+		}
+		{
+			name = screen_stealth
+			trigger = { has_technology = tech_cloaking_2 }
+		}
+		{
+			name = gunship_stealth
+			trigger = { has_technology = tech_cloaking_2 }
+		}
+		{
+			name = artillery_stealth
+			trigger = { has_technology = tech_cloaking_2 }
+		}
+		{
+			name = explosive_stealth
+			trigger = {
+				has_technology = tech_torpedoes_1
+				has_technology = tech_cloaking_2
+			}
+		}
+		{
+			name = energy_torpedoes_stealth
+			trigger = {
+				has_technology = tech_energy_torpedoes_1
+				has_technology = tech_cloaking_2
+			}
+		}
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	icon = ship_size_military_2
+	use_shipnames_from = destroyer
+
+	combat_disengage_chance = 1.5
+
+	required_component_set = "libra_cruiser_power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "libra_destroyer_thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "libra_combat_computers"
+	required_component_set = "libra_destroyer_cloaking_components"
+
+	prerequisites = {
+		OR = {
+			tech_destroyers
+			tech_weavers
+		}
+	}
+	potential_country = {
+		has_ascension_perk = ap_libra_intergalactic_junkie
+	}
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			minerals = 3000
+		}
+		upkeep = {
+			minerals = 4
+			alloys = @destroyer_upkeep_alloys
+		}
+		logistics = {
+			trade = @destroyer_logistic_upkeep_trade
+		}
+	}
+
+	min_upgrade_cost = {
+		minerals = 12
+	}
+
+	ai_ship_data = {
+		fraction = 180
+	}
+
+	available_to_everyone = yes
+}
+
+libra_junkie_cruiser = {
+	entity = "pirate_01_pirate_cruiser_entity"
+	graphical_culture = yes
+	formation_priority = @cruiser_formation_priority
+	max_speed = @speed_very_fast
+	acceleration = 0.25
+	rotation_speed = 0.2
+	collision_radius = @cruiser_collision_radius
+	modifier = {
+		ship_evasion_add = 25
+	}
+	max_hitpoints = 3600
+	size_multiplier = 20
+	fleet_slot_size = 3
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	base_buildtime = 120
+
+	enable_default_design = no
+	can_have_federation_design = yes
+	enable_3dview_in_ship_browser = no
+
+	default_behavior = picket
+	ship_roles = { screen gunship artillery carrier }
+	triggered_ship_roles = {
+		{
+			name = explosive
+			trigger = { has_technology = tech_torpedoes_1 }
+		}
+		{
+			name = energy_torpedoes
+			trigger = { has_technology = tech_energy_torpedoes_1 }
+		}
+		{
+			name = screen_stealth
+			trigger = { has_technology = tech_cloaking_3 }
+		}
+		{
+			name = gunship_stealth
+			trigger = { has_technology = tech_cloaking_3 }
+		}
+		{
+			name = artillery_stealth
+			trigger = { has_technology = tech_cloaking_3 }
+		}
+		{
+			name = carrier_stealth
+			trigger = { has_technology = tech_cloaking_3 }
+		}
+		{
+			name = explosive_stealth
+			trigger = {
+				has_technology = tech_torpedoes_1
+				has_technology = tech_cloaking_3
+			}
+		}
+		{
+			name = energy_torpedoes_stealth
+			trigger = {
+				has_technology = tech_energy_torpedoes_1
+				has_technology = tech_cloaking_3
+			}
+		}
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	icon = ship_size_military_1
+	use_shipnames_from = cruiser
+
+	combat_disengage_chance = 1.5
+
+	required_component_set = "libra_battleship_power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "libra_cruiser_thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "libra_combat_computers"
+	required_component_set = "libra_cruiser_cloaking_components"
+
+	prerequisites = {
+		OR = {
+			tech_cruisers
+			tech_harbingers
+		}
+	}
+	potential_country = {
+		has_ascension_perk = ap_libra_intergalactic_junkie
+	}
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			minerals = 9000
+		}
+		upkeep = {
+			minerals = 8
+			alloys = @cruiser_upkeep_alloys
+		}
+		logistics = {
+			trade = @cruiser_logistic_upkeep_trade
+		}
+	}
+
+	min_upgrade_cost = {
+		minerals = 24
+	}
+
+	ai_ship_data = {
+		fraction = 300
+	}
+
+	available_to_everyone = yes
+}
+
+libra_junkie_battleship = {
+	entity = "pirate_01_galleon_entity"
+	graphical_culture = yes
+	formation_priority = @battleship_formation_priority
+	max_speed = @speed_slow
+	acceleration = 0.2
+	rotation_speed = 0.2
+	collision_radius = @battleship_collision_radius
+	modifier = {
+		ship_evasion_add = 10
+	}
+	max_hitpoints = 32000
+	size_multiplier = 48
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	base_buildtime = 480
+
+	enable_default_design = no
+	can_have_federation_design = no
+	enable_3dview_in_ship_browser = no
+
+	default_behavior = artillery
+	ship_roles = { artillery carrier }
+	triggered_ship_roles = {
+		{
+			name = artillery_stealth
+			trigger = { has_technology = tech_cloaking_dark_matter }
+		}
+		{
+			name = carrier_stealth
+			trigger = { has_technology = tech_cloaking_dark_matter }
+		}
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	icon = ship_size_military_8
+	use_shipnames_from = battleship
+
+	combat_disengage_chance = 1.25
+
+	required_component_set = "libra_titan_power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "libra_titan_thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "libra_combat_computers"
+	required_component_set = "libra_battleship_cloaking_components"
+
+	prerequisites = {
+		OR = {
+			tech_battleships
+			tech_stingers
+		}
+	}
+	potential_country = {
+		has_ascension_perk = ap_libra_intergalactic_junkie
+	}
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			minerals = 30000
+		}
+		upkeep = {
+			minerals = 32
+			alloys = @titan_upkeep_alloys
+		}
+		logistics = {
+			trade = @titan_logistic_upkeep_trade
+		}
+	}
+
+	min_upgrade_cost = {
+		minerals = 72
+	}
+
+	ai_ship_data = {
+		fraction = 600
+	}
+
+	available_to_everyone = yes
+}
+
+#
+
+libra_nanite_titan = {
+	entity = "gatebuilder_01_mothership_entity"
+	graphical_culture = no
+	formation_priority = @titan_formation_priority
+	max_speed = @speed_default
+	acceleration = 0.2
+	rotation_speed = 0.15
+	collision_radius = @titan_collision_radius
+	modifier = {
+		ship_evasion_add = 5
+		ship_armor_add = 25000
+		ship_shield_add = 25000
+		ship_hull_regen_add_perc = 0.15
+		ship_armor_regen_add_perc = 0.2
+		ship_shield_regen_add_perc = 0.2
+	}
+	max_hitpoints = 50000
+	size_multiplier = 80
+	fleet_slot_size = 8
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon = ship_size_military_16
+	base_buildtime = @titan_build_time
+
+	enable_default_design = no
+	can_have_federation_design = no
+	enable_3dview_in_ship_browser = no
+
+	default_behavior = artillery
+	ship_roles = { artillery carrier }
+	triggered_ship_roles = {
+		{
+			name = energy_torpedoes
+			trigger = { has_technology = tech_energy_torpedoes_1 }
+		}
+		{
+			name = artillery_stealth
+			trigger = { has_technology = tech_cloaking_dark_matter }
+		}
+		{
+			name = carrier_stealth
+			trigger = { has_technology = tech_cloaking_dark_matter }
+		}
+		{
+			name = energy_torpedoes_stealth
+			trigger = {
+				has_technology = tech_energy_torpedoes_1
+				has_technology = tech_cloaking_dark_matter
+			}
+		}
+	}
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	use_shipnames_from = titan
+
+	combat_disengage_chance = 1.2
+
+	required_component_set = "libra_juggernaut_power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "libra_titan_thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "libra_combat_computers"
+
+	prerequisites = { "tech_libra_nanite_titans" }
+	potential_country = {
+		is_variable_set = libra_aa_path
+	}
+
+	possible_construction = {
+		custom_tooltip = {
+			fail_text = starbase_citadel_trigger
+			OR = {
+				AND = {
+					is_scope_type = megastructure
+					OR = {
+						is_megastructure_type = mega_shipyard_3
+						is_megastructure_type = mega_shipyard_restored
+						is_megastructure_type = libra_nanite_shipyard_2
+					}
+				}
+				AND = {
+					is_scope_type = starbase
+					has_starbase_size >= starbase_citadel
+				}
+			}
+		}
+	}
+
+	available_to_everyone = yes
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = 7500
+			nanites = 22500
+    		}
+		upkeep = {
+			nanites = 25
+		}
+	}
+
+	ai_ship_data = {
+		fraction = {
+			base = 300
+			modifier = {
+				set = 0
+				not = { has_tradition = tr_nanotech_finish }
+			}
+		}
+	}
+}

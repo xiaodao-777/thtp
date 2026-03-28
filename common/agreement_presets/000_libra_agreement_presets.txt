@@ -1,0 +1,414 @@
+@protectorate_tech_threshold = 0.4
+@protectorate_tech_switch = 0.5
+
+@specialist_base_acceptance_value = 50
+@specialist_subject_base_acceptance_value = 50
+@specialist_aligned_ethics_value = 50
+@specialist_unaligned_ethics_value = -50
+
+#
+
+preset_libra_may_storm_vassal_state = {
+	icon = "GFX_preset_libra_may_storm_vassal_state"
+	term_data = {
+		resource_terms = {
+			{
+				key = resource_subsidies_basic
+				value = 0.3
+			}
+			{
+				key = resource_subsidies_advanced
+				value = 0.15
+			}
+		}
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_none
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_do_diplomacy_but_not_vote
+			}
+			{
+				key = subject_expand
+				value = subject_can_expand_with_tithe
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_defensive
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = naval_capacity
+				value = naval_cap_satrapy
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_libra_protectorate
+			}
+			{
+				key = libra_origin_conditions
+				value = modifiers_libra_may_storm
+			}
+		}
+	}
+	overlord_weight = {
+		base = 0
+		modifier = {
+			add = 500
+			from = {
+				count_agreement = {
+					limit = {
+						or = {
+							agreement_preset = preset_libra_may_storm_vassal_state
+							agreement_preset = preset_libra_may_storm_vassal_state_bulwark
+							agreement_preset = preset_libra_may_storm_vassal_state_scholarium
+							agreement_preset = preset_libra_may_storm_vassal_state_prospectorium
+						}
+					}
+					count < 7
+				}
+			}
+		}
+	}
+	subject_weight = {
+		base = 50
+	}
+	potential = {
+		from = {
+			has_valid_civic = civic_libra_may_storm_xenophile_a
+		}
+	}
+}
+
+preset_libra_may_storm_vassal_state_bulwark = {
+	icon = "GFX_preset_libra_may_storm_vassal_state_bulwark"
+	parent = preset_bulwark
+	specialist_type = specialist_bulwark
+	term_data = {
+		forced_initial_loyalty = 50
+		resource_terms = {
+			{
+				key = resource_subsidies_basic
+				value = -0.3
+			}
+		}
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_bulwark
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_do_diplomacy_but_not_vote
+			}
+			{
+				key = subject_expand
+				value = subject_can_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_defensive
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
+			{
+				key = libra_origin_conditions
+				value = modifiers_libra_may_storm
+			}
+		}
+	}
+	overlord_weight = {
+		base = 0
+		modifier = {
+			add = 500
+			from = {
+				count_agreement = {
+					limit = {
+						or = {
+							agreement_preset = preset_libra_may_storm_vassal_state
+							agreement_preset = preset_libra_may_storm_vassal_state_bulwark
+							agreement_preset = preset_libra_may_storm_vassal_state_scholarium
+							agreement_preset = preset_libra_may_storm_vassal_state_prospectorium
+						}
+					}
+					count < 7
+				}
+			}
+		}
+		modifier = {
+			add = @specialist_aligned_ethics_value
+			is_militarist = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_specialist_subject_type = { TYPE = bulwark }
+			NOT = { FROM = { is_specialist_subject_type = { TYPE = bulwark } } }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_specialist_subject_type = { TYPE = bulwark } }
+		}
+		modifier = {
+			factor = 1.2
+			num_rivals > 0
+		}
+	}
+	subject_weight = {
+		base =  25
+		modifier = {
+			add = @specialist_aligned_ethics_value
+			is_militarist = yes
+		}
+		modifier = {
+			add = @specialist_unaligned_ethics_value
+			is_pacifist = yes
+		}
+	}
+	potential = {
+		has_overlord_dlc = yes
+		from = {
+			has_valid_civic = civic_libra_may_storm_xenophile_a
+		}
+	}
+}
+
+preset_libra_may_storm_vassal_state_scholarium = {
+	icon = "GFX_preset_libra_may_storm_vassal_state_scholarium"
+	parent = preset_scholarium
+	specialist_type = specialist_scholarium
+	term_data = {
+		forced_initial_loyalty = 50
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_scholarium
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_do_diplomacy_but_not_vote
+			}
+			{
+				key = subject_expand
+				value = subject_can_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_none
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
+			{
+				key = libra_origin_conditions
+				value = modifiers_libra_may_storm
+			}
+		}
+	}
+	overlord_weight = {
+		base =  @specialist_base_acceptance_value
+		modifier = {
+			add = 500
+			from = {
+				count_agreement = {
+					limit = {
+						or = {
+							agreement_preset = preset_libra_may_storm_vassal_state
+							agreement_preset = preset_libra_may_storm_vassal_state_bulwark
+							agreement_preset = preset_libra_may_storm_vassal_state_scholarium
+							agreement_preset = preset_libra_may_storm_vassal_state_prospectorium
+						}
+					}
+					count < 7
+				}
+			}
+		}
+		modifier = {
+			add = @specialist_aligned_ethics_value
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_specialist_subject_type = { TYPE = scholarium }
+			NOT = { FROM = { is_specialist_subject_type = { TYPE = scholarium } } }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_specialist_subject_type = { TYPE = scholarium } }
+		}
+	}
+	subject_weight = {
+		base =  @specialist_subject_base_acceptance_value
+		modifier = {
+			add = @specialist_aligned_ethics_value
+			is_materialist = yes
+		}
+		modifier = {
+			add = @specialist_unaligned_ethics_value
+			is_spiritualist = yes
+		}
+	}
+	potential = {
+		has_overlord_dlc = yes
+		from = {
+			has_valid_civic = civic_libra_may_storm_xenophile_a
+		}
+	}
+}
+
+preset_libra_may_storm_vassal_state_prospectorium = {
+	icon = "GFX_preset_libra_may_storm_vassal_state_prospectorium"
+	parent = preset_prospectorium
+	specialist_type = specialist_prospectorium
+	term_data = {
+		forced_initial_loyalty = 50
+		resource_terms = {
+			{
+				key = resource_subsidies_research
+				value = -0.3
+			}
+		}
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_prospectorium
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_do_diplomacy_but_not_vote
+			}
+			{
+				key = subject_expand
+				value = subject_can_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_defensive
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
+			{
+				key = libra_origin_conditions
+				value = modifiers_libra_may_storm
+			}
+		}
+	}
+	overlord_weight = {
+		base =  @specialist_base_acceptance_value
+		modifier = {
+			add = 500
+			from = {
+				count_agreement = {
+					limit = {
+						or = {
+							agreement_preset = preset_libra_may_storm_vassal_state
+							agreement_preset = preset_libra_may_storm_vassal_state_bulwark
+							agreement_preset = preset_libra_may_storm_vassal_state_scholarium
+							agreement_preset = preset_libra_may_storm_vassal_state_prospectorium
+						}
+					}
+					count < 7
+				}
+			}
+		}
+		modifier = {
+			add = @specialist_aligned_ethics_value
+			is_pacifist = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_specialist_subject_type = { TYPE = prospectorium }
+			NOT = { FROM = { is_specialist_subject_type = { TYPE = prospectorium } } }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_specialist_subject_type = { TYPE = prospectorium } }
+		}
+	}
+	subject_weight = {
+		base =  @specialist_subject_base_acceptance_value
+		modifier = {
+			add = @specialist_aligned_ethics_value
+			is_pacifist = yes
+		}
+		modifier = {
+			add = @specialist_unaligned_ethics_value
+			is_militarist = yes
+		}
+	}
+	potential = {
+		has_overlord_dlc = yes
+		from = {
+			has_valid_civic = civic_libra_may_storm_xenophile_a
+		}
+	}
+}

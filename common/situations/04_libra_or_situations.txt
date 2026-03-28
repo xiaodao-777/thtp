@@ -1,0 +1,837 @@
+situation_libra_praises_to_life_a = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_ascension
+ 	category = positive
+
+	picture = {
+		trigger = {
+			current_stage = libra_praises_to_life_a_stage_1
+		}
+		picture = GFX_evt_libra_praises_to_life_stage_1
+	}
+	picture = {
+		trigger = {
+			current_stage = libra_praises_to_life_a_stage_2
+		}
+		picture = GFX_evt_libra_praises_to_life_stage_2
+	}
+	picture = {
+		trigger = {
+			current_stage = libra_praises_to_life_a_stage_3
+		}
+		picture = GFX_evt_libra_praises_to_life_stage_3
+	}
+	picture = {
+		trigger = {
+			current_stage = libra_praises_to_life_a_stage_4
+		}
+		picture = GFX_evt_libra_praises_to_life_stage_4
+	}
+
+	start_value = 0
+
+	on_progress_complete = {
+		owner = {
+			add_council_agenda_progress_percent = 0.1
+		}
+		custom_tooltip = situation_libra_praises_to_life_a_tooltip
+		hidden_effect = {
+			destroy_situation = this
+			switch = {
+				trigger = current_situation_approach
+				situation_libra_praises_to_life_a_a = {
+					owner = {
+						start_situation = {
+							type = situation_libra_praises_to_life_a
+							target = capital_scope
+							effect = {
+								set_situation_approach = situation_libra_praises_to_life_a_a
+								remove_situation_flag = path_locked
+								situation_event = { id = libra_origin.0104 days = 306 random = 30 }
+							}
+						}
+					}
+				}
+				situation_libra_praises_to_life_a_b = {
+					owner = {
+						start_situation = {
+							type = situation_libra_praises_to_life_a
+							target = capital_scope
+							effect = {
+								set_situation_approach = situation_libra_praises_to_life_a_b
+								remove_situation_flag = path_locked
+								situation_event = { id = libra_origin.0104 days = 309 random = 30 }
+							}
+						}
+					}
+				}
+				situation_libra_praises_to_life_a_c = {
+					owner = {
+						start_situation = {
+							type = situation_libra_praises_to_life_a
+							target = capital_scope
+							effect = {
+								set_situation_approach = situation_libra_praises_to_life_a_c
+								remove_situation_flag = path_locked
+								situation_event = { id = libra_origin.0104 days = 312 random = 30 }
+							}
+						}
+					}
+				}
+				default = {
+					owner = {
+						start_situation = {
+							type = situation_libra_praises_to_life_a
+							target = capital_scope
+							effect = {
+								set_situation_approach = situation_libra_praises_to_life_a_d
+								remove_situation_flag = path_locked
+								situation_event = { id = libra_origin.0104 days = 315 random = 30 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	stages = {
+		libra_praises_to_life_a_stage_1 = {
+			icon = GFX_libra_praises_to_life_stage_icon
+			icon_background = GFX_libra_praises_to_life_stage_1
+			end = 3
+			modifier = {
+				planet_building_build_speed_mult = 0.25
+				planet_decision_enact_speed_mult = 0.25
+				megastructure_build_speed_mult = 0.25
+			}
+		}
+		libra_praises_to_life_a_stage_2 = {
+			icon = GFX_libra_praises_to_life_stage_icon
+			icon_background = GFX_libra_praises_to_life_stage_2
+			end = 6
+			modifier = {
+				logistic_growth_mult = 0.1
+				planet_pop_assembly_mult = 0.1
+				bonus_pop_growth_mult = 0.1
+			}
+		}
+		libra_praises_to_life_a_stage_3 = {
+			icon = GFX_libra_praises_to_life_stage_icon
+			icon_background = GFX_libra_praises_to_life_stage_3
+			end = 9
+			modifier = {
+				country_produces_mult = 0.1
+			}
+		}
+		libra_praises_to_life_a_stage_4 = {
+			icon = GFX_libra_praises_to_life_stage_icon
+			icon_background = GFX_libra_praises_to_life_stage_4
+			end = 12
+			modifier = {
+				ship_shield_damage_mult = 0.05
+				ship_armor_damage_mult = 0.05
+				army_damage_taken_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_praises_to_life_a_a
+		icon = GFX_situation_approach_scales
+		icon_background = GFX_situation_approach_bg_green
+		allow = {
+			custom_tooltip = {
+				fail_text = situation_libra_praises_to_life_a_approach_tt
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_praises_to_life_a_a
+				}
+			}
+		}
+		on_select = {
+			set_situation_flag = path_locked
+		}
+		modifier = {
+			planet_building_build_speed_mult = 0.25
+			planet_decision_enact_speed_mult = 0.25
+			megastructure_build_speed_mult = 0.25
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = situation_libra_praises_to_life_a_b
+		icon = GFX_situation_approach_handshake
+		icon_background = GFX_situation_approach_bg_red
+		allow = {
+			custom_tooltip = {
+				fail_text = situation_libra_praises_to_life_a_approach_tt
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_praises_to_life_a_b
+				}
+			}
+		}
+		on_select = {
+			set_situation_flag = path_locked
+		}
+		modifier = {
+			logistic_growth_mult = 0.1
+			planet_pop_assembly_mult = 0.1
+			bonus_pop_growth_mult = 0.1
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 3
+				years_passed < 10
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_praises_to_life_a_c
+		icon = GFX_situation_approach_gift
+		icon_background = GFX_situation_approach_bg_yellow
+		allow = {
+			custom_tooltip = {
+				fail_text = situation_libra_praises_to_life_a_approach_tt
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_praises_to_life_a_c
+				}
+			}
+		}
+		on_select = {
+			set_situation_flag = path_locked
+		}
+		modifier = {
+			country_produces_mult = 0.1
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				or = {
+					is_difficulty = 0
+					is_difficulty = 1
+					is_difficulty = 2
+					is_difficulty = 3
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_praises_to_life_a_d
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_libra_blue
+		allow = {
+			custom_tooltip = {
+				fail_text = situation_libra_praises_to_life_a_approach_tt
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_praises_to_life_a_d
+				}
+			}
+		}
+		on_select = {
+			set_situation_flag = path_locked
+		}
+		modifier = {
+			ship_shield_damage_mult = 0.05
+			ship_armor_damage_mult = 0.05
+			army_damage_taken_mult = -0.1
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 4
+				owner = {
+					or = {
+						has_crisis = yes
+						is_at_war = yes
+					}
+				}
+			}
+		}
+	}
+
+	monthly_progress = {
+		base = 1
+	}
+}
+
+situation_libra_praises_to_life_b = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+	picture = GFX_evt_enclave_overlord
+ 	category = positive
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_praises_to_life_b_tooltip
+		hidden_effect = {
+			destroy_situation = this
+			owner = {
+				start_situation = {
+					type = situation_libra_praises_to_life_b
+					target = capital_scope
+				}
+			}
+		}
+	}
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 12
+			on_first_enter = {
+				situation_event = { id = libra_origin.0102 days = 2 }
+			}
+			modifier = {
+				edicts_upkeep_mult = -0.1
+			}
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 24
+			on_first_enter = {
+				situation_event = { id = libra_origin.0102 days = 3 }
+			}
+			modifier = {
+				specimens_produces_mult = 0.1
+			}
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 36
+			on_first_enter = {
+				situation_event = { id = libra_origin.0102 days = 4 }
+			}
+			modifier = {
+				councilor_skill_add = 1
+			}
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 48
+			on_first_enter = {
+				situation_event = { id = libra_origin.0102 days = 5 }
+			}
+			modifier = {
+				all_technology_research_speed = 0.1
+			}
+		}
+		stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+			on_first_enter = {
+				situation_event = { id = libra_origin.0102 days = 6 }
+			}
+			modifier = {
+				empire_size_penalty_mult = -0.1
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_praises_to_life_b_a
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		on_select = {
+			custom_tooltip = situation_libra_praises_to_life_b_a_tooltip
+		}
+	}
+
+	monthly_progress = {
+		base = 0
+	}
+}
+
+#
+
+situation_libra_return_to_mortal = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+	picture = GFX_evt_libra_crimson_nights_1
+ 	category = positive
+
+	on_start = {
+		situation_event = { id = libra_origin.0520 days = 1 }
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_libra_return_to_mortal_tooltip
+		set_situation_locked = yes
+		hidden_effect = {
+			situation_event = { id = libra_origin.0521 }
+		}
+	}
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 111
+			modifier = {
+				country_unity_produces_mult = 0.25
+			}
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 222
+			on_first_enter = {
+				situation_event = { id = libra_origin.0522 }
+			}
+			modifier = {
+				country_unity_produces_mult = 0.2
+			}
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 333
+			on_first_enter = {
+				situation_event = { id = libra_origin.0522 }
+			}
+			modifier = {
+				country_unity_produces_mult = 0.15
+			}
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 444
+			on_first_enter = {
+				situation_event = { id = libra_origin.0522 }
+			}
+			modifier = {
+				country_unity_produces_mult = 0.1
+			}
+		}
+		stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			end = 555
+			on_first_enter = {
+				situation_event = { id = libra_origin.0522 }
+			}
+			modifier = {
+				country_unity_produces_mult = 0.05
+			}
+		}
+		stage_6 = {
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_green
+			end = 666
+			on_first_enter = {
+				situation_event = { id = libra_origin.0522 }
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_return_to_mortal_approach
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		modifier = {
+			country_unity_produces_mult = 0.05
+		}
+	}
+
+	monthly_progress = {
+		base = 3
+		modifier = {
+			add = 1
+			desc = civic_aristocratic_elite
+			owner = { has_valid_civic = civic_aristocratic_elite }
+		}
+		modifier = {
+			add = 1
+			desc = tr_libra_crimson_vampire_2
+			owner = { has_tradition = tr_libra_crimson_vampire_2 }
+		}
+		modifier = {
+			add = 1
+			desc = tr_libra_crimson_vampire_3
+			owner = { has_tradition = tr_libra_crimson_vampire_3 }
+		}
+		modifier = {
+			add = 1
+			desc = tr_libra_crimson_vampire_4
+			owner = { has_tradition = tr_libra_crimson_vampire_4 }
+		}
+		modifier = {
+			add = 1
+			desc = tr_libra_crimson_vampire_5
+			owner = { has_tradition = tr_libra_crimson_vampire_5 }
+		}
+		modifier = {
+			mult = 1.5
+			desc = tr_libra_crimson_vampire_finish
+			owner = { has_tradition = tr_libra_crimson_vampire_finish }
+		}
+	}
+}
+
+situation_libra_journey_to_the_end = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+	picture = GFX_evt_libra_crimson_nights_2
+ 	category = positive
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_journey_to_the_end_tooltip
+		set_situation_locked = yes
+		hidden_effect = {
+			situation_event = { id = libra_origin.0519 }
+		}
+	}
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 1111
+			custom_tooltip = situation_libra_journey_to_the_end_stage_tooltip
+			on_first_enter = {
+				owner = { libra_crimson_nights_ancestor_awaken_effect = yes }
+			}
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 2222
+			custom_tooltip = situation_libra_journey_to_the_end_stage_tooltip
+			on_first_enter = {
+				owner = { libra_crimson_nights_ancestor_awaken_effect = yes }
+			}
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 3333
+			custom_tooltip = situation_libra_journey_to_the_end_stage_tooltip
+			on_first_enter = {
+				owner = { libra_crimson_nights_ancestor_awaken_effect = yes }
+			}
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 4444
+			custom_tooltip = situation_libra_journey_to_the_end_stage_tooltip
+			on_first_enter = {
+				owner = { libra_crimson_nights_ancestor_awaken_effect = yes }
+			}
+		}
+		stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			end = 5555
+			custom_tooltip = situation_libra_journey_to_the_end_stage_tooltip
+			on_first_enter = {
+				owner = { libra_crimson_nights_ancestor_awaken_effect = yes }
+			}
+		}
+		stage_6 = {
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_green
+			end = 6666
+			custom_tooltip = situation_libra_journey_to_the_end_stage_tooltip
+			on_first_enter = {
+				owner = { libra_crimson_nights_ancestor_awaken_effect = yes }
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_journey_to_the_end_approach_a
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		resources = {
+   			category = situations
+   			upkeep = { unity = 100 }
+		}
+		ai_weight = {
+			base = 2
+		}
+	}
+	approach = {
+		name = situation_libra_journey_to_the_end_approach_b
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			upkeep = { unity = 400 }
+		}
+		on_select = {
+			custom_tooltip = situation_libra_journey_to_the_end_approach_b_tooltip
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 3
+				owner = {
+					resource_income_compare = {
+						resource = unity
+						value > 750
+					}
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_journey_to_the_end_approach_c
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			upkeep = { unity = 1200 }
+		}
+		on_select = {
+			custom_tooltip = situation_libra_journey_to_the_end_approach_c_tooltip
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 4
+				owner = {
+					resource_income_compare = {
+						resource = unity
+						value > 2000
+					}
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_journey_to_the_end_approach_d
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			upkeep = { unity = 2400 }
+		}
+		on_select = {
+			custom_tooltip = situation_libra_journey_to_the_end_approach_d_tooltip
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 5
+				owner = {
+					resource_income_compare = {
+						resource = unity
+						value > 3000
+					}
+				}
+			}
+		}
+	}
+
+	monthly_progress = {
+		base = 3
+		modifier = {
+			add = 2
+			desc = string_current_approach
+			current_situation_approach = situation_libra_journey_to_the_end_approach_b
+		}
+		modifier = {
+			add = 5
+			desc = string_current_approach
+			current_situation_approach = situation_libra_journey_to_the_end_approach_c
+		}
+		modifier = {
+			add = 12
+			desc = string_current_approach
+			current_situation_approach = situation_libra_journey_to_the_end_approach_d
+		}
+		modifier = {
+			add = owner.libra_crimson_nights_ancestor_awaken_count
+			desc = leader_trait_libra_crimson_nights_ancestor_commander
+			owner = { is_variable_set = libra_crimson_nights_ancestor_awaken_count }
+		}
+		modifier = {
+			add = 1
+			desc = civic_aristocratic_elite
+			owner = { has_valid_civic = civic_aristocratic_elite }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_13
+			owner = { has_modifier = libra_crimson_nights_origin_effect_13 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_14
+			owner = { has_modifier = libra_crimson_nights_origin_effect_14 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_15
+			owner = { has_modifier = libra_crimson_nights_origin_effect_15 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_16
+			owner = { has_modifier = libra_crimson_nights_origin_effect_16 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_17
+			owner = { has_modifier = libra_crimson_nights_origin_effect_17 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_18
+			owner = { has_modifier = libra_crimson_nights_origin_effect_18 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_19
+			owner = { has_modifier = libra_crimson_nights_origin_effect_19 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_20
+			owner = { has_modifier = libra_crimson_nights_origin_effect_20 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_21
+			owner = { has_modifier = libra_crimson_nights_origin_effect_21 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_22
+			owner = { has_modifier = libra_crimson_nights_origin_effect_22 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_23
+			owner = { has_modifier = libra_crimson_nights_origin_effect_23 }
+		}
+		modifier = {
+			add = 1
+			desc = libra_crimson_nights_origin_effect_24
+			owner = { has_modifier = libra_crimson_nights_origin_effect_24 }
+		}
+		modifier = {
+			mult = 0
+			desc = situation_libra_journey_to_the_end_unity_effect
+			owner = {
+				has_resource = { type = unity amount < 125 }
+				resource_income_compare = { resource = unity value < 0 }
+			}
+		}
+	}
+}
+
+#
+
+situation_libra_paradise_lose= {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+	picture = GFX_evt_libra_paradise_lose
+ 	category = positive
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_paradise_lose_tooltip
+		set_situation_locked = yes
+		hidden_effect = {
+			situation_event = { id = libra_origin.0909 }
+		}
+	}
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 150
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 300
+			on_first_enter = {
+				situation_event = { id = libra_origin.910 }
+			}
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 450
+			on_first_enter = {
+				situation_event = { id = libra_origin.910 }
+			}
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 600
+			on_first_enter = {
+				situation_event = { id = libra_origin.910 }
+			}
+		}
+		stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			end = 750
+			on_first_enter = {
+				situation_event = { id = libra_origin.910 }
+			}
+		}
+		stage_6 = {
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_green
+			end = 900
+			on_first_enter = {
+				situation_event = { id = libra_origin.910 }
+			}
+		}
+		stage_6 = {
+			icon = GFX_situation_stage_7
+			icon_background = GFX_situation_stage_frame_green
+			end = 1050
+			on_first_enter = {
+				situation_event = { id = libra_origin.910 }
+			}
+		}
+		stage_6 = {
+			icon = GFX_situation_stage_8
+			icon_background = GFX_situation_stage_frame_green
+			end = 1200
+			on_first_enter = {
+				situation_event = { id = libra_origin.910 }
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_paradise_lose_approach
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		modifier = {
+			ruler_skill_add = 1
+			pop_cat_civilian_bonus_workforce_mult = -0.15
+		}
+	}
+
+	monthly_progress = {
+		base = 0.5
+		modifier = {
+			add = owner.value:libra_paradise_lose_politician_count
+			desc = job_politician_plural
+		}
+	}
+}

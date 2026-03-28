@@ -1,0 +1,119 @@
+tr_libra_magnificence_adopt = {
+	unlocks_agenda = agenda_libra_magnificence
+	modifier = {
+		megastructures_cost_mult = -0.05
+	}
+	possible = {
+		has_technology = tech_mega_engineering
+	}
+}
+
+tr_libra_magnificence_finish = {
+	modifier = {
+		megastructure_dismantle_refund_mult = 0.2
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_magnificence_1 = {
+	custom_tooltip = tr_libra_magnificence_1_desc
+
+	ai_weight = {
+		factor = 8000
+	}
+}
+
+tr_libra_magnificence_2 = {
+	possible = {
+		has_tradition = tr_libra_magnificence_1
+	}
+	custom_tooltip = tr_libra_magnificence_2_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_magnificence_3 = {
+	possible = {
+		has_tradition = tr_libra_magnificence_2
+	}
+	custom_tooltip = tr_libra_magnificence_3_desc
+	triggered_modifier = {
+		potential = {
+			or = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+			}
+		}
+		all_technology_research_speed = 0.15
+		rare_tech_research_speed_mult = 0.25
+	}
+	triggered_modifier = {
+		potential = {
+			or = {
+				has_megastructure = quantum_catapult_3
+				has_megastructure = quantum_catapult_improved_slingshot
+			}
+		}
+		dimensional_lock_duration_mult = 0.15
+		ship_ftl_jumpdrive_range_mult = 0.25
+	}
+	triggered_modifier = {
+		potential = {
+			has_megastructure = interstellar_assembly_4
+		}
+		country_insult_efficiency = 0.15
+		council_agenda_progress_speed = 0.25
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_magnificence_4 = {
+	possible = {
+		has_tradition = tr_libra_magnificence_2
+	}
+	custom_tooltip = tr_libra_magnificence_4_desc
+	triggered_modifier = {
+		potential = {
+			has_megastructure = spy_orb_4
+		}
+		ship_cloaking_detection_add = 1
+		spy_network_daily_value_mult = 0.25
+	}
+	triggered_modifier = {
+		potential = {
+			has_megastructure = strategic_coordination_center_3
+		}
+		councilor_skill_add = 1
+		ship_fire_rate_mult = 0.25
+	}
+	triggered_modifier = {
+		potential = {
+			has_megastructure = mega_shipyard_3
+		}
+		country_ship_upgrade_cost_mult = -0.1
+		shipclass_military_build_speed_mult = 0.25
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_magnificence_5 = {
+	possible = {
+		has_tradition = tr_libra_magnificence_3
+		has_tradition = tr_libra_magnificence_4
+	}
+	modifier = {
+		megastructures_upkeep_mult = -0.2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

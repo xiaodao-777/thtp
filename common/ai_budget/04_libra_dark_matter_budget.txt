@@ -1,0 +1,129 @@
+libra_dark_matter_expenditure_edicts = {
+	resource = sr_dark_matter
+	type = expenditure
+	category = edicts
+
+	potential = {
+		or = {
+			has_resource = {
+				type = sr_dark_matter
+				amount > 200
+			}
+			resource_income_compare = {
+				resource = sr_dark_matter
+				value > 3
+			}
+		}
+	}
+
+	weight = {
+		weight = 0.2
+	}
+
+	desired_max = {
+		base = 200
+	}
+}
+
+libra_dark_matter_expenditure_starbases = {
+	resource = sr_dark_matter
+	type = expenditure
+	category = starbases
+
+	potential = {
+		or = {
+			has_resource = {
+				type = sr_dark_matter
+				amount > 100
+			}
+			resource_income_compare = {
+				resource = sr_dark_matter
+				value > 1
+			}
+		}
+	}
+
+	weight = {
+		weight = 0.15
+	}
+
+	desired_max = {
+		base = 150
+	}
+}
+
+libra_sr_dark_matter_expenditure_decisions = {
+	resource = sr_dark_matter
+	type = expenditure
+	category = decisions
+
+	potential = {
+		or = {
+			has_resource = {
+				type = sr_dark_matter
+				amount > 200
+			}
+			resource_income_compare = {
+				resource = sr_dark_matter
+				value > 3
+			}
+		}
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			add = 0.1
+			has_origin = origin_libra_shadow_consciousness
+		}
+	}
+
+	desired_max = {
+		base = 200
+		modifier = {
+			add = 200
+			has_valid_civic = civic_libra_shadow_consciousness_b
+		}
+	}
+}
+
+libra_dark_matter_expenditure_armies = {
+	resource = sr_dark_matter
+	type = expenditure
+	category = armies
+
+	potential = {
+		has_origin = origin_libra_crimson_nights
+		has_tradition = tr_libra_crimson_ancestor_5
+	}
+
+	weight = {
+		weight = 0.15
+	}
+
+	desired_min = {
+		base = 100
+	}
+
+	desired_max = {
+		base = 500
+	}
+}
+
+libra_dark_matter_upkeep_starbases = {
+	resource = sr_dark_matter
+	type = upkeep
+	category = starbases
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.1
+	}
+
+	desired_max = {
+		base = 200
+	}
+}

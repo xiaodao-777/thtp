@@ -1,0 +1,43 @@
+libra_influence_expenditure_edicts = {
+	resource = influence
+	type = expenditure
+	category = edicts
+
+	potential = {
+		or = {
+			is_galactic_custodian = yes
+			is_galactic_emperor = yes
+			has_resource = {
+				type = influence
+				amount > 750
+			}
+			and = {
+				has_origin = origin_libra_extreme_iteration
+				not = { has_edict = libra_extreme_iteration }
+			}
+		
+		}
+	}
+
+	weight = {
+		weight = 0.2
+	}
+
+	desired_min = {
+		base = 25
+	}
+
+	desired_max = {
+		base = 125
+		modifier = {
+			add = 75
+			has_tradition = tr_libra_autarchy_5
+			not = { has_relic = r_libra_autarchy_seal }
+			controlled_systems > 199
+			or = {
+				is_galactic_emperor = yes
+				galaxy_percentage > 0.95
+			}
+		}
+	}
+}

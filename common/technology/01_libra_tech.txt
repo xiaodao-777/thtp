@@ -1,0 +1,1608 @@
+
+
+# #############
+# Libra
+#############
+
+tech_libra_analytics = {
+	cost = @tier3cost1
+	area = physics
+	tier = 3
+	is_rare = yes
+	is_insight = yes
+	category = { computing }
+	weight = @tier3weight1
+	is_reverse_engineerable = no
+
+	modifier = {
+		#damage_vs_player_crisis_mult = 0.5
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_EA_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_EA_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			years_passed < 16
+		}
+		modifier = {
+			factor = 0.25
+			num_ascension_perks < 1
+		}
+		modifier = {
+			factor = 0.5
+			num_ascension_perks = 1
+		}
+		modifier = {
+			factor = 2
+			years_passed > 45
+		}
+		modifier = {
+			factor = 2
+			years_passed > 60
+		}
+		modifier = {
+			factor = 2
+			num_ascension_perks > 3
+		}
+		modifier = {
+			factor = 2
+			num_ascension_perks > 4
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_analytics
+		}
+		modifier = {
+			factor = 1.5
+			is_ai = yes
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tech_libra_fairy_age = {
+	cost = {
+		base = 24000
+		add = trigger:pop_amount
+		max = 96000
+	}
+	area = society
+	tier = 5
+	is_insight = yes
+	is_dangerous = yes
+	category = { statecraft }
+	prerequisites = { "tech_libra_analytics" }
+	weight = @tier5weight1
+	is_reverse_engineerable = no
+
+	modifier = {
+		damage_vs_player_crisis_mult = 0.5
+	}
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_RA_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_RA_DESC"
+		}
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		inherit_effects = yes
+		area = physics
+		category = { computing }
+		trigger = {
+			has_country_flag = libra_fairy_physics
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	technology_swap = {
+		inherit_icon = yes
+		inherit_effects = yes
+		area = engineering
+		category = { industry }
+		trigger = {
+			has_country_flag = libra_fairy_engineering
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	weight_modifier = {
+		factor = 1.5
+		#modifier = {
+		#	factor = 0
+		#	years_passed < 32
+		#	num_ascension_perks < 6
+		#}
+		modifier = {
+			factor = 0
+			libra_crisis_ap_check = yes
+		}
+		modifier = {
+			factor = 0.2
+			is_natural_design_empire = no
+			libra_has_ascension_path = no
+		}
+		modifier = {
+			factor = 0.35
+			num_ascension_perks < 4
+		}
+		modifier = {
+			factor = 0.7
+			num_ascension_perks = 4
+		}
+		modifier = {
+			factor = 2
+			years_passed > 65
+		}
+		modifier = {
+			factor = 2
+			years_passed > 80
+		}
+		modifier = {
+			factor = 2
+			years_passed > 50
+			num_ascension_perks > 5
+		}
+		modifier = {
+			factor = 2
+			num_ascension_perks > 6
+		}
+		modifier = {
+			factor = 3
+			has_4_libra_tradition = yes
+			num_tradition_categories < 7
+		}
+		modifier = {
+			factor = 1.5
+			is_ai = yes
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tech_libra_fairy_secrets = {
+	area = society
+	cost = 333333
+	tier = 5
+	category = { psionics }
+	is_rare = yes
+	is_dangerous = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	potential = {
+		always = no
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_FSCT_TITLE"
+			desc = "TECH_UNLOCK_LIBRA_FSCT_DESC"
+		}
+	}
+}
+
+# #############
+# Crimson Nights
+#############
+
+tech_libra_vampire_beam_1 = {
+	area = physics
+	cost = @tier3cost1
+	tier = 3
+	category = { psionics }
+	ai_update_type = military
+	is_rare = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	potential = {
+		has_origin = origin_libra_crimson_nights
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_libra_vampire_beam_2 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_libra_vampire_beam_1" }
+	is_rare = yes
+	weight = @tier4weight3
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_vampire_beam_2
+		}
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_libra_vampire_energy_lance = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = military
+	category = { psionics }
+	prerequisites = { "tech_energy_lance_2" "tech_libra_vampire_beam_1" }
+	weight = @tier5weight3
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_vampire_energy_lance
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_vampire_kinetic_artillery = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = military
+	category = { psionics }
+	prerequisites = { "tech_kinetic_artillery_2" "tech_libra_vampire_beam_1" }
+	weight = @tier5weight3
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_vampire_kinetic_artillery
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_vampire_strike_craft = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = military
+	category = { psionics }
+	prerequisites = { "tech_strike_craft_3" "tech_libra_vampire_beam_1" }
+	weight = @tier5weight3
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_vampire_strike_craft
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}
+	}
+}
+
+tech_libra_vampire_torpedoes = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	ai_update_type = military
+	category = { psionics }
+	prerequisites = { "tech_torpedoes_3" "tech_libra_vampire_beam_1" }
+	weight = @tier5weight3
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.5
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_vampire_torpedoes
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+# ####################
+# Dragonborn
+# ####################
+
+tech_libra_dragon_breath_1 = {
+	area = society
+	cost = @tier3cost3
+	tier = 3
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	weight = 0
+	is_reverse_engineerable = no
+
+	gateway = psionics
+
+	potential = {
+		has_origin = origin_libra_dragonborn
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_libra_dragon_breath_2 = {
+	area = society
+	cost = @tier4cost3
+	tier = 4
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_libra_dragon_breath_1" }
+	weight = @tier4weight3
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.6
+		modifier = {
+			factor = 1.5
+			has_tradition = tr_libra_dragonlight_finish
+		}
+		modifier = {
+			factor = 1.5
+			has_tradition = tr_libra_dragondark_finish
+		}
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_libra_dragon_breath_3 = {
+	area = society
+	cost = @tier5cost3
+	tier = 5
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_libra_dragon_breath_2" }
+	weight = @tier5weight3
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.6
+		modifier = {
+			factor = 1.5
+			has_tradition = tr_libra_dragonlight_finish
+		}
+		modifier = {
+			factor = 1.5
+			has_tradition = tr_libra_dragondark_finish
+		}
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_libra_dragon_breath_light = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_dragon_breath_dark = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_libra_dragon_wing_skewer_a = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_libra_dragon_wing_skewer_b = {
+	area = society
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+tech_libra_libra_dragon_wing_skewer_c = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_dragonborn_lasers = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_dragonborn_torpedoes = {
+	area = society
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+tech_libra_dragonborn_artillery = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = military
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_dragonborn_strike_craft = {
+	area = society
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = all
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_libra_dragonborn_shield = {
+	area = physics
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = all
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_libra_dragonborn_armor = {
+	area = engineering
+	cost = @fallentechcost
+	tier = @fallentechtier
+	is_insight = yes
+	category = { psionics }
+	ai_update_type = all
+	weight = 0
+	is_reverse_engineerable = no
+
+	modifier = {
+		country_tech_sr_living_metal_produces_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+# ####################
+# Anti-entropy Instruction
+# ####################
+
+tech_libra_antientropy_lasers_1 = {
+	cost = @tier1cost1
+	area = physics
+	weight = 0
+	tier = 1
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_lasers_1" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_antientropy_lasers_2 = {
+	area = physics
+	cost = @tier3cost2
+	weight = @tier3weight2
+	tier = 3
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_lasers_3" "tech_libra_antientropy_lasers_1" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_lasers_2
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_antientropy_lasers_3 = {
+	area = physics
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_lasers_5" "tech_libra_antientropy_lasers_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_lasers_3
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_antientropy_energy_lance = {
+	area = physics
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_energy_lance_2" "tech_libra_antientropy_lasers_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_energy_lance
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_antientropy_pd_tracking = {
+	area = physics
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_pd_tracking_3" "tech_libra_antientropy_lasers_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_pd_tracking
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
+		}
+	}
+}
+
+tech_libra_antientropy_shield_1 = {
+	cost = @tier1cost1
+	area = physics
+	weight = 0
+	tier = 1
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	prerequisites = { "tech_shields_1" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 3
+	}
+}
+
+tech_libra_antientropy_shield_2 = {
+	area = physics
+	cost = @tier3cost2
+	weight = @tier3weight2
+	tier = 3
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	prerequisites = { "tech_shields_3" "tech_libra_antientropy_shield_1" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_shield_2
+		}
+	}
+
+	ai_weight = {
+		factor = 3
+	}
+}
+
+tech_libra_antientropy_shield_3 = {
+	area = physics
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	prerequisites = { "tech_shields_5" "tech_libra_antientropy_shield_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_shield_3
+		}
+	}
+
+	ai_weight = {
+		factor = 3
+	}
+}
+
+tech_libra_antientropy_missiles_1 = {
+	area = society
+	cost = @tier1cost1
+	weight = 0
+	tier = 1
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+tech_libra_antientropy_missiles_2 = {
+	area = society
+	cost = @tier3cost2
+	weight = @tier3weight2
+	tier = 3
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_swarmer_missiles_1" "tech_libra_antientropy_missiles_1" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_missiles_2
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+tech_libra_antientropy_missiles_3 = {
+	area = society
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_swarmer_missiles_2" "tech_libra_antientropy_missiles_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_missiles_3
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+tech_libra_antientropy_torpedoes = {
+	area = society
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_torpedoes_3" "tech_libra_antientropy_missiles_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_torpedoes
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+tech_libra_antientropy_strike_craft_1 = {
+	area = society
+	cost = @tier3cost2
+	weight = @tier3weight2
+	tier = 3
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_strike_craft_2" "tech_libra_antientropy_shield_1" "tech_libra_antientropy_armor_1" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_strike_craft_1
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}
+	}
+}
+
+tech_libra_antientropy_strike_craft_2 = {
+	area = society
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_strike_craft_3" "tech_libra_antientropy_strike_craft_1" "tech_libra_antientropy_shield_2" "tech_libra_antientropy_armor_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_strike_craft_2
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}
+	}
+}
+
+tech_libra_antientropy_kinetic_artillery_1 = {
+	area = engineering
+	cost = @tier1cost1
+	weight = 0
+	tier = 1
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_mass_drivers_1" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_antientropy_kinetic_artillery_2 = {
+	area = engineering
+	cost = @tier3cost2
+	weight = @tier3weight2
+	tier = 3
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_mass_drivers_3" "tech_libra_antientropy_kinetic_artillery_1" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_kinetic_artillery_2
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_antientropy_kinetic_artillery_3 = {
+	area = engineering
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_mass_drivers_5" "tech_libra_antientropy_kinetic_artillery_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_kinetic_artillery_3
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_antientropy_mass_accelerator = {
+	area = engineering
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_mass_accelerator_2" "tech_libra_antientropy_kinetic_artillery_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_mass_accelerator
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_antientropy_flak_batteries = {
+	area = engineering
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_flak_batteries_3" "tech_libra_antientropy_kinetic_artillery_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_flak_batteries
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+tech_libra_antientropy_armor_1 = {
+	cost = @tier1cost1
+	area = engineering
+	weight = 0
+	tier = 1
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 3
+	}
+}
+
+tech_libra_antientropy_armor_2 = {
+	area = engineering
+	cost = @tier3cost2
+	weight = @tier3weight2
+	tier = 3
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_3" "tech_libra_antientropy_armor_1" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_armor_2
+		}
+	}
+
+	ai_weight = {
+		factor = 3
+	}
+}
+
+tech_libra_antientropy_armor_3 = {
+	area = engineering
+	cost = @tier5cost3
+	weight = @tier5weight3
+	tier = 5
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_5" "tech_libra_antientropy_armor_2" }
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		factor = 0.7
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_armor_3
+		}
+	}
+
+	ai_weight = {
+		factor = 3
+	}
+}
+
+tech_libra_antientropy_facility_1 = {
+	area = society
+	cost = @tier2cost1
+	weight = @tier2weight1
+	tier = 2
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	prerequisites = { "tech_planetary_unification" }
+	is_reverse_engineerable = no
+
+	potential = {
+		has_origin = origin_libra_antientropy_instruction
+	}
+
+	modifier = {
+		category_psionics_draw_chance_mult = 0.25
+		show_only_custom_tooltip = no
+		custom_tooltip = tech_libra_antientropy_facility_1_modifier_desc
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 2
+			or = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_facility_1
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_libra_antientropy_facility_2 = {
+	area = society
+	cost = @tier4cost1
+	weight = @tier4weight1
+	tier = 4
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	prerequisites = { "tech_galactic_administration" "tech_libra_antientropy_facility_1" }
+	is_reverse_engineerable = no
+
+	modifier = {
+		planet_engineers_engineering_research_produces_add = 1
+		planet_engineers_energy_upkeep_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 2
+			or = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_facility_2
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_libra_antientropy_index_1 = {
+	area = society
+	cost = @tier2cost3
+	weight = @tier2weight3
+	tier = 2
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	prerequisites = { "tech_robomodding_m" "tech_libra_antientropy_facility_1" }
+	is_reverse_engineerable = no
+
+	modifier = {
+		MACHINE_species_trait_points_add = 1
+	}
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_AEI_INDEX_1_A"
+			desc = "TECH_UNLOCK_LIBRA_AEI_INDEX_1_A_DESC"
+		}
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_AEI_INDEX_1_B"
+			desc = "TECH_UNLOCK_LIBRA_AEI_INDEX_1_B_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 2
+			or = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_index_1
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_libra_antientropy_index_2 = {
+	area = society
+	cost = @tier4cost3
+	weight = @tier4weight3
+	tier = 4
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = all
+	prerequisites = { "tech_binary_motivators" "tech_libra_antientropy_facility_2" "tech_libra_antientropy_index_1" }
+	is_reverse_engineerable = no
+
+	modifier = {
+		MACHINE_species_trait_points_add = 1
+		MACHINE_species_trait_picks_add = 1
+	}
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_LIBRA_AEI_INDEX_2"
+			desc = "TECH_UNLOCK_LIBRA_AEI_INDEX_2_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 2
+			or = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		inline_script = {
+			script = technologies/libra_rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_libra_antientropy_index_2
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+

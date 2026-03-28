@@ -1,0 +1,109 @@
+ship_section_template = {
+	key = "LIBRA_ADVENTURE_ASTEROID_MID_S2"
+	ship_size = libra_adventure_asteroid
+	fits_on_slot = mid
+	entity = "libra_adventure_asteroid_entity_1"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { brawler brawler_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "invisible_small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "invisible_small_turret"
+		locatorname = "root"
+	}
+
+	small_utility_slots = 2
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "LIBRA_ADVENTURE_ASTEROID_MID_P2"
+	ship_size = libra_adventure_asteroid
+	fits_on_slot = mid
+	entity = "libra_adventure_asteroid_entity_2"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { screen screen_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "invisible_point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_02"
+		template = "invisible_point_defence_turret"
+		locatorname = "root"
+	}
+
+	small_utility_slots = 2
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "LIBRA_ADVENTURE_ASTEROID_MID_M1"
+	ship_size = libra_adventure_asteroid
+	fits_on_slot = mid
+	entity = "libra_adventure_asteroid_entity_3"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { gunship gunship_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_energy
+		}
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "root"
+	}
+
+	small_utility_slots = 2
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "LIBRA_ADVENTURE_ASTEROID_MID_G1"
+	ship_size = libra_adventure_asteroid
+	fits_on_slot = mid
+	entity = "libra_adventure_asteroid_entity_4"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { explosive explosive_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_explosive
+		}
+	}
+
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "invisible_missile_turret"
+		locatorname = "root"
+	}
+
+	small_utility_slots = 2
+	aux_utility_slots = 1
+}

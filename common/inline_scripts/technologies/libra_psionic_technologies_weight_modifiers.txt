@@ -1,0 +1,23 @@
+modifier = {
+	factor = @federation_perk_factor
+	has_federation = yes
+	federation = {
+		has_federation_perk = rare_tech_boost
+		any_member = { has_technology = $TECHNOLOGY$ }
+	}
+}
+modifier = {
+	factor = 0
+	or = {
+		libra_has_cybernetic_ascension = yes
+		libra_has_genetic_ascension = yes
+		libra_has_synthetic_ascension = yes
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+modifier = {
+	factor = 0.1
+	libra_crisis_ap_check = yes
+}

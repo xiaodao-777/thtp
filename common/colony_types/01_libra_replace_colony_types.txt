@@ -1,0 +1,33 @@
+@stickiness = 10
+@stickiness_low = 5
+
+col_nanotech_world = {
+	icon = GFX_colony_type_fringe
+
+	potential = {
+		#is_capital = no
+		is_planet_class = pc_nanotech
+		exists = owner
+		owner = { has_active_tradition = tr_nanotech_3 }
+	}
+
+	planet_modifier = {
+		planet_buildings_produces_mult = 0.1
+		planet_buildings_upkeep_mult = 0.1
+		planet_building_build_speed_mult = 0.1
+		bonus_automated_workforce_mult = 0.1
+		planet_jobs_nanites_produces_mult = 0.2
+	}
+
+	weight_modifier = {
+		base = 5
+		modifier = {
+			add = 45
+			sapient_pop_amount < 500
+		}
+		#modifier = {
+		#	add = 10
+		#	owner = { has_ascension_perk = ap_libra_autonomous_cluster }
+		#}
+	}
+}

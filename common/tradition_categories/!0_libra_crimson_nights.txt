@@ -1,0 +1,57 @@
+tradition_libra_crimson_vampire = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_crimson_vampire_adopt } }
+		text = tradition_libra_crimson_vampire_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_crimson_vampire_adopt }
+		text = tradition_libra_crimson_vampire_adopt_desc
+	}
+	tree_template = "tree_12_11_11"
+	adoption_bonus = "tr_libra_crimson_vampire_adopt"
+	finish_bonus = "tr_libra_crimson_vampire_finish"
+	traditions = {
+		"tr_libra_crimson_vampire_1"
+		"tr_libra_crimson_vampire_2"
+		"tr_libra_crimson_vampire_3"
+		"tr_libra_crimson_vampire_4"
+		"tr_libra_crimson_vampire_5"
+	}
+
+	potential = {
+		has_origin = origin_libra_crimson_nights
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tradition_libra_crimson_ancestor = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_crimson_ancestor_adopt } }
+		text = tradition_libra_crimson_ancestor_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_crimson_ancestor_adopt }
+		text = tradition_libra_crimson_ancestor_adopt_desc
+	}
+	tree_template = "tree_21_12"
+	adoption_bonus = "tr_libra_crimson_ancestor_adopt"
+	finish_bonus = "tr_libra_crimson_ancestor_finish"
+	traditions = {
+		"tr_libra_crimson_ancestor_1"
+		"tr_libra_crimson_ancestor_2"
+		"tr_libra_crimson_ancestor_3"
+		"tr_libra_crimson_ancestor_4"
+		"tr_libra_crimson_ancestor_5"
+	}
+
+	potential = {
+		has_origin = origin_libra_crimson_nights
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

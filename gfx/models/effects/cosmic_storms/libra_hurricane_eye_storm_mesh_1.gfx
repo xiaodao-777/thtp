@@ -1,0 +1,14 @@
+objectTypes = {
+	pdxmesh = {
+		name = "libra_hurricane_eye_storm_mesh_1"
+		file = "gfx/models/effects/cosmic_storms/mesh/SM_Particle_storm.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PDXMeshWPO"
+			texture_diffuse = "libra_hurricane_eye_storm_curves.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			texture_wpo = "libra_hurricane_eye_storm_wpo.dds"}
+		}
+	}

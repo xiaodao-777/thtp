@@ -1,0 +1,1263 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_situation_approach_bg_libra_blue"
+		texturefile = "gfx/interface/icons/situation_log/situations/approaches/situation_approach_bg_libra_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_situation_stage_9"
+		texturefile = "gfx/interface/icons/situation_log/situations/stages/situation_severity_level_number_9.dds"
+	}
+	spriteType = {
+		name = "GFX_situation_stage_10"
+		texturefile = "gfx/interface/icons/situation_log/situations/stages/situation_severity_level_number_10.dds"
+	}
+
+	spriteType = {
+		name = "GFX_army_type_libra_necroid_species_trait"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_necroid_species_trait.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_plantoid_species_trait"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_plantoid_species_trait.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_background_destiny_1"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_1.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_destiny_2"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_2.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_destiny_3"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_3.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_destiny_4"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_4.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_destiny_5"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_5.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_destiny_6"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_6.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_background_libra_destiny_1"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_1.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_libra_destiny_2"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_2.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_libra_destiny_3"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_3.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_libra_destiny_4"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_4.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_libra_destiny_5"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_5.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_background_libra_destiny_6"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_libra_destiny_6.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_frame_libra_genetic_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_genetic_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_genetic_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_genetic_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_frame_libra_genetic_destiny"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_genetic_destiny.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_genetic_destiny" 
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_genetic_destiny.dds"		
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_genetic_destiny_mask.dds"
+			animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_genetic_destiny_animated_texture.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 7
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_trait_frame_libra_psionic_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_psionic_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_psionic_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_psionic_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_frame_libra_psionic_destiny"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_psionic_destiny.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_psionic_destiny" 
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_psionic_destiny.dds"		
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_psionic_destiny_mask.dds"
+			animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_psionic_destiny_animated_texture.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 6
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_trait_frame_libra_cyborg_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_cyborg_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_cyborg_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_cyborg_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_frame_libra_cyborg_destiny"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_cyborg_destiny.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_cyborg_destiny" 
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_cyborg_destiny.dds"		
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_cyborg_destiny_mask.dds"
+			animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_cyborg_destiny_animated_texture.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 8
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_trait_frame_libra_machine_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_machine_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_machine_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_machine_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_frame_libra_machine_destiny"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_machine_destiny.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_machine_destiny" 
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_machine_destiny.dds"		
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_machine_destiny_mask.dds"
+			animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_machine_destiny_animated_texture.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 8
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_trait_frame_libra_corrupt_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_corrupt_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_corrupt_veteran"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_corrupt_veteran.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_frame_libra_corrupt_destiny"
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_libra_corrupt_destiny.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_glow_libra_corrupt_destiny" 
+		texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_corrupt_destiny.dds"		
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_corrupt_destiny_mask.dds"
+			animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_libra_corrupt_destiny_animated_texture.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 8
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_beacon"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_beacon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_generic_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_generic_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_generic_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_generic_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_generic_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_generic_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_generic_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_generic_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_generic_e"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_generic_e.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_generic_f"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_generic_f.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_admiral_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_admiral_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_admiral_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_admiral_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_admiral_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_admiral_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_admiral_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_admiral_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_general_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_general_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_general_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_general_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_general_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_general_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_general_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_general_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_governor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_governor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_governor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_governor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_governor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_governor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_governor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_governor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_councilor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_councilor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_councilor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_councilor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_councilor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_councilor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_commander_councilor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_commander_councilor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_delegate_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_delegate_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_delegate_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_delegate_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_delegate_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_delegate_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_delegate_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_delegate_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_governor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_governor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_governor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_governor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_governor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_governor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_governor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_governor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_diplomacy_councilor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_diplomacy_councilor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_diplomacy_councilor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_diplomacy_councilor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_diplomacy_councilor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_diplomacy_councilor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_diplomacy_councilor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_diplomacy_councilor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_economy_councilor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_economy_councilor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_economy_councilor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_economy_councilor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_economy_councilor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_economy_councilor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_official_economy_councilor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_official_economy_councilor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_explorer_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_explorer_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_explorer_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_explorer_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_explorer_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_explorer_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_explorer_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_explorer_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_scholar_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_scholar_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_scholar_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_scholar_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_scholar_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_scholar_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_scholar_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_scholar_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_governor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_governor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_governor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_governor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_governor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_governor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_governor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_governor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_councilor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_councilor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_councilor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_councilor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_councilor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_councilor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_corrupt_scientist_councilor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_corrupt_scientist_councilor_d.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_psionic_trade_focus"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_psionic_trade_focus.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_admiral_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_admiral_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_admiral_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_admiral_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_admiral_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_admiral_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_admiral_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_admiral_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_general_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_general_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_general_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_general_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_general_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_general_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_general_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_general_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_governor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_governor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_governor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_governor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_governor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_governor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_governor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_governor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_councilor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_councilor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_councilor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_councilor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_councilor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_councilor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_commander_councilor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_commander_councilor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_delegate_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_delegate_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_delegate_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_delegate_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_delegate_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_delegate_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_delegate_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_delegate_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_governor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_governor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_governor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_governor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_governor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_governor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_governor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_governor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_diplomacy_councilor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_diplomacy_councilor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_diplomacy_councilor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_diplomacy_councilor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_diplomacy_councilor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_diplomacy_councilor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_diplomacy_councilor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_diplomacy_councilor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_economy_councilor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_economy_councilor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_economy_councilor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_economy_councilor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_economy_councilor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_economy_councilor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_official_economy_councilor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_official_economy_councilor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_explorer_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_explorer_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_explorer_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_explorer_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_explorer_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_explorer_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_explorer_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_explorer_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_scholar_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_scholar_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_scholar_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_scholar_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_scholar_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_scholar_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_scholar_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_scholar_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_governor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_governor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_governor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_governor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_governor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_governor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_governor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_governor_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_councilor_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_councilor_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_councilor_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_councilor_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_councilor_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_councilor_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_scientist_councilor_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_scientist_councilor_d.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_corrupt_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_corrupt_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_corrupt_destiny_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_admiral_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_admiral_xenophile.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_corrupt_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_corrupt_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_corrupt_destiny_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_militarist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_general_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_general_xenophile.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_corrupt_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_corrupt_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_corrupt_destiny_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_militarist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_commander_governor_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_commander_governor_xenophile.dds"
+	}
+
+
+
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_corrupt_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_corrupt_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_corrupt_destiny_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_militarist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_governor_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_governor_xenophile.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_corrupt_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_corrupt_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_corrupt_destiny_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_militarist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_delegate_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_delegate_xenophile.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_corrupt_destiny_a.dds"
+	}
+	#spriteType = {
+	#	name = "GFX_leader_trait_libra_official_diplomacy_councilor_corrupt_destiny_b"
+	#	texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_corrupt_destiny_b.dds"
+	#}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_militarist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_diplomacy_councilor_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_diplomacy_councilor_xenophile.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_corrupt_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_corrupt_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_corrupt_destiny_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_militarist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_official_economy_councilor_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_official_economy_councilor_xenophile.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_corrupt_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_corrupt_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_corrupt_destiny_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_militarist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_explorer_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_explorer_xenophile.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_corrupt_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_corrupt_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_corrupt_destiny_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_militarist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_scholar_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_scholar_xenophile.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_corrupt_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_corrupt_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_corrupt_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_corrupt_destiny_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_destiny_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_destiny_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_destiny_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_destiny_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_destiny_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_destiny_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_destiny_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_destiny_d.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_militarist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_militarist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_pacifist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_pacifist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_authoritarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_authoritarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_egalitarian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_egalitarian.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_spiritualist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_spiritualist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_materialist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_materialist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_xenophobe"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_xenophobe.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_scientist_governor_xenophile"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_scientist_governor_xenophile.dds"
+	}
+}

@@ -1,0 +1,234 @@
+ship_section_template = {
+	key = "LIBRA_DB_MEDIUM_MID_T1L4M4P8"
+	ship_size = libra_dragonborn_medium
+	fits_on_slot = mid
+	entity = "space_dragon_blue_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { gunship gunship_stealth artillery artillery_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			not = { is_preferred_weapons = weapon_type_strike_craft }
+		}
+	}
+
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "SECONDARY_GUN_01"
+		template = "invisible_large_turret"
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_02"
+		template = "invisible_large_turret"
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_03"
+		template = "invisible_large_turret"
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_04"
+		template = "invisible_large_turret"
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_05"
+		template = "invisible_medium_turret"
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_06"
+		template = "invisible_medium_turret"
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_07"
+		template = "invisible_medium_turret"
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SECONDARY_GUN_08"
+		template = "invisible_medium_turret"
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_05"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_06"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_07"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_08"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+
+	aux_utility_slots = 4
+	large_utility_slots = 12
+}
+
+ship_section_template = {
+	key = "LIBRA_DB_MEDIUM_MID_X2H6S4S4"
+	ship_size = libra_dragonborn_medium
+	fits_on_slot = mid
+	entity = "space_dragon_blue_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { carrier carrier_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+
+	component_slot = {
+		name = "PRIMARY_GUN_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "PRIMARY_GUN_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "TERTIARY_GUN_01"
+		template = "invisible_small_turret"
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_02"
+		template = "invisible_small_turret"
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_03"
+		template = "invisible_small_turret"
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_04"
+		template = "invisible_small_turret"
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_05"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_06"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_07"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "TERTIARY_GUN_08"
+		template = "invisible_point_defence_turret"
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "wing_1_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "wing_2_3"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "wing_3_4"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "wing_4_3"
+		is_side_slot = yes
+	}
+
+	aux_utility_slots = 4
+	large_utility_slots = 12
+}

@@ -1,0 +1,503 @@
+automate_libra_nanotech_capital_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_libra_nanotech_capital
+	}
+
+	prio_districts = {
+		district_nexus_1
+		district_nexus_2
+		district_nexus_3
+	}
+	
+	prio_zones = {
+		zone_unity
+		zone_unity_nexus
+		zone_unity_spiritualist_nexus
+		zone_unity_bio_trophy_nexus
+	}
+	
+	buildings = {
+		1 = {
+			building = building_embassy
+		}
+		
+		2 = {
+			building = building_autochthon_monument
+		}
+		2_corp = {
+			building = building_corporate_monument
+		}
+		2_mach = {
+			building = building_simulation_1
+		}
+		2_hive = {
+			building = building_sensorium_1
+		}
+		2_memo = {
+			building = building_galactic_memorial_1
+		}
+
+		3 = {
+			building = building_libra_nanite_unity_center
+		}
+		
+		4 = {
+			building = building_autocurating_vault
+		}
+		4_spir = {
+			building = building_citadel_of_faith
+		}
+		4_corp = {
+			building = building_corporate_vault
+		}
+		4_mach = {
+			building = building_alpha_hub
+		}
+		4_serv = {
+			building = building_trophy_vault
+		}
+
+		5 = {
+			building = building_bureaucratic_2
+		}
+		5_spir = {
+			building = building_holotemple
+		}
+		5_mach = {
+			building = building_network_junction
+		}
+		5_serv = {
+			building = building_organic_sanctuary
+			planet_limit = 2
+		}
+	}
+}
+
+automate_libra_nanotech_bureau_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_libra_nanotech_bureau
+	}
+
+	prio_districts = {
+		district_nexus_1
+		district_nexus_2
+		district_nexus_3
+	}
+	
+	prio_zones = {
+		zone_unity
+		zone_unity_nexus
+		zone_unity_spiritualist_nexus
+		zone_unity_bio_trophy_nexus
+	}
+	
+	buildings = {
+		1 = {
+			building = building_autocurating_vault
+		}
+		1_spir = {
+			building = building_citadel_of_faith
+		}
+		1_corp = {
+			building = building_corporate_vault
+		}
+		1_mach = {
+			building = building_alpha_hub
+		}
+		1_serv = {
+			building = building_trophy_vault
+		}
+
+		2 = {
+			building = building_libra_nanite_unity_center
+		}
+
+		3 = {
+			building = building_bureaucratic_2
+		}
+		3_spir = {
+			building = building_holotemple
+		}
+		3_mach = {
+			building = building_network_junction
+		}
+		3_serv = {
+			building = building_organic_sanctuary
+			planet_limit = 2
+		}
+	}
+}
+
+automate_libra_nanotech_trade_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_libra_nanotech_trade
+	}
+
+	prio_districts = {
+		district_nexus_1
+		district_nexus_2
+		district_nexus_3
+	}
+	
+	prio_zones = {
+		zone_trade
+		zone_trade_nexus
+	}
+	
+	buildings = {
+		1 = {
+			building = building_galactic_stock_exchange
+		}
+		1_mach = {
+			building = building_libra_gestalt_logistics_dome
+		}
+
+		2 = {
+			building = building_libra_nanite_trade_center
+		}
+
+		3 = {
+			building = building_commercial_megaplex
+		}
+
+		4 = {
+			building = building_commercial_zone
+		}
+		4_mach = {
+			building = building_maintenance_depot
+		}
+	}
+}
+
+automate_libra_nanotech_foundry_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_libra_nanotech_foundry
+	}
+
+	prio_districts = {
+		district_nexus_1
+		district_nexus_2
+		district_nexus_3
+	}
+	
+	prio_zones = {
+		zone_foundry
+		zone_foundry_nexus
+	}
+	
+	buildings = {
+		1 = {
+			building = building_ministry_production
+		}
+		1_sp = {
+			building = building_coordinated_fulfillment_center_1
+		}
+		1_mach = {
+			building = building_production_center
+		}
+
+		2 = {
+			building = building_nanotech_cauldron
+		}
+
+		3 = {
+			building = building_foundry_upkeep_1
+		}
+
+		4 = {
+			building = building_archaeo_refinery
+		}
+		4_1 = {
+			building = building_refinery
+		}
+		4_2 = {
+			building = building_chemical_plant
+		}
+		4_3 = {
+			building = building_crystal_plant
+		}
+		4_4 = {
+			building = building_nanite_transmuter
+		}
+	}
+}
+
+automate_libra_nanotech_refinery_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_libra_nanotech_refinery
+	}
+
+	prio_districts = {
+		district_nexus_1
+		district_nexus_2
+		district_nexus_3
+	}
+	
+	prio_zones = {
+		zone_foundry
+		zone_industrial
+		zone_factory
+		zone_foundry_nexus
+		zone_industrial_nexus
+		zone_factory_nexus
+	}
+	
+	buildings = {
+		1 = {
+			building = building_archaeo_refinery
+		}
+		1_sp = {
+			building = building_coordinated_fulfillment_center_1
+		}
+
+		2_1 = {
+			building = building_refinery
+		}
+		2_2 = {
+			building = building_chemical_plant
+		}
+		2_3 = {
+			building = building_crystal_plant
+		}
+
+		3 = {
+			building = building_nanotech_cauldron
+		}
+		3_1 = {
+			building = building_nanite_transmuter
+		}
+
+		4_1 = {
+			building = building_foundry_upkeep_1
+		}
+		4_2 = {
+			building = building_factory_upkeep_1
+			available = {
+				or = {
+					num_zones = {
+						type = zone_industrial
+						value > 0
+					}
+					num_zones = {
+						type = zone_factory
+						value > 0
+					}
+					num_zones = {
+						type = zone_industrial_nexus
+						value > 0
+					}
+					num_zones = {
+						type = zone_factory_nexus
+						value > 0
+					}
+				}
+			}
+		}
+
+		5 = {
+			building = building_ministry_production
+		}
+		5_mach = {
+			building = building_production_center
+		}
+	}
+}
+
+automate_libra_nanotech_tresearch_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_libra_nanotech_research
+	}
+
+	prio_districts = {
+		district_nexus_1
+		district_nexus_2
+		district_nexus_3
+	}
+	
+	prio_zones = {
+		zone_research_engineering
+		zone_research_physics
+		zone_research_society
+		zone_research
+		zone_research_engineering_nexus
+		zone_research_physics_nexus
+		zone_research_society_nexus
+		zone_research_nexus
+	}
+	
+	buildings = {
+		1 = {
+			building = building_institute
+		}
+		1_sp = {
+			building = building_vultaum_reality_computer
+		}
+		1_mach = {
+			building = building_supercomputer
+		}
+
+		2 = {
+			building = building_nanolab_1
+		}
+
+		3_1 = {
+			building = building_engineering_facility_1
+		}
+		3_2 = {
+			building = building_research_upkeep_1
+		}
+
+		4_1 = {
+			building = building_biolab_1
+		}
+		4_2 = {
+			building = building_physics_lab_1
+		}
+
+		5_1 = {
+			building = building_astral_siphon_1
+		}
+		5_2 = {
+			building = building_archaeostudies_faculty
+		}
+		5_3 = {
+			building = building_ranger_lodge
+		}
+	}
+}
+
+automate_libra_nanotech_generator_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_libra_nanotech_generator
+	}
+
+	prio_districts = {
+		district_nexus_1
+		district_nexus_2
+		district_nexus_3
+	}
+	
+	prio_zones = {
+		zone_energy_nexus
+		zone_trade
+	}
+	
+	buildings = {
+		1 = {
+			building = building_energy_grid
+		}
+
+		2 = {
+			building = building_libra_nanite_power_hub
+		}
+
+		3_1 = {
+			building = building_mote_harvesters
+		}
+		3_2 = {
+			building = building_libra_gestalt_energy_nub
+		}
+
+		4 = {
+			building = building_nanite_transmuter
+		}
+	}
+}
+
+automate_libra_nanotech_farming_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_libra_nanotech_farming
+	}
+
+	prio_districts = {
+		district_nexus_1
+		district_nexus_2
+		district_nexus_3
+	}
+	
+	prio_zones = {
+		zone_libra_food_nexus
+		zone_trade
+	}
+	
+	buildings = {
+		1 = {
+			building = building_food_processing_facility
+		}
+
+		2 = {
+			building = building_libra_nanite_food_processing
+		}
+
+		3_1 = {
+			building = building_gas_extractors
+		}
+		3_2 = {
+			building = building_libra_gestalt_food_nub
+		}
+
+		4 = {
+			building = building_nanite_transmuter
+		}
+	}
+}
+
+automate_libra_nanotech_mining_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_libra_nanotech_mining
+	}
+
+	prio_districts = {
+		district_nexus_1
+		district_nexus_2
+		district_nexus_3
+	}
+	
+	prio_zones = {
+		zone_betharian_nexus
+		zone_minerals_nexus
+		zone_trade
+	}
+	
+	buildings = {
+		1 = {
+			building = building_mineral_purification_plant
+		}
+
+		2 = {
+			building = building_libra_nanite_mineral_purification
+		}
+
+		3_1 = {
+			building = building_betharian_power_plant
+		}
+		3_2 = {
+			building = building_crystal_mines
+		}
+		3_3 = {
+			building = building_libra_gestalt_mineral_nub
+		}
+
+		4 = {
+			building = building_nanite_transmuter
+		}
+	}
+}

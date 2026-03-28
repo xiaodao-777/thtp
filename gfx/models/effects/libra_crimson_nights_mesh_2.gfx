@@ -1,0 +1,14 @@
+objectTypes = {
+	pdxmesh = {
+		name = "libra_crimson_nights_mesh_2"
+		file = "gfx/models/effects/cosmic_storms/mesh/SM_Particle_storm2.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PDXMeshWPO"
+			texture_diffuse = "libra_crimson_nights_dots.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			texture_wpo = "libra_crimson_nights_wpo.dds"}
+		}
+	}

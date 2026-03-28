@@ -1,0 +1,90 @@
+tradition_libra_dragonchant = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_dragonchant_adopt } }
+		text = tradition_libra_dragonchant_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_dragonchant_adopt }
+		text = tradition_libra_dragonchant_adopt_desc
+	}
+	tree_template = "tree_12_11_11"
+	adoption_bonus = "tr_libra_dragonchant_adopt"
+	finish_bonus = "tr_libra_dragonchant_finish"
+	traditions = {
+		"tr_libra_dragonchant_1"
+		"tr_libra_dragonchant_2"
+		"tr_libra_dragonchant_3"
+		"tr_libra_dragonchant_4"
+		"tr_libra_dragonchant_5"
+	}
+
+	potential = {
+		has_origin = origin_libra_dragonborn
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tradition_libra_dragonlight = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_dragonlight_adopt } }
+		text = tradition_libra_dragonlight_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_dragonlight_adopt }
+		text = tradition_libra_dragonlight_adopt_desc
+	}
+	tree_template = "tree_21_12"
+	adoption_bonus = "tr_libra_dragonlight_adopt"
+	finish_bonus = "tr_libra_dragonlight_finish"
+	traditions = {
+		"tr_libra_dragonlight_1"
+		"tr_libra_dragonlight_2"
+		"tr_libra_dragonlight_3"
+		"tr_libra_dragonlight_4"
+		"tr_libra_dragonlight_5"
+	}
+
+	potential = {
+		has_origin = origin_libra_dragonborn
+	}
+
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tradition_libra_dragondark = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_dragondark_adopt } }
+		text = tradition_libra_dragondark_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_dragondark_adopt }
+		text = tradition_libra_dragondark_adopt_desc
+	}
+	tree_template = "tree_11_11_21"
+	adoption_bonus = "tr_libra_dragondark_adopt"
+	finish_bonus = "tr_libra_dragondark_finish"
+	traditions = {
+		"tr_libra_dragondark_1"
+		"tr_libra_dragondark_2"
+		"tr_libra_dragondark_3"
+		"tr_libra_dragondark_4"
+		"tr_libra_dragondark_5"
+	}
+
+	potential = {
+		has_origin = origin_libra_dragonborn
+	}
+
+	ai_weight = {
+		factor = 2000
+		modifier = {
+			factor = 3
+			libra_ai_preferences_militarily = yes
+		}
+	}
+}

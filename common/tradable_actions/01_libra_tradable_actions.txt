@@ -1,0 +1,190 @@
+trade_action_libra_kings_game = {
+	fire_and_forget = no
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_kings_game
+		has_resource = { type = unity amount > 1000 }
+		check_variable = { which = libra_ea_path value = 10 }
+		or = {
+			is_in_federation_with = from
+			has_subject = from
+		}
+		not = { has_modifier = trade_action_libra_kings_game_modifier }
+		from = {
+			not = { has_modifier = trade_action_libra_kings_game_modifier }
+		}
+	}
+
+	active = {
+		or = {
+			is_in_federation_with = from
+			has_subject = from
+		}
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			unity = -500
+		}
+		add_modifier = { modifier = trade_action_libra_kings_game_modifier }
+		from = {
+			add_modifier = { modifier = trade_action_libra_kings_game_modifier }
+		}
+	}
+
+	on_deal_ended_sender_effect = {
+		if = {
+			limit = {
+				not = {
+					any_country = {
+						is_action_active = {
+							action = trade_action_libra_kings_game
+							with_country = root
+						}
+					}
+				}
+			}
+			remove_modifier = trade_action_libra_kings_game_modifier
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_kings_game_modifier
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+#
+
+trade_action_libra_suzerainty_1 = {
+	fire_and_forget = yes
+
+	potential = {
+		has_overlord = from
+		libra_use_special_pop = no
+		sapient_pop_amount > 5000
+		not = { has_country_flag = libra_traded_pop }
+		from = {
+			has_tradition = tr_libra_suzerainty_1
+		}
+	}
+
+	on_traded_effect = {
+		custom_tooltip = trade_action_libra_suzerainty_1_effect
+		hidden_effect = {
+			country_event = { id = libra_fairy.1690 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0.03
+		modifier = {
+			factor = trigger:sapient_pop_amount
+			always = yes
+		}
+	}
+}
+
+trade_action_libra_suzerainty_2 = {
+	fire_and_forget = no
+
+	potential = {
+		has_overlord = from
+		not = { has_modifier = trade_action_libra_suzerainty_2_modifier }
+		from = {
+			has_tradition = tr_libra_suzerainty_2
+		}
+	}
+
+	active = {
+		has_overlord = from
+	}
+
+	on_traded_effect = {
+		add_modifier = { modifier = trade_action_libra_suzerainty_2_modifier }
+	}
+
+	on_deal_ended_recipient_effect = {
+		from = {
+			remove_modifier = trade_action_libra_suzerainty_2_modifier
+		}
+	}
+
+	ai_weight = {
+		weight = 0.02
+		modifier = {
+			factor = trigger:max_naval_capacity
+			always = yes
+		}
+	}
+}
+
+trade_action_libra_suzerainty_3 = {
+	fire_and_forget = no
+
+	potential = {
+		has_tradition = tr_libra_suzerainty_4
+		has_resource = { type = influence amount > 50 }
+		has_subject = from
+		from = { not = { has_modifier = trade_action_libra_suzerainty_3_modifier } }
+	}
+
+	active = {
+		has_subject = from
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -10
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_suzerainty_3_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_suzerainty_3_modifier
+	}
+
+	ai_weight = {
+		weight = 1
+		
+	}
+}
+
+trade_action_libra_suzerainty_4 = {
+	fire_and_forget = no
+
+	potential = {
+		has_tradition = tr_libra_suzerainty_5
+		has_resource = { type = influence amount > 50 }
+		has_subject = from
+		from = { not = { has_modifier = trade_action_libra_suzerainty_4_modifier } }
+	}
+
+	active = {
+		has_subject = from
+	}
+
+	on_traded_effect = {
+		add_resource = {
+			influence = -10
+		}
+		from = {
+			add_modifier = { modifier = trade_action_libra_suzerainty_4_modifier }
+		}
+	}
+
+	on_deal_ended_recipient_effect = {
+		remove_modifier = trade_action_libra_suzerainty_4_modifier
+	}
+
+	ai_weight = {
+		weight = 1
+		
+	}
+}

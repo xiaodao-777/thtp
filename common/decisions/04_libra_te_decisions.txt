@@ -1,0 +1,67 @@
+decision_libra_hive_survival_competition = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_burning_settlement
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+ 	prerequisites = {
+		"tech_libra_hive_production_methods"
+ 	}
+
+	show_tech_unlock_if = {
+		owner = { not = { has_origin = origin_wilderness } }
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			not = { has_origin = origin_wilderness }
+		}
+	}
+
+	allow = {
+		sapient_pop_amount >= 2500
+		not = { has_modifier = libra_hive_survival_competition_modifier }
+	}
+
+	effect = {
+		add_planet_devastation = 15
+		custom_tooltip = decision_libra_hive_survival_competition_effect
+		hidden_effect = {
+			planet_event = { id = libra_fairy.5001 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 4
+			free_jobs <= 0
+			sapient_pop_amount >= 10000
+			owner = {
+				nor = {
+					#has_valid_civic = civic_hive_natural_neural_network
+					has_origin = origin_libra_shadow_consciousness
+					#has_tradition = tr_libra_sumptuary_adopt
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			sapient_pop_amount >= 20000
+			num_assigned_jobs = {
+				job = maintenance_drone
+				value > 3000
+			}
+		}
+	}
+}

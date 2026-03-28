@@ -1,0 +1,28 @@
+tradition_libra_suzerainty = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_suzerainty_adopt } }
+		text = tradition_libra_suzerainty_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_suzerainty_adopt }
+		text = tradition_libra_suzerainty_adopt_desc
+	}
+	tree_template = "tree_21_12"
+	adoption_bonus = "tr_libra_suzerainty_adopt"
+	finish_bonus = "tr_libra_suzerainty_finish"
+	traditions = {
+		"tr_libra_suzerainty_1"
+		"tr_libra_suzerainty_2"
+		"tr_libra_suzerainty_3"
+		"tr_libra_suzerainty_4"
+		"tr_libra_suzerainty_5"
+	}
+
+	ai_weight = {
+		base = 12
+		modifier = {
+			factor = trigger:subjects
+			is_overlord = yes
+		}
+	}
+}

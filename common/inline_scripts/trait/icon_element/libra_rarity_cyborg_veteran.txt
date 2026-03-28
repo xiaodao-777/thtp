@@ -1,0 +1,12 @@
+layer = {
+	icon = "GFX_trait_bg"
+	color = "trait_bg_engineering"
+}
+layer = {
+	icon = "GFX_trait_glow_libra_cyborg_veteran"
+	color = "trait_rarity_veteran"
+}
+layer = {
+	icon = "GFX_trait_frame_libra_cyborg_veteran"
+	color = "trait_rarity_veteran"
+}

@@ -1,0 +1,1772 @@
+
+
+# #############
+# Directive 76
+#############
+
+situation_libra_directive_76 = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_clones
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 10 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_directive_76_tooltip
+		hidden_effect = {
+			situation_event = { id = libra_fairy.10027 }
+		}
+	}
+	monthly_progress = {
+		base = 1
+		modifier = {
+			add = value:libra_directive_76_clone_vats_mult
+			desc = building_clone_vats
+		}
+		modifier = {
+			mult = 1.2
+			desc = string_current_approach
+			current_situation_approach = situation_libra_directive_76_approach_b
+		}
+		modifier = {
+			mult = value:libra_fe_clinic_penalties
+			desc = libra_fe_clinic_penalties
+			owner = {
+				or = {
+					has_technology = tech_fe_clinic_1
+					is_variable_set = fe_clinic_1_build_count
+				}
+			}
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 150
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_directive_76_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.10021 days = 60 random = 120 }
+			}
+		}
+		stage_2 = {
+			end = 300
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_directive_76_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.10030 }
+				situation_event = { id = libra_fairy.10022 days = 60 random = 120 }
+			}
+		}
+		stage_3 = {
+			end = 450
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_directive_76_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.10030 }
+				situation_event = { id = libra_fairy.10023 days = 60 random = 120 }
+			}
+		}
+		stage_4 = {
+			end = 600
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_directive_76_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.10030 }
+				situation_event = { id = libra_fairy.10024 days = 60 random = 120 }
+			}
+		}
+		stage_5 = {
+			end = 750
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_directive_76_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.10030 }
+				situation_event = { id = libra_fairy.10025 days = 60 random = 120 }
+			}
+		}
+		stage_6 = {
+			end = 900
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_directive_76_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.10030 }
+				situation_event = { id = libra_fairy.10026 days = 60 random = 120 }
+			}
+		}
+		stage_7 = {
+			end = 1080
+			icon = GFX_situation_stage_7
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_directive_76_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.10030 }
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_directive_76_approach_a
+		icon = GFX_situation_icon_cloning
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		modifier = {
+			country_society_tech_research_speed = -0.1
+		}
+		ai_weight = {
+			base = 0
+		}
+	}
+	approach = {
+		name = situation_libra_directive_76_approach_b
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			upkeep = { unity = 300 }
+		}
+		modifier = {
+			country_society_tech_research_speed = -0.15
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+}
+
+# #############
+# Ode to Babel
+#############
+
+situation_libra_rebuilding_babel = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_libra_ode_to_babel_1
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			OR = {
+				has_country_flag = can_build_libra_babel_tower
+				nand = {
+					is_variable_set = libra_aa_path
+					check_variable = { which = libra_aa_path value = 20 }
+				}
+			}
+		}
+	}
+
+	on_start = {
+		owner = { set_country_flag = libra_rebuilding_babel }
+	}
+	on_abort = {
+		owner = { remove_country_flag = libra_rebuilding_babel }
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_libra_rebuilding_babel_tooltip
+		hidden_effect = {
+			situation_event = { id = libra_fairy.11010 }
+		}
+	}
+	monthly_progress = {
+		base = 1
+		modifier = {
+			add = 4
+			desc = tr_purity_optimized_neurology
+			owner = { has_country_flag = genetic_ascension_stage_1_purity }
+		}
+		modifier = {
+			add = 2
+			desc = tr_purity_heightened_attributes
+			owner = { has_country_flag = genetic_ascension_stage_2_purity }
+		}
+		modifier = {
+			add = 3
+			desc = tr_purity_imperfection_remediation
+			owner = { has_country_flag = genetic_ascension_stage_3_purity }
+		}
+		modifier = {
+			add = 9
+			desc = origin_wilderness
+			owner = { has_origin = origin_wilderness }
+		}
+		modifier = {
+			add = owner.value:libra_flawless_sanctuary_mult
+			desc = building_libra_flawless_sanctuary
+			not = { has_situation_flag = libra_rebuilding_babel }
+		}
+		modifier = {
+			mult = value:libra_fe_clinic_penalties
+			desc = libra_fe_clinic_penalties
+			owner = {
+				or = {
+					has_technology = tech_fe_clinic_1
+					is_variable_set = fe_clinic_1_build_count
+				}
+			}
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 720
+			icon = GFX_situation_stage_10
+			icon_background = GFX_situation_stage_frame_green
+		}
+	}
+
+	approach = {
+		name = situation_libra_rebuilding_babel_approach
+		icon = GFX_situation_icon_purity
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		modifier = {
+			country_unity_produces_mult = 0.1
+		}
+	}
+}
+
+# #############
+# Evolutionary Endpoint
+#############
+
+situation_libra_evolutionary_endpoint = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_genetic_ascension_mutation
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 30 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_evolutionary_endpoint_tooltip
+		hidden_effect = {
+			situation_event = { id = libra_fairy.12012 }
+		}
+	}
+	monthly_progress = {
+		base = 2
+		modifier = {
+			mult = value:libra_fe_clinic_penalties
+			desc = libra_fe_clinic_penalties
+			owner = {
+				or = {
+					has_technology = tech_fe_clinic_1
+					is_variable_set = fe_clinic_1_build_count
+				}
+			}
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 360
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_2 = {
+			end = 720
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = { id = libra_fairy.12010 }
+			}
+			modifier = {
+				country_government_civic_points_add = 1
+				organic_pop_bonus_workforce_mult = 0.15
+			}
+		}
+		stage_3 = {
+			end = 1080
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = { id = libra_fairy.12011 }
+			}
+			modifier = {
+				country_government_civic_points_add = 2
+				organic_pop_bonus_workforce_mult = 0.3
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_evolutionary_endpoint_approach
+		icon = GFX_situation_icon_mutation
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		resources = {
+   			category = situations
+   			upkeep = { unity = 100 }
+		}
+	}
+}
+
+# #############
+# Cutefied World
+#############
+
+situation_libra_cutefied_world_1 = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+
+	picture = {
+		trigger = {
+			current_stage = stage_1
+		}
+		picture = GFX_evt_libra_cutefied_world_1
+	}
+	picture = {
+		trigger = {
+			current_stage = stage_2
+		}
+		picture = GFX_evt_libra_cutefied_world_2
+	}
+	picture = {
+		trigger = {
+			current_stage = stage_3
+		}
+		picture = GFX_evt_libra_cutefied_world_3
+	}
+	picture = {
+		trigger = {
+			current_stage = stage_4
+		}
+		picture = GFX_evt_libra_cutefied_world_4
+	}
+	picture = {
+		trigger = {
+			current_stage = stage_5
+		}
+		picture = GFX_evt_libra_cutefied_world_5
+	}
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 31 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_cutefied_world_1_tooltip
+		hidden_effect = {
+			situation_event = { id = libra_fairy.12114 }
+		}
+	}
+	monthly_progress = {
+		base = 3
+		modifier = {
+			add = 1
+			desc = tech_libra_genetic_flexible_a
+			owner = { has_technology = tech_libra_genetic_flexible_a }
+		}
+		modifier = {
+			add = 1
+			desc = tech_libra_genetic_flexible_b
+			owner = { has_technology = tech_libra_genetic_flexible_b }
+		}
+		modifier = {
+			add = 1
+			desc = tech_libra_genetic_flexible_c
+			owner = { has_technology = tech_libra_genetic_flexible_c }
+		}
+		modifier = {
+			add = 1
+			desc = tech_libra_mutation_integration
+			owner = { has_technology = tech_libra_mutation_integration }
+		}
+		modifier = {
+			add = 1
+			desc = tech_libra_mutation_protection
+			owner = { has_technology = tech_libra_mutation_protection }
+		}
+		modifier = {
+			mult = value:libra_fe_clinic_penalties
+			desc = libra_fe_clinic_penalties
+			owner = {
+				or = {
+					has_technology = tech_fe_clinic_1
+					is_variable_set = fe_clinic_1_build_count
+				}
+			}
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 96
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_2 = {
+			end = 192
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = { id = libra_fairy.12110 }
+			}
+		}
+		stage_3 = {
+			end = 288
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = { id = libra_fairy.12111 }
+			}
+		}
+		stage_4 = {
+			end = 384
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = { id = libra_fairy.12112 }
+			}
+		}
+		stage_5 = {
+			end = 480
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = { id = libra_fairy.12113 }
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_cutefied_world_1_approach
+		icon = GFX_situation_icon_mutation
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		resources = {
+   			category = situations
+   			upkeep = { society_research = 150 }
+		}
+	}
+}
+
+situation_libra_cutefied_world_2 = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+
+	picture = {
+		trigger = {
+			current_situation_approach = situation_libra_cutefied_world_2_a
+		}
+		picture = GFX_evt_libra_cutefied_world_2
+	}
+	picture = {
+		trigger = {
+			current_situation_approach = situation_libra_cutefied_world_2_b
+		}
+		picture = GFX_evt_libra_cutefied_world_3
+	}
+	picture = {
+		trigger = {
+			current_situation_approach = situation_libra_cutefied_world_2_c
+		}
+		picture = GFX_evt_libra_cutefied_world_4
+	}
+	picture = {
+		trigger = {
+			current_situation_approach = situation_libra_cutefied_world_2_d
+		}
+		picture = GFX_evt_libra_cutefied_world_5
+	}
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 31 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_cutefied_world_2_tooltip
+		hidden_effect = {
+			situation_event = { id = libra_fairy.12150 }
+		}
+	}
+	monthly_progress = {
+		base = 1.2
+		modifier = {
+			add = value:libra_cutefied_world_2_mult
+			desc = building_libra_evolutionary_laboratory
+		}
+		modifier = {
+			mult = value:libra_fe_clinic_penalties
+			desc = libra_fe_clinic_penalties
+			owner = {
+				or = {
+					has_technology = tech_fe_clinic_1
+					is_variable_set = fe_clinic_1_build_count
+				}
+			}
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 90
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_2 = {
+			end = 120
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				set_situation_flag = path_locked
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_cutefied_world_2_a
+		icon = GFX_situation_approach_genetics
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		allow = {
+			custom_tooltip = {
+				fail_text = too_late_to_change_approach
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_cutefied_world_2_a
+				}
+			}
+		}
+		modifier = {
+			ship_weapon_damage = 0.3
+			army_damage_mult = 0.3
+		}
+		on_select = {
+			custom_tooltip = situation_libra_cutefied_world_2_a_tt
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 5
+				owner = {
+					num_species > 2
+					not = { has_country_flag = libra_cutefied_world_a }
+					or = {
+						is_gestalt = yes
+						is_xenophobe = yes
+						and = {
+							is_xenophile = no
+							num_species > 5
+						}
+					}
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_cutefied_world_2_b
+		icon = GFX_situation_approach_gift
+		icon_background = GFX_situation_approach_bg_green
+		allow = {
+			custom_tooltip = {
+				fail_text = too_late_to_change_approach
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_cutefied_world_2_b
+				}
+			}
+		}
+		modifier = {
+			logistic_growth_mult = 0.2
+			bonus_pop_growth_mult = 0.1
+		}
+		on_select = {
+			custom_tooltip = situation_libra_cutefied_world_2_b_tt
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 3
+				owner = {
+					has_country_flag = libra_cutefied_world_c
+					has_country_flag = libra_cutefied_world_d
+					libra_ai_preferences_planet = yes
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_cutefied_world_2_c
+		icon = GFX_situation_approach_amenities
+		icon_background = GFX_situation_approach_bg_green
+		allow = {
+			custom_tooltip = {
+				fail_text = too_late_to_change_approach
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_cutefied_world_2_c
+				}
+			}
+		}
+		modifier = {
+			species_leader_exp_gain = 0.3
+			leader_trait_selection_options_add = 1
+		}
+		on_select = {
+			custom_tooltip = situation_libra_cutefied_world_2_c_tt
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				owner = {
+					not = { has_country_flag = libra_cutefied_world_c }
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_cutefied_world_2_d
+		icon = GFX_situation_approach_heart
+		icon_background = GFX_situation_approach_bg_green
+		allow = {
+			custom_tooltip = {
+				fail_text = too_late_to_change_approach
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_cutefied_world_2_d
+				}
+			}
+		}
+		modifier = {
+			all_technology_research_speed = 0.25
+			planetary_ascension_cost_mult = -0.05
+		}
+		on_select = {
+			custom_tooltip = situation_libra_cutefied_world_2_d_tt
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+}
+
+# #############
+# Cosmological Constant
+#############
+
+situation_libra_cosmological_constant = {
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_positive
+	category = negative
+	picture = GFX_evt_libra_cosmological_constant_1
+
+	initial_progress = 59
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 50 }
+			}
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = situation_libra_cosmological_constant_tooltip
+		hidden_effect = {
+			situation_event = { id = libra_fairy.14010 }
+		}
+	}
+	monthly_progress = {
+		base = -1
+	}
+	stages = {
+		stage_1 = {
+			end = 12
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_1 = {
+			end = 24
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_1 = {
+			end = 36
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_1 = {
+			end = 48
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_1 = {
+			end = 60
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+		}
+	}
+
+	approach = {
+		name = situation_libra_cosmological_constant_approach_a
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		modifier = {
+			planet_researchers_upkeep_mult = -0.3
+		}
+		ai_weight = {
+			base = 2
+		}
+	}
+	approach = {
+		name = situation_libra_cosmological_constant_approach_b
+		icon = GFX_situation_approach_amenities
+		icon_background = GFX_situation_approach_bg_green
+		modifier = {
+			planet_pop_assembly_add = 2
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				add = 2
+				owner = {
+					or = {
+						pop_amount < 80000
+						has_country_flag = synth_virtual
+					}
+				}
+			}
+		}
+	}
+
+	triggered_modifier = {
+		potential = {
+			is_variable_set = libra_cosmological_constant
+		}
+		ship_hull_damage_mult = 0.03
+		ship_shield_damage_mult = 0.05
+		ship_armor_damage_mult = 0.05
+		army_damage_taken_mult = -0.03
+		army_morale_damage_taken_mult = -0.05
+		mult = libra_cosmological_constant
+	}
+}
+
+# #############
+# Atomic Heart
+#############
+
+situation_libra_atomic_heart = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_libra_atomic_heart_1
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 60 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_atomic_heart_tooltip
+		hidden_effect = {
+			situation_event = { id = libra_fairy.15011 }
+		}
+	}
+	monthly_progress = {
+		base = 1
+		modifier = {
+			add = value:libra_count_atomic_heart_site
+			desc = sm_libra_atomic_heart_site
+		}
+		modifier = {
+			add = value:libra_count_atomic_heart_array
+			desc = sm_libra_atomic_heart_array
+		}
+		modifier = {
+			add = 1
+			desc = decision_libra_atomic_heart
+			owner = { has_country_flag = libra_atomic_heart }
+		}
+		modifier = {
+			mult = value:libra_fe_assembly_penalties
+			desc = libra_fe_assembly_penalties
+			owner = {
+				or = {
+					has_technology = tech_fe_assembly_1
+					is_variable_set = fe_assembly_1_build_count
+				}
+			}
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 90
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_atomic_heart_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.15010 }
+			}
+		}
+		stage_2 = {
+			end = 180
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_atomic_heart_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.15010 }
+			}
+		}
+		stage_3 = {
+			end = 270
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_atomic_heart_effects
+			on_first_enter = {
+				situation_event = { id = libra_fairy.15010 }
+			}
+		}
+	}
+
+	target_modifier = {
+		planet_jobs_produces_mult = 0.25
+		planet_jobs_upkeep_mult = 0.25
+		robotic_pop_bonus_workforce_mult = 0.25
+	}
+	approach = {
+		name = situation_libra_atomic_heart_approach
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+	 	default = yes
+		modifier = {
+			planet_metallurgists_sr_living_metal_produces_add = 0.05
+		}
+	}
+}
+
+# #############
+# Nanocore
+#############
+
+situation_libra_nanocore = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_libra_nanocore_1
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 70 }
+			}
+		}
+	}
+
+	on_start = {
+		set_situation_locked = yes
+		situation_event = { id = libra_fairy.16010 days = 1 }
+		situation_event = { id = libra_fairy.16011 days = 1800 }
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_libra_nanocore_tooltip
+		hidden_effect = {
+			destroy_situation = this
+			owner = {
+				country_event = { id = libra_fairy.16015 }
+			}
+		}
+	}
+
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = owner.value:libra_num_nanite_harvester
+			desc = sm_nanite_harvester
+		}
+		modifier = {
+			add = owner.value:libra_num_pc_nanotech
+			desc = pc_nanotech
+		}
+		modifier = {
+			add = owner.value:libra_num_nanite_shipyard
+			desc = libra_nanite_shipyard_2
+		}
+		modifier = {
+			mult = value:libra_fe_assembly_penalties
+			desc = libra_fe_assembly_penalties
+			owner = {
+				or = {
+					has_technology = tech_fe_assembly_1
+					is_variable_set = fe_assembly_1_build_count
+				}
+			}
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 180
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_2 = {
+			end = 360
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_nanocore_effect_1
+			on_first_enter = {
+				situation_event = { id = libra_fairy.16012 }
+			}
+		}
+		stage_3 = {
+			end = 540
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_nanocore_effect_2
+			on_first_enter = {
+				situation_event = { id = libra_fairy.16013 }
+			}
+		}
+		stage_4 = {
+			end = 720
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_nanocore_effect_3
+			on_first_enter = {
+				situation_event = { id = libra_fairy.16014 }
+			}
+		}
+		stage_5 = {
+			end = 900
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_nanocore_effect_1
+			on_first_enter = {
+				situation_event = { id = libra_fairy.16012 }
+			}
+		}
+		stage_6 = {
+			end = 1080
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_nanocore_effect_2
+			on_first_enter = {
+				situation_event = { id = libra_fairy.16013 }
+			}
+		}
+		stage_7 = {
+			end = 1260
+			icon = GFX_situation_stage_7
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_nanocore_effect_3
+			on_first_enter = {
+				situation_event = { id = libra_fairy.16014 }
+			}
+		}
+		stage_8 = {
+			end = 1440
+			icon = GFX_situation_stage_8
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_nanocore_effect_1
+			on_first_enter = {
+				situation_event = { id = libra_fairy.16012 }
+			}
+		}
+		stage_9 = {
+			end = 1620
+			icon = GFX_situation_stage_9
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_nanocore_effect_2
+			on_first_enter = {
+				situation_event = { id = libra_fairy.16013 }
+			}
+		}
+		stage_10 = {
+			end = 1800
+			icon = GFX_situation_stage_10
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_nanocore_effect_3
+			on_first_enter = {
+				situation_event = { id = libra_fairy.16014 }
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_nanocore_approach
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		resources = {
+   			category = situations
+   			upkeep = { unity = 100 }
+		}
+	}
+}
+
+# #############
+# Hurricane Eye
+#############
+
+situation_libra_hurricane_eye = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_libra_hurricane_eye
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 71 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_hurricane_eye_tooltip
+		hidden_effect = {
+			situation_event = { id = libra_fairy.16120 }
+		}
+	}
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 30
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 72
+			custom_tooltip = situation_libra_hurricane_eye_stage_2_tt
+			on_first_enter = {
+				set_situation_flag = path_locked
+				owner = {
+					random_owned_leader = {
+						limit = {
+							has_base_skill <= 10
+							not = { has_trait = leader_trait_libra_hurricane_eye }
+							has_trait = subclass_commander_admiral
+						}
+						add_trait = { trait = leader_trait_libra_hurricane_eye show_message = yes }
+					}
+				}
+			}
+		}
+	}
+
+	approach = {
+		name = situation_libra_hurricane_eye_a
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = 50 }
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = too_late_to_change_approach
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_hurricane_eye_a
+				}
+			}
+		}
+		on_select = {
+			custom_tooltip = situation_libra_hurricane_eye_a_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = situation_libra_hurricane_eye_b
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = 50 }
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = too_late_to_change_approach
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_hurricane_eye_b
+				}
+			}
+		}
+		on_select = {
+			custom_tooltip = situation_libra_hurricane_eye_b_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = situation_libra_hurricane_eye_c
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = 50 }
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = too_late_to_change_approach
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_hurricane_eye_c
+				}
+			}
+		}
+		on_select = {
+			custom_tooltip = situation_libra_hurricane_eye_c_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = situation_libra_hurricane_eye_d
+		icon = GFX_situation_approach_influence
+		icon_background = GFX_situation_approach_bg_green
+		default = yes
+		resources = {
+   			category = situations
+   			cost = { influence = 50 }
+			produces = {
+				trigger = {
+					has_situation_flag = libra_hurricane_eye_d
+				}
+				influence = 2
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = too_late_to_change_approach
+				or = {
+					not = { has_situation_flag = path_locked }
+					current_situation_approach = situation_libra_hurricane_eye_d
+				}
+			}
+		}
+		on_select = {
+			custom_tooltip = situation_libra_hurricane_eye_d_tooltip
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				owner = { is_at_war = no }
+				end_game_years_passed <= 10
+			}
+		}
+	}
+
+	target_modifier = {
+		planet_libra_nanoreplica_nanites_produces_add = 2
+	}
+
+	triggered_modifier = {
+		potential = { has_situation_flag = libra_hurricane_eye_d }
+		pop_bonus_workforce_mult = 0.25
+		bonus_automated_workforce_mult = 0.25
+		ship_home_territory_fire_rate_mult = 0.25
+		ship_friendly_territory_armor_mult = 0.25
+		ship_friendly_territory_shield_mult = 0.25
+		ship_friendly_territory_tracking_mult = 0.25
+	}
+
+	monthly_progress = {
+		base = 3
+		modifier = {
+			add = 1
+			desc = tech_libra_nanite_command_group
+			owner = { has_technology = tech_libra_nanite_command_group }
+		}
+		modifier = {
+			add = 1
+			desc = tech_libra_nanite_titans
+			owner = { has_technology = tech_libra_nanite_titans }
+		}
+		modifier = {
+			add = 1
+			desc = tech_libra_nanite_barrier
+			owner = { has_technology = tech_libra_nanite_barrier }
+		}
+	}
+}
+
+situation_libra_hurricane_eye_2 = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_gray_goo_ships
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 71 }
+			}
+		}
+	}
+
+	on_start = {
+		set_variable = {
+			which = libra_hurricane_eye_mult
+			value = owner.trigger:used_naval_capacity_integer
+		}
+		if = {
+			limit = {
+				owner = {
+					or = {
+						has_technology = tech_fe_assembly_1
+						is_variable_set = fe_assembly_1_build_count
+					}
+				}
+			}
+			multiply_variable = {
+				which = libra_hurricane_eye_mult
+				value = value:libra_fe_assembly_penalties
+			}
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_libra_hurricane_eye_2_tooltip
+		hidden_effect = {
+			situation_event = { id = libra_fairy.16130 }
+		}
+	}
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 24
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 48
+		}
+	}
+
+	approach = {
+		name = situation_libra_hurricane_eye_2_a
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		resources = {
+   			category = situations
+			produces = {
+				trigger = { is_variable_set = situation_libra_hurricane_eye_mult }
+				physics_research = 1
+				society_research = 1
+				engineering_research = 1.5
+				multiplier = situation_libra_hurricane_eye_mult
+			}
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = situation_libra_hurricane_eye_2_b
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_yellow
+		resources = {
+   			category = situations
+			produces = {
+				trigger = { is_variable_set = libra_hurricane_eye_mult }
+				physics_research = 2
+				society_research = 2
+				engineering_research = 3
+				multiplier = libra_hurricane_eye_mult
+			}
+		}
+		on_select = {
+			custom_tooltip = situation_libra_hurricane_eye_2_b_tooltip
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				owner = { used_naval_capacity_percent > 1.8 }
+			}
+		}
+	}
+
+	triggered_modifier = {
+		potential = { is_variable_set = libra_hurricane_fleet }
+		stations_produces_mult = 0.04
+		planet_buildings_produces_mult = 0.04
+		ship_weapon_damage = 0.04
+		ship_fire_rate_mult = 0.04
+		bonus_automated_workforce_mult = 0.01
+		mult = libra_hurricane_fleet
+	}
+
+	monthly_progress = {
+		base = 1
+		modifier = {
+			mult = 0
+			desc = string_current_approach
+			current_situation_approach = situation_libra_hurricane_eye_2_b
+		}
+	}
+}
+
+# #############
+# Yggdrasil
+#############
+
+@libra_yggdrasil_influence_cost = 50
+
+situation_libra_yggdrasil = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_libra_yggdrasil_1
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 80 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_yggdrasil_tooltip
+		hidden_effect = {
+			owner = { country_event = { id = libra_fairy.17003 days = 1 } }
+			switch = {
+				trigger = current_situation_approach
+				default = {
+					owner = {
+						start_situation = {
+							type = situation_libra_yggdrasil
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_yggdrasil_a }
+						}
+					}
+				}
+				situation_libra_yggdrasil_b = {
+					owner = {
+						start_situation = {
+							type = situation_libra_yggdrasil
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_yggdrasil_b }
+						}
+					}
+				}
+				situation_libra_yggdrasil_c = {
+					owner = {
+						start_situation = {
+							type = situation_libra_yggdrasil
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_yggdrasil_c }
+						}
+					}
+				}
+				situation_libra_yggdrasil_d = {
+					owner = {
+						start_situation = {
+							type = situation_libra_yggdrasil
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_yggdrasil_d }
+						}
+					}
+				}
+			}
+			destroy_situation = this
+		}
+	}
+	monthly_progress = {
+		base = 1
+		modifier = {
+			add = 1
+			desc = col_libra_yggdrasil
+			target = {
+				is_scope_valid = yes
+				or = {
+					has_designation = col_libra_yggdrasil
+					has_designation = col_libra_yggdrasil_capital
+				}
+			}
+		}
+		modifier = {
+			add = value:libra_yggdrasil_build_speed_mult
+			desc = MOD_PLANET_BUILDING_BUILD_SPEED_MULT
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 180
+			icon = GFX_situation_stage_10
+			icon_background = GFX_situation_stage_frame_green
+		}
+	}
+
+	target_modifier = {
+		job_max_workforce_mult = 0.15
+	}
+	approach = {
+		name = situation_libra_yggdrasil_a
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_yggdrasil_influence_cost }
+		}
+		modifier = {
+			all_technology_research_speed = 0.25
+			leader_skill_add = 1
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				add = 1
+				owner = {
+					libra_ai_preferences_leader = yes
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_yggdrasil_b
+		icon = GFX_situation_approach_scales
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_yggdrasil_influence_cost }
+		}
+		modifier = {
+			planet_building_build_speed_mult = 0.5
+			planet_decision_enact_speed_mult = 0.5
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				add = 1
+				owner = {
+					years_passed < 65
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_yggdrasil_c
+		icon = GFX_situation_approach_amenities
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_yggdrasil_influence_cost }
+		}
+		modifier = {
+			planet_pops_robotics_upkeep_mult = -0.15
+			pop_amenities_usage_robotic_mult = -0.15
+			planet_jobs_productive_produces_mult = 0.15
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				owner = {
+					is_gestalt = yes
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_yggdrasil_d
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_yggdrasil_influence_cost }
+		}
+		modifier = {
+			ship_shield_hardening_add = 0.25
+			ship_armor_hardening_add = 0.25
+			army_damage_mult = 0.75
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 3
+				owner = {
+					libra_ai_war_trigger = yes
+				}
+			}
+		}
+	}
+}
+
+# #############
+# Heavenly Throne
+#############
+
+situation_libra_heavenly_throne = {
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	complete_icon = GFX_situation_outcome_negative
+	fail_icon_frame = GFX_situation_outcome_frame_red
+	fail_icon = GFX_situation_outcome_negative
+ 	category = neutral
+
+	picture = {
+		trigger = {
+			situation_progress >= 240
+			situation_progress <= 360
+		}
+		picture = GFX_evt_chosen_leader
+	}
+	picture = {
+		trigger = {
+			or = {
+				and = {
+					situation_progress >= 120
+					situation_progress < 240
+				}
+				and = {
+					situation_progress > 360
+					situation_progress <= 480
+				}
+			}
+		}
+		picture = GFX_evt_shroudwalker_enclave
+	}
+	picture = {
+		trigger = {
+			or = {
+				situation_progress > 480
+				situation_progress < 120
+			}
+		}
+		picture = GFX_evt_shroud_spacemadness
+	}
+
+	start_value = 0
+	initial_progress = 300
+	progress_direction = bidirectional
+
+	abort_trigger = {
+		owner = {
+			nand = {
+				is_variable_set = libra_aa_path
+				check_variable = { which = libra_aa_path value = 90 }
+			}
+		}
+	}
+
+	on_start = {
+		situation_event = { id = libra_fairy.18011 days = 2880 }
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_libra_heavenly_throne_tooltip
+		hidden_effect = {
+			destroy_situation = this
+			owner = {
+				start_situation = { type = situation_libra_heavenly_throne target = capital_scope }
+				country_event = { id = libra_fairy.18010 }
+			}
+		}
+	}
+	on_fail = {
+		custom_tooltip = situation_libra_heavenly_throne_tooltip
+		hidden_effect = {
+			destroy_situation = this
+			owner = {
+				start_situation = { type = situation_libra_heavenly_throne target = capital_scope }
+				country_event = { id = libra_fairy.18010 }
+			}
+		}
+	}
+
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = owner.value:libra_psychic_jobs|MULT|-0.02|
+			desc = libra_psychics_type_plural_with_icon
+		}
+		modifier = {
+			add = owner.value:libra_telepath_jobs|MULT|0.01|
+			desc = telepath_type_plural_with_icon
+		}
+		modifier = {
+			mult = -1
+			desc = string_current_approach
+			current_situation_approach = situation_libra_heavenly_throne_approach_b
+		}
+		modifier = {
+			mult = 0
+			desc = string_current_approach
+			current_situation_approach = situation_libra_heavenly_throne_approach_c
+		}
+	}
+	stages = {
+		stage_3 = {
+			end = 120
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+		}
+		stage_2 = {
+			end = 240
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			custom_tooltip = situation_libra_heavenly_throne_effect_2
+		}
+		stage_1 = {
+			end = 360
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_heavenly_throne_effect_1
+		}
+		stage_2 = {
+			end = 480
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			custom_tooltip = situation_libra_heavenly_throne_effect_2
+		}
+		stage_3 = {
+			end = 600
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+		}
+	}
+
+	approach = {
+		name = situation_libra_heavenly_throne_approach_a
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_green
+	 	default = yes
+		modifier = {
+			planet_telepaths_produces_mult = 0.15
+		}
+		target_modifier = {
+			planet_telepaths_produces_mult = 0.15
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = situation_libra_heavenly_throne_approach_b
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		resources = {
+   			category = situations
+   			upkeep = { influence = 3 }
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				or = {
+					and = {
+						situation_progress >= 360
+						situation_monthly_progress > 0
+					}
+					and = {
+						situation_progress <= 240
+						situation_monthly_progress < 0
+					}
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_heavenly_throne_approach_c
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_red
+		resources = {
+   			category = situations
+   			upkeep = { influence = 5 }
+		}
+		ai_weight = {
+			base = 0
+			#modifier = {
+			#	add = 2
+			#	situation_progress >= 250
+			#	situation_progress <= 350
+			#	or = {
+			#		current_situation_approach = situation_libra_heavenly_throne_approach_c
+			#		situation_monthly_progress > 5
+			#		situation_monthly_progress < -5
+			#	}
+			#	owner = {
+			#		has_resource = {
+			#			type = influence
+			#			amount > 200
+			#		}
+			#	}
+			#}
+		}
+	}
+
+	triggered_modifier = {
+		potential = {
+			owner = { is_variable_set = libra_heavenly_throne_1 }
+		}
+		ship_weapon_damage = 0.25
+		ship_fire_rate_mult = 0.25
+		mult = owner.libra_heavenly_throne_1
+	}
+	triggered_modifier = {
+		potential = {
+			owner = { is_variable_set = libra_heavenly_throne_2 }
+		}
+		ship_armor_mult = 0.4
+		ship_shield_mult = 0.4
+		mult = owner.libra_heavenly_throne_2
+	}
+	triggered_modifier = {
+		potential = {
+			owner = { is_variable_set = libra_heavenly_throne_3 }
+		}
+		army_damage_mult = 0.65
+		army_health = 0.65
+		mult = owner.libra_heavenly_throne_3
+	}
+}

@@ -1,0 +1,63 @@
+ship_section_template = {
+	key = "nanite_interdictor_libra_artillery_key"
+	ship_size = nanite_interdictor
+	fits_on_slot = mid
+	entity = "gatebuilder_01_mothership_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { artillery artillery_stealth }
+
+	prerequisites = { tech_libra_nanite_titans }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			nor = {
+				is_preferred_weapons = weapon_type_strike_craft
+				is_preferred_weapons = weapon_type_explosive
+			}
+		}
+		modifier = {
+			factor = 0.2
+			or = {
+				is_preferred_weapons = weapon_type_strike_craft
+				is_preferred_weapons = weapon_type_explosive
+			}
+		}
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "invisible_large_turret"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "invisible_large_turret"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "invisible_large_turret"
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "invisible_small_turret"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "invisible_small_turret"
+		locatorname = "xl_gun_01"
+	}
+
+	large_utility_slots = 3
+	aux_utility_slots = 1
+}

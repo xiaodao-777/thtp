@@ -1,0 +1,490 @@
+libra_plantoid_species_trait_army = {
+	defensive = yes
+	is_pop_spawned = yes
+	health = 3
+	damage = 3
+	morale = 2.5
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 # No WE from defense armies
+	icon = GFX_army_type_libra_plantoid_species_trait
+
+	resources = {
+		category = armies
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_unyielding_resistance_is_frugal }
+			}
+			unity = 0.5
+		}
+	}
+
+	potential = {
+		from = {
+			has_trait = trait_libra_plantoid_4
+		}
+	}
+
+	spawn_chance = {
+		factor = 120
+	}
+}
+
+libra_necroid_species_trait_army = {
+	damage = 3.0
+	health = 2.0
+	has_morale = no
+	morale_damage = 3.0
+	collateral_damage = 3.0
+	war_exhaustion = 0.5
+	time = 120
+	icon = GFX_army_type_libra_necroid_species_trait
+	prerequisites = { "tech_assault_armies" }
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	show_tech_unlock_if = {
+		or = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential_country = {
+		or = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = { has_trait = trait_libra_necroid_3 }
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			set = 200
+			has_trait = trait_libra_necroid_3
+			NOR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				has_technology = tech_gene_banks
+			#	has_origin = origin_libra_centurion
+				has_origin = origin_libra_crimson_nights
+				has_origin = origin_libra_antientropy_instruction
+			}
+		}
+	}
+}
+
+#
+
+libra_crimson_nights_army = {
+	damage = 10.00
+	health = 10.00
+	has_morale = no
+	morale_damage = 2.00
+	collateral_damage = 1.00
+	war_exhaustion = 5.00
+	time = 720
+	icon = GFX_army_type_libra_crimson_nights
+
+	resources = {
+		category = armies
+		cost = {
+			sr_dark_matter = 100
+		}
+		upkeep = {
+			food = 10
+			sr_dark_matter = 0.1
+		}
+	}
+
+	potential_country = {
+		has_origin = origin_libra_crimson_nights
+		has_tradition = tr_libra_crimson_ancestor_5
+	}
+	potential = {
+		from = {
+			has_trait = trait_libra_crimson_nights_ancestor
+		}
+		planet = {
+			has_active_building = building_libra_crimson_nights
+		}
+	}
+
+	ai_weight = {
+		base = 500
+	}
+}
+
+#
+
+libra_antientropy_instruction_army_1 = {
+	damage = 2
+	health = 1.5
+	has_morale = no
+	morale_damage = 1.5
+	collateral_damage = 1.5
+	war_exhaustion = 0.25
+	time = 60
+	pop_limited = no
+	disband_if_species_lacks_rights = no
+	icon = GFX_army_type_libra_antientropy_instruction_1
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 200
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	potential_country = {
+		has_origin = origin_libra_antientropy_instruction
+	}
+	potential = {
+		from = {
+			is_sapient = yes
+		}
+		planet = {
+			OR = {
+				has_active_building = building_libra_antientropy_instruction
+				has_active_building = building_libra_antientropy_instruction_2
+			}
+		}
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_libra_antientropy_instruction
+	}
+
+	prerequisites = { "tech_assault_armies" }
+
+	ai_weight = {
+		base = 0
+	}
+}
+
+libra_antientropy_instruction_army_2 = {
+	damage = 4
+	health = 4
+	has_morale = no
+	morale_damage = 1.5
+	collateral_damage = 1.5
+	war_exhaustion = 0.5
+	time = 180
+	pop_limited = no
+	disband_if_species_lacks_rights = no
+	icon = GFX_army_type_libra_antientropy_instruction_2
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 600
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	potential_country = {
+		has_origin = origin_libra_antientropy_instruction
+	}
+	potential = {
+		from = {
+			is_sapient = yes
+		}
+		planet = {
+			OR = {
+				has_active_building = building_libra_antientropy_instruction
+				has_active_building = building_libra_antientropy_instruction_2
+			}
+		}
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_libra_antientropy_instruction
+	}
+
+	prerequisites = { "tech_adaptive_combat_algorithms" }
+
+	ai_weight = {
+		base = 500
+		modifier = {
+			set = 0
+			has_technology = tech_biomechanics
+		}
+	}
+}
+
+libra_antientropy_instruction_army_3 = {
+	damage = 8
+	health = 9
+	has_morale = no
+	morale_damage = 1.5
+	collateral_damage = 1.5
+	war_exhaustion = 2
+	time = 540
+	pop_limited = no
+	disband_if_species_lacks_rights = no
+	icon = GFX_army_type_libra_antientropy_instruction_3
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 1800
+		}
+		upkeep = {
+			energy = 18
+		}
+	}
+
+	potential_country = {
+		has_origin = origin_libra_antientropy_instruction
+	}
+	potential = {
+		from = {
+			is_sapient = yes
+		}
+		planet = {
+			has_active_building = building_libra_antientropy_instruction_2
+		}
+	}
+
+	show_tech_unlock_if = {
+		has_origin = origin_libra_antientropy_instruction
+	}
+
+	prerequisites = { "tech_biomechanics" }
+
+	ai_weight = {
+		base = 600
+	}
+}
+
+libra_may_storm_conscript = {
+	damage = 1.25
+	health = 1.25
+	has_morale = no
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 0.25
+	time = 30
+	icon = GFX_army_type_libra_may_storm_conscript
+	pop_limited = no
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 100
+		}
+
+		upkeep = {
+			energy = 0.5
+		}
+	}
+
+	prerequisites = { "tech_assault_armies" }
+	show_tech_unlock_if = {
+		has_origin = origin_libra_may_storm
+	}
+
+	potential_country = {
+		has_valid_civic = civic_libra_may_storm_militarist_a
+	}
+	potential = {
+		from = {
+			is_sapient = yes
+		}
+	}
+
+	ai_weight = {
+		base = 50
+	}
+}
+
+#
+
+libra_centurion_army = {
+	damage = 1.0
+	health = 3.0
+	morale = 3.0
+	morale_damage = 1.0
+	collateral_damage = 0.75
+	war_exhaustion = 1.5
+	time = 120
+	icon = GFX_army_type_libra_centurion
+
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	prerequisites = { "tech_assault_armies" }
+	show_tech_unlock_if = {
+		has_origin = origin_libra_centurion
+	}
+	potential_country = {
+		has_origin = origin_libra_centurion
+	}
+	potential = {
+		from = {
+			is_sapient = yes
+		}
+	}
+
+	ai_weight = {
+		base = 200
+		modifier = {
+			set = 0
+			has_technology = tech_command_matrix
+		}
+	}
+}
+
+libra_centurion_elite_army = {
+	damage = 4.0
+	health = 6.0
+	morale = 10.0
+	morale_damage = 1.25
+	collateral_damage = 3.0
+	war_exhaustion = 3.0
+	time = 360
+	icon = GFX_army_type_libra_centurion_elite
+
+	resources = {
+		category = armies
+		cost = {
+			alloys = 300
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	prerequisites = { "tech_command_matrix" }
+	show_tech_unlock_if = {
+		has_origin = origin_libra_centurion
+	}
+	potential_country = {
+		has_origin = origin_libra_centurion
+	}
+	potential = {
+		from = {
+			is_sapient = yes
+		}
+	}
+
+	ai_weight = {
+		base = 300
+	}
+}
+
+#
+
+libra_synthetic_army = {
+	damage = 5
+	health = 10
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 1
+	war_exhaustion = 5
+	time = 480
+	icon = GFX_army_type_libra_synthetic
+
+	resources = {
+		category = armies
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			minerals = 1200
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 1500
+		}
+		upkeep = {
+			energy = 12
+		}
+	}
+
+	potential_country = {
+		is_variable_set = libra_aa_path
+	}
+	potential = {
+		from = { is_robotic = yes }
+	}
+	allow = {
+		has_building = building_libra_ministry_of_mechanical_truth
+		#owner = { not = { has_policy_flag = robots_outlawed } }
+	}
+	prerequisites = { "tech_libra_synthetic_leaders" }
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			set = 250
+			has_tradition = tr_synthetics_finish
+			not = { has_tradition = tr_libra_crimson_ancestor_5 }
+		}
+	}
+}
+
+libra_nanite_locusts_army = {
+	damage = 5.0
+	health = 5.0
+	has_morale = no
+	morale_damage = 0
+	collateral_damage = 0
+	war_exhaustion = 0
+	time = 60
+	pop_limited = no
+	icon = GFX_army_type_libra_nanite_locusts
+
+	resources = {
+		category = armies
+		cost = {
+			nanites = 400
+		}
+	}
+
+	potential_country = {
+		is_variable_set = libra_aa_path
+	}
+	potential = {
+		from = { has_trait = trait_machine_unit }
+	}
+	prerequisites = { "tech_libra_nanite_locusts" }
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			set = 250
+			has_tradition = tr_nanotech_finish
+			not = { has_origin = origin_libra_antientropy_instruction }
+		}
+	}
+}

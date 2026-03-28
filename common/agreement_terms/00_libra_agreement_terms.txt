@@ -1,0 +1,9 @@
+libra_origin_conditions = {
+	term_type = discrete
+	hidden = yes
+}
+
+libra_ascension_conditions = {
+	term_type = discrete
+	hidden = yes
+}

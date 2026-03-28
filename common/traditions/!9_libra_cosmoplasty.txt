@@ -1,0 +1,103 @@
+tr_libra_cosmoplasty_adopt = {
+	unlocks_agenda = agenda_libra_cosmoplasty
+	on_disabled = {
+		every_owned_planet = {
+			remove_deposit = d_libra_liber_cosmoplasty_tradition
+		}
+	}
+	modifier = {
+		stations_produces_mult = 0.5
+		starbase_constructions_produces_mult = 0.5
+	}
+	possible = {
+		has_technology = tech_starbase_5
+	}
+}
+
+tr_libra_cosmoplasty_finish = {
+	modifier = {
+		country_megastructure_build_cap_add = 1
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_cosmoplasty_1 = {
+	modifier = {
+		megastructures_gateways_cost_mult = -0.25
+		megastructures_habitat_cost_mult = -0.25
+		deep_space_citadel_limit_add = 1
+	}
+
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tr_libra_cosmoplasty_2 = {
+	possible = {
+		has_tradition = tr_libra_cosmoplasty_1
+	}
+	modifier = {
+		starbase_upgrade_cost_mult = -0.15
+		arc_furnace_limit_add = 5
+		dyson_swarm_limit_add = 5
+	}
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { has_origin = origin_libra_miracle_builder }
+		modifier = {
+			starbase_upgrade_cost_mult = -0.15
+			planet_districts_cost_mult = -0.1
+		}
+		on_enabled = {
+			hidden_effect = {
+				country_event = { id = libra_origin.1505 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_cosmoplasty_3 = {
+	modifier = {
+		shipclass_constructor_build_cost_mult = -0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_cosmoplasty_3_desc
+
+	ai_weight = {
+		factor = 8000
+	}
+}
+
+tr_libra_cosmoplasty_4 = {
+	possible = {
+		has_tradition = tr_libra_cosmoplasty_3
+	}
+	modifier = {
+		starbase_buildings_cost_mult = -0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_cosmoplasty_4_desc
+
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tr_libra_cosmoplasty_5 = {
+	possible = {
+		has_tradition = tr_libra_cosmoplasty_3
+	}
+	modifier = {
+		starbase_modules_cost_mult = -0.25
+	}
+	custom_tooltip_with_modifiers = tr_libra_cosmoplasty_5_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}

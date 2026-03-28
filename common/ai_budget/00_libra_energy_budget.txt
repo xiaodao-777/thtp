@@ -1,0 +1,162 @@
+libra_energy_expenditure_edicts = {
+	resource = energy
+	type = expenditure
+	category = edicts
+
+	potential = {
+		has_resource = {
+			type = energy
+			amount > 750
+		}
+		resource_income_compare = {
+			resource = energy
+			value > 50
+		}
+	}
+
+	weight = {
+		weight = 0.15
+	}
+
+	desired_min = {
+		base = 200
+	}
+
+	desired_max = {
+		base = 1500
+	#	modifier = {
+	#		add = 1700
+	#		has_origin = origin_libra_polemics_mechanism
+	#	}
+	}
+}
+
+libra_energy_expenditure_decisions = {
+	resource = energy
+	type = expenditure
+	category = decisions
+
+	potential = {
+		resource_income_compare = {
+			resource = energy
+			value > 10
+		}
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			add = 0.1
+			or = {
+			#	has_origin = origin_libra_infested
+				has_origin = origin_libra_dragonborn
+			}
+		}
+	}
+
+	desired_max = {
+		base = 2500
+		modifier = {
+			add = 3500
+			has_origin = origin_libra_crimson_nights
+		}
+		modifier = {
+			add = 5000
+			has_origin = origin_libra_dragonborn
+		}
+		modifier = {
+			add = 7500
+			has_origin = origin_libra_eden_accord
+		}
+	}
+}
+
+libra_energy_expenditure_ships = {
+	resource = minerals
+	type = expenditure
+	category = ships
+
+	potential = {
+		or = {
+			has_origin = origin_libra_antientropy_instruction
+			has_ascension_perk = ap_libra_ghost_mechanist
+			#has_technology = tech_libra_psionic_destroyers
+		}
+	}
+
+	weight = {
+		weight = 0.25
+		modifier = {
+			add = 0.15
+			OR = {
+				recently_lost_war = yes
+				is_at_war = yes
+				has_crisis = yes
+				end_game_years_passed >= 0
+			}
+		}
+		modifier = {
+			add = 0.2
+			used_naval_capacity_percent < 0.5
+		}
+		modifier = {
+			add = 0.1
+			used_naval_capacity_percent < 0.7
+		}
+		modifier = {
+			factor = 0.5
+			used_naval_capacity_percent > 0.9
+		}
+		modifier = {
+			factor = 0
+			used_naval_capacity_percent > 1.1
+		}
+	}
+
+	desired_max = {
+		base = 5000
+		modifier = {
+			add = 45000
+			or = {
+				has_origin = origin_libra_antientropy_instruction
+				has_ascension_perk = ap_libra_ghost_mechanist
+			}
+			or = {
+				has_technology = tech_cruisers
+				has_technology = tech_harbingers
+			}
+		}
+	}
+}
+
+libra_energy_expenditure_armies = {
+	resource = energy
+	type = expenditure
+	category = armies
+
+	potential = {
+		has_resource = {
+			type = energy
+			amount > 1000
+		}
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			add = 0.05
+			is_at_war = yes
+			or = {
+				has_origin = origin_libra_antientropy_instruction
+			}
+		}
+	}
+
+	desired_max = {
+		base = 1200
+		modifier = {
+			add = 2400
+			has_origin = origin_libra_antientropy_instruction
+		}
+	}
+}

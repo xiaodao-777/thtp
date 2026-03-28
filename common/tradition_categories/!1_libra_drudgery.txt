@@ -1,0 +1,32 @@
+tradition_libra_drudgery = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_drudgery_adopt } }
+		text = tradition_libra_drudgery_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_drudgery_adopt }
+		text = tradition_libra_drudgery_adopt_desc
+	}
+	tree_template = "tree_111_11"
+	adoption_bonus = "tr_libra_drudgery_adopt"
+	finish_bonus = "tr_libra_drudgery_finish"
+	traditions = {
+		"tr_libra_drudgery_1"
+		"tr_libra_drudgery_2"
+		"tr_libra_drudgery_3"
+		"tr_libra_drudgery_4"
+		"tr_libra_drudgery_5"
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 5
+			count_enslaved_species = { count > 0 }
+		}
+		modifier = {
+			factor = 10
+			has_ai_personality_behaviour = slaver
+		}
+	}
+}

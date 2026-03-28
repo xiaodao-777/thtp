@@ -1,0 +1,1070 @@
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 0.5
+@mid_rare = 0.25
+@low_rare = 0.1
+
+@planet_type_bonus = 1.5
+
+#
+
+d_libra_feature_1 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare_resource
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_mine_exotic_gases
+			}
+		}
+		planet_farmers_exotic_gases_produces_add = @SR_SMALL
+	}
+
+	planet_modifier = {
+		district_farming_max_add = @DISTRICTS_FROM_SR_DEPOSITS
+	}
+
+	drop_weight = {
+		weight = @high_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = @planet_type_bonus
+			is_wet = yes
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_1
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_2 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare_resource
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_mine_volatile_motes
+			}
+		}
+		planet_farmers_volatile_motes_produces_add = @SR_SMALL
+	}
+
+	planet_modifier = {
+		district_farming_max_add = @DISTRICTS_FROM_SR_DEPOSITS
+	}
+
+	drop_weight = {
+		weight = @high_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = @planet_type_bonus
+			is_dry = yes
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_2
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_3 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare_resource
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_mine_rare_crystals
+			}
+		}
+		planet_farmers_rare_crystals_produces_add = @SR_SMALL
+	}
+
+	planet_modifier = {
+		district_farming_max_add = @DISTRICTS_FROM_SR_DEPOSITS
+	}
+
+	drop_weight = {
+		weight = @high_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = @planet_type_bonus
+			is_cold = yes
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_3
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_4 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		district_generator_max_add = 6
+		planet_jobs_energy_produces_mult = 0.25
+		planet_buildings_energy_produces_mult = 0.25
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_4
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_5 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare_resource
+
+	planet_modifier = {
+		district_generator_max_add = 2
+		district_mining_max_add = 2
+		district_farming_max_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_psionics_adopt
+			}
+		}
+		planet_jobs_produces_mult = 0.05
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_zro
+				}
+			}
+			sr_zro = 1
+		}
+	}
+
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_dry = yes
+		}
+		modifier = {
+			factor = 0
+			or = {
+				has_deposit = d_libra_feature_5
+				has_deposit = d_libra_feature_6
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_6 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare_resource
+
+	planet_modifier = {
+		district_generator_max_add = 4
+		district_mining_max_add = 4
+		district_farming_max_add = 4
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_psionics_adopt
+			}
+		}
+		planet_jobs_produces_mult = 0.1
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_zro
+				}
+			}
+			sr_zro = 2
+		}
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = 0
+			or = {
+				has_deposit = d_libra_feature_5
+				has_deposit = d_libra_feature_6
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_7 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare_resource
+
+	planet_modifier = {
+		district_generator_max_add = 3
+		district_mining_max_add = 3
+		district_farming_max_add = 3
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_nanite_transmutation
+				}
+			}
+			nanites = 1
+		}
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_relic
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_7
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_8 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare_resource
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_physicist_add = 130
+		job_biologist_add = 130
+		job_engineer_add = 130
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_calculator_physicist_add = 130
+		job_calculator_biologist_add = 130
+		job_calculator_engineer_add = 130
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_country_flag = fallen_empire_1 }
+		}
+		job_fe_archivist_add = 400
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_nanite_transmutation
+				}
+			}
+			sr_dark_matter = 1
+		}
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_cold = yes
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_8
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_9 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare_resource
+
+	planet_modifier = {
+		district_mining_max_add = 6
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_living_metal
+				}
+			}
+			sr_living_metal = 1
+		}
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_wet = yes
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_9
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_10 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare_resource
+
+	planet_modifier = {
+		district_farming_max_add = 6
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_nano_vitality_crops }
+		}
+		planet_farmers_food_produces_add = 1
+	}
+
+	potential = {
+		not = { is_planet_class = pc_nuked }
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_10
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_11 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_physicist_add = 200
+		job_biologist_add = 200
+		job_engineer_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_calculator_physicist_add = 200
+		job_calculator_biologist_add = 200
+		job_calculator_engineer_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_country_flag = fallen_empire_1 }
+		}
+		job_fe_archivist_add = 600
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			factor = @planet_type_bonus
+			is_planet_class = pc_relic
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_11
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_12 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		planet_jobs_upkeep_mult = -0.15
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_12
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_13 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 1
+		planet_biologists_society_research_produces_add = 1
+		planet_engineers_engineering_research_produces_add = 1
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 12
+			society_research = 12
+			engineering_research = 12
+		}
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_13
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_14 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			society_research = 18
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_archeology_lab_ancrel
+				}
+			}
+			minor_artifacts = 3
+		}
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_14
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_15 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			physics_research = 18
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_astral_harvesting
+				}
+			}
+			astral_threads = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_ascension_perk = ap_libra_astral_blade
+				}
+			}
+			astral_threads = 6
+		}
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_15
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_16 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			volatile_motes = 3
+			exotic_gases = 3
+			rare_crystals = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_living_metal
+				}
+			}
+			sr_living_metal = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_zro
+				}
+			}
+			sr_zro = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_nanite_transmutation
+				}
+			}
+			sr_dark_matter = 1
+		}
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_16
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_17 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.1
+		planet_jobs_produces_mult = 0.05
+		district_generator_max_add = 1
+		district_mining_max_add = 1
+		district_farming_max_add = 1
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = 0
+			or = {
+				has_deposit = d_libra_feature_17
+				is_planet_class = pc_gaia
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_18 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		planet_max_districts_add = 1
+		planet_buildings_cost_mult = -0.1
+	}
+
+	drop_weight = {
+		weight = @low_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_18
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_19 = {
+	is_for_colonizable = yes
+	category = deposit_cat_energy
+
+	planet_modifier = {
+		district_generator_max_add = 2
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 6
+		}
+	}
+
+	drop_weight = {
+		weight = @low
+		modifier = {
+			factor = 0.5
+			is_cold = no
+		}
+		modifier = {
+			factor = 0.5
+			or = {
+				has_deposit = d_libra_feature_21
+				has_deposit = d_libra_feature_23
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_20 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		district_generator_max_add = 3
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 18
+		}
+	}
+
+	drop_weight = {
+		weight = @high_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_cold = yes
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_20
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_21 = {
+	is_for_colonizable = yes
+	category = deposit_cat_minerals
+
+	planet_modifier = {
+		district_mining_max_add = 2
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			minerals = 5
+		}
+	}
+
+	drop_weight = {
+		weight = @low
+		modifier = {
+			factor = 0.5
+			is_dry = no
+		}
+		modifier = {
+			factor = 0.5
+			or = {
+				has_deposit = d_libra_feature_19
+				has_deposit = d_libra_feature_23
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_22 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		district_mining_max_add = 3
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			minerals = 15
+		}
+	}
+
+	drop_weight = {
+		weight = @high_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_dry = yes
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_22
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_23 = {
+	is_for_colonizable = yes
+	category = deposit_cat_food
+
+	planet_modifier = {
+		district_farming_max_add = 2
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			food = 6
+		}
+	}
+
+	drop_weight = {
+		weight = @low
+		modifier = {
+			factor = 0.5
+			is_wet = no
+		}
+		modifier = {
+			factor = 0.5
+			or = {
+				has_deposit = d_libra_feature_19
+				has_deposit = d_libra_feature_21
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+
+d_libra_feature_24 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		district_farming_max_add = 3
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			food = 18
+		}
+	}
+
+	drop_weight = {
+		weight = @high_rare
+		modifier = {
+			factor = @planet_type_bonus
+			is_wet = yes
+		}
+		modifier = {
+			factor = 0
+			has_deposit = d_libra_feature_24
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}
+	}
+}
+

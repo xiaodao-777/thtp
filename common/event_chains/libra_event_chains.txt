@@ -1,0 +1,13 @@
+libra_transcendental_cybernetics_chain = {
+	picture = GFX_evt_libra_transcendental_cybernetics_0
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	counter = {
+		libra_transcendental_cybernetics_insight = {
+		}
+	}
+	abort_trigger = {
+		owner = {
+			not = { has_ascension_perk = ap_libra_transcendental_cybernetics }
+		}
+	}
+}

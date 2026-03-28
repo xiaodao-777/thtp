@@ -1,0 +1,13 @@
+ambient_object = {
+	name = "libra_hurricane_eye_storm"
+	entity = "libra_hurricane_eye_storm_entity"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {
+	name = "libra_crimson_nights_system_effect"
+	entity = "libra_crimson_nights_entity"
+	selectable = no
+	show_name = no
+}

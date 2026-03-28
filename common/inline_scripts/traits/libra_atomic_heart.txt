@@ -1,0 +1,43 @@
+force_councilor_trait = yes
+custom_subtitle = libra_veteran_machine_triggered_trait
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_negative"
+	}
+	layer = {
+		icon = "GFX_trait_frame_libra_corrupt_veteran"
+		color = "trait_rarity_destiny"
+	}
+	layer = {
+		icon = "GFX_trait_glow_libra_corrupt_destiny"
+		color = "trait_rarity_veteran"
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	layer = {
+		icon = "GFX_trait_councilor"
+		visible = { is_ruler = yes }
+	}
+}
+sorting_priority = @trait_sorting_priority_veteran_triggered_none
+
+triggered_councilor_modifier = {
+	potential = {
+		is_ruler = yes
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 60 }
+		}
+	}
+	country_produces_mult = 0.05
+	councilor_skill_add = 1
+}
+
+initial = no
+randomized = no
+leader_class = { scientist official commander }
+replace_traits = { "leader_trait_erudite" "leader_trait_psionic" "leader_trait_cyborg" "leader_trait_limited_cyborg" "leader_trait_virtual" "leader_trait_has_backup_clone" "trait_leader_genetic_purist" }

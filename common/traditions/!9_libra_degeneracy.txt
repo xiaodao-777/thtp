@@ -1,0 +1,142 @@
+tr_libra_degeneracy_adopt = {
+	unlocks_agenda = agenda_libra_degeneracy_a
+	on_enabled = {
+		hidden_effect = {
+			set_variable = { which = libra_degeneracy_decision_count value = 3 }
+		}
+	}
+	modifier = {
+		planet_housing_mult = 0.05
+	}
+	possible = {
+		if = {
+			limit = {
+				or = {
+					has_ethic = ethic_gestalt_consciousness
+					has_civic = civic_dystopian_society
+					has_country_flag = libra_is_machine_empire
+				}
+			}
+			has_technology = tech_society_2
+		}
+		else = {
+			has_technology = tech_subdermal_stimulation
+		}
+	}
+}
+
+tr_libra_degeneracy_finish = {
+	unlocks_agenda = agenda_libra_degeneracy_b
+	modifier = {
+		ascension_perks_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_degeneracy_finish_desc
+}
+
+tr_libra_degeneracy_1 = {
+	modifier = {
+		pop_cat_ruler_bonus_workforce_mult = 0.15
+		pop_cat_specialist_bonus_workforce_mult = 0.05
+		pop_cat_civilian_bonus_workforce_mult = -0.1
+	}
+	custom_tooltip_with_modifiers = tr_libra_degeneracy_1_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }
+		modifier = {
+			pop_cat_complex_drone_bonus_workforce_mult = 0.05
+			pop_cat_maintenance_drone_bonus_workforce_mult = -0.05
+		}
+		custom_tooltip_with_modifiers = tr_libra_degeneracy_1_desc
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_degeneracy_2 = {
+	possible = {
+		has_tradition = tr_libra_degeneracy_1
+	}
+	modifier = {
+		leader_trait_selection_options_add = 1
+		negative_traits_country = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_degeneracy_2_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_degeneracy_3 = {
+	modifier = {
+		planet_amenities_add = 1000
+	}
+	custom_tooltip_with_modifiers = tr_libra_degeneracy_3_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }
+		modifier = {
+			planet_amenities_no_happiness_add = 1000
+		}
+		custom_tooltip_with_modifiers = tr_libra_degeneracy_3_desc
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_degeneracy_4 = {
+	possible = {
+		has_tradition = tr_libra_degeneracy_3
+	}
+	modifier = {
+		logistic_growth_mult = 0.1
+	}
+	custom_tooltip_with_modifiers = tr_libra_degeneracy_4_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_robot_empire = yes }
+		modifier = {
+			planet_pops_robotics_upkeep_mult = -0.1
+		}
+		custom_tooltip_with_modifiers = tr_libra_degeneracy_4_desc
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_degeneracy_5 = {
+	possible = {
+		has_tradition = tr_libra_degeneracy_4
+	}
+	modifier = {
+		pop_citizen_happiness = 0.05
+	}
+	custom_tooltip_with_modifiers = tr_libra_degeneracy_5_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }
+		modifier = {
+			planet_stability_mult = 0.05
+		}
+		custom_tooltip_with_modifiers = tr_libra_degeneracy_5_desc
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}

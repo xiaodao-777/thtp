@@ -1,0 +1,155 @@
+situation_libra_pendragon = {
+	fail_icon_frame = GFX_situation_outcome_frame_blue
+	fail_icon = GFX_situation_outcome_unknown
+	category = negative
+
+	picture = GFX_evt_libra_pendragon
+	initial_progress = 119.5
+
+	on_start = {
+		owner = {
+			if = {
+				limit = {
+					not = { has_country_flag = libra_pendragon_situation }
+				}
+				libra_clear_pendragon_tradition_modifiers = yes
+				libra_add_pendragon_situation_modifiers = yes
+				set_country_flag = libra_pendragon_situation
+			}
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_libra_pendragon_tooltip
+		hidden_effect = {
+			destroy_situation = this
+			owner = { country_event = { id = libra_fairy.1600 days = 1 } }
+		}
+	}
+	on_fail = {
+		custom_tooltip = situation_libra_pendragon_tooltip
+		hidden_effect = {
+			destroy_situation = this
+			owner = { country_event = { id = libra_fairy.1600 days = 1 } }
+		}
+	}
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 120
+		}
+	}
+
+	modifier = {
+		country_produces_mult = 0.05
+	}
+
+	approach = {
+		name = situation_libra_pendragon_approach_a
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			owner = {
+				has_tradition = tr_libra_pendragon_1
+			}
+		}
+		modifier = {
+			damage_vs_rival_mult = 0.25
+			ship_orbital_bombardment_mult = 0.5
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 3
+				owner = {
+					is_at_war = yes
+					num_rivals > 1
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_pendragon_approach_b
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			owner = {
+				has_tradition = tr_libra_pendragon_2
+			}
+		}
+		modifier = {
+			ship_friendly_territory_armor_mult = 0.35
+			ship_friendly_territory_shield_mult = 0.35
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				has_crisis = yes
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_pendragon_approach_c
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			owner = {
+				has_tradition = tr_libra_pendragon_4
+			}
+		}
+		modifier = {
+			ship_speed_mult = 0.25
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = situation_libra_pendragon_approach_d
+		icon = GFX_situation_approach_heart
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			owner = {
+				has_tradition = tr_libra_pendragon_5
+			}
+		}
+		modifier = {
+			ship_hull_regen_add_perc = 0.15
+			ship_armor_regen_add_perc = 0.25
+			ship_shield_regen_add_perc = 0.25
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				owner = { is_at_war = yes }
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_pendragon_approach_e
+		icon = GFX_situation_approach_heart
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			owner = {
+				nor = {
+					has_tradition = tr_libra_pendragon_1
+					has_tradition = tr_libra_pendragon_2
+				}
+			}
+		}
+		resources = {
+   			category = situations
+   			upkeep = { alloys = 5 }
+		}
+		ai_weight = {
+			base = 0
+		}
+	}
+
+	monthly_progress = {
+		base = -1
+	}
+}

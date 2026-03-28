@@ -1,0 +1,95 @@
+tr_libra_overclock_adopt = {
+	unlocks_agenda = agenda_libra_overclock
+	possible = {
+		has_technology = tech_capital_productivity_1
+	}
+	modifier = {
+		country_alloys_produces_mult = 0.05
+		country_consumer_goods_produces_mult = 0.05
+	}
+	on_disabled = {
+		libra_clear_overclock_modifiers = yes
+	}
+}
+
+tr_libra_overclock_finish = {
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				set_policy = { policy = libra_overclock_tradition option = policy_libra_overclock_tradition_b cooldown = no }
+			}
+		}
+	}
+	modifier = {
+		ascension_perks_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_overclock_finish_desc
+}
+
+tr_libra_overclock_1 = {
+	on_enabled = {
+		add_modifier = { modifier = libra_overclock_1_modifier }
+	}
+	custom_tooltip = tr_libra_overclock_1_desc
+
+	ai_weight = {
+		factor = 8000
+	}
+}
+
+tr_libra_overclock_2 = {
+	possible = {
+		has_tradition = tr_libra_overclock_1
+	}
+	on_enabled = {
+		add_modifier = { modifier = libra_overclock_2_modifier }
+	}
+	custom_tooltip = tr_libra_overclock_2_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_overclock_3 = {
+	possible = {
+		has_tradition = tr_libra_overclock_1
+	}
+	on_enabled = {
+		add_modifier = { modifier = libra_overclock_3_modifier }
+	}
+	custom_tooltip = tr_libra_overclock_3_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_overclock_4 = {
+	possible = {
+		has_tradition = tr_libra_overclock_2
+	}
+	on_enabled = {
+		add_modifier = { modifier = libra_overclock_4_modifier }
+	}
+	custom_tooltip = tr_libra_overclock_4_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_overclock_5 = {
+	possible = {
+		has_tradition = tr_libra_overclock_3
+	}
+	on_enabled = {
+		add_modifier = { modifier = libra_overclock_5_modifier }
+	}
+	custom_tooltip = tr_libra_overclock_5_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}

@@ -1,0 +1,35 @@
+tradition_libra_overclock = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_overclock_adopt } }
+		text = tradition_libra_overclock_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_overclock_adopt }
+		text = tradition_libra_overclock_adopt_desc
+	}
+	tree_template = "tree_12_11_11"
+	adoption_bonus = "tr_libra_overclock_adopt"
+	finish_bonus = "tr_libra_overclock_finish"
+	traditions = {
+		"tr_libra_overclock_1"
+		"tr_libra_overclock_2"
+		"tr_libra_overclock_3"
+		"tr_libra_overclock_4"
+		"tr_libra_overclock_5"
+	}
+
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 1.5
+			or = {
+				is_difficulty = 4
+				is_difficulty = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			is_difficulty = 6
+		}
+	}
+}

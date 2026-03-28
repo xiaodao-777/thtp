@@ -1,0 +1,186 @@
+tr_libra_dragonlight_adopt = {
+	unlocks_agenda = agenda_libra_dragonlight
+	possible = {
+		if = {
+			limit = { has_tradition = tr_libra_dragondark_adopt }
+			num_ascension_perks > 3
+			custom_tooltip = {
+				fail_text = "tr_libra_dragonborn_fail_2"
+				has_tradition = tr_libra_dragondark_finish
+				libra_has_finished_organic_ascension_path = yes
+			}
+		}
+		else = {
+			num_ascension_perks > 1
+			custom_tooltip = {
+				fail_text = "tr_libra_dragonborn_fail_1"
+				has_technology = tech_libra_dragon_breath_1
+				has_tradition = tr_libra_dragonchant_finish
+			}
+		}
+	}
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = { has_tradition = tr_libra_dragondark_adopt }
+				country_event = { id = libra_origin.0728 }
+			}
+			else = {
+				country_event = { id = libra_origin.0725 }
+			}
+		}
+	}
+	modifier = {
+		country_leader_cap_add = 1
+	}
+}
+
+tr_libra_dragonlight_finish = {
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = { has_tradition = tr_libra_dragondark_finish }
+				country_event = { id = libra_origin.0727 }
+			}
+			else = {
+				country_event = { id = libra_origin.0726 }
+			}
+		}
+	}
+	modifier = {
+		empire_size_pops_mult = -0.1
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_dragonlight_1 = {
+	custom_tooltip = tr_libra_dragonlight_1_desc
+	on_enabled = {
+		country_event = { id = libra_origin.0710 }
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_dragonlight_2 = {
+	modifier = {
+		intel_encryption_add = 2
+		empire_size_mult = -0.05
+	}
+
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tr_libra_dragonlight_3 = {
+	possible = {
+		has_tradition = tr_libra_dragonlight_1
+		has_tradition = tr_libra_dragonlight_2
+	}
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = libra_origin.0750 }
+			if = {
+				limit = { has_tradition = tr_libra_dragondark_4 }
+				if = {
+					limit = { is_gestalt = yes }
+					country_event = { id = libra_origin.0721 days = 30 }
+				}
+				else = {
+					country_event = { id = libra_origin.0720 days = 30 }
+				}
+				create_message = {
+					type = MESSAGE_ALL_GAINED_TRAIT
+					localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+					days = @toast_message_days
+					variable = {
+						type = key
+						value = leader_trait_libra_dragonborn_official_3
+						localization = TRAIT
+					}
+					variable = {
+						key = TRAIT_KEY
+						value = leader_trait_libra_dragonborn_official_3
+					}
+					variable = {
+						key = "border"
+						value = "GFX_invisible"
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { is_gestalt = yes }
+					country_event = { id = libra_origin.0717 days = 30 }
+				}
+				else = {
+					country_event = { id = libra_origin.0716 days = 30 }
+				}
+				create_message = {
+					type = MESSAGE_ALL_GAINED_TRAIT
+					localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+					days = @toast_message_days
+					variable = {
+						type = key
+						value = leader_trait_libra_dragonborn_official_2
+						localization = TRAIT
+					}
+					variable = {
+						key = TRAIT_KEY
+						value = leader_trait_libra_dragonborn_official_2
+					}
+					variable = {
+						key = "border"
+						value = "GFX_invisible"
+					}
+				}
+			}
+		}
+	}
+	modifier = {
+		leader_trait_selection_options_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_dragonlight_3_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_dragonlight_4 = {
+	possible = {
+		has_tradition = tr_libra_dragonlight_3
+	}
+	custom_tooltip_with_modifiers = tr_libra_dragonlight_4_desc
+	modifier = {
+		planet_max_districts_mult = 0.1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_dragonlight_5 = {
+	possible = {
+		has_tradition = tr_libra_dragonlight_3
+	}
+	custom_tooltip = tr_libra_dragonlight_5_desc
+	triggered_modifier = {
+		potential = { always = yes }
+		country_edict_fund_add = 8
+		mult = trigger:max_starbase_capacity
+	}
+	triggered_modifier = {
+		potential = { always = yes }
+		country_naval_cap_add = 8
+		mult = trigger:used_starbase_capacity_integer
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}

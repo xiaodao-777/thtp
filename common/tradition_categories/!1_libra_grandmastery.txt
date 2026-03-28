@@ -1,0 +1,32 @@
+tradition_libra_grandmastery = {
+	desc = {
+		trigger = { not = { has_tradition = tr_libra_grandmastery_adopt } }
+		text = tradition_libra_grandmastery_desc
+	}
+	desc = {
+		trigger = { has_tradition = tr_libra_grandmastery_adopt }
+		text = tradition_libra_grandmastery_adopt_desc
+	}
+	tree_template = "libra_tree_21_21"
+	adoption_bonus = "tr_libra_grandmastery_adopt"
+	finish_bonus = "tr_libra_grandmastery_finish"
+	traditions = {
+		"tr_libra_grandmastery_1"
+		"tr_libra_grandmastery_2"
+		"tr_libra_grandmastery_3"
+		"tr_libra_grandmastery_4"
+		"tr_libra_grandmastery_5"
+	}
+
+	ai_weight = {
+		factor = 25
+		modifier = {
+			factor = 2
+			libra_ai_preferences_leader = yes
+		}
+		modifier = {
+			factor = 1.6
+			has_ascension_perk = ap_libra_yggdrasil
+		}
+	}
+}

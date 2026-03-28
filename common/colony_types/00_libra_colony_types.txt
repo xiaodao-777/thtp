@@ -1,0 +1,95 @@
+col_libra_yggdrasil = {
+	icon = GFX_colony_type_libra_yggdrasil
+
+	potential = {
+		is_capital = no
+		has_building = building_libra_yggdrasil_housing_1
+		exists = owner
+		owner = { has_ascension_perk = ap_libra_yggdrasil }
+	}
+
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_jobs_produces_mult = 0.3
+		planet_jobs_upkeep_mult = 0.2
+		planet_building_build_speed_mult = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		pop_cat_specialist_bonus_workforce_mult = 0.1
+		pop_cat_worker_bonus_workforce_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		pop_cat_complex_drone_bonus_workforce_mult = 0.1
+		pop_cat_simple_drone_bonus_workforce_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = { has_tradition = tr_adaptability_finish }
+		}
+		planet_jobs_produces_mult = 0.05
+	}
+
+	weight_modifier = {
+		base = 20000
+	}
+}
+
+col_libra_yggdrasil_capital = {
+	icon = GFX_colony_type_libra_yggdrasil
+
+	potential = {
+		is_capital = yes
+		has_building = building_libra_yggdrasil_housing_1
+		exists = owner
+		owner = { has_ascension_perk = ap_libra_yggdrasil }
+	}
+
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_housing_add = 1000
+		planet_amenities_add = 2000
+		planet_jobs_produces_mult = 0.3
+		planet_jobs_upkeep_mult = 0.2
+		planet_building_build_speed_mult = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		pop_cat_specialist_bonus_workforce_mult = 0.1
+		pop_cat_worker_bonus_workforce_mult = 0.1
+		pop_government_ethic_attraction = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		pop_cat_complex_drone_bonus_workforce_mult = 0.1
+		pop_cat_simple_drone_bonus_workforce_mult = 0.1
+		planet_crime_no_happiness_add = -20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner_or_space_owner
+			owner_or_space_owner = { has_tradition = tr_adaptability_finish }
+		}
+		planet_jobs_produces_mult = 0.05
+	}
+
+	weight_modifier = {
+		base = 20000
+	}
+}

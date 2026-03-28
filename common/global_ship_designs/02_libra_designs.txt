@@ -1,0 +1,117 @@
+ship_design = {
+	name = "NAME_Libra_Dragonborn_Inital"
+	ship_size = libra_dragonborn_small
+	section = {
+		template = "LIBRA_DB_SMALL_MID_X1M4S8"
+		slot = "mid"
+
+		component = {
+			slot = "PRIMARY_GUN_01"
+			template = "LIBRA_DRAGON_BREATH_1_X"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_1"
+		}
+	}
+	required_component = "BATTLESHIP_FISSION_LIBRA_SP_REACTOR"
+	required_component = "BIO_DRIVE"
+	required_component = "BIO_PROPULSION"
+	required_component = "SENSOR_1"
+	required_component = "COMBAT_COMPUTER_LINE_LIBRA_SP"
+}
+
+ship_design = {
+	name = "NAME_Libra_instruction_warship_1_Inital"
+	ship_size = libra_antientropy_instruction_warship_1
+	section = {
+		template = "LIBRA_ANTIENTROPY_INSTRUCTION_WARSHIP_1_2"
+		slot = "mid"
+
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_LIBRA_ANTIENTROPY_LASER_1"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_LIBRA_ANTIENTROPY_MISSILES_1"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+		}
+
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_LIBRA_ANTIENTROPY_SHIELD_1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "SMALL_LIBRA_ANTIENTROPY_ARMOR_1"
+		}
+	}
+	required_component = "CORVETTE_FISSION_LIBRA_SP_REACTOR"
+	required_component = "HYPER_DRIVE_1"
+	required_component = "CORVETTE_SHIP_THRUSTER_LIBRA_SP_1"
+	required_component = "SENSOR_1"
+	required_component = "COMBAT_COMPUTER_SWARM_LIBRA_SP"
+	required_component = "CORVETTE_CLOAKING_LIBRA_NONE"
+}
+
+ship_design = {
+	name = "NAME_Libra_instruction_warship_2_Inital"
+	ship_size = libra_antientropy_instruction_warship_2
+	section = {
+		template = "LIBRA_ANTIENTROPY_INSTRUCTION_WARSHIP_2_2"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_LIBRA_ANTIENTROPY_LASER_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "LARGE_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+		}
+	#	component = {
+	#		slot = "LARGE_GUN_03"
+	#		template = "LARGE_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+	#	}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_LIBRA_ANTIENTROPY_MISSILES_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_LIBRA_ANTIENTROPY_MISSILES_1"
+		}
+	#	component = {
+	#		slot = "SMALL_GUN_01"
+	#		template = "SMALL_LIBRA_ANTIENTROPY_MISSILES_1"
+	#	}
+	#	component = {
+	#		slot = "PD_01"
+	#		template = "POINT_DEFENCE_1"
+	#	}
+
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_LIBRA_ANTIENTROPY_SHIELD_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_LIBRA_ANTIENTROPY_ARMOR_1"
+		}
+	}
+	required_component = "CRUISER_FISSION_LIBRA_SP_REACTOR"
+	required_component = "HYPER_DRIVE_1"
+	required_component = "CRUISER_SHIP_THRUSTER_LIBRA_SP_1"
+	required_component = "SENSOR_1"
+	required_component = "COMBAT_COMPUTER_LINE_LIBRA_SP"
+	required_component = "DESTROYER_CLOAKING_LIBRA_NONE"
+}

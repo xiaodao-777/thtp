@@ -1,0 +1,1498 @@
+is_reanimator = {
+	OR = {
+		has_valid_civic = civic_reanimated_armies
+		has_valid_civic = civic_permanent_employment
+		has_valid_civic = civic_hive_cordyceptic_drones
+		has_ascension_perk = ap_mechromancy
+		has_ascension_perk = ap_libra_string_puppeteer
+	}
+}
+
+#
+
+libra_war_effect_trigger = {
+	or = {
+		is_at_war = yes
+		has_modifier = agenda_libra_havoc_finish_modifier
+	}
+}
+
+libra_has_consumer_goods_deficit = {
+	or = {
+		has_deficit = consumer_goods
+		any_situation = { is_situation_type = situation_consumer_goods_deficit }
+	}
+}
+
+libra_crisis_level_5 = {
+	OR = {
+		has_crisis_level = crisis_level_5
+		has_crisis_level = crisis_cosmogenesis_level_5
+		has_crisis_level = crisis_behemoth_level_5
+		has_crisis_level = crisis_hyperthermia_level_5
+	}
+}
+
+libra_use_special_pop = {
+	OR = {
+		has_tradition = tr_virtuality_adopt
+		has_origin = origin_wilderness
+		has_origin = origin_necrophage
+		has_origin = origin_libra_crimson_nights
+		has_ascension_perk = ap_libra_cutefied_world
+	}
+}
+
+libra_is_special_colony_type = {
+	OR = {
+		has_modifier = penal_colony
+		has_modifier = resort_colony
+		has_modifier = slave_colony
+		has_building = building_order_keep
+	}
+}
+
+libra_destroy_country_target = {
+	nor = {
+		is_country_type = clutch_of_whelps
+		is_country_type = pirate
+		is_country_type = primitive
+		is_country_type = rebel
+		is_country_type = enclave_mercenary
+		is_country_type = synth_queen_storm
+		is_country_type = synth_queen_convoys
+		is_country_type = synth_queen_outposts
+		is_country_type = portal_holder
+	}
+}
+
+has_4_libra_tradition = {
+	calc_true_if = {
+		amount > 3
+		has_tradition = tr_libra_dragonchant_adopt
+		has_tradition = tr_libra_dragonchant_adopt
+		has_tradition = tr_libra_dragonlight_adopt
+		has_tradition = tr_libra_crimson_vampire_adopt
+		has_tradition = tr_libra_crimson_ancestor_adopt
+		has_tradition = tr_libra_adventure_adopt
+		has_tradition = tr_libra_autarchy_adopt
+		has_tradition = tr_libra_bastion_adopt
+		has_tradition = tr_libra_ceremony_adopt
+		has_tradition = tr_libra_construmcracy_adopt
+		has_tradition = tr_libra_cosmoplasty_adopt
+		has_tradition = tr_libra_degeneracy_adopt
+		has_tradition = tr_libra_drudgery_adopt
+		has_tradition = tr_libra_frugality_adopt
+		has_tradition = tr_libra_grandmastery_adopt
+		has_tradition = tr_libra_imperium_adopt
+		has_tradition = tr_libra_introspection_adopt
+		has_tradition = tr_libra_meditation_adopt
+		has_tradition = tr_libra_magnificence_adopt
+		has_tradition = tr_libra_occlusion_adopt
+		has_tradition = tr_libra_overclock_adopt
+		has_tradition = tr_libra_pendragon_adopt
+		has_tradition = tr_libra_profundity_adopt
+		has_tradition = tr_libra_sumptuary_adopt
+		has_tradition = tr_libra_suzerainty_adopt
+		has_tradition = tr_libra_vector_adopt
+		has_tradition = tr_libra_victory_adopt
+	}
+}
+
+#
+
+libra_ai_war_trigger = {
+	or = {
+		is_at_war = yes
+		has_crisis = yes
+		end_game_years_passed >= 0
+	}
+}
+
+libra_ai_high_unity = {
+	or = {
+		has_ethic = ethic_spiritualist
+		has_ethic = ethic_fanatic_spiritualist
+		has_origin = origin_libra_praises_to_life
+		and = {
+			has_valid_civic = civic_machine_servitor
+			not = { has_origin = origin_libra_eden_accord }
+		}
+	}
+}
+
+libra_ai_preferences_council = {
+	OR = {
+		has_tradition = tr_statecraft_adopt
+		has_origin = origin_cybernetic_creed
+		has_origin = origin_libra_psalm_of_waves
+	}
+}
+
+libra_ai_preferences_leader = {
+	OR = {
+		has_tradition = tr_aptitude_adopt
+		has_tradition = tr_libra_introspection_adopt
+		has_tradition = tr_libra_grandmastery_adopt
+		has_ascension_perk = ap_libra_gestalt_era
+		has_ascension_perk = ap_libra_valiant_heroic
+		has_ascension_perk = ap_libra_nanocore
+		has_origin = origin_progenitor_hive
+		has_origin = origin_libra_psalm_of_waves
+		has_origin = origin_libra_enlightenment_wisdom
+		has_origin = origin_libra_dragonborn
+	}
+}
+
+libra_ai_preferences_ruler = {
+	OR = {
+		has_tradition = tr_libra_imperium_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+	}
+}
+
+libra_ai_preferences_planet = {
+	OR = {
+		has_tradition = tr_prosperity_adopt
+		has_tradition = tr_harmony_adopt
+		has_tradition = tr_synchronicity_adopt
+		has_tradition = tr_virtuality_adopt
+		is_idyllic_bloom_empire = yes
+		is_ascensionist_empire = yes
+		has_ascension_perk = ap_libra_transcendent_covenant
+		has_ascension_perk = ap_libra_heavenly_throne
+		has_origin = origin_libra_miracle_builder
+	}
+}
+
+libra_ai_preferences_habitability = {
+	OR = {
+		has_country_flag = genetic_ascension_stage_1_mutation
+	}
+}
+
+libra_ai_preferences_government = {
+	OR = {
+		civics_count < 3
+		has_tradition = tr_domination_adopt
+		has_tradition = tr_libra_imperium_adopt
+		has_origin = origin_libra_shadow_consciousness
+		has_origin = origin_libra_interstellar_port
+		has_origin = origin_libra_may_storm
+	}
+}
+
+libra_ai_preferences_militarily = {
+	OR = {
+		has_tradition = tr_supremacy_adopt
+		has_tradition = tr_libra_havoc_adopt
+		is_homicidal = yes
+		is_at_war = yes
+		recently_lost_war = yes
+		used_naval_capacity_percent > 0.9
+		has_valid_civic = civic_barbaric_despoilers
+		has_ascension_perk = ap_libra_directive_76
+		has_origin = origin_libra_centurion
+	}
+}
+
+libra_ai_preferences_ship = {
+	is_beastmasters_empire = no
+	NOR = {
+		has_tradition = tr_nanotech_adopt
+		has_country_flag = transformation_nanotech
+		#	has_ascension_perk = ap_libra_artificial_swarm
+		#	has_ascension_perk = ap_libra_terminator
+		has_ascension_perk = ap_libra_synthetic_voice
+		has_ascension_perk = ap_become_the_crisis
+		has_ascension_perk = ap_cosmogenesis
+		has_ascension_perk = ap_mind_over_matter
+		has_origin = origin_libra_dragonborn
+		has_origin = origin_libra_antientropy_instruction
+		#	has_origin = origin_shroudwalker_apprentice
+	}
+}
+
+libra_ai_preferences_weapon = {
+	NOR = {
+		has_origin = origin_libra_crimson_nights
+		has_origin = origin_libra_dragonborn
+		has_origin = origin_libra_antientropy_instruction
+	}
+	OR = {
+		is_natural_design_empire = yes
+		libra_has_genetic_ascension = yes
+		libra_has_cybernetic_ascension = yes
+		libra_has_synthetic_ascension = yes
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_ai_preferences_technology = {
+	OR = {
+		has_tradition = tr_discovery_adopt
+		has_tradition = tr_libra_profundity_adopt
+		has_valid_civic = civic_technocracy
+		is_eager_explorer_empire = yes
+		is_dark_consortium_empire = yes
+		has_ascension_perk = ap_libra_sages_notes
+		has_ascension_perk = ap_libra_cosmological_constant
+	}
+}
+
+libra_ai_preferences_trade = {
+	OR = {
+		has_tradition = tr_mercantile_adopt
+		has_tradition = tr_logistics_adopt
+		is_capitalist = yes
+		has_ai_personality = peaceful_traders
+		has_ai_personality = ruthless_capitalists
+		has_origin = origin_libra_ultimate_market
+		has_origin = origin_libra_interstellar_port
+		#	has_origin = origin_libra_nuumismatics
+	}
+}
+
+libra_ai_preferences_collection = {
+	OR = {
+		is_curator_empire = yes
+		has_tradition = tr_archivism_adopt
+		has_tradition = tr_libra_adventure_adopt
+		has_ascension_perk = ap_libra_warrant_of_return
+	}
+}
+
+libra_ai_preferences_population = {
+	OR = {
+		pop_amount < 80000
+		has_tradition = tr_adaptability_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		is_natural_design_empire = yes
+		has_origin = origin_libra_psalm_of_waves
+		has_ascension_perk = ap_libra_liber_genesis
+	}
+}
+
+libra_ai_preferences_elite = {
+	is_egalitarian = no
+	OR = {
+		has_valid_civic = civic_dystopian_society
+		has_ascension_perk = ap_libra_galaxy_ambition
+		has_tradition = tr_libra_occlusion_adopt
+		and = {
+			has_tradition = tr_libra_sumptuary_adopt
+			not = { has_tradition = tr_virtuality_adopt }
+		}
+	}
+}
+
+libra_ai_preferences_civilian = {
+	nor = {
+		has_tradition = tr_virtuality_adopt
+		has_origin = origin_libra_interstellar_port
+		has_origin = origin_libra_antientropy_instruction
+	}
+	OR = {
+		and = {
+			is_materialist = yes
+			is_egalitarian = yes
+		}
+		has_valid_civic = civic_hive_natural_neural_network
+		has_valid_civic = civic_machine_maintenance_protocols
+		has_origin = origin_libra_shadow_consciousness
+	}
+}
+
+libra_ai_preferences_expansion = {
+	OR = {
+		has_tradition = tr_expansion_adopt
+		has_tradition = tr_libra_autarchy_adopt
+		is_xenophobe = yes
+	}
+}
+
+libra_ai_preferences_megastructures = {
+	OR = {
+		has_tradition = tr_libra_cosmoplasty_adopt
+		has_tradition = tr_nanotech_adopt
+	#	has_tradition = 
+		has_origin = origin_void_dwellers
+		has_origin = origin_void_machines
+		has_origin = origin_shattered_ring
+		has_origin = origin_star_slingshot
+		has_origin = origin_arc_welders
+		has_origin = origin_starlit_citadel
+		has_origin = origin_libra_miracle_builder
+		has_technology = tech_ring_world
+	}
+}
+
+libra_ai_preferences_storm = {
+	OR = {
+		has_origin = origin_storm_chasers
+		has_ascension_perk = ap_weather_control
+		has_ascension_perk = ap_libra_storm_deviation
+		has_storm_attraction_civic = yes
+	}
+}
+
+#
+
+libra_has_farming_designation = {
+	OR = {
+		has_farming_designation = yes
+		has_designation = col_libra_nanotech_farming
+	}
+}
+
+libra_has_fortress_designation = {
+	or = {
+		has_fortress_designation = yes
+	}
+}
+
+libra_has_factory_designation = {
+	OR = {
+		has_factory_designation = yes
+	}
+}
+
+libra_has_foundry_designation = {
+	OR = {
+		has_foundry_designation = yes
+		has_designation = col_libra_nanotech_foundry
+	}
+}
+
+libra_has_generator_designation = {
+	OR = {
+		has_generator_designation = yes
+		has_designation = col_libra_nanotech_generator
+	}
+}
+
+libra_has_industrial_designation = {
+	OR = {
+		has_industrial_designation = yes
+	}
+}
+
+libra_has_mining_designation = {
+	OR = {
+		has_mining_designation = yes
+		has_designation = col_libra_nanotech_mining
+	}
+}
+
+libra_has_refinery_designation = {
+	OR = {
+		has_refinery_designation = yes
+		has_designation = col_libra_nanotech_refinery
+	}
+}
+
+libra_has_research_designation = {
+	OR = {
+		has_research_designation = yes
+		has_designation = col_libra_nanotech_research
+	}
+}
+
+libra_has_unity_designation = {
+	OR = {
+		has_unity_designation = yes
+		has_designation = col_libra_nanotech_bureau
+	}
+}
+
+libra_has_rural_designation = {
+	OR = {
+		has_rural_designation = yes
+	}
+}
+
+libra_has_trade_designation = {
+	OR = {
+		has_trade_designation = yes
+		has_designation = col_libra_nanotech_trade
+	}
+}
+
+#
+
+libra_has_ascension_path = {
+	or = {
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_finished_ascension_path = {
+	or = {
+		has_tradition = tr_synthetics_finish
+		has_tradition = tr_cybernetics_finish
+		has_tradition = tr_cybernetics_assimilator_finish
+		has_tradition = tr_psionics_finish
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_genetics_finish
+		has_tradition = tr_cloning_finish
+		has_tradition = tr_purity_finish
+		has_tradition = tr_mutation_finish
+		has_tradition = tr_nanotech_finish
+		has_tradition = tr_virtuality_finish
+		has_tradition = tr_modularity_finish
+	}
+}
+
+libra_has_finished_organic_ascension_path = {
+	or = {
+		is_natural_design_empire = yes
+		has_tradition = tr_psionics_finish
+		has_tradition = tr_psionics_shroud_finish
+		has_tradition = tr_genetics_finish
+		has_tradition = tr_cloning_finish
+		has_tradition = tr_purity_finish
+		has_tradition = tr_mutation_finish
+		and = {
+			or = {
+				has_machine_age_dlc = no
+				has_country_flag = cybernetics_traditions_unlocked
+			}
+			has_tradition = tr_cybernetics_finish
+		}
+		and = {
+			or = {
+				has_machine_age_dlc = no
+				has_country_flag = synthetics_traditions_unlocked
+			}
+			has_tradition = tr_synthetics_finish
+		}
+	}
+}
+
+libra_has_cybernetic_ascension = {
+	OR = {
+		has_ascension_perk = ap_the_flesh_is_weak						# Regular
+		has_ascension_perk = ap_organo_machine_interfacing					# Hive-Mind
+		has_ascension_perk = ap_organo_machine_interfacing_assimilator				# Driven Assimilator
+		has_origin = origin_cybernetic_creed							# Early Access Origin
+		has_valid_civic = civic_augmentation_bazaars						# Restricted Civic
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+	}
+}
+
+libra_has_non_cybernetic_ascension = {
+	or = {
+		libra_has_genetic_ascension = yes
+		libra_has_psionic_ascension = yes
+		libra_has_synthetic_ascension = yes
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_genetic_ascension = {
+	OR = {
+		has_ascension_perk = ap_engineered_evolution						# Regular & Hive-Mind
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+	}
+}
+
+libra_has_non_genetic_ascension = {
+	or = {
+		libra_has_cybernetic_ascension = yes
+		libra_has_psionic_ascension = yes
+		libra_has_synthetic_ascension = yes
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_psionic_ascension = {
+	OR = {
+		has_ascension_perk = ap_mind_over_matter						# Regular
+		has_origin = origin_shroudwalker_apprentice						# Early Access Origin
+		has_origin = origin_endbringers
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+	}
+}
+
+libra_has_non_psionic_ascension = {
+	or = {
+		libra_has_genetic_ascension = yes
+		libra_has_cybernetic_ascension = yes
+		libra_has_synthetic_ascension = yes
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_synthetic_ascension = {
+	OR = {
+		has_machine_age_dlc = no
+		not = { has_ascension_perk = ap_synthetic_age }
+	}
+	OR = {
+		has_ascension_perk = ap_synthetic_evolution						# Regular
+		and = {
+			has_machine_age_dlc = no
+			has_ascension_perk = ap_synthetic_age						# Machine Intelligence
+		}
+		has_origin = origin_synthetic_fertility							# Early Access Origin
+		has_tradition = tr_synthetics_adopt
+	}
+}
+
+libra_has_non_synthetic_ascension = {
+	or = {
+		libra_has_genetic_ascension = yes
+		libra_has_psionic_ascension = yes
+		libra_has_cybernetic_ascension = yes
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_non_psionic_ascension_path = {
+	or = {
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_non_genetic_ascension_path = {
+	or = {
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_non_cloning_ascension_path = {
+	or = {
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_non_purity_ascension_path = {
+	or = {
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_non_mutation_ascension_path = {
+	or = {
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_non_cybernetic_ascension_path = {
+	or = {
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_non_synthetic_ascension_path = {
+	or = {
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_non_modularity_ascension_path = {
+	or = {
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+	}
+}
+
+libra_has_non_nanotech_ascension_path = {
+	or = {
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+libra_has_non_virtuality_ascension_path = {
+	or = {
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_modularity_adopt
+		has_tradition = tr_nanotech_adopt
+	}
+}
+
+has_multiple_ascension_path = {
+	calc_true_if = {
+		amount > 1
+		is_natural_design_empire = yes
+		has_tradition = tr_synthetics_adopt
+		has_tradition = tr_cybernetics_adopt
+		has_tradition = tr_cybernetics_assimilator_adopt
+		has_tradition = tr_psionics_adopt
+		has_tradition = tr_psionics_shroud_adopt
+		has_tradition = tr_genetics_adopt
+		has_tradition = tr_cloning_adopt
+		has_tradition = tr_purity_adopt
+		has_tradition = tr_mutation_adopt
+		has_tradition = tr_nanotech_adopt
+		has_tradition = tr_virtuality_adopt
+		has_tradition = tr_modularity_adopt
+	}
+}
+
+#
+
+libra_has_executive_ascension = {
+	or = {
+		has_ascension_perk = ap_libra_transcendent_covenant
+		has_ascension_perk = ap_libra_galaxy_ambition
+		has_ascension_perk = ap_libra_shift_in_focus
+		has_ascension_perk = ap_libra_third_choice
+		has_ascension_perk = ap_libra_ultimate_directive
+		has_ascension_perk = ap_libra_gestalt_era
+		has_ascension_perk = ap_libra_sages_notes
+		has_ascension_perk = ap_libra_collective_unity
+		has_ascension_perk = ap_libra_cardinal_cosmos
+	}
+}
+
+has_multiple_libra_executive_ascension = {
+	calc_true_if = {
+		amount > 1
+		has_ascension_perk = ap_libra_transcendent_covenant
+		has_ascension_perk = ap_libra_galaxy_ambition
+		has_ascension_perk = ap_libra_shift_in_focus
+		has_ascension_perk = ap_libra_third_choice
+		has_ascension_perk = ap_libra_ultimate_directive
+		has_ascension_perk = ap_libra_gestalt_era
+		has_ascension_perk = ap_libra_sages_notes
+		has_ascension_perk = ap_libra_collective_unity
+		has_ascension_perk = ap_libra_cardinal_cosmos
+	}
+}
+
+has_few_libra_qualified_ascension = {
+	calc_true_if = {
+		amount < 2
+		has_ascension_perk = ap_libra_valiant_heroic
+		has_ascension_perk = ap_libra_golden_rule
+		has_ascension_perk = ap_libra_genetic_potential
+		has_ascension_perk = ap_libra_warrant_of_return
+		has_ascension_perk = ap_libra_synthetic_voice
+		has_ascension_perk = ap_libra_intergalactic_junkie
+		has_ascension_perk = ap_libra_astral_blade
+		has_ascension_perk = ap_libra_ghost_mechanist
+	}
+}
+has_multiple_libra_qualified_ascension = {
+	calc_true_if = {
+		amount > 2
+		has_ascension_perk = ap_libra_valiant_heroic
+		has_ascension_perk = ap_libra_golden_rule
+		has_ascension_perk = ap_libra_genetic_potential
+		has_ascension_perk = ap_libra_warrant_of_return
+		has_ascension_perk = ap_libra_synthetic_voice
+		has_ascension_perk = ap_libra_intergalactic_junkie
+		has_ascension_perk = ap_libra_astral_blade
+		has_ascension_perk = ap_libra_ghost_mechanist
+	}
+}
+
+block_libra_advanced_ascension = {
+	or = {
+		has_crisis_level = crisis_level_1
+		has_menace_perk = menp_star_eater
+		has_crisis_level = crisis_cosmogenesis_level_1
+		has_technology = tech_cosmogenesis_world
+		has_crisis_level = crisis_behemoth_level_1
+		has_menace_perk = menp_behemoth_bioships_3
+		has_ascension_perk = ap_galactic_hyperthermia
+		has_country_flag = is_player_crisis
+	}
+}
+
+#
+
+libra_crisis_ap_check = {
+	or = {
+		has_crisis_level = crisis_level_1
+		has_menace_perk = menp_star_eater
+		has_crisis_level = crisis_cosmogenesis_level_1
+		has_technology = tech_cosmogenesis_world
+		has_crisis_level = crisis_behemoth_level_1
+		has_menace_perk = menp_behemoth_bioships_3
+		has_ascension_perk = ap_galactic_hyperthermia
+		has_country_flag = is_player_crisis
+	}
+}
+
+#
+
+can_have_libra_special_leader_traits = {
+	or = {
+		is_hidden = no
+		has_trait = leader_trait_libra_shield_machine
+	}
+}
+
+can_have_libra_special_councilor_traits = {
+	or = {
+		is_hidden = no
+		is_councilor = yes
+		has_trait = leader_trait_libra_shield_machine
+	}
+}
+
+can_have_libra_special_ruler_traits = {
+	or = {
+		is_hidden = no
+		is_councilor = no
+		is_ruler = yes
+	}
+}
+
+#
+
+can_use_libra_psalm_of_waves_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_origin = origin_libra_psalm_of_waves }
+}
+can_remove_libra_psalm_of_waves_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_origin = origin_libra_psalm_of_waves }
+}
+can_use_libra_psalm_of_waves_traits_override = {
+	hidden_trigger = {
+		exists = from
+		or = {
+			is_same_species_class = from
+			is_exact_same_species = from
+		}
+	}
+}
+
+can_use_libra_crimson_nights_traits = {
+	hidden_trigger = { exists = from }
+	has_trait = trait_libra_crimson_nights_ancestor
+	from = { has_origin = origin_libra_crimson_nights }
+}
+can_remove_libra_crimson_nights_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_origin = origin_libra_crimson_nights }
+}
+
+can_use_libra_antientropy_instruction_traits = {
+	has_trait = trait_libra_antientropy_instruction_0
+	hidden_trigger = { exists = from }
+	from = {
+		has_origin = origin_libra_antientropy_instruction
+		has_technology = tech_libra_antientropy_index_1
+	}
+}
+can_remove_libra_antientropy_instruction_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_origin = origin_libra_antientropy_instruction
+		has_technology = tech_libra_antientropy_index_1
+	}
+}
+can_use_libra_antientropy_shipsize = {
+	or = {
+		has_ascension_perk = ap_libra_ghost_mechanist
+		has_origin = origin_libra_antientropy_instruction
+	}
+}
+libra_is_antientropy_shipsize = {
+	OR = {
+		is_ship_size = libra_antientropy_instruction_warship_1
+		is_ship_size = libra_antientropy_instruction_warship_2
+		is_ship_size = libra_antientropy_instruction_warship_3
+		is_ship_size = nanite_swarmer
+		is_ship_size = nanite_interdictor
+		is_ship_size = libra_nanite_titan
+	}
+}
+
+can_use_libra_extreme_iteration_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_origin = origin_libra_extreme_iteration
+		has_technology = tech_robomodding_m
+	}
+}
+can_remove_libra_extreme_iteration_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_origin = origin_libra_extreme_iteration }
+}
+
+#
+
+libra_has_radiation_resistance = {
+	or = {
+		has_trait = trait_libra_lithoid_0
+		has_trait = trait_libra_lithoid_1
+		has_trait = trait_plantoid_radiotrophic
+		has_trait = trait_presapient_irradiated
+		has_trait = trait_survivor
+		has_trait = trait_robot_survivor
+		has_trait = trait_robot_shielded_components
+		has_trait = trait_pc_nuked_preference
+		has_trait = trait_machine_pc_nuked_preference
+	}
+}
+
+libra_has_radiation_adaptability = {
+	or = {
+		has_trait = trait_plantoid_radiotrophic
+		has_trait = trait_presapient_irradiated
+		has_trait = trait_pc_nuked_preference
+	}
+}
+
+can_add_libra_phenotypic_species_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		or = {
+			has_technology = tech_gene_tailoring
+			has_tradition = tr_mutation_unnatural_selection
+		}
+	}
+}
+can_remove_libra_phenotypic_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		or = {
+			has_tradition = tr_purity_genotype_regeneration
+			has_tradition = tr_mutation_unnatural_selection
+		}
+	}
+}
+can_remove_libra_phenotypic_growth_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		or = {
+			has_tradition = tr_cloning_somatic_synthesization
+			has_tradition = tr_purity_genotype_regeneration
+			has_tradition = tr_mutation_unnatural_selection
+		}
+	}
+}
+
+allow_libra_phenotypic_transgenic = {
+	hidden_trigger = {
+		nor = {
+			has_trait = trait_latent_psionic
+			has_trait = trait_psionic
+			has_trait = trait_limited_cybernetic
+			has_trait = trait_cybernetic
+		}
+		exists = from
+		from = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_mutation_unnatural_selection
+			has_technology = tech_libra_mutation_encoding
+		}
+	}
+}
+
+allow_libra_necroid_transgenic = {
+	hidden_trigger = {
+		nor = {
+			has_trait = trait_limited_cybernetic
+			has_trait = trait_cybernetic
+		}
+		exists = from
+		from = {
+			is_variable_set = libra_aa_path
+			has_tradition = tr_mutation_unnatural_selection
+			has_technology = tech_libra_mutation_encoding
+		}
+	}
+}
+
+can_use_libra_cutefied_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		is_variable_set = libra_aa_path
+		has_ascension_perk = ap_libra_cutefied_world
+		check_variable = { which = libra_aa_path value = 31 }
+	}
+}
+can_add_libra_cutefied_negative_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_ascension_perk = ap_libra_cutefied_world }
+}
+can_remove_libra_cutefied_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_ascension_perk = ap_libra_cutefied_world }
+}
+
+can_use_libra_purity_traits = {
+	hidden_trigger = { exists = from }
+	nor = {
+		has_trait = trait_latent_psionic
+		has_trait = trait_psionic
+		has_trait = trait_limited_cybernetic
+		has_trait = trait_cybernetic
+	}
+	from = {
+		has_technology = tech_libra_purity_traits
+		is_variable_set = libra_aa_path
+	}
+}
+can_remove_libra_purity_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_tradition = tr_purity_finish }
+}
+
+#
+
+can_use_libra_prosthesis_traits_override = {
+	hidden_trigger = {
+		or = {
+			has_trait = trait_limited_cybernetic
+			has_trait = trait_cybernetic
+		}
+	}
+}
+can_use_libra_universal_prosthesis_traits = {
+	hidden_trigger = { exists = from }
+	or = {
+		has_trait = trait_limited_cybernetic
+		has_trait = trait_cybernetic
+		is_robotic = yes
+	}
+	nor = {
+		has_trait = trait_latent_psionic
+		has_trait = trait_psionic
+		has_trait = trait_robot_latent_psionic
+		has_trait = trait_robot_psionic
+		has_trait = trait_robot_digital_1
+		has_trait = trait_robot_digital_2
+		is_archetype = LIBRACUTE
+	}
+	from = {
+		has_technology = tech_libra_universal_prosthesis
+		is_variable_set = libra_aa_path
+	}
+}
+can_remove_libra_universal_prosthesis_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		or = {
+			has_tradition = tr_cybernetics_integrated_anatomy
+			has_tradition = tr_cybernetics_assimilator_integrated_anatomy
+		}
+	}
+}
+
+can_use_libra_multiprosthesis_integration_traits = {
+	hidden_trigger = { exists = from }
+	or = {
+		has_trait = trait_limited_cybernetic
+		has_trait = trait_cybernetic
+		is_robotic = yes
+	}
+	nor = {
+		has_trait = trait_latent_psionic
+		has_trait = trait_psionic
+		has_trait = trait_robot_latent_psionic
+		has_trait = trait_robot_psionic
+		has_trait = trait_erudite
+		has_trait = trait_robot_digital_1
+		has_trait = trait_robot_digital_2
+		is_archetype = LIBRACUTE
+	}
+	from = {
+		has_technology = tech_libra_multiprosthesis_integration
+		is_variable_set = libra_aa_path
+	}
+}
+can_remove_libra_multiprosthesis_integration_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_technology = tech_libra_multiprosthesis_integration
+		or = {
+			has_tradition = tr_cybernetics_integrated_anatomy
+			has_tradition = tr_cybernetics_assimilator_integrated_anatomy
+		}
+	}
+}
+
+#
+
+can_use_libra_synthetic_command_traits = {
+	hidden_trigger = { exists = from }
+	nor = {
+		has_trait = trait_robot_latent_psionic
+		has_trait = trait_robot_psionic
+		has_trait = trait_robot_digital_2
+	}
+	from = {
+		has_technology = tech_libra_synthetic_commands
+		is_variable_set = libra_aa_path
+	}
+}
+can_remove_libra_synthetic_command_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_technology = tech_libra_synthetic_commands
+		has_tradition = tr_synthetics_finish
+	}
+}
+
+can_use_libra_synthetic_leader_traits = {
+	is_hidden = no
+	not = { has_leader_flag = has_libra_extra_veteran_trait }
+	has_base_skill < 10
+	or = {
+		has_base_skill > 5
+		has_total_skill > 6
+	}
+	species = { is_robotic = yes }
+	exists = owner
+	owner = { has_tradition = tr_synthetics_finish }
+}
+
+can_use_libra_cosmological_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_ascension_perk = ap_libra_cosmological_constant
+		is_variable_set = libra_aa_path
+		check_variable = { which = libra_aa_path value = 50 }
+	}
+	nor = {
+		has_trait = trait_robot_digital_2
+		has_trait = trait_robot_latent_psionic
+		has_trait = trait_robot_psionic
+	}
+}
+can_remove_libra_cosmological_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_ascension_perk = ap_libra_cosmological_constant }
+}
+
+#
+
+can_use_libra_modularity_traits = {
+	hidden_trigger = { exists = from }
+	nor = {
+		has_trait = trait_robot_digital_1
+		has_trait = trait_robot_digital_2
+		has_trait = trait_robot_latent_psionic
+		has_trait = trait_robot_psionic
+	}
+	from = {
+		has_technology = tech_libra_modular_trait_points_1
+		is_variable_set = libra_aa_path
+	}
+}
+can_remove_libra_modularity_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_tradition = tr_modularity_finish }
+}
+
+can_use_libra_atomic_heart_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_ascension_perk = ap_libra_atomic_heart
+		is_variable_set = libra_aa_path
+		check_variable = { which = libra_aa_path value = 60 }
+	}
+	nor = {
+		has_trait = trait_robot_digital_1
+		has_trait = trait_robot_digital_2
+		has_trait = trait_robot_latent_psionic
+		has_trait = trait_robot_psionic
+	}
+}
+can_remove_libra_atomic_heart_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_ascension_perk = ap_libra_atomic_heart }
+}
+
+#
+
+can_use_libra_nanotech_components = {
+	OR = {
+		is_ship_class = shipclass_starbase
+		is_ship_class = shipclass_military_station
+		is_ship_size = juggernaut
+		is_ship_size = nanite_swarmer
+		is_ship_size = nanite_interdictor
+		is_ship_size = libra_nanite_titan
+		is_ship_size = libra_small_ship_synthetic
+		is_ship_size = libra_large_ship_synthetic
+		is_ship_size = libra_synthetic_mothership
+		is_ship_size = libra_junkie_corvette
+		is_ship_size = libra_junkie_destroyer
+		is_ship_size = libra_junkie_cruiser
+		is_ship_size = libra_junkie_battleship
+		is_ship_size = libra_antientropy_instruction_warship_1
+		is_ship_size = libra_antientropy_instruction_warship_2
+		is_ship_size = libra_antientropy_instruction_warship_3
+	}
+}
+
+#
+
+can_use_libra_psionic_leader_traits = {
+	has_base_skill <= 10
+	species = {
+		or = {
+			has_trait = trait_latent_psionic
+			has_trait = trait_psionic
+			has_trait = trait_robot_latent_psionic
+			has_trait = trait_robot_psionic
+		}
+	}
+}
+
+can_use_libra_psionic_veteran_traits = {
+	can_have_libra_special_councilor_traits = yes
+	has_base_skill < 10
+	not = { has_leader_flag = has_libra_extra_veteran_trait }
+	or = {
+		has_trait = leader_trait_psionic
+		has_trait = leader_trait_chosen
+	}
+	exists = owner
+	owner = {
+		or = {
+			has_tradition = tr_psionics_finish
+			has_tradition = tr_psionics_shroud_great_awakening
+		}
+	}
+}
+
+can_use_libra_psychic_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		is_variable_set = libra_aa_path
+		has_ascension_perk = ap_libra_liber_genesis
+		check_variable = { which = libra_aa_path value = 91 }
+	}
+	nor = {
+		has_trait = trait_limited_cybernetic
+		has_trait = trait_cybernetic
+		has_trait = trait_robot_digital_1
+		has_trait = trait_robot_digital_2
+		is_archetype = LIBRACUTE
+	}
+}
+can_remove_libra_psychic_traits = {
+	hidden_trigger = { exists = from }
+	from = { has_ascension_perk = ap_libra_liber_genesis }
+}
+is_libra_psychic_acceptor_species = {
+	hidden_trigger = {
+		or = {
+			has_trait = trait_latent_psionic
+			has_trait = trait_psionic
+			has_trait = trait_robot_latent_psionic
+			has_trait = trait_robot_psionic
+		}
+	}
+}
+
+libra_has_non_psionic_shields = {
+	OR = {
+		has_non_psionic_shields = yes
+		has_component = SMALL_LIBRA_ASTRAL_SHIELD
+		has_component = MEDIUM_LIBRA_ASTRAL_SHIELD
+		has_component = LARGE_LIBRA_ASTRAL_SHIELD
+		has_component = SMALL_LIBRA_ANTIENTROPY_SHIELD_1
+		has_component = MEDIUM_LIBRA_ANTIENTROPY_SHIELD_1
+		has_component = LARGE_LIBRA_ANTIENTROPY_SHIELD_1
+		has_component = SMALL_LIBRA_ANTIENTROPY_SHIELD_2
+		has_component = MEDIUM_LIBRA_ANTIENTROPY_SHIELD_2
+		has_component = LARGE_LIBRA_ANTIENTROPY_SHIELD_2
+		has_component = SMALL_LIBRA_ANTIENTROPY_SHIELD_3
+		has_component = MEDIUM_LIBRA_ANTIENTROPY_SHIELD_3
+		has_component = LARGE_LIBRA_ANTIENTROPY_SHIELD_3
+		has_component = SMALL_LIBRA_NANITE_BARRIER
+		has_component = MEDIUM_LIBRA_NANITE_BARRIER
+		has_component = LARGE_LIBRA_NANITE_BARRIER
+	}
+}
+
+#
+
+can_select_libra_corrupt_leader_traits = {
+	is_hidden = no
+	has_base_skill <= 10
+	not = { has_leader_flag = libra_has_corrupt_leader_trait }
+	exists = owner
+	owner = { has_tradition = tr_libra_degeneracy_2 }
+}
+
+#
+
+can_libra_adventure_give_aesthetic_wonders = {
+	count_exhibit = {
+		count < 13
+		limit = { is_specimen_category = aesthetic_wonder }
+	}
+	or = {
+		can_give_specimen = libra_adventure_aesthetic_wonders_1
+		can_give_specimen = libra_adventure_aesthetic_wonders_2
+		can_give_specimen = libra_adventure_aesthetic_wonders_3
+		can_give_specimen = libra_adventure_aesthetic_wonders_4
+		can_give_specimen = libra_adventure_aesthetic_wonders_5
+		can_give_specimen = libra_adventure_aesthetic_wonders_6
+		can_give_specimen = libra_adventure_aesthetic_wonders_7
+		can_give_specimen = libra_adventure_aesthetic_wonders_8
+		can_give_specimen = libra_adventure_aesthetic_wonders_9
+		can_give_specimen = libra_adventure_aesthetic_wonders_10
+	}
+}
+
+can_libra_adventure_give_other_than_aesthetic_wonders = {
+	or = {
+		can_libra_adventure_give_historical_items = yes
+		can_libra_adventure_give_xeno_geology = yes
+	}
+}
+
+can_libra_adventure_give_historical_items = {
+	count_exhibit = {
+		count < 13
+		limit = { is_specimen_category = historical_item }
+	}
+	or = {
+		can_give_specimen = libra_adventure_historical_items_1
+		can_give_specimen = libra_adventure_historical_items_2
+		can_give_specimen = libra_adventure_historical_items_3
+		can_give_specimen = libra_adventure_historical_items_4
+		can_give_specimen = libra_adventure_historical_items_5
+		can_give_specimen = libra_adventure_historical_items_6
+		can_give_specimen = libra_adventure_historical_items_7
+		can_give_specimen = libra_adventure_historical_items_8
+		can_give_specimen = libra_adventure_historical_items_9
+		can_give_specimen = libra_adventure_historical_items_10
+	}
+}
+
+can_libra_adventure_give_other_than_historical_items = {
+	or = {
+		can_libra_adventure_give_aesthetic_wonders = yes
+		can_libra_adventure_give_xeno_geology = yes
+	}
+}
+
+can_libra_adventure_give_xeno_geology = {
+	count_exhibit = {
+		count < 13
+		limit = { is_specimen_category = xeno_geology }
+	}
+	or = {
+		can_give_specimen = libra_adventure_xeno_geology_1
+		can_give_specimen = libra_adventure_xeno_geology_2
+		can_give_specimen = libra_adventure_xeno_geology_3
+		can_give_specimen = libra_adventure_xeno_geology_4
+		can_give_specimen = libra_adventure_xeno_geology_5
+		can_give_specimen = libra_adventure_xeno_geology_6
+		can_give_specimen = libra_adventure_xeno_geology_7
+		can_give_specimen = libra_adventure_xeno_geology_8
+		can_give_specimen = libra_adventure_xeno_geology_9
+		can_give_specimen = libra_adventure_xeno_geology_10
+	}
+}
+
+can_libra_adventure_give_other_than_xeno_geology = {
+	or = {
+		can_libra_adventure_give_aesthetic_wonders = yes
+		can_libra_adventure_give_historical_items = yes
+	}
+}
+
+#
+
+is_libra_monster_hunter_empire = {
+}
+
+libra_is_designable_libra_shipsize = {
+	OR = {
+		is_ship_size = libra_adventure_asteroid
+		is_ship_size = libra_small_ship_synthetic
+		is_ship_size = libra_large_ship_synthetic
+		is_ship_size = libra_synthetic_mothership
+		is_ship_size = libra_junkie_corvette
+		is_ship_size = libra_junkie_destroyer
+		is_ship_size = libra_junkie_cruiser
+		is_ship_size = libra_junkie_battleship
+		is_ship_size = libra_crimson_nights_warship
+		#is_ship_size = 
+		is_ship_size = libra_dragonborn_small
+		is_ship_size = libra_dragonborn_medium
+		is_ship_size = libra_dragonborn_large
+		is_ship_size = libra_antientropy_instruction_warship_1
+		is_ship_size = libra_antientropy_instruction_warship_2
+		is_ship_size = libra_antientropy_instruction_warship_3
+	}
+}
+
+libra_is_designable_crisis_shipsize = {
+	OR = {
+		is_ship_size = crisis_corvette
+		is_ship_size = crisis_destroyer
+		is_ship_size = crisis_cruiser
+		is_ship_size = star_eater
+		is_ship_size = cosmo_crisis_destroyer
+		is_ship_size = cosmo_crisis_battlecruiser
+		is_ship_size = cosmo_crisis_titan
+		is_ship_size = cosmo_crisis_mauler
+		is_ship_size = cosmo_crisis_weaver
+		is_ship_size = cosmo_crisis_harbinger
+		is_ship_size = cosmo_crisis_stinger
+		is_ship_size = ember_cruiser
+		is_ship_size = ember_battleship
+	}
+}
+
+libra_is_designable_mac_crisis_shipsize = {
+	OR = {
+		is_ship_size = crisis_corvette
+		is_ship_size = crisis_destroyer
+		is_ship_size = crisis_cruiser
+		is_ship_size = star_eater
+		is_ship_size = cosmo_crisis_destroyer
+		is_ship_size = cosmo_crisis_battlecruiser
+		is_ship_size = cosmo_crisis_titan
+		is_ship_size = ember_cruiser
+		is_ship_size = ember_battleship
+	}
+}
+
+libra_is_designable_bio_crisis_shipsize = {
+	OR = {
+		is_ship_size = cosmo_crisis_mauler
+		is_ship_size = cosmo_crisis_weaver
+		is_ship_size = cosmo_crisis_harbinger
+		is_ship_size = cosmo_crisis_stinger
+	}
+}
+
+libra_can_clear_blockers = {
+	switch = {
+		trigger = is_planet_class
+		pc_nanotech = {
+			owner = { not = { has_tradition = tr_nanotech_3 } }
+		}
+	#	pc_libra_apostle = {
+	#		owner = { libra_has_psionic_ascension = no }
+	#	}
+	}
+}

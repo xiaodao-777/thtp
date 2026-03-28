@@ -1,0 +1,701 @@
+# #############
+# Astral
+#############
+
+component_set = {
+	key = "LIBRA_ASTRAL_LASER"
+
+	icon = "GFX_ship_part_libra_astral_laser"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_LASER_BIO"
+
+	icon = "GFX_ship_part_libra_astral_laser_bio"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_BLAST"
+
+	icon = "GFX_ship_part_libra_astral_blast"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_BLAST_BIO"
+
+	icon = "GFX_ship_part_libra_astral_blast_bio"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_MUTATION_BLAST"
+
+	icon = "GFX_ship_part_libra_astral_blast_bio"
+	is_space_fauna_component_set = yes
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_LANCE"
+
+	icon = "GFX_ship_part_libra_astral_lance"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_TORPEDO"
+
+	icon = "GFX_ship_part_libra_astral_torpedo"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_TORPEDO_BIO"
+
+	icon = "GFX_ship_part_libra_astral_torpedo_bio"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_MUTATION_TORPEDO"
+
+	icon = "GFX_ship_part_libra_astral_torpedo_bio"
+	is_space_fauna_component_set = yes
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_KINETIC_ARTILLERY"
+
+	icon = "GFX_ship_part_libra_astral_kinetic_artillery"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_KINETIC_ARTILLERY_BIO"
+
+	icon = "GFX_ship_part_libra_astral_kinetic_artillery_bio"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_MUTATION_KINETIC_ARTILLERY"
+
+	icon = "GFX_ship_part_libra_astral_mass_accelerator_bio"
+	is_space_fauna_component_set = yes
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_MASS_ACCELERATOR"
+
+	icon = "GFX_ship_part_libra_astral_mass_accelerator"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_MASS_ACCELERATOR_BIO"
+
+	icon = "GFX_ship_part_libra_astral_mass_accelerator_bio"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_FLAK"
+
+	icon = "GFX_ship_part_libra_astral_flak_batteries"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_FLAK_BIO"
+
+	icon = "GFX_ship_part_libra_astral_flak_batteries_bio"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_MUTATION_FLAK"
+
+	icon = "GFX_ship_part_libra_astral_flak_batteries"
+	is_space_fauna_component_set = yes
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_MISSILES"
+
+	icon = "GFX_ship_part_libra_astral_missiles"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_MISSILES_BIO"
+
+	icon = "GFX_ship_part_libra_astral_missiles_bio"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_STRIKE_CRAFT"
+
+	icon = "GFX_ship_part_libra_astral_strike_craft"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_STRIKE_CRAFT_BIO"
+
+	icon = "GFX_ship_part_libra_astral_strike_craft_bio"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_REACTOR"
+
+	icon = "GFX_ship_part_libra_astral_reactor"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_REACTOR_BIO"
+
+	icon = "GFX_ship_part_libra_astral_reactor_bio"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_SHIELD"
+
+	icon = "GFX_ship_part_libra_astral_shield"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_SHIELD_BIO"
+
+	icon = "GFX_ship_part_libra_astral_shield_bio"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_MUTATION_SHIELD"
+
+	icon = "GFX_ship_part_libra_astral_shield_bio"
+	is_space_fauna_component_set = yes
+}
+
+component_set = {
+	key = "LIBRA_ASTRAL_ARMOR"
+
+	icon = "GFX_ship_part_libra_astral_armor"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_ARMOR_BIO"
+
+	icon = "GFX_ship_part_libra_astral_armor_bio"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ASTRAL_MUTATION_ARMOR"
+
+	icon = "GFX_ship_part_libra_astral_armor_bio"
+	is_space_fauna_component_set = yes
+}
+
+# #############
+# Dragonborn
+#############
+
+component_set = {
+	key = "libra_dragonborn_aura"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_1_X"
+
+	icon = "GFX_ship_part_libra_dragon_breath_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_1_T"
+
+	icon = "GFX_ship_part_libra_dragon_breath_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_2_X"
+
+	icon = "GFX_ship_part_libra_dragon_breath_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_2_T"
+
+	icon = "GFX_ship_part_libra_dragon_breath_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_3_X"
+
+	icon = "GFX_ship_part_libra_dragon_breath_3"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_3_T"
+
+	icon = "GFX_ship_part_libra_dragon_breath_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_LIGHT_X"
+
+	icon = "GFX_ship_part_libra_dragon_breath_light"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_LIGHT_T"
+
+	icon = "GFX_ship_part_libra_dragon_breath_light"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_DARK_X"
+
+	icon = "GFX_ship_part_libra_dragon_breath_dark"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_DRAGON_BREATH_DARK_T"
+
+	icon = "GFX_ship_part_libra_dragon_breath_dark"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGON_WING_SKEWER_A"
+
+	icon = "GFX_ship_part_libra_dragon_wing_skewer_a"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGON_WING_SKEWER_B"
+
+	icon = "GFX_ship_part_libra_dragon_wing_skewer_b"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGON_WING_SKEWER_C"
+
+	icon = "GFX_ship_part_libra_dragon_wing_skewer_c"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGONBORN_LASER"
+
+	icon = "GFX_ship_part_libra_dragonborn_laser"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGONBORN_TORPEDO"
+
+	icon = "GFX_ship_part_libra_dragonborn_torpedo"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGONBORN_ARTILLERY"
+
+	icon = "GFX_ship_part_libra_dragonborn_artillery"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGONBORN_STRIKE_CRAFT"
+
+	icon = "GFX_ship_part_libra_dragonborn_strike_craft"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGONBORN_SHIELD"
+
+	icon = "GFX_ship_part_libra_dragonborn_shield"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DRAGONBORN_ARMOR"
+
+	icon = "GFX_ship_part_libra_dragonborn_armor"
+	icon_frame = 1
+}
+
+# #############
+# Crimson Nights
+#############
+
+component_set = {
+	key = "LIBRA_VAMPIRE_BEAM_1"
+
+	icon = "GFX_ship_part_libra_vampire_beam_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_VAMPIRE_BEAM_2"
+
+	icon = "GFX_ship_part_libra_vampire_beam_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_VAMPIRE_ENERGY_LANCE"
+
+	icon = "GFX_ship_part_libra_vampire_energy_lance"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_VAMPIRE_KINETIC_ARTILLERY"
+
+	icon = "GFX_ship_part_libra_vampire_kinetic_artillery"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_VAMPIRE_STRIKE_CRAFT"
+
+	icon = "GFX_ship_part_libra_vampire_strike_craft"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_VAMPIRE_TORPEDOES"
+
+	icon = "GFX_ship_part_libra_vampire_torpedoes"
+	icon_frame = 1
+}
+
+# #############
+# Anti-entropy Instruction
+#############
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_LASER_1"
+
+	icon = "GFX_ship_part_libra_antientropy_laser_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_LASER_2"
+
+	icon = "GFX_ship_part_libra_antientropy_laser_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_LASER_3"
+
+	icon = "GFX_ship_part_libra_antientropy_laser_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_ENERGY_LANCE"
+
+	icon = "GFX_ship_part_libra_antientropy_energy_lance"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_POINT_DEFENCE"
+
+	icon = "GFX_ship_part_libra_antientropy_point_defense"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_MASS_ACCELERATOR"
+
+	icon = "GFX_ship_part_libra_antientropy_mass_accelerator"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_FLAK_BATTERY"
+
+	icon = "GFX_ship_part_libra_antientropy_flak_batteries"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_MISSILES_1"
+
+	icon = "GFX_ship_part_libra_antientropy_missiles_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_MISSILES_2"
+
+	icon = "GFX_ship_part_libra_antientropy_missiles_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_MISSILES_3"
+
+	icon = "GFX_ship_part_libra_antientropy_missiles_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_TORPEDO"
+
+	icon = "GFX_ship_part_libra_antientropy_torpedo"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_STRIKE_CRAFT_1"
+
+	icon = "GFX_ship_part_libra_antientropy_strike_craft_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_STRIKE_CRAFT_2"
+
+	icon = "GFX_ship_part_libra_antientropy_strike_craft_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_SHIELD_1"
+
+	icon = "GFX_ship_part_libra_antientropy_shield_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_SHIELD_2"
+
+	icon = "GFX_ship_part_libra_antientropy_shield_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_SHIELD_3"
+
+	icon = "GFX_ship_part_libra_antientropy_shield_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ANTIENTROPY_ARMOR_1"
+
+	icon = "GFX_ship_part_libra_antientropy_armor_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_ARMOR_2"
+
+	icon = "GFX_ship_part_libra_antientropy_armor_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "LIBRA_ANTIENTROPY_ARMOR_3"
+
+	icon = "GFX_ship_part_libra_antientropy_armor_3"
+	icon_frame = 1
+}
+
+# #############
+# Cutefied World
+#############
+
+component_set = {
+	key = "LIBRA_CUTE_MONITOR"
+
+	icon = "GFX_ship_part_libra_cute_monitor"
+	icon_frame = 1
+}
+
+# #############
+# Leviathan
+#############
+
+component_set = {
+	key = "libra_machine_leviathan_aura"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_DREADNOUGHT_LANCE"
+
+	icon = "GFX_ship_part_libra_dragon_breath_light"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_SCAVENGER_CANNON"
+
+	icon = "GFX_ship_part_libra_nanite_mass_accelerator_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_ancient_station_ftl_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_hyperdrive"
+	icon_frame = 1
+}
+
+# #############
+# Atomic Heart
+#############
+
+component_set = {
+	key = "COMBAT_COMPUTER_LIBRA_ATOMIC"
+
+	icon = "GFX_ship_part_computer_libra_atomic"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_ATOMIC_REACTOR_BOOSTER"
+
+	icon = "GFX_ship_part_libra_atomic_reactor_booster"
+	icon_frame = 1
+}
+
+# #############
+# Nanite
+#############
+
+component_set = {
+	key = "LIBRA_NANITE_BARRIER"
+
+	icon = "GFX_ship_part_libra_nanite_barrier"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_NANITE_TORPEDOES_1"
+
+	icon = "GFX_ship_part_libra_nanite_torpedoes_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_NANITE_TORPEDOES_2"
+
+	icon = "GFX_ship_part_libra_nanite_torpedoes_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_NANITE_KINETIC_ARTILLERY_1"
+
+	icon = "GFX_ship_part_libra_nanite_kinetic_artillery_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_NANITE_MASS_ACCELERATOR_1"
+
+	icon = "GFX_ship_part_libra_nanite_mass_accelerator_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_NANITE_ENERGY_ARC_1"
+
+	icon = "GFX_ship_part_libra_nanite_energy_arc_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_CRAFT_LIBRA_NANITE_1"
+
+	icon = "GFX_ship_part_libra_nanite_trike_craft_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_CRAFT_LIBRA_NANITE_2"
+
+	icon = "GFX_ship_part_libra_nanite_trike_craft_2"
+	icon_frame = 1
+}
+
+
+# #############
+# Psionic
+#############
+
+component_set = {
+	key = "LIBRA_PSI_ARMOR"
+
+	icon = "GFX_ship_part_libra_psionic_armor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_PSI_ENERGY_LANCE"
+
+	icon = "GFX_ship_part_libra_psionic_energy_lance"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_PSI_MASS_ACCELERATOR"
+
+	icon = "GFX_ship_part_libra_psionic_mass_accelerator"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_PSI_STRIKE_CRAFT"
+
+	icon = "GFX_ship_part_libra_psionic_strike_craft"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_PSI_ENERGY_BLAST"
+
+	icon = "GFX_ship_part_libra_psionic_energy_blast"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "LIBRA_PSI_AUTOCANNON"
+
+	icon = "GFX_ship_part_libra_psionic_autocannons"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "libra_psionic_avatar_aura"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}

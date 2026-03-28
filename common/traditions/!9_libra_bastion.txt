@@ -1,0 +1,109 @@
+tr_libra_bastion_adopt = {
+	unlocks_agenda = agenda_libra_bastion
+	modifier = {
+		country_starbase_capacity_add = 3
+		espionage_hostile_operation_difficulty_add = 1
+	}
+	possible = {
+		if = {
+			limit = { not = { has_origin = origin_libra_centurion } }
+			has_technology = tech_planetary_shield_generator
+		}
+	}
+}
+
+tr_libra_bastion_finish = {
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = libra_origin.1830 }
+		}
+	}
+	modifier = {
+		starbase_defense_platform_capacity_add = 5
+		ascension_perks_add = 1
+	}
+}
+
+tr_libra_bastion_1 = {
+	modifier = {
+		army_defense_health_mult = 0.5
+		army_defense_damage_mult = 0.5
+	}
+	custom_tooltip_with_modifiers = tr_libra_bastion_1_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_bastion_2 = {
+	modifier = {
+		ship_friendly_territory_armor_mult = 0.5
+		ship_friendly_territory_shield_mult = 0.5
+	}
+	custom_tooltip_with_modifiers = tr_libra_bastion_2_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_bastion_3 = {
+	possible = {
+		has_tradition = tr_libra_bastion_1
+	}
+	modifier = {
+		starbase_upgrade_speed_mult = 0.5
+		starbase_upgrade_cost_mult = -0.1
+	}
+	custom_tooltip_with_modifiers = tr_libra_bastion_3_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_bastion_4 = {
+	possible = {
+		has_tradition = tr_libra_bastion_1
+		has_tradition = tr_libra_bastion_2
+	}
+	modifier = {
+		starbase_defensive_war_ship_build_speed_mult = 0.5
+		deep_space_citadel_limit_add = 1
+	}
+	triggered_modifier = {
+		potential = { is_variable_set = libra_bastion_4 }
+		country_war_exhaustion_mult = -0.01
+		ship_weapon_damage = 0.1
+		ship_home_territory_fire_rate_mult = 0.1
+		mult = this.libra_bastion_4
+	}
+	custom_tooltip = tr_libra_bastion_4_desc
+
+	ai_weight = {
+		factor = 3000
+		modifier = {
+			add = 4000
+			or = {
+				is_at_war = yes
+				has_crisis = yes
+			}
+		}
+	}
+}
+
+tr_libra_bastion_5 = {
+	possible = {
+		has_tradition = tr_libra_bastion_2
+	}
+	modifier = {
+		shipsize_military_station_small_build_speed_mult = 0.5
+		ship_military_station_small_cost_mult = -0.1
+		ship_orbit_upkeep_mult = -0.1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

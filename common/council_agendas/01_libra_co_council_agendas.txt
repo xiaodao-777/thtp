@@ -1,0 +1,866 @@
+@base_agenda_cost = 7000
+@half_agenda_cost = 3500
+
+agenda_libra_praises_to_life = {
+	agenda_cost = @base_agenda_cost
+ 	agenda_cooldown = 7200
+
+	potential = {
+		has_origin = origin_libra_praises_to_life
+	}
+
+	effect = {
+		custom_tooltip = agenda_libra_praises_to_life_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.0103 }
+		}
+	}
+
+	ai_weight = {
+		base = 1000
+		modifier = {
+			factor = 0.5
+			is_variable_set = libra_ceremony_count
+			check_variable = {
+				which = libra_ceremony_count
+				value > 11
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_psalm_of_waves_a = {
+	agenda_cost = @half_agenda_cost
+	agenda_cooldown = 7200
+
+	potential = {
+		has_origin = origin_libra_psalm_of_waves
+	}
+
+	effect = {
+		custom_tooltip = agenda_libra_psalm_of_waves_a_effect
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_base_skill <= 10
+					leader_class = commander
+				}
+				if = {
+					limit = {
+						not = { has_trait = leader_trait_libra_psalm_of_waves_commander_3 }
+					}
+					switch = {
+						trigger = has_trait
+						default = {
+							add_trait = { trait = leader_trait_libra_psalm_of_waves_commander show_message = no }
+						}
+						leader_trait_libra_psalm_of_waves_commander = {
+							remove_trait = leader_trait_libra_psalm_of_waves_commander
+							add_trait = { trait = leader_trait_libra_psalm_of_waves_commander_2 show_message = no }
+						}
+						leader_trait_libra_psalm_of_waves_commander_2 = {
+							remove_trait = leader_trait_libra_psalm_of_waves_commander_2
+							add_trait = { trait = leader_trait_libra_psalm_of_waves_commander_3 show_message = no }
+						}
+					}
+				}
+				if = {
+					limit = { 
+						has_base_skill < 10
+					}
+					add_experience = value:libra_psalm_of_waves_exp_reward
+				}
+			}
+			create_message = {
+				type = MESSAGE_ALL_GAINED_TRAIT
+				localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+				days = @toast_message_days
+				variable = {
+					type = key
+					value = leader_trait_libra_psalm_of_waves_commander
+					localization = TRAIT
+				}
+				variable = {
+					key = TRAIT_KEY
+					value = leader_trait_libra_psalm_of_waves_commander
+				}
+				variable = {
+					key = "border"
+					value = "GFX_invisible"
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 900
+	}
+}
+
+agenda_libra_psalm_of_waves_b = {
+	agenda_cost = @half_agenda_cost
+	agenda_cooldown = 7200
+
+	potential = {
+		has_origin = origin_libra_psalm_of_waves
+	}
+
+	effect = {
+		custom_tooltip = agenda_libra_psalm_of_waves_b_effect
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_base_skill <= 10
+					leader_class = official
+				}
+				if = {
+					limit = {
+						not = { has_trait = leader_trait_libra_psalm_of_waves_official_3 }
+					}
+					switch = {
+						trigger = has_trait
+						default = {
+							add_trait = { trait = leader_trait_libra_psalm_of_waves_official show_message = no }
+						}
+						leader_trait_libra_psalm_of_waves_official = {
+							remove_trait = leader_trait_libra_psalm_of_waves_official
+							add_trait = { trait = leader_trait_libra_psalm_of_waves_official_2 show_message = no }
+						}
+						leader_trait_libra_psalm_of_waves_official_2 = {
+							remove_trait = leader_trait_libra_psalm_of_waves_official_2
+							add_trait = { trait = leader_trait_libra_psalm_of_waves_official_3 show_message = no }
+						}
+					}
+				}
+				if = {
+					limit = { 
+						has_base_skill < 10
+					}
+					add_experience = value:libra_psalm_of_waves_exp_reward
+				}
+			}
+			create_message = {
+				type = MESSAGE_ALL_GAINED_TRAIT
+				localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+				days = @toast_message_days
+				variable = {
+					type = key
+					value = leader_trait_libra_psalm_of_waves_official
+					localization = TRAIT
+				}
+				variable = {
+					key = TRAIT_KEY
+					value = leader_trait_libra_psalm_of_waves_official
+				}
+				variable = {
+					key = "border"
+					value = "GFX_invisible"
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 900
+	}
+}
+
+agenda_libra_psalm_of_waves_c = {
+	agenda_cost = @half_agenda_cost
+	agenda_cooldown = 7200
+
+	potential = {
+		has_origin = origin_libra_psalm_of_waves
+	}
+
+	effect = {
+		custom_tooltip = agenda_libra_psalm_of_waves_c_effect
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_base_skill <= 10
+					leader_class = scientist
+				}
+				if = {
+					limit = {
+						not = { has_trait = leader_trait_libra_psalm_of_waves_scientist_3 }
+					}
+					switch = {
+						trigger = has_trait
+						default = {
+							add_trait = { trait = leader_trait_libra_psalm_of_waves_scientist show_message = no }
+						}
+						leader_trait_libra_psalm_of_waves_scientist = {
+							remove_trait = leader_trait_libra_psalm_of_waves_scientist
+							add_trait = { trait = leader_trait_libra_psalm_of_waves_scientist_2 show_message = no }
+						}
+						leader_trait_libra_psalm_of_waves_scientist_2 = {
+							remove_trait = leader_trait_libra_psalm_of_waves_scientist_2
+							add_trait = { trait = leader_trait_libra_psalm_of_waves_scientist_3 show_message = no }
+						}
+					}
+				}
+				if = {
+					limit = { 
+						has_base_skill < 10
+					}
+					add_experience = value:libra_psalm_of_waves_exp_reward
+				}
+			}
+			create_message = {
+				type = MESSAGE_ALL_GAINED_TRAIT
+				localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+				days = @toast_message_days
+				variable = {
+					type = key
+					value = leader_trait_libra_psalm_of_waves_scientist
+					localization = TRAIT
+				}
+				variable = {
+					key = TRAIT_KEY
+					value = leader_trait_libra_psalm_of_waves_scientist
+				}
+				variable = {
+					key = "border"
+					value = "GFX_invisible"
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 900
+	}
+}
+
+#
+
+agenda_libra_ultimate_market = {
+	agenda_cost = @half_agenda_cost
+ 	agenda_cooldown = 3600
+
+	potential = {
+		has_origin = origin_libra_ultimate_market
+	}
+
+	modifier = {
+		pop_government_ethic_attraction = 0.2
+		pop_ethics_shift_speed_mult = 0.2
+	}
+ 	finish_modifier = agenda_libra_ultimate_market_modifier
+	effect = {
+		custom_tooltip = libra_policy_cooldown_effect
+		hidden_effect = {
+			reset_policy_cooldowns = yes
+		}
+	}
+}
+
+#
+
+agenda_libra_crimson_vampire = {
+	agenda_cost = 6666
+ 	agenda_cooldown = 6666
+
+	potential = {
+		has_origin = origin_libra_crimson_nights
+	}
+
+	allow = {
+		has_tradition = tr_libra_crimson_vampire_adopt
+	}
+	modifier = {
+		council_agenda_progress_speed = 0.66
+	}
+ 	#finish_modifier = agenda_libra_crimson_vampire_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_crimson_vampire_finish_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.0504 }
+		}
+	}
+	ai_weight = {
+		base = 2000
+	}
+}
+
+agenda_libra_crimson_ancestor = {
+	agenda_cost = 6666
+ 	agenda_cooldown = 6666
+
+	potential = {
+		has_origin = origin_libra_crimson_nights
+	}
+
+	allow = {
+		has_tradition = tr_libra_crimson_ancestor_adopt
+	}
+	modifier = {
+		council_agenda_progress_speed = 0.66
+	}
+ 	finish_modifier = agenda_libra_crimson_ancestor_finish_modifier
+	effect = {
+		add_resource = {
+			physics_research = 0.26
+			society_research = 0.26
+			engineering_research = 0.26
+			mult = libra_crimson_reap_total
+		}
+		custom_tooltip = agenda_libra_crimson_crimson_ancestor_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.0505 }
+		}
+	}
+	ai_weight = {
+		base = 2500
+	}
+}
+
+agenda_libra_crimson_ancestor_2_a = {
+	agenda_cost = 6666
+ 	agenda_cooldown = 6666
+
+	potential = {
+		has_origin = origin_libra_crimson_nights
+	}
+
+	allow = {
+		has_tradition = tr_libra_crimson_ancestor_2
+	}
+	modifier = {
+		council_agenda_progress_speed = 0.66
+	}
+ 	finish_modifier = agenda_libra_crimson_ancestor_2_a_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_crimson_crimson_ancestor_2_a_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.0506 }
+		}
+	}
+	ai_weight = {
+		base = 1750
+	}
+}
+
+agenda_libra_crimson_ancestor_2_b = {
+	agenda_cost = 6666
+ 	agenda_cooldown = 6666
+
+	potential = {
+		has_origin = origin_libra_crimson_nights
+	}
+
+	allow = {
+		has_tradition = tr_libra_crimson_ancestor_2
+	}
+	modifier = {
+		council_agenda_progress_speed = 0.66
+	}
+ 	finish_modifier = agenda_libra_crimson_ancestor_2_a_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_crimson_crimson_ancestor_2_b_effect
+		hidden_effect = {
+			change_variable = { which = libra_crimson_nights_extra_building value = 1 }
+			change_variable = { which = libra_crimson_nights_extra_jobs value = 1 }
+		}
+	}
+	ai_weight = {
+		base = 2250
+	}
+}
+
+#
+
+agenda_libra_shadow_consciousness = {
+	agenda_cost = @base_agenda_cost
+ 	agenda_cooldown = 3600
+
+	potential = {
+		has_origin = origin_libra_shadow_consciousness
+	}
+
+	allow = {
+		num_researched_techs_of_tier = {
+			tier = 5
+			value > 0
+		}
+		custom_tooltip = {
+			fail_text = "agenda_dark_matter_breakthrough_techs_obsolete"
+			OR = {
+				NOR = {
+					has_tech_option = tech_dark_matter_deflector
+					has_technology = tech_dark_matter_deflector
+				}
+				NOR = {
+					has_tech_option = tech_dark_matter_power_core
+					has_technology = tech_dark_matter_power_core
+				}
+				NOR = {
+					has_tech_option = tech_dark_matter_propulsion
+					has_technology = tech_dark_matter_propulsion
+				}
+				NOR = {
+					has_tech_option = tech_dark_matter_deflector
+					has_technology = tech_dark_matter_deflector
+				}
+				NOR = {
+					has_tech_option = tech_cloaking_dark_matter
+					has_technology = tech_cloaking_dark_matter
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = council_agenda_agenda_dark_matter_breakthrough_effect_desc
+		hidden_effect = {
+			random_list = {
+				1 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_tech_option = tech_dark_matter_deflector
+							has_technology = tech_dark_matter_deflector
+						}
+					}
+					add_research_option = tech_dark_matter_deflector
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_tech_option = tech_dark_matter_power_core
+							has_technology = tech_dark_matter_power_core
+						}
+					}
+					add_research_option = tech_dark_matter_power_core
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_tech_option = tech_dark_matter_propulsion
+							has_technology = tech_dark_matter_propulsion
+						}
+					}
+					add_research_option = tech_dark_matter_propulsion
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_tech_option = tech_dark_matter_deflector
+							has_technology = tech_dark_matter_deflector
+						}
+					}
+					add_research_option = tech_dark_matter_deflector
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_tech_option = tech_cloaking_dark_matter
+							has_technology = tech_cloaking_dark_matter
+						}
+					}
+					add_research_option = tech_cloaking_dark_matter
+				}
+			}
+		}
+	}
+	ai_weight = {
+		base = 750
+	}
+}
+
+agenda_libra_shadow_consciousness_a = {
+	agenda_cost = @half_agenda_cost
+ 	agenda_cooldown = 7200
+
+	potential = {
+		has_origin = origin_libra_shadow_consciousness
+		has_valid_civic = civic_libra_shadow_consciousness_a
+	}
+
+	modifier = {
+		planet_metallurgists_produces_mult = 0.1
+	}
+	effect = {
+		custom_tooltip = agenda_libra_shadow_consciousness_a_finish_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.0610 }
+		}
+	}
+	ai_weight = {
+		base = 250
+		modifier = {
+			factor = 3
+			has_resource = {
+				type = alloys
+				amount < 3000
+			}
+			has_resource = {
+				type = sr_dark_matter
+				amount > 800
+			}
+		}
+	}
+}
+
+agenda_libra_shadow_consciousness_d = {
+	agenda_cost = @half_agenda_cost
+ 	agenda_cooldown = 7200
+
+	potential = {
+		has_origin = origin_libra_shadow_consciousness
+		has_valid_civic = civic_libra_shadow_consciousness_d
+	}
+
+	modifier = {
+		leaders_upkeep_mult = -0.1
+	}
+	effect = {
+		custom_tooltip = agenda_libra_shadow_consciousness_d_finish_effect
+		hidden_effect = {
+			country_event = { id = libra_origin.0620 }
+		}
+	}
+	ai_weight = {
+		base = 50
+		modifier = {
+			factor = 5
+			has_resource = {
+				type = sr_dark_matter
+				amount > 750
+			}
+		}
+		modifier = {
+			factor = 5
+			has_resource = {
+				type = sr_dark_matter
+				amount > 1200
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_dragonchant = {
+	agenda_cost = @base_agenda_cost
+
+	potential = {
+		has_origin = origin_libra_dragonborn
+	}
+	allow = {
+		has_tradition = tr_libra_dragonchant_adopt
+	}
+
+	modifier = {
+		country_produces_mult = 0.05
+		country_unity_produces_mult = 0.05
+	}
+ 	finish_modifier = agenda_libra_dragonchant_finish_modifier
+	effect = {
+		hidden_effect = {
+			every_owned_leader = {
+				limit = { has_base_skill < 10 }
+				switch = {
+					trigger = has_trait
+					leader_trait_libra_dragonborn_official_3 = { add_experience = 6000 }
+					leader_trait_libra_dragonborn_commander_3 = { add_experience = 6000 }
+					leader_trait_libra_dragonborn_scientist_3 = { add_experience = 6000 }
+					leader_trait_libra_dragonborn_official_2 = { add_experience = 4000 }
+					leader_trait_libra_dragonborn_commander_2 = { add_experience = 4000 }
+					leader_trait_libra_dragonborn_scientist_2 = { add_experience = 4000 }
+					leader_trait_libra_dragonborn_official = { add_experience = 2500 }
+					leader_trait_libra_dragonborn_commander = { add_experience = 2500 }
+					leader_trait_libra_dragonborn_scientist = { add_experience = 2500 }
+					default = { add_experience = 2000 }
+				}
+			}
+		}
+		custom_tooltip = agenda_libra_dragonchant_finish_effect
+	}
+	ai_weight = {
+		base = 2250
+	}
+}
+
+agenda_libra_dragonlight = {
+	agenda_cost = @base_agenda_cost
+
+	potential = {
+		has_origin = origin_libra_dragonborn
+	}
+	allow = {
+		has_tradition = tr_libra_dragonlight_adopt
+	}
+
+	modifier = {
+		planet_pops_upkeep_mult = -0.05
+		planet_jobs_upkeep_mult = -0.05
+		tradition_cost_empire_size_mult = -0.05
+		tech_cost_empire_size_mult = -0.05
+	}
+ 	finish_modifier = agenda_libra_dragonlight_finish_modifier
+	effect = {
+		inverted_switch = {
+			trigger = has_technology
+			tech_capital_productivity_1 = {
+				add_tech_progress = {
+					tech = tech_capital_productivity_1
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_capital_productivity_2 = {
+				add_tech_progress = {
+					tech = tech_capital_productivity_2
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_capital_productivity_3 = {
+				add_tech_progress = {
+					tech = tech_capital_productivity_3
+					progress = @agenda_award_tech_progress
+				}
+			}
+			default = {
+				custom_tooltip = agenda_libra_dragonlight_finish_effect
+				hidden_effect = {
+					every_owned_planet = {
+						limit = {
+							is_under_colonization = no
+							has_planetary_ascension_tier < 10
+							not = { uses_district_set = cosmogenesis_world }
+						}
+						set_planetary_ascension_tier = value:add_planet_ascension_tier
+					}
+				}
+			}
+		}
+	}
+	ai_weight = {
+		base = 1500
+	}
+}
+
+agenda_libra_dragondark = {
+	agenda_cost = @base_agenda_cost
+
+	potential = {
+		has_origin = origin_libra_dragonborn
+	}
+	allow = {
+		has_tradition = tr_libra_dragondark_adopt
+	}
+
+	modifier = {
+		ships_upkeep_mult = -0.05
+		armies_upkeep_mult = -0.05
+		starbase_shipyard_build_speed_mult = 0.35
+		planet_army_build_speed_mult = 0.35
+	}
+ 	finish_modifier = agenda_libra_dragondark_finish_modifier
+	effect = {
+		inverted_switch = {
+			trigger = has_technology
+			tech_colonial_centralization = {
+				add_tech_progress = {
+					tech = tech_colonial_centralization
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_galactic_administration = {
+				add_tech_progress = {
+					tech = tech_galactic_administration
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_ascension_theory = {
+				add_tech_progress = {
+					tech = tech_ascension_theory
+					progress = @agenda_award_tech_progress
+				}
+			}
+			default = {
+				custom_tooltip = agenda_libra_dragonlight_finish_effect
+				hidden_effect = {
+					every_owned_planet = {
+						limit = {
+							is_under_colonization = no
+							has_planetary_ascension_tier < 10
+							not = { uses_district_set = cosmogenesis_world }
+						}
+						set_planetary_ascension_tier = value:add_planet_ascension_tier
+					}
+				}
+			}
+		}
+	}
+	ai_weight = {
+		base = 750
+		modifier = {
+			factor = 3
+			or = {
+				is_at_war = yes
+				has_crisis = yes
+				end_game_years_passed >= 0
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_eden_accord_e = {
+ 	agenda_cooldown = 5400
+
+	potential = {
+		has_origin = origin_libra_eden_accord
+	}
+	allow = {
+		has_valid_civic = civic_libra_eden_accord_e
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.15
+	}
+ 	finish_modifier = agenda_libra_eden_accord_e_finish_modifier
+	effect = {
+		add_monthly_resource_mult = { resource = unity value = 6 min = 500 }
+		add_monthly_resource_mult = { resource = trade value = 6 min = 1000 }
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			num_planetary_ascension_tiers > 9
+		}
+		modifier = {
+			factor = 2
+			or = {
+				years_passed < 20
+				num_planetary_ascension_tiers > 19
+			}
+		}
+	}
+}
+
+agenda_libra_eden_accord_g_1 = {
+ 	agenda_cooldown = 5400
+
+	potential = {
+		has_origin = origin_libra_eden_accord
+	}
+	allow = {
+		has_valid_civic = civic_libra_eden_accord_g
+	}
+
+	modifier = {
+		planet_evaluators_physics_research_produces_add = 1
+		planet_evaluators_society_research_produces_add = 1
+		planet_evaluators_engineering_research_produces_add = 1
+		planet_evaluators_unity_produces_add = -1
+	}
+ 	finish_modifier = agenda_libra_eden_accord_g_1_finish_modifier
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			years_passed > 40
+		}
+		modifier = {
+			factor = 2
+			has_unlocked_all_traditions = yes
+		}
+	}
+}
+
+agenda_libra_eden_accord_g_2 = {
+ 	agenda_cooldown = 5400
+
+	potential = {
+		has_origin = origin_libra_eden_accord
+	}
+	allow = {
+		has_valid_civic = civic_libra_eden_accord_g
+	}
+
+	modifier = {
+		terraforming_cost_mult = -0.15
+		deposit_blockers_cost_mult = -0.25
+	}
+ 	finish_modifier = agenda_libra_eden_accord_g_2_finish_modifier
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			years_passed < 20
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_terrestrial_sculpting
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_arcology_project
+		}
+	}
+}
+
+#
+
+agenda_libra_may_storm_militarist = {
+	agenda_cost = @base_agenda_cost
+
+	potential = {
+		has_origin = origin_libra_may_storm
+	}
+	allow = {
+		has_valid_civic = civic_libra_may_storm_militarist_a
+	}
+
+	modifier = {
+		armies_cost_mult = -0.05
+		starbase_shipyard_build_cost_mult = -0.05
+	}
+ 	finish_modifier = agenda_libra_may_storm_militarist_modifier
+
+	ai_weight = {
+		base = 200
+		modifier = {
+			factor = 6
+			or = {
+				is_at_war = yes
+				has_crisis = yes
+				recently_lost_war = yes
+				used_naval_capacity_percent < 0.6
+			}
+		}
+	}
+}
+
+agenda_libra_may_storm_pacifist = {
+	agenda_cost = @base_agenda_cost
+ 	agenda_cooldown = 7200
+
+	potential = {
+		has_origin = origin_libra_may_storm
+	}
+	allow = {
+		has_valid_civic = civic_libra_may_storm_pacifist_a
+	}
+
+	modifier = {
+		country_produces_mult = 0.05
+		planet_jobs_productive_produces_mult = 0.05
+	}
+ 	finish_modifier = agenda_libra_may_storm_pacifist_modifier
+
+	ai_weight = {
+		base = 500
+	}
+}

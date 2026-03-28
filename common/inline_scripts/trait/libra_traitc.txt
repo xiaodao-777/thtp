@@ -1,0 +1,32 @@
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = cyborg
+	RARITY = veteran
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_engineering"
+	}
+	layer = {
+		icon = "GFX_trait_glow_libra_cyborg_veteran"
+		color = "trait_rarity_veteran"
+	}
+	layer = {
+		icon = "GFX_trait_frame_libra_cyborg_veteran"
+		color = "trait_rarity_veteran"
+	}
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+	inline_script = trait/icon_element/tier_$TIER$
+}
+leader_trait_rarity = veteran
+sorting_priority = @trait_sorting_priority_veteran_$COUNCIL$_$TIER$
+replace_traits = { "leader_trait_erudite" "leader_trait_psionic" "leader_trait_chosen" "leader_trait_virtual" "leader_trait_has_backup_clone" "trait_leader_genetic_purist" }

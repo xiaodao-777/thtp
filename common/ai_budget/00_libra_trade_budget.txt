@@ -1,0 +1,24 @@
+libra_trade_expenditure_edicts = {
+	resource = food
+	type = expenditure
+	category = edicts
+
+	potential = {
+		has_resource = {
+			type = trade
+			amount > 1000
+		}
+		resource_income_compare = {
+			resource = trade
+			value > 50
+		}
+	}
+
+	weight = {
+		weight = 0.15
+	}
+
+	desired_max = {
+		base = 600
+	}
+}

@@ -1,0 +1,368 @@
+concept_tech_libra_fairy_age = {
+	icon = "gfx/interface/icons/technologies/tech_libra_fairy_age.dds"
+}
+
+concept_libra_shift_in_focus_auth_effect = {
+}
+
+concept_libra_gestalt_era_leader_effect = {
+}
+
+concept_libra_sages_notes_edicts = {
+	icon = "gfx/interface/icons/concepts/concept_edicts.dds"
+}
+
+concept_libra_cardinal_cosmos_edicts = {
+	icon = "gfx/interface/icons/concepts/concept_edicts.dds"
+}
+
+concept_libra_golden_rule_edicts = {
+	icon = "gfx/interface/icons/concepts/concept_edicts.dds"
+}
+
+concept_libra_astral_blade_tech_options = {
+	icon = "gfx/interface/icons/technologies/tech_libra_astral_lance.dds"
+}
+
+concept_libra_military_traditions = {
+	icon = "gfx/interface/icons/concepts/concept_traditions.dds"
+}
+
+#
+
+concept_libra_radiation_resistance = {
+	icon = "gfx/interface/icons/traits/trait_plantoid_radiotrophic.dds"
+}
+concept_libra_radiation_adaptability = {
+	icon = "gfx/interface/icons/traits/trait_libra_lithoid_0.dds"
+}
+
+concept_libra_humanoid_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_humanoid_9.dds"
+}
+concept_libra_mammalian_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_mammalian_0.dds"
+}
+concept_libra_molluscoid_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_molluscoid_5.dds"
+}
+concept_libra_fungoid_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_fungoid_5.dds"
+}
+concept_libra_plantoid_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_plantoid_0.dds"
+}
+concept_libra_lithoid_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_lithoid_6.dds"
+}
+concept_libra_necroid_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_necroid_0.dds"
+}
+concept_libra_aquatic_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_aquatic_0.dds"
+}
+concept_libra_reptilian_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_reptilian_0.dds"
+}
+concept_libra_avian_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_avian_8.dds"
+}
+concept_libra_infernal_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_infernal_0.dds"
+}
+
+concept_libra_psionic_leader_traits = {
+	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
+}
+
+concept_libra_corrupt_leader_traits = {
+	icon = "gfx/interface/icons/traits/leader_traits/libra_corrupt_leader_trait.dds"
+}
+
+concept_libra_qualified_ascension = {
+	icon = "gfx/interface/icons/concepts/concept_ascension_perks.dds"
+}
+concept_libra_executive_ascension = {
+	icon = "gfx/interface/icons/concepts/concept_ascension_perks.dds"
+}
+concept_libra_advanced_ascension = {
+	icon = "gfx/interface/icons/concepts/concept_ascension_perks.dds"
+}
+concept_libra_expand_technology = {
+	icon = "gfx/interface/icons/concepts/concept_ascension_perks.dds"
+}
+
+#
+
+concept_libra_directive_76_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_directive_76_a.dds"
+}
+concept_libra_directive_76_agenda = {
+	icon = "gfx/interface/icons/ascension_perks/ap_libra_directive_76.dds"
+}
+
+concept_libra_cutefied_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_cutefied.dds"
+}
+
+concept_libra_purity_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_purity_research.dds"
+}
+
+concept_libra_universal_prosthesis_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_universal_prosthesis_energy.dds"
+}
+concept_libra_multi_prosthesis_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_multi_prosthesis_a.dds"
+}
+
+concept_libra_transcendental_cybernetic_policy = {
+	icon = "gfx/interface/icons/ascension_perks/ap_libra_transcendental_cybernetics.dds"
+}
+
+concept_libra_synthetic_commands_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_synthetic_commands_a.dds"
+}
+
+concept_libra_cosmological_constant_buildings = {
+	icon = "gfx/interface/icons/ascension_perks/ap_libra_cosmological_constant.dds"
+}
+concept_libra_cosmological_constant_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_cosmological_research.dds"
+}
+
+concept_libra_modularity_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_modularity_research.dds"
+}
+
+concept_libra_atomic_heart_traits = {
+	icon = "gfx/interface/icons/traits/trait_libra_atomic_heart_research.dds"
+}
+concept_libra_atomic_heart_tech = {
+	icon = "gfx/interface/icons/technologies/tech_libra_atomic_heart_a.dds"
+}
+
+concept_libra_nanocore_ruler_effect = {
+	icon = "gfx/interface/icons/ascension_perks/ap_libra_nanocore.dds"
+}
+
+concept_libra_yggdrasil_buildings = {
+	icon = "gfx/interface/icons/buildings/building_libra_yggdrasil_housing_1.dds"
+}
+
+concept_libra_liber_genesis_edicts = {
+	icon = "gfx/interface/icons/ascension_perks/ap_libra_liber_genesis.dds"
+}
+concept_libra_psychic_species_traits = {
+	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
+}
+
+#
+
+concept_libra_ceremony_characters = {
+	icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_ceremony.dds"
+}
+
+concept_libra_profundity_points = {
+	icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_profundity.dds"
+}
+
+concept_libra_warrior_reward = {
+	icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_bastion.dds"
+}
+concept_libra_reclaiming_homeland = {
+	icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_libra_bastion.dds"
+}
+
+concept_libra_megastructure_technology = {
+	icon = "gfx/interface/icons/technologies/tech_mega_engineering.dds"
+}
+
+
+#
+
+concept_situation_libra_praises_to_life_a = {
+	icon = "gfx/interface/icons/origins/origin_libra_praises_to_life.dds"
+}
+concept_situation_libra_praises_to_life_b = {
+	icon = "gfx/interface/icons/origins/origin_libra_praises_to_life.dds"
+}
+concept_origin_libra_praises_to_life_cm = {
+	icon = "gfx/interface/icons/origins/origin_libra_praises_to_life.dds"
+}
+concept_trade_action_libra_praises_to_life = {
+	icon = "gfx/interface/icons/origins/origin_libra_praises_to_life.dds"
+}
+concept_councilor_libra_praises_to_life = {
+	icon = "gfx/interface/council_view/icon_councilor_libra_praises_to_life.dds"
+}
+concept_libra_praises_to_life_start_tech = {
+	icon = "gfx/interface/icons/origins/origin_libra_praises_to_life.dds"
+}
+
+concept_libra_psalm_of_waves_traits = {
+	icon = "gfx/interface/icons/origins/origin_libra_psalm_of_waves.dds"
+}
+concept_councilor_libra_psalm_of_waves = {
+	icon = "gfx/interface/council_view/icon_councilor_libra_psalm_of_waves.dds"
+}
+
+concept_libra_ultimate_market_policies = {
+	icon = "gfx/interface/icons/origins/origin_libra_ultimate_market.dds"
+}
+concept_libra_ultimate_market_traits = {
+	icon = "gfx/interface/icons/origins/origin_libra_ultimate_market.dds"
+}
+
+concept_d_libra_enlightenment_wisdom = {
+	icon = "gfx/interface/icons/deposits/d_libra_enlightenment_wisdom.dds"
+}
+concept_libra_enlightenment_wisdom_tech_option = {
+	icon = "gfx/interface/icons/origins/origin_libra_enlightenment_wisdom.dds"
+}
+
+concept_libra_crimson_nights_traits = {
+	icon = "gfx/interface/icons/origins/origin_libra_crimson_nights.dds"
+}
+concept_libra_crimson_nights_tradition = {
+	icon = "gfx/interface/icons/origins/origin_libra_crimson_nights.dds"
+}
+concept_councilor_libra_crimson_nights = {
+	icon = "gfx/interface/council_view/icon_councilor_libra_crimson_nights.dds"
+}
+concept_libra_crimson_nights_planet_sideeffect = {
+	icon = "gfx/interface/icons/origins/origin_libra_crimson_nights.dds"
+}
+concept_decision_libra_crimson_reap = {
+	icon = "gfx/interface/icons/origins/origin_libra_crimson_nights.dds"
+}
+
+concept_libra_crimson_nights_infrastructure = {
+	icon = "gfx/interface/icons/text_icons/tooltip_building.dds"
+}
+concept_decision_libra_crimson_potential_liberation = {
+	icon = "gfx/interface/icons/origins/origin_libra_crimson_nights.dds"
+}
+
+concept_libra_shadow_consciousness_edicts = {
+	icon = "gfx/interface/icons/origins/origin_libra_shadow_consciousness.dds"
+}
+
+concept_libra_dragonborn_tradition = {
+	icon = "gfx/interface/icons/origins/origin_libra_dragonborn.dds"
+}
+concept_decision_libra_dragonborn = {
+	icon = "gfx/interface/icons/decisions/decision_libra_dragonborn.dds"
+}
+concept_d_libra_dragonborn = {
+	icon = "gfx/interface/icons/deposits/d_libra_dragonborn.dds"
+}
+concept_d_libra_dragonborn_home = {
+	icon = "gfx/interface/icons/deposits/d_libra_dragonborn_home.dds"
+}
+concept_councilor_libra_dragonborn = {
+	icon = "gfx/interface/council_view/icon_councilor_libra_dragonborn.dds"
+}
+concept_arc_site_libra_dragonborn = {
+	icon = "gfx/interface/archaeology/icon_archaeology.dds"
+}
+concept_origin_libra_dragonborn_effect = {
+	icon = "gfx/interface/icons/origins/origin_libra_dragonborn.dds"
+}
+
+concept_libra_paradox_loop_infrastructure = {
+	icon = "gfx/interface/icons/text_icons/tooltip_building.dds"
+}
+
+concept_leader_trait_libra_paradise_lose = {
+	icon = "gfx/interface/icons/origins/origin_libra_paradise_lose.dds"
+}
+
+concept_origin_libra_interstellar_port_civic = {
+	icon = "gfx/interface/icons/origins/origin_libra_interstellar_port.dds"
+}
+concept_leader_trait_libra_interstellar_port = {
+	icon = "gfx/interface/icons/origins/origin_libra_interstellar_port.dds"
+}
+concept_libra_interstellar_port_infrastructure = {
+	icon = "gfx/interface/icons/text_icons/tooltip_building.dds"
+}
+
+concept_libra_antientropy_instruction_infrastructure = {
+	icon = "gfx/interface/icons/text_icons/tooltip_building.dds"
+}
+concept_libra_antientropy_instruction_traits = {
+	icon = "gfx/interface/icons/origins/origin_libra_antientropy_instruction.dds"
+}
+concept_libra_antientropy_instruction_armies = {
+	icon = "gfx/interface/icons/origins/origin_libra_antientropy_instruction.dds"
+}
+concept_libra_antientropy_instruction_ships = {
+	icon = "gfx/interface/icons/origins/origin_libra_antientropy_instruction.dds"
+}
+concept_libra_antientropy_instruction_index = {
+	icon = "gfx/interface/icons/origins/origin_libra_antientropy_instruction.dds"
+}
+concept_libra_antientropy_instruction_decisions = {
+	icon = "gfx/interface/icons/origins/origin_libra_antientropy_instruction.dds"
+}
+concept_libra_antientropy_instruction_technologies = {
+	icon = "gfx/interface/icons/origins/origin_libra_antientropy_instruction.dds"
+}
+concept_libra_antientropy_instruction_base_tech = {
+	icon = "gfx/interface/icons/origins/origin_libra_antientropy_instruction.dds"
+}
+
+concept_libra_planetarian_start_tech = {
+	icon = "gfx/interface/icons/origins/origin_libra_planetarian.dds"
+}
+concept_d_libra_planetarian = {
+	icon = "gfx/interface/icons/deposits/d_libra_planetarian.dds"
+}
+
+concept_libra_eden_accord_civic = {
+	icon = "gfx/interface/icons/origins/origin_libra_eden_accord.dds"
+}
+
+concept_libra_miracle_builder_start_tech = {
+	icon = "gfx/interface/icons/origins/origin_libra_miracle_builder.dds"
+}
+concept_libra_miracle_builder_guaranteed_tech = {
+	icon = "gfx/interface/icons/origins/origin_libra_miracle_builder.dds"
+}
+concept_d_libra_miracle_builder = {
+	icon = "gfx/interface/icons/deposits/d_libra_miracle_builder.dds"
+}
+
+concept_origin_libra_may_storm_civic = {
+	icon = "gfx/interface/icons/origins/origin_libra_may_storm.dds"
+}
+concept_libra_may_storm_autocratic_empire = {
+	icon = "gfx/interface/icons/origins/origin_libra_may_storm.dds"
+}
+concept_libra_may_storm_guaranteed_tech = {
+	icon = "gfx/interface/icons/origins/origin_libra_may_storm.dds"
+}
+concept_preset_libra_may_storm_vassal_state = {
+	icon = "gfx/interface/icons/origins/origin_libra_may_storm.dds"
+}
+
+concept_policy_libra_extreme_iteration = {
+	icon = "gfx/interface/icons/origins/origin_libra_extreme_iteration.dds"
+}
+concept_origin_libra_extreme_iteration_traits = {
+	icon = "gfx/interface/icons/origins/origin_libra_extreme_iteration.dds"
+}
+concept_councilor_libra_extreme_iteration = {
+	icon = "gfx/interface/icons/origins/origin_libra_extreme_iteration.dds"
+}
+
+concept_libra_centurion_army = {
+	icon = "gfx/interface/icons/origins/origin_libra_centurion.dds"
+}
+concept_councilor_libra_primus_pilus = {
+	icon = "gfx/interface/council_view/icon_councilor_libra_primus_pilus.dds"
+}
+concept_councilor_libra_praetorian_commander = {
+	icon = "gfx/interface/council_view/icon_councilor_libra_praetorian_commander.dds"
+}

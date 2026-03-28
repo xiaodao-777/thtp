@@ -1,0 +1,613 @@
+agenda_libra_string_puppeteer = {
+	agenda_cost = 3500
+	agenda_cooldown = 5400
+
+	potential = {
+		has_ascension_perk = ap_libra_string_puppeteer
+	}
+
+	effect = {
+		custom_tooltip = agenda_libra_string_puppeteer_tooltip
+		hidden_effect = {
+			every_owned_planet = {
+				limit = {
+					not = { has_modifier = decision_libra_string_puppeteer_modifier }
+					any_owned_species = {
+						is_robotic = no
+						not = { is_archetype = PRESAPIENT }
+					}
+				}
+				every_owned_pop_group = {
+					limit = {
+						is_robot_pop_group = no
+						is_sapient = yes
+					}
+					change_species = root
+				}
+			}
+		}
+	}
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 1000
+			any_owned_planet = {
+				not = { has_modifier = decision_libra_string_puppeteer_modifier }
+			}
+		}
+	}
+}
+
+#
+
+agenda_libra_transcendent_covenant_a = {
+	agenda_cost = 3500
+	agenda_cooldown = 3600
+
+	potential = {
+		has_ascension_perk = ap_libra_transcendent_covenant
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 1 }
+	}
+	allow = {
+		nor = {
+			has_modifier = agenda_libra_transcendent_covenant_b_finish_modifier
+			has_modifier = agenda_libra_transcendent_covenant_c_finish_modifier
+		}
+	}
+
+	modifier = {
+		tech_cost_empire_size_mult = -0.4
+	}
+ 	finish_modifier = agenda_libra_transcendent_covenant_a_finish_modifier
+
+	ai_weight = {
+		base = 1000
+	}
+}
+
+agenda_libra_transcendent_covenant_b = {
+	agenda_cost = 3500
+	agenda_cooldown = 3600
+
+	potential = {
+		has_ascension_perk = ap_libra_transcendent_covenant
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 1 }
+	}
+	allow = {
+		nor = {
+			has_modifier = agenda_libra_transcendent_covenant_a_finish_modifier
+			has_modifier = agenda_libra_transcendent_covenant_c_finish_modifier
+		}
+	}
+
+	modifier = {
+		empire_size_penalty_mult = -0.25
+	}
+ 	finish_modifier = agenda_libra_transcendent_covenant_b_finish_modifier
+
+	ai_weight = {
+		base = 1000
+	}
+}
+
+agenda_libra_transcendent_covenant_c = {
+	agenda_cost = 3500
+	agenda_cooldown = 3600
+
+	potential = {
+		has_ascension_perk = ap_libra_transcendent_covenant
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 1 }
+	}
+	allow = {
+		nor = {
+			has_modifier = agenda_libra_transcendent_covenant_a_finish_modifier
+			has_modifier = agenda_libra_transcendent_covenant_b_finish_modifier
+		}
+	}
+
+	modifier = {
+		tradition_cost_empire_size_mult = -0.4
+	}
+ 	finish_modifier = agenda_libra_transcendent_covenant_c_finish_modifier
+
+	ai_weight = {
+		base = 1000
+	}
+}
+
+#
+
+@libra_ultimate_directive_agenda_cost = 3500
+@libra_ultimate_directive_agenda_cooldown = 1800
+
+agenda_ap_libra_ultimate_directive_growth = {
+	agenda_cost = @libra_ultimate_directive_agenda_cost
+ 	agenda_cooldown = @libra_ultimate_directive_agenda_cooldown
+
+	potential = {
+		has_ascension_perk = ap_libra_ultimate_directive
+		is_variable_set = libra_ultimate_directive_agenda_count
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 5 }
+	}
+
+	modifier = {
+		pop_fabricator_bonus_workforce_mult = 0.05
+		pop_artisan_drone_bonus_workforce_mult = 0.05
+		pop_coordinator_bonus_workforce_mult = 0.05
+	}
+	effect = {
+		every_owned_leader = {
+			limit = {
+				has_base_skill < 10
+				is_councilor_type = councilor_gestalt_growth
+			}
+			add_experience = 10000
+		}
+		custom_tooltip = agenda_ap_libra_ultimate_directive_growth_tooltip
+		custom_tooltip = libra_ultimate_directive_agenda_count_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.0541 }
+			change_variable = {
+				which = libra_ultimate_directive_growth_mult
+				value = 1
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 2000
+	}
+}
+
+agenda_ap_libra_ultimate_directive_cognitive = {
+	agenda_cost = @libra_ultimate_directive_agenda_cost
+ 	agenda_cooldown = @libra_ultimate_directive_agenda_cooldown
+
+	potential = {
+		has_ascension_perk = ap_libra_ultimate_directive
+		is_variable_set = libra_ultimate_directive_agenda_count
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 5 }
+	}
+
+	modifier = {
+		pop_calculator_physicist_bonus_workforce_mult = 0.05
+		pop_calculator_biologist_bonus_workforce_mult = 0.05
+		pop_calculator_engineer_bonus_workforce_mult = 0.05
+	}
+	effect = {
+		every_owned_leader = {
+			limit = {
+				has_base_skill < 10
+				is_councilor_type = councilor_gestalt_cognitive
+			}
+			add_experience = 10000
+		}
+		custom_tooltip = agenda_ap_libra_ultimate_directive_cognitive_tooltip
+		custom_tooltip = libra_ultimate_directive_agenda_count_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.0541 }
+			change_variable = {
+				which = libra_ultimate_directive_cognitive_mult
+				value = 1
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 2000
+	}
+}
+
+agenda_ap_libra_ultimate_directive_legion = {
+	agenda_cost = @libra_ultimate_directive_agenda_cost
+ 	agenda_cooldown = @libra_ultimate_directive_agenda_cooldown
+
+	potential = {
+		has_ascension_perk = ap_libra_ultimate_directive
+		is_variable_set = libra_ultimate_directive_agenda_count
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 5 }
+	}
+
+	modifier = {
+		pop_warrior_drone_bonus_workforce_mult = 0.05
+		pop_patrol_drone_bonus_workforce_mult = 0.05
+		pop_logistics_drone_bonus_workforce_mult = 0.05
+	}
+	effect = {
+		every_owned_leader = {
+			limit = {
+				has_base_skill < 10
+				is_councilor_type = councilor_gestalt_legion
+			}
+			add_experience = 10000
+		}
+		custom_tooltip = agenda_ap_libra_ultimate_directive_legion_tooltip
+		custom_tooltip = libra_ultimate_directive_agenda_count_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.0541 }
+			change_variable = {
+				which = libra_ultimate_directive_legion_mult
+				value = 1
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 2000
+	}
+}
+
+agenda_ap_libra_ultimate_directive_regulatory = {
+	agenda_cost = @libra_ultimate_directive_agenda_cost
+ 	agenda_cooldown = @libra_ultimate_directive_agenda_cooldown
+
+	potential = {
+		has_ascension_perk = ap_libra_ultimate_directive
+		is_variable_set = libra_ultimate_directive_agenda_count
+		is_variable_set = libra_ea_path
+		check_variable = { which = libra_ea_path value = 5 }
+	}
+
+	modifier = {
+		pop_technician_drone_bonus_workforce_mult = 0.05
+		pop_mining_drone_bonus_workforce_mult = 0.05
+		pop_agri_drone_bonus_workforce_mult = 0.05
+	}
+	effect = {
+		every_owned_leader = {
+			limit = {
+				has_base_skill < 10
+				is_councilor_type = councilor_gestalt_regulatory
+			}
+			add_experience = 10000
+		}
+		custom_tooltip = agenda_ap_libra_ultimate_directive_regulatory_tooltip
+		custom_tooltip = libra_ultimate_directive_agenda_count_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.0541 }
+			change_variable = {
+				which = libra_ultimate_directive_regulatory_mult
+				value = 1
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 2000
+	}
+}
+
+#
+
+agenda_libra_kings_game = {
+	agenda_cost =7000
+	agenda_cooldown = 7200
+
+	potential = {
+		is_variable_set = libra_ea_path
+		has_ascension_perk = ap_libra_kings_game
+		check_variable = { which = libra_ea_path value = 10 }
+	}
+
+	modifier = {
+		monthly_loyalty_from_subjects = 1
+	}
+ 	finish_modifier = agenda_libra_kings_game_finish_modifier
+	effect = {
+		custom_tooltip = agenda_libra_kings_game_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.0591 }
+		}
+	}
+
+	ai_weight = {
+		base = 1000
+	}
+}
+
+#
+
+agenda_libra_valiant_heroic = {
+	agenda_cost = 7000
+	agenda_cooldown = 7200
+
+	potential = {
+		has_ascension_perk = ap_libra_valiant_heroic
+	}
+
+	modifier = {
+		country_leader_pool_size = 1
+		leaders_cost_mult = -0.1
+	}
+ 	finish_modifier = agenda_libra_valiant_heroic_modifier
+	effect = {
+		refresh_leader_pool = yes
+		custom_tooltip = agenda_libra_valiant_heroic_tooltip
+		hidden_effect = {
+			remove_modifier = agenda_libra_valiant_heroic_effect
+			remove_modifier = agenda_libra_valiant_heroic_effect_1
+			remove_modifier = agenda_libra_valiant_heroic_effect_2
+			remove_modifier = agenda_libra_valiant_heroic_effect_3
+			change_variable = {
+				which = agenda_libra_valiant_heroic_count
+				value = 1
+			}
+			add_modifier = {
+				modifier = agenda_libra_valiant_heroic_effect
+				multiplier = agenda_libra_valiant_heroic_count
+			}
+			calculate_modifier = yes
+			add_modifier = {
+				modifier = agenda_libra_valiant_heroic_effect_1
+				multiplier = value:libra_extra_official_cap|MAX|15|
+			}
+			add_modifier = {
+				modifier = agenda_libra_valiant_heroic_effect_2
+				multiplier = value:libra_extra_commander_cap|MAX|15|
+			}
+			add_modifier = {
+				modifier = agenda_libra_valiant_heroic_effect_3
+				multiplier = value:libra_extra_scientist_cap|MAX|15|
+			}
+		}
+	}
+	ai_weight = {
+		base = 4000
+	}
+}
+
+# ####################
+# Directive 76
+# ####################
+
+@libra_directive_76_agenda_cost = 12000
+@libra_directive_76_agenda_cooldown = 18000
+@libra_directive_76_agenda_duration = 7200
+
+agenda_libra_directive_76_a = {
+	agenda_cost = @libra_directive_76_agenda_cost
+	agenda_cooldown = @libra_directive_76_agenda_cooldown
+	agenda_finish_modifier_duration = @libra_directive_76_agenda_duration
+
+	potential = {
+		is_variable_set = libra_aa_path
+		has_country_flag = libra_directive_76_agenda
+		check_variable = { which = libra_aa_path value = 10 }
+	}
+	allow = {
+		not = { has_modifier = agenda_libra_directive_76_a_modifier }
+	}
+
+	modifier = {
+		ship_speed_mult = 0.1
+		country_war_exhaustion_mult = -0.1
+		ships_logistics_mult = -0.1
+	}
+ 	finish_modifier = agenda_libra_directive_76_a_modifier
+	effect = {
+		custom_tooltip = agenda_libra_directive_76_a_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.10011 }
+		}
+	}
+	ai_weight = {
+		base = 400
+		modifier = {
+			factor = 2.5
+			libra_ai_war_trigger = yes
+		}
+	}
+}
+
+agenda_libra_directive_76_b = {
+	agenda_cost = @libra_directive_76_agenda_cost
+	agenda_cooldown = @libra_directive_76_agenda_cooldown
+	agenda_finish_modifier_duration = @libra_directive_76_agenda_duration
+
+	potential = {
+		is_variable_set = libra_aa_path
+		has_country_flag = libra_directive_76_agenda
+		check_variable = { which = libra_aa_path value = 10 }
+	}
+	allow = {
+		not = { has_modifier = agenda_libra_directive_76_b_modifier }
+	}
+
+	modifier = {
+		ship_shield_damage_mult = 0.07
+		ship_armor_damage_mult = 0.07
+		planet_bureaucrats_unity_produces_add = 1
+	}
+ 	finish_modifier = agenda_libra_directive_76_b_modifier
+	effect = {
+		custom_tooltip = agenda_libra_directive_76_b_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.10012 }
+		}
+	}
+	ai_weight = {
+		base = 400
+		modifier = {
+			factor = 2.5
+			libra_ai_war_trigger = yes
+		}
+	}
+}
+
+agenda_libra_directive_76_c = {
+	agenda_cost = @libra_directive_76_agenda_cost
+	agenda_cooldown = @libra_directive_76_agenda_cooldown
+	agenda_finish_modifier_duration = @libra_directive_76_agenda_duration
+
+	potential = {
+		is_variable_set = libra_aa_path
+		has_country_flag = libra_directive_76_agenda
+		check_variable = { which = libra_aa_path value = 10 }
+	}
+	allow = {
+		not = { has_modifier = agenda_libra_directive_76_c_modifier }
+	}
+
+	modifier = {
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_engineers_engineering_research_produces_add = 0.5
+	}
+ 	finish_modifier = agenda_libra_directive_76_c_modifier
+	effect = {
+		custom_tooltip = agenda_libra_directive_76_c_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.10013 }
+		}
+	}
+	ai_weight = {
+		base = 800
+	}
+}
+
+agenda_libra_directive_76_d = {
+	agenda_cost = @libra_directive_76_agenda_cost
+	agenda_cooldown = @libra_directive_76_agenda_cooldown
+	agenda_finish_modifier_duration = @libra_directive_76_agenda_duration
+
+	potential = {
+		is_variable_set = libra_aa_path
+		has_country_flag = libra_directive_76_agenda
+		check_variable = { which = libra_aa_path value = 10 }
+	}
+	allow = {
+		not = { has_modifier = agenda_libra_directive_76_d_modifier }
+	}
+
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.1
+		planet_metallurgists_alloys_produces_add = 0.5
+		planet_artisans_consumer_goods_produces_add = 1
+	}
+ 	finish_modifier = agenda_libra_directive_76_d_modifier
+	effect = {
+		custom_tooltip = agenda_libra_directive_76_d_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.10014 }
+			country_event = { id = libra_fairy.10017 }
+		}
+	}
+	ai_weight = {
+		base = 600
+	}
+}
+
+agenda_libra_directive_76_e = {
+	agenda_cost = @libra_directive_76_agenda_cost
+	agenda_cooldown = @libra_directive_76_agenda_cooldown
+	agenda_finish_modifier_duration = @libra_directive_76_agenda_duration
+
+	potential = {
+		is_variable_set = libra_aa_path
+		has_country_flag = libra_directive_76_agenda
+		check_variable = { which = libra_aa_path value = 10 }
+	}
+	allow = {
+		not = { has_modifier = agenda_libra_directive_76_e_modifier }
+	}
+
+	modifier = {
+		logistic_growth_mult = 0.1
+		planet_buildings_clone_vats_upkeep_mult = -0.1
+		planet_traders_trade_produces_add = 2
+	}
+ 	finish_modifier = agenda_libra_directive_76_e_modifier
+	effect = {
+		custom_tooltip = agenda_libra_directive_76_e_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.10015 }
+		}
+	}
+	ai_weight = {
+		base = 600
+	}
+}
+
+# ####################
+# Nanocore
+# ####################
+
+agenda_libra_nanocore = {
+	agenda_cost = 3500
+	agenda_cooldown = 3600
+
+	potential = {
+		is_variable_set = libra_aa_path
+		has_ascension_perk = ap_libra_nanocore
+		check_variable = { which = libra_aa_path value = 70 }
+	}
+
+	effect = {
+		custom_tooltip = agenda_libra_nanocore_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.16005 }
+		}
+	}
+	ai_weight = {
+		base = 1200
+	}
+}
+
+# ####################
+# Psionic
+# ####################
+
+agenda_libra_psionic_eulogy = {
+	agenda_cost = 7000
+	agenda_cooldown = 7200
+
+	potential = {
+		is_variable_set = libra_aa_path
+		has_technology = tech_libra_psionic_apocalypse
+	}
+ 	allow = {
+		has_technology = tech_libra_psionic_reflection
+ 	}
+
+	modifier = {
+		planet_jobs_productive_upkeep_mult = -0.1
+	}
+ 	finish_modifier = agenda_libra_psionic_eulogy_modifier
+	effect = {
+		custom_tooltip = agenda_libra_psionic_eulogy_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.18900 }
+		}
+	}
+	ai_weight = {
+		base = 1000
+	}
+}
+
+agenda_libra_heavenly_throne = {
+	agenda_cost = 7000
+	agenda_cooldown = 9000
+
+	potential = {
+		is_variable_set = libra_aa_path
+		has_ascension_perk = ap_libra_heavenly_throne
+		check_variable = { which = libra_aa_path value = 90 }
+	}
+
+	effect = {
+		custom_tooltip = agenda_libra_heavenly_throne_tooltip
+		hidden_effect = {
+			country_event = { id = libra_fairy.18005 }
+		}
+	}
+
+	ai_weight = {
+		base = 400
+	}
+}

@@ -1,0 +1,102 @@
+@exd_bloom_factor = 3
+@exd_dissolve_h = 0.75
+
+entity = {
+	name = "libra_antientropy_instruction_warship_small_entity"
+	pdxmesh = "libra_antientropy_instruction_warship_small_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 particle = "extra_dimensional_small_def_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "libra_antientropy_instruction_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "libra_antientropy_instruction_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_large_01" particle = "libra_antientropy_instruction_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_large_02" particle = "libra_antientropy_instruction_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_corvette_hum" } }
+	}
+	state = { name = "moving"		state_time = 5
+		event = { time = 0 particle = "extra_dimensional_small_def_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "libra_antientropy_instruction_exhaust_moving"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "libra_antientropy_instruction_exhaust_moving"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_large_01" particle = "libra_antientropy_instruction_exhaust_moving"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_large_02" particle = "libra_antientropy_instruction_exhaust_moving"	keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "death"		state_time = 5
+		event = { time = 0 particle = "ed_purple_medium_dissolve_effect"	keep_particle = yes trigger_once = yes }
+		event = { trigger_once = yes sound = { soundeffect = "extra_dimensional_ship_death" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_extra_dimensional_ship_death" } }
+	}
+
+	game_data = {
+		uv_animation_speed 		= 0.2
+		uv_animation_direction 	= { 0.0 0.02 }
+		bloom_factor = @exd_bloom_factor
+	}
+	scale = 0.6
+}
+
+entity = {
+	name = "libra_antientropy_instruction_warship_medium_entity"
+	pdxmesh = "libra_antientropy_instruction_warship_medium_mesh"
+	locator = { name = "part1" }
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "ship_effect" particle = "extra_dimensional_small_def_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_large_01" particle = "libra_antientropy_instruction_exhaust_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_large_02" particle = "libra_antientropy_instruction_exhaust_idle" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_corvette_hum" } }
+	}
+	state = { name = "moving"		state_time = 5
+		event = { time = 0 node = "ship_effect" particle = "extra_dimensional_small_def_ship_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_large_01" particle = "libra_antientropy_instruction_exhaust_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_large_02" particle = "libra_antientropy_instruction_exhaust_moving" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "death"		state_time = 5
+		event = { time = 0 particle = "ed_purple_medium_dissolve_effect"	keep_particle = yes trigger_once = yes }
+		event = { trigger_once = yes sound = { soundeffect = "extra_dimensional_ship_death" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_extra_dimensional_ship_death" } }
+	}
+
+	game_data = {
+		uv_animation_speed 		= 0.2
+		uv_animation_direction 	= { 0.0 0.02 }
+		bloom_factor = @exd_bloom_factor
+	}
+
+	scale = 1.0
+}
+
+entity = {
+	name = "libra_antientropy_instruction_warship_large_entity"
+	pdxmesh = "libra_antientropy_instruction_warship_large_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 particle = "extra_dimensional_large_def_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "libra_antientropy_instruction_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "libra_antientropy_instruction_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "libra_antientropy_instruction_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_04" particle = "libra_antientropy_instruction_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_battleship_hum" } }
+	}
+	state = { name = "moving"		state_time = 5
+		event = { time = 0 particle = "extra_dimensional_large_def_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_moving_01" particle = "libra_antientropy_instruction_exhaust_moving"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_moving_02" particle = "libra_antientropy_instruction_exhaust_moving"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_moving_03" particle = "libra_antientropy_instruction_exhaust_moving"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_moving_04" particle = "libra_antientropy_instruction_exhaust_moving"	keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "death"		state_time = 5
+		event = { time = 0 particle = "ed_purple_large_dissolve_effect"	keep_particle = yes trigger_once = yes }
+		event = { trigger_once = yes sound = { soundeffect = "extra_dimensional_ship_death" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_extra_dimensional_ship_death" } }
+	}
+
+	game_data = {
+		uv_animation_speed 		= 0.2
+		uv_animation_direction 	= { 0.0 0.02 }
+		bloom_factor = @exd_bloom_factor
+	}
+	scale = 1.0
+}

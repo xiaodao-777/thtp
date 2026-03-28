@@ -1,0 +1,188 @@
+ship_section_template = {
+	key = "LIBRA_SMALL_SYNTH_MID_X1S1P2"
+	ship_size = libra_small_ship_synthetic
+	fits_on_slot = mid
+	entity = "synth_queen_01_small_ship_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { artillery artillery_stealth }
+
+	prerequisites = { tech_titans tech_juggernaut }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_energy
+		}
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "pd_gun_01"
+	}
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+		locatorname = "pd_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "pd_gun_03"
+	}
+
+	medium_utility_slots = 8
+	aux_utility_slots = 4
+}
+
+ship_section_template = {
+	key = "LIBRA_SMALL_SYNTH_MID_H2S1P2"
+	ship_size = libra_small_ship_synthetic
+	fits_on_slot = mid
+	entity = "synth_queen_01_small_ship_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { carrier carrier_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "xl_gun"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "xl_gun"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "pd_gun_01"
+	}
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+		locatorname = "pd_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "pd_gun_03"
+	}
+
+	medium_utility_slots = 8
+	aux_utility_slots = 4
+}
+
+ship_section_template = {
+	key = "LIBRA_SMALL_SYNTH_MID_L2S2P1"
+	ship_size = libra_small_ship_synthetic
+	fits_on_slot = mid
+	entity = "synth_queen_01_small_ship_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { gunship gunship_stealth }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "invisible_large_turret"
+		locatorname = "xl_gun"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "invisible_large_turret"
+		locatorname = "xl_gun"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "pd_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "pd_gun_02"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "pd_gun_03"
+	}
+
+	medium_utility_slots = 8
+	aux_utility_slots = 4
+}
+
+ship_section_template = {
+	key = "LIBRA_SMALL_SYNTH_MID_G4S2P1"
+	ship_size = libra_small_ship_synthetic
+	fits_on_slot = mid
+	entity = "synth_queen_01_small_ship_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = { explosive explosive_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	prerequisites = { tech_torpedoes_1 }
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_explosive
+		}
+	}
+
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "invisible_missile_turret"
+		locatorname = "xl_gun"
+	}
+	component_slot = {
+		name = "TORPEDO_02"
+		template = "invisible_missile_turret"
+		locatorname = "xl_gun"
+	}
+	component_slot = {
+		name = "TORPEDO_03"
+		template = "invisible_missile_turret"
+		locatorname = "xl_gun"
+	}
+	component_slot = {
+		name = "TORPEDO_04"
+		template = "invisible_missile_turret"
+		locatorname = "xl_gun"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "pd_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "pd_gun_02"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "pd_gun_03"
+	}
+
+	medium_utility_slots = 8
+	aux_utility_slots = 4
+}

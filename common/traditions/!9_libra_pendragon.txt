@@ -1,0 +1,161 @@
+tr_libra_pendragon_adopt = {
+	unlocks_agenda = agenda_libra_pendragon
+	on_enabled = {
+		set_variable = { which = libra_pendragon_count value = 0 }
+		start_situation = {
+			type = situation_libra_pendragon
+			effect = {
+				set_situation_approach = situation_libra_pendragon_approach_e
+			}
+		}
+	}
+	custom_tooltip = tr_libra_pendragon_adopt_desc
+	on_disabled = {
+		libra_clear_pendragon_tradition_modifiers = yes
+		libra_clear_pendragon_situation_modifiers = yes
+		remove_country_flag = libra_pendragon_situation
+		clear_variable = libra_pendragon_count
+		every_situation = {
+			limit = { is_situation_type = situation_libra_pendragon }
+			destroy_situation = this
+		}
+	}
+	possible = {
+		if = {
+			limit = { is_gestalt = yes }
+			has_technology = tech_autonomous_agents
+		}
+		else_if = {
+			limit = { not = { has_origin = origin_libra_centurion } }
+			has_technology = tech_living_state
+		}
+	}
+}
+
+tr_libra_pendragon_finish = {
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = libra_origin.1832 }
+		}
+	}
+	modifier = {
+		planet_crime_mult = -0.1
+		ascension_perks_add = 1
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }
+		modifier = {
+			planet_crime_no_happiness_mult = -0.1
+			ascension_perks_add = 1
+		}
+	}
+
+}
+
+tr_libra_pendragon_1 = {
+	on_enabled = {
+		if = {
+			limit = { has_country_flag = libra_pendragon_situation }
+			add_modifier = { modifier = libra_pendragon_1_modifier_b }
+		}
+		else_if = {
+			limit = { is_variable_set = libra_pendragon_count }
+			add_modifier = {
+				modifier = libra_pendragon_1_modifier_a
+				multiplier = libra_pendragon_count
+			}
+		}
+	}
+	custom_tooltip = tr_libra_pendragon_1_desc
+
+	ai_weight = {
+		factor = 8000
+	}
+}
+
+tr_libra_pendragon_2 = {
+	on_enabled = {
+		if = {
+			limit = { has_country_flag = libra_pendragon_situation }
+			add_modifier = { modifier = libra_pendragon_2_modifier_b }
+		}
+		else_if = {
+			limit = { is_variable_set = libra_pendragon_count }
+			add_modifier = {
+				modifier = libra_pendragon_2_modifier_a
+				multiplier = libra_pendragon_count
+			}
+		}
+	}
+	custom_tooltip = tr_libra_pendragon_2_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_libra_pendragon_3 = {
+	possible = {
+		has_tradition = tr_libra_pendragon_1
+		has_tradition = tr_libra_pendragon_2
+	}
+	modifier = {
+		country_border_friction_mult = -0.25
+		ship_damage_against_boss_mult = 0.25
+		damage_vs_player_crisis_mult = 0.25
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_pendragon_4 = {
+	possible = {
+		has_tradition = tr_libra_pendragon_3
+	}
+	on_enabled = {
+		if = {
+			limit = { has_country_flag = libra_pendragon_situation }
+			add_modifier = { modifier = libra_pendragon_4_modifier_b }
+		}
+		else_if = {
+			limit = { is_variable_set = libra_pendragon_count }
+			add_modifier = {
+				modifier = libra_pendragon_4_modifier_a
+				multiplier = libra_pendragon_count
+			}
+		}
+	}
+	custom_tooltip = tr_libra_pendragon_4_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_pendragon_5 = {
+	possible = {
+		has_tradition = tr_libra_pendragon_3
+	}
+	on_enabled = {
+		if = {
+			limit = { has_country_flag = libra_pendragon_situation }
+			add_modifier = { modifier = libra_pendragon_5_modifier_b }
+		}
+		else_if = {
+			limit = { is_variable_set = libra_pendragon_count }
+			add_modifier = {
+				modifier = libra_pendragon_5_modifier_a
+				multiplier = libra_pendragon_count
+			}
+		}
+	}
+	custom_tooltip = tr_libra_pendragon_5_desc
+
+	ai_weight = {
+		factor = 5000
+	}
+}

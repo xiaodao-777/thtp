@@ -1,0 +1,418 @@
+libra_frugality_hub = {
+	icon = "GFX_orbitalring_maintenance_hub"
+	construction_days = 360
+
+	potential = {
+		is_normal_starbase = yes
+		exists = owner
+		owner = {
+			has_tradition = tr_libra_frugality_3
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+		}
+		upkeep = {
+			trade = 10
+		}
+	}
+
+	defense_platform_modifier = {
+		ships_upkeep_mult = -0.25
+	}
+
+	orbit_modifier = {
+		ships_upkeep_mult = -0.25
+	}
+
+	system_modifier = {
+		planet_jobs_upkeep_mult = -0.1
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+}
+
+#
+
+libra_miracle_builder_hub = {
+	icon = "GFX_starbase_curator_think_tank"
+	construction_days = 720
+
+	potential = {
+		is_normal_starbase = yes
+		exists = owner
+		owner = {
+			has_origin = origin_libra_miracle_builder
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starfortress"
+			has_starbase_size >= starbase_starfortress
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_origin = origin_libra_miracle_builder }
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 30
+		}
+	}
+
+	station_modifier = {
+		ship_hull_add = 40000
+		starbase_defense_platform_capacity_add = 5
+	}
+
+	on_finished = {
+		solar_system = {
+			system_event = { id = libra_origin.1502 }
+		}
+	}
+
+	on_destroyed = {
+		solar_system = {
+			system_event = { id = libra_origin.1503 }
+		}
+	}
+
+	custom_tooltip_with_modifiers = sm_libra_miracle_builder_hub_desc_modifier
+
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+libra_may_storm_pacifist = {
+	icon = "GFX_spaceport_modules"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_libra_may_storm
+			has_valid_civic = civic_libra_may_storm_pacifist_b
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_valid_civic = civic_libra_may_storm_pacifist_b }
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 250
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	station_modifier = {
+		ship_damage_reduction_mult = 0.5
+	}
+
+	defense_platform_modifier = {
+		ship_damage_reduction_mult = 0.35
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 100
+	}
+}
+
+#
+
+libra_astromining_hub = {
+	icon = "GFX_orbitalring_mineral_hub"
+	construction_days = 720
+
+	potential = {
+		is_normal_starbase = yes
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_libra_starry_miner
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_starry_miner }
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+		}
+	}
+
+	on_finished = {
+		solar_system = {
+			system_event = { id = libra_fairy.4000 }
+		}
+	}
+
+	on_destroyed = {
+		solar_system = {
+			system_event = { id = libra_fairy.4001 }
+		}
+	}
+
+	custom_tooltip = sm_libra_astromining_hub_office_desc_modifier
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			add = 150
+			or = {
+				has_starbase_building = nanite_harvester
+				owner = { is_void_dweller_empire = yes }
+			}
+		}
+		modifier = {
+			factor = 6
+			count_starbase_modules = {
+				type = libra_astromining_bay
+				count > 3
+			}
+		}
+		modifier = {
+			add = 1000
+			has_starbase_building = nanite_harvester
+		}
+		modifier = {
+			add = 1000
+			solar_system = {
+				count_system_planet = {
+					count >= 10
+					limit = {
+						NOT = { has_deposit_for = shipclass_research_station }
+						is_astral_scar = no
+						colonizable_planet = no
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 1000
+			solar_system = {
+				any_system_megastructure = {
+					or = {
+						is_megastructure_type = orbital_arc_furnace_1
+						is_megastructure_type = orbital_arc_furnace_2
+						is_megastructure_type = orbital_arc_furnace_3
+						is_megastructure_type = orbital_arc_furnace_4
+					}
+				}
+			}
+		}
+	}
+}
+
+libra_directive_76_garrison = {
+	icon = "GFX_libra_directive_76_garrison"
+	construction_days = 720
+
+	potential = {
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_country_flag = libra_directive_76_starbase
+			check_variable = { which = libra_aa_path value = 10 }
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_directive_76 }
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+		}
+		produces = {
+			trigger = {
+				is_orbital_ring = no
+			}
+			physics_research = 24
+			engineering_research = 24
+			society_research = 24
+			trade = 48
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	station_modifier = {
+		ship_target_weight_mult = -0.15
+		starbase_defense_platform_capacity_add = 10
+	}
+
+	defense_platform_modifier = {
+		ship_armor_add = 3600
+		ship_shield_add = 3600
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_orbital_ring = yes
+		}
+		job_soldier_stability_add = 1
+		planet_jobs_productive_produces_mult = 0.15
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+libra_babel_tower = {
+	icon = "GFX_libra_babel_tower"
+	construction_days = 720
+
+	potential = {
+		has_starbase_size >= starbase_starhold
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_ascension_perk = ap_libra_ode_to_babel
+			check_variable = { which = libra_aa_path value = 20 }
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_ode_to_babel }
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 25000
+	}
+
+	system_modifier = {
+		planet_stability_add = 5
+		planet_pops_upkeep_mult = -0.1
+		pop_amenities_usage_mult = -0.1
+	}
+
+	station_modifier = {
+		starbase_defense_platform_capacity_add = 5
+		ship_weapon_range_mult = 0.25
+		ship_engagement_range_mult = 0.5
+	}
+
+	defense_platform_modifier = {
+		ship_tracking_add = 5
+		ship_weapon_range_mult = 0.25
+		ship_engagement_range_mult = 0.5
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+libra_atomic_heart_array = {
+	icon = "GFX_libra_atomic_heart_array"
+	construction_days = 720
+
+	potential = {
+		is_normal_starbase = yes
+		exists = owner
+		owner = {
+			is_variable_set = libra_aa_path
+			has_technology = tech_libra_atomic_heart_c
+			check_variable = { which = libra_aa_path value = 60 }
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			not = { has_ascension_perk = ap_libra_atomic_heart }
+		}
+	}
+
+	show_in_tech = "tech_libra_atomic_heart_c"
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+			sr_living_metal = 100
+		}
+		upkeep = {
+			energy = 5
+			sr_living_metal = 1
+		}
+	}
+
+	system_modifier = {
+		planet_jobs_productive_produces_mult = 0.25
+	}
+
+	station_modifier = {
+		ship_cloaking_detection_add = 2
+		starbase_defense_platform_capacity_mult = 0.25
+	}
+
+	defense_platform_modifier = {
+		ship_weapon_range_mult = 0.5
+		ship_engagement_range_mult = 0.5
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+
+	ai_weight = {
+		weight = 1000
+	}
+}

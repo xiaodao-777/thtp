@@ -1,0 +1,343 @@
+libra_overclock_tradition = {
+	potential = {
+		has_tradition = tr_libra_overclock_finish
+	}
+
+	option = {
+		name = policy_libra_overclock_tradition_a
+		on_enabled = {
+			hidden_effect = {
+				libra_clear_overclock_modifiers = yes
+				add_modifier = { modifier = libra_overclock_1_modifier multiplier = -1 }
+				add_modifier = { modifier = libra_overclock_2_modifier multiplier = -1 }
+				add_modifier = { modifier = libra_overclock_3_modifier multiplier = -1 }
+				add_modifier = { modifier = libra_overclock_4_modifier multiplier = -1 }
+				add_modifier = { modifier = libra_overclock_5_modifier multiplier = -1 }
+			}
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_libra_overclock_tradition_b
+		on_enabled = {
+			hidden_effect = {
+				libra_clear_overclock_modifiers = yes
+				add_modifier = { modifier = libra_overclock_1_modifier }
+				add_modifier = { modifier = libra_overclock_2_modifier }
+				add_modifier = { modifier = libra_overclock_3_modifier }
+				add_modifier = { modifier = libra_overclock_4_modifier }
+				add_modifier = { modifier = libra_overclock_5_modifier }
+			}
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_overclock_tradition_c
+		on_enabled = {
+			hidden_effect = {
+				libra_clear_overclock_modifiers = yes
+				add_modifier = { modifier = libra_overclock_1_modifier multiplier = 2 }
+				add_modifier = { modifier = libra_overclock_2_modifier multiplier = 2 }
+				add_modifier = { modifier = libra_overclock_3_modifier multiplier = 2 }
+				add_modifier = { modifier = libra_overclock_4_modifier multiplier = 2 }
+				add_modifier = { modifier = libra_overclock_5_modifier multiplier = 2 }
+			}
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				or = {
+					is_difficulty = 4
+					is_difficulty = 5
+					is_difficulty = 6
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_overclock_tradition_d
+		valid = {
+			has_technology= tech_ascension_theory
+		}
+		on_enabled = {
+			hidden_effect = {
+				libra_clear_overclock_modifiers = yes
+				add_modifier = { modifier = libra_overclock_1_modifier multiplier = 3 }
+				add_modifier = { modifier = libra_overclock_2_modifier multiplier = 3 }
+				add_modifier = { modifier = libra_overclock_3_modifier multiplier = 3 }
+				add_modifier = { modifier = libra_overclock_4_modifier multiplier = 3 }
+				add_modifier = { modifier = libra_overclock_5_modifier multiplier = 3 }
+			}
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				is_difficulty = 6
+			}
+		}
+	}
+}
+
+libra_drudgery_tradition = {
+	potential = {
+		has_tradition = tr_libra_drudgery_finish
+	}
+
+	option = {
+		name = policy_libra_drudgery_tradition_a
+		modifier = {
+			planet_districts_upkeep_mult = -0.25
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_libra_drudgery_tradition_b
+		modifier = {
+			planet_building_build_speed_mult = 0.35
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				or = {
+					has_tradition = tr_virtuality_adopt
+					has_tradition = tr_nanotech_adopt
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_drudgery_tradition_c
+		modifier = {
+			ship_weapon_damage = 0.15
+			army_damage_mult = 0.25
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_war_trigger = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_drudgery_tradition_d
+		valid = {
+			or = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			country_trade_produces_mult = 0.15
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_drudgery_tradition_e
+		valid = {
+			or = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			bonus_pop_growth = 0.1
+			bonus_pop_growth_mult = 0.1
+			planet_pop_assembly_mult = 0.1
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 2
+				libra_ai_preferences_population = yes
+			}
+		}
+	}
+}
+
+libra_sumptuary_tradition = {
+	potential = {
+		has_tradition = tr_libra_sumptuary_finish
+	}
+
+	option = {
+		name = policy_libra_sumptuary_tradition_a
+		modifier = {
+			planet_pops_produces_mult = 0.15
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 1
+				not = { has_country_flag = libra_is_machine_empire }
+			}
+			modifier = {
+				add = 2
+				or = {
+					has_ascension_perk = ap_libra_cosmological_constant
+					#has_ascension_perk = 
+				}
+			}
+		}
+	}
+	option = {
+		name = policy_libra_sumptuary_tradition_b
+		potential = {
+			is_gestalt = no
+			not = { has_tradition = tr_virtuality_adopt }
+		}
+		modifier = {
+			pop_happiness = 0.1
+			planet_civilians_physics_research_produces_add = 0.5
+			planet_civilians_society_research_produces_add = 0.5
+			planet_civilians_engineering_research_produces_add = 0.5
+			planet_civilians_consumer_goods_upkeep_add = 3
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_civilian = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_sumptuary_tradition_b_gestalt
+		potential = {
+			is_gestalt = yes
+			nor = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_stability_mult = 0.1
+			planet_maintenance_drones_physics_research_produces_add = 0.5
+			planet_maintenance_drones_society_research_produces_add = 0.5
+			planet_maintenance_drones_engineering_research_produces_add = 0.5
+			planet_maintenance_drones_minerals_upkeep_add = 4
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				libra_ai_preferences_civilian = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_sumptuary_tradition_b_swap
+		potential = {
+			or = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_traders_physics_research_produces_add = 0.5
+			planet_traders_society_research_produces_add = 0.5
+			planet_traders_engineering_research_produces_add = 0.5
+			planet_traders_energy_upkeep_add = 4
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				libra_ai_preferences_civilian = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_sumptuary_tradition_c
+		modifier = {
+			planet_housing_add = 750
+			planet_amenities_add = 750
+			planet_carry_cap_add = 1250
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_population = yes
+			}
+			modifier = {
+				add = 1
+				is_gestalt = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_sumptuary_tradition_d
+		potential = {
+			is_gestalt = no
+			not = { has_tradition = tr_virtuality_adopt }
+		}
+		modifier = {
+			planet_civilians_unity_produces_add = 2
+			planet_civilians_trade_produces_add = -2
+		}
+		AI_weight = {
+			weight = 0
+			modifier = {
+				add = 3
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_sumptuary_tradition_d_gestalt
+		potential = {
+			is_gestalt = yes
+			nor = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_maintenance_drones_unity_produces_add = 2
+			planet_maintenance_drones_trade_produces_add = -2
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+	option = {
+		name = policy_libra_sumptuary_tradition_d_swap
+		potential = {
+			or = {
+				has_tradition = tr_virtuality_adopt
+				has_origin = origin_wilderness
+			}
+		}
+		modifier = {
+			planet_traders_unity_produces_add = 2
+			planet_traders_trade_produces_add = -2
+		}
+		AI_weight = {
+			weight = 1
+			modifier = {
+				add = 2
+				libra_ai_preferences_trade = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,59 @@
+modifiers_libra_origin_conditions = {
+	term = libra_origin_conditions
+
+	potential = {
+		always = yes
+	}
+}
+
+modifiers_libra_ascension_conditions = {
+	term = libra_ascension_conditions
+
+	potential = {
+		always = yes
+	}
+}
+
+subject_is_libra_protectorate = {
+	term = protectorate
+	overlord_resources = {
+		category = subjects
+	}
+
+	potential = {
+		always = no
+	}
+}
+
+modifiers_libra_may_storm = {
+	term = libra_origin_conditions
+	loyalty_change = 10
+	ai_acceptance = {
+		overlord = 15
+		subject = 25
+	}
+	overlord_resources = {
+		category = libra_subjects
+		produces = {
+			unity = 15
+		}
+		upkeep = {
+			energy = 50
+		}
+	}
+	target_modifier = {
+		monthly_loyalty = 1
+		subject_tech_cost_mult = -0.35
+		pop_ethic_egalitarian_attraction_mult = 1
+	}
+	potential = {
+		or = {
+			agreement_preset = preset_libra_may_storm_vassal_state
+			agreement_preset = preset_libra_may_storm_vassal_state_bulwark
+			agreement_preset = preset_libra_may_storm_vassal_state_scholarium
+			agreement_preset = preset_libra_may_storm_vassal_state_prospectorium
+		}
+	}
+	extra_term_text_subject = libra_may_storm_vassal_state_conditions_subject
+	extra_term_text_overlord = libra_may_storm_vassal_state_conditions_overlord
+}

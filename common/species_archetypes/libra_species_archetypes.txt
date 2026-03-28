@@ -1,0 +1,37 @@
+LIBRACUTE = {
+	species_trait_points = 12
+	species_max_traits = 12
+	inherit_traits_from = { PRESAPIENT }
+	uses_modifiers = no
+
+	resources = {
+		category = planet_pops
+		# Resource production from other sources
+		inline_script = "pop_resources/pop_misc_production"
+	}
+}
+
+LIBRAPUNK = {
+	species_trait_points = 8
+	species_max_traits = 8
+	uses_modifiers = no
+	robotic = yes
+	resources = {
+		category = planet_pops
+
+		# Resource production from other sources
+		inline_script = "pop_resources/pop_misc_production"
+	}
+}
+
+LIBRAEXD = {
+	inherit_trait_points_from = OTHER
+	inherit_traits_from = { OTHER }
+	uses_modifiers = no
+
+	resources = {
+		category = planet_pops
+		# Resource production from other sources
+		inline_script = "pop_resources/pop_misc_production"
+	}
+}

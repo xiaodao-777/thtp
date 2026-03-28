@@ -1,0 +1,243 @@
+@cost1 = 5
+@cost2 = 10
+@cost3 = 15
+@cost4 = 20
+
+@cost_fauna_1 = 20
+@cost_fauna_2 = 40
+@cost_fauna_3 = 60
+@cost_fauna_4 = 80
+
+@power0 = -5
+@power1 = -10
+@power2 = -15
+@power3 = -20
+@power4 = -30
+
+# #############
+# Astral Blade
+#############
+
+utility_component_template = {
+	key = "LIBRA_ASTRAL_REACTOR"
+	size = aux
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	icon = "GFX_ship_part_libra_astral_reactor"
+	icon_frame = 1
+	power = 700
+	resources = {
+		category = ship_components
+		cost = {
+			astral_threads = 25
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.5
+		}
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+	}
+	modifier = {
+		ship_shield_regen_add_perc = 0.05
+		ship_shield_regen_add_static = @regen_M7
+		ship_armor_regen_add_perc = 0.05
+		ship_armor_regen_add_static = @regen_M7
+	}
+
+	prerequisites = { "tech_libra_astral_reactors" }
+	component_set = "LIBRA_ASTRAL_REACTOR"
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			set = 0
+			has_ascension_perk = ap_libra_atomic_heart
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LIBRA_ASTRAL_REACTOR_BIO"
+	size = aux
+	potential = {
+		is_ship_category = bio_ship
+		libra_is_designable_bio_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	icon = "GFX_ship_part_libra_astral_reactor_bio"
+	icon_frame = 1
+	power = 800
+	resources = {
+		category = ship_components
+		cost = {
+			food = 50
+			astral_threads = 25
+		}
+		upkeep = {
+			food = 1.5
+			alloys = 0.5
+		}
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+	}
+	modifier = {
+		ship_shield_regen_add_perc = 0.05
+		ship_shield_regen_add_static = @regen_M7
+		ship_armor_regen_add_perc = 0.05
+		ship_armor_regen_add_static = @regen_M7
+	}
+
+	prerequisites = { "tech_libra_astral_reactors" }
+	component_set = "LIBRA_ASTRAL_REACTOR_BIO"
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+# #############
+# Cutefied World
+#############
+
+utility_component_template = {
+	key = "LIBRA_CUTE_MONITOR"
+	size = aux
+	icon = "GFX_ship_part_libra_cute_monitor"
+	icon_frame = 1
+	power = -25
+	potential = {
+		libra_is_designable_crisis_shipsize = no
+		from = {
+			is_variable_set = libra_aa_path
+			is_species_class = LIBRACUTE
+			check_variable = { which = libra_aa_path value = 31 }
+		}
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			volatile_motes = 1
+			exotic_gases = 1
+			rare_crystals = 1
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+	ship_modifier = {
+		ship_accuracy_mult = 0.05
+		ship_tracking_mult = 0.05
+		ship_armor_damage_mult = 0.05
+		ship_shield_damage_mult = 0.05
+		ships_logistics_mult = 0.1
+	}
+
+	component_set = "LIBRA_CUTE_MONITOR"
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+# #############
+# Atomic Heart
+#############
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_LIBRA_ATOMIC"
+	size = aux
+	icon = "GFX_ship_part_computer_libra_atomic"
+	icon_frame = 1
+	power = -50
+	potential = {
+		#libra_is_designable_libra_shipsize = no
+		libra_is_designable_crisis_shipsize = no
+		from = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 60 }
+		}
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			sr_living_metal = 1
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.5
+		}
+	}
+	modifier = {
+		ship_evasion_mult = 0.05
+		ship_speed_mult = 0.1
+		ship_shield_regen_add_perc = 0.15
+		ship_armor_regen_add_perc = 0.15
+	}
+	ship_modifier = {
+		ship_accuracy_mult = 0.05
+		ship_tracking_mult = 0.05
+	}
+
+	component_set = "COMBAT_COMPUTER_LIBRA_ATOMIC"
+	prerequisites = { "tech_libra_atomic_heart_a" }
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+utility_component_template = {
+	key = "LIBRA_ATOMIC_REACTOR_BOOSTER"
+	size = aux
+	potential = {
+		libra_is_designable_crisis_shipsize = no
+		from = {
+			is_variable_set = libra_aa_path
+			check_variable = { which = libra_aa_path value = 60 }
+		}
+	}
+	icon = "GFX_ship_part_libra_atomic_reactor_booster"
+	icon_frame = 1
+	power = 50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			sr_living_metal = 1
+		}
+		upkeep = {
+			energy = 1.5
+			alloys = 0.5
+		}
+	}
+	modifier = {
+		ship_reactor_power_mult = 0.5
+		ship_shield_regen_add_static = 25
+		ship_armor_regen_add_static = 25
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.1
+		ship_armor_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_libra_atomic_heart_b" }
+	component_set = "LIBRA_ATOMIC_REACTOR_BOOSTER"
+
+	ai_weight = {
+		weight = 50
+	}
+}

@@ -1,0 +1,468 @@
+@libra_story_system_extreme = 24
+@libra_story_system_common = 12
+@libra_story_system_rare = 6
+
+libra_event_system_1 = {
+	class = "sc_rift_star"
+	flags = { crisis_spawn_exclude libra_agent_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 60
+	}
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 120
+	}
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 180
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 240
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 300
+	}
+
+	planet = {
+		class = pc_rift_star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 13
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	change_orbit = 60
+
+	planet = {
+		count = 3
+		class = pc_asteroid
+		orbit_angle = 120
+		orbit_distance = 0
+		size = 3
+	}
+
+	change_orbit = 120
+
+	planet = {
+		count = 6
+		class = pc_rare_crystal_asteroid
+		orbit_angle = 60
+		orbit_distance = 0
+		size = 3
+	}
+
+	change_orbit = 120
+
+	planet = {
+		count = 3
+		class = pc_ice_asteroid
+		orbit_angle = 120
+		orbit_distance = 0
+		size = 3
+	}
+
+	init_effect = {
+		create_libra_agent = yes
+	}
+}
+
+libra_story_site_system_1 = {
+	class = "sc_pulsar"
+	prevent_anomalies = yes
+	flags = { crisis_spawn_exclude libra_story_site }
+
+	usage = misc_system_init
+	usage_odds = {
+		base = @libra_story_system_extreme
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+
+	max_instances = 1
+	spawn_chance = 25
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 45
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 60
+	}
+
+	planet = {
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 27
+		has_ring = no
+	}
+
+	change_orbit = 45
+
+	planet = {
+		class = pc_ice_asteroid
+		orbit_angle = 0
+		orbit_distance = 0
+		size = 3
+	}
+	planet = {
+		class = pc_ice_asteroid
+		orbit_angle = 60
+		orbit_distance = 0
+		size = 3
+	}
+	planet = {
+		class = pc_ice_asteroid
+		orbit_angle = 60
+		orbit_distance = 0
+		size = 3
+	}
+	planet = {
+		class = pc_ice_asteroid
+		orbit_angle = 60
+		orbit_distance = 0
+		size = 3
+	}
+	planet = {
+		class = pc_ice_asteroid
+		orbit_angle = 60
+		orbit_distance = 0
+		size = 3
+	}
+	planet = {
+		class = pc_ice_asteroid
+		orbit_angle = 60
+		orbit_distance = 0
+		size = 3
+	}
+
+	change_orbit = 60
+
+	planet = {
+		class = pc_nuked
+		orbit_angle = 30
+		orbit_distance = 45
+		size = 36
+		modifiers = none
+		has_ring = yes
+	}
+	planet = {
+		class = pc_frozen
+		orbit_angle = 60
+		orbit_distance = 30
+		size = 25
+		modifiers = none
+	}
+	planet = {
+		class = pc_frozen
+		orbit_angle = 30
+		orbit_distance = 15
+		size = 22
+		modifiers = none
+	}
+	planet = {
+		class = pc_frozen
+		orbit_angle = 30
+		orbit_distance = 15
+		size = 19
+		modifiers = none
+	}
+	planet = {
+		class = pc_frozen
+		orbit_angle = 30
+		orbit_distance = 15
+		size = 16
+		modifiers = none
+	}
+	planet = {
+		class = pc_frozen
+		orbit_angle = 30
+		orbit_distance = 15
+		size = 13
+		modifiers = none
+	}
+
+	planet = {
+		class = pc_barren_cold
+		orbit_angle = 0
+		orbit_distance = -90
+		size = 36
+		modifiers = none
+		has_ring = yes
+	}
+	planet = {
+		class = pc_barren_cold
+		orbit_angle = 60
+		orbit_distance = 30
+		modifiers = none
+		size = 25
+	}
+	planet = {
+		class = pc_barren_cold
+		orbit_angle = 30
+		orbit_distance = 15
+		modifiers = none
+		size = 22
+	}
+	planet = {
+		class = pc_barren_cold
+		orbit_angle = 30
+		orbit_distance = 15
+		modifiers = none
+		size = 19
+	}
+	planet = {
+		class = pc_barren_cold
+		orbit_angle = 30
+		orbit_distance = 15
+		modifiers = none
+		size = 16
+	}
+	planet = {
+		class = pc_barren_cold
+		orbit_angle = 30
+		orbit_distance = 15
+		modifiers = none
+		size = 13
+	}
+
+	init_effect = {
+		random_system_planet = {
+			limit = { is_planet_class = pc_nuked }
+			set_planet_flag = legendary_leader_planet
+			add_deposit = d_libra_feature_4
+			add_deposit = d_libra_feature_7
+			create_archaeological_site = libra_main_story_site_1
+		}
+		while = {
+			count = 12
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = solar_system
+			}
+		}
+		while = {
+			count = 12
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = solar_system
+			}
+		}
+		while = {
+			count = 12
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = solar_system
+			}
+		}
+		while = {
+			count = 36
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = solar_system
+			}
+		}
+		if = {
+			limit = { has_astral_planes_dlc = yes }
+			spawn_astral_scar = yes
+		}
+	}
+}
+
+libra_story_site_system_2 = {
+	class = sc_black_hole
+	flags = { libra_hoshino_kotori_system crisis_spawn_exclude }
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 120
+	}
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 180
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 240
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 300
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 25
+		has_ring = no
+	}
+
+	change_orbit = 60
+
+	planet = {
+		count = 3
+		class = pc_nuked
+		orbit_angle = 120
+		orbit_distance = 0
+		size = 18
+	}
+
+	change_orbit = 120
+
+	planet = {
+		count = 6
+		class = pc_rare_crystal_asteroid
+		orbit_angle = 60
+		orbit_distance = 0
+		size = 3
+	}
+
+	change_orbit = 120
+
+	planet = {
+		count = 3
+		class = pc_ice_asteroid
+		orbit_angle = 120
+		orbit_distance = 0
+		size = 3
+	}
+
+	init_effect = {
+		add_modifier = { modifier = libra_story_site_system_2_mod }
+		create_country = {
+			name = NAME_Libra_Guardian_1
+			type = guardian
+			flag = {
+				icon = {
+					category = "spherical"
+					file = "flag_spherical_6.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				add_modifier = { modifier = libra_guardian_1_modifier multiplier = 2 }
+			}
+		}
+		star = {
+			create_fleet = {
+				name = NAME_Libra_Guardian_1
+				settings = {
+					spawn_debris = no
+					is_boss = yes
+				}
+				effect = {
+					set_owner = last_created_country
+					create_ship = {
+						name = "NAME_Libra_Guardian_1"
+						design = "NAME_Libra_Guardian_01"
+					}
+					set_location = PREVPREV
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 300
+					add_modifier = { modifier = libra_guardian_1_modifier multiplier = -1 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_inside_nebula = no
+			}
+			create_nebula = {
+				radius = 10
+				effect = { nebula_cloaking_effect = yes }
+			}
+		}
+	}
+}
+
+libra_story_site_system_3 = {
+	class = sc_black_hole
+	flags = { libra_story_site }
+
+	usage = misc_system_init
+	usage_odds = {
+		base = @libra_story_system_common
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+
+	max_instances = 1
+	spawn_chance = 25
+
+	planet = {
+		class = star
+		orbit_distance = 0
+
+		init_effect = {
+			create_archaeological_site = libra_main_story_site_9
+		}
+	}
+
+	change_orbit = 125
+
+	init_effect = {
+		every_system_planet = {
+			clear_deposits = yes
+		}
+		while = {
+			count = 30
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = solar_system
+			}
+		}
+		while = {
+			count = 50
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = solar_system
+			}
+		}
+		while = {
+			count = 50
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = solar_system
+			}
+		}
+		while = {
+			count = 100
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = solar_system
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+objectTypes = {
+
+	pdxparticle = {
+		name = "libra_dragon_breath_windup_effect"
+		type = "libra_dragon_breath_windup_effect"
+
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "libra_dragon_breath_muzzle_windup_effect"
+		type = "libra_dragon_breath_muzzle_windup_effect"
+
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "libra_dragon_breath_muzzle_particle"
+		type = "libra_dragon_breath_muzzle"
+
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "libra_dragon_breath_hit_effect"
+		type = "libra_dragon_breath_hit_effect"
+
+		scale = 1.15
+	}
+}

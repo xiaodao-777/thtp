@@ -1,0 +1,175 @@
+tr_libra_introspection_adopt = {
+	unlocks_agenda = agenda_libra_introspection_a
+	possible = {
+		if = {
+			limit = { is_gestalt = yes }
+			has_technology = tech_unity_of_purpose
+		}
+		else = {
+			has_technology = tech_artificial_moral_codes
+		}
+	}
+	modifier = {
+		leader_trait_selection_options_add = 2
+	}
+}
+
+tr_libra_introspection_finish = {
+	unlocks_agenda = agenda_libra_introspection_c
+	modifier = {
+		ascension_perks_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_introspection_finish_desc
+}
+
+tr_libra_introspection_1 = {
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = { not = { has_tradition = tr_libra_introspection_2 } }
+				set_country_flag = libra_introspection_1
+			}
+		}
+	}
+	custom_tooltip = tr_libra_introspection_1_desc
+
+	ai_weight = {
+		factor = 3000
+		modifier = {
+			factor = 2
+			libra_ai_preferences_council = yes
+		}
+	}
+}
+
+tr_libra_introspection_2 = {
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = { not = { has_tradition = tr_libra_introspection_1 } }
+				set_country_flag = libra_introspection_2
+			}
+		}
+	}
+	custom_tooltip = tr_libra_introspection_2_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_introspection_3 = {
+	possible = {
+		has_tradition = tr_libra_introspection_1
+		has_tradition = tr_libra_introspection_2
+	}
+	unlocks_agenda = agenda_libra_introspection_b
+	modifier = {
+		negative_traits_country = 1
+	}
+	custom_tooltip_with_modifiers = tr_libra_introspection_3_desc
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_introspection_4 = {
+	possible = {
+		has_tradition = tr_libra_introspection_3
+	}
+	custom_tooltip = tr_libra_introspection_4_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_libra_introspection_4
+		}
+		modifier = {
+			leader_initial_skill = 1
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_introspection_2
+		}
+		on_enabled = {
+			hidden_effect = {
+				every_owned_leader = {
+					add_trait = {
+						trait = random_common
+						show_message = no
+					}
+					change_variable = {
+						which = libra_extra_starting_traits_count
+						value = 1
+					}
+				}
+				every_pool_leader = {
+					add_trait = {
+						trait = random_common
+						show_message = no
+					}
+					change_variable = {
+						which = libra_extra_starting_traits_count
+						value = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			libra_leader_starting_traits_country = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_libra_introspection_5 = {
+	possible = {
+		has_tradition = tr_libra_introspection_3
+	}
+	custom_tooltip = tr_libra_introspection_5_desc
+
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_tradition = tr_libra_introspection_5
+		}
+		modifier = {
+			leader_skill_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_country_flag = libra_introspection_1
+		}
+		modifier = {
+			councilor_skill_add = 2
+		}
+		weight = {
+			factor = 2
+		}
+	}
+
+	ai_weight = {
+		factor = 3000
+	}
+}

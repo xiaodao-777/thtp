@@ -1,0 +1,677 @@
+planet_organic_batteries = {
+	parent = planet_jobs_productive
+	modifier_category = pop_job
+	generate_add_modifiers = {
+		produces
+	}
+#	 Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_technician
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_traders = {
+	parent = planet_jobs_specialist
+	modifier_category = pop_job
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+#
+
+libra_subjects = {
+	parent = subjects
+#	generate_add_modifiers = {
+#		produces
+#	}
+}
+
+planet_libra_dragonborn = {
+	parent = planet_deposits
+	modifier_category = planet #deposit
+	generate_add_modifiers = {
+		produces
+	}
+}
+
+planet_libra_calculator = {
+	parent = planet_jobs_worker
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_researchers
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_researchers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_physicists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_physicists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_biologists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_biologists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_engineers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_engineers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_vampires = {
+	parent = planet_jobs_specialist
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_soldiers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_soldiers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_outland_distributor = {
+	parent = planet_politicians
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_politicians
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_traders
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_traders
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_corporate_sentry = {
+	parent = planet_traders
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_traders
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_traders
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_soldiers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_soldiers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_peoples_deputies = {
+	parent = planet_jobs_ruler
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_farmers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_farmers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_soldiers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_soldiers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_artisans
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_artisans
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_biologists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_biologists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_industry_commissars = {
+	parent = planet_jobs_ruler
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_miners
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_miners
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_metallurgists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_metallurgists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_politicians
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+#	triggered_upkeep_modifier = {
+#		key = planet_politicians
+#		modifier_types = {
+#			add
+#		}
+#		trigger = {
+#			always = yes
+#		}
+#		use_parent_icon = yes
+#	}
+	triggered_produces_modifier = {
+		key = planet_engineers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_engineers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_shock_workers = {
+	parent = planet_jobs_ruler
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_technician
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_technician
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_traders
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_traders
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_bureaucrats
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_bureaucrats
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_physicists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_physicists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+#
+
+planet_libra_chromosome_engineer = {
+	parent = planet_biologists
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_biologists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_biologists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_pop_assemblers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_pop_assemblers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_babel = {
+	parent = planets
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		energy
+		volatile_motes
+		exotic_gases
+		rare_crystals
+	}
+	modifier_category = planet
+}
+
+planet_libra_augmentors = {
+	parent = planet_jobs_worker
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_pop_assemblers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_pop_assemblers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_nanite_buildings = {
+	parent = planet_buildings
+	modifier_category = planet
+	generate_mult_modifiers = {
+		produces
+	}
+}
+
+planet_libra_nanoreplica = {
+	parent = planet_jobs_worker
+	modifier_category = pop_job
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_libra_yggdrasil = {
+	parent = planets
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		energy
+	}
+	modifier_category = planet
+}
+
+planet_libra_psychics = {
+	parent = planet_jobs_specialist
+	modifier_category = pop_job
+	triggered_produces_modifier = {
+		key = planet_telepaths
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_telepaths
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_harmonizers = {
+	parent = planet_jobs_worker
+	modifier_category = pop_job
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	triggered_produces_modifier = {
+		key = planet_telepaths
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_telepaths
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_libra_throne = {
+	parent = planets
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		alloys
+		zro
+	}
+	modifier_category = planet
+}

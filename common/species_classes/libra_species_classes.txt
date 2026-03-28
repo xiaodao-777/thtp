@@ -1,0 +1,46 @@
+LIBRACUTE = {
+	archetype = LIBRACUTE
+
+	playable = {
+		has_global_flag = game_started
+	}
+	randomized = no
+
+	gender = yes
+	portrait_modding = yes
+	leader_age_min = 8
+	leader_age_max = 18
+	graphical_culture = biogenesis_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+	trait = "trait_libra_cutefied"
+}
+
+LIBRAPUNK = {
+	archetype = LIBRAPUNK
+
+	playable = {
+		has_global_flag = game_started
+	}
+	randomized = no
+
+	gender = yes
+	portrait_modding = yes
+	graphical_culture = cybernetics_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+	#trait = "trait_cybernetic"
+}
+
+LIBRAEXD = {
+	archetype = LIBRAEXD
+
+	playable = {
+		has_global_flag = game_started
+	}
+	randomized = no
+
+	gender = yes
+	portrait_modding = yes
+	graphical_culture = extra_dimensional_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+	#trait = "trait_exd"
+}

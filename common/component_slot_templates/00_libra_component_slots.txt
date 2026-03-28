@@ -1,0 +1,60 @@
+libra_invisible_large_fixed = {
+	size = large
+	component = weapon
+	is_fixed = yes
+}
+
+libra_invisible_extra_large_turret = {
+	size = extra_large
+	component = weapon
+}
+
+libra_extra_large_turret_fixed = {
+	size = extra_large
+	component = weapon
+	is_fixed = yes
+	entities = {
+		weapon_type_kinetic = "large_kinetic_gun_entity"
+		weapon_type_energy = "large_laser_gun_entity"
+	}
+}
+
+libra_titanic_turret_fixed = {
+	size = titanic
+	component = weapon
+	is_fixed = yes
+	entities = {
+		weapon_type_kinetic = "turret_xl_entity"
+		weapon_type_energy = "turret_xl_entity"
+	}
+}
+
+#
+
+libra_large_turret = {
+	size = large
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "medium_kinetic_gun_entity"
+		weapon_type_energy = "medium_laser_gun_entity"
+		weapon_type_explosive = "turret_missile_medium_entity"
+	}
+}
+
+libra_extra_large_turret = {
+	size = extra_large
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "large_kinetic_gun_entity"
+		weapon_type_energy = "large_laser_gun_entity"
+	}
+}
+
+libra_titanic_turret = {
+	size = titanic
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "turret_xl_entity"
+		weapon_type_energy = "turret_xl_entity"
+	}
+}

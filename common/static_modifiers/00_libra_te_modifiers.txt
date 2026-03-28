@@ -1,0 +1,61 @@
+libra_hive_survival_competition_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_ancient_clone_vat.dds"
+	icon_frame = 1
+	planet_amenities_no_happiness_mult = 0.01
+	planet_jobs_produces_mult = 0.02
+	planet_jobs_simple_drone_produces_mult = 0.02
+}
+
+#
+
+libra_story_site_system_2_mod = {
+	ship_speed_reduction = 0.5
+	ship_shield_penetration_mult = -0.5
+	ship_armor_penetration_mult = -0.5
+	ship_cloaking_strength_add = -15
+}
+libra_guardian_1_modifier = {
+	hide_from_country_list = yes
+	ship_speed_reduction = -0.5
+	ship_tracking_add = 50
+#	ship_fire_rate_mult = 1
+	ship_weapon_range_mult = 1.1
+	ship_engagement_range_mult = 2
+	ship_hull_mult = 19
+	ship_shield_add = 1000000
+	ship_shield_mult = 8
+	ship_armor_mult = 8
+	ship_shield_regen_add_perc = 0.5
+	ship_armor_regen_add_perc = 0.5
+}
+
+libra_agent_mod_1 = {
+	pop_bonus_workforce_mult = 0.16
+	bonus_automated_workforce_mult = 0.2
+}
+libra_agent_mod_2 = {
+	country_produces_mult = 0.16
+}
+libra_agent_mod_3 = {
+	planet_stability_add = 8
+	councilor_skill_add = 2
+}
+libra_agent_mod_4 = {
+	ship_weapon_damage = 0.24
+	ship_fire_rate_mult = 0.24
+}
+libra_agent_mod_5 = {
+	all_technology_research_speed = 0.24
+}
+libra_agent_mod_100 = {
+	planet_jobs_produces_mult = 0.15
+	planet_jobs_upkeep_mult = 0.1
+	planet_structures_upkeep_mult = -0.15
+	planet_structures_cost_mult = 0.1
+	army_damage_taken_mult = -0.15
+	armies_upkeep_mult = 0.1
+	ship_hull_damage_mult = 0.15
+	ships_logistics_mult = 0.1
+	ruler_skill_add = 2
+}
+

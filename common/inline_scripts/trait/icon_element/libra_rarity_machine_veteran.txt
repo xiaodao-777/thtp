@@ -1,0 +1,13 @@
+layer = {
+	icon = "GFX_trait_bg"
+	color = "trait_bg_physics"
+	#color = "trait_bg_machine"	
+}
+layer = {
+	icon = "GFX_trait_glow_libra_machine_veteran"
+	color = "trait_rarity_veteran"
+}
+layer = {
+	icon = "GFX_trait_frame_libra_machine_veteran"
+	color = "trait_rarity_veteran"
+}

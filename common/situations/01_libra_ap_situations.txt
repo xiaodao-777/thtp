@@ -1,0 +1,827 @@
+@libra_gestalt_era_influence_cost = 50
+@libra_sages_notes_influence_cost = 25
+
+#
+
+situation_libra_gestalt_era_scientist = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_genetic_ascention_cloning
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			not = { has_ascension_perk = ap_libra_gestalt_era }
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_gestalt_era_scientist_tooltip
+		hidden_effect = {
+			owner = { country_event = { id = libra_fairy.0551 } }
+			switch = {
+				trigger = current_situation_approach
+				default = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_scientist
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_scientist_a }
+						}
+					}
+				}
+				situation_libra_gestalt_era_scientist_b = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_scientist
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_scientist_b }
+						}
+					}
+				}
+				situation_libra_gestalt_era_scientist_c = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_scientist
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_scientist_c }
+						}
+					}
+				}
+				situation_libra_gestalt_era_scientist_d = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_scientist
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_scientist_d }
+						}
+					}
+				}
+			}
+			destroy_situation = this
+		}
+	}
+	monthly_progress = {
+		base = 1
+		modifier = {
+			add = owner.value:libra_gestalt_era_scientist_progress
+			desc = situation_libra_gestalt_era_scientists_tt
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 10
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_2 = {
+			end = 20
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_scientist_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0552 } }
+			}
+		}
+		stage_3 = {
+			end = 30
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_scientist_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0552 } }
+			}
+		}
+		stage_4 = {
+			end = 40
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_scientist_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0552 } }
+			}
+		}
+		stage_5 = {
+			end = 50
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_scientist_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0552 } }
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_scientist_a
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			all_technology_research_speed = 0.15
+		}
+		ai_weight = {
+			base = 2
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_scientist_b
+		icon = GFX_situation_approach_astral
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			country_physics_tech_research_speed = 0.35
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 3
+				owner = {
+					num_ascension_perks > 5
+					is_preferred_weapons = weapon_type_energy
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_scientist_c
+		icon = GFX_situation_approach_synthesize
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			country_society_tech_research_speed = 0.35
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 3
+				owner = {
+					num_ascension_perks > 5
+					or = {
+						uses_ship_category = bio_ship
+						is_preferred_weapons = weapon_type_strike_craft
+					}
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_scientist_d
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			country_engineering_tech_research_speed = 0.35
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 3
+				owner = {
+					num_ascension_perks > 5
+					or = {
+						is_preferred_weapons = weapon_type_kinetic
+						is_preferred_weapons = weapon_type_explosive
+					}
+				}
+			}
+		}
+	}
+}
+
+situation_libra_gestalt_era_official = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_stairway_to_heavens
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			not = { has_ascension_perk = ap_libra_gestalt_era }
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_gestalt_era_official_tooltip
+		hidden_effect = {
+			owner = { country_event = { id = libra_fairy.0553 } }
+			switch = {
+				trigger = current_situation_approach
+				default = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_official
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_official_a }
+						}
+					}
+				}
+				situation_libra_gestalt_era_official_b = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_official
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_official_b }
+						}
+					}
+				}
+				situation_libra_gestalt_era_official_c = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_official
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_official_c }
+						}
+					}
+				}
+				situation_libra_gestalt_era_official_d = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_official
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_official_d }
+						}
+					}
+				}
+			}
+			destroy_situation = this
+		}
+	}
+	monthly_progress = {
+		base = 1
+		modifier = {
+			add = owner.value:libra_gestalt_era_official_progress
+			desc = situation_libra_gestalt_era_officials_tt
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 10
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_2 = {
+			end = 20
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_official_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0554 } }
+			}
+		}
+		stage_3 = {
+			end = 30
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_official_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0554 } }
+			}
+		}
+		stage_4 = {
+			end = 40
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_official_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0554 } }
+			}
+		}
+		stage_5 = {
+			end = 50
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_official_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0554 } }
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_official_a
+		icon = GFX_situation_approach_amenities
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			country_produces_mult = 0.1
+		}
+		ai_weight = {
+			base = 2
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_official_b
+		icon = GFX_situation_approach_heart
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			logistic_growth_mult = 0.15
+			planet_pop_assembly_mult = 0.15
+			bonus_pop_growth_mult = 0.15
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				add = 3
+				owner = {
+					count_owned_pop_amount = { count < 18000 }
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_official_c
+		icon = GFX_situation_approach_influence
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			country_starbase_influence_cost_mult = -0.25
+			ship_colonizer_cost_mult = -0.25
+			planet_colony_development_speed_mult = 0.5
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				add = 3
+				owner = { ai_colonize_plans > 1 }
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_official_d
+		icon = GFX_situation_approach_kneel
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			empire_size_add = -50
+			edicts_upkeep_mult = -0.25
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				add = 3
+				owner = { empire_sprawl_over_cap > 50 }
+			}
+		}
+	}
+}
+
+situation_libra_gestalt_era_commander = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+ 	category = positive
+	picture = GFX_evt_timeworm_transcriptions
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			not = { has_ascension_perk = ap_libra_gestalt_era }
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_gestalt_era_commander_tooltip
+		hidden_effect = {
+			owner = { country_event = { id = libra_fairy.0555 } }
+			switch = {
+				trigger = current_situation_approach
+				default = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_commander
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_commander_a }
+						}
+					}
+				}
+				situation_libra_gestalt_era_commander_b = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_commander
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_commander_b }
+						}
+					}
+				}
+				situation_libra_gestalt_era_commander_c = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_commander
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_commander_c }
+						}
+					}
+				}
+				situation_libra_gestalt_era_commander_d = {
+					owner = {
+						start_situation = {
+							type = situation_libra_gestalt_era_commander
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_gestalt_era_commander_d }
+						}
+					}
+				}
+			}
+			destroy_situation = this
+		}
+	}
+	monthly_progress = {
+		base = 1
+		modifier = {
+			add = owner.value:libra_gestalt_era_commander_progress
+			desc = situation_libra_gestalt_era_commanders_tt
+		}
+	}
+	stages = {
+		stage_1 = {
+			end = 10
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_2 = {
+			end = 20
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_commander_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0556 } }
+			}
+		}
+		stage_3 = {
+			end = 30
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_commander_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0556 } }
+			}
+		}
+		stage_4 = {
+			end = 40
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_commander_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0556 } }
+			}
+		}
+		stage_5 = {
+			end = 50
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_gestalt_era_commander_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0556 } }
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_commander_a
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			ship_military_cost_mult = -0.1
+			armies_cost_mult = -0.1
+		}
+		ai_weight = {
+			base = 2
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_commander_b
+		icon = GFX_situation_approach_fight
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			category_particles_research_speed_mult = 0.2
+			category_military_theory_research_speed_mult = 0.2
+			category_propulsion_research_speed_mult = 0.2
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				add = 3
+				owner = {
+					is_at_war = no
+					used_naval_capacity_percent > 0.6
+					used_naval_capacity_percent < 1
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_commander_c
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.2
+			category_voidcraft_research_speed_mult = 0.2
+			category_materials_research_speed_mult = 0.2
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = situation_libra_gestalt_era_commander_d
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_gestalt_era_influence_cost }
+		}
+		modifier = {
+			ships_upkeep_mult = -0.05
+			country_naval_cap_mult = 0.25
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 3
+				owner = { used_naval_capacity_percent >= 1 }
+			}
+			modifier = {
+				factor = 3
+				current_situation_approach = situation_libra_gestalt_era_commander_d
+				owner = { used_naval_capacity_percent >= 0.85 }
+			}
+		}
+	}
+}
+
+#
+
+situation_libra_sages_notes = {
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_unknown
+ 	category = positive
+	picture = GFX_evt_libra_sages_notes
+
+	start_value = 0
+	abort_trigger = {
+		owner = {
+			not = { has_ascension_perk = ap_libra_sages_notes }
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_libra_sages_notes_tooltip
+		hidden_effect = {
+			owner = { country_event = { id = libra_fairy.0561 } }
+			switch = {
+				trigger = current_situation_approach
+				default = {
+					owner = {
+						while = {
+							count = 3
+							add_random_research_option = {
+								add_progress = 0.5
+								ignore_prereqs = no
+								fail_effects = {
+									add_monthly_resource_mult = {
+										resource = physics_research
+										value = 1
+									}
+									add_monthly_resource_mult = {
+										resource = society_research
+										value = 1
+									}
+									add_monthly_resource_mult = {
+										resource = engineering_research
+										value = 1
+									}
+								}
+							}
+						}
+						start_situation = {
+							type = situation_libra_sages_notes
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_sages_notes_a }
+						}
+					}
+				}
+				situation_libra_sages_notes_b = {
+					owner = {
+						while = {
+							count = 3
+							add_random_research_option = {
+								add_progress = 0.5
+								area = physics
+								ignore_prereqs = no
+								fail_effects = {
+									add_monthly_resource_mult = {
+										resource = physics_research
+										value = 2
+									}
+								}
+							}
+						}
+						start_situation = {
+							type = situation_libra_sages_notes
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_sages_notes_b }
+						}
+					}
+				}
+				situation_libra_sages_notes_c = {
+					owner = {
+						while = {
+							count = 3
+							add_random_research_option = {
+								add_progress = 0.5
+								area = society
+								ignore_prereqs = no
+								fail_effects = {
+									add_monthly_resource_mult = {
+										resource = society_research
+										value = 2
+									}
+								}
+							}
+						}
+						start_situation = {
+							type = situation_libra_sages_notes
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_sages_notes_c }
+						}
+					}
+				}
+				situation_libra_sages_notes_d = {
+					owner = {
+						while = {
+							count = 3
+							add_random_research_option = {
+								add_progress = 0.5
+								area = engineering
+								ignore_prereqs = no
+								fail_effects = {
+									add_monthly_resource_mult = {
+										resource = engineering_research
+										value = 2
+									}
+								}
+							}
+						}
+						start_situation = {
+							type = situation_libra_sages_notes
+							target = capital_scope
+							effect = { set_situation_approach = situation_libra_sages_notes_d }
+						}
+					}
+				}
+			}
+			destroy_situation = this
+		}
+	}
+	monthly_progress = {
+		base = 1
+	}
+	stages = {
+		stage_1 = {
+			end = 6
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+		}
+		stage_2 = {
+			end = 12
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_sages_notes_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0561 } }
+			}
+		}
+		stage_3 = {
+			end = 18
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			custom_tooltip = situation_libra_sages_notes_effects
+			on_first_enter = {
+				owner = { country_event = { id = libra_fairy.0561 } }
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_sages_notes_a
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_sages_notes_influence_cost }
+		}
+		modifier = {
+			all_technology_research_speed = 0.15
+		}
+		ai_weight = {
+			base = 2
+		}
+	}
+	approach = {
+		name = situation_libra_sages_notes_b
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_sages_notes_influence_cost }
+		}
+		modifier = {
+			physics_tech_cost_mult = -0.05
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 3
+				owner = {
+					num_ascension_perks > 5
+					is_preferred_weapons = weapon_type_energy
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_sages_notes_c
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_sages_notes_influence_cost }
+		}
+		modifier = {
+			society_tech_cost_mult = -0.05
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 3
+				owner = {
+					num_ascension_perks > 5
+					or = {
+						uses_ship_category = bio_ship
+						is_preferred_weapons = weapon_type_strike_craft
+					}
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_libra_sages_notes_d
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+   			category = situations
+   			cost = { influence = @libra_sages_notes_influence_cost }
+		}
+		modifier = {
+			engineering_tech_cost_mult = -0.05
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 3
+				owner = {
+					num_ascension_perks > 5
+					or = {
+						is_preferred_weapons = weapon_type_kinetic
+						is_preferred_weapons = weapon_type_explosive
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+libra_minerals_expenditure_ships = {
+	resource = minerals
+	type = expenditure
+	category = ships
+
+	potential = {
+		uses_fauna_ship_sizes = no
+		not = { has_crisis_level = crisis_level_2 }
+		or = {
+			has_ascension_perk = ap_libra_intergalactic_junkie
+			has_tradition = tr_libra_adventure_adopt
+		}
+	}
+
+	weight = {
+		weight = 0.4
+		modifier = {
+			factor = 2
+			OR = {
+				recently_lost_war = yes
+				is_at_war = yes
+				has_crisis = yes
+				end_game_years_passed >= 0
+			}
+		}
+		modifier = {
+			factor = 1.25
+			used_naval_capacity_percent < 0.7
+		}
+		modifier = {
+			factor = 0.5
+			used_naval_capacity_percent > 0.9
+		}
+		modifier = {
+			factor = 0
+			used_naval_capacity_percent > 1.1
+		}
+	}
+
+	desired_max = {
+		base = 1200
+		modifier = {
+			factor = 25
+			has_ascension_perk = ap_libra_intergalactic_junkie
+		}
+	}
+}

@@ -1,0 +1,916 @@
+libra_main_story_site_1 = {
+	desc = libra_main_story_site_1_desc
+	picture = GFX_evt_city_ruins
+	stages = 7
+	weight = 0
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A1
+		event = libra_main.2000
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_A2
+		event = libra_main.2001
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_A3
+		event = libra_main.2002
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_A4
+		event = libra_main.2003
+	}
+
+	stage = {
+		difficulty = 10
+		icon = GFX_archaeology_runes_A5
+		event = libra_main.2004
+	}
+
+	stage = {
+		difficulty = 11
+		icon = GFX_archaeology_runes_A6
+		event = libra_main.2005
+	}
+
+	stage = {
+		difficulty = 12
+		icon = GFX_archaeology_runes_E2
+		event = libra_main.2006
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_2 = {
+	desc = libra_main_story_site_2_desc
+	picture = GFX_evt_city_ruins
+	max_instances = 2
+	stages = 4
+	weight = {
+		base = 0
+		modifier = {
+			add = 25
+			is_colonizable = yes
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = libra_main.2010
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A2
+		event = libra_main.2011
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A3
+		event = libra_main.2012
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A4
+		event = libra_main.2013
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_3 = {
+	desc = libra_main_story_site_3_desc
+	picture = GFX_evt_crystal_asteroid_sky
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 20
+			is_asteroid = yes
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = libra_main.2020
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = libra_main.2021
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A3
+		event = libra_main.2022
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A4
+		event = libra_main.2023
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = libra_main.2024
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_4 = {
+	desc = libra_main_story_site_4_desc
+	picture = GFX_evt_chthonian_preservation
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 25
+			is_colonizable = yes
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B1
+		event = libra_main.2030
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B2
+		event = libra_main.2031
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B3
+		event = libra_main.2032
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B4
+		event = libra_main.2033
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B5
+		event = libra_main.2034
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_5 = {
+	desc = libra_main_story_site_5_desc
+	picture = GFX_evt_slingshot_stars
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 5
+			is_asteroid = no
+			is_star = no
+			is_astral_scar = no
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A1
+		event = libra_main.2040
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = libra_main.2041
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A3
+		event = libra_main.2042
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A4
+		event = libra_main.2043
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = libra_main.2044
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_6 = {
+	desc = libra_main_story_site_6_desc
+	picture = GFX_evt_gaia_planet
+	max_instances = 1
+	stages = 6
+	weight = {
+		base = 0
+		modifier = {
+			add = 30
+			or = {
+				is_planet_class = pc_tundra
+				is_planet_class = pc_gaia
+			}
+		}
+		modifier = {
+			add = 15
+			has_modifier = libra_planet_feature_modifier_2
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A1
+		event = libra_main.2050
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A2
+		event = libra_main.2051
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A3
+		event = libra_main.2052
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A4
+		event = libra_main.2053
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = libra_main.2054
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A6
+		event = libra_main.2055
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_7 = {
+	desc = libra_main_story_site_7_desc
+	picture = GFX_evt_asteroid_field
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 25
+			is_asteroid = yes
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = libra_main.2060
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A2
+		event = libra_main.2061
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A3
+		event = libra_main.2062
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A4
+		event = libra_main.2063
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A5
+		event = libra_main.2064
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_8 = {
+	desc = libra_main_story_site_8_desc
+	picture = GFX_evt_relic_shipyard
+	max_instances = 1
+	stages = 6
+	weight = {
+		base = 0
+		modifier = {
+			add = 20
+			or = {
+				has_climate = cold
+				is_planet_class = pc_ice_asteroid
+				is_planet_class = pc_barren_cold
+				is_planet_class = pc_frozen
+			}
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C1
+		event = libra_main.2070
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C2
+		event = libra_main.2071
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C3
+		event = libra_main.2072
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_C4
+		event = libra_main.2073
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_C5
+		event = libra_main.2074
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_C6
+		event = libra_main.2075
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_9 = {
+	desc = libra_main_story_site_9_desc
+	picture = GFX_evt_black_hole
+	max_instances = 1
+	stages = 5
+	weight = 0
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C1
+		event = libra_main.2080
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C2
+		event = libra_main.2081
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_C3
+		event = libra_main.2082
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_C4
+		event = libra_main.2083
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_C5
+		event = libra_main.2084
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_10 = {
+	desc = libra_main_story_site_10_desc
+	picture = GFX_evt_shocking_developments
+	max_instances = 1
+	stages = 7
+	weight = {
+		base = 0
+		modifier = {
+			add = 50
+			is_planet_class = pc_barren
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_C1
+		event = libra_main.2090
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_C2
+		event = libra_main.2091
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_C3
+		event = libra_main.2092
+	}
+
+	stage = {
+		difficulty = 10
+		icon = GFX_archaeology_runes_C4
+		event = libra_main.2093
+	}
+
+	stage = {
+		difficulty = 10
+		icon = GFX_archaeology_runes_C5
+		event = libra_main.2094
+	}
+
+	stage = {
+		difficulty = 11
+		icon = GFX_archaeology_runes_C6
+		event = libra_main.2095
+	}
+
+	stage = {
+		difficulty = 12
+		icon = GFX_archaeology_runes_C7
+		event = libra_main.2096
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_11 = {
+	desc = libra_main_story_site_11_desc
+	picture = GFX_evt_toxic_planet
+	max_instances = 1
+	stages = 6
+	weight = {
+		base = 0
+		modifier = {
+			add = 50
+			is_planet_class = pc_toxic
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_C1
+		event = libra_main.2100
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_C2
+		event = libra_main.2101
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_C3
+		event = libra_main.2102
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_C4
+		event = libra_main.2103
+	}
+
+	stage = {
+		difficulty = 10
+		icon = GFX_archaeology_runes_C5
+		event = libra_main.2104
+	}
+
+	stage = {
+		difficulty = 11
+		icon = GFX_archaeology_runes_C6
+		event = libra_main.2105
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_12 = {
+	desc = libra_main_story_site_12_desc
+	picture = GFX_evt_satellite_in_orbit
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 30
+			is_star = yes
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C1
+		event = libra_main.2110
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C2
+		event = libra_main.2111
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C3
+		event = libra_main.2112
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C4
+		event = libra_main.2113
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C5
+		event = libra_main.2114
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_13 = {
+	desc = libra_main_story_site_13_desc
+	picture = GFX_evt_frenzied_voidworms_pacified
+	max_instances = 1
+	stages = 6
+	weight = {
+		base = 0
+		modifier = {
+			add = 40
+			is_star = yes
+			is_inside_nebula = yes
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C1
+		event = libra_main.2120
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C2
+		event = libra_main.2121
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_C3
+		event = libra_main.2122
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_C4
+		event = libra_main.2123
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_C5
+		event = libra_main.2124
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_C6
+		event = libra_main.2125
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_14 = {
+	desc = libra_main_story_site_14_desc
+	picture = GFX_evt_huge_monument
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 50
+			or = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_savannah
+				is_planet_class = pc_gaia
+				is_planet_class = pc_molten
+			}
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C1
+		event = libra_main.2130
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C2
+		event = libra_main.2131
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C3
+		event = libra_main.2132
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C4
+		event = libra_main.2133
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C5
+		event = libra_main.2134
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+libra_main_story_site_15 = {
+	desc = libra_main_story_site_15_desc
+	picture = GFX_evt_astral_rift_bleached_planet_2
+	max_instances = 1
+	stages = 7
+	weight = {
+		base = 0
+		modifier = {
+			add = 25
+			is_colonizable = yes
+			is_artificial = no
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_C1
+		event = libra_main.2140
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_C2
+		event = libra_main.2141
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_C3
+		event = libra_main.2142
+	}
+
+	stage = {
+		difficulty = 10
+		icon = GFX_archaeology_runes_C4
+		event = libra_main.2143
+	}
+
+	stage = {
+		difficulty = 11
+		icon = GFX_archaeology_runes_C5
+		event = libra_main.2144
+	}
+
+	stage = {
+		difficulty = 11
+		icon = GFX_archaeology_runes_C6
+		event = libra_main.2145
+	}
+
+	stage = {
+		difficulty = 11
+		icon = GFX_archaeology_runes_C7
+		event = libra_main.2146
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}

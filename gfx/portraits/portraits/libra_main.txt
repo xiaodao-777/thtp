@@ -1,0 +1,41 @@
+portraits = {
+	libra_alicis = {
+		texturefile = "gfx/models/portraits/libramain/libra_alicis.dds"
+	}
+
+	libra_hoshino_kotori_0 = {
+		texturefile = "gfx/models/portraits/libramain/libra_hoshino_kotori_0.dds"
+	}
+	libra_hoshino_kotori_1 = {
+		texturefile = "gfx/models/portraits/libramain/libra_hoshino_kotori_1.dds"
+	}
+	libra_hoshino_kotori_2 = {
+		texturefile = "gfx/models/portraits/libramain/libra_hoshino_kotori_2.dds"
+	}
+	libra_hoshino_kotori_3 = {
+		texturefile = "gfx/models/portraits/libramain/libra_hoshino_kotori_3.dds"
+	}
+	libra_hoshino_kotori_4 = {
+		texturefile = "gfx/models/portraits/libramain/libra_hoshino_kotori_4.dds"
+	}
+
+	libra_mino_0 = {
+		texturefile = "gfx/models/portraits/libramain/libra_mino_0.dds"
+	}
+	libra_mino_1 = {
+		texturefile = "gfx/models/portraits/libramain/libra_mino_1.dds"
+	}
+
+	libra_kazanin_momohana_0 = {
+		texturefile = "gfx/models/portraits/libramain/libra_kazanin_momohana_0.dds"
+	}
+	libra_kazanin_momohana_1 = {
+		texturefile = "gfx/models/portraits/libramain/libra_kazanin_momohana_1.dds"
+	}
+
+
+
+	libra_planetarian = {
+		texturefile = "gfx/models/portraits/libramain/libra_planetarian.dds"
+	}
+}

@@ -1,0 +1,3377 @@
+# ####################
+# Astral Blade
+# ####################
+
+weapon_component_template = {
+	key = "LIBRA_ASTRAL_LANCE"
+	prerequisites = { tech_libra_astral_lance }
+	potential = {
+		libra_is_designable_crisis_shipsize = no
+	}
+
+	power = -845
+	size = titanic
+	type = instant
+	icon = "GFX_ship_part_libra_astral_lance"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_lance"
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth }
+
+	component_set = "LIBRA_ASTRAL_LANCE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			astral_threads = 150
+		}
+		upkeep = {
+			energy = @titanic_t7_upkeep_energy
+			alloys = @titanic_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 5000 max = 10000 }
+	windup = { min = 135 max = 195 }
+	total_fire_time = 25
+	range = 250
+	accuracy = 0.85
+	tracking = 0.05
+	firing_arc = 25
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	size_damage_factor = 0.01
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ASTRAL_BLAST"
+	prerequisites = { tech_libra_astral_blast }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -440
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_blast"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_blast"
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_BLAST"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t7_cost
+			astral_threads = 60
+		}
+		upkeep = {
+			energy = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 1234 max = 1423 }
+	windup = { min = 40 max = 65 }
+	total_fire_time = 25
+	range = 200
+	accuracy = 0.85
+	tracking = 0.15
+	firing_arc = 25
+
+	armor_penetration = 1
+	armor_damage = 2
+
+	size_damage_factor = 0.02
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ASTRAL_MASS_ACCELERATOR"
+	prerequisites = { tech_libra_astral_mass_accelerator }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -440
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_mass_accelerator"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_mass_accelerator"
+	tags = { weapon_type_kinetic weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MASS_ACCELERATOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t7_cost
+			astral_threads = 60
+		}
+		upkeep = {
+			energy = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 787 max = 1221 }
+	windup = { min = 25 max = 45 }
+	total_fire_time = 15
+	max_range = 200
+	min_range = 45
+	accuracy = 0.75
+	tracking = 0.25
+	firing_arc = 25
+
+	shield_penetration = 1
+	shield_damage = 2
+
+	size_damage_factor = 0.02
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_LASER"
+	prerequisites = { tech_libra_astral_lasers }
+	potential = {
+		not = { is_ship_category = bio_ship }
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -39
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_astral_laser"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_s"
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_LASER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			astral_threads = 6
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 52 max = 113 }
+	windup = { min = 30 max = 40 }
+	total_fire_time = 15
+	range = 80
+	accuracy = 0.85
+	tracking = 0.55
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_LASER"
+	prerequisites = { tech_libra_astral_lasers }
+	potential = {
+		not = { is_ship_category = bio_ship }
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -88
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_astral_laser"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_m"
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_LASER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			astral_threads = 12
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 151 max = 212 }
+	windup = { min = 35 max = 45 }
+	total_fire_time = 15
+	range = 120
+	accuracy = 0.85
+	tracking = 0.35
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_LASER"
+	prerequisites = { tech_libra_astral_lasers }
+	potential = {
+		not = { is_ship_category = bio_ship }
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -195
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_laser"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_l"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_LASER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			astral_threads = 24
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 366 max = 426 }
+	windup = { min = 40 max = 50 }
+	total_fire_time = 15
+	range = 160
+	accuracy = 0.85
+	tracking = 0.15
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_KINETIC_ARTILLERY"
+	prerequisites = { tech_libra_astral_kinetic_artillery }
+	potential = {
+		not = { is_ship_category = bio_ship }
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -39
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_astral_kinetic_artillery"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_s"
+	tags = { weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_KINETIC_ARTILLERY"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			astral_threads = 6
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 56 max = 96 }
+	windup = { min = 20 max = 40 }
+	total_fire_time = 10
+	range = 80
+	accuracy = 0.75
+	tracking = 0.65
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_KINETIC_ARTILLERY"
+	prerequisites = { tech_libra_astral_kinetic_artillery }
+	potential = {
+		not = { is_ship_category = bio_ship }
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -88
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_astral_kinetic_artillery"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_m"
+	tags = { weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_KINETIC_ARTILLERY"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			astral_threads = 12
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 170 max = 210 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10
+	range = 120
+	accuracy = 0.75
+	tracking = 0.45
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_KINETIC_ARTILLERY"
+	prerequisites = { tech_libra_astral_kinetic_artillery }
+	potential = {
+		not = { is_ship_category = bio_ship }
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -195
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_kinetic_artillery"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_l"
+	tags = { weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_KINETIC_ARTILLERY"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			astral_threads = 24
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 436 max = 476 }
+	windup = { min = 40 max = 60 }
+	total_fire_time = 10
+	range = 160
+	accuracy = 0.75
+	tracking = 0.25
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ASTRAL_TORPEDO"
+	prerequisites = { tech_libra_astral_torpedoes }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -132
+	size = torpedo
+	type = instant
+	icon = "GFX_ship_part_libra_astral_torpedo"
+	icon_frame = 1
+	projectile_gfx = "neutron_torpedoes"
+	tags = { weapon_type_energy g_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_TORPEDO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			astral_threads = 24
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 42 max = 56 }
+	windup = { min = 60 max = 70 }
+	total_fire_time = 20
+	max_range = 175
+	min_range = 45
+	accuracy = 0.75
+	tracking = 0.15
+	firing_arc = 25
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	size_damage_factor = 0.2
+
+	ai_weight = {
+		weight = 8
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ASTRAL_FLAK"
+	prerequisites = { tech_libra_astral_flak_batteries }
+	potential = {
+		not = { is_ship_category = bio_ship }
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -17
+	size = point_defence
+	type = point_defence
+	icon = "GFX_ship_part_libra_astral_flak_batteries"
+	icon_frame = 1
+	projectile_gfx = "flak_pd_3"
+	point_defence_targets = { "missile" "strike_craft" }
+	tags = { weapon_type_kinetic weapon_type_point_defense s_slot }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_shield weapon_role_anti_hull }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_FLAK"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 17
+			astral_threads = 12
+		}
+		upkeep = {
+			energy = 0.17
+			alloys = 0.017
+		}
+	}
+
+	damage = { min = 8 max = 15 }
+	windup = 3
+	total_fire_time = 2
+	range = 30
+	accuracy = 0.75
+	tracking = 0.9
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_MISSILES"
+	prerequisites = { tech_libra_astral_missiles }
+	potential = {
+		not = { is_ship_category = bio_ship }
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -39
+	size = small
+	type = missile
+	icon = "GFX_ship_part_libra_astral_missiles"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles"
+	tags = { weapon_type_explosive s_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MISSILES"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			astral_threads = 6
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 60 max = 120 }
+	windup = { min = 40 max = 60 }
+	total_fire_time = 10
+	range = 120
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 19
+	missile_evasion = 1.2
+	missile_health = 8
+	missile_armor = 8
+	missile_retarget_range = 120
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			or = {
+				is_preferred_weapons = weapon_type_explosive
+				is_preferred_weapons = weapon_type_strike_craft
+			}
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_MISSILES"
+	prerequisites = { tech_libra_astral_missiles }
+	potential = {
+		not = { is_ship_category = bio_ship }
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	power = -88
+	size = medium
+	type = missile
+	icon = "GFX_ship_part_libra_astral_missiles"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles_02"
+	tags = { weapon_type_explosive m_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MISSILES"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			astral_threads = 12
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 130 max = 170 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10
+	range = 160
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 19
+	missile_evasion = 1.2
+	missile_health = 20
+	missile_armor = 20
+	missile_retarget_range = 120
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "LIBRA_ASTRAL_STRIKE_CRAFT"
+	size = LARGE
+	entity = "bomber_entity"
+
+	weapon_type = instant	#point_defence
+	projectile_gfx = "strike_craft_laser_1"
+
+	power = -132
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			astral_threads = 24
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	count = 8
+	regeneration_per_day = 0.6
+	launch_time = 0.4
+
+	damage = { min = 15 max = 25 }
+	cooldown = 2.3
+	range = 24
+	engagement_range = 125
+	accuracy = 1
+	tracking = 1
+
+	health = 24
+	shield = 48
+	evasion = 1.25
+
+	speed = 825
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	size_damage_factor = 0.01
+
+	ship_behavior = "libra_fighters_behavior"
+
+	icon = "GFX_ship_part_libra_astral_strike_craft"
+	icon_frame = 1
+	component_set = "LIBRA_ASTRAL_STRIKE_CRAFT"
+	prerequisites = { "tech_libra_astral_strike_craft" }
+	potential = {
+		not = { is_ship_category = bio_ship }
+		libra_is_designable_mac_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor carrier carrier_stealth }
+	#point_defence_targets = { "strike_craft" }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		factor = 8
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+#
+
+weapon_component_template = {
+	key = "LIBRA_ASTRAL_BLAST_BIO"
+	prerequisites = { tech_libra_astral_blast }
+	potential = {
+		is_ship_category = bio_ship
+		libra_is_designable_bio_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -440
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_blast_bio"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_blast"
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_BLAST_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @xl_t7_libra_base_cost
+			astral_threads = 60
+		}
+		upkeep = {
+			food = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 1234 max = 1423 }
+	windup = { min = 50 max = 80 }
+	total_fire_time = 90
+	range = 200
+	accuracy = 0.85
+	tracking = 0.15
+	firing_arc = 25
+
+	armor_penetration = 1
+	armor_damage = 2
+
+	size_damage_factor = 0.02
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ASTRAL_MASS_ACCELERATOR_BIO"
+	prerequisites = { tech_libra_astral_mass_accelerator }
+	potential = {
+		is_ship_category = bio_ship
+		libra_is_designable_bio_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -440
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_mass_accelerator_bio"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_mass_accelerator"
+	tags = { weapon_type_kinetic weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MASS_ACCELERATOR_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @xl_t7_libra_base_cost
+			astral_threads = 60
+		}
+		upkeep = {
+			food = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 787 max = 1221 }
+	windup = { min = 40 max = 60 }
+	total_fire_time = 50
+	max_range = 200
+	min_range = 45
+	accuracy = 0.75
+	tracking = 0.25
+	firing_arc = 25
+
+	shield_penetration = 1
+	shield_damage = 2
+
+	size_damage_factor = 0.02
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_LASER_BIO"
+	prerequisites = { tech_libra_astral_lasers }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -39
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_astral_laser_bio"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_s"
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_LASER_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			astral_threads = 6
+		}
+		upkeep = {
+			food = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 52 max = 113 }
+	windup = { min = 30 max = 40 }
+	total_fire_time = 15
+	range = 80
+	accuracy = 0.85
+	tracking = 0.55
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_LASER_BIO"
+	prerequisites = { tech_libra_astral_lasers }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -88
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_astral_laser_bio"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_m"
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_LASER_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			astral_threads = 12
+		}
+		upkeep = {
+			food = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 151 max = 212 }
+	windup = { min = 35 max = 45 }
+	total_fire_time = 15
+	range = 120
+	accuracy = 0.85
+	tracking = 0.35
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_LASER_BIO"
+	prerequisites = { tech_libra_astral_lasers }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -195
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_laser_bio"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_laser_l"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_LASER_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t7_libra_base_cost
+			astral_threads = 24
+		}
+		upkeep = {
+			food = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 366 max = 426 }
+	windup = { min = 40 max = 50 }
+	total_fire_time = 75
+	range = 160
+	accuracy = 0.85
+	tracking = 0.15
+
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_KINETIC_ARTILLERY_BIO"
+	prerequisites = { tech_libra_astral_kinetic_artillery }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -39
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_astral_kinetic_artillery_bio"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_s"
+	tags = { weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_KINETIC_ARTILLERY_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			astral_threads = 6
+		}
+		upkeep = {
+			food = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 56 max = 96 }
+	windup = { min = 20 max = 40 }
+	total_fire_time = 10
+	range = 80
+	accuracy = 0.75
+	tracking = 0.65
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_KINETIC_ARTILLERY_BIO"
+	prerequisites = { tech_libra_astral_kinetic_artillery }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -88
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_astral_kinetic_artillery_bio"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_m"
+	tags = { weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_KINETIC_ARTILLERY_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			astral_threads = 12
+		}
+		upkeep = {
+			food = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 170 max = 210 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10
+	range = 120
+	accuracy = 0.75
+	tracking = 0.45
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ASTRAL_KINETIC_ARTILLERY_BIO"
+	prerequisites = { tech_libra_astral_kinetic_artillery }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -195
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_astral_kinetic_artillery_bio"
+	icon_frame = 1
+	projectile_gfx = "libra_astral_kinetic_artillery_l"
+	tags = { weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_KINETIC_ARTILLERY_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t7_libra_base_cost
+			astral_threads = 24
+		}
+		upkeep = {
+			food = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 436 max = 476 }
+	windup = { min = 40 max = 60 }
+	total_fire_time = 70
+	range = 160
+	accuracy = 0.75
+	tracking = 0.25
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ASTRAL_TORPEDO_BIO"
+	prerequisites = { tech_libra_astral_torpedoes }
+	potential = {
+		is_ship_category = bio_ship
+		libra_is_designable_bio_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -132
+	size = torpedo
+	type = instant
+	icon = "GFX_ship_part_libra_astral_torpedo_bio"
+	icon_frame = 1
+	projectile_gfx = "neutron_torpedoes"
+	tags = { weapon_type_energy g_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_TORPEDO_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t7_libra_base_cost
+			astral_threads = 24
+		}
+		upkeep = {
+			food = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 42 max = 56 }
+	windup = { min = 60 max = 70 }
+	total_fire_time = 20
+	max_range = 175
+	min_range = 45
+	accuracy = 0.75
+	tracking = 0.15
+	firing_arc = 25
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	size_damage_factor = 0.2
+
+	ai_weight = {
+		weight = 8
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ASTRAL_FLAK_BIO"
+	prerequisites = { tech_libra_astral_flak_batteries }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -17
+	size = point_defence
+	type = point_defence
+	icon = "GFX_ship_part_libra_astral_flak_batteries_bio"
+	icon_frame = 1
+	projectile_gfx = "flak_pd_3"
+	point_defence_targets = { "missile" "strike_craft" }
+	tags = { weapon_type_kinetic weapon_type_point_defense s_slot }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_shield weapon_role_anti_hull }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_FLAK_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			food = 60
+			astral_threads = 12
+		}
+		upkeep = {
+			food = 0.17
+			alloys = 0.017
+		}
+	}
+
+	damage = { min = 8 max = 15 }
+	windup = 3
+	total_fire_time = 2
+	range = 30
+	accuracy = 0.75
+	tracking = 0.9
+
+	shield_damage = 1.5
+	hull_damage = 1.5
+
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ASTRAL_MISSILES_BIO"
+	prerequisites = { tech_libra_astral_missiles }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -39
+	size = small
+	type = missile
+	icon = "GFX_ship_part_libra_astral_missiles_bio"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles"
+	tags = { weapon_type_explosive s_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MISSILES_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			astral_threads = 6
+		}
+		upkeep = {
+			food = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 60 max = 120 }
+	windup = { min = 40 max = 60 }
+	total_fire_time = 10
+	range = 120
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 19
+	missile_evasion = 1.2
+	missile_health = 8
+	missile_armor = 8
+	missile_retarget_range = 120
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	ai_weight = {
+		weight = 7
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ASTRAL_MISSILES_BIO"
+	prerequisites = { tech_libra_astral_missiles }
+	potential = {
+		is_ship_category = bio_ship
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	power = -88
+	size = medium
+	type = missile
+	icon = "GFX_ship_part_libra_astral_missiles_bio"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles_02"
+	tags = { weapon_type_explosive m_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ASTRAL_MISSILES_BIO"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			astral_threads = 12
+		}
+		upkeep = {
+			food = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 130 max = 170 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10
+	range = 160
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 19
+	missile_evasion = 1.2
+	missile_health = 20
+	missile_armor = 20
+	missile_retarget_range = 120
+
+	shield_damage = 1.5
+	armor_damage = 1.5
+
+	ai_weight = {
+		weight = 8
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "LIBRA_ASTRAL_STRIKE_CRAFT_BIO"
+	size = LARGE
+	entity = "bomber_entity"
+
+	weapon_type = instant	#point_defence
+	projectile_gfx = "strike_craft_laser_1"
+
+	power = -132
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t7_libra_base_cost
+			astral_threads = 24
+		}
+		upkeep = {
+			food = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	count = 8
+	regeneration_per_day = 0.6
+	launch_time = 0.4
+
+	damage = { min = 15 max = 25 }
+	cooldown = 2.3
+	range = 25
+	engagement_range = 125
+	accuracy = 1
+	tracking = 1
+
+	health = 24
+	shield = 48
+	evasion = 1.25
+
+	speed = 825
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	ship_behavior = "libra_fighters_behavior"
+
+	icon = "GFX_ship_part_libra_astral_strike_craft_bio"
+	icon_frame = 1
+	component_set = "LIBRA_ASTRAL_STRIKE_CRAFT_BIO"
+	prerequisites = { "tech_libra_astral_strike_craft" }
+	potential = {
+		is_ship_category = bio_ship
+		libra_is_designable_bio_crisis_shipsize = no
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor carrier carrier_stealth }
+	#point_defence_targets = { "strike_craft" }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		factor = 8
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = astral_threads }
+		}
+	}
+}
+
+# ####################
+# Anti-entropy
+# ####################
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_LASER_1"
+	prerequisites = { tech_libra_antientropy_lasers_1 }
+
+	power = -5
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_laser_1"
+	icon_frame = 1
+	projectile_gfx = "dark_matter_laser_s"
+	tags = { weapon_type_psionic weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_LASER_1"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_LASER_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @s_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @s_t1_upkeep_energy
+			alloys = @s_t1_upkeep_alloys
+		}
+	}
+
+	damage = { min = 12 max = 24 }
+	windup = { min = 30 max = 40 }
+	total_fire_time = 25
+	range = 48
+	accuracy = 1
+	tracking = 0.5
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_LASER_1"
+	prerequisites = { tech_libra_antientropy_lasers_1 }
+
+	power = -13
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_laser_1"
+	icon_frame = 1
+	projectile_gfx = "dark_matter_laser_m"
+	tags = { weapon_type_psionic weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_LASER_1"
+	upgrades_to = "MEDIUM_LIBRA_ANTIENTROPY_LASER_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @m_t1_upkeep_energy
+			alloys = @m_t1_upkeep_alloys
+		}
+	}
+
+	damage = { min = 32 max = 64 }
+	windup = { min = 40 max = 50 }
+	total_fire_time = 27
+	range = 72
+	accuracy = 0.95
+	tracking = 0.3
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_LASER_1"
+	prerequisites = { tech_libra_antientropy_lasers_1 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	power = -30
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_laser_1"
+	icon_frame = 1
+	projectile_gfx = "dark_matter_laser_l"
+	tags = { weapon_type_psionic weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_LASER_1"
+	upgrades_to = "LARGE_LIBRA_ANTIENTROPY_LASER_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @l_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @l_t1_upkeep_energy
+			alloys = @l_t1_upkeep_alloys
+		}
+	}
+
+	damage = { min = 88 max = 177 }
+	windup = { min = 50 max = 60 }
+	total_fire_time = 35
+	range = 96
+	accuracy = 0.9
+	tracking = 0.1
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_LASER_2"
+	prerequisites = { tech_libra_antientropy_lasers_2 }
+
+	power = -13
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_laser_2"
+	icon_frame = 1
+	projectile_gfx = "dark_matter_laser_s"
+	tags = { weapon_type_psionic weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_LASER_2"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_LASER_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @s_t4_libra_base_cost
+			rare_crystals = @s_t4_rare
+		}
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+
+	damage = { min = 26 max = 53 }
+	windup = { min = 30 max = 40 }
+	total_fire_time = 25
+	range = 48
+	accuracy = 1
+	tracking = 0.5
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_LASER_2"
+	prerequisites = { tech_libra_antientropy_lasers_2 }
+
+	power = -30
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_laser_2"
+	icon_frame = 1
+	projectile_gfx = "dark_matter_laser_m"
+	tags = { weapon_type_psionic weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_LASER_2"
+	upgrades_to = "MEDIUM_LIBRA_ANTIENTROPY_LASER_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t4_libra_base_cost
+			rare_crystals = @m_t4_rare
+		}
+		upkeep = {
+			energy = @m_t4_upkeep_energy
+			alloys = @m_t4_upkeep_alloys
+		}
+	}
+
+	damage = { min = 70 max = 140 }
+	windup = { min = 40 max = 50 }
+	total_fire_time = 27
+	range = 72
+	accuracy = 0.95
+	tracking = 0.35
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_LASER_2"
+	prerequisites = { tech_libra_antientropy_lasers_2 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	power = -64
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_laser_2"
+	icon_frame = 1
+	projectile_gfx = "dark_matter_laser_l"
+	tags = { weapon_type_psionic weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_LASER_2"
+	upgrades_to = "LARGE_LIBRA_ANTIENTROPY_LASER_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @l_t4_libra_base_cost
+			rare_crystals = @l_t4_rare
+		}
+		upkeep = {
+			energy = @l_t4_upkeep_energy
+			alloys = @l_t4_upkeep_alloys
+		}
+	}
+
+	damage = { min = 194 max = 388 }
+	windup = { min = 50 max = 60 }
+	total_fire_time = 35
+	range = 96
+	accuracy = 0.9
+	tracking = 0.1
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_LASER_3"
+	prerequisites = { tech_libra_antientropy_lasers_3 }
+
+	power = -30
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_laser_3"
+	icon_frame = 1
+	projectile_gfx = "dark_matter_laser_s"
+	tags = { weapon_type_psionic weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_LASER_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @s_t7_libra_base_cost
+			rare_crystals = @s_t7_rare
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 58 max = 116 }
+	windup = { min = 30 max = 40 }
+	total_fire_time = 25
+	range = 48
+	accuracy = 1
+	tracking = 0.5
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_LASER_3"
+	prerequisites = { tech_libra_antientropy_lasers_3 }
+
+	power = -64
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_laser_3"
+	icon_frame = 1
+	projectile_gfx = "dark_matter_laser_m"
+	tags = { weapon_type_psionic weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_LASER_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t7_libra_base_cost
+			rare_crystals = @m_t7_rare
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 154 max = 307 }
+	windup = { min = 40 max = 50 }
+	total_fire_time = 27
+	range = 72
+	accuracy = 0.95
+	tracking = 0.3
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_LASER_3"
+	prerequisites = { tech_libra_antientropy_lasers_3 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	power = -146
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_laser_3"
+	icon_frame = 1
+	projectile_gfx = "dark_matter_laser_l"
+	tags = { weapon_type_psionic weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_LASER_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @l_t7_libra_base_cost
+			rare_crystals = @l_t7_rare
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 424 max = 847 }
+	windup = { min = 50 max = 60 }
+	total_fire_time = 35
+	range = 96
+	accuracy = 0.9
+	tracking = 0.1
+
+	shield_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ANTIENTROPY_ENERGY_LANCE"
+	prerequisites = { tech_libra_antientropy_energy_lance }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	power = -338
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_energy_lance"
+	icon_frame = 1
+	projectile_gfx = "libra_antientropy_energy_lance"
+	tags = { weapon_type_psionic weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_ENERGY_LANCE"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @xl_t7_libra_base_cost
+			rare_crystals = @xl_t7_rare
+		}
+		upkeep = {
+			energy = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 1328 max = 2657 }
+	windup = { min = 60 max = 70 }
+	total_fire_time = 55
+	range = 180
+	accuracy = 0.85
+	tracking = 0
+	firing_arc = 15
+
+	shield_damage = 1.75
+	armor_damage = 1.25
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ANTIENTROPY_POINT_DEFENCE"
+	prerequisites = { tech_libra_antientropy_pd_tracking }
+
+	power = -13
+	size = point_defence
+	type = point_defence
+	icon = "GFX_ship_part_libra_antientropy_point_defense"
+	icon_frame = 1
+	projectile_gfx = "white_laser_pd"
+	point_defence_targets = { "missile" "strike_craft" }
+	tags = { weapon_type_psionic weapon_type_energy weapon_type_point_defense s_slot }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_shield weapon_role_anti_hull }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_POINT_DEFENCE"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = 60
+			rare_crystals = @s_t7_rare
+		}
+		upkeep = {
+			energy = 0.17
+			alloys = 0.017
+		}
+	}
+
+	damage = { min = 8 max = 12 }
+	windup = 3
+	total_fire_time = 2
+	range = 36
+	accuracy = 0.75
+	tracking = 0.9
+
+	shield_damage = 2
+	shield_penetration = 0.5
+	armor_damage = 0.5
+
+	ai_weight = {
+		weight = 12
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+#
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+	prerequisites = { tech_libra_antientropy_kinetic_artillery_1 }
+
+	power = -5
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_1"
+	icon_frame = 1
+	projectile_gfx = "coilgun_s"
+	tags = { weapon_type_psionic weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @s_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @s_t1_upkeep_energy
+			alloys = @s_t1_upkeep_alloys
+		}
+	}
+
+	damage = { min = 11 max = 22 }
+	windup = { min = 20 max = 40 }
+	total_fire_time = 20
+	range = 60
+	accuracy = 0.9
+	tracking = 0.5
+
+	armor_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+	prerequisites = { tech_libra_antientropy_kinetic_artillery_1 }
+
+	power = -13
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_1"
+	icon_frame = 1
+	projectile_gfx = "coilgun_m"
+	tags = { weapon_type_psionic weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+	upgrades_to = "MEDIUM_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @m_t1_upkeep_energy
+			alloys = @m_t1_upkeep_alloys
+		}
+	}
+
+	damage = { min = 29 max = 59 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 20
+	range = 90
+	accuracy = 0.85
+	tracking = 0.3
+
+	armor_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+	prerequisites = { tech_libra_antientropy_kinetic_artillery_1 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	power = -30
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_1"
+	icon_frame = 1
+	projectile_gfx = "coilgun_l"
+	tags = { weapon_type_psionic weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_1"
+	upgrades_to = "LARGE_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @l_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @l_t1_upkeep_energy
+			alloys = @l_t1_upkeep_alloys
+		}
+	}
+
+	damage = { min = 82 max = 165 }
+	windup = { min = 40 max = 60 }
+	total_fire_time = 25
+	range = 120
+	accuracy = 0.8
+	tracking = 0.05
+
+	armor_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+	prerequisites = { tech_libra_antientropy_kinetic_artillery_2 }
+
+	power = -13
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_2"
+	icon_frame = 1
+	projectile_gfx = "advanced_railgun_s"
+	tags = { weapon_type_psionic weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @s_t4_libra_base_cost
+			volatile_motes = @s_t4_rare
+		}
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+
+	damage = { min = 24 max = 49 }
+	windup = { min = 20 max = 40 }
+	total_fire_time = 20
+	range = 60
+	accuracy = 0.9
+	tracking = 0.5
+
+	armor_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+	prerequisites = { tech_libra_antientropy_kinetic_artillery_2 }
+
+	power = -30
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_2"
+	icon_frame = 1
+	projectile_gfx = "advanced_railgun_m"
+	tags = { weapon_type_psionic weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+	upgrades_to = "MEDIUM_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t4_libra_base_cost
+			volatile_motes = @m_t4_rare
+		}
+		upkeep = {
+			energy = @m_t4_upkeep_energy
+			alloys = @m_t4_upkeep_alloys
+		}
+	}
+
+	damage = { min = 65 max = 131 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 20
+	range = 90
+	accuracy = 0.85
+	tracking = 0.3
+
+	armor_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+	prerequisites = { tech_libra_antientropy_kinetic_artillery_2 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	power = -64
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_2"
+	icon_frame = 1
+	projectile_gfx = "advanced_railgun_l"
+	tags = { weapon_type_psionic weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_2"
+	upgrades_to = "LARGE_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @l_t4_libra_base_cost
+			volatile_motes = @l_t4_rare
+		}
+		upkeep = {
+			energy = @l_t4_upkeep_energy
+			alloys = @l_t4_upkeep_alloys
+		}
+	}
+
+	damage = { min = 182 max = 364 }
+	windup = { min = 40 max = 60 }
+	total_fire_time = 25
+	range = 120
+	accuracy = 0.8
+	tracking = 0.05
+
+	armor_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+	prerequisites = { tech_libra_antientropy_kinetic_artillery_3 }
+
+	power = -30
+	size = small
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_3"
+	icon_frame = 1
+	projectile_gfx = "gauss_cannon_s"
+	tags = { weapon_type_psionic weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @s_t7_libra_base_cost
+			volatile_motes = @s_t7_rare
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 54 max = 107 }
+	windup = { min = 20 max = 40 }
+	total_fire_time = 20
+	range = 60
+	accuracy = 0.9
+	tracking = 0.5
+
+	armor_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+	prerequisites = { tech_libra_antientropy_kinetic_artillery_3 }
+
+	power = -64
+	size = medium
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_3"
+	icon_frame = 1
+	projectile_gfx = "gauss_cannon_m"
+	tags = { weapon_type_psionic weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t7_libra_base_cost
+			volatile_motes = @m_t7_rare
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 143 max = 286 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 20
+	range = 90
+	accuracy = 0.85
+	tracking = 0.3
+
+	armor_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+	prerequisites = { tech_libra_antientropy_kinetic_artillery_3 }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	power = -146
+	size = large
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_kinetic_artillery_3"
+	icon_frame = 1
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_psionic weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_KINETIC_ARTILLERY_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @l_t7_libra_base_cost
+			volatile_motes = @l_t7_rare
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 399 max = 798 }
+	windup = { min = 40 max = 60 }
+	total_fire_time = 25
+	range = 120
+	accuracy = 0.8
+	tracking = 0.05
+
+	armor_damage = 1.5
+	hull_damage = 1.25
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ANTIENTROPY_MASS_ACCELERATOR"
+	prerequisites = { tech_libra_antientropy_mass_accelerator }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	power = -338
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_libra_antientropy_mass_accelerator"
+	icon_frame = 1
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_psionic weapon_type_kinetic weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_MASS_ACCELERATOR"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @xl_t7_libra_base_cost
+			volatile_motes = @xl_t7_rare
+		}
+		upkeep = {
+			energy = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 1319 max = 2640 }
+	windup = { min = 40 max = 80 }
+	total_fire_time = 40
+	max_range = 180
+	min_range = 45
+	accuracy = 0.75
+	tracking = 0
+	firing_arc = 15
+
+	shield_damage = 1.25
+	armor_damage = 1.75
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ANTIENTROPY_FLAK_BATTERY"
+	prerequisites = { tech_libra_antientropy_flak_batteries }
+
+	power = -13
+	size = point_defence
+	type = point_defence
+	icon = "GFX_ship_part_libra_antientropy_flak_batteries"
+	icon_frame = 1
+	projectile_gfx = "flak_pd_3"
+	point_defence_targets = { "missile" "strike_craft" }
+	tags = { weapon_type_psionic weapon_type_kinetic weapon_type_point_defense s_slot }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_armor weapon_role_anti_hull }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_FLAK_BATTERY"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = 60
+			volatile_motes = @s_t7_rare
+		}
+		upkeep = {
+			energy = 0.17
+			alloys = 0.017
+		}
+	}
+
+	damage = { min = 8 max = 12 }
+	windup = 3
+	total_fire_time = 2
+	range = 36
+	accuracy = 0.75
+	tracking = 0.5
+
+	shield_damage = 0.5
+	armor_damage = 2
+	armor_penetration = 0.5
+
+	ai_weight = {
+		weight = 12
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+#
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_MISSILES_1"
+	prerequisites = { tech_libra_antientropy_missiles_1 }
+
+	power = -5
+	size = small
+	type = missile
+	icon = "GFX_ship_part_libra_antientropy_missiles_1"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles"
+	tags = { weapon_type_psionic weapon_type_explosive s_slot }
+	ai_tags = { weapon_role_anti_hull artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_MISSILES_1"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_MISSILES_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @s_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @s_t1_upkeep_energy
+			alloys = @s_t1_upkeep_alloys
+		}
+	}
+
+	damage = { min = 4 max = 8 }
+	windup = { min = 15 max = 25 }
+	total_fire_time = 10
+	range = 120
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 14
+	missile_evasion = 0
+	missile_health = 17
+	missile_retarget_range = 120
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.5
+			or = {
+				is_preferred_weapons = weapon_type_explosive
+				is_preferred_weapons = weapon_type_strike_craft
+			}
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_MISSILES_1"
+	prerequisites = { tech_libra_antientropy_missiles_1 }
+
+	power = -13
+	size = medium
+	type = missile
+	icon = "GFX_ship_part_libra_antientropy_missiles_1"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles_02"
+	tags = { weapon_type_psionic weapon_type_explosive m_slot }
+	ai_tags = { weapon_role_anti_hull artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_MISSILES_1"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_MISSILES_2"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t1_libra_base_cost
+		}
+		upkeep = {
+			energy = @m_t1_upkeep_energy
+			alloys = @m_t1_upkeep_alloys
+		}
+	}
+
+	damage = { min = 10 max = 21 }
+	windup = { min = 15 max = 25 }
+	total_fire_time = 16
+	range = 180
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 14
+	missile_evasion = 0
+	missile_health = 39
+	missile_retarget_range = 120
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_MISSILES_2"
+	prerequisites = { tech_libra_antientropy_missiles_2 }
+
+	power = -13
+	size = small
+	type = missile
+	icon = "GFX_ship_part_libra_antientropy_missiles_2"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles"
+	tags = { weapon_type_psionic weapon_type_explosive s_slot }
+	ai_tags = { weapon_role_anti_hull artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_MISSILES_2"
+	upgrades_to = "SMALL_LIBRA_ANTIENTROPY_MISSILES_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @s_t4_libra_base_cost
+			volatile_motes = @s_t4_rare
+		}
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+
+	damage = { min = 9 max = 18 }
+	windup = { min = 15 max = 25 }
+	total_fire_time = 10
+	range = 120
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 17
+	missile_evasion = 0.3
+	missile_health = 39
+	missile_retarget_range = 120
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			or = {
+				is_preferred_weapons = weapon_type_explosive
+				is_preferred_weapons = weapon_type_strike_craft
+			}
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_MISSILES_2"
+	prerequisites = { tech_libra_antientropy_missiles_2 }
+
+	power = -30
+	size = medium
+	type = missile
+	icon = "GFX_ship_part_libra_antientropy_missiles_2"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles_02"
+	tags = { weapon_type_psionic weapon_type_explosive m_slot }
+	ai_tags = { weapon_role_anti_hull artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_MISSILES_2"
+	upgrades_to = "MEDIUM_LIBRA_ANTIENTROPY_MISSILES_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t4_libra_base_cost
+			volatile_motes = @m_t4_rare
+		}
+		upkeep = {
+			energy = @m_t4_upkeep_energy
+			alloys = @m_t4_upkeep_alloys
+		}
+	}
+
+	damage = { min = 22 max = 45 }
+	windup = { min = 15 max = 25 }
+	total_fire_time = 16
+	range = 180
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 17
+	missile_evasion = 0.3
+	missile_health = 88
+	missile_retarget_range = 120
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_LIBRA_ANTIENTROPY_MISSILES_3"
+	prerequisites = { tech_libra_antientropy_missiles_3 }
+
+	power = -30
+	size = small
+	type = missile
+	icon = "GFX_ship_part_libra_antientropy_missiles_3"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles"
+	tags = { weapon_type_psionic weapon_type_explosive s_slot }
+	ai_tags = { weapon_role_anti_hull artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_MISSILES_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @s_t7_libra_base_cost
+			volatile_motes = @s_t7_rare
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 19 max = 39 }
+	windup = { min = 15 max = 25 }
+	total_fire_time = 10
+	range = 120
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 20
+	missile_evasion = 0.6
+	missile_health = 88
+	missile_retarget_range = 120
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			or = {
+				is_preferred_weapons = weapon_type_explosive
+				is_preferred_weapons = weapon_type_strike_craft
+			}
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_LIBRA_ANTIENTROPY_MISSILES_3"
+	prerequisites = { tech_libra_antientropy_missiles_3 }
+
+	power = -64
+	size = medium
+	type = missile
+	icon = "GFX_ship_part_libra_antientropy_missiles_3"
+	icon_frame = 1
+	projectile_gfx = "swarmer_missiles_02"
+	tags = { weapon_type_psionic weapon_type_explosive m_slot }
+	ai_tags = { weapon_role_anti_hull artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_ANTIENTROPY_MISSILES_3"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t7_libra_base_cost
+			volatile_motes = @m_t7_rare
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 48 max = 98 }
+	windup = { min = 15 max = 25 }
+	total_fire_time = 16
+	range = 180
+	accuracy = 1.00
+	tracking = 0.25
+
+	missile_speed = 20
+	missile_evasion = 0.6
+	missile_health = 195
+	missile_retarget_range = 120
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0
+			can_use_libra_antientropy_shipsize = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIBRA_ANTIENTROPY_TORPEDO"
+	prerequisites = { tech_libra_antientropy_torpedoes }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	power = -59
+	size = torpedo
+	type = missile
+	icon = "GFX_ship_part_libra_antientropy_torpedo"
+	icon_frame = 1
+	projectile_gfx = "large_torpedo_03"
+	tags = { weapon_type_psionic weapon_type_explosive g_slot }
+	ai_tags = { weapon_role_anti_hull explosive explosive_stealth }
+
+	component_set = "LIBRA_ANTIENTROPY_TORPEDO"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @m_t7_libra_base_cost
+			volatile_motes = @m_t7_rare
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 150 max = 300 }
+	windup = { min = 20 max = 50 }
+	total_fire_time = 125
+	range = 35
+	accuracy = 1
+	tracking = 0.1
+	firing_arc = 25
+
+	missile_speed = 16
+	missile_evasion = 0.5
+	missile_health = 30
+	missile_retarget_range = 100
+
+	shield_penetration = 1
+	armor_penetration = 1
+
+	size_damage_factor = 0.2
+
+	ai_weight = {
+		weight = 8
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "LIBRA_ANTIENTROPY_STRIKE_CRAFT_1"
+	size = LARGE
+	entity = "bomber_entity"
+
+	weapon_type = point_defence
+	projectile_gfx = "techno_strike_craft_laser_3"
+
+	power = -45
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @l_t4_libra_base_cost
+			nanites = @l_t4_rare
+		}
+		upkeep = {
+			energy = @l_t4_upkeep_energy
+			alloys = @l_t4_upkeep_alloys
+		}
+	}
+
+	count = 8
+	regeneration_per_day = 0.5
+	launch_time = 0.3
+
+	damage = { min = 7 max = 13 }
+	cooldown = 2.3
+	range = 25
+	engagement_range = 125
+	accuracy = 1.00
+	tracking = 1.00
+
+	health = 20
+	armor = 10
+	shield = 10
+	evasion = 0.8
+
+	speed = 650
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_penetration = 0.75
+	shield_damage = 1.25
+	armor_penetration = 0.75
+	armor_damage = 1.25
+
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_ship_part_libra_antientropy_strike_craft_1"
+	icon_frame = 1
+	component_set = "LIBRA_ANTIENTROPY_STRIKE_CRAFT_1"
+	upgrades_to = "LIBRA_ANTIENTROPY_STRIKE_CRAFT_2"
+	prerequisites = { "tech_libra_antientropy_strike_craft_1" }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	tags = { weapon_type_psionic weapon_type_strike_craft }
+	ai_tags = { weapon_role_anti_hull weapon_role_point_defense carrier carrier_stealth }
+	point_defence_targets = { "strike_craft" }
+
+	ai_weight = {
+		factor = 7
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "LIBRA_ANTIENTROPY_STRIKE_CRAFT_2"
+	size = LARGE
+	entity = "bomber_entity"
+
+	weapon_type = point_defence
+	projectile_gfx = "techno_strike_craft_laser_3"
+
+	power = -101
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @l_t7_libra_base_cost
+			exotic_gases = @l_t7_rare
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	count = 8
+	regeneration_per_day = 0.5
+	launch_time = 0.3
+
+	damage = { min = 11 max = 22 }
+	cooldown = 2.3
+	range = 25
+	engagement_range = 125
+	accuracy = 1.00
+	tracking = 1.00
+
+	health = 30
+	armor = 25
+	shield = 25
+	evasion = 0.9
+
+	speed = 800
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_penetration = 0.75
+	shield_damage = 1.35
+	armor_penetration = 0.75
+	armor_damage = 1.35
+
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_ship_part_libra_antientropy_strike_craft_2"
+	icon_frame = 1
+	component_set = "LIBRA_ANTIENTROPY_STRIKE_CRAFT_2"
+	prerequisites = { "tech_libra_antientropy_strike_craft_2" }
+	potential = {
+		libra_is_antientropy_shipsize = yes
+	}
+
+	tags = { weapon_type_psionic weapon_type_strike_craft }
+	ai_tags = { weapon_role_anti_hull weapon_role_point_defense carrier carrier_stealth }
+	point_defence_targets = { "strike_craft" }
+
+	ai_weight = {
+		factor = 8
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# ####################
+# Nanotech
+# ####################
+
+weapon_component_template = {
+	key = "LIBRA_NANITE_ENERGY_ARC_1"
+	prerequisites = { tech_libra_nanite_titans }
+	potential = {
+		from = { is_variable_set = libra_aa_path }
+		OR = {
+			is_ship_size = ion_cannon
+			is_ship_size = libra_nanite_titan
+			is_ship_size = libra_large_ship_synthetic
+			is_ship_size = libra_synthetic_mothership
+			is_ship_size = libra_antientropy_instruction_warship_3
+		}
+	}
+
+	power = -650
+	size = titanic
+	type = instant
+	icon = "GFX_ship_part_libra_nanite_energy_arc_1"
+	icon_frame = 1
+	projectile_gfx = "ion_cannon"
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth }
+	ai_tag_weight = 0
+
+	component_set = "LIBRA_NANITE_ENERGY_ARC_1"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			nanites = @titanic_t7_rare
+		}
+		upkeep = {
+			energy = @titanic_t7_upkeep_energy
+			alloys = @titanic_t7_upkeep_alloys
+		}
+	}
+
+	damage = { min = 5000 max = 10000 }
+	windup = { min = 120 max = 140 }
+	total_fire_time = 55
+	range = 250
+	accuracy = 0.85
+	tracking = 0
+	firing_arc = 20
+
+	shield_damage = 0.75
+	shield_penetration = 1
+	armor_damage = 1.25
+	armor_penetration = 1
+
+	ai_weight = {
+		factor = 6
+		modifier = {
+			factor = 1.5
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			set = 0
+			not = { has_tradition = tr_nanotech_finish }
+		}
+	}
+}

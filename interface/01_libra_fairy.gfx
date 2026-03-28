@@ -1,0 +1,1757 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ap_libra_starry_miner"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_starry_miner.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_star_ranch"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_star_ranch.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_biomass_technician"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_biomass_technician.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_string_puppeteer"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_string_puppeteer.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_string_puppeteer"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_string_puppeteer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_shield_machine"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_shield_machine.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_storm_deviation"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_storm_deviation.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_ap_libra_transcendent_covenant"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_transcendent_covenant.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_message_libra_transcendent_covenant"
+		texturefile = "gfx/interface/icons/message/message_libra_transcendent_covenant.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_transcendent_covenant_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_transcendent_covenant_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_transcendent_covenant_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_transcendent_covenant_b.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_transcendent_covenant_c"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_transcendent_covenant_c.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_galaxy_ambition"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_galaxy_ambition.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_shift_in_focus"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_shift_in_focus.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_third_choice"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_third_choice.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_ultimate_directive"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_ultimate_directive.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_ap_libra_ultimate_directive_growth"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_ap_libra_ultimate_directive_growth.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_ap_libra_ultimate_directive_cognitive"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_ap_libra_ultimate_directive_cognitive.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_ap_libra_ultimate_directive_legion"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_ap_libra_ultimate_directive_legion.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_ap_libra_ultimate_directive_regulatory"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_ap_libra_ultimate_directive_regulatory.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_ultimate_directive_growth"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_ultimate_directive_growth.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_ultimate_directive_cognitive"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_ultimate_directive_cognitive.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_ultimate_directive_legion"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_ultimate_directive_legion.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_ultimate_directive_regulatory"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_ultimate_directive_regulatory.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_gestalt_era"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_gestalt_era.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_gestalt_era_official"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_gestalt_era_officer.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_gestalt_era_scientist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_gestalt_era_scientist.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_gestalt_era_commander"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_gestalt_era_commander.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_sages_notes"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_sages_notes.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_sages_notes"
+		texturefile = "gfx/event_pictures/libra_sages_notes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_collective_unity"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_collective_unity.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_cardinal_cosmos"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_cardinal_cosmos.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_cardinal_cosmos"
+		texturefile = "gfx/event_pictures/libra_cardinal_cosmos.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_kings_game"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_kings_game.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_kings_game"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_kings_game.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_imperial_vermillion"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_imperial_vermillion.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion_leader"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion_leader.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion_lord_forever"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion_lord_forever.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion_galactic_emperor"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion_galactic_emperor.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion_sword"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion_shield"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion_resource"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion_resource.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion_replication"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion_replication.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion_council"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion_council.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_imperial_vermillion_power_projection"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_imperial_vermillion_power_projection.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_ap_libra_golden_rule"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_golden_rule.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_golden_rule"
+		texturefile = "gfx/event_pictures/libra_golden_rule.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_valiant_heroic"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_valiant_heroic.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_valiant_heroic"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_valiant_heroic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_genetic_potential"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_genetic_potential.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_warrant_of_return"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_warrant_of_return.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_relic_libra_warrant_of_return"
+		texturefile = "gfx/interface/icons/relics/r_libra_warrant_of_return.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_libra_warrant_of_return_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 11				# in seconds
+			animationdelay = 1			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_synthetic_voice"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_synthetic_voice.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_intergalactic_junkie"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_intergalactic_junkie.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_astral_blade"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_astral_blade.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_astral_blade"
+		texturefile = "gfx/event_pictures/libra_astral_blade.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_message_libra_astral_blade"
+		texturefile = "gfx/interface/icons/message/message_libra_astral_blade.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_laser"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_laser.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_laser_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_laser_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_blast"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_blast.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_blast_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_blast_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_lance"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_torpedo"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_torpedo.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_torpedo_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_torpedo_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_reactor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_reactor.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_reactor_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_reactor_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_shield"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_shield_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_shield_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_kinetic_artillery"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_kinetic_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_kinetic_artillery_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_kinetic_artillery_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_mass_accelerator"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_mass_accelerator.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_mass_accelerator_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_mass_accelerator_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_flak_batteries"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_flak_batteries.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_flak_batteries_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_flak_batteries_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_missiles"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_missiles.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_missiles_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_missiles_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_strike_craft"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_strike_craft.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_strike_craft_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_strike_craft_bio.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_astral_armor_bio"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_astral_armor_bio.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_ghost_mechanist"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_ghost_mechanist.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_ap_libra_directive_76"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_directive_76.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_libra_directive_76_garrison"
+		texturefile = "gfx/interface/icons/modules/libra_directive_76_garrison.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_directive_76"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_directive_76.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_directive_76_commander_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_directive_76_commander_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_directive_76_commander_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_directive_76_commander_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_directive_76_commander_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_directive_76_commander_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_directive_76_commander_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_directive_76_commander_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_directive_76_commander_e"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_directive_76_commander_e.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_directive_76_commander_f"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_directive_76_commander_f.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_directive_76_commander_g"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_directive_76_commander_g.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_directive_76_a"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_directive_76_a.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_directive_76_b"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_directive_76_b.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_directive_76_c"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_directive_76_c.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_directive_76_d"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_directive_76_d.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_directive_76_e"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_directive_76_e.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_directive_76"
+		texturefile = "gfx/event_pictures/libra_directive_76.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_ap_libra_ode_to_babel"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_ode_to_babel.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_libra_babel_tower"
+		texturefile = "gfx/interface/icons/modules/libra_babel_tower.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_ode_to_babel_1"
+		texturefile = "gfx/event_pictures/libra_ode_to_babel_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_ode_to_babel_2"
+		texturefile = "gfx/event_pictures/libra_ode_to_babel_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_ei_dorado"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_ei_dorado.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_ap_libra_evolutionary_endpoint"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_evolutionary_endpoint.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_evolutionary_endpoint"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_evolutionary_endpoint.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_cutefied_world"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_cutefied_world.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_cute_monitor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_cute_monitor.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_cutefied_world_1"
+		texturefile = "gfx/event_pictures/libra_cutefied_world_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_cutefied_world_2"
+		texturefile = "gfx/event_pictures/libra_cutefied_world_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_cutefied_world_3"
+		texturefile = "gfx/event_pictures/libra_cutefied_world_3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_cutefied_world_4"
+		texturefile = "gfx/event_pictures/libra_cutefied_world_4.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_cutefied_world_5"
+		texturefile = "gfx/event_pictures/libra_cutefied_world_5.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_artificial_swarm"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_artificial_swarm.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_multi_prosthesis_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_multi_prosthesis_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_multi_prosthesis_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_multi_prosthesis_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_multi_prosthesis_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_multi_prosthesis_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_multi_prosthesis_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_multi_prosthesis_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_multi_prosthesis_e"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_multi_prosthesis_e.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_multi_prosthesis_f"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_multi_prosthesis_f.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_transcendental_cybernetics"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_transcendental_cybernetics.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_0"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_0.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_1"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_2"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_3"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_4"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_4.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_5"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_5.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_6"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_6.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_7"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_7.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_8"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_8.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_9"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_9.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_10"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_10.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_11"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_11.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_12"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_12.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_13"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_13.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_14"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_14.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_15"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_15.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_transcendental_cybernetics_16"
+		texturefile = "gfx/event_pictures/libra_transcendental_cybernetics_16.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_future_design"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_future_design.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_command_a"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_command_a.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_command_b"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_command_b.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_command_c"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_command_c.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_command_d"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_command_d.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_synthetic_command_e"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_synthetic_command_e.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_synthetic"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_synthetic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_cosmological_constant"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_cosmological_constant.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_cosmological_constant"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_cosmological_constant.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_cosmological_constant_1"
+		texturefile = "gfx/event_pictures/libra_cosmological_constant_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_cosmological_constant_2"
+		texturefile = "gfx/event_pictures/libra_cosmological_constant_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_predefined_selfawareness"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_predefined_selfawareness.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_ap_libra_atomic_heart"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_atomic_heart.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_atomic_heart_commander"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_atomic_heart_commander.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_atomic_heart_official"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_atomic_heart_official.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_atomic_heart_scientist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_atomic_heart_scientist.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_atomic_heart_site"
+		texturefile = "gfx/interface/icons/modules/libra_atomic_heart_site.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_atomic_heart_array"
+		texturefile = "gfx/interface/icons/modules/libra_atomic_heart_array.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_libra_atomic"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_libra_atomic.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_artillery_libra_atomic"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_artillery_libra_atomic.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_carrier_libra_atomic"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_carrier_libra_atomic.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_line_libra_atomic"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_line_libra_atomic.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_picket_libra_atomic"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_picket_libra_atomic.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_platform_libra_atomic"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_platform_libra_atomic.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_swarm_libra_atomic"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_libra_atomic.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_atomic_reactor_booster"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_atomic_reactor_booster.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_atomic_heart_1"
+		texturefile = "gfx/event_pictures/libra_atomic_heart_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_atomic_heart_2"
+		texturefile = "gfx/event_pictures/libra_atomic_heart_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_libra_nanite_shipyard_background"
+		textureFile = "gfx/interface/planetview/libra_nanite_shipyard.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_nanite_shipyard_0_build_icon"
+		textureFile = "gfx/interface/icons/technologies/tech_libra_nanite_shipyard.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_nanite_shipyard_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/libra_nanite_shipyard_0.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_nanite_shipyard_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/libra_nanite_shipyard_1.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_nanite_shipyard_2_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/libra_nanite_shipyard_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_nanite_barrier"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_nanite_barrier.dds"
+	}
+	spriteType = {
+		name = "GFX_army_type_libra_nanite_locusts"
+		texturefile = "gfx/interface/icons/armies/army_type_libra_nanite_locusts.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_ap_libra_nanocore"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_nanocore.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_nanocore_official"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_nanocore.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_nanocore_commander"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_nanocore.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_nanocore_scientist"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_nanocore.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_nanocore_renowned"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_nanocore_renowned.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_nanocore_legendary"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_nanocore_legendary.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_nanocore"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_nanocore.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_nanocore_1"
+		texturefile = "gfx/event_pictures/libra_nanocore_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_nanocore_2"
+		texturefile = "gfx/event_pictures/libra_nanocore_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_hurricane_eye"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_hurricane_eye.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_libra_hurricane_eye_storm"
+		texturefile = "gfx/event_pictures/libra_hurricane_eye_storm.dds"
+	}
+	spriteType = {
+		name = "GFX_planetview_libra_hurricane_eye_storm_modifier_frame"
+		textureFile = "gfx/interface/icons/planet_modifiers/pm_libra_hurricane_eye_storm.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_hurricane_eye"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_hurricane_eye.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_hurricane_eye"
+		texturefile = "gfx/event_pictures/libra_hurricane_eye.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_libra_nanite_kinetic_artillery_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_nanite_kinetic_artillery_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_nanite_mass_accelerator_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_nanite_mass_accelerator_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_nanite_energy_arc_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_nanite_energy_arc_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_nanite_torpedoes_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_nanite_torpedoes_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_nanite_torpedoes_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_nanite_torpedoes_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_nanite_trike_craft_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_nanite_trike_craft_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_libra_nanite_trike_craft_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_libra_nanite_trike_craft_2.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_ap_libra_yggdrasil"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_yggdrasil.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_colony_type_libra_yggdrasil"
+		texturefile = "gfx/interface/planetview/libra_colony_type_yggdrasil.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_yggdrasil"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_yggdrasil.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_libra_yggdrasil_1"
+		texturefile = "gfx/event_pictures/libra_yggdrasil_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_yggdrasil_2"
+		texturefile = "gfx/event_pictures/libra_yggdrasil_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+
+
+#
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_psionic_eulogy"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_psionic_eulogy.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_ap_libra_heavenly_throne"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_heavenly_throne.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_heavenly_throne"
+		texturefile = "gfx/event_pictures/libra_heavenly_throne.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_libra_heavenly_throne"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_libra_heavenly_throne.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_liber_genesis"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_liber_genesis.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_libra_liber_genesis"
+		texturefile = "gfx/event_pictures/libra_liber_genesis.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_leader_trait_libra_liber_genesis"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_libra_liber_genesis.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_libra_transtemporal_resonance"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_libra_transtemporal_resonance.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_libra_transtemporal_anchorage"
+		texturefile = "gfx/interface/icons/modules/libra_transtemporal_anchorage.dds"
+	}
+	spriteType = {
+		name = "GFX_libra_transtemporal_fortress"
+		texturefile = "gfx/interface/icons/modules/libra_transtemporal_fortress.dds"
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_text_libraf_ap_banner_1"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ap_banner_1.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ap_banner_2"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ap_banner_2.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ap_banner_3"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ap_banner_3.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ap_banner_4"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ap_banner_4.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ap_banner_5"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ap_banner_5.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ap_banner_6"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ap_banner_6.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_text_libraf_ca_banner_1"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ca_banner_1.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_1"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_1.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_2"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_2.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_3"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_3.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_4"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_4.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_5"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_5.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_6"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_6.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_7"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_7.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_8"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_8.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_9"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_9.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_ea_banner_10"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_ea_banner_10.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_text_libraf_qa_banner_1"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_qa_banner_1.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_qa_banner_2"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_qa_banner_2.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_qa_banner_3"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_qa_banner_3.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_qa_banner_4"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_qa_banner_4.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_qa_banner_5"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_qa_banner_5.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_qa_banner_6"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_qa_banner_6.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_qa_banner_7"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_qa_banner_7.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_qa_banner_8"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_qa_banner_8.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_10"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_10.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_20"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_20.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_30"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_30.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_31"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_31.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_40"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_40.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_50"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_50.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_60"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_60.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_70"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_70.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_71"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_71.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_80"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_80.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_90"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_90.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_aa_banner_91"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_aa_banner_91.dds"
+		alwaystransparent = yes
+	}
+
+
+#
+
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_0"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_0.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_1"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_1.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_2"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_2.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_3"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_3.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_4"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_4.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_5"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_5.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_6"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_6.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_7"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_7.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_8"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_8.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_9"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_9.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_10"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_10.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_11"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_11.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_12"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_12.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_13"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_13.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_14"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_14.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_15"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_15.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_16"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_16.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_17"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_17.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_18"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_18.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_19"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_19.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_20"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_20.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_21"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_21.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_22"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_22.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_23"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_23.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_24"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_24.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_lt_banner_25"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_lt_banner_25.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_1"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_1.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_2"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_2.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_3"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_3.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_4"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_4.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_5"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_5.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_6"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_6.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_7"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_7.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_8"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_8.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_9"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_9.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_10"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_10.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_11"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_11.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_12"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_12.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_13"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_13.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_14"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_14.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_te_banner_15"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_te_banner_15.dds"
+		alwaystransparent = yes
+	}
+
+#
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_1"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_1.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_2"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_2.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_3"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_3.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_4"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_4.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_5"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_5.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_6"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_6.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_7"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_7.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_8"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_8.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_9"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_9.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_10"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_10.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_11"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_11.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_12"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_12.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_13"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_13.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_14"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_14.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_15"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_15.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_16"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_16.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_17"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_17.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_18"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_18.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_19"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_19.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_20"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_20.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_21"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_21.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_22"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_22.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_23"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_23.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_50"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_50.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_51"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_51.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_52"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_52.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_53"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_53.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_tr_banner_54"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_tr_banner_54.dds"
+		alwaystransparent = yes
+	}
+
+#
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_1"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_1.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_2"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_2.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_3"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_3.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_4"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_4.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_5"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_5.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_6"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_6.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_7"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_7.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_8"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_8.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_9"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_9.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_10"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_10.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_11"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_11.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_12"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_12.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_13"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_13.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_14"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_14.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_15"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_15.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_16"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_16.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_17"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_17.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_or_banner_18"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_or_banner_18.dds"
+		alwaystransparent = yes
+	}
+
+#
+
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_1"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_1.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_2"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_2.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_3"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_3.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_4"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_4.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_5"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_5.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_6"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_6.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_7"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_7.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_8"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_8.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_9"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_9.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_10"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_10.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_11"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_11.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_12"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_12.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_text_libraf_oc_banner_13"
+		texturefile = "gfx/interface/icons/text_icons/text_libraf_oc_banner_13.dds"
+		alwaystransparent = yes
+	}
+}

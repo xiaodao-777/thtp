@@ -1,0 +1,26 @@
+category = {
+	name = "Effects"
+	soundeffects = {
+		libra_soviet_march
+	}
+}
+
+sound = {
+	name = "sfx_libra_soviet_march"
+	file = "sfx_libra_soviet_march.wav"
+	volume = 1
+}
+
+soundeffect = {
+	name = libra_soviet_march
+	sounds = {
+		sound = sfx_libra_soviet_march
+	}
+	volume = 0.85
+	loop = no
+	is3d = yes
+	max_audible = 1
+	max_audible_behaviour = fail
+	fade_in = 2
+	fade_out = 3
+}

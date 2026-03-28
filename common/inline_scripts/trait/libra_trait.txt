@@ -1,0 +1,20 @@
+inline_script = {
+	script = trait/subtitle/libra_council_$COUNCIL$
+	TYPE = $TYPE$
+	RARITY = $RARITY$
+	CLASS = $CLASS$
+}
+icon = {
+	inline_script = trait/icon_element/libra_rarity_$TYPE$_$RARITY$
+	layer = {
+		icon = $ICON$
+		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+	inline_script = trait/icon_element/tier_$TIER$
+}
+leader_trait_rarity = $RARITY$
+sorting_priority = @trait_sorting_priority_$RARITY$_$COUNCIL$_$TIER$
