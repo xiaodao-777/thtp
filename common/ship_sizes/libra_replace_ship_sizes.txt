@@ -52,8 +52,8 @@ nanite_interdictor = {
 	icon = ship_size_military_4
 	base_buildtime = 180
 
-	can_have_federation_design = yes
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	can_have_federation_design = no
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = no #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = carrier

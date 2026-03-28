@@ -61,7 +61,7 @@ libra_crimson_nights_warship = {
 
 	class = shipclass_military
 	construction_type = starbase_shipyard
-	enable_default_design = yes
+	enable_default_design = no
 	use_shipnames_from = cruiser
 
 	required_component_set = "libra_battleship_power_core"
@@ -126,7 +126,7 @@ libra_dragonborn_small = {
 	icon = ship_size_space_monster
 	base_buildtime = 360
 
-	enable_default_design = yes
+	enable_default_design = no
 	can_have_federation_design = no
 	enable_3dview_in_ship_browser = no
 
@@ -209,7 +209,7 @@ libra_dragonborn_medium = {
 	icon = ship_size_space_monster
 	base_buildtime = 1080
 
-	enable_default_design = yes
+	enable_default_design = no
 	can_have_federation_design = no
 	enable_3dview_in_ship_browser = no
 
@@ -307,9 +307,9 @@ libra_dragonborn_large = {
 
 	class = shipclass_military
 	construction_type = starbase_shipyard
-	enable_default_design = yes
+	enable_default_design = no
 
-	enable_default_design = yes
+	enable_default_design = no
 	can_have_federation_design = no
 	enable_3dview_in_ship_browser = no
 
@@ -394,7 +394,7 @@ libra_antientropy_instruction_warship_1 = {
 	base_buildtime = @corvette_build_time
 
 	enable_default_design = no
-	can_have_federation_design = yes
+	can_have_federation_design = no
 	enable_3dview_in_ship_browser = no
 
 	default_behavior = artillery
@@ -522,7 +522,7 @@ libra_antientropy_instruction_warship_2 = {
 	base_buildtime = @cruiser_build_time
 
 	enable_default_design = no
-	can_have_federation_design = yes
+	can_have_federation_design = no
 	enable_3dview_in_ship_browser = no
 
 	default_behavior = artillery
@@ -653,7 +653,7 @@ libra_antientropy_instruction_warship_3 = {
 	base_buildtime = @titan_build_time
 
 	enable_default_design = no
-	can_have_federation_design = yes
+	can_have_federation_design = no
 	enable_3dview_in_ship_browser = no
 
 	default_behavior = artillery
