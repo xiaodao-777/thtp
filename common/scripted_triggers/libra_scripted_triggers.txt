@@ -1249,7 +1249,7 @@ can_use_libra_nanotech_components = {
 #
 
 can_use_libra_psionic_leader_traits = {
-	has_base_skill <= 10
+	has_base_skill <= 9999
 	species = {
 		or = {
 			has_trait = trait_latent_psionic
@@ -1332,7 +1332,7 @@ libra_has_non_psionic_shields = {
 
 can_select_libra_corrupt_leader_traits = {
 	is_hidden = no
-	has_base_skill <= 10
+	has_base_skill <= 9999
 	not = { has_leader_flag = libra_has_corrupt_leader_trait }
 	exists = owner
 	owner = { has_tradition = tr_libra_degeneracy_2 }

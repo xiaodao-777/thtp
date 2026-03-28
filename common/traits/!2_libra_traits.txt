@@ -1203,7 +1203,7 @@ leader_trait_libra_enlightenment_heritage_official = {
 	triggered_federation_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		federation_experience_add = 0.4
 		mult = trigger:has_total_skill
@@ -1214,7 +1214,7 @@ leader_trait_libra_enlightenment_heritage_official = {
 	triggered_galcom_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		diplo_weight_supporting_mult = 0.04
 		mult = trigger:has_total_skill
@@ -1227,7 +1227,7 @@ leader_trait_libra_enlightenment_heritage_official = {
 	triggered_planet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.02
 		planet_buildings_produces_mult = 0.02
@@ -1240,7 +1240,7 @@ leader_trait_libra_enlightenment_heritage_official = {
 	triggered_sector_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.01
 		planet_buildings_produces_mult = 0.01
@@ -1292,7 +1292,7 @@ leader_trait_libra_enlightenment_heritage_scientist = {
 	triggered_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		ship_speed_mult = 0.04
 		ship_archaeological_site_excavation_speed_mult = 0.04
@@ -1307,7 +1307,7 @@ leader_trait_libra_enlightenment_heritage_scientist = {
 	triggered_planet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.02
 		planet_buildings_produces_mult = 0.02
@@ -1320,7 +1320,7 @@ leader_trait_libra_enlightenment_heritage_scientist = {
 	triggered_sector_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.01
 		planet_buildings_produces_mult = 0.01
@@ -1369,7 +1369,7 @@ leader_trait_libra_enlightenment_heritage_commander = {
 	triggered_fleet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		command_limit_add = 4
 		mult = trigger:has_total_skill
@@ -1380,7 +1380,7 @@ leader_trait_libra_enlightenment_heritage_commander = {
 	triggered_army_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		army_morale_damage_taken_mult = -0.04
 		mult = trigger:has_total_skill
@@ -1393,7 +1393,7 @@ leader_trait_libra_enlightenment_heritage_commander = {
 	triggered_planet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.02
 		planet_buildings_produces_mult = 0.02
@@ -1406,7 +1406,7 @@ leader_trait_libra_enlightenment_heritage_commander = {
 	triggered_sector_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.01
 		planet_buildings_produces_mult = 0.01
@@ -1498,7 +1498,7 @@ leader_trait_libra_crimson_nights_vampire_commander = {
 	triggered_fleet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		ship_shield_regen_add_perc = 0.04
 		ship_armor_regen_add_perc = 0.04
@@ -1513,7 +1513,7 @@ leader_trait_libra_crimson_nights_vampire_commander = {
 	triggered_army_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		army_disengage_chance_mult = 0.04
 		army_experience_gain_mult = 0.04
@@ -1528,7 +1528,7 @@ leader_trait_libra_crimson_nights_vampire_commander = {
 	triggered_planet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.04
 		mult = trigger:has_total_skill
@@ -1541,7 +1541,7 @@ leader_trait_libra_crimson_nights_vampire_commander = {
 	triggered_sector_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.02
 		mult = trigger:has_total_skill
@@ -1555,7 +1555,7 @@ leader_trait_libra_crimson_nights_vampire_commander = {
 		potential = {
 			exists = owner
 			owner = { has_origin = origin_libra_crimson_nights }
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.004
 		planet_buildings_produces_mult = 0.004
@@ -1593,7 +1593,7 @@ leader_trait_libra_crimson_nights_vampire_official = {
 	triggered_federation_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		federation_leader_fleet_scale_mult = 0.04
 		federation_fleet_cap_add = 20
@@ -1608,7 +1608,7 @@ leader_trait_libra_crimson_nights_vampire_official = {
 	triggered_galcom_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		resolution_category_declare_crisis_vote_strength_mult = 0.04
 		resolution_category_galactic_focus_vote_strength_mult = 0.04
@@ -1623,7 +1623,7 @@ leader_trait_libra_crimson_nights_vampire_official = {
 	triggered_planet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.04
 		mult = trigger:has_total_skill
@@ -1636,7 +1636,7 @@ leader_trait_libra_crimson_nights_vampire_official = {
 	triggered_sector_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.02
 		mult = trigger:has_total_skill
@@ -1650,7 +1650,7 @@ leader_trait_libra_crimson_nights_vampire_official = {
 		potential = {
 			exists = owner
 			owner = { has_origin = origin_libra_crimson_nights }
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.004
 		planet_buildings_produces_mult = 0.004
@@ -1688,7 +1688,7 @@ leader_trait_libra_crimson_nights_vampire_scientist = {
 	triggered_self_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		leader_scientists_physics_research_produces_add = 2
 		leader_scientists_society_research_produces_add = 2
@@ -1705,7 +1705,7 @@ leader_trait_libra_crimson_nights_vampire_scientist = {
 	triggered_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		science_ship_survey_speed = 0.04
 		ship_anomaly_research_speed_mult = 0.04
@@ -1720,7 +1720,7 @@ leader_trait_libra_crimson_nights_vampire_scientist = {
 	triggered_planet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.04
 		mult = trigger:has_total_skill
@@ -1733,7 +1733,7 @@ leader_trait_libra_crimson_nights_vampire_scientist = {
 	triggered_sector_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.02
 		mult = trigger:has_total_skill
@@ -1747,7 +1747,7 @@ leader_trait_libra_crimson_nights_vampire_scientist = {
 		potential = {
 			exists = owner
 			owner = { has_origin = origin_libra_crimson_nights }
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.004
 		planet_buildings_produces_mult = 0.004
@@ -1819,7 +1819,7 @@ leader_trait_libra_crimson_nights_ancestor_commander = {
 	triggered_fleet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		ship_shield_regen_add_perc = 0.06
 		ship_armor_regen_add_perc = 0.06
@@ -1834,7 +1834,7 @@ leader_trait_libra_crimson_nights_ancestor_commander = {
 	triggered_army_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		army_disengage_chance_mult = 0.06
 		army_experience_gain_mult = 0.06
@@ -1849,7 +1849,7 @@ leader_trait_libra_crimson_nights_ancestor_commander = {
 	triggered_planet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.06
 		mult = trigger:has_total_skill
@@ -1862,7 +1862,7 @@ leader_trait_libra_crimson_nights_ancestor_commander = {
 	triggered_sector_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.03
 		mult = trigger:has_total_skill
@@ -1876,7 +1876,7 @@ leader_trait_libra_crimson_nights_ancestor_commander = {
 		potential = {
 			exists = owner
 			owner = { has_origin = origin_libra_crimson_nights }
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.006
 		planet_buildings_produces_mult = 0.006
@@ -1914,7 +1914,7 @@ leader_trait_libra_crimson_nights_ancestor_official = {
 	triggered_federation_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		federation_leader_fleet_scale_mult = 0.06
 		federation_fleet_cap_add = 30
@@ -1929,7 +1929,7 @@ leader_trait_libra_crimson_nights_ancestor_official = {
 	triggered_galcom_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		resolution_category_declare_crisis_vote_strength_mult = 0.06
 		resolution_category_galactic_focus_vote_strength_mult = 0.06
@@ -1944,7 +1944,7 @@ leader_trait_libra_crimson_nights_ancestor_official = {
 	triggered_planet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.06
 		mult = trigger:has_total_skill
@@ -1957,7 +1957,7 @@ leader_trait_libra_crimson_nights_ancestor_official = {
 	triggered_sector_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.03
 		mult = trigger:has_total_skill
@@ -1971,7 +1971,7 @@ leader_trait_libra_crimson_nights_ancestor_official = {
 		potential = {
 			exists = owner
 			owner = { has_origin = origin_libra_crimson_nights }
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.006
 		planet_buildings_produces_mult = 0.006
@@ -2009,7 +2009,7 @@ leader_trait_libra_crimson_nights_ancestor_scientist = {
 	triggered_self_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		leader_scientists_physics_research_produces_add = 3
 		leader_scientists_society_research_produces_add = 3
@@ -2026,7 +2026,7 @@ leader_trait_libra_crimson_nights_ancestor_scientist = {
 	triggered_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		science_ship_survey_speed = 0.06
 		ship_anomaly_research_speed_mult = 0.06
@@ -2041,7 +2041,7 @@ leader_trait_libra_crimson_nights_ancestor_scientist = {
 	triggered_planet_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.06
 		mult = trigger:has_total_skill
@@ -2054,7 +2054,7 @@ leader_trait_libra_crimson_nights_ancestor_scientist = {
 	triggered_sector_modifier = {
 		potential = {
 			is_councilor = no
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		logistic_growth_mult = 0.03
 		mult = trigger:has_total_skill
@@ -2068,7 +2068,7 @@ leader_trait_libra_crimson_nights_ancestor_scientist = {
 		potential = {
 			exists = owner
 			owner = { has_origin = origin_libra_crimson_nights }
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_produces_mult = 0.006
 		planet_buildings_produces_mult = 0.006
@@ -4020,7 +4020,7 @@ leader_trait_libra_interstellar_port_commander = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = {
 				not = { has_valid_civic = civic_libra_interstellar_port_d }
@@ -4032,7 +4032,7 @@ leader_trait_libra_interstellar_port_commander = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = {
 				has_valid_civic = civic_libra_interstellar_port_d
@@ -4045,7 +4045,7 @@ leader_trait_libra_interstellar_port_commander = {
 	}
 	triggered_sector_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_trade_produces_mult = 0.02
 		planet_buildings_trade_produces_mult = 0.02
@@ -4053,7 +4053,7 @@ leader_trait_libra_interstellar_port_commander = {
 	}
 	triggered_fleet_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = {
 				has_valid_civic = civic_libra_interstellar_port_b
@@ -4065,7 +4065,7 @@ leader_trait_libra_interstellar_port_commander = {
 	}
 	triggered_army_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = {
 				has_valid_civic = civic_libra_interstellar_port_b
@@ -4124,7 +4124,7 @@ leader_trait_libra_interstellar_port_official = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = {
 				not = { has_valid_civic = civic_libra_interstellar_port_d }
@@ -4136,7 +4136,7 @@ leader_trait_libra_interstellar_port_official = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = {
 				has_valid_civic = civic_libra_interstellar_port_d
@@ -4149,7 +4149,7 @@ leader_trait_libra_interstellar_port_official = {
 	}
 	triggered_sector_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_trade_produces_mult = 0.02
 		planet_buildings_trade_produces_mult = 0.02
@@ -4204,7 +4204,7 @@ leader_trait_libra_interstellar_port_scientist = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = {
 				not = { has_valid_civic = civic_libra_interstellar_port_d }
@@ -4216,7 +4216,7 @@ leader_trait_libra_interstellar_port_scientist = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = {
 				has_valid_civic = civic_libra_interstellar_port_d
@@ -4229,7 +4229,7 @@ leader_trait_libra_interstellar_port_scientist = {
 	}
 	triggered_sector_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 		}
 		planet_jobs_trade_produces_mult = 0.02
 		planet_buildings_trade_produces_mult = 0.02
@@ -4704,7 +4704,7 @@ leader_trait_libra_planetarian_ruler = {
 	}
 	triggered_councilor_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = { has_valid_civic = civic_machine_sovereign_guardianship }
 		}
@@ -4758,7 +4758,7 @@ leader_trait_libra_planetarian_yumemi = {
 	}
 	triggered_councilor_modifier = {
 		potential = {
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			exists = owner
 			owner = { has_valid_civic = civic_machine_sovereign_guardianship }
 		}

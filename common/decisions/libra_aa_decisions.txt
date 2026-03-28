@@ -157,7 +157,7 @@ decision_libra_directive_76 = {
 				is_leader_tier = leader_tier_default
 				is_event_leader = no
 				is_hidden = no
-				has_base_skill <= 10
+				has_base_skill <= 9999
 			}
 		}
 		custom_tooltip = {

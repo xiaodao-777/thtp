@@ -1519,7 +1519,7 @@ country_event = {
 	immediate = {
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				leader_class = scientist
 				or = {
 					is_hidden = no
@@ -1591,7 +1591,7 @@ country_event = {
 	immediate = {
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				leader_class = official
 				or = {
 					is_hidden = no
@@ -1663,7 +1663,7 @@ country_event = {
 	immediate = {
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				leader_class = commander
 				or = {
 					is_hidden = no
@@ -3786,7 +3786,7 @@ country_event = {
 				count = libra_ceremony_count
 				random_owned_leader = {
 					limit = {
-						has_base_skill <= 10
+						has_base_skill <= 9999
 						not = { has_trait = leader_trait_libra_ceremony }
 						can_have_libra_special_councilor_traits = yes
 					}
@@ -4507,7 +4507,7 @@ country_event = {
 		}
 		ordered_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				nor = {
 					has_trait = leader_trait_libra_grandmastery_commander
 					has_trait = leader_trait_libra_grandmastery_commander_max
@@ -5417,7 +5417,7 @@ country_event = {
 		every_owned_leader = {
 			limit = {
 				has_base_skill > 3
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				not = { has_leader_flag = libra_valiant_heroic_exs_full }
 			}
 			random = {
@@ -6334,7 +6334,7 @@ leader_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_base_skill <= 10
+		has_base_skill <= 9999
 		species = { is_robotic = no }
 		owner = {
 			is_variable_set = libra_aa_path
@@ -6359,7 +6359,7 @@ country_event = {
 	immediate = {
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				species = { is_robotic = no }
 				can_have_libra_special_ruler_traits = yes
 				nor = {
@@ -7440,7 +7440,7 @@ country_event = {
 		}
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				species = { is_robotic = no }
 				can_have_libra_special_ruler_traits = yes
 				nor = {
@@ -7736,7 +7736,7 @@ situation_event = {
 			owner = {
 				every_owned_leader = {
 					limit = {
-						has_base_skill <= 10
+						has_base_skill <= 9999
 						species = { is_robotic = no }
 					}
 					add_experience = 3000
@@ -8784,7 +8784,7 @@ country_event = {
 			days = 3600
 		}
 		every_owned_leader = {
-			limit = { has_base_skill <= 10 }
+			limit = { has_base_skill <= 9999 }
 			if = {
 				limit = {
 					not = { has_trait = leader_trait_libra_cutefied }
@@ -8803,7 +8803,7 @@ country_event = {
 			}
 		}
 		every_pool_leader = {
-			limit = { has_base_skill <= 10 }
+			limit = { has_base_skill <= 9999 }
 			if = {
 				limit = {
 					not = { has_trait = leader_trait_libra_cutefied }
@@ -8868,7 +8868,7 @@ country_event = {
 			count = value:libra_cutefied_world_leaders
 			random_owned_leader = {
 				limit = {
-					has_base_skill <= 10
+					has_base_skill <= 9999
 					is_variable_set = libra_cutefied_level
 					check_variable = { which = libra_cutefied_level value < 10 }
 				}
@@ -9883,7 +9883,7 @@ country_event = {
 			count = 9
 			random_owned_leader = {
 				limit = {
-					has_base_skill <= 10
+					has_base_skill <= 9999
 					species = { is_robotic = yes }
 					nor = {
 						has_trait = leader_trait_psionic
@@ -9945,7 +9945,7 @@ situation_event = {
 				count = libra_cosmological_tech
 				random_owned_leader = {
 					limit = {
-						has_base_skill <= 10
+						has_base_skill <= 9999
 						species = { is_robotic = yes }
 						nor = {
 							has_trait = leader_trait_psionic
@@ -10178,7 +10178,7 @@ situation_event = {
 		owner = {
 			ordered_owned_leader = {
 				limit = {
-					has_base_skill <= 10
+					has_base_skill <= 9999
 					species = { is_robotic = yes }
 					can_have_libra_special_ruler_traits = yes
 					nor = {
@@ -10259,7 +10259,7 @@ country_event = {
 		country_event = { id = libra_fairy.16002 days = 1080 }
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				species = { is_robotic = yes }
 			}
 			switch = {
@@ -10365,7 +10365,7 @@ country_event = {
 	immediate = {
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				is_variable_set = libra_nanocore_level
 				check_variable = { which = libra_nanocore_level value < 50 }
 			}
@@ -10385,7 +10385,7 @@ country_event = {
 	immediate = {
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				species = { is_robotic = yes }
 			}
 			if = {
@@ -10675,7 +10675,7 @@ situation_event = {
 		owner = {
 			every_owned_leader = {
 				limit = {
-					has_base_skill <= 10
+					has_base_skill <= 9999
 					species = { is_robotic = yes }
 					nand = {
 						has_trait = leader_trait_libra_nanocore_legendary
@@ -10789,7 +10789,7 @@ country_event = {
 		}
 		random_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				is_variable_set = libra_nanocore_level
 				not = { has_trait = leader_trait_libra_nanocore_legendary }
 			}
@@ -11462,7 +11462,7 @@ country_event = {
 			set_variable = { which = libra_yggdrasil_count value = 0 }
 			random_owned_leader = {
 				limit = {
-					has_base_skill <= 10
+					has_base_skill <= 9999
 					has_trait = leader_trait_virtual
 					not = { has_trait = leader_trait_libra_yggdrasil }
 					can_have_libra_special_ruler_traits = yes
@@ -11490,7 +11490,7 @@ country_event = {
 	immediate = {
 		random_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				has_trait = leader_trait_virtual
 				not = { has_trait = leader_trait_libra_yggdrasil }
 				can_have_libra_special_ruler_traits = yes
@@ -11797,7 +11797,7 @@ situation_event = {
 				owner = {
 					random_owned_leader = {
 						limit = {
-							has_base_skill <= 10
+							has_base_skill <= 9999
 							has_trait = leader_trait_psionic
 							nor = {
 								has_trait = leader_trait_chosen
@@ -12119,7 +12119,7 @@ country_event = {
 		country_event = { id = libra_fairy.18102 days = 720 }
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				can_have_libra_special_ruler_traits = yes
 				or = {
 					has_trait = leader_trait_psionic
@@ -12135,7 +12135,7 @@ country_event = {
 			limit = {
 				not = { has_trait = leader_trait_libra_liber_genesis }
 				can_have_libra_special_ruler_traits = yes
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				or = {
 					has_trait = leader_trait_psionic
 					has_trait = leader_trait_chosen
@@ -12180,7 +12180,7 @@ country_event = {
 			limit = {
 				not = { has_trait = leader_trait_libra_liber_genesis }
 				can_have_libra_special_ruler_traits = yes
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				or = {
 					has_trait = leader_trait_psionic
 					has_trait = leader_trait_chosen
@@ -21173,7 +21173,7 @@ country_event = {
 		every_owned_leader = {
 			limit = {
 				is_hidden = no
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				or = {
 					is_ruler = yes
 					is_councilor = no
@@ -21249,7 +21249,7 @@ country_event = {
 		every_owned_leader = {
 			limit = {
 				is_hidden = no
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				nor = {
 					has_trait = leader_trait_libra_dragonborn_official_2
 					has_trait = leader_trait_libra_dragonborn_commander_2
@@ -21284,7 +21284,7 @@ country_event = {
 		country_event = { id = libra_origin.0717 days = 60 }
 		every_owned_leader = {
 			limit = {
-				has_base_skill <= 10
+				has_base_skill <= 9999
 				nor = {
 					has_trait = leader_trait_libra_dragonborn_official_2
 					has_trait = leader_trait_libra_dragonborn_commander_2
@@ -24107,7 +24107,7 @@ country_event = {
 		ruler = { not = { has_trait = leader_trait_libra_planetarian_yumemi } }
 		or = {
 			has_technology = tech_libra_fairy_age
-			ruler = { has_base_skill = 10 }
+			ruler = { has_base_skill >= 10 }
 			home_planet = {
 				or = {
 					is_planet_class = pc_city

@@ -429,7 +429,7 @@ libra_gestalt_era_scientist_progress = {
 			limit = {
 				is_hidden = no
 				leader_class = scientist
-				has_base_skill <= 10
+				has_base_skill <= 9999
 			}
 		}
 		mult = 0.4
@@ -445,7 +445,7 @@ libra_gestalt_era_official_progress = {
 			limit = {
 				is_hidden = no
 				leader_class = official
-				has_base_skill <= 10
+				has_base_skill <= 9999
 			}
 		}
 		mult = 0.4
@@ -461,7 +461,7 @@ libra_gestalt_era_commander_progress = {
 			limit = {
 				is_hidden = no
 				leader_class = commander
-				has_base_skill <= 10
+				has_base_skill <= 9999
 			}
 		}
 		mult = 0.4

@@ -1080,7 +1080,7 @@ situation_libra_hurricane_eye = {
 				owner = {
 					random_owned_leader = {
 						limit = {
-							has_base_skill <= 10
+							has_base_skill <= 9999
 							not = { has_trait = leader_trait_libra_hurricane_eye }
 							has_trait = subclass_commander_admiral
 						}

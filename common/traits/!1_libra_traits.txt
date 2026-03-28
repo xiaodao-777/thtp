@@ -61,7 +61,7 @@ leader_trait_libra_corrupt_beacon = {
 	}
 	triggered_self_modifier = {
 		potential = { has_base_skill >= 10 }
-		leaders_upkeep_mult = -0.05
+		species_leader_exp_gain = 0.05
 		mult = value:libra_corrupt_trait_effect_mult
 	}
 	custom_tooltip_with_modifiers = leader_trait_libra_corrupt_beacon_tt
@@ -74,8 +74,7 @@ leader_trait_libra_corrupt_beacon = {
 		is_hidden = no
 		not = { has_leader_flag = libra_has_corrupt_leader_trait }
 		or = {
-			has_base_skill = 9
-			has_base_skill = 10
+			has_base_skill >= 9
 			num_leader_traits = {
 				value > 0
 				negative = yes
@@ -303,7 +302,7 @@ leader_trait_libra_corrupt_node_a = {
 			has_tradition = tr_libra_degeneracy_2
 		}
 		has_base_skill > 3
-		has_base_skill <= 10
+		has_base_skill <= 9999
 		not = { has_leader_flag = libra_has_corrupt_leader_trait }
 		or = {
 			is_councilor_type = councilor_gestalt_growth
@@ -334,7 +333,7 @@ leader_trait_libra_corrupt_node_b = {
 			has_tradition = tr_libra_degeneracy_2
 		}
 		has_base_skill > 3
-		has_base_skill <= 10
+		has_base_skill <= 9999
 		not = { has_leader_flag = libra_has_corrupt_leader_trait }
 		or = {
 			is_councilor_type = councilor_gestalt_growth
@@ -365,7 +364,7 @@ leader_trait_libra_corrupt_node_c = {
 			has_tradition = tr_libra_degeneracy_2
 		}
 		has_base_skill > 3
-		has_base_skill <= 10
+		has_base_skill <= 9999
 		not = { has_leader_flag = libra_has_corrupt_leader_trait }
 		or = {
 			is_councilor_type = councilor_gestalt_growth
@@ -396,7 +395,7 @@ leader_trait_libra_corrupt_node_d = {
 			has_tradition = tr_libra_degeneracy_2
 		}
 		has_base_skill > 3
-		has_base_skill <= 10
+		has_base_skill <= 9999
 		not = { has_leader_flag = libra_has_corrupt_leader_trait }
 		or = {
 			is_councilor_type = councilor_gestalt_growth
@@ -427,7 +426,7 @@ leader_trait_libra_corrupt_node_e = {
 			has_tradition = tr_libra_degeneracy_2
 		}
 		has_base_skill > 3
-		has_base_skill <= 10
+		has_base_skill <= 9999
 		not = { has_leader_flag = libra_has_corrupt_leader_trait }
 		or = {
 			is_councilor_type = councilor_gestalt_growth
@@ -458,7 +457,7 @@ leader_trait_libra_corrupt_node_f = {
 			has_tradition = tr_libra_degeneracy_2
 		}
 		has_base_skill > 3
-		has_base_skill <= 10
+		has_base_skill <= 9999
 		not = { has_leader_flag = libra_has_corrupt_leader_trait }
 		or = {
 			is_councilor_type = councilor_gestalt_growth

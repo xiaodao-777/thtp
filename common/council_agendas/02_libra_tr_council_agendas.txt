@@ -521,7 +521,7 @@ agenda_libra_victory = {
 		hidden_effect = {
 			every_owned_leader = {
 				limit = {
-					has_base_skill <= 10
+					has_base_skill <= 9999
 					leader_class = commander
 				}
 				if = {

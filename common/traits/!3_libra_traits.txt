@@ -7986,7 +7986,7 @@ leader_trait_libra_cosmological_constant = {
 		mult = value:libra_leader_trait_total_skill_mult
 	}
 	triggered_councilor_modifier = {
-		potential = { has_base_skill = 10 }
+		potential = { has_base_skill >= 10 }
 		num_tech_alternatives_add = 1
 		country_energy_produces_mult = 0.1
 	}

@@ -58,7 +58,7 @@ leader_trait_libra_ultimate_directive_ruler = {
 	triggered_councilor_modifier = {
 		potential = {
 			exists = owner
-			has_base_skill <= 10
+			has_base_skill <= 9999
 			owner = { has_ascension_perk = ap_libra_ultimate_directive }
 		}
 		council_agenda_progress_speed = 0.1

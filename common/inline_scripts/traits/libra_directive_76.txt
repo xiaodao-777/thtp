@@ -66,7 +66,7 @@ triggered_background_planet_modifier = {
 
 leader_class = { commander }
 leader_potential_add = {
-	has_base_skill <= 10
+	has_base_skill <= 9999
 	not = { has_leader_flag = has_libra_extra_veteran_trait }
 	or = {
 		has_trait = subclass_commander_admiral
@@ -94,7 +94,7 @@ selectable_weight = {
 	}
 	modifier = {
 		factor = 8
-		has_base_skill = 10
+		has_base_skill >= 10
 	}
 	modifier = {
 		factor = 0

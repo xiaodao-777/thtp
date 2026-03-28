@@ -44,7 +44,7 @@ agenda_libra_psalm_of_waves_a = {
 		hidden_effect = {
 			every_owned_leader = {
 				limit = {
-					has_base_skill <= 10
+					has_base_skill <= 9999
 					leader_class = commander
 				}
 				if = {
@@ -112,7 +112,7 @@ agenda_libra_psalm_of_waves_b = {
 		hidden_effect = {
 			every_owned_leader = {
 				limit = {
-					has_base_skill <= 10
+					has_base_skill <= 9999
 					leader_class = official
 				}
 				if = {
@@ -180,7 +180,7 @@ agenda_libra_psalm_of_waves_c = {
 		hidden_effect = {
 			every_owned_leader = {
 				limit = {
-					has_base_skill <= 10
+					has_base_skill <= 9999
 					leader_class = scientist
 				}
 				if = {
