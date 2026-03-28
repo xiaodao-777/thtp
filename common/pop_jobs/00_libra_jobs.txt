@@ -1339,7 +1339,7 @@ libra_harmonize_envoy = {
 			owner = {
 				is_variable_set = libra_aa_path
 				has_edict = libra_liber_genesis_0
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 				has_country_flag = libra_is_biological_empire
 			}
 		}
@@ -1351,7 +1351,7 @@ libra_harmonize_envoy = {
 			owner = {
 				is_variable_set = libra_aa_path
 				has_edict = libra_liber_genesis_0
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 				has_country_flag = libra_is_biological_empire
 			}
 		}
@@ -1363,7 +1363,7 @@ libra_harmonize_envoy = {
 			owner = {
 				is_variable_set = libra_aa_path
 				has_edict = libra_liber_genesis_0
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 				has_country_flag = libra_is_machine_empire
 			}
 		}
@@ -1473,7 +1473,7 @@ libra_harmonize_drone = {
 			owner = {
 				is_variable_set = libra_aa_path
 				has_edict = libra_liber_genesis_0
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 				has_country_flag = libra_is_biological_empire
 			}
 		}
@@ -1485,7 +1485,7 @@ libra_harmonize_drone = {
 			owner = {
 				is_variable_set = libra_aa_path
 				has_edict = libra_liber_genesis_0
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 				has_country_flag = libra_is_biological_empire
 			}
 		}
@@ -1497,7 +1497,7 @@ libra_harmonize_drone = {
 			owner = {
 				is_variable_set = libra_aa_path
 				has_edict = libra_liber_genesis_0
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 				has_country_flag = libra_is_machine_empire
 			}
 		}

@@ -31,7 +31,7 @@ tradition_libra_victory = {
 		modifier = {
 			add = 35
 			any_playable_country = {
-				libra_crisis_ap_check = yes
+				is_ai= yes
 			}
 		}
 		modifier = {

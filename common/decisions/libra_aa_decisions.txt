@@ -145,7 +145,7 @@ decision_libra_directive_76 = {
 		owner = {
 			has_country_flag = libra_directive_76_decision
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		has_active_building = building_libra_directive_76
 	}
@@ -223,7 +223,7 @@ decision_libra_ode_to_babel = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_ode_to_babel
-			check_variable = { which = libra_aa_path value = 20 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		not = { has_modifier = decision_libra_babel_modifier }
 	}
@@ -266,7 +266,7 @@ decision_libra_evolutionary_endpoint = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_evolutionary_endpoint
-			check_variable = { which = libra_aa_path value = 30 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		not = { has_deposit = d_libra_evolutionary_endpoint }
 	}
@@ -325,7 +325,7 @@ decision_libra_atomic_heart = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_atomic_heart
-			check_variable = { which = libra_aa_path value = 60 }
+			check_variable = { which = libra_aa_path value > 0 }
 			not = { has_country_flag = libra_atomic_heart }
 		}
 	}
@@ -379,7 +379,7 @@ decision_libra_hurricane_eye = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_hurricane_eye
-			check_variable = { which = libra_aa_path value = 60 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		not = { has_modifier = libra_hurricane_eye_modifier }
 	}
@@ -438,7 +438,7 @@ decision_libra_liber_genesis = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		not = { has_deposit = d_libra_liber_genesis }
 	}

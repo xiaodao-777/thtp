@@ -9,7 +9,7 @@ trait_libra_directive_76_a = {
 			add = 4
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 10 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -25,7 +25,7 @@ trait_libra_directive_76_a = {
 		from = {
 			has_country_flag = libra_directive_76_species_trait
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		nor = {
 			has_trait = trait_latent_psionic
@@ -66,7 +66,7 @@ trait_libra_directive_76_b = {
 			add = 4
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 10 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -82,7 +82,7 @@ trait_libra_directive_76_b = {
 		from = {
 			has_country_flag = libra_directive_76_species_trait
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		nor = {
 			has_trait = trait_latent_psionic
@@ -123,7 +123,7 @@ trait_libra_directive_76_c = {
 			add = 4
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 10 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -139,7 +139,7 @@ trait_libra_directive_76_c = {
 		from = {
 			has_country_flag = libra_directive_76_species_trait
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		nor = {
 			has_trait = trait_latent_psionic
@@ -243,7 +243,7 @@ leader_trait_libra_directive_76 = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 10 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 			if = {
 				limit= { exists = from }
@@ -263,7 +263,7 @@ leader_trait_libra_directive_76 = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 10 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_jobs_produces_mult = 0.1
@@ -5068,7 +5068,7 @@ leader_trait_libra_evolutionary_endpoint = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 30 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_jobs_productive_produces_mult = 0.01
@@ -5081,7 +5081,7 @@ leader_trait_libra_evolutionary_endpoint = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 30 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_jobs_productive_produces_mult = 0.005
@@ -5095,7 +5095,7 @@ leader_trait_libra_evolutionary_endpoint = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 30 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		pop_environment_tolerance = 0.02
@@ -5123,7 +5123,7 @@ trait_libra_cutefied = {
 			subtract = 5
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cutefied_world
-			check_variable = { which = libra_aa_path value = 31 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	initial = yes
@@ -5244,7 +5244,7 @@ leader_trait_libra_cutefied = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 31 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_jobs_productive_produces_mult = 0.06
@@ -5257,7 +5257,7 @@ leader_trait_libra_cutefied = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 31 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_jobs_productive_produces_mult = 0.03
@@ -5277,7 +5277,7 @@ leader_trait_libra_cutefied = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 31 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		ships_logistics_mult = -0.025
@@ -6687,7 +6687,7 @@ leader_trait_libra_multi_prosthesis_a = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -6701,7 +6701,7 @@ leader_trait_libra_multi_prosthesis_a = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -6715,7 +6715,7 @@ leader_trait_libra_multi_prosthesis_a = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -6818,7 +6818,7 @@ leader_trait_libra_multi_prosthesis_b = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -6832,7 +6832,7 @@ leader_trait_libra_multi_prosthesis_b = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -6846,7 +6846,7 @@ leader_trait_libra_multi_prosthesis_b = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -6941,7 +6941,7 @@ leader_trait_libra_multi_prosthesis_c = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -6955,7 +6955,7 @@ leader_trait_libra_multi_prosthesis_c = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -6969,7 +6969,7 @@ leader_trait_libra_multi_prosthesis_c = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7062,7 +7062,7 @@ leader_trait_libra_multi_prosthesis_d = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7076,7 +7076,7 @@ leader_trait_libra_multi_prosthesis_d = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7090,7 +7090,7 @@ leader_trait_libra_multi_prosthesis_d = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7183,7 +7183,7 @@ leader_trait_libra_multi_prosthesis_e = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7197,7 +7197,7 @@ leader_trait_libra_multi_prosthesis_e = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7211,7 +7211,7 @@ leader_trait_libra_multi_prosthesis_e = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7312,7 +7312,7 @@ leader_trait_libra_multi_prosthesis_f = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7326,7 +7326,7 @@ leader_trait_libra_multi_prosthesis_f = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7340,7 +7340,7 @@ leader_trait_libra_multi_prosthesis_f = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 40 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		leader_trait_selection_options_add = 1
@@ -7791,7 +7791,7 @@ trait_libra_cosmological_physics = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -7833,7 +7833,7 @@ trait_libra_cosmological_society = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -7875,7 +7875,7 @@ trait_libra_cosmological_engineering = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -7917,7 +7917,7 @@ trait_libra_cosmological_research = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -7995,7 +7995,7 @@ leader_trait_libra_cosmological_constant = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		country_physics_research_produces_mult = 0.005
@@ -8477,7 +8477,7 @@ trait_libra_atomic_heart_energy = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -8529,7 +8529,7 @@ trait_libra_atomic_heart_minerals = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -8581,7 +8581,7 @@ trait_libra_atomic_heart_food = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -8637,7 +8637,7 @@ trait_libra_atomic_heart_trade = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -8692,7 +8692,7 @@ trait_libra_atomic_heart_consumer_goods = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -8748,7 +8748,7 @@ trait_libra_atomic_heart_alloys = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -8800,7 +8800,7 @@ trait_libra_atomic_heart_unity = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -8848,7 +8848,7 @@ trait_libra_atomic_heart_research = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -8896,7 +8896,7 @@ trait_libra_atomic_heart_war = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -8946,7 +8946,7 @@ trait_libra_atomic_heart_influential = {
 			add = 2
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -9003,7 +9003,7 @@ leader_trait_libra_atomic_heart_commander = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_soldiers_trade_produces_add = 2
@@ -9019,7 +9019,7 @@ leader_trait_libra_atomic_heart_commander = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_soldiers_trade_produces_add = 1
@@ -9051,7 +9051,7 @@ leader_trait_libra_atomic_heart_official = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_traders_trade_produces_add = 2
@@ -9067,7 +9067,7 @@ leader_trait_libra_atomic_heart_official = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_traders_trade_produces_add = 1
@@ -9099,7 +9099,7 @@ leader_trait_libra_atomic_heart_scientist = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_pop_assemblers_trade_produces_add = 2
@@ -9115,7 +9115,7 @@ leader_trait_libra_atomic_heart_scientist = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_pop_assemblers_trade_produces_add = 1
@@ -9151,7 +9151,7 @@ leader_trait_libra_nanocore_official = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		federation_experience_add = 0.25
@@ -9166,7 +9166,7 @@ leader_trait_libra_nanocore_official = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		diplo_weight_mult = 0.025
@@ -9182,7 +9182,7 @@ leader_trait_libra_nanocore_official = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_libra_nanite_buildings_produces_mult = 0.04
@@ -9199,7 +9199,7 @@ leader_trait_libra_nanocore_official = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_libra_nanite_buildings_produces_mult = 0.02
@@ -9219,7 +9219,7 @@ leader_trait_libra_nanocore_official = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		station_gatherers_produces_mult = 0.02
@@ -9263,7 +9263,7 @@ leader_trait_libra_nanocore_commander = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		army_damage_mult = 0.05
@@ -9278,7 +9278,7 @@ leader_trait_libra_nanocore_commander = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		ship_weapon_damage = 0.05
@@ -9294,7 +9294,7 @@ leader_trait_libra_nanocore_commander = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_libra_nanite_buildings_produces_mult = 0.04
@@ -9311,7 +9311,7 @@ leader_trait_libra_nanocore_commander = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_libra_nanite_buildings_produces_mult = 0.02
@@ -9331,7 +9331,7 @@ leader_trait_libra_nanocore_commander = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		station_gatherers_produces_mult = 0.02
@@ -9375,7 +9375,7 @@ leader_trait_libra_nanocore_scientist = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		science_ship_survey_speed = 0.05
@@ -9393,7 +9393,7 @@ leader_trait_libra_nanocore_scientist = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_libra_nanite_buildings_produces_mult = 0.04
@@ -9410,7 +9410,7 @@ leader_trait_libra_nanocore_scientist = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_libra_nanite_buildings_produces_mult = 0.02
@@ -9430,7 +9430,7 @@ leader_trait_libra_nanocore_scientist = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		station_gatherers_produces_mult = 0.02
@@ -9754,7 +9754,7 @@ leader_trait_libra_yggdrasil = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_building_capacity_add = 1
@@ -9765,7 +9765,7 @@ leader_trait_libra_yggdrasil = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		job_max_workforce_mult = 0.1
@@ -9835,7 +9835,7 @@ leader_trait_libra_liber_genesis = {
 			owner = {
 				is_gestalt = no
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		job_libra_harmonize_envoy_add = 25
@@ -9847,7 +9847,7 @@ leader_trait_libra_liber_genesis = {
 			owner = {
 				is_gestalt = yes
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		job_libra_harmonize_drone_add = 25
@@ -9862,7 +9862,7 @@ leader_trait_libra_liber_genesis = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		country_ruler_influence_produces_add = 0.1
@@ -9884,7 +9884,7 @@ trait_libra_psychic_0 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -9931,7 +9931,7 @@ trait_libra_psychic_1 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -9975,7 +9975,7 @@ trait_libra_psychic_2 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10023,7 +10023,7 @@ trait_libra_psychic_3 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10065,7 +10065,7 @@ trait_libra_psychic_4 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10102,7 +10102,7 @@ trait_libra_psychic_5 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10146,7 +10146,7 @@ trait_libra_psychic_6 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10194,7 +10194,7 @@ trait_libra_psychic_7 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10245,7 +10245,7 @@ trait_libra_psychic_8 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10289,7 +10289,7 @@ trait_libra_psychic_9 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10332,7 +10332,7 @@ trait_libra_psychic_10 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10379,7 +10379,7 @@ trait_libra_psychic_11 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10419,7 +10419,7 @@ trait_libra_psychic_12 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10458,7 +10458,7 @@ trait_libra_psychic_13 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10506,7 +10506,7 @@ trait_libra_psychic_14 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10547,7 +10547,7 @@ trait_libra_psychic_15 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10595,7 +10595,7 @@ trait_libra_psychic_16 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10633,7 +10633,7 @@ trait_libra_psychic_17 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10685,7 +10685,7 @@ trait_libra_psychic_18 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10724,7 +10724,7 @@ trait_libra_psychic_19 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10765,7 +10765,7 @@ trait_libra_psychic_20 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10812,7 +10812,7 @@ trait_libra_psychic_21 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10856,7 +10856,7 @@ trait_libra_psychic_22 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10905,7 +10905,7 @@ trait_libra_psychic_23 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -10952,7 +10952,7 @@ trait_libra_psychic_24 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -11003,7 +11003,7 @@ trait_libra_psychic_25 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -11055,7 +11055,7 @@ trait_libra_psychic_26 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -11102,7 +11102,7 @@ trait_libra_psychic_27 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -11139,7 +11139,7 @@ trait_libra_psychic_28 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic
@@ -11179,7 +11179,7 @@ trait_libra_psychic_29 = {
 			subtract = 2
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_liber_genesis
-			check_variable = { which = libra_aa_path value = 91 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	category = psionic

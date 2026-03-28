@@ -378,7 +378,7 @@ agenda_libra_directive_76_a = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_country_flag = libra_directive_76_agenda
-		check_variable = { which = libra_aa_path value = 10 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 	allow = {
 		not = { has_modifier = agenda_libra_directive_76_a_modifier }
@@ -413,7 +413,7 @@ agenda_libra_directive_76_b = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_country_flag = libra_directive_76_agenda
-		check_variable = { which = libra_aa_path value = 10 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 	allow = {
 		not = { has_modifier = agenda_libra_directive_76_b_modifier }
@@ -448,7 +448,7 @@ agenda_libra_directive_76_c = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_country_flag = libra_directive_76_agenda
-		check_variable = { which = libra_aa_path value = 10 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 	allow = {
 		not = { has_modifier = agenda_libra_directive_76_c_modifier }
@@ -479,7 +479,7 @@ agenda_libra_directive_76_d = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_country_flag = libra_directive_76_agenda
-		check_variable = { which = libra_aa_path value = 10 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 	allow = {
 		not = { has_modifier = agenda_libra_directive_76_d_modifier }
@@ -511,7 +511,7 @@ agenda_libra_directive_76_e = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_country_flag = libra_directive_76_agenda
-		check_variable = { which = libra_aa_path value = 10 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 	allow = {
 		not = { has_modifier = agenda_libra_directive_76_e_modifier }
@@ -545,7 +545,7 @@ agenda_libra_nanocore = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_nanocore
-		check_variable = { which = libra_aa_path value = 70 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	effect = {
@@ -597,7 +597,7 @@ agenda_libra_heavenly_throne = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_heavenly_throne
-		check_variable = { which = libra_aa_path value = 90 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	effect = {

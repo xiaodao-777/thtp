@@ -446,7 +446,7 @@ country_event = {
 	trigger = {
 		is_variable_set = libra_aa_path
 	calc_true_if = {
-		amount > 1
+		amount > 10
 		is_natural_design_empire = yes
 		has_tradition = tr_synthetics_adopt
 		has_tradition = tr_cybernetics_adopt
@@ -464,9 +464,9 @@ country_event = {
 	}
 
 	immediate = {
-		clear_variable = libra_aa_path
-		set_country_flag = libra_disable_rat
-		remove_libra_aa_effect = yes
+		#clear_variable = libra_aa_path
+		#set_country_flag = libra_disable_rat
+		remove_libra_aa_effect = no
 	}
 }
 
@@ -549,20 +549,21 @@ country_event = {
 	trigger = {
 		is_variable_set = libra_aa_path
 	or = {
-		has_crisis_level = crisis_level_1
-		has_menace_perk = menp_star_eater
-		has_crisis_level = crisis_cosmogenesis_level_1
-		has_technology = tech_cosmogenesis_world
-		has_crisis_level = crisis_behemoth_level_1
-		has_menace_perk = menp_behemoth_bioships_3
-		has_ascension_perk = ap_galactic_hyperthermia
-		has_country_flag = is_player_crisis
+		#has_crisis_level = crisis_level_1
+		#has_menace_perk = menp_star_eater
+		#has_crisis_level = crisis_cosmogenesis_level_1
+		#has_technology = tech_cosmogenesis_world
+		#has_crisis_level = crisis_behemoth_level_1
+		#has_menace_perk = menp_behemoth_bioships_3
+		#has_ascension_perk = ap_galactic_hyperthermia
+		#has_country_flag = is_player_crisis
+		is_ai = yes
 	}
 	}
 
 	immediate = {
-		clear_variable = libra_aa_path
-		remove_libra_aa_effect = yes
+		#clear_variable = libra_aa_path
+		remove_libra_aa_effect = no
 	}
 }
 
@@ -5356,7 +5357,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		libra_crisis_ap_check = no
+		#libra_crisis_ap_check = no
 	}
 
 	option = {
@@ -6339,7 +6340,7 @@ leader_event = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_country_flag = libra_directive_76_leader_trait
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6407,7 +6408,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6454,7 +6455,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6540,7 +6541,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6629,7 +6630,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6718,7 +6719,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6807,7 +6808,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6886,7 +6887,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6927,7 +6928,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6970,7 +6971,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6999,7 +7000,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7079,7 +7080,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7108,7 +7109,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7137,7 +7138,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7227,7 +7228,7 @@ country_event = {
 
 	trigger = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 20 }
+		check_variable = { which = libra_aa_path value > 0 }
 		num_buildings = {
 			type = building_libra_babel_tower
 			value = 0
@@ -7415,7 +7416,7 @@ country_event = {
 
 	trigger = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 30 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	immediate = {
@@ -8262,7 +8263,7 @@ country_event = {
 
 	trigger = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 31 }
+		check_variable = { which = libra_aa_path value > 0 }
 		is_same_species = from
 	}
 
@@ -8920,7 +8921,7 @@ country_event = {
 
 	trigger = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 40 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	immediate = {
@@ -10028,7 +10029,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -10170,7 +10171,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 60 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -10339,7 +10340,7 @@ country_event = {
 	trigger = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_nanocore
-		check_variable = { which = libra_aa_path value = 70 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	immediate = {
@@ -10359,7 +10360,7 @@ country_event = {
 	trigger = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_nanocore
-		check_variable = { which = libra_aa_path value = 70 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	immediate = {
@@ -10570,7 +10571,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 70 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -10607,7 +10608,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 70 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -10666,7 +10667,7 @@ situation_event = {
 	trigger = {
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 70 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -11484,7 +11485,7 @@ country_event = {
 
 	trigger = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 80 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	immediate = {
@@ -11852,7 +11853,7 @@ country_event = {
 	trigger = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_heavenly_throne
-		check_variable = { which = libra_aa_path value = 90 }
+		check_variable = { which = libra_aa_path value > 0 }
 		not = { has_country_flag = libra_fairy.18020_triggered }
 	}
 
@@ -12171,7 +12172,7 @@ country_event = {
 
 	trigger = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 91 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	immediate = {
@@ -12460,7 +12461,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		libra_crisis_ap_check = no
+		#libra_crisis_ap_check = no
 		has_multiple_ascension_path = no
 		not = { has_technology = tech_libra_fairy_age }
 	}
@@ -12618,13 +12619,14 @@ event = {
 			limit = {
 				is_variable_set = libra_aa_path
 				or = {
-					libra_crisis_ap_check = yes
-					has_multiple_ascension_path = yes
+					#is_ai= yes
+					#has_multiple_ascension_path = yes
+					is_ai = yes
 				}
 			}
-			clear_variable = libra_aa_path
-			set_country_flag = libra_disable_rat
-			remove_libra_aa_effect = yes
+			#clear_variable = libra_aa_path
+			#set_country_flag = libra_disable_rat
+			remove_libra_aa_effect = no
 		}
 	}
 }

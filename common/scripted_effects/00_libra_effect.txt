@@ -794,39 +794,39 @@ libra_ultimate_directive_add_leader_skill = {
 #
 
 remove_libra_aa_effect = {
-	remove_ascension_perk = ap_libra_directive_76
-	remove_country_flag = libra_directive_76_starbase
-	remove_country_flag = libra_directive_76_policy
-	remove_country_flag = libra_directive_76_building
-	remove_country_flag = libra_directive_76_decision
-	remove_country_flag = libra_directive_76_species_trait
-	remove_country_flag = libra_directive_76_leader_trait
-	remove_country_flag = libra_directive_76_agenda
+	# remove_ascension_perk = ap_libra_directive_76
+	# remove_country_flag = libra_directive_76_starbase
+	# remove_country_flag = libra_directive_76_policy
+	# remove_country_flag = libra_directive_76_building
+	# remove_country_flag = libra_directive_76_decision
+	# remove_country_flag = libra_directive_76_species_trait
+	# remove_country_flag = libra_directive_76_leader_trait
+	# remove_country_flag = libra_directive_76_agenda
 
-	remove_ascension_perk = ap_libra_ode_to_babel
+	# remove_ascension_perk = ap_libra_ode_to_babel
 
-	remove_ascension_perk = ap_libra_evolutionary_endpoint
-	remove_country_flag = libra_evolutionary_endpoint
+	# remove_ascension_perk = ap_libra_evolutionary_endpoint
+	# remove_country_flag = libra_evolutionary_endpoint
 
-	remove_ascension_perk = ap_libra_cutefied_world
-	remove_modifier = libra_cutefied_world_mod_1
-	remove_modifier = libra_cutefied_world_mod_2
-	remove_modifier = libra_cutefied_world_mod_3
+	# remove_ascension_perk = ap_libra_cutefied_world
+	# remove_modifier = libra_cutefied_world_mod_1
+	# remove_modifier = libra_cutefied_world_mod_2
+	# remove_modifier = libra_cutefied_world_mod_3
 
-	remove_ascension_perk = ap_libra_transcendental_cybernetics
+	# remove_ascension_perk = ap_libra_transcendental_cybernetics
 
-	remove_ascension_perk = ap_libra_cosmological_constant
+	# remove_ascension_perk = ap_libra_cosmological_constant
 
-	remove_ascension_perk = ap_libra_atomic_heart
-	remove_country_flag = libra_atomic_heart
+	# remove_ascension_perk = ap_libra_atomic_heart
+	# remove_country_flag = libra_atomic_heart
 
-	remove_ascension_perk = ap_libra_nanocore
-	remove_ascension_perk = ap_libra_hurricane_eye
+	# remove_ascension_perk = ap_libra_nanocore
+	# remove_ascension_perk = ap_libra_hurricane_eye
 
-	remove_ascension_perk = ap_libra_yggdrasil
+	# remove_ascension_perk = ap_libra_yggdrasil
 
-	remove_ascension_perk = ap_libra_heavenly_throne
-	remove_ascension_perk = ap_libra_liber_genesis
+	# remove_ascension_perk = ap_libra_heavenly_throne
+	# remove_ascension_perk = ap_libra_liber_genesis
 }
 
 

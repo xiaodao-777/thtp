@@ -174,7 +174,7 @@ building_libra_directive_76 = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_country_flag = libra_directive_76_building
-			check_variable = { which = libra_aa_path value = 10 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -359,7 +359,7 @@ building_libra_babel_tower = {
 			owner = {
 				is_variable_set = libra_aa_path
 				has_ascension_perk = ap_libra_ode_to_babel
-				check_variable = { which = libra_aa_path value = 20 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -377,7 +377,7 @@ building_libra_babel_tower = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 20 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -593,7 +593,7 @@ building_libra_babel_tower_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 20 }
+			check_variable = { which = libra_aa_path value > 0 }
 			is_variable_set = libra_babel_level
 			check_variable = { which = libra_babel_level value < 99 }
 		}
@@ -1576,7 +1576,7 @@ building_libra_cybernetics_factory = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 40 }
+			check_variable = { which = libra_aa_path value > 0 }
 			has_ascension_perk = ap_libra_transcendental_cybernetics
 		}
 	}
@@ -1792,7 +1792,7 @@ building_libra_personality_correction_institute = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_pop_assemblers_physics_research_produces_add = 0.5
@@ -1900,7 +1900,7 @@ building_libra_ministry_of_mechanical_truth = {
 			exists = owner
 			owner = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		planet_pop_assemblers_physics_research_produces_add = 1
@@ -1933,7 +1933,7 @@ building_libra_cosmological_generator = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	allow = {
@@ -1954,7 +1954,7 @@ building_libra_cosmological_generator = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -2009,7 +2009,7 @@ building_libra_cosmological_mining = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	allow = {
@@ -2030,7 +2030,7 @@ building_libra_cosmological_mining = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -2085,7 +2085,7 @@ building_libra_cosmological_farming = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	allow = {
@@ -2106,7 +2106,7 @@ building_libra_cosmological_farming = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -2161,7 +2161,7 @@ building_libra_cosmological_fortress = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		not = { has_modifier = resort_colony }
 	}
@@ -2185,7 +2185,7 @@ building_libra_cosmological_fortress = {
 			not = {
 				owner = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 50 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 		}
@@ -2241,7 +2241,7 @@ building_libra_cosmological_foundry = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		not = { has_modifier = resort_colony }
 	}
@@ -2265,7 +2265,7 @@ building_libra_cosmological_foundry = {
 			not = {
 				owner = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 50 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 		}
@@ -2320,7 +2320,7 @@ building_libra_cosmological_factory = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		not = { has_modifier = resort_colony }
 	}
@@ -2344,7 +2344,7 @@ building_libra_cosmological_factory = {
 			not = {
 				owner = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 50 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 		}
@@ -2398,7 +2398,7 @@ building_libra_cosmological_trade = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		libra_is_special_colony_type = no
 	}
@@ -2422,7 +2422,7 @@ building_libra_cosmological_trade = {
 			not = {
 				owner = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 50 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 		}
@@ -2478,7 +2478,7 @@ building_libra_cosmological_management = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		libra_is_special_colony_type = no
 	}
@@ -2506,7 +2506,7 @@ building_libra_cosmological_management = {
 			not = {
 				owner = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 50 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 		}
@@ -2563,7 +2563,7 @@ building_libra_cosmological_physics = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		libra_is_special_colony_type = no
 	}
@@ -2587,7 +2587,7 @@ building_libra_cosmological_physics = {
 			not = {
 				owner = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 50 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 		}
@@ -2642,7 +2642,7 @@ building_libra_cosmological_society = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		libra_is_special_colony_type = no
 	}
@@ -2666,7 +2666,7 @@ building_libra_cosmological_society = {
 			not = {
 				owner = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 50 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 		}
@@ -2721,7 +2721,7 @@ building_libra_cosmological_engineering = {
 		owner = {
 			is_variable_set = libra_aa_path
 			has_ascension_perk = ap_libra_cosmological_constant
-			check_variable = { which = libra_aa_path value = 50 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		libra_is_special_colony_type = no
 	}
@@ -2745,7 +2745,7 @@ building_libra_cosmological_engineering = {
 			not = {
 				owner = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 50 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 		}
@@ -2872,7 +2872,7 @@ building_libra_super_assembly_plant = {
 			owner = {
 				is_variable_set = libra_aa_path
 				has_country_flag = libra_atomic_heart
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		job_max_workforce_mult = 0.3
@@ -2907,7 +2907,7 @@ building_libra_atomic_heart = {
 		owner = {
 			has_ascension_perk = ap_libra_atomic_heart
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 60 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -4723,7 +4723,7 @@ building_libra_yggdrasil_housing_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		nor = {
 			has_modifier = resort_colony
@@ -4737,7 +4737,7 @@ building_libra_yggdrasil_housing_1 = {
 				exists = owner
 				owner = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 80 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 			has_modifier = resort_colony
@@ -4898,7 +4898,7 @@ building_libra_yggdrasil_housing_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5067,7 +5067,7 @@ building_libra_yggdrasil_foundry_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5080,7 +5080,7 @@ building_libra_yggdrasil_foundry_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -5176,7 +5176,7 @@ building_libra_yggdrasil_foundry_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5300,7 +5300,7 @@ building_libra_yggdrasil_factory_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5313,7 +5313,7 @@ building_libra_yggdrasil_factory_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -5409,7 +5409,7 @@ building_libra_yggdrasil_factory_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5533,7 +5533,7 @@ building_libra_yggdrasil_trade_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5546,7 +5546,7 @@ building_libra_yggdrasil_trade_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -5634,7 +5634,7 @@ building_libra_yggdrasil_trade_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5750,7 +5750,7 @@ building_libra_yggdrasil_physics_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5763,7 +5763,7 @@ building_libra_yggdrasil_physics_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -5851,7 +5851,7 @@ building_libra_yggdrasil_physics_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5967,7 +5967,7 @@ building_libra_yggdrasil_society_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -5980,7 +5980,7 @@ building_libra_yggdrasil_society_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -6068,7 +6068,7 @@ building_libra_yggdrasil_society_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6184,7 +6184,7 @@ building_libra_yggdrasil_engineering_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6197,7 +6197,7 @@ building_libra_yggdrasil_engineering_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -6285,7 +6285,7 @@ building_libra_yggdrasil_engineering_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6401,7 +6401,7 @@ building_libra_yggdrasil_unity_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6414,7 +6414,7 @@ building_libra_yggdrasil_unity_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -6502,7 +6502,7 @@ building_libra_yggdrasil_unity_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6617,7 +6617,7 @@ building_libra_yggdrasil_energy_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6630,7 +6630,7 @@ building_libra_yggdrasil_energy_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -6717,7 +6717,7 @@ building_libra_yggdrasil_energy_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6832,7 +6832,7 @@ building_libra_yggdrasil_mineral_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -6845,7 +6845,7 @@ building_libra_yggdrasil_mineral_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -6932,7 +6932,7 @@ building_libra_yggdrasil_mineral_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7047,7 +7047,7 @@ building_libra_yggdrasil_food_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7060,7 +7060,7 @@ building_libra_yggdrasil_food_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -7147,7 +7147,7 @@ building_libra_yggdrasil_food_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7262,7 +7262,7 @@ building_libra_yggdrasil_fortress_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_yggdrasil
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7275,7 +7275,7 @@ building_libra_yggdrasil_fortress_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -7368,7 +7368,7 @@ building_libra_yggdrasil_fortress_2 = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 80 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7875,7 +7875,7 @@ building_libra_heavenly_throne_1 = {
 		owner = {
 			has_ascension_perk = ap_libra_heavenly_throne
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 90 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7884,7 +7884,7 @@ building_libra_heavenly_throne_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 90 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -7959,7 +7959,7 @@ building_libra_heavenly_throne_2 = {
 		owner = {
 			has_ascension_perk = ap_libra_heavenly_throne
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 90 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 
@@ -7973,7 +7973,7 @@ building_libra_heavenly_throne_2 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 90 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}

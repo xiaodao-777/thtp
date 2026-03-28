@@ -129,7 +129,7 @@ tech_libra_fairy_age = {
 		#}
 		modifier = {
 			factor = 0
-			libra_crisis_ap_check = yes
+			is_ai= yes
 		}
 		modifier = {
 			factor = 0.2

@@ -785,7 +785,7 @@ has_multiple_libra_executive_ascension = {
 
 has_few_libra_qualified_ascension = {
 	calc_true_if = {
-		amount < 2
+		amount < 6
 		has_ascension_perk = ap_libra_valiant_heroic
 		has_ascension_perk = ap_libra_golden_rule
 		has_ascension_perk = ap_libra_genetic_potential
@@ -798,7 +798,7 @@ has_few_libra_qualified_ascension = {
 }
 has_multiple_libra_qualified_ascension = {
 	calc_true_if = {
-		amount > 2
+		amount > 6
 		has_ascension_perk = ap_libra_valiant_heroic
 		has_ascension_perk = ap_libra_golden_rule
 		has_ascension_perk = ap_libra_genetic_potential
@@ -826,7 +826,7 @@ block_libra_advanced_ascension = {
 #
 
 libra_crisis_ap_check = {
-	or = {
+	and = {
 		has_crisis_level = crisis_level_1
 		has_menace_perk = menp_star_eater
 		has_crisis_level = crisis_cosmogenesis_level_1
@@ -835,6 +835,7 @@ libra_crisis_ap_check = {
 		has_menace_perk = menp_behemoth_bioships_3
 		has_ascension_perk = ap_galactic_hyperthermia
 		has_country_flag = is_player_crisis
+		is_ai= yes
 	}
 }
 
@@ -1027,7 +1028,7 @@ can_use_libra_cutefied_traits = {
 	from = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_cutefied_world
-		check_variable = { which = libra_aa_path value = 31 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 }
 can_add_libra_cutefied_negative_traits = {
@@ -1171,7 +1172,7 @@ can_use_libra_cosmological_traits = {
 	from = {
 		has_ascension_perk = ap_libra_cosmological_constant
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 50 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 	nor = {
 		has_trait = trait_robot_digital_2
@@ -1209,7 +1210,7 @@ can_use_libra_atomic_heart_traits = {
 	from = {
 		has_ascension_perk = ap_libra_atomic_heart
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 60 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 	nor = {
 		has_trait = trait_robot_digital_1
@@ -1282,7 +1283,7 @@ can_use_libra_psychic_traits = {
 	from = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_liber_genesis
-		check_variable = { which = libra_aa_path value = 91 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 	nor = {
 		has_trait = trait_limited_cybernetic

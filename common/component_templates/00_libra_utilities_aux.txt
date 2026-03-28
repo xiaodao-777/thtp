@@ -122,7 +122,7 @@ utility_component_template = {
 		from = {
 			is_variable_set = libra_aa_path
 			is_species_class = LIBRACUTE
-			check_variable = { which = libra_aa_path value = 31 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	resources = {
@@ -167,7 +167,7 @@ utility_component_template = {
 		libra_is_designable_crisis_shipsize = no
 		from = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 60 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	resources = {
@@ -207,7 +207,7 @@ utility_component_template = {
 		libra_is_designable_crisis_shipsize = no
 		from = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 60 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	icon = "GFX_ship_part_libra_atomic_reactor_booster"

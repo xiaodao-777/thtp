@@ -568,7 +568,7 @@ libra_golden_rule_0 = {
 
 	potential = {
 		has_ascension_perk = ap_libra_golden_rule
-		libra_crisis_ap_check = no
+		#libra_crisis_ap_check = no
 	}
 
 	resources = {

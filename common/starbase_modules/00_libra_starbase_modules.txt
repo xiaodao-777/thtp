@@ -102,7 +102,7 @@ libra_atomic_heart_site = {
 		owner = {
 			has_ascension_perk = ap_libra_atomic_heart
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 60 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		is_normal_starbase = yes
 	}

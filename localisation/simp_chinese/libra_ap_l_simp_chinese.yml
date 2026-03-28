@@ -1,8 +1,8 @@
 ﻿l_simp_chinese:
 
  requires_no_same_ascension_country: "$TRIGGER_FAIL$已经有其它帝国选择了此飞升天赋。"
- requires_no_libra_qualified_ascension_success: "$TRIGGER_PASS$只能选择两个['concept_libra_qualified_ascension']。\n "
- requires_no_libra_qualified_ascension_fail: "$TRIGGER_FAIL$只能选择两个['concept_libra_qualified_ascension']。"
+ requires_no_libra_qualified_ascension_success: "$TRIGGER_PASS$只能选择六个['concept_libra_qualified_ascension']。\n "
+ requires_no_libra_qualified_ascension_fail: "$TRIGGER_FAIL$只能选择六个['concept_libra_qualified_ascension']。"
  requires_no_libra_executive_ascension_success: "$TRIGGER_PASS$尚未选择任何['concept_libra_executive_ascension']。\n "
  requires_no_libra_executive_ascension_fail: "$TRIGGER_FAIL$只能拥有一个['concept_libra_executive_ascension']。"
  requires_no_libra_advanced_ascension_success: "$TRIGGER_PASS$尚未选择任何['concept_libra_advanced_ascension']。\n "

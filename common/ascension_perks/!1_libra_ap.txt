@@ -673,7 +673,7 @@ ap_libra_golden_rule = {
 	on_enabled = {
 		custom_tooltip = "ap_libra_golden_rule_tooltip"
 		if = {
-			limit = { libra_crisis_ap_check = yes }
+			limit = { is_ai = yes}
 			custom_tooltip = "libra_qualified_ascension_crisis_tt"
 		}
 		hidden_effect = {
@@ -714,7 +714,7 @@ ap_libra_valiant_heroic = {
 	on_enabled = {
 		custom_tooltip = "ap_libra_valiant_heroic_tooltip"
 		if = {
-			limit = { libra_crisis_ap_check = yes }
+			limit = { is_ai = yes}
 			custom_tooltip = "libra_qualified_ascension_crisis_tt"
 		}
 		hidden_effect = {
@@ -760,7 +760,7 @@ ap_libra_valiant_heroic = {
 		inherit_effects = no
 		inherit_icon = yes
 		trigger = {
-			libra_crisis_ap_check = yes
+			is_ai= yes
 		}
 		on_enabled = {
 			custom_tooltip = "ap_libra_warrant_of_return_tooltip"
@@ -801,7 +801,7 @@ ap_libra_valiant_heroic = {
 ap_libra_genetic_potential = {
 	on_enabled = {
 		if = {
-			limit = { libra_crisis_ap_check = yes }
+			limit = { is_ai = yes}
 			custom_tooltip = "ap_libra_genetic_potential_policy_tooltip"
 			custom_tooltip = "libra_qualified_ascension_crisis_tt"
 		}
@@ -838,7 +838,7 @@ ap_libra_genetic_potential = {
 		inherit_effects = no
 		inherit_icon = yes
 		trigger = {
-			libra_crisis_ap_check = yes
+			is_ai= yes
 		}
 		on_enabled = {
 			custom_tooltip = "ap_libra_genetic_potential_policy_tooltip"
@@ -883,7 +883,7 @@ ap_libra_warrant_of_return = {
 	on_enabled = {
 		custom_tooltip = "ap_libra_warrant_of_return_tooltip"
 		if = {
-			limit = { libra_crisis_ap_check = yes }
+			limit = { is_ai = yes}
 			custom_tooltip = "libra_qualified_ascension_crisis_tt"
 		}
 		hidden_effect = {
@@ -904,7 +904,7 @@ ap_libra_warrant_of_return = {
 		inherit_effects = no
 		inherit_icon = yes
 		trigger = {
-			libra_crisis_ap_check = yes
+			is_ai= yes
 		}
 		on_enabled = {
 			custom_tooltip = "ap_libra_warrant_of_return_tooltip"
@@ -971,7 +971,7 @@ ap_libra_synthetic_voice = {
 	on_enabled = {
 		custom_tooltip = "ap_libra_synthetic_voice_tooltip"
 		if = {
-			limit = { libra_crisis_ap_check = yes }
+			limit = { is_ai = yes}
 			custom_tooltip = "libra_qualified_ascension_crisis_tt"
 		}
 		hidden_effect = {
@@ -988,7 +988,7 @@ ap_libra_synthetic_voice = {
 		inherit_effects = no
 		inherit_icon = yes
 		trigger = {
-			libra_crisis_ap_check = yes
+			is_ai= yes
 		}
 		on_enabled = {
 			custom_tooltip = "ap_libra_synthetic_voice_tooltip"
@@ -1055,7 +1055,7 @@ ap_libra_intergalactic_junkie = {
 	on_enabled = {
 		custom_tooltip = "ap_libra_intergalactic_junkie_tooltip"
 		if = {
-			limit = { libra_crisis_ap_check = yes }
+			limit = { is_ai = yes}
 			custom_tooltip = "libra_qualified_ascension_crisis_tt"
 		}
 		hidden_effect = {
@@ -1073,7 +1073,7 @@ ap_libra_intergalactic_junkie = {
 		inherit_effects = no
 		inherit_icon = yes
 		trigger = {
-			libra_crisis_ap_check = yes
+			is_ai= yes
 		}
 		on_enabled = {
 			custom_tooltip = "ap_libra_intergalactic_junkie_tooltip"
@@ -1127,7 +1127,7 @@ ap_libra_astral_blade = {
 	on_enabled = {
 		custom_tooltip = "ap_libra_astral_blade_tooltip"
 		if = {
-			limit = { libra_crisis_ap_check = yes }
+			limit = { is_ai = yes}
 			custom_tooltip = "libra_qualified_ascension_crisis_tt"
 		}
 		hidden_effect = {
@@ -1149,7 +1149,7 @@ ap_libra_astral_blade = {
 		inherit_effects = no
 		inherit_icon = yes
 		trigger = {
-			libra_crisis_ap_check = yes
+			is_ai= yes
 		}
 		on_enabled = {
 			custom_tooltip = "ap_libra_astral_blade_tooltip"
@@ -1199,7 +1199,7 @@ ap_libra_ghost_mechanist = {
 	on_enabled = {
 		custom_tooltip = "ap_libra_ghost_mechanist_tooltip"
 		if = {
-			limit = { libra_crisis_ap_check = yes }
+			limit = { is_ai = yes}
 			custom_tooltip = "libra_qualified_ascension_crisis_tt"
 		}
 		hidden_effect = {
@@ -1223,7 +1223,7 @@ ap_libra_ghost_mechanist = {
 		inherit_effects = no
 		inherit_icon = yes
 		trigger = {
-			libra_crisis_ap_check = yes
+			is_ai= yes
 		}
 		on_enabled = {
 			custom_tooltip = "ap_libra_ghost_mechanist_tooltip"
@@ -1299,20 +1299,6 @@ ap_libra_directive_76 = {
 	potential = {
 		has_country_flag = libra_is_biological_empire
 		block_libra_advanced_ascension = no
-		not = { is_variable_set = libra_aa_path }
-		nor = {
-			has_tradition = tr_cybernetics_adopt
-			has_tradition = tr_cybernetics_assimilator_adopt
-			has_tradition = tr_psionics_adopt
-			has_tradition = tr_psionics_shroud_adopt
-			has_tradition = tr_genetics_adopt
-			has_tradition = tr_purity_adopt
-			has_tradition = tr_mutation_adopt
-			has_tradition = tr_synthetics_adopt
-			has_tradition = tr_modularity_adopt
-			has_tradition = tr_nanotech_adopt
-			has_tradition = tr_virtuality_adopt
-		}
 	}
 
 	possible = {
@@ -1361,20 +1347,6 @@ ap_libra_ode_to_babel = {
 	potential = {
 		has_country_flag = libra_is_biological_empire
 		block_libra_advanced_ascension = no
-		not = { is_variable_set = libra_aa_path }
-		nor = {
-			has_tradition = tr_cybernetics_adopt
-			has_tradition = tr_cybernetics_assimilator_adopt
-			has_tradition = tr_psionics_adopt
-			has_tradition = tr_psionics_shroud_adopt
-			has_tradition = tr_genetics_adopt
-			has_tradition = tr_cloning_adopt
-			has_tradition = tr_mutation_adopt
-			has_tradition = tr_synthetics_adopt
-			has_tradition = tr_modularity_adopt
-			has_tradition = tr_nanotech_adopt
-			has_tradition = tr_virtuality_adopt
-		}
 	}
 
 	possible = {
@@ -1445,7 +1417,7 @@ ap_libra_evolutionary_endpoint = {
 		potential = {
 			has_country_flag = libra_evolutionary_endpoint
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 30 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 		country_government_civic_points_add = 3
 		organic_pop_bonus_workforce_mult = 0.5
@@ -1454,20 +1426,6 @@ ap_libra_evolutionary_endpoint = {
 	potential = {
 		has_country_flag = libra_is_biological_empire
 		block_libra_advanced_ascension = no
-		not = { is_variable_set = libra_aa_path }
-		nor = {
-			has_tradition = tr_cybernetics_adopt
-			has_tradition = tr_cybernetics_assimilator_adopt
-			has_tradition = tr_psionics_adopt
-			has_tradition = tr_psionics_shroud_adopt
-			has_tradition = tr_genetics_adopt
-			has_tradition = tr_cloning_adopt
-			has_tradition = tr_purity_adopt
-			has_tradition = tr_synthetics_adopt
-			has_tradition = tr_modularity_adopt
-			has_tradition = tr_nanotech_adopt
-			has_tradition = tr_virtuality_adopt
-		}
 	}
 
 	possible = {
@@ -1515,20 +1473,6 @@ ap_libra_cutefied_world = {
 	potential = {
 		has_country_flag = libra_is_biological_empire
 		block_libra_advanced_ascension = no
-		not = { is_variable_set = libra_aa_path }
-		nor = {
-			has_tradition = tr_cybernetics_adopt
-			has_tradition = tr_cybernetics_assimilator_adopt
-			has_tradition = tr_psionics_adopt
-			has_tradition = tr_psionics_shroud_adopt
-			has_tradition = tr_genetics_adopt
-			has_tradition = tr_cloning_adopt
-			has_tradition = tr_purity_adopt
-			has_tradition = tr_synthetics_adopt
-			has_tradition = tr_modularity_adopt
-			has_tradition = tr_nanotech_adopt
-			has_tradition = tr_virtuality_adopt
-		}
 	}
 
 	possible = {
@@ -1593,19 +1537,6 @@ ap_libra_transcendental_cybernetics = {
 			has_civic = civic_machine_assimilator
 		}
 		block_libra_advanced_ascension = no
-		not = { is_variable_set = libra_aa_path }
-		nor = {
-			has_tradition = tr_genetics_adopt
-			has_tradition = tr_cloning_adopt
-			has_tradition = tr_purity_adopt
-			has_tradition = tr_mutation_adopt
-			has_tradition = tr_synthetics_adopt
-			has_tradition = tr_modularity_adopt
-			has_tradition = tr_nanotech_adopt
-			has_tradition = tr_virtuality_adopt
-			has_tradition = tr_psionics_adopt
-			has_tradition = tr_psionics_shroud_adopt
-		}
 	}
 
 	possible = {
@@ -1664,20 +1595,6 @@ ap_libra_cosmological_constant = {
 			}
 		}
 		block_libra_advanced_ascension = no
-		not = { is_variable_set = libra_aa_path }
-		nor = {
-			has_tradition = tr_genetics_adopt
-			has_tradition = tr_cloning_adopt
-			has_tradition = tr_purity_adopt
-			has_tradition = tr_mutation_adopt
-			has_tradition = tr_cybernetics_adopt
-			has_tradition = tr_cybernetics_assimilator_adopt
-			has_tradition = tr_modularity_adopt
-			has_tradition = tr_nanotech_adopt
-			has_tradition = tr_virtuality_adopt
-			has_tradition = tr_psionics_adopt
-			has_tradition = tr_psionics_shroud_adopt
-		}
 	}
 
 	possible = {
@@ -1726,20 +1643,6 @@ ap_libra_atomic_heart = {
 	potential = {
 		has_country_flag = libra_is_machine_empire
 		block_libra_advanced_ascension = no
-		not = { is_variable_set = libra_aa_path }
-		nor = {
-			has_tradition = tr_cybernetics_adopt
-			has_tradition = tr_cybernetics_assimilator_adopt
-			has_tradition = tr_psionics_adopt
-			has_tradition = tr_psionics_shroud_adopt
-			has_tradition = tr_genetics_adopt
-			has_tradition = tr_cloning_adopt
-			has_tradition = tr_purity_adopt
-			has_tradition = tr_mutation_adopt
-			has_tradition = tr_synthetics_adopt
-			has_tradition = tr_nanotech_adopt
-			has_tradition = tr_virtuality_adopt
-		}
 	}
 
 	possible = {

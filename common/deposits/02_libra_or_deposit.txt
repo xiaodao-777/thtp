@@ -409,7 +409,7 @@ d_libra_liber_genesis = {
 				is_gestalt = no
 				is_variable_set = libra_aa_path
 				has_ascension_perk = ap_libra_liber_genesis
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		job_libra_psychic_add = 100
@@ -422,7 +422,7 @@ d_libra_liber_genesis = {
 				is_gestalt = yes
 				is_variable_set = libra_aa_path
 				has_ascension_perk = ap_libra_liber_genesis
-				check_variable = { which = libra_aa_path value = 91 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 		job_libra_psychic_drone_add = 100

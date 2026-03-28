@@ -15,7 +15,7 @@ situation_libra_directive_76 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 10 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -165,7 +165,7 @@ situation_libra_rebuilding_babel = {
 				has_country_flag = can_build_libra_babel_tower
 				nand = {
 					is_variable_set = libra_aa_path
-					check_variable = { which = libra_aa_path value = 20 }
+					check_variable = { which = libra_aa_path value > 0 }
 				}
 			}
 		}
@@ -255,7 +255,7 @@ situation_libra_evolutionary_endpoint = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 30 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -368,7 +368,7 @@ situation_libra_cutefied_world_1 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 31 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -504,7 +504,7 @@ situation_libra_cutefied_world_2 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 31 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -691,7 +691,7 @@ situation_libra_cosmological_constant = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 50 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -793,7 +793,7 @@ situation_libra_atomic_heart = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 60 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -891,7 +891,7 @@ situation_libra_nanocore = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 70 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -1052,7 +1052,7 @@ situation_libra_hurricane_eye = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 71 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -1245,7 +1245,7 @@ situation_libra_hurricane_eye_2 = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 71 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -1372,7 +1372,7 @@ situation_libra_yggdrasil = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 80 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}
@@ -1595,7 +1595,7 @@ situation_libra_heavenly_throne = {
 		owner = {
 			nand = {
 				is_variable_set = libra_aa_path
-				check_variable = { which = libra_aa_path value = 90 }
+				check_variable = { which = libra_aa_path value > 0 }
 			}
 		}
 	}

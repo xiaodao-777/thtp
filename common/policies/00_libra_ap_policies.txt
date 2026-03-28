@@ -317,7 +317,7 @@ libra_collective_unity = {
 libra_golden_rule = {
 	potential = {
 		has_ascension_perk = ap_libra_golden_rule
-		libra_crisis_ap_check = no
+		#libra_crisis_ap_check = no
 	}
 
 	option = {
@@ -449,7 +449,7 @@ libra_valiant_heroic = {
 	option = {
 		name = policy_libra_valiant_heroic_d
 		potential = {
-			libra_crisis_ap_check = no
+			#libra_crisis_ap_check = no
 			is_galactic_emperor = no
 		}
 		valid = {
@@ -466,7 +466,7 @@ libra_valiant_heroic = {
 	option = {
 		name = policy_libra_valiant_heroic_e
 		potential = {
-			libra_crisis_ap_check = no
+			#libra_crisis_ap_check = no
 		}
 		valid = {
 			is_galactic_emperor = yes

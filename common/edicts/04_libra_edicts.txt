@@ -617,7 +617,7 @@ libra_atomic_heart_1 = {
 
 	potential = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 60 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
  	prerequisites = {
@@ -658,7 +658,7 @@ libra_atomic_heart_2 = {
 
 	potential = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 60 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
  	prerequisites = {
@@ -700,7 +700,7 @@ libra_atomic_heart_3 = {
 
 	potential = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 60 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
  	prerequisites = {
@@ -735,7 +735,7 @@ libra_atomic_heart_4 = {
 
 	potential = {
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 60 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
  	prerequisites = {
@@ -882,7 +882,7 @@ libra_recycling_nanite_swarmer = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_hurricane_eye
-		check_variable = { which = libra_aa_path value = 71 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	modifier = {
@@ -1053,7 +1053,7 @@ libra_liber_genesis_0 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_liber_genesis
-		check_variable = { which = libra_aa_path value = 91 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	allow = {
@@ -1099,7 +1099,7 @@ libra_liber_genesis_1 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_liber_genesis
-		check_variable = { which = libra_aa_path value = 91 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	allow = {
@@ -1154,7 +1154,7 @@ libra_liber_genesis_2 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_liber_genesis
-		check_variable = { which = libra_aa_path value = 91 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	allow = {
@@ -1204,7 +1204,7 @@ libra_liber_genesis_3 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_liber_genesis
-		check_variable = { which = libra_aa_path value = 91 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	allow = {
@@ -1260,7 +1260,7 @@ libra_liber_genesis_4 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_liber_genesis
-		check_variable = { which = libra_aa_path value = 91 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	allow = {
@@ -1315,7 +1315,7 @@ libra_liber_genesis_5 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_liber_genesis
-		check_variable = { which = libra_aa_path value = 91 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	allow = {
@@ -1370,7 +1370,7 @@ libra_liber_genesis_6 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_liber_genesis
-		check_variable = { which = libra_aa_path value = 91 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	allow = {

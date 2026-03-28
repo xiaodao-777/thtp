@@ -47,7 +47,7 @@ tradition_libra_bastion = {
 		}
 		modifier = {
 			factor = 3
-			libra_crisis_ap_check = yes
+			is_ai= yes
 		}
 	}
 }

@@ -30,7 +30,7 @@ triggered_councilor_modifier = {
 		exists = owner
 		owner = {
 			is_variable_set = libra_aa_path
-			check_variable = { which = libra_aa_path value = 60 }
+			check_variable = { which = libra_aa_path value > 0 }
 		}
 	}
 	country_produces_mult = 0.05

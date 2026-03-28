@@ -25,7 +25,7 @@ tradition_libra_pendragon = {
 			any_neighbor_country = {
 				or = {
 					is_ai = no
-					libra_crisis_ap_check = yes
+					is_ai= yes
 				}
 			}
 		}

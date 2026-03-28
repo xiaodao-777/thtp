@@ -6,7 +6,7 @@ libra_directive_76 = {
 	potential = {
 		has_country_flag = libra_directive_76_policy
 		is_variable_set = libra_aa_path
-		check_variable = { which = libra_aa_path value = 10 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	option = {
@@ -156,7 +156,7 @@ libra_transcendental_cybernetics_1 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_technology = tech_libra_cybernetic_growth_1
-		check_variable = { which = libra_aa_path value = 40 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	option = {
@@ -201,7 +201,7 @@ libra_transcendental_cybernetics_2 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_technology = tech_libra_cybernetic_growth_2
-		check_variable = { which = libra_aa_path value = 40 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	option = {
@@ -250,7 +250,7 @@ libra_transcendental_cybernetics_3 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_technology = tech_libra_cybernetic_growth_3
-		check_variable = { which = libra_aa_path value = 40 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	option = {
@@ -294,7 +294,7 @@ libra_transcendental_cybernetics_4 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_technology = tech_libra_cybernetic_growth_4
-		check_variable = { which = libra_aa_path value = 40 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	option = {
@@ -409,7 +409,7 @@ libra_hurricane_eye_1 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_hurricane_eye
-		check_variable = { which = libra_aa_path value = 71 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	option = {
@@ -439,7 +439,7 @@ libra_hurricane_eye_2 = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_hurricane_eye
-		check_variable = { which = libra_aa_path value = 71 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	option = {
@@ -479,7 +479,7 @@ libra_heavenly_throne = {
 	potential = {
 		is_variable_set = libra_aa_path
 		has_ascension_perk = ap_libra_heavenly_throne
-		check_variable = { which = libra_aa_path value = 90 }
+		check_variable = { which = libra_aa_path value > 0 }
 	}
 
 	option = {
